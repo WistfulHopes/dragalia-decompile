@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SoundDebugViewer : MonoBehaviour
 {
-	public class SoundDebugViewer : MonoBehaviour
-	{
-	}
 }

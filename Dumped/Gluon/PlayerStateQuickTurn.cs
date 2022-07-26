@@ -1,34 +1,33 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateQuickTurn : PlayerStateBase
 {
-	public class PlayerStateQuickTurn : PlayerStateBase
+	public enum Direction
 	{
-		public enum Direction
-		{
-			Back,
-			Right,
-			Left
-		}
+		Back,
+		Right,
+		Left
+	}
 
-		private float elapsedTime;
+	private float elapsedTime;
 
-		private Vector3 subVelocity;
+	private Vector3 subVelocity;
 
-		private float time;
+	private float time;
 
-		public Direction direction;
+	public Direction direction;
 
-		public override void OnStateEnter()
-		{
-		}
+	public override void OnStateEnter()
+	{
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateUpdate()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateExit()
+	{
 	}
 }

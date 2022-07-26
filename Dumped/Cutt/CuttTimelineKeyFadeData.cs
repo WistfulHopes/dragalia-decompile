@@ -1,22 +1,21 @@
 using System;
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyFadeData : CuttTimelineKeyWithInterpolate, ICuttTimelineKeyHasColor
 {
-	[Serializable]
-	public class CuttTimelineKeyFadeData : CuttTimelineKeyWithInterpolate, ICuttTimelineKeyHasColor
+	public Color color;
+
+	public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
+
+	public Color GetRepresentativeColor()
 	{
-		public Color color;
+		return default(Color);
+	}
 
-		public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
-
-		public Color GetRepresentativeColor()
-		{
-			return default(Color);
-		}
-
-		public override void OnLoad(CuttTimelineControl timelineControl)
-		{
-		}
+	public override void OnLoad(CuttTimelineControl timelineControl)
+	{
 	}
 }

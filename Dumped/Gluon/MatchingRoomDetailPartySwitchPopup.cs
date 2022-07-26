@@ -2,97 +2,95 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingRoomDetailPartySwitchPopup : PopupBase
 {
-	public class MatchingRoomDetailPartySwitchPopup : PopupBase
+	[SerializeField]
+	private RectTransform playerInfoRoot;
+
+	[SerializeField]
+	private Image emblemIcon;
+
+	[SerializeField]
+	private Text userName;
+
+	[SerializeField]
+	private Text userLevel;
+
+	[SerializeField]
+	private Text maxPower;
+
+	[SerializeField]
+	public GameObject guildGO;
+
+	public Text guildNameText;
+
+	public RawImage guildEmblem;
+
+	[SerializeField]
+	private QuestResultMultiFriendList playerInfo1;
+
+	[SerializeField]
+	private QuestResultMultiFriendList playerInfo2;
+
+	public Text partyPower1;
+
+	public Text partyPower2;
+
+	[SerializeField]
+	private Button friendRequestButton;
+
+	public Button guildInviteButton;
+
+	public float playerInfoPositionYForNoInviteButton;
+
+	private MatchingService.Player player;
+
+	private CommonFriendListCellData commonFriendListCellData;
+
+	public static void Create(MatchingService.Player player, AtgenSupportUserDataDetail support, int memberIndex)
 	{
-		[SerializeField]
-		private RectTransform playerInfoRoot;
+	}
 
-		[SerializeField]
-		private Image emblemIcon;
+	public static void CreateSelf(MatchingService.Player player, int memberIndex)
+	{
+	}
 
-		[SerializeField]
-		private Text userName;
+	private void SetSelfInfo(MatchingService.Player player, int memberIndex)
+	{
+	}
 
-		[SerializeField]
-		private Text userLevel;
+	private void SetCharaInfo(MatchingService.Player player, AtgenSupportUserDataDetail support, int memberIndex)
+	{
+	}
 
-		[SerializeField]
-		private Text maxPower;
+	public void onRequestButton()
+	{
+	}
 
-		[SerializeField]
-		[Header("Guild")]
-		public GameObject guildGO;
+	private CommonFriendListCellData GetCommonFriendListCellData(UserSupportList support, bool isFriend, bool isFriendApplying)
+	{
+		return null;
+	}
 
-		public Text guildNameText;
+	private void OnClose(bool onClose)
+	{
+	}
 
-		public RawImage guildEmblem;
+	public void OnInviteButton(int index)
+	{
+	}
 
-		[SerializeField]
-		private QuestResultMultiFriendList playerInfo1;
+	public static void CreateErrorPopup()
+	{
+	}
 
-		[SerializeField]
-		private QuestResultMultiFriendList playerInfo2;
+	private void SetSpriteNameData(int playerAnotherNameId)
+	{
+	}
 
-		public Text partyPower1;
-
-		public Text partyPower2;
-
-		[SerializeField]
-		private Button friendRequestButton;
-
-		public Button guildInviteButton;
-
-		public float playerInfoPositionYForNoInviteButton;
-
-		private MatchingService.Player player;
-
-		private CommonFriendListCellData commonFriendListCellData;
-
-		public static void Create(MatchingService.Player player, AtgenSupportUserDataDetail support, int memberIndex)
-		{
-		}
-
-		public static void CreateSelf(MatchingService.Player player, int memberIndex)
-		{
-		}
-
-		private void SetSelfInfo(MatchingService.Player player, int memberIndex)
-		{
-		}
-
-		private void SetCharaInfo(MatchingService.Player player, AtgenSupportUserDataDetail support, int memberIndex)
-		{
-		}
-
-		public void onRequestButton()
-		{
-		}
-
-		private CommonFriendListCellData GetCommonFriendListCellData(UserSupportList support, bool isFriend, bool isFriendApplying)
-		{
-			return null;
-		}
-
-		private void OnClose(bool onClose)
-		{
-		}
-
-		public void OnInviteButton(int index)
-		{
-		}
-
-		public static void CreateErrorPopup()
-		{
-		}
-
-		private void SetSpriteNameData(int playerAnotherNameId)
-		{
-		}
-
-		private void SetGuildData(int guildId, string guildName, int guildEmblemId, bool isPenaltyGuildName)
-		{
-		}
+	private void SetGuildData(int guildId, string guildName, int guildEmblemId, bool isPenaltyGuildName)
+	{
 	}
 }

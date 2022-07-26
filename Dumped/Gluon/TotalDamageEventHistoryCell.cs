@@ -1,30 +1,29 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TotalDamageEventHistoryCell : MonoBehaviour
 {
-	public class TotalDamageEventHistoryCell : MonoBehaviour
+	[SerializeField]
+	private Text totalDamageValueText;
+
+	[SerializeField]
+	private Text dateText;
+
+	[SerializeField]
+	private GameObject movingObject;
+
+	[SerializeField]
+	private SimpleAnimationCell animationCell;
+
+	private static readonly int aggregatePeriodDays;
+
+	public void Setup(long totalDamage, long dateTime)
 	{
-		[SerializeField]
-		private Text totalDamageValueText;
+	}
 
-		[SerializeField]
-		private Text dateText;
-
-		[SerializeField]
-		private GameObject movingObject;
-
-		[SerializeField]
-		private SimpleAnimationCell animationCell;
-
-		private static readonly int aggregatePeriodDays;
-
-		public void Setup(long totalDamage, long dateTime)
-		{
-		}
-
-		public void SetupAnimation(int delayIndex)
-		{
-		}
+	public void SetupAnimation(int delayIndex)
+	{
 	}
 }

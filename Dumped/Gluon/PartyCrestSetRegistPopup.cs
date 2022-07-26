@@ -1,18 +1,17 @@
-namespace Gluon
+namespace Gluon;
+
+public class PartyCrestSetRegistPopup : CommonPopup
 {
-	public class PartyCrestSetRegistPopup : CommonPopup
+	public PartyCrestSetPopupCell fromSetCell;
+
+	public PartyCrestSetPopupCell toSetCell;
+
+	public static PartyCrestSetRegistPopup Create()
 	{
-		public PartyCrestSetPopupCell fromSetCell;
+		return null;
+	}
 
-		public PartyCrestSetPopupCell toSetCell;
-
-		public static PartyCrestSetRegistPopup Create()
-		{
-			return null;
-		}
-
-		public void InitPopup(int setIndex)
-		{
-		}
+	public void InitPopup(int setIndex)
+	{
 	}
 }

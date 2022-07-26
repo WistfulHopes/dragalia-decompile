@@ -3,98 +3,152 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeTopView : ShopTradePanelBase
 {
-	public class ShopTradeTopView : ShopTradePanelBase
+	[SerializeField]
+	public PageViewBase pageView;
+
+	public GameObject pageViewNode;
+
+	[SerializeField]
+	public GameObject materialSummonBadge;
+
+	public GameObject amuletNewIcon;
+
+	public GameObject diaRecommendedIcon;
+
+	[SerializeField]
+	public GameObject campaignButtonGO;
+
+	public ButtonWithSelectedImage campaignButtonWithSelectedImage;
+
+	[SerializeField]
+	public Image centerBannerBGImage;
+
+	public MaintenanceButtonController centerBGMaintenanceButton;
+
+	public Text centerBannerText;
+
+	[SerializeField]
+	public GameObject starterPackSubBanner;
+
+	public GameObject commonPackSubBanner;
+
+	public GameObject sustainablePackButtonRoot;
+
+	public GameObject diaButtonRoot;
+
+	public GameObject dailyDiaButtonRoot;
+
+	public GameObject dailyStaminaButtonRoot;
+
+	public GameObject doubleBonusButtonRoot;
+
+	public GameObject dailyBGRootBefore;
+
+	public Image itemButtonNormalImage;
+
+	public Image itemButtonPressedImage;
+
+	public Sprite itemButtonNormalSpriteAf;
+
+	public Sprite itemButtonPressedSpriteAf;
+
+	public GameObject topBannerObj;
+
+	public GameObject centerBannerObj;
+
+	public GameObject centerButtonObj;
+
+	private float diaEndOffset;
+
+	private const float autoMoveTime = 8f;
+
+	private float moveTimer;
+
+	private bool autoMove;
+
+	private GameObject preLoadedPage;
+
+	private ShopTopBannerModel.BannerData centerData;
+
+	public static ShopTradeTopView Create(Transform parent, ShopTradeScene scene)
 	{
-		[SerializeField]
-		[Header("PageView")]
-		public PageViewBase pageView;
+		return null;
+	}
 
-		public GameObject pageViewNode;
+	public static bool IsDiaEnd()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		[Header("Badge")]
-		public GameObject materialSummonBadge;
+	public static void RequestForEntryHttp(Action onHttpDoneCallback)
+	{
+	}
 
-		public GameObject amuletNewIcon;
+	private void Awake()
+	{
+	}
 
-		public GameObject diaRecommendedIcon;
+	private static bool IsShowDailyDiaButton()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		[Header("Campaign")]
-		public GameObject campaignButtonGO;
+	private bool IsShowDailyStaminaButton()
+	{
+		return default(bool);
+	}
 
-		public ButtonWithSelectedImage campaignButtonWithSelectedImage;
+	private bool IsShowQuestBonusButton()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		[Header("CenterBannerBG")]
-		public Image centerBannerBGImage;
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		public MaintenanceButtonController centerBGMaintenanceButton;
+	private void SetSubBanner()
+	{
+	}
 
-		public Text centerBannerText;
+	private void SetCenterBannerBG(ShopTopBannerModel.BannerData data)
+	{
+	}
 
-		[SerializeField]
-		[Header("SubBunner")]
-		public GameObject starterPackSubBanner;
+	public void OnCenterBannerPressed()
+	{
+	}
 
-		public GameObject commonPackSubBanner;
+	private void GenerateCenterBanners()
+	{
+	}
 
-		private const float autoMoveTime = 8f;
+	private void Update()
+	{
+	}
 
-		private float moveTimer;
+	public void CheckAmuletNewBadge()
+	{
+	}
 
-		private bool autoMove;
+	public void CheckDiaRecommendedBadge()
+	{
+	}
 
-		private GameObject preLoadedPage;
+	public void OnCampainButtonPressed()
+	{
+	}
 
-		private ShopTopBannerModel.BannerData centerData;
+	public override void RefreshCurrentPage()
+	{
+	}
 
-		public static ShopTradeTopView Create(Transform parent, ShopTradeScene scene)
-		{
-			return null;
-		}
-
-		public static void RequestForEntryHttp(Action onHttpDoneCallback)
-		{
-		}
-
-		private IEnumerator Start()
-		{
-			return null;
-		}
-
-		private void SetSubBanner()
-		{
-		}
-
-		private void SetCenterBannerBG(ShopTopBannerModel.BannerData data)
-		{
-		}
-
-		public void OnCenterBannerPressed()
-		{
-		}
-
-		private void GenerateCenterBanners()
-		{
-		}
-
-		private void Update()
-		{
-		}
-
-		public void CheckAmuletNewBadge()
-		{
-		}
-
-		public void CheckDiaRecommendedBadge()
-		{
-		}
-
-		public void OnCampainButtonPressed()
-		{
-		}
+	private void SetSustainableUIActive()
+	{
 	}
 }

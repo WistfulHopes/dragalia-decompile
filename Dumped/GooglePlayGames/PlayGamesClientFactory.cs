@@ -1,12 +1,11 @@
 using GooglePlayGames.BasicApi;
 
-namespace GooglePlayGames
+namespace GooglePlayGames;
+
+internal class PlayGamesClientFactory
 {
-	internal class PlayGamesClientFactory
+	internal static IPlayGamesClient GetPlatformPlayGamesClient(PlayGamesClientConfiguration config)
 	{
-		internal static IPlayGamesClient GetPlatformPlayGamesClient(PlayGamesClientConfiguration config)
-		{
-			return null;
-		}
+		return null;
 	}
 }

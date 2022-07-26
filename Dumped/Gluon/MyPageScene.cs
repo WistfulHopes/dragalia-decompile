@@ -7,551 +7,550 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPageScene : SceneBase
 {
-	public class MyPageScene : SceneBase
+	public enum State
 	{
-		public enum State
-		{
-			None,
-			MoveMapLoadWait,
-			SkitMapLoadWait,
-			MoveMapCreate,
-			SkitMapCreate,
-			MoveFadeIn,
-			MoveNormal,
-			MoveFadeOutToSkitRender,
-			MoveFadeOutToSkitLoad,
-			MoveFadeOutToSkit,
-			MoveFadeOutToMoveRender,
-			MoveFadeOutToMoveLoad,
-			MoveFadeOutToMove,
-			SkitFadeIn,
-			SkitNormal,
-			SkitFadeOutToMove,
-			SkitFadeOutToMoveLoad,
-			SkitFadeOutToMoveRender,
-			SkitFadeOutToSkit,
-			SkitFadeOutToSkitLoad,
-			SkitFadeOutToSkitRender,
-			JustRotate
-		}
+		None,
+		MoveMapLoadWait,
+		SkitMapLoadWait,
+		MoveMapCreate,
+		SkitMapCreate,
+		MoveFadeIn,
+		MoveNormal,
+		MoveFadeOutToSkitRender,
+		MoveFadeOutToSkitLoad,
+		MoveFadeOutToSkit,
+		MoveFadeOutToMoveRender,
+		MoveFadeOutToMoveLoad,
+		MoveFadeOutToMove,
+		SkitFadeIn,
+		SkitNormal,
+		SkitFadeOutToMove,
+		SkitFadeOutToMoveLoad,
+		SkitFadeOutToMoveRender,
+		SkitFadeOutToSkit,
+		SkitFadeOutToSkitLoad,
+		SkitFadeOutToSkitRender,
+		JustRotate
+	}
 
-		public static bool isEcoMode;
+	public static bool isEcoMode;
 
-		public static bool isLeaving;
+	public static bool isLeaving;
 
-		public static bool isShowedInformationByFirst;
+	public static bool isShowedInformationByFirst;
 
-		public static bool exists;
+	public static bool exists;
 
-		public Camera mainCamera;
+	public Camera mainCamera;
 
-		public MyPageCamera myPageCamera;
+	public MyPageCamera myPageCamera;
 
-		public PostEffect mainCameraPostEffect;
+	public PostEffect mainCameraPostEffect;
 
-		public Camera uiCamera;
+	public Camera uiCamera;
 
-		public Camera renderCamera;
+	public Camera renderCamera;
 
-		public PostEffect renderCameraPostEffect;
+	public PostEffect renderCameraPostEffect;
 
-		public MyPageMoveMap moveMap;
+	public MyPageMoveMap moveMap;
 
-		public MyPageSkitMap skitMap;
+	public MyPageSkitMap skitMap;
 
-		public MyPageUICanvas mainCanvas;
+	public MyPageUICanvas mainCanvas;
 
-		public GameObject moveMapGroundRotationBase;
+	public GameObject moveMapGroundRotationBase;
 
-		public MyPage2dUICanvas main2dCanvas;
+	public MyPage2dUICanvas main2dCanvas;
 
-		public MyPageTalkCanvas talkCanvas;
+	public MyPageTalkCanvas talkCanvas;
 
-		public MyPageObjectsSettings objectsSettings;
+	public MyPageObjectsSettings objectsSettings;
 
-		public MyPageLookControl lookControl;
+	public MyPageLookControl lookControl;
 
-		public MyPageSoundControl soundControl;
+	public MyPageSoundControl soundControl;
 
-		public MyPageMoveMapBgContent moveMapBgContent;
+	public MyPageMoveMapBgContent moveMapBgContent;
 
-		public GameObject moveMapGroundBase;
+	public GameObject moveMapGroundBase;
 
-		public GameObject moveMapPlayer;
+	public GameObject moveMapPlayer;
 
-		public GameObject moveMapNhaam;
+	public GameObject moveMapNhaam;
 
-		public GameObject moveMapExtraChara;
+	public GameObject moveMapExtraChara;
 
-		public MyPageMapCharacters characters;
+	public MyPageMapCharacters characters;
 
-		public Color[] ambientColors;
+	public Color[] ambientColors;
 
-		public float updateTime;
+	public float updateTime;
 
-		public MyPageResourceNameList resourceNameList;
+	public MyPageResourceNameList resourceNameList;
 
-		public float rotationSpeed;
+	public float rotationSpeed;
 
-		public State state;
+	public State state;
 
-		public MyPageTutorial tutorial;
+	public MyPageTutorial tutorial;
 
-		public bool isMoveMapBgLoadedOnStart;
+	public bool isMoveMapBgLoadedOnStart;
 
-		public bool doMapLoop;
+	public bool doMapLoop;
 
-		public bool isSyncLoad;
+	public bool isSyncLoad;
 
-		[SerializeField]
-		private GameObject moveMapWalkRotationBase;
+	[SerializeField]
+	private GameObject moveMapWalkRotationBase;
 
-		[HideInInspector]
-		public MyPageTransitionController transition;
+	[HideInInspector]
+	public MyPageTransitionController transition;
 
-		[HideInInspector]
-		public MyPageMoveMapCharaPosSettings moveMapCharaPosSettings;
+	[HideInInspector]
+	public MyPageMoveMapCharaPosSettings moveMapCharaPosSettings;
 
-		[HideInInspector]
-		public MyPageSkitMapCharaPosSettings skitMapCharaPosSettings;
+	[HideInInspector]
+	public MyPageSkitMapCharaPosSettings skitMapCharaPosSettings;
 
-		[HideInInspector]
-		public MyPageMapPlaceCharacterSettings myPageMapPlaceCharacterSettings;
+	[HideInInspector]
+	public MyPageMapPlaceCharacterSettings myPageMapPlaceCharacterSettings;
 
-		[HideInInspector]
-		public GameObject godRayObject;
+	[HideInInspector]
+	public GameObject godRayObject;
 
-		[HideInInspector]
-		public MyPageBgmSyncSettings bgmSyncSettings;
+	[HideInInspector]
+	public MyPageBgmSyncSettings bgmSyncSettings;
 
-		[HideInInspector]
-		public MyPageBgmSyncSettings.Entry currBgmSyncSetting;
+	[HideInInspector]
+	public MyPageBgmSyncSettings.Entry currBgmSyncSetting;
 
-		[HideInInspector]
-		public bool useDebugCharaId;
+	[HideInInspector]
+	public bool useDebugCharaId;
 
-		[HideInInspector]
-		public int[] debugCharaIds;
+	[HideInInspector]
+	public int[] debugCharaIds;
 
-		[HideInInspector]
-		public bool isMyPageInfoRequestDone;
+	[HideInInspector]
+	public bool isMyPageInfoRequestDone;
 
-		[HideInInspector]
-		public bool isMyPageInfoRequestErrer;
+	[HideInInspector]
+	public bool isMyPageInfoRequestErrer;
 
-		private CanvasGroup mainCanvasCanvasGroup;
+	private CanvasGroup mainCanvasCanvasGroup;
 
-		private RawImage fadeoutImage;
+	private RawImage fadeoutImage;
 
-		private RenderTexture renderTexture;
+	private RenderTexture renderTexture;
 
-		private Material[] godRayMaterials;
+	private Material[] godRayMaterials;
 
-		private Vector3 baseRotation;
+	private Vector3 baseRotation;
 
-		private Quaternion initialGroundBaseLocalRotation;
+	private Quaternion initialGroundBaseLocalRotation;
 
-		private Animator playerAnimator;
+	private Animator playerAnimator;
 
-		private RuntimeAnimatorController playerRuntimeAnimator;
+	private RuntimeAnimatorController playerRuntimeAnimator;
 
-		private State startState;
+	private State startState;
 
-		private bool isInitDone;
+	private bool isInitDone;
 
-		private bool skipResourceUnload;
+	private bool skipResourceUnload;
 
-		private MyPageBgmSyncSettings.MapSetting mapSetting;
+	private MyPageBgmSyncSettings.MapSetting mapSetting;
 
-		private UnityEvent backKeyEvent;
+	private UnityEvent backKeyEvent;
 
-		private float walkingSpeed;
+	private float walkingSpeed;
 
-		private TouchGuardObject mypageInfoTouchGuard;
+	private TouchGuardObject mypageInfoTouchGuard;
 
-		private GameObject waitShowAllPopupTouchGuard;
+	private GameObject waitShowAllPopupTouchGuard;
 
-		public static string prefabDir;
+	public static string prefabDir;
 
-		public const float animationLoopTime = 1.053f;
+	public const float animationLoopTime = 1.053f;
 
-		public static string commonBgmLabel;
+	public static string commonBgmLabel;
 
-		public bool isUseMeshCollider;
+	public bool isUseMeshCollider;
 
-		private const float rangeOfRay = 0.5f;
+	private const float rangeOfRay = 0.5f;
 
-		private bool isWaitFadeOut;
+	private bool isWaitFadeOut;
 
-		private Coroutine setupSkitMapTalkCanvasCoroutine;
+	private Coroutine setupSkitMapTalkCanvasCoroutine;
 
-		public static readonly string myPageMapPlaceCharacterSettingsPrefabPath;
+	public static readonly string myPageMapPlaceCharacterSettingsPrefabPath;
 
-		private static readonly string myPageInitializeTouchGuardPrefabPath;
+	private static readonly string myPageInitializeTouchGuardPrefabPath;
 
-		public static bool isOpenGuildPopupAfterEnterScene;
+	public static bool isOpenGuildPopupAfterEnterScene;
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		private IEnumerator SummonExchangeCorotine()
-		{
-			return null;
-		}
+	private IEnumerator SummonExchangeCorotine()
+	{
+		return null;
+	}
 
-		private IEnumerator CsSummonExchangeCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator CsSummonExchangeCoroutine()
+	{
+		return null;
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public void CreateExchangeSummonPopup(SummonPointDataElement spde, UnityAction onPopupEnd)
-		{
-		}
+	public void CreateExchangeSummonPopup(SummonPointDataElement spde, UnityAction onPopupEnd)
+	{
+	}
 
-		public void CsCreateExchangeSummonPopup(int summonId, int csPointTermMaxDate, UnityAction onPopupEnd)
-		{
-		}
+	public void CsCreateExchangeSummonPopup(int summonId, int csPointTermMaxDate, UnityAction onPopupEnd)
+	{
+	}
 
-		public void CreateAndroidBackKeyPopup()
-		{
-		}
+	public void CreateAndroidBackKeyPopup()
+	{
+	}
 
-		public void OnMyPageInfoSuccess(MypageInfoResponse response)
-		{
-		}
+	public void OnMyPageInfoSuccess(MypageInfoResponse response)
+	{
+	}
 
-		private void OnMyPageInfoError(ErrorType errorType, int resultCode)
-		{
-		}
+	private void OnMyPageInfoError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		private IEnumerator OnMyPageInfoSuccessCoroutine(int is_shop_notification)
-		{
-			return null;
-		}
+	private IEnumerator OnMyPageInfoSuccessCoroutine(int is_shop_notification)
+	{
+		return null;
+	}
 
-		public void ReloadOnError()
-		{
-		}
+	public void ReloadOnError()
+	{
+	}
 
-		public override void StartExitAnimation()
-		{
-		}
+	public override void StartExitAnimation()
+	{
+	}
 
-		private IEnumerator ExitAnimationCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator ExitAnimationCoroutine()
+	{
+		return null;
+	}
 
-		public void InitEcoMode()
-		{
-		}
+	public void InitEcoMode()
+	{
+	}
 
-		public void LoadMoveMapGroundScene(string sceneName)
-		{
-		}
+	public void LoadMoveMapGroundScene(string sceneName)
+	{
+	}
 
-		public void LoadMoveMapBuildingScene(string sceneName, bool isAdditive)
-		{
-		}
+	public void LoadMoveMapBuildingScene(string sceneName, bool isAdditive)
+	{
+	}
 
-		public void LoadMoveMapWindmillScene(string sceneName)
-		{
-		}
+	public void LoadMoveMapWindmillScene(string sceneName)
+	{
+	}
 
-		public void CreateMoveMap()
-		{
-		}
+	public void CreateMoveMap()
+	{
+	}
 
-		private void SetUpMoveMapGroundSpeed()
-		{
-		}
+	private void SetUpMoveMapGroundSpeed()
+	{
+	}
 
-		private bool ReplaceMoveMapGroundParent()
-		{
-			return default(bool);
-		}
+	private bool ReplaceMoveMapGroundParent()
+	{
+		return default(bool);
+	}
 
-		private void ReplaceMoveMapBuildParent()
-		{
-		}
+	private void ReplaceMoveMapBuildParent()
+	{
+	}
 
-		private void OnSetupMoveMapPlayerComplete()
-		{
-		}
+	private void OnSetupMoveMapPlayerComplete()
+	{
+	}
 
-		private IEnumerator SetNhaamTransform(bool isWalkerEvent, float maincharaScale)
-		{
-			return null;
-		}
+	private IEnumerator SetNhaamTransform(bool isWalkerEvent, float maincharaScale)
+	{
+		return null;
+	}
 
-		private void LoadCharacterAnimationCompleted(UnityEngine.Object controller)
-		{
-		}
+	private void LoadCharacterAnimationCompleted(UnityEngine.Object controller)
+	{
+	}
 
-		private void SetupMoveMapBird()
-		{
-		}
+	private void SetupMoveMapBird()
+	{
+	}
 
-		private void SetupMoveMapWindmill()
-		{
-		}
+	private void SetupMoveMapWindmill()
+	{
+	}
 
-		private void SetupMoveMapRotation()
-		{
-		}
+	private void SetupMoveMapRotation()
+	{
+	}
 
-		private IEnumerator ResetMoveMapCharaShaderCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator ResetMoveMapCharaShaderCoroutine()
+	{
+		return null;
+	}
 
-		private void UnloadUnusedAssets()
-		{
-		}
+	private void UnloadUnusedAssets()
+	{
+	}
 
-		private IEnumerator UnloadUnusedAssetsCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator UnloadUnusedAssetsCoroutine()
+	{
+		return null;
+	}
 
-		private void SetupPlayerAnimation()
-		{
-		}
+	private void SetupPlayerAnimation()
+	{
+	}
 
-		private IEnumerator SetupMoveMapTalkCanvasCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator SetupMoveMapTalkCanvasCoroutine()
+	{
+		return null;
+	}
 
-		private IEnumerator SetupGodRayCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator SetupGodRayCoroutine()
+	{
+		return null;
+	}
 
-		private void SetupMoveMapNhaam(Action onComplete)
-		{
-		}
+	private void SetupMoveMapNhaam(Action onComplete)
+	{
+	}
 
-		private void SetupMoveMapPlayer(Action onComplete)
-		{
-		}
+	private void SetupMoveMapPlayer(Action onComplete)
+	{
+	}
 
-		private void SetupMoveMapExtraChara(Action onComplete)
-		{
-		}
+	private void SetupMoveMapExtraChara(Action onComplete)
+	{
+	}
 
-		private void TurnOffPlayerCollider()
-		{
-		}
+	private void TurnOffPlayerCollider()
+	{
+	}
 
-		public void SetAmbientColor(int index, Color color)
-		{
-		}
+	public void SetAmbientColor(int index, Color color)
+	{
+	}
 
-		public void ResetMoveMapRotation()
-		{
-		}
+	public void ResetMoveMapRotation()
+	{
+	}
 
-		public void DestroyMoveMap()
-		{
-		}
+	public void DestroyMoveMap()
+	{
+	}
 
-		public void DestroySkitMap()
-		{
-		}
+	public void DestroySkitMap()
+	{
+	}
 
-		public void LoadSkitMapScene(int skitMapIndex)
-		{
-		}
+	public void LoadSkitMapScene(int skitMapIndex)
+	{
+	}
 
-		public void CreateSkitMap()
-		{
-		}
+	public void CreateSkitMap()
+	{
+	}
 
-		private IEnumerator ResetSkitmapCharaShaderCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator ResetSkitmapCharaShaderCoroutine()
+	{
+		return null;
+	}
 
-		private void SetupSkitMapTalkCanvas()
-		{
-		}
+	private void SetupSkitMapTalkCanvas()
+	{
+	}
 
-		private IEnumerator SetupSkitMapTalkCanvasCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator SetupSkitMapTalkCanvasCoroutine()
+	{
+		return null;
+	}
 
-		private void SetupSkitMapTalkNormal()
-		{
-		}
+	private void SetupSkitMapTalkNormal()
+	{
+	}
 
-		private void SetupSkitMapTalkEvent()
-		{
-		}
+	private void SetupSkitMapTalkEvent()
+	{
+	}
 
-		private void EnableRenderCamera()
-		{
-		}
+	private void EnableRenderCamera()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void MoveMapLoadWait()
-		{
-		}
+	private void MoveMapLoadWait()
+	{
+	}
 
-		private void SkitMapLoadWait()
-		{
-		}
+	private void SkitMapLoadWait()
+	{
+	}
 
-		private void MoveMapCreate()
-		{
-		}
+	private void MoveMapCreate()
+	{
+	}
 
-		private void SkitMapCreate()
-		{
-		}
+	private void SkitMapCreate()
+	{
+	}
 
-		private void AdjustMoveMapBuildingRotation()
-		{
-		}
+	private void AdjustMoveMapBuildingRotation()
+	{
+	}
 
-		private void JustRotate()
-		{
-		}
+	private void JustRotate()
+	{
+	}
 
-		private void MoveFadeIn()
-		{
-		}
+	private void MoveFadeIn()
+	{
+	}
 
-		private void MoveNormal()
-		{
-		}
+	private void MoveNormal()
+	{
+	}
 
-		private IEnumerator WaiteChangeStateMoveMapFadeOut()
-		{
-			return null;
-		}
+	private IEnumerator WaiteChangeStateMoveMapFadeOut()
+	{
+		return null;
+	}
 
-		private void AdjustPlayerHigh()
-		{
-		}
+	private void AdjustPlayerHigh()
+	{
+	}
 
-		private void MoveFadeOutToSkitRender()
-		{
-		}
+	private void MoveFadeOutToSkitRender()
+	{
+	}
 
-		private void MoveFadeOutToSkitLoad()
-		{
-		}
+	private void MoveFadeOutToSkitLoad()
+	{
+	}
 
-		private void MoveFadeOutToSkit()
-		{
-		}
+	private void MoveFadeOutToSkit()
+	{
+	}
 
-		private void MoveFadeOutToMoveRender()
-		{
-		}
+	private void MoveFadeOutToMoveRender()
+	{
+	}
 
-		private void MoveFadeOutToMoveLoad()
-		{
-		}
+	private void MoveFadeOutToMoveLoad()
+	{
+	}
 
-		public void LoadMoveMapBg()
-		{
-		}
+	public void LoadMoveMapBg()
+	{
+	}
 
-		private void LoadMoveMap()
-		{
-		}
+	private void LoadMoveMap()
+	{
+	}
 
-		private void MoveFadeOutToMove()
-		{
-		}
+	private void MoveFadeOutToMove()
+	{
+	}
 
-		private void SkitFadeIn()
-		{
-		}
+	private void SkitFadeIn()
+	{
+	}
 
-		private void SkitNormal()
-		{
-		}
+	private void SkitNormal()
+	{
+	}
 
-		private IEnumerator WaiteChangeStateSkitMapFadeOut()
-		{
-			return null;
-		}
+	private IEnumerator WaiteChangeStateSkitMapFadeOut()
+	{
+		return null;
+	}
 
-		private void SkitFadeOutToMoveRender()
-		{
-		}
+	private void SkitFadeOutToMoveRender()
+	{
+	}
 
-		private void SkitFadeOutToMoveLoad()
-		{
-		}
+	private void SkitFadeOutToMoveLoad()
+	{
+	}
 
-		private void SkitFadeOutToMove()
-		{
-		}
+	private void SkitFadeOutToMove()
+	{
+	}
 
-		private void SkitFadeOutToSkitRender()
-		{
-		}
+	private void SkitFadeOutToSkitRender()
+	{
+	}
 
-		private void SkitFadeOutToSkitLoad()
-		{
-		}
+	private void SkitFadeOutToSkitLoad()
+	{
+	}
 
-		private void SkitFadeOutToSkit()
-		{
-		}
+	private void SkitFadeOutToSkit()
+	{
+	}
 
-		public void OnTouchAreaTouched()
-		{
-		}
+	public void OnTouchAreaTouched()
+	{
+	}
 
-		public override void OnPopupOpened()
-		{
-		}
+	public override void OnPopupOpened()
+	{
+	}
 
-		public override void OnPopupClosed()
-		{
-		}
+	public override void OnPopupClosed()
+	{
+	}
 
-		public override void OnBeforeLeaving()
-		{
-		}
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		public bool IsMoveMapOnGoing()
-		{
-			return default(bool);
-		}
+	public bool IsMoveMapOnGoing()
+	{
+		return default(bool);
+	}
 
-		private void CheckMeshCollider()
-		{
-		}
+	private void CheckMeshCollider()
+	{
+	}
 
-		public void ReloadObjectsSettings()
-		{
-		}
+	public void ReloadObjectsSettings()
+	{
 	}
 }

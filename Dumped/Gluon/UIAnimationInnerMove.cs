@@ -1,41 +1,40 @@
-namespace Gluon
+namespace Gluon;
+
+public class UIAnimationInnerMove : UIAnimationBase
 {
-	public class UIAnimationInnerMove : UIAnimationBase
+	protected float moveDistance;
+
+	protected float overrunBounceDistance;
+
+	protected float postOverrunExtension;
+
+	protected override void JoinEnterCanvasGroupAnimation()
 	{
-		protected float moveDistance;
+	}
 
-		protected float overrunBounceDistance;
+	protected override void JoinExitCanvasGroupAnimation()
+	{
+	}
 
-		protected float postOverrunExtension;
+	public override void ApplySetting(UIAnimationSetting anotherSetting)
+	{
+	}
 
-		protected override void JoinEnterCanvasGroupAnimation()
-		{
-		}
+	protected override void JoinEnterAnimation()
+	{
+	}
 
-		protected override void JoinExitCanvasGroupAnimation()
-		{
-		}
+	protected override void JoinExitAnimation()
+	{
+	}
 
-		public override void ApplySetting(UIAnimationSetting anotherSetting)
-		{
-		}
+	protected override float AppendExtraToEnterAnimation()
+	{
+		return default(float);
+	}
 
-		protected override void JoinEnterAnimation()
-		{
-		}
-
-		protected override void JoinExitAnimation()
-		{
-		}
-
-		protected override float AppendExtraToEnterAnimation()
-		{
-			return default(float);
-		}
-
-		protected override float AppendExtraToExitAnimation()
-		{
-			return default(float);
-		}
+	protected override float AppendExtraToExitAnimation()
+	{
+		return default(float);
 	}
 }

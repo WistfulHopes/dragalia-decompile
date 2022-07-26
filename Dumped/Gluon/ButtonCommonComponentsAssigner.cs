@@ -1,20 +1,19 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[DisallowMultipleComponent]
+public class ButtonCommonComponentsAssigner : MonoBehaviour
 {
-	[DisallowMultipleComponent]
-	public class ButtonCommonComponentsAssigner : MonoBehaviour
+	public enum ButtonAnimType
 	{
-		public enum ButtonAnimType
-		{
-			None = -1,
-			Normal,
-			ReverseX,
-			Icon,
-			ButtonWithIconAndSelectedImage,
-			ButtonWithSelectedImage,
-			ButtonWithSelectedImageEx,
-			Max
-		}
+		None = -1,
+		Normal,
+		ReverseX,
+		Icon,
+		ButtonWithIconAndSelectedImage,
+		ButtonWithSelectedImage,
+		ButtonWithSelectedImageEx,
+		Max
 	}
 }

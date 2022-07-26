@@ -4,139 +4,146 @@ using Gluon.GraphicParameter;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttCharacterController : MonoBehaviour
 {
-	public class CuttCharacterController : MonoBehaviour
+	public static readonly float[] height;
+
+	[HideInInspector]
+	public CuttCharacterInitializeData initializeData;
+
+	public const int animatorStateInfoMax = 5;
+
+	private Animator animator;
+
+	private AnimatorStateInfo[] info;
+
+	private Transform rootTransform;
+
+	private CuttCharacterFaceAnimation eye;
+
+	private CuttCharacterFaceAnimation mouth;
+
+	private GameObject shadow;
+
+	private Vector3 shadowOffset;
+
+	private Vector3 shadowScale;
+
+	private CuttCharacterFaceData faceData;
+
+	private MeshRenderer[] meshrenerers2D;
+
+	private Image[] image;
+
+	private Color color;
+
+	private FlRoot flRoot;
+
+	private float scaleFactor;
+
+	private RectTransform canvasRect;
+
+	private Camera flCamera;
+
+	private RenderPartsData renderPartsData;
+
+	public CuttCharacterInitializeData.PrefabType prefabType;
+
+	public CuttCharacterFaceAnimation.ModelType modelType;
+
+	private void Start()
 	{
-		public static readonly float[] height;
+	}
 
-		[HideInInspector]
-		public CuttCharacterInitializeData initializeData;
+	private void InitializeFlashData()
+	{
+	}
 
-		public const int animatorStateInfoMax = 5;
+	public void InitializeCharacterData()
+	{
+	}
 
-		private Animator animator;
+	private void InitializeUIData()
+	{
+	}
 
-		private AnimatorStateInfo[] info;
+	private void OnDestroy()
+	{
+	}
 
-		private Transform rootTransform;
+	public void SetAlpha(float alpha)
+	{
+	}
 
-		private CuttCharacterFaceAnimation eye;
+	public void SetShadow(Vector3 offset, Vector2 shadowScale)
+	{
+	}
 
-		private CuttCharacterFaceAnimation mouth;
+	public void UpdateShadowPosition()
+	{
+	}
 
-		private GameObject shadow;
+	public void PlayMotion(int layerIndex, string stateName, float time)
+	{
+	}
 
-		private Vector3 shadowOffset;
+	public void TriggerMotion(int layerIndex, string triggerName)
+	{
+	}
 
-		private Vector3 shadowScale;
+	public Vector3 GetMotionPosition()
+	{
+		return default(Vector3);
+	}
 
-		private CuttCharacterFaceData faceData;
+	public float GetCurrentMotionLength(int layerIndex)
+	{
+		return default(float);
+	}
 
-		private MeshRenderer[] meshrenerers2D;
+	public void UpdateMotion(float deltaTime)
+	{
+	}
 
-		private Image[] image;
+	public void SetExpressionHiModel(CuttTimelineControl control, CuttCharaEye expressionType, CuttCharacterFaceAnimation.Type animationType, int startFrame)
+	{
+	}
 
-		private Color color;
+	public void SetExpressionHiModel(CuttTimelineControl control, CuttCharaMouth expressionType, CuttCharacterFaceAnimation.Type animationType, int startFrame)
+	{
+	}
 
-		private FlRoot flRoot;
+	public void SetExpressionNormalModel(CuttTimelineControl control, CharaFaceEye type, CuttCharacterFaceAnimation.Type animationType, int startFrame)
+	{
+	}
 
-		private float scaleFactor;
+	public void SetExpressionNormalModel(CuttTimelineControl control, CharaFaceMouth type, CuttCharacterFaceAnimation.Type animationType, int startFrame)
+	{
+	}
 
-		private RectTransform canvasRect;
+	public void AltherUpdate(int frame)
+	{
+	}
 
-		private Camera flCamera;
+	public void SetFtuInitializeData(CuttFtuInitializeData data, string folderPath)
+	{
+	}
 
-		private RenderPartsData renderPartsData;
+	public void SetEyeTextureOffset(int index)
+	{
+	}
 
-		public CuttCharacterInitializeData.PrefabType prefabType;
+	public void SetEyeTextureOffset(Vector2 offset)
+	{
+	}
 
-		public CuttCharacterFaceAnimation.ModelType modelType;
+	public void SetMouthTextureOffset(int index)
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		private void InitializeFlashData()
-		{
-		}
-
-		public void InitializeCharacterData()
-		{
-		}
-
-		private void InitializeUIData()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public void SetAlpha(float alpha)
-		{
-		}
-
-		public void SetShadow(Vector3 offset, Vector2 shadowScale)
-		{
-		}
-
-		public void UpdateShadowPosition()
-		{
-		}
-
-		public void PlayMotion(int layerIndex, string stateName, float time)
-		{
-		}
-
-		public void TriggerMotion(int layerIndex, string triggerName)
-		{
-		}
-
-		public Vector3 GetMotionPosition()
-		{
-			return default(Vector3);
-		}
-
-		public float GetCurrentMotionLength(int layerIndex)
-		{
-			return default(float);
-		}
-
-		public void UpdateMotion(float deltaTime)
-		{
-		}
-
-		public void SetExpressionHiModel(CuttTimelineControl control, CuttCharaEye expressionType, CuttCharacterFaceAnimation.Type animationType, int startFrame)
-		{
-		}
-
-		public void SetExpressionHiModel(CuttTimelineControl control, CuttCharaMouth expressionType, CuttCharacterFaceAnimation.Type animationType, int startFrame)
-		{
-		}
-
-		public void SetExpressionNormalModel(CuttTimelineControl control, CharaFaceEye type, CuttCharacterFaceAnimation.Type animationType, int startFrame)
-		{
-		}
-
-		public void SetExpressionNormalModel(CuttTimelineControl control, CharaFaceMouth type, CuttCharacterFaceAnimation.Type animationType, int startFrame)
-		{
-		}
-
-		public void AltherUpdate(int frame)
-		{
-		}
-
-		public void SetFtuInitializeData(CuttFtuInitializeData data, string folderPath)
-		{
-		}
-
-		public void SetEyeTextureOffset(int index)
-		{
-		}
-
-		public void SetMouthTextureOffset(int index)
-		{
-		}
+	public void SetMouthTextureOffset(Vector2 offset)
+	{
 	}
 }

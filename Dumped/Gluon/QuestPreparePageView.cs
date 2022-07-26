@@ -1,15 +1,14 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestPreparePageView : MonoBehaviour
 {
-	public class QuestPreparePageView : MonoBehaviour
+	public QuestPrepareCanvas prepareCanvas;
+
+	public GameObject charaButtonParent;
+
+	public void SetContent(int index, bool isAutoSelect = false)
 	{
-		public QuestPrepareCanvas prepareCanvas;
-
-		public GameObject charaButtonParent;
-
-		public void SetContent(int index, bool isAutoSelect = false)
-		{
-		}
 	}
 }

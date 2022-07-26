@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateRevive : CharacterStateBase
 {
-	public class CharacterStateRevive : CharacterStateBase
+	protected override void OnStateEnter_Internal()
 	{
-		protected override void OnStateEnter_Internal()
-		{
-		}
 	}
 }

@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public class FollowerAI_10150405 : FollowerAIBase
 {
-	public class FollowerAI_10150405 : FollowerAIBase
+	public override bool IsEnableSkill(PlayerCharacter owner, CharacterBase target, int index)
 	{
-		public override bool IsEnableSkill(PlayerCharacter owner, CharacterBase target, int index)
-		{
-			return default(bool);
-		}
+		return default(bool);
 	}
 }

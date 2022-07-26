@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum NameCategory
 {
-	public enum NameCategory
-	{
-		None,
-		Quest,
-		Chara,
-		Dragon,
-		Other
-	}
+	None,
+	Quest,
+	Chara,
+	Dragon,
+	Other
 }

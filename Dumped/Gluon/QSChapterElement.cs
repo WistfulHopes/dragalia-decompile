@@ -1,94 +1,93 @@
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class QSChapterElement
 {
-	public class QSChapterElement
+	public QuestMainGroupElement questGroupElement
 	{
-		public QuestMainGroupElement questGroupElement
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		public bool enable
+	public bool enable
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		public bool hardEnable
+	public bool hardEnable
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		public bool veryHardEnable
+	public bool veryHardEnable
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		public int[] allMission
+	public int[] allMission
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		public int[] achievement
+	public int[] achievement
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		public QSChapterElement()
-		{
-		}
+	public QSChapterElement()
+	{
+	}
 
-		public QSChapterElement(QSChapterElement src)
-		{
-		}
+	public QSChapterElement(QSChapterElement src)
+	{
 	}
 }

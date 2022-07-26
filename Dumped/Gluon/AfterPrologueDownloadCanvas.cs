@@ -3,151 +3,150 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AfterPrologueDownloadCanvas : MonoBehaviour
 {
-	public class AfterPrologueDownloadCanvas : MonoBehaviour
+	public PageViewBase pageView;
+
+	public GameObject pagerCenter;
+
+	public Image[] charaHeaderBgs;
+
+	public Image[] stars;
+
+	public Image[] elementIcons;
+
+	public Image[] weaponIcons;
+
+	public Text charaName;
+
+	public Text charaDesc;
+
+	public GameObject checkMark;
+
+	public Text downloadPercentText;
+
+	public Text downloadingText;
+
+	public GameObject charaHeader;
+
+	public GameObject charaDetailButton;
+
+	public GameObject charaFooter;
+
+	public AnimationUITalkWindow talkWindow;
+
+	public RectTransform tutorialFooterRectTransform;
+
+	public CanvasGroup tutorialFooterCanvasGroup;
+
+	public Gauge gauge;
+
+	public GameObject gaugeBar;
+
+	public GameObject gaugeBarCompleted;
+
+	public RectTransform dotsRectTransform;
+
+	public Image[] dots;
+
+	public CanvasGroup frontBlackCG;
+
+	private static List<TutorialUnitSelectListElement> charaList;
+
+	private static List<int> charaIds;
+
+	public float moveDuration;
+
+	public static string prefabDir;
+
+	private static string pagePrefabPath;
+
+	private void Start()
 	{
-		public PageViewBase pageView;
+	}
 
-		public GameObject pagerCenter;
+	public void SetCharaInfo(int charaId)
+	{
+	}
 
-		public Image[] charaHeaderBgs;
+	public void OnBeforePageChange(bool isToLeft)
+	{
+	}
 
-		public Image[] stars;
+	public void OnPageChanged(int pageIndex)
+	{
+	}
 
-		public Image[] elementIcons;
+	public void OnDetailButtonPressed()
+	{
+	}
 
-		public Image[] weaponIcons;
+	private void ExecuteTutorialStartAnimation()
+	{
+	}
 
-		public Text charaName;
+	private void ExecuteTutorialEndAnimation()
+	{
+	}
 
-		public Text charaDesc;
+	public void OnCheckButtonPressed()
+	{
+	}
 
-		public GameObject checkMark;
+	public static List<int> GetFavoriteCharaIdList()
+	{
+		return null;
+	}
 
-		public Text downloadPercentText;
+	public static List<TutorialUnitSelectListElement> GetNowTutorialUnitSelectList()
+	{
+		return null;
+	}
 
-		public Text downloadingText;
+	public static bool IsFavoriteCharaId(int charaId)
+	{
+		return default(bool);
+	}
 
-		public GameObject charaHeader;
+	public void SetDownloadPercentage(float value)
+	{
+	}
 
-		public GameObject charaDetailButton;
+	private void ExecuteCharaFooterStartAnimation()
+	{
+	}
 
-		public GameObject charaFooter;
+	private void ExecuteCharaFooterEndAnimation()
+	{
+	}
 
-		public AnimationUITalkWindow talkWindow;
+	private void HideCharaFooter()
+	{
+	}
 
-		public RectTransform tutorialFooterRectTransform;
+	private void ExecuteCharaHeaderStartAnimation()
+	{
+	}
 
-		public CanvasGroup tutorialFooterCanvasGroup;
+	private void ExecuteCharaHeaderEndAnimation()
+	{
+	}
 
-		public Gauge gauge;
+	private void HideCharaHeader()
+	{
+	}
 
-		public GameObject gaugeBar;
+	private void ExecuteCharaDetailButtonStartAnimation()
+	{
+	}
 
-		public GameObject gaugeBarCompleted;
+	private void ExecuteCharaDetailButtonEndAnimation()
+	{
+	}
 
-		public RectTransform dotsRectTransform;
-
-		public Image[] dots;
-
-		public CanvasGroup frontBlackCG;
-
-		private static List<TutorialUnitSelectListElement> charaList;
-
-		private static List<int> charaIds;
-
-		public float moveDuration;
-
-		public static string prefabDir;
-
-		private static string pagePrefabPath;
-
-		private void Start()
-		{
-		}
-
-		public void SetCharaInfo(int charaId)
-		{
-		}
-
-		public void OnBeforePageChange(bool isToLeft)
-		{
-		}
-
-		public void OnPageChanged(int pageIndex)
-		{
-		}
-
-		public void OnDetailButtonPressed()
-		{
-		}
-
-		private void ExecuteTutorialStartAnimation()
-		{
-		}
-
-		private void ExecuteTutorialEndAnimation()
-		{
-		}
-
-		public void OnCheckButtonPressed()
-		{
-		}
-
-		public static List<int> GetFavoriteCharaIdList()
-		{
-			return null;
-		}
-
-		public static List<TutorialUnitSelectListElement> GetNowTutorialUnitSelectList()
-		{
-			return null;
-		}
-
-		public static bool IsFavoriteCharaId(int charaId)
-		{
-			return default(bool);
-		}
-
-		public void SetDownloadPercentage(float value)
-		{
-		}
-
-		private void ExecuteCharaFooterStartAnimation()
-		{
-		}
-
-		private void ExecuteCharaFooterEndAnimation()
-		{
-		}
-
-		private void HideCharaFooter()
-		{
-		}
-
-		private void ExecuteCharaHeaderStartAnimation()
-		{
-		}
-
-		private void ExecuteCharaHeaderEndAnimation()
-		{
-		}
-
-		private void HideCharaHeader()
-		{
-		}
-
-		private void ExecuteCharaDetailButtonStartAnimation()
-		{
-		}
-
-		private void ExecuteCharaDetailButtonEndAnimation()
-		{
-		}
-
-		private void HideCharaDetailButton()
-		{
-		}
+	private void HideCharaDetailButton()
+	{
 	}
 }

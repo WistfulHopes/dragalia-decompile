@@ -1,32 +1,31 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 {
-	public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
+	private static T _instance;
+
+	protected bool _isRedy;
+
+	public static T instance => null;
+
+	public bool isRedy => default(bool);
+
+	public static void CreateInstance()
 	{
-		private static T _instance;
+	}
 
-		protected bool _isRedy;
+	public static bool IsInstanceEmpty()
+	{
+		return default(bool);
+	}
 
-		public static T instance => null;
+	protected virtual void Awake()
+	{
+	}
 
-		public bool isRedy => default(bool);
-
-		public static void CreateInstance()
-		{
-		}
-
-		public static bool IsInstanceEmpty()
-		{
-			return default(bool);
-		}
-
-		protected virtual void Awake()
-		{
-		}
-
-		protected virtual void OnDestroy()
-		{
-		}
+	protected virtual void OnDestroy()
+	{
 	}
 }

@@ -4,152 +4,151 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthUnitStatusConfirmPopup : CommonPopup, ICustomMessage
 {
-	public class GrowthUnitStatusConfirmPopup : CommonPopup, ICustomMessage
+	public Text beforeHpText;
+
+	public Text afterHpText;
+
+	public Text diffHpText;
+
+	public Text beforeAtkText;
+
+	public Text afterAtkText;
+
+	public Text diffAtkText;
+
+	public GameObject originCell;
+
+	public Transform cellParentTransform;
+
+	public CommonSlider slider;
+
+	public Button plusButton;
+
+	public Button minusButton;
+
+	public Text useCountText;
+
+	public Text totalCountText;
+
+	public Text conditionText;
+
+	public GameObject needMaterialTextObject;
+
+	public Action reloadCanvasUICallBack;
+
+	private int _nowValue;
+
+	private GrowthUnitEnhanceModel model;
+
+	private List<CraftMaterialCell> materialCells;
+
+	private Coroutine updateUICoroutine;
+
+	private Coroutine countCoroutine;
+
+	private PointerEventHandler plusButtonEventHandler;
+
+	private PointerEventHandler minusButtonEventHandler;
+
+	private int minValue;
+
+	private int maxValue;
+
+	private bool isDesabledReleaseButton;
+
+	private bool isEndInitTask;
+
+	private bool isSkipChangeValueTask;
+
+	private PointerEventHandler okButtonHandler;
+
+	private readonly Color positiveColor;
+
+	private readonly Color normalColor;
+
+	public int nowValue
 	{
-		public Text beforeHpText;
-
-		public Text afterHpText;
-
-		public Text diffHpText;
-
-		public Text beforeAtkText;
-
-		public Text afterAtkText;
-
-		public Text diffAtkText;
-
-		public GameObject originCell;
-
-		public Transform cellParentTransform;
-
-		public CommonSlider slider;
-
-		public Button plusButton;
-
-		public Button minusButton;
-
-		public Text useCountText;
-
-		public Text totalCountText;
-
-		public Text conditionText;
-
-		public GameObject needMaterialTextObject;
-
-		public Action reloadCanvasUICallBack;
-
-		private int _nowValue;
-
-		private GrowthUnitEnhanceModel model;
-
-		private List<CraftMaterialCell> materialCells;
-
-		private Coroutine updateUICoroutine;
-
-		private Coroutine countCoroutine;
-
-		private PointerEventHandler plusButtonEventHandler;
-
-		private PointerEventHandler minusButtonEventHandler;
-
-		private int minValue;
-
-		private int maxValue;
-
-		private bool isDesabledReleaseButton;
-
-		private bool isEndInitTask;
-
-		private bool isSkipChangeValueTask;
-
-		private PointerEventHandler okButtonHandler;
-
-		private readonly Color positiveColor;
-
-		private readonly Color normalColor;
-
-		public int nowValue
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			private set
-			{
-			}
+			return default(int);
 		}
-
-		private void OnEnable()
+		private set
 		{
 		}
+	}
 
-		private void OnDisable()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		public static GrowthUnitStatusConfirmPopup Create()
-		{
-			return null;
-		}
+	private void OnDisable()
+	{
+	}
 
-		public void InitPopup(GrowthUnitEnhanceModel model)
-		{
-		}
+	public static GrowthUnitStatusConfirmPopup Create()
+	{
+		return null;
+	}
 
-		public void ChangedSliderValue(float newValue)
-		{
-		}
+	public void InitPopup(GrowthUnitEnhanceModel model)
+	{
+	}
 
-		public void OnPlusButtonPressed()
-		{
-		}
+	public void ChangedSliderValue(float newValue)
+	{
+	}
 
-		public void OnMinusButtonPressed()
-		{
-		}
+	public void OnPlusButtonPressed()
+	{
+	}
 
-		public void OnValueChangeButtonLongPressed(int countInc)
-		{
-		}
+	public void OnMinusButtonPressed()
+	{
+	}
 
-		private IEnumerator CountSpeedCoroutine(bool isPlus)
-		{
-			return null;
-		}
+	public void OnValueChangeButtonLongPressed(int countInc)
+	{
+	}
 
-		private IEnumerator UpdatePopupUIDelay()
-		{
-			return null;
-		}
+	private IEnumerator CountSpeedCoroutine(bool isPlus)
+	{
+		return null;
+	}
 
-		private void UpdatePopupUI()
-		{
-		}
+	private IEnumerator UpdatePopupUIDelay()
+	{
+		return null;
+	}
 
-		private void UpdateStatus()
-		{
-		}
+	private void UpdatePopupUI()
+	{
+	}
 
-		private void SetupMaterialCell()
-		{
-		}
+	private void UpdateStatus()
+	{
+	}
 
-		private void UpdateMaterialCell()
-		{
-		}
+	private void SetupMaterialCell()
+	{
+	}
 
-		private void OnMaterialIconPressed(CraftMaterialCellData cellData)
-		{
-		}
+	private void UpdateMaterialCell()
+	{
+	}
 
-		private void DesableTutorialUI()
-		{
-		}
+	private void OnMaterialIconPressed(CraftMaterialCellData cellData)
+	{
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	private void DesableTutorialUI()
+	{
+	}
+
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

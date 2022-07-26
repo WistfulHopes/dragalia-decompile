@@ -1,7 +1,6 @@
-namespace Cutt
+namespace Cutt;
+
+public interface ICuttTimelineGroupData
 {
-	public interface ICuttTimelineGroupData
-	{
-		ICuttTimelineKeyDataList GetKeyList();
-	}
+	ICuttTimelineKeyDataList GetKeyList();
 }

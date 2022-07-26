@@ -3,164 +3,161 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SupportButton : FastUpdateMonoBehaviour
 {
-	public class SupportButton : FastUpdateMonoBehaviour
+	public delegate void ButtonDelegate(SupportButton sender);
+
+	private enum ButtonStep
 	{
-		public delegate void ButtonDelegate(SupportButton sender);
+		Initialize,
+		EnableFirst,
+		EnableWait,
+		Cutin,
+		Recast,
+		Empty
+	}
 
-		private enum ButtonStep
-		{
-			Initialize,
-			EnableFirst,
-			EnableWait,
-			Cutin,
-			Recast,
-			Empty
-		}
+	[SerializeField]
+	private Button button;
 
-		[SerializeField]
-		[Header("component")]
-		private Button button;
+	[SerializeField]
+	private SpriteRenderer imageBase;
 
-		[SerializeField]
-		private SpriteRenderer imageBase;
+	[SerializeField]
+	private RectTransform imageInvalidObjRt;
 
-		[SerializeField]
-		private RectTransform imageInvalidObjRt;
+	[SerializeField]
+	private RectTransform offset;
 
-		[SerializeField]
-		private RectTransform offset;
+	[SerializeField]
+	private RectTransform[] countRt;
 
-		[SerializeField]
-		private RectTransform[] countRt;
+	[SerializeField]
+	private GameObject shadow;
 
-		[SerializeField]
-		private GameObject shadow;
+	[SerializeField]
+	private SpriteRenderer noUseImage;
 
-		[SerializeField]
-		private SpriteRenderer noUseImage;
+	[SerializeField]
+	private SpriteRenderer effectImage;
 
-		[SerializeField]
-		private SpriteRenderer effectImage;
+	[SerializeField]
+	private float expansionTime;
 
-		[SerializeField]
-		[Header("parameter")]
-		private float expansionTime;
+	[SerializeField]
+	private int flashCount;
 
-		[SerializeField]
-		private int flashCount;
+	[SerializeField]
+	private float flashTime;
 
-		[SerializeField]
-		private float flashTime;
+	[SerializeField]
+	private float maxFlashPower;
 
-		[SerializeField]
-		private float maxFlashPower;
+	private const int numCounter = 3;
 
-		private const int numCounter = 3;
+	[HideInInspector]
+	public RectTransform ownTransform;
 
-		[HideInInspector]
-		public RectTransform ownTransform;
+	private int enableCount;
 
-		private int enableCount;
+	private int restCount;
 
-		private int restCount;
+	private bool isActive;
 
-		private bool isActive;
+	private bool validate;
 
-		private bool validate;
+	private bool isClonedMaterial;
 
-		private bool isClonedMaterial;
+	private Color noUseHideColor;
 
-		private Color noUseHideColor;
+	private Tweener tweenerExpansion;
 
-		private Tweener tweenerExpansion;
+	private Tweener tweenerEffectFlash;
 
-		private Tweener tweenerEffectFlash;
+	private RectTransform effectRt;
 
-		private RectTransform effectRt;
+	private const float tweenerExpansionEndValue = 1f;
 
-		private const float tweenerExpansionEndValue = 1f;
+	private bool isLeftFlag;
 
-		private bool isLeftFlag;
+	private ButtonStep buttonStep;
 
-		private ButtonStep buttonStep;
+	public static SupportButton Create(GameObject parent, int index, ButtonDelegate click, bool isLeft)
+	{
+		return null;
+	}
 
-		public static SupportButton Create(GameObject parent, int index, ButtonDelegate click, bool isLeft)
-		{
-			return null;
-		}
+	public void Initialize(ButtonDelegate func, bool isLeft)
+	{
+	}
 
-		public void Initialize(ButtonDelegate func, bool isLeft)
-		{
-		}
+	public void OnDestroy()
+	{
+	}
 
-		public void OnDestroy()
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	private void LateUpdate()
+	{
+	}
 
-		private void LateUpdate()
-		{
-		}
+	public bool SetImage(string skillName)
+	{
+		return default(bool);
+	}
 
-		public bool SetImage(string skillName)
-		{
-			return default(bool);
-		}
+	public void Attach(RectTransform parentRT)
+	{
+	}
 
-		public void Attach(RectTransform parentRT)
-		{
-		}
+	public void Visible(bool b)
+	{
+	}
 
-		public void Visible(bool b)
-		{
-		}
+	public bool IsVisible()
+	{
+		return default(bool);
+	}
 
-		public bool IsVisible()
-		{
-			return default(bool);
-		}
+	public void Validate(bool b)
+	{
+	}
 
-		public void Validate(bool b)
-		{
-		}
+	private bool IsFullRecastGauge()
+	{
+		return default(bool);
+	}
 
-		private bool IsFullRecastGauge()
-		{
-			return default(bool);
-		}
+	private void CheckInvalidObj()
+	{
+	}
 
-		private void CheckInvalidObj()
-		{
-		}
+	public Vector2 GetButtonPosition()
+	{
+		return default(Vector2);
+	}
 
-		public Vector2 GetButtonPosition()
-		{
-			return default(Vector2);
-		}
+	public void SetCount(int n)
+	{
+	}
 
-		public void SetCount(int n)
-		{
-		}
+	private void StartExpansionEffect()
+	{
+	}
 
-		private void StartExpansionEffect()
-		{
-		}
+	private void OnUpdateExpansion(float value)
+	{
+	}
 
-		private void OnUpdateExpansion(float value)
-		{
-		}
+	private void OnCompleteExpansion()
+	{
+	}
 
-		private void OnCompleteExpansion()
-		{
-		}
-
-		private void OnUpdateButtonEffectFlash(float value)
-		{
-		}
+	private void OnUpdateButtonEffectFlash(float value)
+	{
 	}
 }

@@ -1,31 +1,30 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SimpleStoryManager : MonoBehaviour
 {
-	public class SimpleStoryManager : MonoBehaviour
+	private enum SortingOrder
 	{
-		private enum SortingOrder
-		{
-			Character = 150,
-			UIBackground,
-			UIMain
-		}
+		Character = 150,
+		UIBackground,
+		UIMain
+	}
 
-		public CameraGroup characterCamera;
+	public CameraGroup characterCamera;
 
-		private GameObject storyCanvasObject;
+	private GameObject storyCanvasObject;
 
-		private GameObject storyBgCanvasObject;
+	private GameObject storyBgCanvasObject;
 
-		private GameObject storyCharaCanvasObject;
+	private GameObject storyCharaCanvasObject;
 
-		public void SetupStory()
-		{
-		}
+	public void SetupStory()
+	{
+	}
 
-		public void ExecScript(string scriptName, Action onCompleted)
-		{
-		}
+	public void ExecScript(string scriptName, Action onCompleted)
+	{
 	}
 }

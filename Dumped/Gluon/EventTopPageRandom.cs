@@ -1,19 +1,17 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventTopPageRandom : EventTopPageBase
 {
-	public class EventTopPageRandom : EventTopPageBase
+	[SerializeField]
+	private TreasureTimeController treasureTimeCtrl;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		[Header("TreasureTime")]
-		private TreasureTimeController treasureTimeCtrl;
+	}
 
-		protected override void Awake()
-		{
-		}
-
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public override void OnPageBecomeActive(object data)
+	{
 	}
 }

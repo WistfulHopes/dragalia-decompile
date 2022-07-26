@@ -1,9 +1,8 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class UIImageMaskToAlphaProperty : MonoBehaviour
 {
-	public class UIImageMaskToAlphaProperty : MonoBehaviour
-	{
-		public Vector2 addOffset;
-	}
+	public Vector2 addOffset;
 }

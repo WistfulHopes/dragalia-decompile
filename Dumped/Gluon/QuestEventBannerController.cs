@@ -5,142 +5,141 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestEventBannerController : MonoBehaviour, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
 {
-	public class QuestEventBannerController : MonoBehaviour, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
+	public RectTransform pagerCenter;
+
+	public GameObject bannerRoot;
+
+	public Text titleText;
+
+	public CircleOutline outline;
+
+	private List<QuestEventSubBanner> banners;
+
+	private List<CommonPager> pagers;
+
+	private GameObject bannerPrefab;
+
+	private Vector2 beginDragPosition;
+
+	private bool isDragging;
+
+	private bool isAnimating;
+
+	private int currentIndex;
+
+	private int bannerCount;
+
+	private float lastMoveTime;
+
+	private Button bannerControllerButton;
+
+	private const float moveInterval = 8f;
+
+	private const float bannerWidth = 280f;
+
+	private const float resolutionFixRate = 100f;
+
+	private readonly Color normalTextColor;
+
+	private readonly Color normalOutlineColor;
+
+	private readonly Color eventTextColor;
+
+	private readonly Color eventOutlineColor;
+
+	private void Start()
 	{
-		public RectTransform pagerCenter;
+	}
 
-		public GameObject bannerRoot;
+	private IEnumerator InitCoroutine()
+	{
+		return null;
+	}
 
-		public Text titleText;
+	public void Reload()
+	{
+	}
 
-		public CircleOutline outline;
+	private void Update()
+	{
+	}
 
-		private List<QuestEventSubBanner> banners;
+	private void AddBanner(EventDataElement element)
+	{
+	}
 
-		private List<CommonPager> pagers;
+	private IEnumerator AddBannerCoroutine(EventDataElement element)
+	{
+		return null;
+	}
 
-		private GameObject bannerPrefab;
+	public void CloneBanner(QuestEventSubBanner srcBanner)
+	{
+	}
 
-		private Vector2 beginDragPosition;
+	public void SetBannersEnable(bool enabled)
+	{
+	}
 
-		private bool isDragging;
+	private IEnumerator SetBannerEnableCoroutine(bool enabled)
+	{
+		return null;
+	}
 
-		private bool isAnimating;
+	private void CreatePagers(int pagerNum)
+	{
+	}
 
-		private int currentIndex;
+	public void OnBeginDrag(PointerEventData eventData)
+	{
+	}
 
-		private int bannerCount;
+	public void OnDrag(PointerEventData eventData)
+	{
+	}
 
-		private float lastMoveTime;
+	public void OnEndDrag(PointerEventData eventData)
+	{
+	}
 
-		private Button bannerControllerButton;
+	public void OnPressed()
+	{
+	}
 
-		private const float moveInterval = 8f;
+	public void ShowNextStatusObject()
+	{
+	}
 
-		private const float bannerWidth = 280f;
+	public void ShowPrevStatusObject()
+	{
+	}
 
-		private const float resolutionFixRate = 100f;
+	public void SetTitleText(string str)
+	{
+	}
 
-		private readonly Color normalTextColor;
+	public void SetTextColor()
+	{
+	}
 
-		private readonly Color normalOutlineColor;
+	public void SetAllPageOff()
+	{
+	}
 
-		private readonly Color eventTextColor;
+	private void SetPageOn(int index)
+	{
+	}
 
-		private readonly Color eventOutlineColor;
+	private void AddBanner(QuestEventSubBanner banner)
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		private IEnumerator InitCoroutine()
-		{
-			return null;
-		}
-
-		public void Reload()
-		{
-		}
-
-		private void Update()
-		{
-		}
-
-		private void AddBanner(EventDataElement element)
-		{
-		}
-
-		private IEnumerator AddBannerCoroutine(EventDataElement element)
-		{
-			return null;
-		}
-
-		public void CloneBanner(QuestEventSubBanner srcBanner)
-		{
-		}
-
-		public void SetBannersEnable(bool enabled)
-		{
-		}
-
-		private IEnumerator SetBannerEnableCoroutine(bool enabled)
-		{
-			return null;
-		}
-
-		private void CreatePagers(int pagerNum)
-		{
-		}
-
-		public void OnBeginDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnEndDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnPressed()
-		{
-		}
-
-		public void ShowNextStatusObject()
-		{
-		}
-
-		public void ShowPrevStatusObject()
-		{
-		}
-
-		public void SetTitleText(string str)
-		{
-		}
-
-		public void SetTextColor()
-		{
-		}
-
-		public void SetAllPageOff()
-		{
-		}
-
-		private void SetPageOn(int index)
-		{
-		}
-
-		private void AddBanner(QuestEventSubBanner banner)
-		{
-		}
-
-		public bool IsExist()
-		{
-			return default(bool);
-		}
+	public bool IsExist()
+	{
+		return default(bool);
 	}
 }

@@ -1,8 +1,7 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+public class CSharpCallLuaAttribute : Attribute
 {
-	public class CSharpCallLuaAttribute : Attribute
-	{
-	}
 }

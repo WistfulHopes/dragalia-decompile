@@ -1,25 +1,24 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class CSSummonTableViewController : TableViewController<SummonTopData.SwitchableSummonInfo>
 {
-	public class CSSummonTableViewController : TableViewController<SummonTopData.SwitchableSummonInfo>
+	private float cellHeight;
+
+	private List<SimpleAnimationCell> animationCellList;
+
+	protected override TableViewCell<SummonTopData.SwitchableSummonInfo> CreateCellForIndex(int index)
 	{
-		private float cellHeight;
+		return null;
+	}
 
-		private List<SimpleAnimationCell> animationCellList;
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected override TableViewCell<SummonTopData.SwitchableSummonInfo> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public void ReloadByData(List<SummonTopData.SwitchableSummonInfo> data)
-		{
-		}
+	public void ReloadByData(List<SummonTopData.SwitchableSummonInfo> data)
+	{
 	}
 }

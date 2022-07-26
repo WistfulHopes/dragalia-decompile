@@ -1,141 +1,140 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultRanking : MonoBehaviour
 {
-	public class QuestResultRanking : MonoBehaviour
+	public class RankingMemberInfo
 	{
-		public class RankingMemberInfo
-		{
-			public int charaId;
+		public int charaId;
 
-			public int emblemId;
+		public int emblemId;
 
-			public string userName;
+		public string userName;
 
-			public int level;
+		public int level;
 
-			public bool isShowYouImage;
+		public bool isShowYouImage;
 
-			public RankingMemberInfo(int charaId, int emblemId, string userName, int level, bool isShowYouImage)
-			{
-			}
-		}
-
-		[SerializeField]
-		private QuestResultRankingPartyMemberCell[] partyMemberCells;
-
-		[SerializeField]
-		private RectTransform clearTimeLabelTrans;
-
-		[SerializeField]
-		private RectTransform clearTimeNewRecordTrans;
-
-		[SerializeField]
-		private RectTransform rankingLabelTrans;
-
-		[SerializeField]
-		private RectTransform rankingNewRecordTrans;
-
-		[SerializeField]
-		private RectTransform descriptionTrans;
-
-		[SerializeField]
-		private RectTransform[] partyCharacters;
-
-		public const float clearTimeNewRecordIconEnterDelayFrame = 32f;
-
-		public const float rankPartyCharacterEnterDelayFrame = 41f;
-
-		public const float rankingNewRecordIconEnterDelayFrame = 44f;
-
-		public const float rankExitDelayFrame = 3f;
-
-		public const float clearExitDelayFrame = 7f;
-
-		public const float rankingNextButtonEnterDelayFrame = 25f;
-
-		public void Initialize()
+		public RankingMemberInfo(int charaId, int emblemId, string userName, int level, bool isShowYouImage)
 		{
 		}
+	}
 
-		private void SetDisp(RectTransform trans, bool value)
-		{
-		}
+	[SerializeField]
+	private QuestResultRankingPartyMemberCell[] partyMemberCells;
 
-		public void StartPartyCharactersEnterAnimation()
-		{
-		}
+	[SerializeField]
+	private RectTransform clearTimeLabelTrans;
 
-		public void StartPartyCharactersExitAnimation()
-		{
-		}
+	[SerializeField]
+	private RectTransform clearTimeNewRecordTrans;
 
-		private void SlideOutPartyCharacter(RectTransform targetTrans)
-		{
-		}
+	[SerializeField]
+	private RectTransform rankingLabelTrans;
 
-		public void SlideInClearTimeLabel()
-		{
-		}
+	[SerializeField]
+	private RectTransform rankingNewRecordTrans;
 
-		public void SlideInRankingLabel()
-		{
-		}
+	[SerializeField]
+	private RectTransform descriptionTrans;
 
-		public void SlideInDescripiton()
-		{
-		}
+	[SerializeField]
+	private RectTransform[] partyCharacters;
 
-		public void SlideOutClearTimeLabel()
-		{
-		}
+	public const float clearTimeNewRecordIconEnterDelayFrame = 32f;
 
-		public void SlideOutRankingLabel()
-		{
-		}
+	public const float rankPartyCharacterEnterDelayFrame = 41f;
 
-		public void SlideOutDescripiton()
-		{
-		}
+	public const float rankingNewRecordIconEnterDelayFrame = 44f;
 
-		private void SlideInLabel(RectTransform targetTrans)
-		{
-		}
+	public const float rankExitDelayFrame = 3f;
 
-		public void SlideInClearTimeNewRecord()
-		{
-		}
+	public const float clearExitDelayFrame = 7f;
 
-		public void SlideInRankingNewRecord()
-		{
-		}
+	public const float rankingNextButtonEnterDelayFrame = 25f;
 
-		public void SlideOutClearTimeNewRecord()
-		{
-		}
+	public void Initialize()
+	{
+	}
 
-		public void SlideOutRankingNewRecord()
-		{
-		}
+	private void SetDisp(RectTransform trans, bool value)
+	{
+	}
 
-		private void SlideInNewRecord(RectTransform targetTrans)
-		{
-		}
+	public void StartPartyCharactersEnterAnimation()
+	{
+	}
 
-		private void SlideInCharacter(RectTransform targetTrans, float delay)
-		{
-		}
+	public void StartPartyCharactersExitAnimation()
+	{
+	}
 
-		private void SlideOutLabel(RectTransform targetTrans)
-		{
-		}
+	private void SlideOutPartyCharacter(RectTransform targetTrans)
+	{
+	}
 
-		private void SlideOutNewRecord(RectTransform targetTrans)
-		{
-		}
+	public void SlideInClearTimeLabel()
+	{
+	}
 
-		private void SlideOut(RectTransform targetTrans, float relativeX, float delay = 0f)
-		{
-		}
+	public void SlideInRankingLabel()
+	{
+	}
+
+	public void SlideInDescripiton()
+	{
+	}
+
+	public void SlideOutClearTimeLabel()
+	{
+	}
+
+	public void SlideOutRankingLabel()
+	{
+	}
+
+	public void SlideOutDescripiton()
+	{
+	}
+
+	private void SlideInLabel(RectTransform targetTrans)
+	{
+	}
+
+	public void SlideInClearTimeNewRecord()
+	{
+	}
+
+	public void SlideInRankingNewRecord()
+	{
+	}
+
+	public void SlideOutClearTimeNewRecord()
+	{
+	}
+
+	public void SlideOutRankingNewRecord()
+	{
+	}
+
+	private void SlideInNewRecord(RectTransform targetTrans)
+	{
+	}
+
+	private void SlideInCharacter(RectTransform targetTrans, float delay)
+	{
+	}
+
+	private void SlideOutLabel(RectTransform targetTrans)
+	{
+	}
+
+	private void SlideOutNewRecord(RectTransform targetTrans)
+	{
+	}
+
+	private void SlideOut(RectTransform targetTrans, float relativeX, float delay = 0f)
+	{
 	}
 }

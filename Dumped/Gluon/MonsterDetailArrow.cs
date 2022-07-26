@@ -1,8 +1,7 @@
-namespace Gluon
+namespace Gluon;
+
+public enum MonsterDetailArrow
 {
-	public enum MonsterDetailArrow
-	{
-		Left,
-		Right
-	}
+	Left,
+	Right
 }

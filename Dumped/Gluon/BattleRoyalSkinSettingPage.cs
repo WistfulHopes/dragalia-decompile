@@ -1,43 +1,42 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BattleRoyalSkinSettingPage : EventQuestPageBase
 {
-	public class BattleRoyalSkinSettingPage : EventQuestPageBase
+	public UnitDetail2dModel unit2dModel;
+
+	public RawImage charaSkinIcon;
+
+	public RawImage weaponSkinIcon;
+
+	private WeaponType charaWeaponType;
+
+	public override void OnPageBecomeActive(object data)
 	{
-		public UnitDetail2dModel unit2dModel;
+	}
 
-		public RawImage charaSkinIcon;
+	private void SetupCharaImage()
+	{
+	}
 
-		public RawImage weaponSkinIcon;
+	private void SetupWeaponIcon()
+	{
+	}
 
-		private WeaponType charaWeaponType;
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public void OnCharaSkinChangeButtonPressed()
+	{
+	}
 
-		private void SetupCharaImage()
-		{
-		}
+	public void OnWeaponSkinChangeButtonPressed()
+	{
+	}
 
-		private void SetupWeaponIcon()
-		{
-		}
-
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
-
-		public void OnCharaSkinChangeButtonPressed()
-		{
-		}
-
-		public void OnWeaponSkinChangeButtonPressed()
-		{
-		}
-
-		private void OnBackButtonTouched()
-		{
-		}
+	private void OnBackButtonTouched()
+	{
 	}
 }

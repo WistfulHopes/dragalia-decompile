@@ -1,18 +1,17 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EdgeToEdgeFrame : MonoBehaviour
 {
-	public class EdgeToEdgeFrame : MonoBehaviour
+	private RectTransform rectTransform;
+
+	private void Awake()
 	{
-		private RectTransform rectTransform;
+	}
 
-		private void Awake()
-		{
-		}
-
-		public Vector2 GetFrameSize()
-		{
-			return default(Vector2);
-		}
+	public Vector2 GetFrameSize()
+	{
+		return default(Vector2);
 	}
 }

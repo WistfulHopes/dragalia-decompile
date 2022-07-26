@@ -1,21 +1,20 @@
-namespace Gluon
+namespace Gluon;
+
+public class GrowthCharaCanvas : AnimationUICanvas
 {
-	public class GrowthCharaCanvas : AnimationUICanvas
+	public GrowthScene scene;
+
+	public OutGameBgChara bgCharacter;
+
+	private void Start()
 	{
-		public GrowthScene scene;
+	}
 
-		public OutGameBgChara bgCharacter;
+	public void OnCharaPressed()
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		public void OnCharaPressed()
-		{
-		}
-
-		public void Talk(string charaVoiceGroupName, string voiceName)
-		{
-		}
+	public void Talk(string charaVoiceGroupName, string voiceName)
+	{
 	}
 }

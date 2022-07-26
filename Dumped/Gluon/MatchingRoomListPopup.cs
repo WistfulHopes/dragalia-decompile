@@ -9,338 +9,337 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingRoomListPopup : PopupBase
 {
-	public class MatchingRoomListPopup : PopupBase
+	private enum SearchMode
 	{
-		private enum SearchMode
-		{
-			Any,
-			Quest,
-			Location
-		}
+		Any,
+		Quest,
+		Location
+	}
 
-		public enum TabType
-		{
-			Raid = 0,
-			LimitedTime = 1,
-			Normal = 2,
-			None = -1
-		}
+	public enum TabType
+	{
+		Raid = 0,
+		LimitedTime = 1,
+		Normal = 2,
+		None = -1
+	}
 
-		[SerializeField]
-		private QuestRoomListController questRoomListCtrl;
+	[SerializeField]
+	private QuestRoomListController questRoomListCtrl;
 
-		[SerializeField]
-		private TabBase questRoomTabs;
+	[SerializeField]
+	private TabBase questRoomTabs;
 
-		[SerializeField]
-		private TabBase questRoomTabsWithRaid;
+	[SerializeField]
+	private TabBase questRoomTabsWithRaid;
 
-		[SerializeField]
-		private MatchingSearchBlock searchBlock;
+	[SerializeField]
+	private MatchingSearchBlock searchBlock;
 
-		[SerializeField]
-		private GameObject filterRoot;
+	[SerializeField]
+	private GameObject filterRoot;
 
-		[SerializeField]
-		private Text filterOnOffText;
+	[SerializeField]
+	private Text filterOnOffText;
 
-		[SerializeField]
-		private Transform filterColonTransform;
+	[SerializeField]
+	private Transform filterColonTransform;
 
-		[SerializeField]
-		private float getLocationMaxWaitTime;
+	[SerializeField]
+	private float getLocationMaxWaitTime;
 
-		[SerializeField]
-		private Text titleText;
+	[SerializeField]
+	private Text titleText;
 
-		[SerializeField]
-		private GameObject pagerRoot;
+	[SerializeField]
+	private GameObject pagerRoot;
 
-		[SerializeField]
-		private GameObject pagerParent;
+	[SerializeField]
+	private GameObject pagerParent;
 
-		[SerializeField]
-		private float pagerWidth;
+	[SerializeField]
+	private float pagerWidth;
 
-		private List<PartyPager> pagers;
+	private List<PartyPager> pagers;
 
-		private int selectPartyNo;
+	private int selectPartyNo;
 
-		private int selectPartyGroup;
+	private int selectPartyGroup;
 
-		public Image partyGroupIcon;
+	public Image partyGroupIcon;
 
-		public Sprite[] partyGroupSprites;
+	public Sprite[] partyGroupSprites;
 
-		public Text partyNameText;
+	public Text partyNameText;
 
-		public Text powerText;
+	public Text powerText;
 
-		public GameObject partyInfoRoot;
+	public GameObject partyInfoRoot;
 
-		public GameObject partyChangeButtonRoot;
+	public GameObject partyChangeButtonRoot;
 
-		private List<RoomListData> roomDataList;
+	private List<RoomListData> roomDataList;
 
-		private bool _serverGetRoomListRunning;
+	private bool _serverGetRoomListRunning;
 
-		private bool isJoinRoomRunning;
+	private bool isJoinRoomRunning;
 
-		private string _bestRegionCache;
+	private string _bestRegionCache;
 
-		private TabType selectedTab;
+	private TabType selectedTab;
 
-		private MatchingService matchingService;
+	private MatchingService matchingService;
 
-		private int questId;
+	private int questId;
 
-		private MatchingConditionPopup.FilterSetting raidFilterSetting;
+	private MatchingConditionPopup.FilterSetting raidFilterSetting;
 
-		private MatchingConditionPopup.FilterSetting filterSetting;
+	private MatchingConditionPopup.FilterSetting filterSetting;
 
-		private List<RoomListData> roomList;
+	private List<RoomListData> roomList;
 
-		private QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation;
+	private QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation;
 
-		private bool isFromMultiPlaySelector;
+	private bool isFromMultiPlaySelector;
 
-		private Action onPartyChangedAction;
+	private Action onPartyChangedAction;
 
-		private SearchMode searchMode;
+	private SearchMode searchMode;
 
-		private Action<int, QuestAutoTransitionUtil.GuestEnterRoomFromType> gotoPrepareSceneAction;
+	private Action<int, QuestAutoTransitionUtil.GuestEnterRoomFromType> gotoPrepareSceneAction;
 
-		private const int maxFriendRoomCount = 3;
+	private const int maxFriendRoomCount = 3;
 
-		private const int maxNotFriendRoomCount = 10;
+	private const int maxNotFriendRoomCount = 10;
 
-		private const int maxListCount = 100;
+	private const int maxListCount = 100;
 
-		private const int maxPickListCount = 10;
+	private const int maxPickListCount = 10;
 
-		private const int maxGuildRoomCount = 3;
+	private const int maxGuildRoomCount = 3;
 
-		private const float minBlockViewTime = 0.5f;
+	private const float minBlockViewTime = 0.5f;
 
-		private TabType initTab;
+	private TabType initTab;
 
-		private PartySwitchPopup switchPopup;
+	private PartySwitchPopup switchPopup;
 
-		private bool nowOpenRaidEvent
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public void Initialize(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, TabType initTab, int questId = 0, [Optional] Action<int, QuestAutoTransitionUtil.GuestEnterRoomFromType> gotoPrepareSceneAction, [Optional] Action onPartyChangedAction)
-		{
-		}
-
-		public void InitializeForLocationSearch(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, [Optional] Action<int, QuestAutoTransitionUtil.GuestEnterRoomFromType> gotoPrepareSceneAction)
-		{
-		}
-
-		private bool IsAvailableFilter()
+	private bool nowOpenRaidEvent
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		protected override void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void ErrorTypeCheck(MultiPlayError error)
-		{
-		}
+	public void Initialize(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, TabType initTab, int questId = 0, [Optional] Action<int, QuestAutoTransitionUtil.GuestEnterRoomFromType> gotoPrepareSceneAction, [Optional] Action onPartyChangedAction)
+	{
+	}
 
-		private void SearchLocation(string regionName)
-		{
-		}
+	public void InitializeForLocationSearch(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, [Optional] Action<int, QuestAutoTransitionUtil.GuestEnterRoomFromType> gotoPrepareSceneAction)
+	{
+	}
 
-		private void OnGetLocationInfoFailed()
-		{
-		}
+	private bool IsAvailableFilter()
+	{
+		return default(bool);
+	}
 
-		private void OnBestRegionFound(string regionName)
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private void ServerGetRoomList()
-		{
-		}
+	private void ErrorTypeCheck(MultiPlayError error)
+	{
+	}
 
-		private void OnMatchingGetRoomListRequestError(ErrorType errorType, int resultCode)
-		{
-		}
+	private void SearchLocation(string regionName)
+	{
+	}
 
-		private void UpdateRoomList()
-		{
-		}
+	private void OnGetLocationInfoFailed()
+	{
+	}
 
-		private void OnMatchingGetRoomListRequestSuccess(MatchingGetRoomListResponse res)
-		{
-		}
+	private void OnBestRegionFound(string regionName)
+	{
+	}
 
-		private void OnMatchingGetRoomListByQuestIdRequestSuccess(MatchingGetRoomListByQuestIdResponse res)
-		{
-		}
+	private void ServerGetRoomList()
+	{
+	}
 
-		private void OnMatchingGetRoomListByLocationRequestSuccess(MatchingGetRoomListByLocationResponse res)
-		{
-		}
+	private void OnMatchingGetRoomListRequestError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		private IEnumerator Load()
-		{
-			return null;
-		}
+	private void UpdateRoomList()
+	{
+	}
 
-		private List<RoomListData> GetRoomListPriorityGuild(RoomListData[] roomList)
-		{
-			return null;
-		}
+	private void OnMatchingGetRoomListRequestSuccess(MatchingGetRoomListResponse res)
+	{
+	}
 
-		public void RoomListLoad()
-		{
-		}
+	private void OnMatchingGetRoomListByQuestIdRequestSuccess(MatchingGetRoomListByQuestIdResponse res)
+	{
+	}
 
-		public void OnSelectedTab(int num)
-		{
-		}
+	private void OnMatchingGetRoomListByLocationRequestSuccess(MatchingGetRoomListByLocationResponse res)
+	{
+	}
 
-		private void OnListButtonClick(RoomList data)
-		{
-		}
+	private IEnumerator Load()
+	{
+		return null;
+	}
 
-		private void OnPartySwitchPopupClose()
-		{
-		}
+	private List<RoomListData> GetRoomListPriorityGuild(RoomListData[] roomList)
+	{
+		return null;
+	}
 
-		private void GoQuestPrepareScene(int roomQuestId)
-		{
-		}
+	public void RoomListLoad()
+	{
+	}
 
-		private void JoinRoom(RoomList data, QuestDataElement qde)
-		{
-		}
+	public void OnSelectedTab(int num)
+	{
+	}
 
-		private bool IsRequireConditionFullFilled(RoomList data)
-		{
-			return default(bool);
-		}
+	private void OnListButtonClick(RoomList data)
+	{
+	}
 
-		private void PhotonConnect(RoomList data)
-		{
-		}
+	private void OnPartySwitchPopupClose()
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	private void GoQuestPrepareScene(int roomQuestId)
+	{
+	}
 
-		private QuestAutoTransitionUtil.GuestEnterRoomFromType GetEnterFromType()
-		{
-			return default(QuestAutoTransitionUtil.GuestEnterRoomFromType);
-		}
+	private void JoinRoom(RoomList data, QuestDataElement qde)
+	{
+	}
 
-		private void OnMatchingServiceStateChangedForJoinRoom(MatchingService.StateType state)
-		{
-		}
+	private bool IsRequireConditionFullFilled(RoomList data)
+	{
+		return default(bool);
+	}
 
-		private void OnMatchingServiceStateChangedForSearchBestRegion(MatchingService.StateType state)
-		{
-		}
+	private void PhotonConnect(RoomList data)
+	{
+	}
 
-		private void PopupNothingRoom()
-		{
-		}
+	protected override void OnDestroy()
+	{
+	}
 
-		private void PopupInvalidCompatibleId()
-		{
-		}
+	private QuestAutoTransitionUtil.GuestEnterRoomFromType GetEnterFromType()
+	{
+		return default(QuestAutoTransitionUtil.GuestEnterRoomFromType);
+	}
 
-		private void PopupLimitRoomCreate()
-		{
-		}
+	private void OnMatchingServiceStateChangedForJoinRoom(MatchingService.StateType state)
+	{
+	}
 
-		public void OnReResearchButton()
-		{
-		}
+	private void OnMatchingServiceStateChangedForSearchBestRegion(MatchingService.StateType state)
+	{
+	}
 
-		public void OnCancelButtonPressed()
-		{
-		}
+	private void PopupNothingRoom()
+	{
+	}
 
-		private void SearchSetting(bool enable)
-		{
-		}
+	private void PopupInvalidCompatibleId()
+	{
+	}
 
-		private List<RoomListData> GetFilteredRoomList(List<RoomListData> roomList)
-		{
-			return null;
-		}
+	private void PopupLimitRoomCreate()
+	{
+	}
 
-		private bool IsRaidLikeBattle()
-		{
-			return default(bool);
-		}
+	public void OnReResearchButton()
+	{
+	}
 
-		public static bool IsAstralRaidNowOpen()
-		{
-			return default(bool);
-		}
+	public void OnCancelButtonPressed()
+	{
+	}
 
-		private bool IsRaidLikeQuestNowOpen()
-		{
-			return default(bool);
-		}
+	private void SearchSetting(bool enable)
+	{
+	}
 
-		private MatchingConditionPopup.FilterSetting GetFilterSetting()
-		{
-			return null;
-		}
+	private List<RoomListData> GetFilteredRoomList(List<RoomListData> roomList)
+	{
+		return null;
+	}
 
-		private void SetFilterSetting(MatchingConditionPopup.FilterSetting setting)
-		{
-		}
+	private bool IsRaidLikeBattle()
+	{
+		return default(bool);
+	}
 
-		private void UpdateFilterText()
-		{
-		}
+	public static bool IsAstralRaidNowOpen()
+	{
+		return default(bool);
+	}
 
-		public void OnFilterPressed()
-		{
-		}
+	private bool IsRaidLikeQuestNowOpen()
+	{
+		return default(bool);
+	}
 
-		public void SetFromMultiPlaySelector()
-		{
-		}
+	private MatchingConditionPopup.FilterSetting GetFilterSetting()
+	{
+		return null;
+	}
 
-		public void OnPartyChangeButtonPressed()
-		{
-		}
+	private void SetFilterSetting(MatchingConditionPopup.FilterSetting setting)
+	{
+	}
 
-		private void OnPagerPressed(int pressedPagerIndex)
-		{
-		}
+	private void UpdateFilterText()
+	{
+	}
 
-		private void UpdatePartyData()
-		{
-		}
+	public void OnFilterPressed()
+	{
+	}
 
-		public void OnArrowPressed(int increment)
-		{
-		}
+	public void SetFromMultiPlaySelector()
+	{
+	}
 
-		private void ReloadPager()
-		{
-		}
+	public void OnPartyChangeButtonPressed()
+	{
+	}
+
+	private void OnPagerPressed(int pressedPagerIndex)
+	{
+	}
+
+	private void UpdatePartyData()
+	{
+	}
+
+	public void OnArrowPressed(int increment)
+	{
+	}
+
+	private void ReloadPager()
+	{
 	}
 }

@@ -2,28 +2,27 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumUtility : MonoBehaviour
 {
-	public class AlbumUtility : MonoBehaviour
+	public static CommonPopup CreateAlbumBonusPopup([Optional] UnityAction closeCallback, bool isLoading = false)
 	{
-		public static CommonPopup CreateAlbumBonusPopup([Optional] UnityAction closeCallback, bool isLoading = false)
-		{
-			return null;
-		}
+		return null;
+	}
 
-		public static bool IsAlbumMedalCondition()
-		{
-			return default(bool);
-		}
+	public static bool IsAlbumMedalCondition()
+	{
+		return default(bool);
+	}
 
-		public static bool IsTemporary(int masterId)
-		{
-			return default(bool);
-		}
+	public static bool IsTemporary(int masterId)
+	{
+		return default(bool);
+	}
 
-		public static bool IsPlayable(GiftType giftType, int masterId)
-		{
-			return default(bool);
-		}
+	public static bool IsPlayable(GiftType giftType, int masterId)
+	{
+		return default(bool);
 	}
 }

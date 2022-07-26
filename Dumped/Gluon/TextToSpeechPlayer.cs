@@ -1,47 +1,46 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class TextToSpeechPlayer
 {
-	public class TextToSpeechPlayer
+	private List<string> speakTextQueue;
+
+	private const int bgmVolumeDuringSpeech = 20;
+
+	~TextToSpeechPlayer()
 	{
-		private List<string> speakTextQueue;
+	}
 
-		private const int bgmVolumeDuringSpeech = 20;
+	public void Clear()
+	{
+	}
 
-		~TextToSpeechPlayer()
-		{
-		}
+	public void PlaySpeech(string text)
+	{
+	}
 
-		public void Clear()
-		{
-		}
+	private void PlayNextSpeech()
+	{
+	}
 
-		public void PlaySpeech(string text)
-		{
-		}
+	private void Speech(string text)
+	{
+	}
 
-		private void PlayNextSpeech()
-		{
-		}
+	private void OnSpeechDone()
+	{
+	}
 
-		private void Speech(string text)
-		{
-		}
+	private void OnSpeechError()
+	{
+	}
 
-		private void OnSpeechDone()
-		{
-		}
+	private void ClearSpeechCallback()
+	{
+	}
 
-		private void OnSpeechError()
-		{
-		}
-
-		private void ClearSpeechCallback()
-		{
-		}
-
-		private void ResetBgmVolume()
-		{
-		}
+	private void ResetBgmVolume()
+	{
 	}
 }

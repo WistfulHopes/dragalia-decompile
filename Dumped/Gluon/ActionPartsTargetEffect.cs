@@ -1,22 +1,21 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsTargetEffect : ActionParts
 {
-	public class ActionPartsTargetEffect : ActionParts
+	private readonly TargetEffectData _partsData;
+
+	public ActionPartsTargetEffect(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly TargetEffectData _partsData;
+	}
 
-		public ActionPartsTargetEffect(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

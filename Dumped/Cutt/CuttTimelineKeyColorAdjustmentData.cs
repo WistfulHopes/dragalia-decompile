@@ -1,18 +1,17 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyColorAdjustmentData : CuttTimelineKeyWithInterpolate
 {
-	[Serializable]
-	public class CuttTimelineKeyColorAdjustmentData : CuttTimelineKeyWithInterpolate
-	{
-		public bool isEnableColorAdjustment;
+	public bool isEnableColorAdjustment;
 
-		public float bright;
+	public float bright;
 
-		public float saturation;
+	public float saturation;
 
-		public float contrast;
+	public float contrast;
 
-		public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
-	}
+	public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
 }

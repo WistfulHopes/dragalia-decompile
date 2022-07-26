@@ -5,75 +5,73 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultFriendApplyPage : MonoBehaviour
 {
-	public class QuestResultFriendApplyPage : MonoBehaviour
+	[SerializeField]
+	public Transform panelParent;
+
+	public Transform rebattlePart;
+
+	public GameObject rebattleGOToClose;
+
+	public GameObject originalCell;
+
+	public Transform contentParent;
+
+	public Text rebattleCountDownText;
+
+	private List<QRFriendApplyCell> createdCellList;
+
+	private DateTime rebattleStartTime;
+
+	private UnityAction onOpenUnitDetail;
+
+	private UnityAction onCloseUnitDetail;
+
+	private void Awake()
 	{
-		[SerializeField]
-		[Header("Animation")]
-		public Transform panelParent;
+	}
 
-		public Transform rebattlePart;
+	public void InitByData()
+	{
+	}
 
-		public GameObject rebattleGOToClose;
+	private void CreateFirstMetRewardDialog()
+	{
+	}
 
-		public GameObject originalCell;
+	private IEnumerator UpdateRebattle()
+	{
+		return null;
+	}
 
-		public Transform contentParent;
+	private void CloseRebattleWindow()
+	{
+	}
 
-		public Text rebattleCountDownText;
+	public void OnRebattlePressed()
+	{
+	}
 
-		private List<QRFriendApplyCell> createdCellList;
+	public void OnRebattleCancelPressed()
+	{
+	}
 
-		private DateTime rebattleStartTime;
+	private void OnOpenDetail()
+	{
+	}
 
-		private UnityAction onOpenUnitDetail;
+	private void OnCloseDetail()
+	{
+	}
 
-		private UnityAction onCloseUnitDetail;
+	public void SetUnitDetailModelOnCreated(UnityAction action)
+	{
+	}
 
-		private void Awake()
-		{
-		}
-
-		public void InitByData()
-		{
-		}
-
-		private void CreateFirstMetRewardDialog()
-		{
-		}
-
-		private IEnumerator UpdateRebattle()
-		{
-			return null;
-		}
-
-		private void CloseRebattleWindow()
-		{
-		}
-
-		public void OnRebattlePressed()
-		{
-		}
-
-		public void OnRebattleCancelPressed()
-		{
-		}
-
-		private void OnOpenDetail()
-		{
-		}
-
-		private void OnCloseDetail()
-		{
-		}
-
-		public void SetUnitDetailModelOnCreated(UnityAction action)
-		{
-		}
-
-		public void SetUnitDetailModelBackButtonOnClick(UnityAction action)
-		{
-		}
+	public void SetUnitDetailModelBackButtonOnClick(UnityAction action)
+	{
 	}
 }

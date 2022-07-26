@@ -1,53 +1,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class RecoverStaminaMultiItemListController : TableViewController<RecoverStaminaMultiItemData>
 {
-	public class RecoverStaminaMultiItemListController : TableViewController<RecoverStaminaMultiItemData>
+	[SerializeField]
+	public RecoverStaminaMultipleItemConfirmPopup popup;
+
+	private float cellWidth;
+
+	private float cellHeight;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		[Header("Control")]
-		public RecoverStaminaMultipleItemConfirmPopup popup;
+	}
 
-		private float cellWidth;
+	public void LoadData(List<RecoverStaminaMultiItemData> data)
+	{
+	}
 
-		private float cellHeight;
+	protected override TableViewCell<RecoverStaminaMultiItemData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		protected override void Awake()
-		{
-		}
+	public bool IsAnyItemSelectable(out bool isAnySliderAvailable)
+	{
+		return default(bool);
+	}
 
-		public void LoadData(List<RecoverStaminaMultiItemData> data)
-		{
-		}
+	public void OnAnySliderValueChanged(int diffVal)
+	{
+	}
 
-		protected override TableViewCell<RecoverStaminaMultiItemData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
+	public EntityData[] GetSelectedItems()
+	{
+		return null;
+	}
 
-		public bool IsAnyItemSelectable(out bool isAnySliderAvailable)
-		{
-			return default(bool);
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public void OnAnySliderValueChanged(int diffVal)
-		{
-		}
-
-		public EntityData[] GetSelectedItems()
-		{
-			return null;
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
 	}
 }

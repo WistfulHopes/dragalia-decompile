@@ -1,16 +1,15 @@
-namespace Gluon
+namespace Gluon;
+
+public class QuestMissionDetailPopup : CommonPopup
 {
-	public class QuestMissionDetailPopup : CommonPopup
+	public QuestMissionElement[] uiMissionElementArray;
+
+	public static QuestMissionDetailPopup Create(int questId, bool showBlackLayer = true)
 	{
-		public QuestMissionElement[] uiMissionElementArray;
+		return null;
+	}
 
-		public static QuestMissionDetailPopup Create(int questId, bool showBlackLayer = true)
-		{
-			return null;
-		}
-
-		private void ReflectData(int questID)
-		{
-		}
+	private void ReflectData(int questID)
+	{
 	}
 }

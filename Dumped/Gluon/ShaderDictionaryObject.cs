@@ -2,81 +2,80 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[CreateAssetMenu]
+public class ShaderDictionaryObject : ScriptableObject
 {
-	[CreateAssetMenu]
-	public class ShaderDictionaryObject : ScriptableObject
+	public class ShaderKeywords
 	{
-		public class ShaderKeywords
-		{
-			public string[][] keywords;
-		}
+		public string[][] keywords;
+	}
 
-		[Serializable]
-		public class ShaderInfo
-		{
-			public string name;
+	[Serializable]
+	public class ShaderInfo
+	{
+		public string name;
 
-			public Shader shader;
+		public Shader shader;
 
-			public TextAsset shaderKeywordList;
+		public TextAsset shaderKeywordList;
 
-			[TextArea]
-			public string assetPath;
+		[TextArea]
+		public string assetPath;
 
-			[NonSerialized]
-			public ShaderKeywords shaderKeywords;
-		}
+		[NonSerialized]
+		public ShaderKeywords shaderKeywords;
+	}
 
-		private static readonly string[] _emptyKeywords;
+	private static readonly string[] _emptyKeywords;
 
-		[SerializeField]
-		private ShaderInfo[] _shaderInfos;
+	[SerializeField]
+	private ShaderInfo[] _shaderInfos;
 
-		private Dictionary<string, Shader> _shaderDictionary;
+	private Dictionary<string, Shader> _shaderDictionary;
 
-		public ShaderInfo[] shaderInfos
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		private void AddShaderVariant(ShaderVariantCollection shaderVariantCollection, ShaderInfo shaderInfo, Shader overrideShader)
-		{
-		}
-
-		public ShaderVariantCollection CreateShaderVariantCollection(List<Shader> overrideShaderList)
+	public ShaderInfo[] shaderInfos
+	{
+		get
 		{
 			return null;
 		}
-
-		public static int SortShaderInfo(ShaderInfo a, ShaderInfo b)
-		{
-			return default(int);
-		}
-
-		public void InitShaderDictionary()
+		set
 		{
 		}
+	}
 
-		public bool WarmUpShaderVariantCollection(List<Shader> overrideShader)
-		{
-			return default(bool);
-		}
+	private void AddShaderVariant(ShaderVariantCollection shaderVariantCollection, ShaderInfo shaderInfo, Shader overrideShader)
+	{
+	}
 
-		public Shader Find(string shaderName)
-		{
-			return null;
-		}
+	public ShaderVariantCollection CreateShaderVariantCollection(List<Shader> overrideShaderList)
+	{
+		return null;
+	}
 
-		public static ShaderDictionaryObject LoadInitInstantiate(string path)
-		{
-			return null;
-		}
+	public static int SortShaderInfo(ShaderInfo a, ShaderInfo b)
+	{
+		return default(int);
+	}
+
+	public void InitShaderDictionary()
+	{
+	}
+
+	public bool WarmUpShaderVariantCollection(List<Shader> overrideShader)
+	{
+		return default(bool);
+	}
+
+	public Shader Find(string shaderName)
+	{
+		return null;
+	}
+
+	public static ShaderDictionaryObject LoadInitInstantiate(string path)
+	{
+		return null;
 	}
 }

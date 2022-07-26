@@ -1,41 +1,39 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildIconTableViewController : TableViewController<GuildModel.ProfileIconData>
 {
-	public class GuildIconTableViewController : TableViewController<GuildModel.ProfileIconData>
+	[SerializeField]
+	public GiftType type;
+
+	public Text noItemText;
+
+	private float cellWidth;
+
+	private float cellHeight;
+
+	protected override float GetCellHeightAtIndex(int index)
 	{
-		[SerializeField]
-		[Header("Setting")]
-		public GiftType type;
+		return default(float);
+	}
 
-		public Text noItemText;
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		private float cellWidth;
+	protected override void Start()
+	{
+	}
 
-		private float cellHeight;
+	public void UpdateSelectedIconData(ref GuildModel.ProfileIconData selectedIconData)
+	{
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void UpdateSelectedIconData(ref GuildModel.ProfileIconData selectedIconData)
-		{
-		}
-
-		protected override TableViewCell<GuildModel.ProfileIconData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
+	protected override TableViewCell<GuildModel.ProfileIconData> CreateCellForIndex(int index)
+	{
+		return null;
 	}
 }

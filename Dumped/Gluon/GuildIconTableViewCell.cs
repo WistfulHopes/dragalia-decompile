@@ -2,33 +2,30 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildIconTableViewCell : TableViewCell<GuildModel.ProfileIconData>
 {
-	public class GuildIconTableViewCell : TableViewCell<GuildModel.ProfileIconData>
+	[Serializable]
+	public class ButtonEvent : UnityEvent<GuildModel.ProfileIconData>
 	{
-		[Serializable]
-		public class ButtonEvent : UnityEvent<GuildModel.ProfileIconData>
-		{
-		}
+	}
 
-		[SerializeField]
-		[Header("Info")]
-		public CommonIcon icon;
+	[SerializeField]
+	public CommonIcon icon;
 
-		public ButtonEvent onCellPressed;
+	public ButtonEvent onCellPressed;
 
-		[SerializeField]
-		[Header("Selected")]
-		public GameObject selectedFrame;
+	[SerializeField]
+	public GameObject selectedFrame;
 
-		public GuildIconSelectPopup popup;
+	public GuildIconSelectPopup popup;
 
-		public override void UpdateContent(GuildModel.ProfileIconData data)
-		{
-		}
+	public override void UpdateContent(GuildModel.ProfileIconData data)
+	{
+	}
 
-		public void OnIconPressed()
-		{
-		}
+	public void OnIconPressed()
+	{
 	}
 }

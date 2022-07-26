@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsEAMelody : ActionParts
 {
-	public class ActionPartsEAMelody : ActionParts
+	public enum OperateType
 	{
-		public enum OperateType
-		{
-			FirstSet,
-			Switch
-		}
+		FirstSet,
+		Switch
+	}
 
-		private readonly EAMelodyData _partsData;
+	private readonly EAMelodyData _partsData;
 
-		public ActionPartsEAMelody(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsEAMelody(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
 	}
 }

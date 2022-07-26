@@ -1,55 +1,54 @@
-namespace Gluon
+namespace Gluon;
+
+public class SimpleQueue<T> where T : IReplicable<T>, ICleanable, new()
 {
-	public class SimpleQueue<T> where T : IReplicable<T>, ICleanable, new()
+	private int qmax;
+
+	private int n;
+
+	private int ptr;
+
+	private T[] data;
+
+	public SimpleQueue(int max)
 	{
-		private int qmax;
+	}
 
-		private int n;
+	public void Flush()
+	{
+	}
 
-		private int ptr;
+	public bool EnQueue(T d)
+	{
+		return default(bool);
+	}
 
-		private T[] data;
+	public void DeQueue()
+	{
+	}
 
-		public SimpleQueue(int max)
-		{
-		}
+	public T Get()
+	{
+		return (T)null;
+	}
 
-		public void Flush()
-		{
-		}
+	public T Get(int offset)
+	{
+		return (T)null;
+	}
 
-		public bool EnQueue(T d)
-		{
-			return default(bool);
-		}
+	public int Count()
+	{
+		return default(int);
+	}
 
-		public void DeQueue()
-		{
-		}
+	public bool IsEmpty()
+	{
+		return default(bool);
+	}
 
-		public T Get()
-		{
-			return (T)null;
-		}
-
-		public T Get(int offset)
-		{
-			return (T)null;
-		}
-
-		public int Count()
-		{
-			return default(int);
-		}
-
-		public bool IsEmpty()
-		{
-			return default(bool);
-		}
-
-		public bool IsFull()
-		{
-			return default(bool);
-		}
+	public bool IsFull()
+	{
+		return default(bool);
 	}
 }

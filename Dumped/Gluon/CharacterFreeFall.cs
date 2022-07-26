@@ -1,52 +1,51 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterFreeFall
 {
-	public class CharacterFreeFall
+	private enum State
 	{
-		private enum State
+		None,
+		Fall
+	}
+
+	private State state;
+
+	private ActionMoveGravity fallAction;
+
+	private float checkTimer;
+
+	private const float threshold = 0.01f;
+
+	private const float checkInterval = 0.5f;
+
+	private static readonly int layerMask;
+
+	public Vector3 safePosition
+	{
+		[CompilerGenerated]
+		get
 		{
-			None,
-			Fall
+			return default(Vector3);
 		}
-
-		private State state;
-
-		private ActionMoveGravity fallAction;
-
-		private float checkTimer;
-
-		private const float threshold = 0.01f;
-
-		private const float checkInterval = 0.5f;
-
-		private static readonly int layerMask;
-
-		public Vector3 safePosition
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(Vector3);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void Initialize()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Update(CharacterBase owner, float delta)
-		{
-		}
+	public void Initialize()
+	{
+	}
 
-		public bool IsActive()
-		{
-			return default(bool);
-		}
+	public void Update(CharacterBase owner, float delta)
+	{
+	}
+
+	public bool IsActive()
+	{
+		return default(bool);
 	}
 }

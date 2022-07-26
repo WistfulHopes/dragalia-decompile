@@ -1,13 +1,12 @@
-namespace Gluon
-{
-	public class FollowerStateRevive : IState<FollowerController>
-	{
-		public override void OnStateEnter()
-		{
-		}
+namespace Gluon;
 
-		public override void OnStateUpdate()
-		{
-		}
+public class FollowerStateRevive : IState<FollowerController>
+{
+	public override void OnStateEnter()
+	{
+	}
+
+	public override void OnStateUpdate()
+	{
 	}
 }

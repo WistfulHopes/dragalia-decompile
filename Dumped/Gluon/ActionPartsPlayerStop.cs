@@ -1,61 +1,60 @@
 using System.Runtime.CompilerServices;
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsPlayerStop : ActionParts
 {
-	public class ActionPartsPlayerStop : ActionParts
+	public enum SwitchingType
 	{
-		public enum SwitchingType
+		OFF,
+		ON
+	}
+
+	public enum StopTypes
+	{
+		TimeStop,
+		ForCutIn,
+		ForCutIn2
+	}
+
+	private readonly PlayerStopData _partsData;
+
+	public float timeCount
+	{
+		[CompilerGenerated]
+		get
 		{
-			OFF,
-			ON
+			return default(float);
 		}
-
-		public enum StopTypes
-		{
-			TimeStop,
-			ForCutIn,
-			ForCutIn2
-		}
-
-		private readonly PlayerStopData _partsData;
-
-		public float timeCount
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public ActionPartsPlayerStop(Gluon.ActionData.ActionParts resource)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public override void Clear()
-		{
-		}
+	public ActionPartsPlayerStop(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		protected override void OnFinish()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void Procedure(bool isSwitch)
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
+
+	private void Procedure(bool isSwitch)
+	{
 	}
 }

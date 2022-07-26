@@ -1,14 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventBonusUIChara : MonoBehaviour
 {
-	public class EventBonusUIChara : MonoBehaviour
-	{
-		public Image charaIcon;
+	public Image charaIcon;
 
-		public Text charaName;
+	public Text charaName;
 
-		public EventBonusUIAbility ability;
-	}
+	public EventBonusUIAbility ability;
 }

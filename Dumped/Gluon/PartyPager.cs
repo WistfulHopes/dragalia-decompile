@@ -3,72 +3,71 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyPager : CommonPager
 {
-	public class PartyPager : CommonPager
+	private const string prefabPath = "Prefabs/OutGame/Party/Party/PartyPager";
+
+	[SerializeField]
+	private Toggle toggle;
+
+	[SerializeField]
+	private Image onElementalImage;
+
+	[SerializeField]
+	private Image offElementalImage;
+
+	[SerializeField]
+	private Image onNoLeaderImage;
+
+	[SerializeField]
+	private Image offNoLeaderImage;
+
+	[SerializeField]
+	private Text noLeaderPageText;
+
+	[SerializeField]
+	private Image onCheckImage;
+
+	public static GameObject GetPrefab()
 	{
-		private const string prefabPath = "Prefabs/OutGame/Party/Party/PartyPager";
+		return null;
+	}
 
-		[SerializeField]
-		private Toggle toggle;
+	public override void SetOn(bool on)
+	{
+	}
 
-		[SerializeField]
-		private Image onElementalImage;
+	public void SetElementalImage(ElementalType type)
+	{
+	}
 
-		[SerializeField]
-		private Image offElementalImage;
+	public override void SetIndex(int pageIndex)
+	{
+	}
 
-		[SerializeField]
-		private Image onNoLeaderImage;
+	public void SetToggleInteractable(bool isEnable)
+	{
+	}
 
-		[SerializeField]
-		private Image offNoLeaderImage;
+	public static void CreatePager(GameObject pagerParent, List<PartyPager> pagers, int pageCount, float pagerWidth, UnityAction<int> onPagerPressed, int startPartyIndex = -1)
+	{
+	}
 
-		[SerializeField]
-		private Text noLeaderPageText;
+	public static void UpdatePagerElementImage(List<PartyPager> pagers, int pageIndex, int startPartyIndex)
+	{
+	}
 
-		[SerializeField]
-		private Image onCheckImage;
+	public static void UpdatePager(GameObject pagerParent, List<PartyPager> pagers, int selectIndex)
+	{
+	}
 
-		public static GameObject GetPrefab()
-		{
-			return null;
-		}
+	public static void ChangeParty(int index, UnityAction onSuccess)
+	{
+	}
 
-		public override void SetOn(bool on)
-		{
-		}
-
-		public void SetElementalImage(ElementalType type)
-		{
-		}
-
-		public override void SetIndex(int pageIndex)
-		{
-		}
-
-		public void SetToggleInteractable(bool isEnable)
-		{
-		}
-
-		public static void CreatePager(GameObject pagerParent, List<PartyPager> pagers, int pageCount, float pagerWidth, UnityAction<int> onPagerPressed, int startPartyIndex = -1)
-		{
-		}
-
-		public static void UpdatePagerElementImage(List<PartyPager> pagers, int pageIndex, int startPartyIndex)
-		{
-		}
-
-		public static void UpdatePager(GameObject pagerParent, List<PartyPager> pagers, int selectIndex)
-		{
-		}
-
-		public static void ChangeParty(int index, UnityAction onSuccess)
-		{
-		}
-
-		private static void CheckTemporaryCharaInParty(int oldCurrentPartyIndex)
-		{
-		}
+	private static void CheckTemporaryCharaInParty(int oldCurrentPartyIndex)
+	{
 	}
 }

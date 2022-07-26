@@ -2,58 +2,55 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PurchaseStonePopup : ShopCommonPopup
 {
-	public class PurchaseStonePopup : ShopCommonPopup
+	[SerializeField]
+	public PurchaseStoneTableViewController tableview;
+
+	[SerializeField]
+	public Transform topPart;
+
+	public Text ownedPaidStoneText;
+
+	public static void CreateModule(GameObject destroyWatcher, Action onPurchaseDone, Action onCancelled)
 	{
-		[SerializeField]
-		[Header("Tableview")]
-		public PurchaseStoneTableViewController tableview;
+	}
 
-		[SerializeField]
-		[Header("TopPart")]
-		public Transform topPart;
+	public static void CreateModuleForShopSceneCompatibility(GameObject destroyWatcher, Action onPurchaseDone, Action onCancelled, bool isDialog, Transform frameParent, RectTransform referenceRect)
+	{
+	}
 
-		public Text ownedPaidStoneText;
+	public static void ReloadModuleData()
+	{
+	}
 
-		public static void CreateModule(GameObject destroyWatcher, Action onPurchaseDone, Action onCancelled)
-		{
-		}
+	public void ReloadContents()
+	{
+	}
 
-		public static void CreateModuleForShopSceneCompatibility(GameObject destroyWatcher, Action onPurchaseDone, Action onCancelled, bool isDialog, Transform frameParent, RectTransform referenceRect)
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		public static void ReloadModuleData()
-		{
-		}
+	private static void RequestForPaymentData()
+	{
+	}
 
-		public void ReloadContents()
-		{
-		}
+	private static void UpdateStoneShopData(Action onLoadDone)
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	private static void CreateCurrentModule()
+	{
+	}
 
-		private static void RequestForPaymentData()
-		{
-		}
+	private static void OnClosePopup()
+	{
+	}
 
-		private static void UpdateStoneShopData(Action onLoadDone)
-		{
-		}
-
-		private static void CreateCurrentModule()
-		{
-		}
-
-		private static void OnClosePopup()
-		{
-		}
-
-		protected override void OnPanelModeSet()
-		{
-		}
+	protected override void OnPanelModeSet()
+	{
 	}
 }

@@ -1,11 +1,10 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BaseCanvasMyPageParticleCanvas : MonoBehaviour
 {
-	public class BaseCanvasMyPageParticleCanvas : MonoBehaviour
+	private void Start()
 	{
-		private void Start()
-		{
-		}
 	}
 }

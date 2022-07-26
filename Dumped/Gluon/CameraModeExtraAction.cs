@@ -2,183 +2,197 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CameraModeExtraAction : CameraModeBase
 {
-	public class CameraModeExtraAction : CameraModeBase
+	public enum StyleType
 	{
-		public enum StyleType
-		{
-			STANDARD,
-			OLD,
-			FBX_PATH,
-			FBX_PATH_SKILLCUTIN
-		}
+		STANDARD,
+		OLD,
+		FBX_PATH,
+		FBX_PATH_SKILLCUTIN
+	}
 
-		private enum StandardCameraState
-		{
-			Init,
-			ToTarget,
-			Stay,
-			BackNormal,
-			End
-		}
+	private enum StandardCameraState
+	{
+		Init,
+		ToTarget,
+		Stay,
+		BackNormal,
+		End
+	}
 
-		private StyleType _style;
+	private StyleType _style;
 
-		private float extraActionDistance;
+	private float extraActionDistance;
 
-		private GameObject extraActionTarget;
+	private GameObject extraActionTarget;
 
-		private float extraActionTime;
+	private float extraActionTime;
 
-		private Vector3 extraActionRotation;
+	private Vector3 extraActionRotation;
 
-		private Vector3 extraActionStartPos;
+	private Vector3 extraActionStartPos;
 
-		private float cameraSpeed;
+	private float cameraSpeed;
 
-		private bool enableFog;
+	private bool enableFog;
 
-		private float fogStartDistance;
+	private float fogStartDistance;
 
-		private float fogEndDistance;
+	private float fogEndDistance;
 
-		public const float DEFAULT_INTERPOLATION = 0.5f;
+	public const float DEFAULT_INTERPOLATION = 0.5f;
 
-		private float interpolationTime;
+	private float interpolationTime;
 
-		private bool useCameraShake;
+	private bool useCameraShake;
 
-		private float startShakeTime;
+	private float startShakeTime;
 
-		private float _beginDistance;
+	private float _beginDistance;
 
-		private Vector3 _beginRotation;
+	private Vector3 _beginRotation;
 
-		private Vector3 _beginLookAt;
+	private Vector3 _beginLookAt;
 
-		private Vector3 _preBackLookAt;
+	private Vector3 _preBackLookAt;
 
-		public AnimationCurve _interpolateCurveDistance;
+	public AnimationCurve _interpolateCurveDistance;
 
-		public AnimationCurve _interpolateCurveRotate;
+	public AnimationCurve _interpolateCurveRotate;
 
-		public AnimationCurve _interpolateCurveLookAt;
+	public AnimationCurve _interpolateCurveLookAt;
 
-		public AnimationCurve _curvePositionX;
+	public AnimationCurve _curvePositionX;
 
-		public AnimationCurve _curvePositionY;
+	public AnimationCurve _curvePositionY;
 
-		public AnimationCurve _curvePositionZ;
+	public AnimationCurve _curvePositionZ;
 
-		public AnimationCurve _curveRotationX;
+	public AnimationCurve _curveRotationX;
 
-		public AnimationCurve _curveRotationY;
+	public AnimationCurve _curveRotationY;
 
-		public AnimationCurve _curveRotationZ;
+	public AnimationCurve _curveRotationZ;
 
-		public bool _useFovCurve;
+	public bool _useFovCurve;
 
-		public AnimationCurve _curveFov;
+	public AnimationCurve _curveFov;
 
-		private bool _needsClearSkillCutInCamera;
+	private bool _needsClearSkillCutInCamera;
 
-		private List<CharacterBase> _skillCutInCameraOtherCharas;
+	private List<CharacterBase> _skillCutInCameraOtherCharas;
 
-		private List<EffectObject> _skillCutInCameraHiddenEffects;
+	private List<EffectObject> _skillCutInCameraHiddenEffects;
 
-		private List<Renderer> _skillCutInCameraHiddenRenderers;
+	private List<Renderer> _skillCutInCameraHiddenRenderers;
 
-		private EffectObject _skillCutInCameraEffect;
+	private EffectObject _skillCutInCameraEffect;
 
-		private float _skillCutInCameraNear;
+	private float _skillCutInCameraNear;
 
-		public Action<CameraModeExtraAction> setupSkillCutInCameraFunc;
+	public Action<CameraModeExtraAction> setupSkillCutInCameraFunc;
 
-		public StyleType style => default(StyleType);
+	private bool _skillCutInCameraIgnoreTargetPosY;
 
-		public bool IsSkillCutInCameraHiddenEffectsEmpty()
-		{
-			return default(bool);
-		}
+	public StyleType style => default(StyleType);
 
-		public CameraModeExtraAction(CameraController controller)
-		{
-		}
+	public bool needsClearSkillCutInCamera => default(bool);
 
-		public void Initialize(StyleType style, GameObject target, float dist, Vector3 rot, float time, float interpolationTime_ = -1f)
-		{
-		}
-
-		public void InitializeShakeCamera(int startShakeFlame, CameraController.ShakeType shaketype)
-		{
-		}
-
-		public void Finish(bool rotate = true)
-		{
-		}
-
-		public override void Update()
-		{
-		}
-
-		private void UpdateOld()
-		{
-		}
-
-		private bool UpdateCameraDistance()
+	public bool skillCutInCameraIgnoreTargetPosY
+	{
+		get
 		{
 			return default(bool);
 		}
-
-		private void UpdateStandard()
+		set
 		{
 		}
+	}
 
-		private void UpdateFbxPath(bool isPlayingSkillCutInCamera)
-		{
-		}
+	public bool IsSkillCutInCameraHiddenEffectsEmpty()
+	{
+		return default(bool);
+	}
 
-		private void moveCameraStandard(Vector3 targetLookAt, float t)
-		{
-		}
+	public CameraModeExtraAction(CameraController controller)
+	{
+	}
 
-		private void moveCameraFbxPath(Vector3 basePos, float t, bool withTargetRotation)
-		{
-		}
+	public void Initialize(StyleType style, GameObject target, float dist, Vector3 rot, float time, float interpolationTime_ = -1f)
+	{
+	}
 
-		public void SetInterpolateCurve(AnimationCurve curveD, AnimationCurve curveR, AnimationCurve curveL)
-		{
-		}
+	public void InitializeShakeCamera(int startShakeFlame, CameraController.ShakeType shaketype)
+	{
+	}
 
-		public void SetCameraPath(AnimationCurve curvePosX, AnimationCurve curvePosY, AnimationCurve curvePosZ, AnimationCurve curveRotX, AnimationCurve curveRotY, AnimationCurve curveRotZ, bool useFov, AnimationCurve curveFov)
-		{
-		}
+	public void Finish(bool rotate = true)
+	{
+	}
 
-		public void SetupSkillCutInCamera(int faceEye, int faceMouth, float near)
-		{
-		}
+	public override void Update()
+	{
+	}
 
-		public void SetupSkillCutInCameraEffect(string effectName, int effectTrigger)
-		{
-		}
+	private void UpdateOld()
+	{
+	}
 
-		private bool NeedsHideEffectForSkillCutInCamera(EffectObject eo)
-		{
-			return default(bool);
-		}
+	private bool UpdateCameraDistance()
+	{
+		return default(bool);
+	}
 
-		public void ClearSkillCutInCamera()
-		{
-		}
+	private void UpdateStandard()
+	{
+	}
 
-		public static bool CanPlaySkillCutInCamera(StyleType type, CharacterBase owner)
-		{
-			return default(bool);
-		}
+	private void UpdateFbxPath(bool isPlayingSkillCutInCamera)
+	{
+	}
 
-		private void CtrlFog(float preDis)
-		{
-		}
+	private void moveCameraStandard(Vector3 targetLookAt, float t)
+	{
+	}
+
+	private void moveCameraFbxPath(Vector3 basePos, float t, bool withTargetRotation)
+	{
+	}
+
+	public void SetInterpolateCurve(AnimationCurve curveD, AnimationCurve curveR, AnimationCurve curveL)
+	{
+	}
+
+	public void SetCameraPath(AnimationCurve curvePosX, AnimationCurve curvePosY, AnimationCurve curvePosZ, AnimationCurve curveRotX, AnimationCurve curveRotY, AnimationCurve curveRotZ, bool useFov, AnimationCurve curveFov)
+	{
+	}
+
+	public void SetupSkillCutInCamera(int faceEye, int faceMouth, float near)
+	{
+	}
+
+	public void SetupSkillCutInCameraEffect(string effectName, int effectTrigger, EffectObject.FollowPosType followPosType)
+	{
+	}
+
+	private bool NeedsHideEffectForSkillCutInCamera(EffectObject eo)
+	{
+		return default(bool);
+	}
+
+	public void ClearSkillCutInCamera(bool needsRestoreCameraNearClip = true)
+	{
+	}
+
+	public static bool CanPlaySkillCutInCamera(StyleType type, CharacterBase owner)
+	{
+		return default(bool);
+	}
+
+	private void CtrlFog(float preDis)
+	{
 	}
 }

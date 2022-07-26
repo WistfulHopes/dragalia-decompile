@@ -1,64 +1,63 @@
 using System.Collections.Generic;
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterBuffTriggerReactionBomb : CharacterBuffTriggerReactionBase
 {
-	public class CharacterBuffTriggerReactionBomb : CharacterBuffTriggerReactionBase
+	private class BuffRecord
 	{
-		private class BuffRecord
+		public enum States
 		{
-			public enum States
-			{
-				WaitForRemove,
-				Reserved
-			}
-
-			public States State;
-
-			public CharacterBuff.BuffUnion TargetBuff;
-
-			public int Damage;
-
-			public CharacterBase TargetChara;
-
-			public CharacterBase BuffAppender;
+			WaitForRemove,
+			Reserved
 		}
 
-		private ActionContainer _container;
+		public States State;
 
-		private RemoveBuffTriggerBombData _partsData;
+		public CharacterBuff.BuffUnion TargetBuff;
 
-		private CollisionHitAttribute _hitAttribute;
+		public int Damage;
 
-		private List<BuffRecord> _buffList;
+		public CharacterBase TargetChara;
 
-		public CharacterBuffTriggerReactionBomb(int actionId, int skillId, string convertedHitAttrLabel, ActionContainer container, RemoveBuffTriggerBombData partsData)
-		{
-		}
+		public CharacterBase BuffAppender;
+	}
 
-		public override void Update()
-		{
-		}
+	private ActionContainer _container;
 
-		public override void OnAppendBuff(ref CharacterAppendBuffTrigger trigger)
-		{
-		}
+	private RemoveBuffTriggerBombData _partsData;
 
-		public override bool CanAcceptTrigger(ref CharacterRemoveBuffTrigger trigger)
-		{
-			return default(bool);
-		}
+	private CollisionHitAttribute _hitAttribute;
 
-		public override void OnRemoveBuff(ref CharacterRemoveBuffTrigger trigger)
-		{
-		}
+	private List<BuffRecord> _buffList;
 
-		private void ExecRemoveBuffExtraDamage(BuffRecord record)
-		{
-		}
+	public CharacterBuffTriggerReactionBomb(int actionId, int skillId, string convertedHitAttrLabel, ActionContainer container, RemoveBuffTriggerBombData partsData)
+	{
+	}
 
-		private void PlayEffect(CharacterBase target, CharacterBase appender, string effectName)
-		{
-		}
+	public override void Update()
+	{
+	}
+
+	public override void OnAppendBuff(ref CharacterAppendBuffTrigger trigger)
+	{
+	}
+
+	public override bool CanAcceptTrigger(ref CharacterRemoveBuffTrigger trigger)
+	{
+		return default(bool);
+	}
+
+	public override void OnRemoveBuff(ref CharacterRemoveBuffTrigger trigger)
+	{
+	}
+
+	private void ExecRemoveBuffExtraDamage(BuffRecord record)
+	{
+	}
+
+	private void PlayEffect(CharacterBase target, CharacterBase appender, string effectName)
+	{
 	}
 }

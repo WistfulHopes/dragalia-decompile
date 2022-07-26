@@ -2,37 +2,36 @@ using System.Collections;
 using Cute.AssetBundle;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryScene : SceneBase
 {
-	public class StoryScene : SceneBase
+	[SerializeField]
+	protected GameObject cameraRootObject;
+
+	private StoryCanvas mainCanvas;
+
+	private DownloadOperation downloadOperation;
+
+	private void Start()
 	{
-		[SerializeField]
-		protected GameObject cameraRootObject;
+	}
 
-		private StoryCanvas mainCanvas;
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		private DownloadOperation downloadOperation;
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
-
-		public override void OnBeforeLeaving()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public StoryCanvas GetStoryCanvas()
-		{
-			return null;
-		}
+	public StoryCanvas GetStoryCanvas()
+	{
+		return null;
 	}
 }

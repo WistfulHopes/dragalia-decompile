@@ -1,69 +1,68 @@
 using System.Runtime.CompilerServices;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineBloom
 {
-	public class CuttTimelineBloom
+	private CuttTimelineKeyBloomDataList _keys;
+
+	public bool isEnableBloom
 	{
-		private CuttTimelineKeyBloomDataList _keys;
-
-		public bool isEnableBloom
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		public float bloomWeight
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float bloomThreshold
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float bloomIntensity
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void Initialize(CuttTimelineKeyBloomDataList keys)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	public float bloomWeight
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
+
+	public float bloomThreshold
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public float bloomIntensity
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public void Initialize(CuttTimelineKeyBloomDataList keys)
+	{
+	}
+
+	public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	{
 	}
 }

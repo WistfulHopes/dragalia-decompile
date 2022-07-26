@@ -1,20 +1,19 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BlankScene : MonoBehaviour
 {
-	public class BlankScene : MonoBehaviour
+	private static bool isPreloadDone;
+
+	protected virtual IEnumerator Start()
 	{
-		private static bool isPreloadDone;
+		return null;
+	}
 
-		protected virtual IEnumerator Start()
-		{
-			return null;
-		}
-
-		private IEnumerator LoadOutGameResidentAssetsCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator LoadOutGameResidentAssetsCoroutine()
+	{
+		return null;
 	}
 }

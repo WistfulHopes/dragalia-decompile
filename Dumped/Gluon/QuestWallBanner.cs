@@ -4,90 +4,89 @@ using FLATOUT.Main;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestWallBanner : MonoBehaviour
 {
-	public class QuestWallBanner : MonoBehaviour
+	[SerializeField]
+	private CommonIcon rewardIcon;
+
+	[SerializeField]
+	private Text totalLevel;
+
+	[SerializeField]
+	private Image logo;
+
+	[SerializeField]
+	private ButtonWithSelectedImage rewardButtonWithSelectedImage;
+
+	[SerializeField]
+	private ButtonWithSelectedImage detailButtonWithSelectedImage;
+
+	[SerializeField]
+	private ButtonWithSelectedImage questWallHowToReset;
+
+	[SerializeField]
+	private Text rewardDestriptionText;
+
+	[SerializeField]
+	private GameObject pickupImage;
+
+	[SerializeField]
+	private GameObject nextPickupParent;
+
+	[SerializeField]
+	private AnimationUIAutoPublisher animationPublisher;
+
+	private int groupId;
+
+	private FlRoot effectFlash;
+
+	private GameObject flashEffect;
+
+	private const int detailId = 20000;
+
+	public void SetContents(int groupId)
 	{
-		[SerializeField]
-		private CommonIcon rewardIcon;
+	}
 
-		[SerializeField]
-		private Text totalLevel;
+	public void SetMotionPause()
+	{
+	}
 
-		[SerializeField]
-		private Image logo;
+	public void SetMotionPlay()
+	{
+	}
 
-		[SerializeField]
-		private ButtonWithSelectedImage rewardButtonWithSelectedImage;
+	public void OnRewardButtonClick()
+	{
+	}
 
-		[SerializeField]
-		private ButtonWithSelectedImage detailButtonWithSelectedImage;
+	public void OnQuestDetail()
+	{
+	}
 
-		[SerializeField]
-		private ButtonWithSelectedImage questWallHowToReset;
+	public void OnHowToButtonTouched()
+	{
+	}
 
-		[SerializeField]
-		private Text rewardDestriptionText;
+	private void WallGetMonthlyRewardRequest()
+	{
+	}
 
-		[SerializeField]
-		private GameObject pickupImage;
+	private void RewardButtonResetPressedState()
+	{
+	}
 
-		[SerializeField]
-		private GameObject nextPickupParent;
+	private void OnError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		[SerializeField]
-		private AnimationUIAutoPublisher animationPublisher;
+	public void PlayEnterAnimation(Action onFinished)
+	{
+	}
 
-		private int groupId;
-
-		private FlRoot effectFlash;
-
-		private GameObject flashEffect;
-
-		private const int detailId = 20000;
-
-		public void SetContents(int groupId)
-		{
-		}
-
-		public void SetMotionPause()
-		{
-		}
-
-		public void SetMotionPlay()
-		{
-		}
-
-		public void OnRewardButtonClick()
-		{
-		}
-
-		public void OnQuestDetail()
-		{
-		}
-
-		public void OnHowToButtonTouched()
-		{
-		}
-
-		private void WallGetMonthlyRewardRequest()
-		{
-		}
-
-		private void RewardButtonResetPressedState()
-		{
-		}
-
-		private void OnError(ErrorType errorType, int resultCode)
-		{
-		}
-
-		public void PlayEnterAnimation(Action onFinished)
-		{
-		}
-
-		public void PlayExitAnimation(Action onFinished)
-		{
-		}
+	public void PlayExitAnimation(Action onFinished)
+	{
 	}
 }

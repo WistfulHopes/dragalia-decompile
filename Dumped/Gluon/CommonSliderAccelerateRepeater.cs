@@ -1,58 +1,57 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CommonSliderAccelerateRepeater : MonoBehaviour
 {
-	public class CommonSliderAccelerateRepeater : MonoBehaviour
+	[SerializeField]
+	private CommonSliderSelection sliderSelection;
+
+	[SerializeField]
+	private PointerEventHandler plusButtonEventHandler;
+
+	[SerializeField]
+	private PointerEventHandler minusButtonEventHandler;
+
+	[SerializeField]
+	private float touchDurationDefault;
+
+	[SerializeField]
+	private float touchDurationMin;
+
+	[SerializeField]
+	private int longPressAddValueMax;
+
+	[SerializeField]
+	private int longPressAddSpeed;
+
+	private int longPressAddValue;
+
+	private Coroutine countCoroutine;
+
+	private void Start()
 	{
-		[SerializeField]
-		private CommonSliderSelection sliderSelection;
+	}
 
-		[SerializeField]
-		private PointerEventHandler plusButtonEventHandler;
+	public void UseCountButtonPressed(int countInc)
+	{
+	}
 
-		[SerializeField]
-		private PointerEventHandler minusButtonEventHandler;
+	public void UseCountButtonLongPressed(int countInc)
+	{
+	}
 
-		[SerializeField]
-		private float touchDurationDefault;
+	private IEnumerator CountSpeedCoroutine(bool isPlus)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private float touchDurationMin;
+	public void OnSliderValueChanged(float val)
+	{
+	}
 
-		[SerializeField]
-		private int longPressAddValueMax;
-
-		[SerializeField]
-		private int longPressAddSpeed;
-
-		private int longPressAddValue;
-
-		private Coroutine countCoroutine;
-
-		private void Start()
-		{
-		}
-
-		public void UseCountButtonPressed(int countInc)
-		{
-		}
-
-		public void UseCountButtonLongPressed(int countInc)
-		{
-		}
-
-		private IEnumerator CountSpeedCoroutine(bool isPlus)
-		{
-			return null;
-		}
-
-		public void OnSliderValueChanged(float val)
-		{
-		}
-
-		private void LongPressEnded()
-		{
-		}
+	private void LongPressEnded()
+	{
 	}
 }

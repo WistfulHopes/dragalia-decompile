@@ -1,26 +1,24 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandWait : IStoryCommand
 {
-	[CommandName("wait")]
-	public class StoryCommandWait : IStoryCommand
+	private IEnumerator coroutine;
+
+	private float sec;
+
+	public void Start(float sec)
 	{
-		private IEnumerator coroutine;
+	}
 
-		private float sec;
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		public void Start(float sec)
-		{
-		}
-
-		public override bool Update()
-		{
-			return default(bool);
-		}
-
-		private IEnumerator _Update()
-		{
-			return null;
-		}
+	private IEnumerator _Update()
+	{
+		return null;
 	}
 }

@@ -1,33 +1,32 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsOrderToMinion : ActionParts
 {
-	public class ActionPartsOrderToMinion : ActionParts
+	private readonly OrderToMinionData _partsData;
+
+	public ActionPartsOrderToMinion(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly OrderToMinionData _partsData;
+	}
 
-		public ActionPartsOrderToMinion(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	private void ProcCommand()
+	{
+	}
 
-		private void ProcCommand()
-		{
-		}
+	private void OrderAction(EnemyCharacter chara)
+	{
+	}
 
-		private void OrderAction(EnemyCharacter chara)
-		{
-		}
-
-		private void TargetCorrection(ref CommonObjectStatus target)
-		{
-		}
+	private void TargetCorrection(ref CommonObjectStatus target)
+	{
 	}
 }

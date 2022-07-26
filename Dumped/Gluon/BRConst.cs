@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public static class BRConst
 {
-	public static class BRConst
-	{
-		public static readonly int MaxLocationPattern;
-	}
+	public static readonly int MaxLocationPattern;
 }

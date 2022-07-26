@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsEAPowerCrystal : ActionParts
 {
-	public class ActionPartsEAPowerCrystal : ActionParts
+	public enum ConditionType
 	{
-		public enum ConditionType
-		{
-			FirstSet,
-			Switch
-		}
+		FirstSet,
+		Switch
+	}
 
-		private readonly EAPowerCrystalData _partsData;
+	private readonly EAPowerCrystalData _partsData;
 
-		public ActionPartsEAPowerCrystal(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsEAPowerCrystal(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
 	}
 }

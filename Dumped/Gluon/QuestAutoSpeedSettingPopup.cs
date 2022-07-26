@@ -2,77 +2,76 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestAutoSpeedSettingPopup : CommonPopup
 {
-	public class QuestAutoSpeedSettingPopup : CommonPopup
+	[SerializeField]
+	private TabBase repeautoPlayToggle;
+
+	[SerializeField]
+	private TabBase autoTransformToggle;
+
+	[SerializeField]
+	private CommonSliderSelection gameSpeedSlider;
+
+	[SerializeField]
+	private Text disableRepeatText;
+
+	private UnityAction onOkButtonPressed;
+
+	private const string popupPath = "Prefabs/OutGame/QuestPrepare/QuestAutoSpeedSettingPopup";
+
+	private float speedSliderValue;
+
+	private bool isEnableTransformToggle;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		private TabBase repeautoPlayToggle;
+	}
 
-		[SerializeField]
-		private TabBase autoTransformToggle;
+	private void SetAutoPlayToggle()
+	{
+	}
 
-		[SerializeField]
-		private CommonSliderSelection gameSpeedSlider;
+	private void SaveAutoPlayToggle()
+	{
+	}
 
-		[SerializeField]
-		private Text disableRepeatText;
+	private void SetAutoTransformToggle()
+	{
+	}
 
-		private UnityAction onOkButtonPressed;
+	private void SaveAutoTransformToggle()
+	{
+	}
 
-		private const string popupPath = "Prefabs/OutGame/QuestPrepare/QuestAutoSpeedSettingPopup";
+	private void SetSliderValue()
+	{
+	}
 
-		private float speedSliderValue;
+	private void SetSliderText(float value)
+	{
+	}
 
-		private bool isEnableTransformToggle;
+	public void SliderValueChanged(float value)
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	private void SaveGameSpeedt()
+	{
+	}
 
-		private void SetAutoPlayToggle()
-		{
-		}
+	public static QuestAutoSpeedSettingPopup Create(UnityAction onOkButtonPressed, bool isEnableRepeatQuest, bool isEnableTransformToggle)
+	{
+		return null;
+	}
 
-		private void SaveAutoPlayToggle()
-		{
-		}
+	public override void OnOkButtonPressed()
+	{
+	}
 
-		private void SetAutoTransformToggle()
-		{
-		}
-
-		private void SaveAutoTransformToggle()
-		{
-		}
-
-		private void SetSliderValue()
-		{
-		}
-
-		private void SetSliderText(float value)
-		{
-		}
-
-		public void SliderValueChanged(float value)
-		{
-		}
-
-		private void SaveGameSpeedt()
-		{
-		}
-
-		public static QuestAutoSpeedSettingPopup Create(UnityAction onOkButtonPressed, bool isEnableRepeatQuest, bool isEnableTransformToggle)
-		{
-			return null;
-		}
-
-		public override void OnOkButtonPressed()
-		{
-		}
-
-		public void OnAutoPlayToggleChanged(int index, bool isFromUI)
-		{
-		}
+	public void OnAutoPlayToggleChanged(int index, bool isFromUI)
+	{
 	}
 }

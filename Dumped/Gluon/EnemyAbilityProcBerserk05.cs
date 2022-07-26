@@ -1,19 +1,18 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcBerserk05 : EnemyAbilityProcBerserkBase
 {
-	public class EnemyAbilityProcBerserk05 : EnemyAbilityProcBerserkBase
+	public EnemyAbilityProcBerserk05(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
 	{
-		public EnemyAbilityProcBerserk05(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
+	}
 
-		public override void Play()
-		{
-		}
+	public override void Play()
+	{
+	}
 
-		public override void Stop()
-		{
-		}
+	public override void Stop()
+	{
 	}
 }

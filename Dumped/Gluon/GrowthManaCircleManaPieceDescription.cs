@@ -1,86 +1,85 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleManaPieceDescription : MonoBehaviour
 {
-	public class GrowthManaCircleManaPieceDescription : MonoBehaviour
+	[SerializeField]
+	private Text title;
+
+	[SerializeField]
+	private GameObject bgObject;
+
+	[SerializeField]
+	private Text subTitle;
+
+	[SerializeField]
+	private GameObject subBgObject;
+
+	public CanvasGroup canvasGroup;
+
+	public RectTransform rectTransform;
+
+	public Sprite oneLineSprite;
+
+	public Sprite secondLineSprite;
+
+	private Image bgObjectImage;
+
+	private Image subBgObjectImage;
+
+	public void Awake()
 	{
-		[SerializeField]
-		private Text title;
+	}
 
-		[SerializeField]
-		private GameObject bgObject;
+	public void SetPosition(float x, float y)
+	{
+	}
 
-		[SerializeField]
-		private Text subTitle;
+	public void SetPositionOffset(float x, float y)
+	{
+	}
 
-		[SerializeField]
-		private GameObject subBgObject;
+	public void SetTitleText(string str)
+	{
+	}
 
-		public CanvasGroup canvasGroup;
+	public float GetTitleTextLength()
+	{
+		return default(float);
+	}
 
-		public RectTransform rectTransform;
+	public void SetBgColor(Color color)
+	{
+	}
 
-		public Sprite oneLineSprite;
+	public void SetSubTitleText(string str)
+	{
+	}
 
-		public Sprite secondLineSprite;
+	public void SetTitleFontColor(Color color)
+	{
+	}
 
-		private Image bgObjectImage;
+	public void SetAlpha(float alpha)
+	{
+	}
 
-		private Image subBgObjectImage;
+	public void SetScale(float scale)
+	{
+	}
 
-		public void Awake()
-		{
-		}
+	public void SetReleased(bool arg)
+	{
+	}
 
-		public void SetPosition(float x, float y)
-		{
-		}
+	public void SetTextFontSize(int size)
+	{
+	}
 
-		public void SetPositionOffset(float x, float y)
-		{
-		}
-
-		public void SetTitleText(string str)
-		{
-		}
-
-		public float GetTitleTextLength()
-		{
-			return default(float);
-		}
-
-		public void SetBgColor(Color color)
-		{
-		}
-
-		public void SetSubTitleText(string str)
-		{
-		}
-
-		public void SetTitleFontColor(Color color)
-		{
-		}
-
-		public void SetAlpha(float alpha)
-		{
-		}
-
-		public void SetScale(float scale)
-		{
-		}
-
-		public void SetReleased(bool arg)
-		{
-		}
-
-		public void SetTextFontSize(int size)
-		{
-		}
-
-		public int GetTextFontSize()
-		{
-			return default(int);
-		}
+	public int GetTextFontSize()
+	{
+		return default(int);
 	}
 }

@@ -2,199 +2,198 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace MsgPack
+namespace MsgPack;
+
+public class MsgPackReader
 {
-	public class MsgPackReader
+	private Stream _strm;
+
+	private byte[] _tmp0;
+
+	private byte[] _tmp1;
+
+	private Encoding _encoding;
+
+	private byte[] _buf;
+
+	public TypePrefixes Type
 	{
-		private Stream _strm;
-
-		private byte[] _tmp0;
-
-		private byte[] _tmp1;
-
-		private Encoding _encoding;
-
-		private byte[] _buf;
-
-		public TypePrefixes Type
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(TypePrefixes);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(TypePrefixes);
 		}
-
-		public bool ValueBoolean
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public uint Length
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(uint);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public uint ValueUnsigned
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(uint);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public ulong ValueUnsigned64
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(ulong);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public int ValueSigned
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public long ValueSigned64
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(long);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float ValueFloat
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public double ValueDouble
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(double);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public MsgPackReader(Stream strm)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool IsSigned()
+	public bool ValueBoolean
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public bool IsBoolean()
+		[CompilerGenerated]
+		private set
 		{
-			return default(bool);
 		}
+	}
 
-		public bool IsSigned64()
+	public uint Length
+	{
+		[CompilerGenerated]
+		get
 		{
-			return default(bool);
+			return default(uint);
 		}
-
-		public bool IsUnsigned()
+		[CompilerGenerated]
+		private set
 		{
-			return default(bool);
 		}
+	}
 
-		public bool IsUnsigned64()
+	public uint ValueUnsigned
+	{
+		[CompilerGenerated]
+		get
 		{
-			return default(bool);
+			return default(uint);
 		}
-
-		public bool IsRaw()
+		[CompilerGenerated]
+		private set
 		{
-			return default(bool);
 		}
+	}
 
-		public bool IsArray()
+	public ulong ValueUnsigned64
+	{
+		[CompilerGenerated]
+		get
 		{
-			return default(bool);
+			return default(ulong);
 		}
-
-		public bool IsMap()
+		[CompilerGenerated]
+		private set
 		{
-			return default(bool);
 		}
+	}
 
-		public bool Read()
-		{
-			return default(bool);
-		}
-
-		public int ReadValueRaw(byte[] buf, int offset, int count)
+	public int ValueSigned
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(int);
 		}
-
-		public string ReadRawString()
+		[CompilerGenerated]
+		private set
 		{
-			return null;
 		}
+	}
 
-		public string ReadRawString(byte[] buf)
+	public long ValueSigned64
+	{
+		[CompilerGenerated]
+		get
 		{
-			return null;
+			return default(long);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public float ValueFloat
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public double ValueDouble
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(double);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public MsgPackReader(Stream strm)
+	{
+	}
+
+	public bool IsSigned()
+	{
+		return default(bool);
+	}
+
+	public bool IsBoolean()
+	{
+		return default(bool);
+	}
+
+	public bool IsSigned64()
+	{
+		return default(bool);
+	}
+
+	public bool IsUnsigned()
+	{
+		return default(bool);
+	}
+
+	public bool IsUnsigned64()
+	{
+		return default(bool);
+	}
+
+	public bool IsRaw()
+	{
+		return default(bool);
+	}
+
+	public bool IsArray()
+	{
+		return default(bool);
+	}
+
+	public bool IsMap()
+	{
+		return default(bool);
+	}
+
+	public bool Read()
+	{
+		return default(bool);
+	}
+
+	public int ReadValueRaw(byte[] buf, int offset, int count)
+	{
+		return default(int);
+	}
+
+	public string ReadRawString()
+	{
+		return null;
+	}
+
+	public string ReadRawString(byte[] buf)
+	{
+		return null;
 	}
 }

@@ -7,633 +7,627 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class OptionPopup : PopupBase
 {
-	public class OptionPopup : PopupBase
+	private enum ReloadSceneType
 	{
-		private enum ReloadSceneType
-		{
-			None,
-			MyPage,
-			Manacircle,
-			DragonStroke
-		}
+		None,
+		MyPage,
+		Manacircle,
+		DragonStroke
+	}
 
-		public enum TabIndex
-		{
-			Sound,
-			Game,
-			System,
-			Notification
-		}
+	public enum TabIndex
+	{
+		Sound,
+		Game,
+		System,
+		Notification
+	}
 
-		[SerializeField]
-		[Header("Tabs")]
-		public TabBase tabController;
+	[SerializeField]
+	public TabBase tabController;
 
-		public OptionPage[] pages;
+	public OptionPage[] pages;
 
-		[SerializeField]
-		[Header("SoundPage")]
-		public CommonSliderSelection bgmSlider;
+	[SerializeField]
+	public CommonSliderSelection bgmSlider;
 
-		public CommonSliderSelection seSlider;
+	public CommonSliderSelection seSlider;
 
-		public CommonSliderSelection voiceSlider;
+	public CommonSliderSelection voiceSlider;
 
-		public TabBase vocalTab;
+	public TabBase vocalTab;
 
-		public Toggle bgmToggle;
+	public Toggle bgmToggle;
 
-		public Toggle seToggle;
+	public Toggle seToggle;
 
-		public Toggle voiceToggle;
+	public Toggle voiceToggle;
 
-		[SerializeField]
-		[Header("GamePage")]
-		public CommonSliderSelection graphicQualitySlider;
+	[SerializeField]
+	public CommonSliderSelection graphicQualitySlider;
 
-		public TabBase fpsTab;
+	public TabBase fpsTab;
 
-		public CommonSliderSelection resolutionSlider;
+	public CommonSliderSelection resolutionSlider;
 
-		public TabBase antiAliasingTab;
+	public TabBase antiAliasingTab;
 
-		public GameObject antiAliasingRoot;
+	public GameObject antiAliasingRoot;
 
-		public TabBase otherCharaEffectTab;
+	public TabBase otherCharaEffectTab;
 
-		public TabBase cameraShakeTab;
+	public TabBase cameraShakeTab;
 
-		public TabBase autoZoomTab;
+	public TabBase autoZoomTab;
 
-		public TabBase skillCameraMoveTab;
+	public TabBase skillCameraMoveTab;
 
-		public TabBase buttonLayoutTab;
+	public TabBase buttonLayoutTab;
 
-		public TabBase leftHandedTab;
+	public TabBase leftHandedTab;
 
-		public TabBase skillCutinTab;
+	public TabBase skillCutinTab;
 
-		public CommonSliderSelection flickSensitivitySlider;
+	public CommonSliderSelection flickSensitivitySlider;
 
-		public TabBase quickTurn180Tab;
+	public TabBase quickTurn180Tab;
 
-		public TabBase quickTurn90Tab;
+	public TabBase quickTurn90Tab;
 
-		public TabBase autoUkemiTab;
+	public TabBase autoUkemiTab;
 
-		public TabBase confirmElementTab;
+	public TabBase confirmElementTab;
 
-		public TabBase skinWeaponTab;
+	public TabBase skinWeaponTab;
 
-		[SerializeField]
-		[Header("SystemPage")]
-		public TabBase myPageBGModeTab;
+	[SerializeField]
+	public TabBase myPageBGModeTab;
 
-		public TabBase manacircleViewModeTab;
+	public TabBase manacircleViewModeTab;
 
-		public Text myPageBgm;
+	public Text myPageBgm;
 
-		public TabBase settingDragonStrokeViewModeTab;
+	public TabBase settingDragonStrokeViewModeTab;
 
-		public TabBase pettingGyroTab;
+	public TabBase pettingGyroTab;
 
-		public GameObject pettingGyroNotSupportedCommentGO;
+	public GameObject pettingGyroNotSupportedCommentGO;
 
-		public TabBase autoProtectionTab;
+	public TabBase autoProtectionTab;
 
-		public Toggle dragonSRProtectionToggle;
+	public Toggle dragonSRProtectionToggle;
 
-		public Toggle dragonSSRProtectionToggle;
+	public Toggle dragonSSRProtectionToggle;
 
-		public TabBase autoSkipReadTab;
+	public TabBase autoSkipReadTab;
 
-		public TabBase textDisplaySpeedTab;
+	public TabBase textDisplaySpeedTab;
 
-		public Text currentVoiceLanguageText;
+	public Text currentVoiceLanguageText;
 
-		public GameObject[] androidSpecificSettingGOs;
+	public GameObject[] androidSpecificSettingGOs;
 
-		public Text androidSpecificSettingCurrentStatus;
+	public Text androidSpecificSettingCurrentStatus;
 
-		public Text performanceModeSettingText;
+	public Text performanceModeSettingText;
 
-		public CanvasGroup autoProtectionToggleCanvasGroup;
+	public CanvasGroup autoProtectionToggleCanvasGroup;
 
-		public CanvasGroup gyroToggleCanvasGroup;
+	public CanvasGroup gyroToggleCanvasGroup;
 
-		[SerializeField]
-		[Header("NotificationPage")]
-		public TabBase singleStaminaNotificationTab;
+	[SerializeField]
+	public TabBase singleStaminaNotificationTab;
 
-		public TabBase multiStaminaNotificationTab;
+	public TabBase multiStaminaNotificationTab;
 
-		public TabBase dragonSmithNotificationTab;
+	public TabBase dragonSmithNotificationTab;
 
-		public TabBase buildDoneNotificationTab;
+	public TabBase buildDoneNotificationTab;
 
-		public TabBase goldFarmNotificationTab;
+	public TabBase goldFarmNotificationTab;
 
-		public TabBase dragonTreeNotificationTab;
+	public TabBase dragonTreeNotificationTab;
 
-		public TabBase honeyDrinkNotificationTab;
+	public TabBase honeyDrinkNotificationTab;
 
-		public TabBase dmodeExpeditionEndNotificationTab;
+	public TabBase dmodeExpeditionEndNotificationTab;
 
-		public TabBase sleepTimeTab;
+	public TabBase sleepTimeTab;
 
-		public CanvasGroup[] allNotificationCanvasGroups;
+	public CanvasGroup[] allNotificationCanvasGroups;
 
-		public CanvasGroup sleepTimeCanvasGroup;
+	public CanvasGroup sleepTimeCanvasGroup;
 
-		public InputField sleepTimeStartHourInput;
+	public InputField sleepTimeStartHourInput;
 
-		public InputField sleepTimeEndHourInput;
+	public InputField sleepTimeEndHourInput;
 
-		public InputField sleepTimeStartMinInput;
+	public InputField sleepTimeStartMinInput;
 
-		public InputField sleepTimeEndMinInput;
+	public InputField sleepTimeEndMinInput;
 
-		public Text sleepTimeStartText;
+	public Text sleepTimeStartText;
 
-		public Text sleepTimeEndText;
+	public Text sleepTimeEndText;
 
-		public Button sleepTimeStartButton;
+	public Button sleepTimeStartButton;
 
-		public Button sleepTimeEndButton;
+	public Button sleepTimeEndButton;
 
-		private bool openMenuOnClose;
+	private bool openMenuOnClose;
 
-		private const string muteText = "MUTE";
+	private const string muteText = "MUTE";
 
-		private const float invalidAlphaValue = 0.5f;
+	private const float invalidAlphaValue = 0.5f;
 
-		private OptionModel.Setting.SystemSetting.AutoLockSetting oldAutoLockSetting;
+	private OptionModel.Setting.SystemSetting.AutoLockSetting oldAutoLockSetting;
 
-		private OptionModel.Setting.NotificationSetting oldNotificationSetting;
+	private OptionModel.Setting.NotificationSetting oldNotificationSetting;
 
-		private OptionModel.Setting.GameSetting.GraphicSetting.QualityType oldGraphicType;
+	private OptionModel.Setting.GameSetting.GraphicSetting.QualityType oldGraphicType;
 
-		private OptionModel.Setting.GameSetting.GraphicSetting.ResolutionType oldResolutionType;
+	private OptionModel.Setting.GameSetting.GraphicSetting.ResolutionType oldResolutionType;
 
-		private bool oldAntiAliasing;
+	private bool oldAntiAliasing;
 
-		private int oldFPS;
+	private int oldFPS;
 
-		private OptionModel.Setting.SystemSetting.MyPageBGMode oldMyPageBGMode;
+	private OptionModel.Setting.SystemSetting.MyPageBGMode oldMyPageBGMode;
 
-		private OptionModel.Setting.SystemSetting.ManacircleViewMode oldManacircleViewMode;
+	private OptionModel.Setting.SystemSetting.ManacircleViewMode oldManacircleViewMode;
 
-		private OptionModel.Setting.SystemSetting.DragonStrokeViewMode oldDragonStrokeViewMode;
+	private OptionModel.Setting.SystemSetting.DragonStrokeViewMode oldDragonStrokeViewMode;
 
-		private bool[] pageEventBinded;
+	private bool[] pageEventBinded;
 
-		private float prevSEVal;
+	private float prevSEVal;
 
-		private float prevVocalVal;
+	private float prevVocalVal;
 
-		public static void Create(bool openMenuOnClose = true, [Optional] Action<OptionPopup> onCreated)
-		{
-		}
+	public static void Create(bool openMenuOnClose = true, [Optional] Action<OptionPopup> onCreated)
+	{
+	}
 
-		private void OnEnable()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void LateUpdate()
-		{
-		}
+	private void LateUpdate()
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	protected override void OnDestroy()
+	{
+	}
 
-		private void InvokeChangeEvents()
-		{
-		}
+	private void InvokeChangeEvents()
+	{
+	}
 
-		public void OnCloseButtonPressed()
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
+	}
 
-		private void RequestAutoLockOptionChanged(Action onFinished)
-		{
-		}
+	private void RequestAutoLockOptionChanged(Action onFinished)
+	{
+	}
 
-		private void RefineLocalPushByOption()
-		{
-		}
+	private void RefineLocalPushByOption()
+	{
+	}
 
-		public void OnAppliedAnyAction()
-		{
-		}
+	public void OnAppliedAnyAction()
+	{
+	}
 
-		public void OnAppliedAnyLanguageAction()
-		{
-		}
+	public void OnAppliedAnyLanguageAction()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private void BindEvent(int index)
-		{
-		}
+	private void BindEvent(int index)
+	{
+	}
 
-		private char OnValidateHourInput(string text, int charIndex, char addedChar)
-		{
-			return default(char);
-		}
+	private char OnValidateHourInput(string text, int charIndex, char addedChar)
+	{
+		return default(char);
+	}
 
-		private char OnValidateMinuteInput(string text, int charIndex, char addedChar)
-		{
-			return default(char);
-		}
+	private char OnValidateMinuteInput(string text, int charIndex, char addedChar)
+	{
+		return default(char);
+	}
 
-		private void SliderCallbackToInt(CommonSliderSelection slider, Action<int> sliderCallback)
-		{
-		}
+	private void SliderCallbackToInt(CommonSliderSelection slider, Action<int> sliderCallback)
+	{
+	}
 
-		private void TabCallbackToToggle(TabBase tab, Action<bool> toggleCallback)
-		{
-		}
+	private void TabCallbackToToggle(TabBase tab, Action<bool> toggleCallback)
+	{
+	}
 
-		private void InputFieldToInt(InputField inputField, Action<int> inputCallback, Func<int> originalValueGetter)
-		{
-		}
+	private void InputFieldToInt(InputField inputField, Action<int> inputCallback, Func<int> originalValueGetter)
+	{
+	}
 
-		private int GetEnumMaxValue<T>() where T : struct, IConvertible
-		{
-			return default(int);
-		}
+	private int GetEnumMaxValue<T>() where T : struct, IConvertible
+	{
+		return default(int);
+	}
 
-		private void ApplyUIByOptionSetting(TabIndex tabIndex)
-		{
-		}
+	private void ApplyUIByOptionSetting(TabIndex tabIndex)
+	{
+	}
 
-		private void UpdateAntiAliasingTab()
-		{
-		}
+	private void UpdateAntiAliasingTab()
+	{
+	}
 
-		private void UpdateOtherCharaEffectTab()
-		{
-		}
+	private void UpdateOtherCharaEffectTab()
+	{
+	}
 
-		private void AfterApplyUIByOptionSetting(TabIndex index)
-		{
-		}
+	private void AfterApplyUIByOptionSetting(TabIndex index)
+	{
+	}
 
-		public void OnPlaySampleSE()
-		{
-		}
+	public void OnPlaySampleSE()
+	{
+	}
 
-		public void OnPlaySampleVoice()
-		{
-		}
+	public void OnPlaySampleVoice()
+	{
+	}
 
-		public void OnVocalSettingChanged(int index, bool isFromUI)
-		{
-		}
+	public void OnVocalSettingChanged(int index, bool isFromUI)
+	{
+	}
 
-		public void OnBGMValueChanged(float val)
-		{
-		}
+	public void OnBGMValueChanged(float val)
+	{
+	}
 
-		public void OnSEValueChanged(float val)
-		{
-		}
+	public void OnSEValueChanged(float val)
+	{
+	}
 
-		public void OnVoiceValueChanged(float val)
-		{
-		}
+	public void OnVoiceValueChanged(float val)
+	{
+	}
 
-		public void OnBGMToggled(bool value)
-		{
-		}
+	public void OnBGMToggled(bool value)
+	{
+	}
 
-		public void OnSEToggled(bool value)
-		{
-		}
+	public void OnSEToggled(bool value)
+	{
+	}
 
-		private void ReflectVoiceToggled(bool value)
-		{
-		}
+	private void ReflectVoiceToggled(bool value)
+	{
+	}
 
-		public void OnVoiceToggled(bool value)
-		{
-		}
+	public void OnVoiceToggled(bool value)
+	{
+	}
 
-		private IEnumerator CheckNonStoryVoiceDownload(UnityAction onCompleted, UnityAction onCompletedWithoutDownloading, UnityAction onCanceled)
-		{
-			return null;
-		}
+	private IEnumerator CheckNonStoryVoiceDownload(UnityAction onCompleted, UnityAction onCompletedWithoutDownloading, UnityAction onCanceled)
+	{
+		return null;
+	}
 
-		private void OpenNonStoryVoicePopup(DownloadOperation downloadOperation, UnityAction onCompleted, UnityAction onCompletedWithoutDownloading, UnityAction onCanceled)
-		{
-		}
+	private void OpenNonStoryVoicePopup(DownloadOperation downloadOperation, UnityAction onCompleted, UnityAction onCompletedWithoutDownloading, UnityAction onCanceled)
+	{
+	}
 
-		private void DownloadNonStoryVoiceCompleteCallback()
-		{
-		}
+	private void DownloadNonStoryVoiceCompleteCallback()
+	{
+	}
 
-		private void NonStoryVoiceCompleteCallbackWithoutDownloading()
-		{
-		}
+	private void NonStoryVoiceCompleteCallbackWithoutDownloading()
+	{
+	}
 
-		private void DownloadNonStoryVoiceCancelCallback()
-		{
-		}
+	private void DownloadNonStoryVoiceCancelCallback()
+	{
+	}
 
-		private CommonPopup CreateNonStoryVoiceDeleteComfirmPopup()
-		{
-			return null;
-		}
+	private CommonPopup CreateNonStoryVoiceDeleteComfirmPopup()
+	{
+		return null;
+	}
 
-		private IEnumerator DeleteNonStoryVoice(HashSet<string> targetAssets)
-		{
-			return null;
-		}
+	private IEnumerator DeleteNonStoryVoice(HashSet<string> targetAssets)
+	{
+		return null;
+	}
 
-		public void OnGraphicQualityChanged(int value)
-		{
-		}
+	public void OnGraphicQualityChanged(int value)
+	{
+	}
 
-		public void OnFPSToggled(bool value)
-		{
-		}
+	public void OnFPSToggled(bool value)
+	{
+	}
 
-		public void OnResolutionChanged(int value)
-		{
-		}
+	public void OnResolutionChanged(int value)
+	{
+	}
 
-		public void OnAntiAliasingToggled(bool value)
-		{
-		}
+	public void OnAntiAliasingToggled(bool value)
+	{
+	}
 
-		public void OnOtherCharaEffectToggled(bool value)
-		{
-		}
+	public void OnOtherCharaEffectToggled(bool value)
+	{
+	}
 
-		public void OnCameraShakeToggled(bool value)
-		{
-		}
+	public void OnCameraShakeToggled(bool value)
+	{
+	}
 
-		public void OnAutoZoomToggled(bool value)
-		{
-		}
+	public void OnAutoZoomToggled(bool value)
+	{
+	}
 
-		public void OnShowSkillCameraMoveToggled(bool value)
-		{
-		}
+	public void OnShowSkillCameraMoveToggled(bool value)
+	{
+	}
 
-		public void OnSwapCharacterAndSkillToggled(bool value)
-		{
-		}
+	public void OnSwapCharacterAndSkillToggled(bool value)
+	{
+	}
 
-		public void OnLeftHandedToggled(bool value)
-		{
-		}
+	public void OnLeftHandedToggled(bool value)
+	{
+	}
 
-		public void OnShowSkillCutinToggled(bool value)
-		{
-		}
+	public void OnShowSkillCutinToggled(bool value)
+	{
+	}
 
-		public void OnFlickSensibilityChanged(int value)
-		{
-		}
+	public void OnFlickSensibilityChanged(int value)
+	{
+	}
 
-		public void OnQuickTurn180Toggled(bool value)
-		{
-		}
+	public void OnQuickTurn180Toggled(bool value)
+	{
+	}
 
-		public void OnQuickTurn90Toggled(bool value)
-		{
-		}
+	public void OnQuickTurn90Toggled(bool value)
+	{
+	}
 
-		public void OnAutoUkemiToggled(bool value)
-		{
-		}
+	public void OnAutoUkemiToggled(bool value)
+	{
+	}
 
-		public void OnConfirmElementToggled(bool value)
-		{
-		}
+	public void OnConfirmElementToggled(bool value)
+	{
+	}
 
-		public void OnSkinWeaponToggled(bool value)
-		{
-		}
+	public void OnSkinWeaponToggled(bool value)
+	{
+	}
 
-		private void ReflectMypageModeToggled(bool value)
-		{
-		}
+	private void ReflectMypageModeToggled(bool value)
+	{
+	}
 
-		public void OnMyPageModeToggled(bool value)
-		{
-		}
+	public void OnMyPageModeToggled(bool value)
+	{
+	}
 
-		private IEnumerator CheckTargetDataDownload(int[] targetGroups, UnityAction onCompleted, UnityAction onCanceled)
-		{
-			return null;
-		}
+	private IEnumerator CheckTargetDataDownload(int[] targetGroups, UnityAction onCompleted, UnityAction onCanceled)
+	{
+		return null;
+	}
 
-		private void DownloadMyPage3dCompleteCallback()
-		{
-		}
+	private void DownloadMyPage3dCompleteCallback()
+	{
+	}
 
-		private void DownloadMyPage3dCancelCallback()
-		{
-		}
+	private void DownloadMyPage3dCancelCallback()
+	{
+	}
 
-		public void OnManacircleViewModeToggled(bool value)
-		{
-		}
+	public void OnManacircleViewModeToggled(bool value)
+	{
+	}
 
-		public void OnDragonDardenViewModeToggled(bool value)
-		{
-		}
+	public void OnDragonDardenViewModeToggled(bool value)
+	{
+	}
 
-		public void OnPettingGyroToggled(bool value)
-		{
-		}
+	public void OnPettingGyroToggled(bool value)
+	{
+	}
 
-		public void OnAutoProtectionToggled(bool value)
-		{
-		}
+	public void OnAutoProtectionToggled(bool value)
+	{
+	}
 
-		public void OnProtectDragonSRToggled(bool value)
-		{
-		}
+	public void OnProtectDragonSRToggled(bool value)
+	{
+	}
 
-		public void OnProtectDragonSSRToggled(bool value)
-		{
-		}
+	public void OnProtectDragonSSRToggled(bool value)
+	{
+	}
 
-		public void OnAutoSkipReadToggled(bool value)
-		{
-		}
+	public void OnAutoSkipReadToggled(bool value)
+	{
+	}
 
-		public void OnTextDisplaySpeedToggled(bool value)
-		{
-		}
+	public void OnTextDisplaySpeedToggled(bool value)
+	{
+	}
 
-		public void OnChangeLanguageButtonPressed()
-		{
-		}
+	public void OnChangeLanguageButtonPressed()
+	{
+	}
 
-		private void SetVoiceLanguageDisplay()
-		{
-		}
+	private void SetVoiceLanguageDisplay()
+	{
+	}
 
-		public void OnFullDownloadButtonPressed()
-		{
-		}
+	public void OnFullDownloadButtonPressed()
+	{
+	}
 
-		public void OnQuestDataDeleteButtonPressed()
-		{
-		}
+	public void OnQuestDataDeleteButtonPressed()
+	{
+	}
 
-		public void OnAllNotificationToggled(bool value)
-		{
-		}
+	public void OnAllNotificationToggled(bool value)
+	{
+	}
 
-		public void OnOfficialNotificationToggled(bool value)
-		{
-		}
+	public void OnOfficialNotificationToggled(bool value)
+	{
+	}
 
-		public void OnDragonSmithNotificationToggled(bool value)
-		{
-		}
+	public void OnDragonSmithNotificationToggled(bool value)
+	{
+	}
 
-		public void OnSingleStaminaNotificationToggled(bool value)
-		{
-		}
+	public void OnSingleStaminaNotificationToggled(bool value)
+	{
+	}
 
-		public void OnMultiStaminaNotificationToggled(bool value)
-		{
-		}
+	public void OnMultiStaminaNotificationToggled(bool value)
+	{
+	}
 
-		public void OnBuildDoneNotificationToggled(bool value)
-		{
-		}
+	public void OnBuildDoneNotificationToggled(bool value)
+	{
+	}
 
-		public void OnGoldFarmNotificationToggled(bool value)
-		{
-		}
+	public void OnGoldFarmNotificationToggled(bool value)
+	{
+	}
 
-		public void OnDragonTreeNotificationToggled(bool value)
-		{
-		}
+	public void OnDragonTreeNotificationToggled(bool value)
+	{
+	}
 
-		public void OnHoneyDrinkNotificationToggled(bool value)
-		{
-		}
+	public void OnHoneyDrinkNotificationToggled(bool value)
+	{
+	}
 
-		public void OnDmodeExpeditionEndNotificationToggled(bool value)
-		{
-		}
+	public void OnDmodeExpeditionEndNotificationToggled(bool value)
+	{
+	}
 
-		public void OnSleepTimeToggled(bool value)
-		{
-		}
+	public void OnSleepTimeToggled(bool value)
+	{
+	}
 
-		public void OnSleepStartHourTimeSet(int hour)
-		{
-		}
+	public void OnSleepStartHourTimeSet(int hour)
+	{
+	}
 
-		public void OnSleepStartMinTimeSet(int min)
-		{
-		}
+	public void OnSleepStartMinTimeSet(int min)
+	{
+	}
 
-		public void OnSleepEndHourTimeSet(int hour)
-		{
-		}
+	public void OnSleepEndHourTimeSet(int hour)
+	{
+	}
 
-		public void OnSleepEndMinTimeSet(int min)
-		{
-		}
+	public void OnSleepEndMinTimeSet(int min)
+	{
+	}
 
-		public void RefreshNotificationSleepTimeDisplay()
-		{
-		}
+	public void RefreshNotificationSleepTimeDisplay()
+	{
+	}
 
-		public void OnSleepStartTimeButtonPressed()
-		{
-		}
+	public void OnSleepStartTimeButtonPressed()
+	{
+	}
 
-		public void OnSleepEndTimeButtonPressed()
-		{
-		}
+	public void OnSleepEndTimeButtonPressed()
+	{
+	}
 
-		public void OnResetSoundSetting()
-		{
-		}
+	public void OnResetSoundSetting()
+	{
+	}
 
-		private void DownloadNonStoryVoiceCompleteCallbackOnResetSoundSetting()
-		{
-		}
+	private void DownloadNonStoryVoiceCompleteCallbackOnResetSoundSetting()
+	{
+	}
 
-		private void NonStoryVoiceCompleteCallbackWithoutDownloadingOnResetSoundSetting()
-		{
-		}
+	private void NonStoryVoiceCompleteCallbackWithoutDownloadingOnResetSoundSetting()
+	{
+	}
 
-		public void OnResetGameSetting()
-		{
-		}
+	public void OnResetGameSetting()
+	{
+	}
 
-		public void OnResetSystemSetting()
-		{
-		}
+	public void OnResetSystemSetting()
+	{
+	}
 
-		private void DownloadMyPage3dCompleteCallbackOnResetSystemSetting()
-		{
-		}
+	private void DownloadMyPage3dCompleteCallbackOnResetSystemSetting()
+	{
+	}
 
-		private void ReturnToTitle()
-		{
-		}
+	private void ReturnToTitle()
+	{
+	}
 
-		public void OnSwitchPerformanceModeButtonPressed()
-		{
-		}
+	public void OnSwitchPerformanceModeButtonPressed()
+	{
+	}
 
-		public void OnResetNotificationSetting()
-		{
-		}
+	public void OnResetNotificationSetting()
+	{
+	}
 
-		public void OnChangeAndoirdSettingPressed()
-		{
-		}
+	public void OnChangeAndoirdSettingPressed()
+	{
+	}
 
-		public static bool IsAndroidSystemUiEditSupported()
-		{
-			return default(bool);
-		}
+	public static bool IsAndroidSystemUiEditSupported()
+	{
+		return default(bool);
+	}
 
-		private string GetAndroidSpecificSettingCurrentStatusText()
-		{
-			return null;
-		}
+	private string GetAndroidSpecificSettingCurrentStatusText()
+	{
+		return null;
+	}
 
-		public void OnChangeMyPageBgmPressed()
-		{
-		}
+	public void OnChangeMyPageBgmPressed()
+	{
+	}
 
-		private void OnBgmChangeAction(int bgmId)
-		{
-		}
+	private void OnBgmChangeAction(int bgmId)
+	{
+	}
 
-		private bool IsCurrentScenePartyTop()
-		{
-			return default(bool);
-		}
+	private bool IsCurrentScenePartyTop()
+	{
+		return default(bool);
+	}
 
-		private string GetCurrentMyPageBgmTitle()
-		{
-			return null;
-		}
+	private string GetCurrentMyPageBgmTitle()
+	{
+		return null;
 	}
 }

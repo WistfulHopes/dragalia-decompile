@@ -1,21 +1,20 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateEventMove : CharacterStateBase
 {
-	public class CharacterStateEventMove : CharacterStateBase
+	private Vector3 targetPos;
+
+	protected override void OnStateEnter_Internal()
 	{
-		private Vector3 targetPos;
+	}
 
-		protected override void OnStateEnter_Internal()
-		{
-		}
+	public override void OnStateExit()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
-
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateUpdate()
+	{
 	}
 }

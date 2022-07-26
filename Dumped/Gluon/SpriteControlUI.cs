@@ -4,42 +4,40 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SpriteControlUI : MonoBehaviour
 {
-	public class SpriteControlUI : MonoBehaviour
+	[SerializeField]
+	private Sprite[] sprites;
+
+	private int numSprite;
+
+	private int indexSprite;
+
+	private Image image;
+
+	private RectTransform imageRt;
+
+	private Tweener tweener;
+
+	private Action<SpriteControlUI> func;
+
+	private Vector2[] sizeSprite;
+
+	public void Initialize()
 	{
-		[SerializeField]
-		[Header("resource")]
-		private Sprite[] sprites;
+	}
 
-		private int numSprite;
+	public void Play(float t, [Optional] Action<SpriteControlUI> func, Ease ease = Ease.Linear)
+	{
+	}
 
-		private int indexSprite;
+	private void OnUpdateSprite(float value)
+	{
+	}
 
-		private Image image;
-
-		private RectTransform imageRt;
-
-		private Tweener tweener;
-
-		private Action<SpriteControlUI> func;
-
-		private Vector2[] sizeSprite;
-
-		public void Initialize()
-		{
-		}
-
-		public void Play(float t, [Optional] Action<SpriteControlUI> func, Ease ease = Ease.Linear)
-		{
-		}
-
-		private void OnUpdateSprite(float value)
-		{
-		}
-
-		private void OnCompleteSprite()
-		{
-		}
+	private void OnCompleteSprite()
+	{
 	}
 }

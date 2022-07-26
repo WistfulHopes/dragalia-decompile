@@ -1,9 +1,8 @@
-namespace Gluon
-{
-	public class ChapterCellData
-	{
-		public string chapterTitle;
+namespace Gluon;
 
-		public int chapterId;
-	}
+public class ChapterCellData
+{
+	public string chapterTitle;
+
+	public int chapterId;
 }

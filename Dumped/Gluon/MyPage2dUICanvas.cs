@@ -3,42 +3,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPage2dUICanvas : AnimationUICanvas
 {
-	public class MyPage2dUICanvas : AnimationUICanvas
+	public MyPageScene scene;
+
+	public PageViewBase pageViewBase;
+
+	public GameObject content;
+
+	private List<int> characterIds;
+
+	public static int pageIndex;
+
+	[SerializeField]
+	private UIAnimationPublisher uiAnimationPublisher;
+
+	private IEnumerator Start()
 	{
-		public MyPageScene scene;
+		return null;
+	}
 
-		public PageViewBase pageViewBase;
+	private void SetPage(GameObject page, int index)
+	{
+	}
 
-		public GameObject content;
+	public void OnHide()
+	{
+	}
 
-		private List<int> characterIds;
+	public void OnFinishHide()
+	{
+	}
 
-		public static int pageIndex;
-
-		[SerializeField]
-		private UIAnimationPublisher uiAnimationPublisher;
-
-		private IEnumerator Start()
-		{
-			return null;
-		}
-
-		private void SetPage(GameObject page, int index)
-		{
-		}
-
-		public void OnHide()
-		{
-		}
-
-		public void OnFinishHide()
-		{
-		}
-
-		private void SetMyPage2dCharacterClickAction(Action action)
-		{
-		}
+	private void SetMyPage2dCharacterClickAction(Action action)
+	{
 	}
 }

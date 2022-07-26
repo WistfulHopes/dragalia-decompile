@@ -1,20 +1,19 @@
 using System;
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public abstract class CuttTimelineKeyWithInterpolate : CuttTimelineKey
 {
-	[Serializable]
-	public abstract class CuttTimelineKeyWithInterpolate : CuttTimelineKey
+	public CuttCameraInterpolateType interpolateType;
+
+	public AnimationCurve curve;
+
+	public CuttTimelineEasing.Type easingType;
+
+	public override bool IsInterpolateKey()
 	{
-		public CuttCameraInterpolateType interpolateType;
-
-		public AnimationCurve curve;
-
-		public CuttTimelineEasing.Type easingType;
-
-		public override bool IsInterpolateKey()
-		{
-			return default(bool);
-		}
+		return default(bool);
 	}
 }

@@ -2,57 +2,56 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DreamSelectTicketCtrl : TableViewController<DreamSelectTicketCtrl.DreamSelectItemCellData>
 {
-	public class DreamSelectTicketCtrl : TableViewController<DreamSelectTicketCtrl.DreamSelectItemCellData>
+	public class DreamSelectItemCellData
 	{
-		public class DreamSelectItemCellData
-		{
-			public int entity_id;
+		public int entity_id;
 
-			public int entity_type;
-		}
+		public int entity_type;
+	}
 
-		private const float cellHeight = 148f;
+	private const float cellHeight = 148f;
 
-		[SerializeField]
-		private AnimationListOneCol listAnimation;
+	[SerializeField]
+	private AnimationListOneCol listAnimation;
 
-		[SerializeField]
-		private float delayFrame;
+	[SerializeField]
+	private float delayFrame;
 
-		public GiftType giftType;
+	public GiftType giftType;
 
-		private Action<GiftType, int> onSummonButtonClick;
+	private Action<GiftType, int> onSummonButtonClick;
 
-		protected override void Awake()
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		public void Init(List<ulong> cellData, Action<GiftType, int> onClick)
-		{
-		}
+	public void Init(List<ulong> cellData, Action<GiftType, int> onClick)
+	{
+	}
 
-		public void ReloadContents(List<ulong> cellData)
-		{
-		}
+	public void ReloadContents(List<ulong> cellData)
+	{
+	}
 
-		protected override TableViewCell<DreamSelectItemCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
+	protected override TableViewCell<DreamSelectItemCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public void StartEnterAnimation()
-		{
-		}
+	public void StartEnterAnimation()
+	{
+	}
 
-		public void StartExitAnimation()
-		{
-		}
+	public void StartExitAnimation()
+	{
 	}
 }

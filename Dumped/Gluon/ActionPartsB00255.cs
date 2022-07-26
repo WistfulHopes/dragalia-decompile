@@ -3,97 +3,96 @@ using Cute.Cri;
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsB00255 : ActionParts
 {
-	public class ActionPartsB00255 : ActionParts
+	private enum State
 	{
-		private enum State
+		idle,
+		expansion,
+		expansionBeam,
+		rolling,
+		convergence
+	}
+
+	private class OptionCtrl
+	{
+		public CharacterBase chara;
+
+		public ActionMove actMove;
+
+		public EffectObject beamEffect;
+
+		public EffectObject effectObject;
+
+		public Vector3 dir;
+
+		public CollisionHitAttribute hitAttribute;
+
+		public Vector3 GetBeamBasePos(CharacterBase owner)
 		{
-			idle,
-			expansion,
-			expansionBeam,
-			rolling,
-			convergence
+			return default(Vector3);
 		}
+	}
 
-		private class OptionCtrl
-		{
-			public CharacterBase chara;
+	private readonly B00255Data _partsData;
 
-			public ActionMove actMove;
+	private const float BEAM_EXPAN_SEC = 0.15f;
 
-			public EffectObject beamEffect;
+	private const float HIT_EXCEPTION_SEC = 1f;
 
-			public EffectObject effectObject;
+	private State _state;
 
-			public Vector3 dir;
+	private StoneSatelliteUniqueCtrl _ctrl;
 
-			public CollisionHitAttribute hitAttribute;
+	private HitException _hitException;
 
-			public Vector3 GetBeamBasePos(CharacterBase owner)
-			{
-				return default(Vector3);
-			}
-		}
+	private List<OptionCtrl> _options;
 
-		private readonly B00255Data _partsData;
+	private float _elapsedSec;
 
-		private const float BEAM_EXPAN_SEC = 0.15f;
+	private float _beamExpanSec;
 
-		private const float HIT_EXCEPTION_SEC = 1f;
+	private float _rollingSec;
 
-		private State _state;
+	private EffectObject _ringEffect;
 
-		private StoneSatelliteUniqueCtrl _ctrl;
+	private AudioPlayback _rollingSeHandle;
 
-		private HitException _hitException;
+	private int _effTrig;
 
-		private List<OptionCtrl> _options;
+	public ActionPartsB00255(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		private float _elapsedSec;
+	protected override void OnStart()
+	{
+	}
 
-		private float _beamExpanSec;
+	protected override void OnFinish()
+	{
+	}
 
-		private float _rollingSec;
+	public override void Clear()
+	{
+	}
 
-		private EffectObject _ringEffect;
+	public override void RemoveSelf()
+	{
+	}
 
-		private AudioPlayback _rollingSeHandle;
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		private int _effTrig;
+	protected override bool OnFixedUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public ActionPartsB00255(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		protected override void OnFinish()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
-
-		public override void RemoveSelf()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		protected override bool OnFixedUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		public override void OnCollided(GameObject target, bool isPropagation)
-		{
-		}
+	public override void OnCollided(GameObject target, bool isPropagation)
+	{
 	}
 }

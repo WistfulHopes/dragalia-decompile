@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum TweenType
 {
-	public enum TweenType
-	{
-		Linear,
-		EaseIn_Sine,
-		EaseOut_Sine,
-		EaseInOut_Sine
-	}
+	Linear,
+	EaseIn_Sine,
+	EaseOut_Sine,
+	EaseInOut_Sine
 }

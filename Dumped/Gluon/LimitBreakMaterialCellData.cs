@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class LimitBreakMaterialCellData : CommonEquipIconCellData
 {
-	public class LimitBreakMaterialCellData : CommonEquipIconCellData
-	{
-		public bool isSelectLock;
+	public bool isSelectLock;
 
-		public int selectNumber;
+	public int selectNumber;
 
-		public int useItemCount;
+	public int useItemCount;
 
-		public int needItemCount;
+	public int needItemCount;
 
-		public TutorialDataManager.TutorialCellType tutorialCellType;
-	}
+	public TutorialDataManager.TutorialCellType tutorialCellType;
 }

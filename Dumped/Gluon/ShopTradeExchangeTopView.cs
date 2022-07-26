@@ -1,65 +1,62 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeExchangeTopView : ShopTradePanelBase
 {
-	public class ShopTradeExchangeTopView : ShopTradePanelBase
+	private enum TabType
 	{
-		private enum TabType
-		{
-			None,
-			Normal,
-			Event
-		}
+		None,
+		Normal,
+		Event
+	}
 
-		[SerializeField]
-		[Header("Tab")]
-		public TabBase tabController;
+	[SerializeField]
+	public TabBase tabController;
 
-		[SerializeField]
-		[Header("TableView")]
-		public ShopTreasureTradeTopTableViewController normalTableView;
+	[SerializeField]
+	public ShopTreasureTradeTopTableViewController normalTableView;
 
-		public ShopEventTradeTopTableViewController eventTableView;
+	public ShopEventTradeTopTableViewController eventTableView;
 
-		private static TabType lastSelectedTab;
+	private static TabType lastSelectedTab;
 
-		private TabType currentTabType;
+	private TabType currentTabType;
 
-		public static ShopTradeExchangeTopView Create(Transform parent, ShopTradeScene scene)
-		{
-			return null;
-		}
+	public static ShopTradeExchangeTopView Create(Transform parent, ShopTradeScene scene)
+	{
+		return null;
+	}
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void OnSwitchTab(int tabIndex, bool calledFromUI)
-		{
-		}
+	public void OnSwitchTab(int tabIndex, bool calledFromUI)
+	{
+	}
 
-		private void LoadTabs()
-		{
-		}
+	private void LoadTabs()
+	{
+	}
 
-		public void OnTreasureCellButtonPressed(int groupId)
-		{
-		}
+	public void OnTreasureCellButtonPressed(int groupId)
+	{
+	}
 
-		public void OnEventCellButtonPressed(int groupId)
-		{
-		}
+	public void OnEventCellButtonPressed(int groupId)
+	{
+	}
 
-		public static void ClearLastSelectedTab()
-		{
-		}
+	public static void ClearLastSelectedTab()
+	{
+	}
 
-		private void DisableButtonForReason(GameObject tab, TutorialUIManager.LockButtonType type)
-		{
-		}
+	private void DisableButtonForReason(GameObject tab, TutorialUIManager.LockButtonType type)
+	{
 	}
 }

@@ -1,19 +1,18 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsFishingDanceC : ActionParts
 {
-	public class ActionPartsFishingDanceC : ActionParts
+	private readonly FishingDanceCData _partsData;
+
+	private FishUniqueCtrl _ctrl;
+
+	public ActionPartsFishingDanceC(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly FishingDanceCData _partsData;
+	}
 
-		private FishUniqueCtrl _ctrl;
-
-		public ActionPartsFishingDanceC(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

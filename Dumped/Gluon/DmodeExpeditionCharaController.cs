@@ -1,30 +1,29 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeExpeditionCharaController : CommonIconListController
 {
-	public class DmodeExpeditionCharaController : CommonIconListController
+	public bool isOutButtonSelect;
+
+	protected override CommonIconListCellData CreateCharacterCellData(int keyIdOrInvalidId, int decoNum)
 	{
-		public bool isOutButtonSelect;
+		return null;
+	}
 
-		protected override CommonIconListCellData CreateCharacterCellData(int keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	public void SetSelectIconToOutButton(bool isShowSelect)
+	{
+	}
 
-		public void SetSelectIconToOutButton(bool isShowSelect)
-		{
-		}
+	public void ShowCharaDetail(CommonIconListCellData charaData)
+	{
+	}
 
-		public void ShowCharaDetail(CommonIconListCellData charaData)
-		{
-		}
+	public void ShowCharaDetail(int charaId)
+	{
+	}
 
-		public void ShowCharaDetail(int charaId)
-		{
-		}
-
-		public void UpdateMemberList(List<int> memberList)
-		{
-		}
+	public void UpdateMemberList(List<int> memberList)
+	{
 	}
 }

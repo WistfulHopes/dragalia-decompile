@@ -1,21 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class NowSetName : MonoBehaviour
 {
-	public class NowSetName : MonoBehaviour
+	public Image nowNameIcon;
+
+	public Text nowName;
+
+	public Text nowNameRuby;
+
+	[SerializeField]
+	private Text title;
+
+	private void Start()
 	{
-		public Image nowNameIcon;
-
-		public Text nowName;
-
-		public Text nowNameRuby;
-
-		[SerializeField]
-		private Text title;
-
-		private void Start()
-		{
-		}
 	}
 }

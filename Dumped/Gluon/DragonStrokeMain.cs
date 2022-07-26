@@ -5,474 +5,465 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DragonStrokeMain : MonoBehaviour
 {
-	public class DragonStrokeMain : MonoBehaviour
+	public enum walkerVoiceType
 	{
-		public enum walkerVoiceType
-		{
-			Start,
-			Wait,
-			Touch,
-			GetGift,
-			FinishStroke
-		}
+		Start,
+		Wait,
+		Touch,
+		GetGift,
+		FinishStroke
+	}
 
-		private enum ContactMode
-		{
-			None = -1,
-			Idle,
-			Joy,
-			Hate,
-			PlusWait,
-			Happy,
-			PresentSelect,
-			PresentReturn
-		}
+	private enum ContactMode
+	{
+		None = -1,
+		Idle,
+		Joy,
+		Hate,
+		PlusWait,
+		Happy,
+		PresentSelect,
+		PresentReturn
+	}
 
-		[HideInInspector]
-		public DragonStrokeScene scene;
+	[HideInInspector]
+	public DragonStrokeScene scene;
 
-		[HideInInspector]
-		public Canvas mainCanvas;
+	[HideInInspector]
+	public Canvas mainCanvas;
 
-		private PettingCamera pettingCamera;
+	private PettingCamera pettingCamera;
 
-		[SerializeField]
-		[Header("UI")]
-		public ContactReliabilitySlider uiFriendlyGauge;
+	[SerializeField]
+	public ContactReliabilitySlider uiFriendlyGauge;
 
-		public GameObject uiFriendlyIcon;
+	public GameObject uiFriendlyIcon;
 
-		public Text uiFriendlyLevel;
+	public Text uiFriendlyLevel;
 
-		public GameObject uiFriendlyGaugeNowMaxParent;
+	public GameObject uiFriendlyGaugeNowMaxParent;
 
-		public Text uiFriendlyAddedValText;
+	public Text uiFriendlyAddedValText;
 
-		public RectTransform uiSafeZone;
+	public RectTransform uiSafeZone;
 
-		public GameObject emptyDragonMessageGO;
+	public GameObject emptyDragonMessageGO;
 
-		public GameObject topPanel;
+	public GameObject topPanel;
 
-		[SerializeField]
-		[Header("Shop")]
-		public ContactShopPanel shopPanel;
+	[SerializeField]
+	public ContactShopPanel shopPanel;
 
-		public GameObject bottomMainPanel;
+	public GameObject bottomMainPanel;
 
-		[SerializeField]
-		[Header("UI")]
-		public PettingBalloon balloon;
+	[SerializeField]
+	public PettingBalloon balloon;
 
-		[HideInInspector]
-		public BackButton uiBackButton;
+	[HideInInspector]
+	public BackButton uiBackButton;
 
-		public Button uiChangeButton;
+	public Button uiChangeButton;
 
-		public Button uiPresentButton;
+	public Button uiPresentButton;
 
-		public GameObject uiFlyingHeartIcon;
+	public GameObject uiFlyingHeartIcon;
 
-		public Text uiDragonNameText;
+	public Text uiDragonNameText;
 
-		public Button uiBackGroundButton;
+	public Button uiBackGroundButton;
 
-		public GameObject pettingBadge;
+	public GameObject pettingBadge;
 
-		[SerializeField]
-		[Header("Effect")]
-		public TweenSequenceVisualizer gaugeKiraEffectRunner;
+	[SerializeField]
+	public TweenSequenceVisualizer gaugeKiraEffectRunner;
 
-		public TweenSequenceVisualizer giftKiraEffectRunner;
+	public TweenSequenceVisualizer giftKiraEffectRunner;
 
-		public TweenSequenceVisualizer angryKiraEffectRunner;
+	public TweenSequenceVisualizer angryKiraEffectRunner;
 
-		public TweenSequenceVisualizer happyKiraEffectRunner;
+	public TweenSequenceVisualizer happyKiraEffectRunner;
 
-		[SerializeField]
-		[Header("Parameters")]
-		public int paramFriendlyLevel;
+	[SerializeField]
+	public int paramFriendlyLevel;
 
-		public int paramFriendlyLevelMax;
+	public int paramFriendlyLevelMax;
 
-		public int paramGiftReturnTalkWaitTime;
+	public int paramGiftReturnTalkWaitTime;
 
-		public int paramHappyTalkWaitTime;
+	public int paramHappyTalkWaitTime;
 
-		private bool flagFriendlyLevelUp;
+	private bool flagFriendlyLevelUp;
 
-		public int paramJoyGaugeUpValue;
+	public int paramJoyGaugeUpValue;
 
-		public float joyGaugeUpSpeed;
+	public float joyGaugeUpSpeed;
 
-		public float joyGaugeDownSpeed;
+	public float joyGaugeDownSpeed;
 
-		public int paramFriendlyGaugeUpValue;
+	public int paramFriendlyGaugeUpValue;
 
-		public float friendlyGaugeUpSpeed;
+	public float friendlyGaugeUpSpeed;
 
-		public float friendlyGaugeDownSpeed;
+	public float friendlyGaugeDownSpeed;
 
-		[SerializeField]
-		[Header("Effects")]
-		public Color tapFirstColor;
+	[SerializeField]
+	public Color tapFirstColor;
 
-		public GameObject rootTapEffect;
+	public GameObject rootTapEffect;
 
-		public ContactHeartControl[] heartEffects;
+	public ContactHeartControl[] heartEffects;
 
-		private int usingSingleHeartIndex;
+	private int usingSingleHeartIndex;
 
-		private const int totalSingleHeartCount = 3;
+	private const int totalSingleHeartCount = 3;
 
-		public FlashPlayerManager flashPlayerManager;
+	public FlashPlayerManager flashPlayerManager;
 
-		public ContactFlashHeartControl[] heartFlashPlayers;
+	public ContactFlashHeartControl[] heartFlashPlayers;
 
-		public Transform heartAttachPoint;
+	public Transform heartAttachPoint;
 
-		[SerializeField]
-		[Header("Publishers")]
-		public AnimationUIAutoPublisher buttonInOutPublisher;
+	[SerializeField]
+	public AnimationUIAutoPublisher buttonInOutPublisher;
 
-		[Header("Flashå\u0090\u0091ã\u0081\u0091ã\u0082«ã\u0083¡ã\u0083©ã\u0083\u0091ã\u0083©ã\u0083¡ã\u0083¼ã\u0082¿")]
-		public Vector3 flashCameraPos;
+	public Vector3 flashCameraPos;
 
-		public Vector3 flashCameraRot;
+	public Vector3 flashCameraRot;
 
-		public Vector2 flashNearFarClip;
+	public Vector2 flashNearFarClip;
 
-		public GameObject skipButtonObj;
+	public GameObject skipButtonObj;
 
-		[HideInInspector]
-		public Action skipAction;
+	[HideInInspector]
+	public Action skipAction;
 
-		public const string strokeEffectName = "EFF_DRG_21012801_002";
+	public const string strokeEffectName = "EFF_DRG_21012801_002";
 
-		private EffectObject strokeEffect;
+	private EffectObject strokeEffect;
 
-		private int walkerSkillLevelBefore;
+	private int walkerSkillLevelBefore;
 
-		private bool isStroke;
+	private bool isStroke;
 
-		private bool isHappy;
+	private bool isHappy;
 
-		private bool isPlayngWalkerVoice;
+	private bool isPlayngWalkerVoice;
 
-		private ButtonPressedMark _backButtonMark;
+	private ButtonPressedMark _backButtonMark;
 
-		private const float buttonMoveTime = 0.5f;
+	private const float buttonMoveTime = 0.5f;
 
-		private ContactDragon dragonObj;
+	private ContactDragon dragonObj;
 
-		private GameObject strokeCube;
+	private GameObject strokeCube;
 
-		public const string prefabPath = "Prefabs/OutGame/DragonContact/";
+	public const string prefabPath = "Prefabs/OutGame/DragonContact/";
 
-		public const string animationPath = "Animations/OutGame/DragonContact/";
+	public const string animationPath = "Animations/OutGame/DragonContact/";
 
-		private ContactFlashEffect flashEffectFriendlyUp;
+	private ContactFlashEffect flashEffectFriendlyUp;
 
-		private const string flashEffectFriendlyUpPath = "Prefabs/OutGame/DragonContact/FlashEffect/pf_dragon_stroke_reliability_up";
+	private const string flashEffectFriendlyUpPath = "Prefabs/OutGame/DragonContact/FlashEffect/pf_dragon_stroke_reliability_up";
 
-		private ContactGodRay godray;
+	private ContactGodRay godray;
 
-		private float godrayDelayTime;
+	private float godrayDelayTime;
 
-		private float godrayBrightTime;
+	private float godrayBrightTime;
 
-		private string voiceLoadName;
+	private string voiceLoadName;
 
-		private string voiceStoryLoadName;
+	private string voiceStoryLoadName;
 
-		private Vector2 defaultPositionBackButton;
+	private Vector2 defaultPositionBackButton;
 
-		private int oldFriendlyTotalValue;
+	private int oldFriendlyTotalValue;
 
-		private Sequence addedValSequence;
+	private Sequence addedValSequence;
 
-		private bool wasLastGiftFavorite;
+	private bool wasLastGiftFavorite;
 
-		private bool isSwitchAndShopButtonOut;
+	private bool isSwitchAndShopButtonOut;
 
-		private bool _isBackButtonOut;
+	private bool _isBackButtonOut;
 
-		private bool isTargetLevelHitByAnyHeart;
+	private bool isTargetLevelHitByAnyHeart;
 
-		private Camera flashCamera;
+	private Camera flashCamera;
 
-		private GameObject flashCameraObj;
+	private GameObject flashCameraObj;
 
-		private Transform flashCameraTrans;
+	private Transform flashCameraTrans;
 
-		private TweenSequenceVisualizer[] emotionEffectRunners;
+	private TweenSequenceVisualizer[] emotionEffectRunners;
 
-		private ContactFlashEffect flashEffectReturnGift;
+	private ContactFlashEffect flashEffectReturnGift;
 
-		private float nextLeaveTimer;
+	private float nextLeaveTimer;
 
-		private float leaveTimer;
+	private float leaveTimer;
 
-		private const string giftReturnSE = "SE_DC_0010";
+	private const string giftReturnSE = "SE_DC_0010";
 
-		private ContactMode contactMode;
+	private ContactMode contactMode;
 
-		private ButtonPressedMark backButtonMark => null;
+	private ButtonPressedMark backButtonMark => null;
 
-		private bool isBackButtonOut
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		public void OnDebugPettingCountFullButtonPressed()
-		{
-		}
-
-		public void OnDebugPettingShopResetButtonPressed()
-		{
-		}
-
-		public void OnDebugReliabilitySetButtonPressed(int typeVal)
-		{
-		}
-
-		public void OnDebugWindowButtonPressed()
-		{
-		}
-
-		private void Awake()
-		{
-		}
-
-		private void OnInitAsyncLoadFinished()
-		{
-		}
-
-		public void SetBadge()
-		{
-		}
-
-		public void InitReset()
-		{
-		}
-
-		public void ReadyStart()
-		{
-		}
-
-		public void StartExitAnimation()
-		{
-		}
-
-		private void CreateFlashCamera()
-		{
-		}
-
-		public void PlayGiftSentEffect()
-		{
-		}
-
-		public void FadeInGodRay()
-		{
-		}
-
-		public void Update()
-		{
-		}
-
-		public void ChangeBackButtonToFort()
-		{
-		}
-
-		private void ChangeBackButtonFromPresent()
-		{
-		}
-
-		public void StartRandomMessage(bool ignoreDelay)
-		{
-		}
-
-		private void OnDisable()
-		{
-		}
-
-		public bool LoadDragon(int a_dragonID, bool enableEffect = true)
+	private bool isBackButtonOut
+	{
+		get
 		{
 			return default(bool);
 		}
-
-		public void StartGreetingMessage(int a_dragonID)
+		set
 		{
 		}
+	}
 
-		public void StopMessage()
-		{
-		}
+	public void OnDebugPettingCountFullButtonPressed()
+	{
+	}
 
-		private void PutInButtonAndReturnToIdle()
-		{
-		}
+	public void OnDebugPettingShopResetButtonPressed()
+	{
+	}
 
-		private void AutoProcessLevelUpReward()
-		{
-		}
+	public void OnDebugReliabilitySetButtonPressed(int typeVal)
+	{
+	}
 
-		private void AutoProcessGiftAndReward()
-		{
-		}
+	public void OnDebugWindowButtonPressed()
+	{
+	}
 
-		private IEnumerator PlayLevelUp(bool fromPetting, int targetLevel, int heartCount, Action onDone, ContactMessage.ContactMessageData message, int carry)
-		{
-			return null;
-		}
+	private void Awake()
+	{
+	}
 
-		private IEnumerator PlayPlainHappy()
-		{
-			return null;
-		}
+	private void OnInitAsyncLoadFinished()
+	{
+	}
 
-		private IEnumerator PlayGiftReturn(Action onDone, ContactMessage.ContactMessageData message)
-		{
-			return null;
-		}
+	public void SetBadge()
+	{
+	}
 
-		private IEnumerator PlayOnReceivePresentReturn()
-		{
-			return null;
-		}
+	public void InitReset()
+	{
+	}
 
-		public void OnBeforeSendGift()
-		{
-		}
+	public void ReadyStart()
+	{
+	}
 
-		public void OnGiftSent(bool favorite)
-		{
-		}
+	public void StartExitAnimation()
+	{
+	}
 
-		public void OnPresentReceived()
-		{
-		}
+	private void CreateFlashCamera()
+	{
+	}
 
-		public void OnPushPresentButton()
-		{
-		}
+	public void PlayGiftSentEffect()
+	{
+	}
 
-		public void OnReturnFromShop()
-		{
-		}
+	public void FadeInGodRay()
+	{
+	}
 
-		public void OnPushBackGroundButton()
-		{
-		}
+	public void Update()
+	{
+	}
 
-		private IEnumerator ForceRegisterBackKeyCoroutine()
-		{
-			return null;
-		}
+	public void ChangeBackButtonToFort()
+	{
+	}
 
-		public void OnPushBackButton()
-		{
-		}
+	private void ChangeBackButtonFromPresent()
+	{
+	}
 
-		public void OnPushChangeButton()
-		{
-		}
+	public void StartRandomMessage(bool ignoreDelay)
+	{
+	}
 
-		public void PutOutButton(bool includeBackButton = true)
-		{
-		}
+	private void OnDisable()
+	{
+	}
 
-		public void PutInButton()
-		{
-		}
+	public bool LoadDragon(int a_dragonID, bool enableEffect = true)
+	{
+		return default(bool);
+	}
 
-		private IEnumerator TouchGuardInAnimation(GameObject gameObject)
-		{
-			return null;
-		}
+	public void StartGreetingMessage(int a_dragonID)
+	{
+	}
 
-		public void SetEmotionEffectParentLocation(int index, Vector2 pos)
-		{
-		}
+	public void StopMessage()
+	{
+	}
 
-		public void DisplayHeartEmotion(int heartCount, int carry, int targetLevel, Action onTargetHitByAnyHeart)
-		{
-		}
+	private void PutInButtonAndReturnToIdle()
+	{
+	}
 
-		public void DisplayEmotionIcon(ContactMessage.ContactEmotion contactEmotion)
-		{
-		}
+	private void AutoProcessLevelUpReward()
+	{
+	}
 
-		public void DisableEmotionIcon()
-		{
-		}
+	private void AutoProcessGiftAndReward()
+	{
+	}
 
-		private bool CheckOnlineFriendlyLevelGauge()
-		{
-			return default(bool);
-		}
+	private IEnumerator PlayLevelUp(bool fromPetting, int targetLevel, int heartCount, Action onDone, ContactMessage.ContactMessageData message, int carry)
+	{
+		return null;
+	}
 
-		private void ShowFriendlyAddedVal(int added)
-		{
-		}
+	private IEnumerator PlayPlainHappy()
+	{
+		return null;
+	}
 
-		private void InitLeaveTimer()
-		{
-		}
+	private IEnumerator PlayGiftReturn(Action onDone, ContactMessage.ContactMessageData message)
+	{
+		return null;
+	}
 
-		private float CalcUiGaugeValue(float curValue, float maxValue, bool isReciprocal = false)
-		{
-			return default(float);
-		}
+	private IEnumerator PlayOnReceivePresentReturn()
+	{
+		return null;
+	}
 
-		public void SetSkipButton(bool isActive, [Optional] Action action)
-		{
-		}
+	public void OnBeforeSendGift()
+	{
+	}
 
-		public void OnSkipButton()
-		{
-		}
+	public void OnGiftSent(bool favorite)
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	public void OnPresentReceived()
+	{
+	}
 
-		private void SetupWalkerEvent()
-		{
-		}
+	public void OnPushPresentButton()
+	{
+	}
 
-		private void SetStrokeCube()
-		{
-		}
+	public void OnReturnFromShop()
+	{
+	}
 
-		private void OnBeginStroke()
-		{
-		}
+	public void OnPushBackGroundButton()
+	{
+	}
 
-		private void OnEndStroke()
-		{
-		}
+	private IEnumerator ForceRegisterBackKeyCoroutine()
+	{
+		return null;
+	}
 
-		private IEnumerator WaitHappyMotion(Action onFinishHappy)
-		{
-			return null;
-		}
+	public void OnPushBackButton()
+	{
+	}
 
-		public bool IsSelectWalkerUnit()
-		{
-			return default(bool);
-		}
+	public void OnPushChangeButton()
+	{
+	}
 
-		public void PlayWalkerVoice(walkerVoiceType voiceType, [Optional] Action onVoiceDone)
-		{
-		}
+	public void PutOutButton(bool includeBackButton = true)
+	{
+	}
+
+	public void PutInButton()
+	{
+	}
+
+	private IEnumerator TouchGuardInAnimation(GameObject gameObject)
+	{
+		return null;
+	}
+
+	public void SetEmotionEffectParentLocation(int index, Vector2 pos)
+	{
+	}
+
+	public void DisplayHeartEmotion(int heartCount, int carry, int targetLevel, Action onTargetHitByAnyHeart)
+	{
+	}
+
+	public void DisplayEmotionIcon(ContactMessage.ContactEmotion contactEmotion)
+	{
+	}
+
+	public void DisableEmotionIcon()
+	{
+	}
+
+	private bool CheckOnlineFriendlyLevelGauge()
+	{
+		return default(bool);
+	}
+
+	private void ShowFriendlyAddedVal(int added)
+	{
+	}
+
+	private void InitLeaveTimer()
+	{
+	}
+
+	private float CalcUiGaugeValue(float curValue, float maxValue, bool isReciprocal = false)
+	{
+		return default(float);
+	}
+
+	public void SetSkipButton(bool isActive, [Optional] Action action)
+	{
+	}
+
+	public void OnSkipButton()
+	{
+	}
+
+	private void OnDestroy()
+	{
+	}
+
+	private void SetupWalkerEvent()
+	{
+	}
+
+	private void SetStrokeCube()
+	{
+	}
+
+	private void OnBeginStroke()
+	{
+	}
+
+	private void OnEndStroke()
+	{
+	}
+
+	private IEnumerator WaitHappyMotion(Action onFinishHappy)
+	{
+		return null;
+	}
+
+	public bool IsSelectWalkerUnit()
+	{
+		return default(bool);
+	}
+
+	public void PlayWalkerVoice(walkerVoiceType voiceType, [Optional] Action onVoiceDone)
+	{
 	}
 }

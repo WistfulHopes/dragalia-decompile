@@ -1,21 +1,20 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumStoryReviewCharacterPageController : CommonIconListController
 {
-	public class AlbumStoryReviewCharacterPageController : CommonIconListController
+	public void LoadData(AlbumStoryGroupElement albumStoryGroupElement)
 	{
-		public void LoadData(AlbumStoryGroupElement albumStoryGroupElement)
-		{
-		}
+	}
 
-		protected CommonIconListCellData CreateCharacterCellData(int keyIdOrInvalidId)
-		{
-			return null;
-		}
+	protected CommonIconListCellData CreateCharacterCellData(int keyIdOrInvalidId)
+	{
+		return null;
+	}
 
-		protected CommonIconListCellData CreateDragonCellData(int keyIdOrInvalidId)
-		{
-			return null;
-		}
+	protected CommonIconListCellData CreateDragonCellData(int keyIdOrInvalidId)
+	{
+		return null;
 	}
 }

@@ -2,13 +2,12 @@ using System;
 using System.Runtime.InteropServices;
 using Cute.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class ApplicationVersionErrorPopup : ErrorPopup
 {
-	public class ApplicationVersionErrorPopup : ErrorPopup
+	public static ErrorPopup Create(ErrorType errorType, int resultCode, [Optional] Action onClosedCallback)
 	{
-		public static ErrorPopup Create(ErrorType errorType, int resultCode, [Optional] Action onClosedCallback)
-		{
-			return null;
-		}
+		return null;
 	}
 }

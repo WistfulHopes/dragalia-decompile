@@ -1,13 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public class ReceivedOverLimitListCellData
 {
-	public class ReceivedOverLimitListCellData
-	{
-		public string itemName;
+	public string itemName;
 
-		public int quantity;
+	public int quantity;
 
-		public GiftType giftType;
+	public GiftType giftType;
 
-		public int id;
-	}
+	public int id;
 }

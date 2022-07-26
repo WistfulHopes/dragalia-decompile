@@ -3,58 +3,57 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventRankingListPage : EventQuestPageBase
 {
-	public class EventRankingListPage : EventQuestPageBase
+	[SerializeField]
+	private EventRankingListCanvas eventRankingListCanvas;
+
+	[SerializeField]
+	private EventRankingList eventRankingList;
+
+	public Transform edgeToEdgeTransform;
+
+	public override void OnPageBecomeActive(object data)
 	{
-		[SerializeField]
-		private EventRankingListCanvas eventRankingListCanvas;
+	}
 
-		[SerializeField]
-		private EventRankingList eventRankingList;
+	private void GetRankingUserList()
+	{
+	}
 
-		public Transform edgeToEdgeTransform;
+	private void LoadAndOpenRankingUserList()
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public void OnRankingListScrollPosChanged(Vector2 scrollPos)
+	{
+	}
 
-		private void GetRankingUserList()
-		{
-		}
+	private IEnumerator WaitSupportListOpenAnimationCoroutine()
+	{
+		return null;
+	}
 
-		private void LoadAndOpenRankingUserList()
-		{
-		}
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		public void OnRankingListScrollPosChanged(Vector2 scrollPos)
-		{
-		}
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		private IEnumerator WaitSupportListOpenAnimationCoroutine()
-		{
-			return null;
-		}
+	public void BackButtonPressed()
+	{
+	}
 
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
+	{
+		return default(bool);
+	}
 
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		public void BackButtonPressed()
-		{
-		}
-
-		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
-		{
-			return default(bool);
-		}
-
-		private void CellButtonPressed()
-		{
-		}
+	private void CellButtonPressed()
+	{
 	}
 }

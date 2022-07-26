@@ -2,10 +2,9 @@ using System;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class TouchUnityEvent : UnityEvent<BaseEventData>
 {
-	[Serializable]
-	public class TouchUnityEvent : UnityEvent<BaseEventData>
-	{
-	}
 }

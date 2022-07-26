@@ -1,37 +1,36 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ScrollContentMoveAutoDisabler : MonoBehaviour
 {
-	public class ScrollContentMoveAutoDisabler : MonoBehaviour
+	public enum WorldCornerIndex
 	{
-		public enum WorldCornerIndex
-		{
-			BottomLeft,
-			TopLeft,
-			TopRight,
-			BottomRight
-		}
+		BottomLeft,
+		TopLeft,
+		TopRight,
+		BottomRight
+	}
 
-		[SerializeField]
-		public bool isContentSizeStable;
+	[SerializeField]
+	public bool isContentSizeStable;
 
-		private ScrollRect scrollRect;
+	private ScrollRect scrollRect;
 
-		private Vector3[] contentWorldCorners;
+	private Vector3[] contentWorldCorners;
 
-		private Vector3[] viewportWorldCorners;
+	private Vector3[] viewportWorldCorners;
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void AdjustByContentAndViewport()
-		{
-		}
+	private void AdjustByContentAndViewport()
+	{
 	}
 }

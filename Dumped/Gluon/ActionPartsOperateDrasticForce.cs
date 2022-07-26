@@ -1,32 +1,31 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsOperateDrasticForce : ActionParts
 {
-	public class ActionPartsOperateDrasticForce : ActionParts
+	public enum OperateType
 	{
-		public enum OperateType
-		{
-			Reset,
-			AddStack,
-			SubStack
-		}
+		Reset,
+		AddStack,
+		SubStack
+	}
 
-		private readonly OperateDrasticForceData _partsData;
+	private readonly OperateDrasticForceData _partsData;
 
-		public ActionPartsOperateDrasticForce(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsOperateDrasticForce(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
 	}
 }

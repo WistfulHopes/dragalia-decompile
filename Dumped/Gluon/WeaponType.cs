@@ -1,16 +1,15 @@
-namespace Gluon
+namespace Gluon;
+
+public enum WeaponType
 {
-	public enum WeaponType
-	{
-		NONE,
-		SWD,
-		KAT,
-		DAG,
-		AXE,
-		LAN,
-		BOW,
-		ROD,
-		CAN,
-		GUN
-	}
+	NONE,
+	SWD,
+	KAT,
+	DAG,
+	AXE,
+	LAN,
+	BOW,
+	ROD,
+	CAN,
+	GUN
 }

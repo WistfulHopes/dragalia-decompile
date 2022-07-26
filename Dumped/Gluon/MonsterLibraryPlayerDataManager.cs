@@ -1,22 +1,21 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class MonsterLibraryPlayerDataManager
 {
-	public class MonsterLibraryPlayerDataManager
+	private List<MonsterLibraryPlayerData> playerDataList;
+
+	private int[] testMonsterIds;
+
+	private int[] testPieceCounts;
+
+	private bool[] testNewFlgs;
+
+	private int[] testKillCounts;
+
+	public List<MonsterLibraryPlayerData> GetPlayerDataList()
 	{
-		private List<MonsterLibraryPlayerData> playerDataList;
-
-		private int[] testMonsterIds;
-
-		private int[] testPieceCounts;
-
-		private bool[] testNewFlgs;
-
-		private int[] testKillCounts;
-
-		public List<MonsterLibraryPlayerData> GetPlayerDataList()
-		{
-			return null;
-		}
+		return null;
 	}
 }

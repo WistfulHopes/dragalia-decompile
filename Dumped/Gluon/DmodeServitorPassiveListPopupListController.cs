@@ -1,42 +1,41 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeServitorPassiveListPopupListController : TableViewController<DmodeServitorPassiveListPopupListCellData>
 {
-	public class DmodeServitorPassiveListPopupListController : TableViewController<DmodeServitorPassiveListPopupListCellData>
+	[SerializeField]
+	private Text noAbilityText;
+
+	private float cellWidth;
+
+	private float cellHeight;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		private Text noAbilityText;
+	}
 
-		private float cellWidth;
+	public void LoadData()
+	{
+	}
 
-		private float cellHeight;
+	protected override void UpdateContents()
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override TableViewCell<DmodeServitorPassiveListPopupListCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		public void LoadData()
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected override void UpdateContents()
-		{
-		}
-
-		protected override TableViewCell<DmodeServitorPassiveListPopupListCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
 	}
 }

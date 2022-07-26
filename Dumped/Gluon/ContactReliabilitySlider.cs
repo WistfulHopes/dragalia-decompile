@@ -4,107 +4,104 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactReliabilitySlider : MonoBehaviour
 {
-	public class ContactReliabilitySlider : MonoBehaviour
+	private enum DragonUnitType
 	{
-		private enum DragonUnitType
-		{
-			Dragon = 1,
-			Warker
-		}
+		Dragon = 1,
+		Warker
+	}
 
-		[SerializeField]
-		[Header("Slider")]
-		public Slider afterSlider;
+	[SerializeField]
+	public Slider afterSlider;
 
-		public Slider slider;
+	public Slider slider;
 
-		public Text reliabilityParamText;
+	public Text reliabilityParamText;
 
-		public Text levelText;
+	public Text levelText;
 
-		[SerializeField]
-		[Header("OnOff")]
-		public GameObject normalStateGO;
+	[SerializeField]
+	public GameObject normalStateGO;
 
-		public GameObject maxStateGO;
+	public GameObject maxStateGO;
 
-		[SerializeField]
-		private Text overText;
+	[SerializeField]
+	private Text overText;
 
-		public float defaultDigestionTime;
+	public float defaultDigestionTime;
 
-		public Ease digestionEase;
+	public Ease digestionEase;
 
-		[HideInInspector]
-		public bool isSending;
+	[HideInInspector]
+	public bool isSending;
 
-		private int currentValue;
+	private int currentValue;
 
-		private int afterValue;
+	private int afterValue;
 
-		[HideInInspector]
-		public int overValue;
+	[HideInInspector]
+	public int overValue;
 
-		private int totalMaxValue;
+	private int totalMaxValue;
 
-		private int maxLevel;
+	private int maxLevel;
 
-		private int currentLevel;
+	private int currentLevel;
 
-		[HideInInspector]
-		public int afterLevel;
+	[HideInInspector]
+	public int afterLevel;
 
-		private DragonUnitType dragonUnitType;
+	private DragonUnitType dragonUnitType;
 
-		public int GetCurrentLevel()
-		{
-			return default(int);
-		}
+	public int GetCurrentLevel()
+	{
+		return default(int);
+	}
 
-		public int GetMaxLevel()
-		{
-			return default(int);
-		}
+	public int GetMaxLevel()
+	{
+		return default(int);
+	}
 
-		public int GetCurrentValue()
-		{
-			return default(int);
-		}
+	public int GetCurrentValue()
+	{
+		return default(int);
+	}
 
-		public void InitFromDragonId(int dragonId)
-		{
-		}
+	public void InitFromDragonId(int dragonId)
+	{
+	}
 
-		public void AddPulse(int value, float digestionTime, Action<int> onAllCompleted, int carry, int targetLevel)
-		{
-		}
+	public void AddPulse(int value, float digestionTime, Action<int> onAllCompleted, int carry, int targetLevel)
+	{
+	}
 
-		private void AdjustSlider()
-		{
-		}
+	private void AdjustSlider()
+	{
+	}
 
-		private void AdjustAfterSlider()
-		{
-		}
+	private void AdjustAfterSlider()
+	{
+	}
 
-		public void SetAfterSlider(int incremental)
-		{
-		}
+	public void SetAfterSlider(int incremental)
+	{
+	}
 
-		private void SetReliabilityText(int nowReliability, int nextReliability)
-		{
-		}
+	private void SetReliabilityText(int nowReliability, int nextReliability)
+	{
+	}
 
-		public int GetCurrentReliabilityIndex(int level)
-		{
-			return default(int);
-		}
+	public int GetCurrentReliabilityIndex(int level)
+	{
+		return default(int);
+	}
 
-		private DragonReliabilityLevelElement GetDragonReliabilityElement(int level)
-		{
-			return null;
-		}
+	private DragonReliabilityLevelElement GetDragonReliabilityElement(int level)
+	{
+		return null;
 	}
 }

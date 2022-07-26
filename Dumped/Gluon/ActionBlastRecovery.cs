@@ -1,31 +1,30 @@
-namespace Gluon
+namespace Gluon;
+
+public class ActionBlastRecovery : ActionBase
 {
-	public class ActionBlastRecovery : ActionBase
+	private enum State
 	{
-		private enum State
-		{
-			None,
-			Fall,
-			Landing
-		}
+		None,
+		Fall,
+		Landing
+	}
 
-		private State state;
+	private State state;
 
-		private ActionMoveGravity blastMove;
+	private ActionMoveGravity blastMove;
 
-		private DungeonObjectContact dunObjContact;
+	private DungeonObjectContact dunObjContact;
 
-		public void SetParam(float gravity, float angle, bool isCtrl)
-		{
-		}
+	public void SetParam(float gravity, float angle, bool isCtrl)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

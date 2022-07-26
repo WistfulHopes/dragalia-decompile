@@ -1,19 +1,18 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MenuSummonHistoryPopup : PopupBase
 {
-	public class MenuSummonHistoryPopup : PopupBase
+	[SerializeField]
+	private MenuSummonHistoryController menuSummonLogController;
+
+	public static MenuSummonHistoryPopup Create()
 	{
-		[SerializeField]
-		private MenuSummonHistoryController menuSummonLogController;
+		return null;
+	}
 
-		public static MenuSummonHistoryPopup Create()
-		{
-			return null;
-		}
-
-		public void SetContent()
-		{
-		}
+	public void SetContent()
+	{
 	}
 }

@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum VocalTrack
 {
-	public enum VocalTrack
-	{
-		Song,
-		Humming,
-		Inst
-	}
+	Song,
+	Humming,
+	Inst
 }

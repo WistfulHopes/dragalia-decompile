@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public class BrowseStorySaveData
 {
-	public class BrowseStorySaveData
-	{
-		public float storyListScrollPos;
+	public float storyListScrollPos;
 
-		public float chapterListScrollPos;
+	public float chapterListScrollPos;
 
-		public StoryListCellData storyListCellData;
-	}
+	public StoryListCellData storyListCellData;
 }

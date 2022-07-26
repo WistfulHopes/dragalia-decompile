@@ -1,65 +1,64 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MenuOtherPopup : CommonPopup
 {
-	public class MenuOtherPopup : CommonPopup
+	[SerializeField]
+	private Text variousNotationText;
+
+	[SerializeField]
+	private Text accountManageText;
+
+	[SerializeField]
+	private Text creditText;
+
+	[SerializeField]
+	private Text purchaceInfoText;
+
+	[SerializeField]
+	private Text optoutText;
+
+	[SerializeField]
+	private Text returnTitleText;
+
+	public MenuPopup menuPopup;
+
+	public static MenuOtherPopup Create()
 	{
-		[SerializeField]
-		private Text variousNotationText;
+		return null;
+	}
 
-		[SerializeField]
-		private Text accountManageText;
+	public void InitSetting()
+	{
+	}
 
-		[SerializeField]
-		private Text creditText;
+	public void OnVariousNotationButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Text purchaceInfoText;
+	public void OnAccountManageButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Text optoutText;
+	public static void DoAccountManage()
+	{
+	}
 
-		[SerializeField]
-		private Text returnTitleText;
+	private static void CreateAlreadyLinkToNAPopup()
+	{
+	}
 
-		public MenuPopup menuPopup;
+	public void OnPurchaceInfoButtonPressed()
+	{
+	}
 
-		public static MenuOtherPopup Create()
-		{
-			return null;
-		}
+	public void OnOptoutButtonPressed()
+	{
+	}
 
-		public void InitSetting()
-		{
-		}
-
-		public void OnVariousNotationButtonPressed()
-		{
-		}
-
-		public void OnAccountManageButtonPressed()
-		{
-		}
-
-		public static void DoAccountManage()
-		{
-		}
-
-		private static void CreateAlreadyLinkToNAPopup()
-		{
-		}
-
-		public void OnPurchaceInfoButtonPressed()
-		{
-		}
-
-		public void OnOptoutButtonPressed()
-		{
-		}
-
-		public void OnReturnTitleButtonPressed()
-		{
-		}
+	public void OnReturnTitleButtonPressed()
+	{
 	}
 }

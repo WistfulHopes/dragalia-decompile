@@ -3,54 +3,53 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AstralRaidsItemPopup : CommonPopup
 {
-	public class AstralRaidsItemPopup : CommonPopup
+	[SerializeField]
+	private Text picesText;
+
+	[SerializeField]
+	private Text beforePicesNumText;
+
+	[SerializeField]
+	private Text afterPicesNumText;
+
+	[SerializeField]
+	private Text usePicesNumText;
+
+	[SerializeField]
+	private CommonSliderSelection picesSlider;
+
+	private int astralPicesNum;
+
+	private int astralPicesUseNum;
+
+	private int astralPicesMaxNum;
+
+	private UnityAction<int> omAstralPicesButtonPressed;
+
+	private readonly int astralPicesMaxCount;
+
+	public static AstralRaidsItemPopup Create(int questId, [Optional] UnityAction<int> OnOkCallback)
 	{
-		[SerializeField]
-		private Text picesText;
+		return null;
+	}
 
-		[SerializeField]
-		private Text beforePicesNumText;
+	public override void OnCancelButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Text afterPicesNumText;
+	public override void OnOkButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Text usePicesNumText;
+	public void SetContent(int questId)
+	{
+	}
 
-		[SerializeField]
-		private CommonSliderSelection picesSlider;
-
-		private int astralPicesNum;
-
-		private int astralPicesUseNum;
-
-		private int astralPicesMaxNum;
-
-		private UnityAction<int> omAstralPicesButtonPressed;
-
-		private readonly int astralPicesMaxCount;
-
-		public static AstralRaidsItemPopup Create(int questId, [Optional] UnityAction<int> OnOkCallback)
-		{
-			return null;
-		}
-
-		public override void OnCancelButtonPressed()
-		{
-		}
-
-		public override void OnOkButtonPressed()
-		{
-		}
-
-		public void SetContent(int questId)
-		{
-		}
-
-		public void OnValueChanged(float value)
-		{
-		}
+	public void OnValueChanged(float value)
+	{
 	}
 }

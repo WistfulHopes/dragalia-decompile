@@ -2,111 +2,110 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonStageCommonLoadPool
 {
-	public class SummonStageCommonLoadPool
+	private static SummonStageCommonLoadPool instance;
+
+	public GameObject mikoModel;
+
+	public RuntimeAnimatorController mikoAnimationController;
+
+	public EffectObject[] moonObjects;
+
+	public Dictionary<string, List<EffectObject>> effectPreloadPool;
+
+	public bool isAllLoadedDone;
+
+	private const int mikoBaseId = 100027;
+
+	private const int mikoVariationId = 1;
+
+	private const int prophetShadowIndex = 11;
+
+	private const string animatorPath = "Animations/OutGame/Summon/";
+
+	private const string characterModelBasePath = "Characters/model/";
+
+	private const string characterAppealBasePath = "Character/Appeal/";
+
+	private const string mikoAnimatorPath = "SMN_NPC_100027_01_PRAY";
+
+	public static SummonStageCommonLoadPool Instance => null;
+
+	public static void DeleteInstance()
 	{
-		private static SummonStageCommonLoadPool instance;
+	}
 
-		public GameObject mikoModel;
+	private SummonStageCommonLoadPool()
+	{
+	}
 
-		public RuntimeAnimatorController mikoAnimationController;
+	static SummonStageCommonLoadPool()
+	{
+	}
 
-		public EffectObject[] moonObjects;
+	public void LoadAllAsync(Action onLoaded, int multiCount)
+	{
+	}
 
-		public Dictionary<string, List<EffectObject>> effectPreloadPool;
+	public void LoadAllAsyncForBoxSummon(Action onLoaded, int multiCount)
+	{
+	}
 
-		public bool isAllLoadedDone;
+	public void LoadAllAsyncForAlbumSummon(Action onLoaded, int multiCount)
+	{
+	}
 
-		private const int mikoBaseId = 100027;
+	private void LoadAllBindingEffectsAsync(Action onLoaded, int multiCount)
+	{
+	}
 
-		private const int mikoVariationId = 1;
+	private void LoadAllBindingEffectsAsyncForBoxSummon(Action onLoaded, int multiCount)
+	{
+	}
 
-		private const int prophetShadowIndex = 11;
+	public EffectObject PopOneUsableEffect(string effectName)
+	{
+		return null;
+	}
 
-		private const string animatorPath = "Animations/OutGame/Summon/";
+	private void LoadSingleEffect(string effectName, int loadCount)
+	{
+	}
 
-		private const string characterModelBasePath = "Characters/model/";
+	public void LoadMoonObject(Action onLoaded)
+	{
+	}
 
-		private const string characterAppealBasePath = "Character/Appeal/";
+	public string GetMikoModelPath()
+	{
+		return null;
+	}
 
-		private const string mikoAnimatorPath = "SMN_NPC_100027_01_PRAY";
+	public string GetMikoAnimatorPath()
+	{
+		return null;
+	}
 
-		public static SummonStageCommonLoadPool Instance => null;
+	public void EffectPreloadPoolDestroy()
+	{
+	}
 
-		public static void DeleteInstance()
-		{
-		}
+	public void MoonObjectDestroy()
+	{
+	}
 
-		private SummonStageCommonLoadPool()
-		{
-		}
+	public void ProcessBinding()
+	{
+	}
 
-		static SummonStageCommonLoadPool()
-		{
-		}
+	private void BindMikoShadow()
+	{
+	}
 
-		public void LoadAllAsync(Action onLoaded, int multiCount)
-		{
-		}
-
-		public void LoadAllAsyncForBoxSummon(Action onLoaded, int multiCount)
-		{
-		}
-
-		public void LoadAllAsyncForAlbumSummon(Action onLoaded, int multiCount)
-		{
-		}
-
-		private void LoadAllBindingEffectsAsync(Action onLoaded, int multiCount)
-		{
-		}
-
-		private void LoadAllBindingEffectsAsyncForBoxSummon(Action onLoaded, int multiCount)
-		{
-		}
-
-		public EffectObject PopOneUsableEffect(string effectName)
-		{
-			return null;
-		}
-
-		private void LoadSingleEffect(string effectName, int loadCount)
-		{
-		}
-
-		public void LoadMoonObject(Action onLoaded)
-		{
-		}
-
-		public string GetMikoModelPath()
-		{
-			return null;
-		}
-
-		public string GetMikoAnimatorPath()
-		{
-			return null;
-		}
-
-		public void EffectPreloadPoolDestroy()
-		{
-		}
-
-		public void MoonObjectDestroy()
-		{
-		}
-
-		public void ProcessBinding()
-		{
-		}
-
-		private void BindMikoShadow()
-		{
-		}
-
-		private void BindMoonEffectLocation()
-		{
-		}
+	private void BindMoonEffectLocation()
+	{
 	}
 }

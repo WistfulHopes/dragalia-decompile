@@ -2,28 +2,27 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialSummonUnitListPopup : PopupBase
 {
-	public class TutorialSummonUnitListPopup : PopupBase
+	[SerializeField]
+	private TutorialSummonUnitListController ctrl;
+
+	public static TutorialSummonUnitListPopup Create()
 	{
-		[SerializeField]
-		private TutorialSummonUnitListController ctrl;
+		return null;
+	}
 
-		public static TutorialSummonUnitListPopup Create()
-		{
-			return null;
-		}
+	protected override void Start()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	public override void StartCloseAnimation([Optional] UnityEvent onCompleted)
+	{
+	}
 
-		public override void StartCloseAnimation([Optional] UnityEvent onCompleted)
-		{
-		}
-
-		public override void StartShowAnimation([Optional] UnityEvent onCompleted)
-		{
-		}
+	public override void StartShowAnimation([Optional] UnityEvent onCompleted)
+	{
 	}
 }

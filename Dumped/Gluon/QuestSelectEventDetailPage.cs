@@ -5,181 +5,180 @@ using System.Runtime.InteropServices;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSelectEventDetailPage : PageBase, ICustomMessage
 {
-	public class QuestSelectEventDetailPage : PageBase, ICustomMessage
+	[SerializeField]
+	private Transform contentTransfrom;
+
+	[SerializeField]
+	private float duration;
+
+	[SerializeField]
+	private QuestSelectEventShortCut questSelectEventShortCut;
+
+	[SerializeField]
+	private GameObject eventEndDiscription;
+
+	public AnimationListOneCol listAnimation;
+
+	[SerializeField]
+	private TabBase questMultiTab;
+
+	public QuestSupportCanvas.PlayType playType;
+
+	[SerializeField]
+	private GameObject questClearPartyButtonObj;
+
+	private int baseQuestGroupId;
+
+	protected NormalEventSelectScene questSelectScene;
+
+	private QuestEventGroupElement groupElement;
+
+	private List<QuestEventMenuElement> eventData;
+
+	private QuestStoryClearReward storyReward;
+
+	private Dictionary<int, float> scrollValueDic;
+
+	private const string showWalkerInfoKey = "ShowWalkerHowToPlay";
+
+	private bool isLoading;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		private Transform contentTransfrom;
+	}
 
-		[SerializeField]
-		private float duration;
+	protected override void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		private QuestSelectEventShortCut questSelectEventShortCut;
+	private void Start()
+	{
+	}
 
-		[SerializeField]
-		private GameObject eventEndDiscription;
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		public AnimationListOneCol listAnimation;
+	public void OpenDefaultTab(int baseQuestGroupId)
+	{
+	}
 
-		[SerializeField]
-		private TabBase questMultiTab;
+	public void OnSelectedTab(int num)
+	{
+	}
 
-		public QuestSupportCanvas.PlayType playType;
+	private IEnumerator Load()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private GameObject questClearPartyButtonObj;
+	public override bool IsLoading()
+	{
+		return default(bool);
+	}
 
-		private int baseQuestGroupId;
+	public override void OnPageBecomeInActive()
+	{
+	}
 
-		protected NormalEventSelectScene questSelectScene;
+	public void LoadData()
+	{
+	}
 
-		private QuestEventGroupElement groupElement;
+	private IEnumerator CreateList()
+	{
+		return null;
+	}
 
-		private List<QuestEventMenuElement> eventData;
+	public void UpdateCreateList()
+	{
+	}
 
-		private QuestStoryClearReward storyReward;
+	private IEnumerator UpdateCreateListCoroutine()
+	{
+		return null;
+	}
 
-		private Dictionary<int, float> scrollValueDic;
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		private const string showWalkerInfoKey = "ShowWalkerHowToPlay";
+	private IEnumerator StartEnterAnimationCo(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+		return null;
+	}
 
-		private bool isLoading;
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
+	{
+		return default(bool);
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	public bool ClickTargetQuestCell(int eventQuestId)
+	{
+		return default(bool);
+	}
 
-		private void Start()
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public void OnBackButtonTouched()
+	{
+	}
 
-		public void OpenDefaultTab(int baseQuestGroupId)
-		{
-		}
+	public void OnMainQuestButtonTouched()
+	{
+	}
 
-		public void OnSelectedTab(int num)
-		{
-		}
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		private IEnumerator Load()
-		{
-			return null;
-		}
+	private IEnumerator QuestWallCheck()
+	{
+		return null;
+	}
 
-		public override bool IsLoading()
-		{
-			return default(bool);
-		}
+	private IEnumerator QuestSimpleEventCheck()
+	{
+		return null;
+	}
 
-		public override void OnPageBecomeInActive()
-		{
-		}
+	private void TutorialMultiBattle()
+	{
+	}
 
-		public void LoadData()
-		{
-		}
+	private void TutorialDragonBattle()
+	{
+	}
 
-		private IEnumerator CreateList()
-		{
-			return null;
-		}
+	private IEnumerator TutorialDragonBattleCoroutine(TouchGuardObject guardObj)
+	{
+		return null;
+	}
 
-		public void UpdateCreateList()
-		{
-		}
+	private void TutorialInterceptionBattle()
+	{
+	}
 
-		private IEnumerator UpdateCreateListCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator TutorialInterceptionBattleCoroutine(TouchGuardObject guardObj)
+	{
+		return null;
+	}
 
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	private void SetDispQuestClearPartyButton()
+	{
+	}
 
-		private IEnumerator StartEnterAnimationCo(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-			return null;
-		}
-
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
-		{
-			return default(bool);
-		}
-
-		public bool ClickTargetQuestCell(int eventQuestId)
-		{
-			return default(bool);
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
-
-		public void OnBackButtonTouched()
-		{
-		}
-
-		public void OnMainQuestButtonTouched()
-		{
-		}
-
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
-
-		private IEnumerator QuestWallCheck()
-		{
-			return null;
-		}
-
-		private IEnumerator QuestSimpleEventCheck()
-		{
-			return null;
-		}
-
-		private void TutorialMultiBattle()
-		{
-		}
-
-		private void TutorialDragonBattle()
-		{
-		}
-
-		private IEnumerator TutorialDragonBattleCoroutine(TouchGuardObject guardObj)
-		{
-			return null;
-		}
-
-		private void TutorialInterceptionBattle()
-		{
-		}
-
-		private IEnumerator TutorialInterceptionBattleCoroutine(TouchGuardObject guardObj)
-		{
-			return null;
-		}
-
-		private void SetDispQuestClearPartyButton()
-		{
-		}
-
-		public void OnClearPartyButtonPressed()
-		{
-		}
+	public void OnClearPartyButtonPressed()
+	{
 	}
 }

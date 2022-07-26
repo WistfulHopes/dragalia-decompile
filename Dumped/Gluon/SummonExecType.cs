@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum SummonExecType
 {
-	public enum SummonExecType
-	{
-		NONE,
-		SINGLE,
-		MULTI,
-		LIMITED
-	}
+	NONE,
+	SINGLE,
+	MULTI,
+	LIMITED
 }

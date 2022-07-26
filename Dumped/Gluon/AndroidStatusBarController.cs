@@ -1,87 +1,86 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AndroidStatusBarController
 {
-	public class AndroidStatusBarController
+	private static AndroidJavaObject plugin;
+
+	public int visibleDisplayHeight => default(int);
+
+	public int displayHeight => default(int);
+
+	public int visibleDisplayWidth => default(int);
+
+	public int cutoutHeight => default(int);
+
+	public int displayWidth => default(int);
+
+	public int statusBarHeight => default(int);
+
+	public int navigationBarHeight => default(int);
+
+	public int realSizeHeight => default(int);
+
+	public int gpgsVersion => default(int);
+
+	static AndroidStatusBarController()
 	{
-		private static AndroidJavaObject plugin;
+	}
 
-		public int visibleDisplayHeight => default(int);
+	public bool isEnableEditSystemUI()
+	{
+		return default(bool);
+	}
 
-		public int displayHeight => default(int);
+	public void Show()
+	{
+	}
 
-		public int visibleDisplayWidth => default(int);
+	public bool isFullScreenMode()
+	{
+		return default(bool);
+	}
 
-		public int cutoutHeight => default(int);
+	public void fullScreenMode()
+	{
+	}
 
-		public int displayWidth => default(int);
+	public bool isHideStatusBar()
+	{
+		return default(bool);
+	}
 
-		public int statusBarHeight => default(int);
+	public void hideStatusBar()
+	{
+	}
 
-		public int navigationBarHeight => default(int);
+	public bool isHideNavigationBar()
+	{
+		return default(bool);
+	}
 
-		public int realSizeHeight => default(int);
+	public void hideNavigationBar()
+	{
+	}
 
-		public int gpgsVersion => default(int);
+	public void hideActionBar()
+	{
+	}
 
-		static AndroidStatusBarController()
-		{
-		}
+	public void showActionBar()
+	{
+	}
 
-		public bool isEnableEditSystemUI()
-		{
-			return default(bool);
-		}
+	public void RefreshLayout()
+	{
+	}
 
-		public void Show()
-		{
-		}
+	public void ForceLayout()
+	{
+	}
 
-		public bool isFullScreenMode()
-		{
-			return default(bool);
-		}
-
-		public void fullScreenMode()
-		{
-		}
-
-		public bool isHideStatusBar()
-		{
-			return default(bool);
-		}
-
-		public void hideStatusBar()
-		{
-		}
-
-		public bool isHideNavigationBar()
-		{
-			return default(bool);
-		}
-
-		public void hideNavigationBar()
-		{
-		}
-
-		public void hideActionBar()
-		{
-		}
-
-		public void showActionBar()
-		{
-		}
-
-		public void RefreshLayout()
-		{
-		}
-
-		public void ForceLayout()
-		{
-		}
-
-		public void ClearFlags()
-		{
-		}
+	public void ClearFlags()
+	{
 	}
 }

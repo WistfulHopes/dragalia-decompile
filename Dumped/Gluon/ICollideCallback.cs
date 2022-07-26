@@ -1,15 +1,14 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public interface ICollideCallback
 {
-	public interface ICollideCallback
-	{
-		void OnCollided(GameObject target, bool isPropagation);
+	void OnCollided(GameObject target, bool isPropagation);
 
-		void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot);
+	void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot);
 
-		void OnNotCollided(CharacterBase chara);
+	void OnNotCollided(CharacterBase chara);
 
-		bool IsExcept(CharacterBase chara);
-	}
+	bool IsExcept(CharacterBase chara);
 }

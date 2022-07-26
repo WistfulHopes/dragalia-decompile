@@ -1,19 +1,18 @@
-namespace Gluon
+namespace Gluon;
+
+public class CraftStepupConfirmPopupBackupData
 {
-	public class CraftStepupConfirmPopupBackupData
-	{
-		public int targetWeaponId;
+	public int targetWeaponId;
 
-		public CraftMaterialCellData[] materialWeaponBackupDatas;
+	public CraftMaterialCellData[] materialWeaponBackupDatas;
 
-		public int craftCount;
+	public int craftCount;
 
-		public bool isLimitBreak;
+	public bool isLimitBreak;
 
-		public int materialWeaponId;
+	public int materialWeaponId;
 
-		public int weaponSetId;
+	public int weaponSetId;
 
-		public ulong[] selectPopupKeyIds;
-	}
+	public ulong[] selectPopupKeyIds;
 }

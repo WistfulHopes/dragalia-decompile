@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateAction : IState<PlayerCtrl>
 {
-	public class PlayerStateAction : IState<PlayerCtrl>
+	public override void OnStateUpdate()
 	{
-		public override void OnStateUpdate()
-		{
-		}
 	}
 }

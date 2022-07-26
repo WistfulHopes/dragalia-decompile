@@ -2,102 +2,101 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcChildPlay : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcChildPlay : EnemyAbilityProcBase
+	private float _timer;
+
+	private bool _reserveRestart;
+
+	private bool _hasOverwriteAbnormalResist;
+
+	private float[] _abnormalResist;
+
+	private float[] _abnormalPreResist;
+
+	public float duration
 	{
-		private float _timer;
-
-		private bool _reserveRestart;
-
-		private bool _hasOverwriteAbnormalResist;
-
-		private float[] _abnormalResist;
-
-		private float[] _abnormalPreResist;
-
-		public float duration
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(float);
 		}
-
-		public float restartTime
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public EnemyAbilityProcChildPlay(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public override void Play()
+	public float restartTime
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void OnPlay()
-		{
-		}
+	public EnemyAbilityProcChildPlay(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+	{
+	}
 
-		public override void Stop()
-		{
-		}
+	public override void Play()
+	{
+	}
 
-		private void OnStop()
-		{
-		}
+	private void OnPlay()
+	{
+	}
 
-		public override void OnBreakRemotely()
-		{
-		}
+	public override void Stop()
+	{
+	}
 
-		public override void OnUpdate()
-		{
-		}
+	private void OnStop()
+	{
+	}
 
-		public void SetAbnormalResist(AbnormalStatusType type, int value)
-		{
-		}
+	public override void OnBreakRemotely()
+	{
+	}
 
-		private void OverwriteAbnormalResist()
-		{
-		}
+	public override void OnUpdate()
+	{
+	}
 
-		private void ResetAbnormalResist()
-		{
-		}
+	public void SetAbnormalResist(AbnormalStatusType type, int value)
+	{
+	}
 
-		private bool UnisonPlay()
-		{
-			return default(bool);
-		}
+	private void OverwriteAbnormalResist()
+	{
+	}
 
-		private bool UnisonStop()
-		{
-			return default(bool);
-		}
+	private void ResetAbnormalResist()
+	{
+	}
 
-		public void ResetTimer()
-		{
-		}
+	private bool UnisonPlay()
+	{
+		return default(bool);
+	}
 
-		public override void OnEnemyAbilityEvent(Gluon.Event.EnemyAbility recvData)
-		{
-		}
+	private bool UnisonStop()
+	{
+		return default(bool);
+	}
+
+	public void ResetTimer()
+	{
+	}
+
+	public override void OnEnemyAbilityEvent(Gluon.Event.EnemyAbility recvData)
+	{
 	}
 }

@@ -5,83 +5,82 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestMenuMemoryEventBanner : EventMenuCell
 {
-	public class QuestMenuMemoryEventBanner : EventMenuCell
+	public enum Type
 	{
-		public enum Type
-		{
-			Active,
-			NonActive
-		}
+		Active,
+		NonActive
+	}
 
-		[SerializeField]
-		private GameObject bottomObjectBuild;
+	[SerializeField]
+	private GameObject bottomObjectBuild;
 
-		[SerializeField]
-		private GameObject bottomObjectRaid;
+	[SerializeField]
+	private GameObject bottomObjectRaid;
 
-		[SerializeField]
-		private GameObject bottomObjectCombat;
+	[SerializeField]
+	private GameObject bottomObjectCombat;
 
-		[SerializeField]
-		private GameObject beforeJoinText;
+	[SerializeField]
+	private GameObject beforeJoinText;
 
-		[SerializeField]
-		private GameObject afterJoinText;
+	[SerializeField]
+	private GameObject afterJoinText;
 
-		[SerializeField]
-		public Text plantLvText;
+	[SerializeField]
+	public Text plantLvText;
 
-		public Text maxPlantLvText;
+	public Text maxPlantLvText;
 
-		public Text[] coloredTexts;
+	public Text[] coloredTexts;
 
-		public Text questClearCountText;
+	public Text questClearCountText;
 
-		public Text englishPlantLvText;
+	public Text englishPlantLvText;
 
-		public Text[] otherLanguageTexts;
+	public Text[] otherLanguageTexts;
 
-		public GameObject normalNewGO;
+	public GameObject normalNewGO;
 
-		public Type type;
+	public Type type;
 
-		private int eventId;
+	private int eventId;
 
-		private long updateToMarkingDate;
+	private long updateToMarkingDate;
 
-		private const string newPrefTemplate = "__MemoryEventCheckDate_{0}";
+	private const string newPrefTemplate = "__MemoryEventCheckDate_{0}";
 
-		public void SetContent(int eventId)
-		{
-		}
+	public void SetContent(int eventId)
+	{
+	}
 
-		private bool IsSameEventOpen(EventDataElement currentEventData)
-		{
-			return default(bool);
-		}
+	private bool IsSameEventOpen(EventDataElement currentEventData)
+	{
+		return default(bool);
+	}
 
-		public static bool ShouldMemoryEventBannerMarkNew(EventDataElement eventData, ref long updateToMarkingDate)
-		{
-			return default(bool);
-		}
+	public static bool ShouldMemoryEventBannerMarkNew(EventDataElement eventData, ref long updateToMarkingDate)
+	{
+		return default(bool);
+	}
 
-		public override void OnCellTouched()
-		{
-		}
+	public override void OnCellTouched()
+	{
+	}
 
-		private IEnumerator CheckAndDownload(Action onDone)
-		{
-			return null;
-		}
+	private IEnumerator CheckAndDownload(Action onDone)
+	{
+		return null;
+	}
 
-		private static void GetAssetHashSet(int eventId, out HashSet<string> hashSet, out HashSet<string> withoutVoiceHashSet)
-		{
-		}
+	private static void GetAssetHashSet(int eventId, out HashSet<string> hashSet, out HashSet<string> withoutVoiceHashSet)
+	{
+	}
 
-		private static void DeleteAllOtherMemoryEventAsset(int excludeEventId)
-		{
-		}
+	private static void DeleteAllOtherMemoryEventAsset(int excludeEventId)
+	{
 	}
 }

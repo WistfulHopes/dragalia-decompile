@@ -5,436 +5,421 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonResult : MonoBehaviour
 {
-	public class SummonResult : MonoBehaviour
+	private static SummonResult instance;
+
+	public Action onBackButtonTouched;
+
+	public Action<SummonTopItemData.ButtonType> onSummonButtonTouched;
+
+	[SerializeField]
+	public GameObject multiSummonResult;
+
+	public GameObject singleSummonResult;
+
+	[SerializeField]
+	public GameObject[] multiSummonCharaIconPosList;
+
+	[SerializeField]
+	public GameObject singleSummonButtonObject;
+
+	public GameObject multiSummonButtonObject;
+
+	public SummonButton multiSummonButton;
+
+	public GameObject multiSummonBalloon;
+
+	public GameObject manyFreeMultiSummonBalloon;
+
+	public Text manyFreeMultiSummonBalloonText;
+
+	[SerializeField]
+	public GameObject firstViewBottomItemNode;
+
+	public GameObject backButtonGO;
+
+	public GameObject captionGO;
+
+	public GameObject autoPresentBoxTextNode;
+
+	public Image whiteFade;
+
+	public GameObject bonusButton;
+
+	public float bonusPopupDelayTime;
+
+	[SerializeField]
+	public GameObject illustration;
+
+	public Transform illustrationViewOffset;
+
+	public UnitDetail2dModel illustrationImage;
+
+	[SerializeField]
+	public Transform switchEffectAttachPoint;
+
+	public Text switch2d3dButtonText;
+
+	public GameObject switch2d3dButtonGO;
+
+	public GameObject detailButtonGO;
+
+	public DragEventScrollRect dragScrollRect;
+
+	[SerializeField]
+	public GameObject ownedSingleTickedLine;
+
+	public GameObject ownedMultiTicketLine;
+
+	public GameObject ownedStoneLine;
+
+	public GameObject ownedPaidStoneLine;
+
+	public Text ownedSingleTicketCountText;
+
+	public Text ownedMultiTicketCountText;
+
+	public Text ownedFreeStoneCountText;
+
+	public Text ownedPaidStoneCountText;
+
+	public Text ownedMoonCountText;
+
+	public GameObject ownedFrame;
+
+	[SerializeField]
+	public Image singleCaptionIcon;
+
+	public Image multiCaptionIcon;
+
+	public Image dailyCaptionIcon;
+
+	[SerializeField]
+	public CommonIcon moonIcon;
+
+	[SerializeField]
+	public SummonResultStatusPlate statusPlate;
+
+	[SerializeField]
+	public RawImage bg3dRenderTextureImage;
+
+	public RawImageWithAlphaBlend chara3dRenderTextureImage;
+
+	public RawImage flashTextureImage;
+
+	[SerializeField]
+	public SimpleStoryManager storyManager;
+
+	[SerializeField]
+	public GameObject exchangeSummonNode;
+
+	public Text beforeExchangeSummon;
+
+	public Text afterExchangeSummon;
+
+	public Image exchangeSummonImage;
+
+	[SerializeField]
+	public UIAnimationPublisher multiPublisher;
+
+	public UIAnimationPublisher singlePublisher;
+
+	public UIAnimationPublisher majorEnterPublisher;
+
+	public UIAnimationPublisher exitPubliser;
+
+	public UIAnimationPublisher subExitPubliser;
+
+	[SerializeField]
+	private float fadeTimeFactor;
+
+	private FlashPlayer switchFlashPlayer;
+
+	private bool bShowing2D;
+
+	private int showingResultIndex;
+
+	private bool bShowingSingleDetailOnMultiPage;
+
+	private Transform current3DTransform;
+
+	private float panelAnimationMoveDist;
+
+	private float panelAnimationBaseDuration;
+
+	private float panelAnimation10SwitchWaitTime;
+
+	private float panelAnimationSwitchWaitTime;
+
+	private float amuletScale;
+
+	private Vector3 amuletViewOffset;
+
+	private int oldFlashCameraDepth;
+
+	private Vector3 originalChara3DCameraPosition;
+
+	private readonly Vector3 resultChara3DCameraPosition;
+
+	private RenderTexture bgRenderTexture;
+
+	[HideInInspector]
+	public SummonScene scene;
+
+	private Camera oldFlashCamera;
+
+	private FlashPlayer[] itemFallFlashPlayers;
+
+	private FlashPlayer[] haloBackFlashPlayers;
+
+	private FlashPlayer[] haloFrontFlashPlayers;
+
+	private FlashPlayer[] bonusFrontFlashPlayers;
+
+	private FlashPlayer extraBonusFrontFlashPlayers;
+
+	private const string haloBackFlashPrefabPath = "Prefabs/OutGame/SummonShop/Result/SSRHaloFlash/pf_thumb_panel_effect_halo";
+
+	private const string haloFrontFlashPrefabPath = "Prefabs/OutGame/SummonShop/Result/SSRHaloFlash/pf_thumb_panel_effect_ster";
+
+	private const string summonResultBonusFlashPrefabPath = "Prefabs/OutGame/SummonShop/Result/SSRHaloFlash/pf_SummonResultBonus";
+
+	private const string summonResultExtraBonusFlashPrefabPath = "Prefabs/OutGame/SummonShop/Result/SSRHaloFlash/pf_SummonResultExtraBonus";
+
+	private const string flashLabelIconSquare = "init_sharp";
+
+	private const string flashLabelIconRounded = "init_round";
+
+	private const string flashLabelIconCut = "init_unique";
+
+	private const string flashLabelBonus6thPrize = "Bonus_06";
+
+	private const string flashLabelBonus5thPrize = "Bonus_05";
+
+	private const string flashLabelBonusBronze = "Bonus_04";
+
+	private const string flashLabelBonusSilver = "Bonus_03";
+
+	private const string flashLabelBonusGold = "Bonus_02";
+
+	private const string flashLabelBonusPlatinum = "Bonus_01";
+
+	private const string flashBonusPlatinumSound = "SE_OUT_COMMON_0065";
+
+	private const string flashBonusGoldSound = "SE_OUT_COMMON_0066";
+
+	private const string flashBonusSilverSound = "SE_OUT_COMMON_0067";
+
+	private const string flashBonusPocoPocoSound = "SE_OUT_COMMON_0068";
+
+	private static readonly Vector2[] iconPosition1;
+
+	private static readonly Vector2[] iconPosition2;
+
+	private static readonly Vector2[] iconPosition3;
+
+	private static readonly Vector2[] iconPosition4;
+
+	private static readonly Vector2[] iconPosition5;
+
+	private static readonly Vector2[] iconPosition6;
+
+	private static readonly Vector2[] iconPosition7;
+
+	private static readonly Vector2[] iconPosition8;
+
+	private static readonly Vector2[] iconPosition9;
+
+	public static readonly Vector2[] iconPosition10;
+
+	public static readonly Vector2[][] iconPositions;
+
+	public static SummonResult Instance => null;
+
+	public SummonModelBase model
 	{
-		private static SummonResult instance;
-
-		public Action onBackButtonTouched;
-
-		public Action<SummonTopItemData.ButtonType> onSummonButtonTouched;
-
-		[SerializeField]
-		[Header("Result")]
-		public GameObject multiSummonResult;
-
-		public GameObject singleSummonResult;
-
-		[SerializeField]
-		[Header("MultiPosition")]
-		public GameObject[] multiSummonCharaIconPosList;
-
-		[SerializeField]
-		[Header("ReSummonButtons")]
-		public GameObject singleSummonButtonObject;
-
-		public GameObject multiSummonButtonObject;
-
-		public SummonButton multiSummonButton;
-
-		public GameObject multiSummonBalloon;
-
-		public GameObject manyFreeMultiSummonBalloon;
-
-		public Text manyFreeMultiSummonBalloonText;
-
-		[SerializeField]
-		[Header("OnOffs")]
-		public GameObject firstViewBottomItemNode;
-
-		public GameObject backButtonGO;
-
-		public GameObject captionGO;
-
-		public GameObject autoPresentBoxTextNode;
-
-		public Image whiteFade;
-
-		public GameObject bonusButton;
-
-		public float bonusPopupDelayTime;
-
-		[SerializeField]
-		[Header("Illustration")]
-		public GameObject illustration;
-
-		public Transform illustrationViewOffset;
-
-		public UnitDetail2dModel illustrationImage;
-
-		[SerializeField]
-		[Header("2d3d")]
-		public Transform switchEffectAttachPoint;
-
-		public Text switch2d3dButtonText;
-
-		public GameObject switch2d3dButtonGO;
-
-		public GameObject detailButtonGO;
-
-		public DragEventScrollRect dragScrollRect;
-
-		[SerializeField]
-		[Header("Ownwed")]
-		public GameObject ownedSingleTickedLine;
-
-		public GameObject ownedMultiTicketLine;
-
-		public GameObject ownedStoneLine;
-
-		public GameObject ownedPaidStoneLine;
-
-		public Text ownedSingleTicketCountText;
-
-		public Text ownedMultiTicketCountText;
-
-		public Text ownedFreeStoneCountText;
-
-		public Text ownedPaidStoneCountText;
-
-		public Text ownedMoonCountText;
-
-		public GameObject ownedFrame;
-
-		[SerializeField]
-		[Header("CaptionIcon")]
-		public Image singleCaptionIcon;
-
-		public Image multiCaptionIcon;
-
-		public Image dailyCaptionIcon;
-
-		[SerializeField]
-		[Header("DisplayMoon")]
-		public CommonIcon moonIcon;
-
-		[SerializeField]
-		[Header("Plate")]
-		public SummonResultStatusPlate statusPlate;
-
-		[SerializeField]
-		[Header("RenderTextures")]
-		public RawImage bg3dRenderTextureImage;
-
-		public RawImageWithAlphaBlend chara3dRenderTextureImage;
-
-		public RawImage flashTextureImage;
-
-		[SerializeField]
-		[Header("Story")]
-		public SimpleStoryManager storyManager;
-
-		[SerializeField]
-		[Header("ExchangeSummon")]
-		public GameObject exchangeSummonNode;
-
-		public Text beforeExchangeSummon;
-
-		public Text afterExchangeSummon;
-
-		public Image exchangeSummonImage;
-
-		[SerializeField]
-		[Header("Publishers")]
-		public UIAnimationPublisher multiPublisher;
-
-		public UIAnimationPublisher singlePublisher;
-
-		public UIAnimationPublisher majorEnterPublisher;
-
-		public UIAnimationPublisher exitPubliser;
-
-		public UIAnimationPublisher subExitPubliser;
-
-		[SerializeField]
-		private float fadeTimeFactor;
-
-		private FlashPlayer switchFlashPlayer;
-
-		private bool bShowing2D;
-
-		private int showingResultIndex;
-
-		private bool bShowingSingleDetailOnMultiPage;
-
-		private Transform current3DTransform;
-
-		private float panelAnimationMoveDist;
-
-		private float panelAnimationBaseDuration;
-
-		private float panelAnimation10SwitchWaitTime;
-
-		private float panelAnimationSwitchWaitTime;
-
-		private float amuletScale;
-
-		private Vector3 amuletViewOffset;
-
-		private int oldFlashCameraDepth;
-
-		private Vector3 originalChara3DCameraPosition;
-
-		private readonly Vector3 resultChara3DCameraPosition;
-
-		private RenderTexture bgRenderTexture;
-
-		[HideInInspector]
-		public SummonScene scene;
-
-		private Camera oldFlashCamera;
-
-		private FlashPlayer[] itemFallFlashPlayers;
-
-		private FlashPlayer[] haloBackFlashPlayers;
-
-		private FlashPlayer[] haloFrontFlashPlayers;
-
-		private FlashPlayer[] bonusFrontFlashPlayers;
-
-		private FlashPlayer extraBonusFrontFlashPlayers;
-
-		private const string haloBackFlashPrefabPath = "Prefabs/OutGame/SummonShop/Result/SSRHaloFlash/pf_thumb_panel_effect_halo";
-
-		private const string haloFrontFlashPrefabPath = "Prefabs/OutGame/SummonShop/Result/SSRHaloFlash/pf_thumb_panel_effect_ster";
-
-		private const string summonResultBonusFlashPrefabPath = "Prefabs/OutGame/SummonShop/Result/SSRHaloFlash/pf_SummonResultBonus";
-
-		private const string summonResultExtraBonusFlashPrefabPath = "Prefabs/OutGame/SummonShop/Result/SSRHaloFlash/pf_SummonResultExtraBonus";
-
-		private const string flashLabelIconSquare = "init_sharp";
-
-		private const string flashLabelIconRounded = "init_round";
-
-		private const string flashLabelIconCut = "init_unique";
-
-		private const string flashLabelBonus6thPrize = "Bonus_06";
-
-		private const string flashLabelBonus5thPrize = "Bonus_05";
-
-		private const string flashLabelBonusBronze = "Bonus_04";
-
-		private const string flashLabelBonusSilver = "Bonus_03";
-
-		private const string flashLabelBonusGold = "Bonus_02";
-
-		private const string flashLabelBonusPlatinum = "Bonus_01";
-
-		private const string flashBonusPlatinumSound = "SE_OUT_COMMON_0065";
-
-		private const string flashBonusGoldSound = "SE_OUT_COMMON_0066";
-
-		private const string flashBonusSilverSound = "SE_OUT_COMMON_0067";
-
-		private const string flashBonusPocoPocoSound = "SE_OUT_COMMON_0068";
-
-		private static readonly Vector2[] iconPosition1;
-
-		private static readonly Vector2[] iconPosition2;
-
-		private static readonly Vector2[] iconPosition3;
-
-		private static readonly Vector2[] iconPosition4;
-
-		private static readonly Vector2[] iconPosition5;
-
-		private static readonly Vector2[] iconPosition6;
-
-		private static readonly Vector2[] iconPosition7;
-
-		private static readonly Vector2[] iconPosition8;
-
-		private static readonly Vector2[] iconPosition9;
-
-		public static readonly Vector2[] iconPosition10;
-
-		public static readonly Vector2[][] iconPositions;
-
-		public static SummonResult Instance => null;
-
-		public SummonModelBase model
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		private SummonResult()
-		{
-		}
-
-		static SummonResult()
-		{
-		}
-
-		public void Start()
-		{
-		}
-
-		private bool IsExchangeSummon()
-		{
-			return default(bool);
-		}
-
-		public void StartItemFall()
-		{
-		}
-
-		public static Vector3 GetFlashPositionFromLayoutPosition(Vector2 pos)
-		{
-			return default(Vector3);
-		}
-
-		private void SetFlashObjectPosition(FlashPlayer flashPlayer, Vector3 rawPosition, string[] objNameList)
-		{
-		}
-
-		private string GetFlashLabelByGiftTypeForIcon(GiftType giftType)
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private string GetFlashLabelByBonusType(int index)
-		{
-			return null;
-		}
-
-		private string GetFlashSoundLabelByBonusType(int index)
-		{
-			return null;
-		}
-
-		private void SetEnableResultFlash(bool enable)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private IEnumerator ItemFallCoroutine()
-		{
-			return null;
-		}
+	private SummonResult()
+	{
+	}
 
-		public void RefreshPrice()
-		{
-		}
+	static SummonResult()
+	{
+	}
 
-		private void ShowTutorialPop()
-		{
-		}
+	public void Start()
+	{
+	}
 
-		private IEnumerator ShowTutorialPopCoroutine()
-		{
-			return null;
-		}
+	private bool IsExchangeSummon()
+	{
+		return default(bool);
+	}
 
-		private void DestroyItemFallFlashPlayers()
-		{
-		}
+	public void StartItemFall()
+	{
+	}
 
-		public void Setup(SummonModelBase model)
-		{
-		}
+	public static Vector3 GetFlashPositionFromLayoutPosition(Vector2 pos)
+	{
+		return default(Vector3);
+	}
 
-		public void OnListItemClicked(SummonResultItemData data, int resultIndex)
-		{
-		}
+	private void SetFlashObjectPosition(FlashPlayer flashPlayer, Vector3 rawPosition, string[] objNameList)
+	{
+	}
 
-		public void MovePanelYInstantly(Transform t, float dist)
-		{
-		}
+	private string GetFlashLabelByGiftTypeForIcon(GiftType giftType)
+	{
+		return null;
+	}
 
-		public void SetPanelAlpha(Transform t, float alpha = 1f)
-		{
-		}
+	private string GetFlashLabelByBonusType(int index)
+	{
+		return null;
+	}
 
-		private void SetSingleResultView([Optional] SummonResultItemData data, int resultIndex = 0, bool playAnimation = true)
-		{
-		}
+	private string GetFlashSoundLabelByBonusType(int index)
+	{
+		return null;
+	}
 
-		public void OnSwitchToMultiListButtonClicked()
-		{
-		}
+	private void SetEnableResultFlash(bool enable)
+	{
+	}
 
-		public void OnBonusDetailButtonClicked()
-		{
-		}
+	private IEnumerator ItemFallCoroutine()
+	{
+		return null;
+	}
 
-		private void LoadMultiResultList()
-		{
-		}
+	public void RefreshPrice()
+	{
+	}
 
-		public void OnRedrawButtonPressed(SummonTopItemData.ButtonType buttonType)
-		{
-		}
+	private void ShowTutorialPop()
+	{
+	}
 
-		public void OnBackButtonPressed()
-		{
-		}
+	private IEnumerator ShowTutorialPopCoroutine()
+	{
+		return null;
+	}
 
-		public void OnDetailButtonPressed()
-		{
-		}
+	private void DestroyItemFallFlashPlayers()
+	{
+	}
 
-		private void OnSceneLoadEnd()
-		{
-		}
+	public void Setup(SummonModelBase model)
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	public void OnListItemClicked(SummonResultItemData data, int resultIndex)
+	{
+	}
 
-		private void OnSwitchTo2DMode(bool isBySwitchButton = false)
-		{
-		}
+	public void MovePanelYInstantly(Transform t, float dist)
+	{
+	}
 
-		private void DoSwitchTo2DMode()
-		{
-		}
+	public void SetPanelAlpha(Transform t, float alpha = 1f)
+	{
+	}
 
-		private void OnSwitchTo3DMode(bool isBySwitchButton = false)
-		{
-		}
+	private void SetSingleResultView([Optional] SummonResultItemData data, int resultIndex = 0, bool playAnimation = true)
+	{
+	}
 
-		private void DoSwitchTo3DMode()
-		{
-		}
+	public void OnSwitchToMultiListButtonClicked()
+	{
+	}
 
-		private void Set3DModel(SummonResultItemData item)
-		{
-		}
+	public void OnBonusDetailButtonClicked()
+	{
+	}
 
-		public void OnSwitch3D2DButtonClicked()
-		{
-		}
+	private void LoadMultiResultList()
+	{
+	}
 
-		public void OnScrollRectValueChanged(Vector2 changedVal)
-		{
-		}
+	public void OnRedrawButtonPressed(SummonTopItemData.ButtonType buttonType)
+	{
+	}
 
-		public void StartToStageAnimation(Action onDone)
-		{
-		}
+	public void OnBackButtonPressed()
+	{
+	}
 
-		public void PlaySwitchFlash()
-		{
-		}
+	public void OnDetailButtonPressed()
+	{
+	}
 
-		public void OnExchangeSummonDetail()
-		{
-		}
+	private void OnSceneLoadEnd()
+	{
+	}
 
-		public void ExchangePopup(Action onClose)
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public void OnBeforeSceneLeaving()
-		{
-		}
+	private void OnSwitchTo2DMode(bool isBySwitchButton = false)
+	{
+	}
+
+	private void DoSwitchTo2DMode()
+	{
+	}
+
+	private void OnSwitchTo3DMode(bool isBySwitchButton = false)
+	{
+	}
+
+	private void DoSwitchTo3DMode()
+	{
+	}
+
+	private void Set3DModel(SummonResultItemData item)
+	{
+	}
+
+	public void OnSwitch3D2DButtonClicked()
+	{
+	}
+
+	public void OnScrollRectValueChanged(Vector2 changedVal)
+	{
+	}
+
+	public void StartToStageAnimation(Action onDone)
+	{
+	}
+
+	public void PlaySwitchFlash()
+	{
+	}
+
+	public void OnExchangeSummonDetail()
+	{
+	}
+
+	public void ExchangePopup(Action onClose)
+	{
+	}
+
+	public void OnBeforeSceneLeaving()
+	{
 	}
 }

@@ -2,43 +2,42 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsMultiMarkerNeedRegisterPos : ActionPartsMarker
 {
-	public class ActionPartsMultiMarkerNeedRegisterPos : ActionPartsMarker
+	private readonly MultiMarkerNeedRegisterPositionData _partsData;
+
+	private RandomXorshift _random;
+
+	private RunActionRandomParameter _runActionParam;
+
+	public ActionPartsMultiMarkerNeedRegisterPos(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly MultiMarkerNeedRegisterPositionData _partsData;
+	}
 
-		private RandomXorshift _random;
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		private RunActionRandomParameter _runActionParam;
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		public ActionPartsMultiMarkerNeedRegisterPos(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override RunActionParameterBase CreateRunActionParameter()
-		{
-			return null;
-		}
+	private void CreateMarkerAreaAnchorRandomOffsetAddAnchorPos(MultiMarkerNeedRegisterPositionData srcData)
+	{
+	}
 
-		public override void SetRunActionParameter(RunActionParameterBase param)
-		{
-		}
+	private void CreateMarkerMultiControlPlayers(MultiMarkerNeedRegisterPositionData srcData)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		private void CreateMarkerAreaAnchorRandomOffsetAddAnchorPos(MultiMarkerNeedRegisterPositionData srcData)
-		{
-		}
-
-		private void CreateMarkerMultiControlPlayers(MultiMarkerNeedRegisterPositionData srcData)
-		{
-		}
-
-		protected void CreateMarker(MarkerData srcData, Vector3 position)
-		{
-		}
+	protected void CreateMarker(MarkerData srcData, Vector3 position)
+	{
 	}
 }

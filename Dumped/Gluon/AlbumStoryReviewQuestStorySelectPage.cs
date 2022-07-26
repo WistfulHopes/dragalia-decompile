@@ -4,55 +4,54 @@ using Cute.AssetBundle;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumStoryReviewQuestStorySelectPage : AlbumStoryReviewPageBase
 {
-	public class AlbumStoryReviewQuestStorySelectPage : AlbumStoryReviewPageBase
+	[SerializeField]
+	private RectTransform contentTransfrom;
+
+	[SerializeField]
+	private AlbumStoryReviewQuestStorySelectPageController ctrl;
+
+	public AnimationListOneCol listAnimation;
+
+	private AlbumStoryReviewQuestStoryData albumStoryReviewQuestStoryData;
+
+	public override void OnPageBecomeActive(object data)
 	{
-		[SerializeField]
-		private RectTransform contentTransfrom;
+	}
 
-		[SerializeField]
-		private AlbumStoryReviewQuestStorySelectPageController ctrl;
+	public void DisableToJoinCallback(QuestCellData questCellData)
+	{
+	}
 
-		public AnimationListOneCol listAnimation;
+	private IEnumerator CheckFortDownloadAndGoQuest(QuestStoryElement storyElement)
+	{
+		return null;
+	}
 
-		private AlbumStoryReviewQuestStoryData albumStoryReviewQuestStoryData;
+	private void OpenStoryPopup(QuestStoryElement storyElement, [Optional] DownloadOperation downloadOperation, [Optional] DownloadOperation downloadOperationWithoutVoice)
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	private void DownloadCompleteCallback(int questId, QuestGroupType questGroupType)
+	{
+	}
 
-		public void DisableToJoinCallback(QuestCellData questCellData)
-		{
-		}
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		private IEnumerator CheckFortDownloadAndGoQuest(QuestStoryElement storyElement)
-		{
-			return null;
-		}
+	private void OnBackButtonTouched()
+	{
+	}
 
-		private void OpenStoryPopup(QuestStoryElement storyElement, [Optional] DownloadOperation downloadOperation, [Optional] DownloadOperation downloadOperationWithoutVoice)
-		{
-		}
+	public void OnAlbumStoryReviewCharacterPressed()
+	{
+	}
 
-		private void DownloadCompleteCallback(int questId, QuestGroupType questGroupType)
-		{
-		}
-
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
-
-		private void OnBackButtonTouched()
-		{
-		}
-
-		public void OnAlbumStoryReviewCharacterPressed()
-		{
-		}
-
-		public void OnAlbumStoryReviewIllustrationPressed()
-		{
-		}
+	public void OnAlbumStoryReviewIllustrationPressed()
+	{
 	}
 }

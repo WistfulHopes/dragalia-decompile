@@ -1,9 +1,8 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyCameraSwitcherDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyCameraSwitcherData>
 {
-	[Serializable]
-	public class CuttTimelineKeyCameraSwitcherDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyCameraSwitcherData>
-	{
-	}
 }

@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum TargetTipsType
 {
-	public enum TargetTipsType
-	{
-		None,
-		Quest,
-		ManaCircle,
-		Castle
-	}
+	None,
+	Quest,
+	ManaCircle,
+	Castle
 }

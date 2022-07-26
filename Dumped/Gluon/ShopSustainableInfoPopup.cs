@@ -1,37 +1,35 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopSustainableInfoPopup : PopupBase
 {
-	public class ShopSustainableInfoPopup : PopupBase
+	[SerializeField]
+	public GameObject[] dailyCrystalGOs;
+
+	public GameObject[] dailyStaminaGOs;
+
+	public GameObject[] questBonusGOs;
+
+	[SerializeField]
+	private MaintenanceButtonController purchageButtonMaintenance;
+
+	private ShopTradeProductData.CommonShopItemData.PackContentType contentType;
+
+	public static ShopSustainableInfoPopup Create(ShopTradeProductData.CommonShopItemData.PackContentType contentType)
 	{
-		[SerializeField]
-		[Header("Top")]
-		public GameObject[] dailyCrystalGOs;
+		return null;
+	}
 
-		public GameObject[] dailyStaminaGOs;
+	protected override void Start()
+	{
+	}
 
-		public GameObject[] questBonusGOs;
+	public void OnOKButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private MaintenanceButtonController purchageButtonMaintenance;
-
-		private ShopTradeProductData.CommonShopItemData.PackContentType contentType;
-
-		public static ShopSustainableInfoPopup Create(ShopTradeProductData.CommonShopItemData.PackContentType contentType)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnOKButtonPressed()
-		{
-		}
-
-		public static void SwitchToSustainableItem(ShopTradeProductData.CommonShopItemData.PackContentType packContentType)
-		{
-		}
+	public static void SwitchToSustainableItem(ShopTradeProductData.CommonShopItemData.PackContentType packContentType)
+	{
 	}
 }

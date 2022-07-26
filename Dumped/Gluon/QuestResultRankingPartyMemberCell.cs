@@ -1,27 +1,26 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultRankingPartyMemberCell : MonoBehaviour
 {
-	public class QuestResultRankingPartyMemberCell : MonoBehaviour
+	[SerializeField]
+	private CommonIcon charaIcon;
+
+	[SerializeField]
+	private Image anotherNameIcon;
+
+	[SerializeField]
+	private Text usernameText;
+
+	[SerializeField]
+	private Text playerLevelText;
+
+	[SerializeField]
+	private Image youTextImage;
+
+	public void SetContent(int charaId, int emblemId, string userName, int level, bool isShowYouImage)
 	{
-		[SerializeField]
-		private CommonIcon charaIcon;
-
-		[SerializeField]
-		private Image anotherNameIcon;
-
-		[SerializeField]
-		private Text usernameText;
-
-		[SerializeField]
-		private Text playerLevelText;
-
-		[SerializeField]
-		private Image youTextImage;
-
-		public void SetContent(int charaId, int emblemId, string userName, int level, bool isShowYouImage)
-		{
-		}
 	}
 }

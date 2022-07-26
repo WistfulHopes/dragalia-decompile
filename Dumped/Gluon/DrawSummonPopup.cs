@@ -3,236 +3,283 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DrawSummonPopup : PopupBase
 {
-	public class DrawSummonPopup : PopupBase
+	private enum DrawSummonPage
 	{
-		private enum DrawSummonPage
-		{
-			normalPage,
-			stoneSelectPage,
-			ticketSelectPage,
-			overSummonPointPage
-		}
+		normalPage,
+		stoneSelectPage,
+		ticketSelectPage,
+		overSummonPointPage
+	}
 
-		[SerializeField]
-		[Header("Text")]
-		private Text okButtonText;
+	[SerializeField]
+	private Text okButtonText;
 
-		[SerializeField]
-		[Header("Pages")]
-		public GameObject[] drawSummonPages;
+	[SerializeField]
+	public GameObject[] drawSummonPages;
 
-		[SerializeField]
-		[Header("Titles")]
-		private Text titleText;
+	[SerializeField]
+	private Text titleText;
 
-		[SerializeField]
-		private Text legendTitleText;
+	[SerializeField]
+	private Text legendTitleText;
 
-		[SerializeField]
-		[Header("OnOffDisplayGOs")]
-		private GameObject[] insufficientTextGOs;
+	[SerializeField]
+	private GameObject[] insufficientTextGOs;
 
-		[SerializeField]
-		private GameObject purchaseStoneImage;
+	[SerializeField]
+	private GameObject purchaseStoneImage;
 
-		[SerializeField]
-		private GameObject usePaidStoneImage;
+	[SerializeField]
+	private GameObject usePaidStoneImage;
 
-		[SerializeField]
-		private Text[] insufficientTexts;
+	[SerializeField]
+	private Text[] insufficientTexts;
 
-		[SerializeField]
-		[Header("OnOffPriceLines")]
-		public GameObject stonePriceLine;
+	[SerializeField]
+	public GameObject stonePriceLine;
 
-		public GameObject paidStonePriceLine;
+	public GameObject paidStonePriceLine;
 
-		public GameObject ticketPriceLine;
+	public GameObject ticketPriceLine;
 
-		[SerializeField]
-		private GameObject singleTicketIcon;
+	[SerializeField]
+	private GameObject singleTicketIcon;
 
-		[SerializeField]
-		private GameObject multiTicketIcon;
+	[SerializeField]
+	private GameObject multiTicketIcon;
 
-		[SerializeField]
-		private GameObject startDashTicketIcon;
+	[SerializeField]
+	private GameObject startDashTicketIcon;
 
-		[SerializeField]
-		private GameObject dragonSsrTicketIcon;
+	[SerializeField]
+	private GameObject dragonSsrTicketIcon;
 
-		[SerializeField]
-		private GameObject charaUpdateSsrTicketIcon;
+	[SerializeField]
+	private GameObject charaUpdateSsrTicketIcon;
 
-		[SerializeField]
-		private GameObject dragonUpdateSsrTicketIcon;
+	[SerializeField]
+	private GameObject dragonUpdateSsrTicketIcon;
 
-		[SerializeField]
-		[Header("Button")]
-		public Button cancelButton;
+	[SerializeField]
+	public Button okButton;
 
-		public Button closeButton;
+	public Button cancelButton;
 
-		public Button stoneButton;
+	public Button closeButton;
 
-		public Button paidStoneButton;
+	public Button stoneButton;
 
-		public Button ticketsButton;
+	public Button paidStoneButton;
 
-		public Button tenTicketsButton;
+	public Button ticketsButton;
 
-		[SerializeField]
-		[Header("Price")]
-		private Text priceText;
+	public Button tenTicketsButton;
 
-		public Text selectableText;
+	[SerializeField]
+	private Text priceText;
 
-		public Text[] onButtonStonePriceTexts;
+	public Text selectableText;
 
-		public GameObject insufficientStonePriceGO;
+	public Text[] onButtonStonePriceTexts;
 
-		public GameObject insufficientPaidStonePriceGO;
+	public GameObject insufficientStonePriceGO;
 
-		public GameObject normalStonePriceGO;
+	public GameObject insufficientPaidStonePriceGO;
 
-		public GameObject normalPaidStonePriceGO;
+	public GameObject normalStonePriceGO;
 
-		[SerializeField]
-		[Header("Owned")]
-		private Text[] ownedCountTexts;
+	public GameObject normalPaidStonePriceGO;
 
-		[SerializeField]
-		private Text[] ownedPaidCountTexts;
+	[SerializeField]
+	private Text[] ownedCountTexts;
 
-		[SerializeField]
-		private Text[] afterCountTexts;
+	[SerializeField]
+	private Text[] ownedPaidCountTexts;
 
-		[SerializeField]
-		private GameObject ownedUIBase;
+	[SerializeField]
+	private Text[] afterCountTexts;
 
-		[SerializeField]
-		[Header("ExchangeSummon")]
-		private Text[] summonCeilingItemTexts;
+	[SerializeField]
+	private GameObject ownedUIBase;
 
-		[SerializeField]
-		private Text summonExchangeLimit;
+	[SerializeField]
+	private Text[] summonCeilingItemTexts;
 
-		[SerializeField]
-		private Transform exchangeSummonIconTrans;
+	[SerializeField]
+	private Text summonExchangeLimit;
 
-		[SerializeField]
-		private GameObject[] exchangeNode;
+	[SerializeField]
+	private Transform exchangeSummonIconTrans;
 
-		[SerializeField]
-		private Image summonExchangeDoubleImage;
+	[SerializeField]
+	private GameObject[] exchangeNode;
 
-		[SerializeField]
-		private CommonSliderSelection ticketSlider;
+	[SerializeField]
+	private Image summonExchangeDoubleImage;
 
-		private SummonScene scene;
+	[SerializeField]
+	private CommonSliderSelection ticketSlider;
 
-		private int summonId;
+	[SerializeField]
+	private RectTransform frame;
 
-		private SummonTopItemData.ButtonType buttonType;
+	[SerializeField]
+	private float specifiedCommercialFrameY;
 
-		private SummonTopItemData itemData;
+	[SerializeField]
+	private GameObject endDateTimeLine;
 
-		private bool isNormalPage;
+	[SerializeField]
+	private Text endDateTimeText;
 
-		private bool isPaidStone;
+	[SerializeField]
+	private GameObject specifiedCommercialActObj;
 
-		private bool isUsingTicket;
+	[SerializeField]
+	private Text specifiedCommercialTransactionActText;
 
-		private int multiSingleTicketCount;
+	[SerializeField]
+	private Text specifiedCommercialActInformationText;
 
-		private const int summonCount10 = 10;
+	[SerializeField]
+	private RectTransform frame2;
 
-		public static DrawSummonPopup Create(SummonScene scene, SummonTopItemData itemData, SummonTopItemData.ButtonType buttonType)
-		{
-			return null;
-		}
+	[SerializeField]
+	private float specifiedCommercialFrameY2;
 
-		public static DrawSummonPopup CreateOverSummonpopup(SummonTopItemData itemData)
-		{
-			return null;
-		}
+	[SerializeField]
+	private GameObject endDateTimeLine2;
 
-		private void SwitchToSelectPage()
-		{
-		}
+	[SerializeField]
+	private Text endDateTimeText2;
 
-		private void SwitchToTicketSelectPage()
-		{
-		}
+	[SerializeField]
+	private GameObject specifiedCommercialActObj2;
 
-		private void SwitcPages(DrawSummonPage pages)
-		{
-		}
+	[SerializeField]
+	private Text specifiedCommercialTransactionActText2;
 
-		private void SetupByItemData(SummonTopItemData itemData, SummonTopItemData.ButtonType buttonType)
-		{
-		}
+	[SerializeField]
+	private Text specifiedCommercialActInformationText2;
 
-		public void SetContentOverSummonPoint(SummonTopItemData itemData)
-		{
-		}
+	private SummonScene scene;
 
-		private void DisplayInsufficientInfo(bool hasEnoughStone, bool hasEnoughPaidStone, bool isSelectable, bool isUsingTicket, int afterCount, int afterPaidCount, bool isExchangeSummon)
-		{
-		}
+	private int summonId;
 
-		public void SummonPointIcon()
-		{
-		}
+	private SummonTopItemData.ButtonType buttonType;
 
-		private void OnStoneOKButtonClicked()
-		{
-		}
+	private SummonTopItemData itemData;
 
-		private void OnTicketOKButtonClicked()
-		{
-		}
+	private bool isNormalPage;
 
-		public void OnOKButtonClicked()
-		{
-		}
+	private bool isPaidStone;
 
-		public void OnStoneOKButtonPressed()
-		{
-		}
+	private bool isUsingTicket;
 
-		public void OnPaidStoneOKButtonPressed()
-		{
-		}
+	private int multiSingleTicketCount;
 
-		public void OnCloseButtonClicked()
-		{
-		}
+	private const int summonCount10 = 10;
 
-		public void ClosePopup([Optional] Action onFinished)
-		{
-		}
+	public static DrawSummonPopup Create(SummonScene scene, SummonTopItemData itemData, SummonTopItemData.ButtonType buttonType)
+	{
+		return null;
+	}
 
-		public void OnValueChanged(float f)
-		{
-		}
+	public static DrawSummonPopup CreateOverSummonpopup(SummonTopItemData itemData)
+	{
+		return null;
+	}
 
-		public void OnMaxValueChange()
-		{
-		}
+	private void SwitchToSelectPage()
+	{
+	}
 
-		public void OnSummonSingleTicketsButtonPressed()
-		{
-		}
+	private void SwitchToTicketSelectPage()
+	{
+	}
 
-		public void OnSummonMultiTicketsButtonPressed()
-		{
-		}
+	private void SwitcPages(DrawSummonPage pages)
+	{
+	}
 
-		public void OnSummonPointExchangeButtonPressed()
-		{
-		}
+	private void SetupByItemData(SummonTopItemData itemData, SummonTopItemData.ButtonType buttonType)
+	{
+	}
+
+	public static bool DoesShowSpecifiedCommcialTransactionOnDiamondConsume()
+	{
+		return default(bool);
+	}
+
+	private void SetSpecifiedCommcialTransactionAct(SummonTopItemData itemData)
+	{
+	}
+
+	public void SetContentOverSummonPoint(SummonTopItemData itemData)
+	{
+	}
+
+	private void DisplayInsufficientInfo(bool hasEnoughStone, bool hasEnoughPaidStone, bool isSelectable, bool isUsingTicket, int afterCount, int afterPaidCount, bool isExchangeSummon)
+	{
+	}
+
+	public void SummonPointIcon()
+	{
+	}
+
+	private void OnStoneOKButtonClicked()
+	{
+	}
+
+	private void OnTicketOKButtonClicked()
+	{
+	}
+
+	public void OnOKButtonClicked()
+	{
+	}
+
+	public void OnStoneOKButtonPressed()
+	{
+	}
+
+	public void OnPaidStoneOKButtonPressed()
+	{
+	}
+
+	public void OnCloseButtonClicked()
+	{
+	}
+
+	public void ClosePopup([Optional] Action onFinished)
+	{
+	}
+
+	public void OnValueChanged(float f)
+	{
+	}
+
+	public void OnMaxValueChange()
+	{
+	}
+
+	public void OnSummonSingleTicketsButtonPressed()
+	{
+	}
+
+	public void OnSummonMultiTicketsButtonPressed()
+	{
+	}
+
+	public void OnSummonPointExchangeButtonPressed()
+	{
+	}
+
+	public void OnSpecifiedCommercialTransactionActPressed()
+	{
 	}
 }

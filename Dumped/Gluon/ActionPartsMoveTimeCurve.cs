@@ -1,50 +1,49 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsMoveTimeCurve : ActionParts
 {
-	public class ActionPartsMoveTimeCurve : ActionParts
+	private readonly MoveTimeCurveData _partsData;
+
+	private ActionMoveTimeCurve _move;
+
+	public ActionPartsMoveTimeCurve(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly MoveTimeCurveData _partsData;
+	}
 
-		private ActionMoveTimeCurve _move;
+	public override void Clear()
+	{
+	}
 
-		public ActionPartsMoveTimeCurve(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Stop()
+	{
+	}
 
-		protected override void OnFinish()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Stop()
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override bool OnFixedUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	private void CalcDynamicDistance(ref Vector3 distance)
+	{
+	}
 
-		protected override bool OnFixedUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		private void CalcDynamicDistance(ref Vector3 distance)
-		{
-		}
-
-		private void CalcDynamicHeight(ref float height)
-		{
-		}
+	private void CalcDynamicHeight(ref float height)
+	{
 	}
 }

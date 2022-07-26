@@ -3,83 +3,82 @@ using Gluon.Dungeon;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Gluon
+namespace Gluon;
+
+public class Dmode3dBgManager : SingletonMonoBehaviour<Dmode3dBgManager>
 {
-	public class Dmode3dBgManager : SingletonMonoBehaviour<Dmode3dBgManager>
+	public PartyBgContent currentBgContent;
+
+	public PartyBgContent nextBgContent;
+
+	private string lastLightMapSceneName;
+
+	private QuestBgSceneSettingKeeper bgSettingKeeper;
+
+	public bool isSceneLoadCompleted;
+
+	public bool dontDestroyOnDestroy;
+
+	private static Scene createdScene;
+
+	private static DungeonManager.OutDesignerAreaDataCache designerAreaDataCache;
+
+	private EnvironmentMap environment;
+
+	private SceneShaderSettings sceneShaderSettings;
+
+	public static string bgFileName;
+
+	public void LoadBgScene()
 	{
-		public PartyBgContent currentBgContent;
+	}
 
-		public PartyBgContent nextBgContent;
+	public void LoadBgScene(string resourcePath, string filename, int selectQuestId)
+	{
+	}
 
-		private string lastLightMapSceneName;
+	private IEnumerator LoadBgSceneCoroutine(string resourcePath, string filename)
+	{
+		return null;
+	}
 
-		private QuestBgSceneSettingKeeper bgSettingKeeper;
+	public void ApplyBgSceneShader()
+	{
+	}
 
-		public bool isSceneLoadCompleted;
+	public bool ReloadBgFileNameFromCreatedScene()
+	{
+		return default(bool);
+	}
 
-		public bool dontDestroyOnDestroy;
+	public void ReflectBgSettings(PostEffect pe)
+	{
+	}
 
-		private static Scene createdScene;
+	private Scene GetLatestSceneByName(string filename)
+	{
+		return default(Scene);
+	}
 
-		private static DungeonManager.OutDesignerAreaDataCache designerAreaDataCache;
+	public void ShowBg()
+	{
+	}
 
-		private EnvironmentMap environment;
+	private IEnumerator ShowBgCoroutine()
+	{
+		return null;
+	}
 
-		private SceneShaderSettings sceneShaderSettings;
+	public void Destroy()
+	{
+	}
 
-		public static string bgFileName;
+	public void SetCharaLightProbeParam(GameObject character)
+	{
+	}
 
-		public void LoadBgScene()
-		{
-		}
-
-		public void LoadBgScene(string resourcePath, string filename, int selectQuestId)
-		{
-		}
-
-		private IEnumerator LoadBgSceneCoroutine(string resourcePath, string filename)
-		{
-			return null;
-		}
-
-		public void ApplyBgSceneShader()
-		{
-		}
-
-		public bool ReloadBgFileNameFromCreatedScene()
-		{
-			return default(bool);
-		}
-
-		public void ReflectBgSettings(PostEffect pe)
-		{
-		}
-
-		private Scene GetLatestSceneByName(string filename)
-		{
-			return default(Scene);
-		}
-
-		public void ShowBg()
-		{
-		}
-
-		private IEnumerator ShowBgCoroutine()
-		{
-			return null;
-		}
-
-		public void Destroy()
-		{
-		}
-
-		public void SetCharaLightProbeParam(GameObject character)
-		{
-		}
-
-		public IEnumerator SetCharaLightProbeParamCoroutine(GameObject character)
-		{
-			return null;
-		}
+	public IEnumerator SetCharaLightProbeParamCoroutine(GameObject character)
+	{
+		return null;
 	}
 }

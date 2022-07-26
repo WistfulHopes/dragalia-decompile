@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandSetTouchEnable : IStoryCommand
 {
-	[CommandName("touch_enable")]
-	public class StoryCommandSetTouchEnable : IStoryCommand
+	public void Start(bool enable)
 	{
-		public void Start(bool enable)
-		{
-		}
 	}
 }

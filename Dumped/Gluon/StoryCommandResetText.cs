@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandResetText : IStoryCommand
 {
-	[CommandName("reset_text")]
-	public class StoryCommandResetText : IStoryCommand
+	public void Start()
 	{
-		public void Start()
-		{
-		}
 	}
 }

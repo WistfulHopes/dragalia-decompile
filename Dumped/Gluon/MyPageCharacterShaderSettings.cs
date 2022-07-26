@@ -1,21 +1,20 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class MyPageCharacterShaderSettings : SceneShaderSettings
 {
-	[ExecuteAlways]
-	public class MyPageCharacterShaderSettings : SceneShaderSettings
+	[HideInInspector]
+	public MyPageScene scene;
+
+	private MyPageCharacterShaderSettings asset;
+
+	public void Load(MyPageCharacterShaderSettings asset)
 	{
-		[HideInInspector]
-		public MyPageScene scene;
+	}
 
-		private MyPageCharacterShaderSettings asset;
-
-		public void Load(MyPageCharacterShaderSettings asset)
-		{
-		}
-
-		public void Save()
-		{
-		}
+	public void Save()
+	{
 	}
 }

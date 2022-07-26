@@ -4,83 +4,81 @@ using System.Collections.Generic;
 using FLATOUT.Main;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeSkipFloorAnimationPlayer : MonoBehaviour
 {
-	public class DmodeSkipFloorAnimationPlayer : MonoBehaviour
+	[SerializeField]
+	private Sprite[] numberImageList;
+
+	[SerializeField]
+	private Material dmodeAtrasMaterial;
+
+	private FlMotion skipFloorMotionObj;
+
+	private FlPlane[] floorNumImageObjList;
+
+	private FlMotion floorNumMotionObj;
+
+	private Action onAnimationFinished;
+
+	private const int maxDigitsCount = 3;
+
+	private static readonly int startFloorNum;
+
+	private static readonly int countUpAnimationFrameNum;
+
+	private bool isIniaizelized;
+
+	private static Dictionary<string, int> floorNumReplaceObjDigitTable;
+
+	private static string[] floorNumAnimationDigitsLabelList;
+
+	private static readonly string floorNumMotObjName;
+
+	private static readonly string skipFloorAnimationStartLabel;
+
+	private static readonly string skipFloorAnimationCountUpLabel;
+
+	private static readonly string skipFloorAnimationSkipTextInLabel;
+
+	private static readonly string skipFloorAnimationEndLabel;
+
+	private static readonly string skipFloorAnimationPath;
+
+	private static readonly string skipSeName;
+
+	private void Start()
 	{
-		[SerializeField]
-		[Header("CountUpFloorNum")]
-		private Sprite[] numberImageList;
+	}
 
-		[SerializeField]
-		private Material dmodeAtrasMaterial;
+	private void SetupSkipFloorAnimation(FlRoot skipFloorAnimationFlRoot)
+	{
+	}
 
-		private FlMotion skipFloorMotionObj;
+	private IEnumerator CountUpFloorNum(int skipFloorNum)
+	{
+		return null;
+	}
 
-		private FlPlane[] floorNumImageObjList;
+	private void SetUpFloorNumImagePanel(int value)
+	{
+	}
 
-		private FlMotion floorNumMotionObj;
+	private void SetUpFloorNumImagePanel(int value, int digitsCount)
+	{
+	}
 
-		private Action onAnimationFinished;
+	public void AddOnAnimationFinished(Action callback)
+	{
+	}
 
-		private const int maxDigitsCount = 3;
+	public void SetupSkipFloorNum(int skipFloorNum)
+	{
+	}
 
-		private static readonly int startFloorNum;
-
-		private static readonly int countUpAnimationFrameNum;
-
-		private bool isIniaizelized;
-
-		private static Dictionary<string, int> floorNumReplaceObjDigitTable;
-
-		private static string[] floorNumAnimationDigitsLabelList;
-
-		private static readonly string floorNumMotObjName;
-
-		private static readonly string skipFloorAnimationStartLabel;
-
-		private static readonly string skipFloorAnimationCountUpLabel;
-
-		private static readonly string skipFloorAnimationSkipTextInLabel;
-
-		private static readonly string skipFloorAnimationEndLabel;
-
-		private static readonly string skipFloorAnimationPath;
-
-		private static readonly string skipSeName;
-
-		private void Start()
-		{
-		}
-
-		private void SetupSkipFloorAnimation(FlRoot skipFloorAnimationFlRoot)
-		{
-		}
-
-		private IEnumerator CountUpFloorNum(int skipFloorNum)
-		{
-			return null;
-		}
-
-		private void SetUpFloorNumImagePanel(int value)
-		{
-		}
-
-		private void SetUpFloorNumImagePanel(int value, int digitsCount)
-		{
-		}
-
-		public void AddOnAnimationFinished(Action callback)
-		{
-		}
-
-		public void SetupSkipFloorNum(int skipFloorNum)
-		{
-		}
-
-		public IEnumerator StartAnimation()
-		{
-			return null;
-		}
+	public IEnumerator StartAnimation()
+	{
+		return null;
 	}
 }

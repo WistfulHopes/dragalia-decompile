@@ -1,19 +1,18 @@
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateEscapeMarker : PlayerStateBase
 {
-	public class PlayerStateEscapeMarker : PlayerStateBase
+	public ChargeMarker marker;
+
+	public override void OnStateEnter()
 	{
-		public ChargeMarker marker;
+	}
 
-		public override void OnStateEnter()
-		{
-		}
+	public override void OnStateExit()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
-
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateUpdate()
+	{
 	}
 }

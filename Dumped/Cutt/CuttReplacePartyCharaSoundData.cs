@@ -1,16 +1,15 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttReplacePartyCharaSoundData
 {
-	[Serializable]
-	public class CuttReplacePartyCharaSoundData
+	public string charaId;
+
+	public string soundLabel;
+
+	public CuttReplacePartyCharaSoundData(string id, string label)
 	{
-		public string charaId;
-
-		public string soundLabel;
-
-		public CuttReplacePartyCharaSoundData(string id, string label)
-		{
-		}
 	}
 }

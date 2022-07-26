@@ -2,35 +2,34 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FirstCharaSelectPopup : PopupBase
 {
-	public class FirstCharaSelectPopup : PopupBase
+	[SerializeField]
+	private FirstCharaSelectController tableView;
+
+	private SummonScene scene;
+
+	public static FirstCharaSelectPopup Create(SummonScene scene)
 	{
-		[SerializeField]
-		private FirstCharaSelectController tableView;
+		return null;
+	}
 
-		private SummonScene scene;
+	public void SetContent()
+	{
+	}
 
-		public static FirstCharaSelectPopup Create(SummonScene scene)
-		{
-			return null;
-		}
+	public void OnClickButton(int id)
+	{
+	}
 
-		public void SetContent()
-		{
-		}
+	public void ClosePopup([Optional] Action onFinished)
+	{
+	}
 
-		public void OnClickButton(int id)
-		{
-		}
-
-		public void ClosePopup([Optional] Action onFinished)
-		{
-		}
-
-		public static bool IsSelectCharacterAllPartyIn()
-		{
-			return default(bool);
-		}
+	public static bool IsSelectCharacterAllPartyIn()
+	{
+		return default(bool);
 	}
 }

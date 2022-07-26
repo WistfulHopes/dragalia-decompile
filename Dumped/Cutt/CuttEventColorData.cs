@@ -1,25 +1,24 @@
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public struct CuttEventColorData
 {
-	public struct CuttEventColorData
+	public float a;
+
+	public float r;
+
+	public float g;
+
+	public float b;
+
+	public static implicit operator CuttEventColorData(Color data)
 	{
-		public float a;
+		return default(CuttEventColorData);
+	}
 
-		public float r;
-
-		public float g;
-
-		public float b;
-
-		public static implicit operator CuttEventColorData(Color data)
-		{
-			return default(CuttEventColorData);
-		}
-
-		public static explicit operator Color(CuttEventColorData data)
-		{
-			return default(Color);
-		}
+	public static explicit operator Color(CuttEventColorData data)
+	{
+		return default(Color);
 	}
 }

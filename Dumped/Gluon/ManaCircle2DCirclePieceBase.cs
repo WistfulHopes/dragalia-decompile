@@ -3,67 +3,66 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public abstract class ManaCircle2DCirclePieceBase : MonoBehaviour
 {
-	public abstract class ManaCircle2DCirclePieceBase : MonoBehaviour
+	public enum PieceState
 	{
-		public enum PieceState
-		{
-			None,
-			Released,
-			Releasable,
-			NotRelease,
-			NotTarget
-		}
+		None,
+		Released,
+		Releasable,
+		NotRelease,
+		NotTarget
+	}
 
-		public PieceState nowState;
+	public PieceState nowState;
 
-		protected Transform effectBase;
+	protected Transform effectBase;
 
-		protected GrowthManaCircleModel model;
+	protected GrowthManaCircleModel model;
 
-		protected Image pieceIcon;
+	protected Image pieceIcon;
 
-		protected int circleIndex;
+	protected int circleIndex;
 
-		private GameObject releasableEffectObject;
+	private GameObject releasableEffectObject;
 
-		private Button iconButton;
+	private Button iconButton;
 
-		public abstract void UpdatePieceState();
+	public abstract void UpdatePieceState();
 
-		protected abstract void PieceIconPressedCallBack();
+	protected abstract void PieceIconPressedCallBack();
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void InitPiece(GrowthManaCircleModel model, int circleIndex)
-		{
-		}
+	public void InitPiece(GrowthManaCircleModel model, int circleIndex)
+	{
+	}
 
-		public void UpdatePieceIcon()
-		{
-		}
+	public void UpdatePieceIcon()
+	{
+	}
 
-		public void OnPieceIconPressed()
-		{
-		}
+	public void OnPieceIconPressed()
+	{
+	}
 
-		public void PlayReleaseEffect(GrowthManaCircle2DScene scene, [Optional] Action onCompleteCallBack)
-		{
-		}
+	public void PlayReleaseEffect(GrowthManaCircle2DScene scene, [Optional] Action onCompleteCallBack)
+	{
+	}
 
-		private void PlayReleasablePieceEffect()
-		{
-		}
+	private void PlayReleasablePieceEffect()
+	{
+	}
 
-		private void DestroyReleasablePieceEffect()
-		{
-		}
+	private void DestroyReleasablePieceEffect()
+	{
+	}
 
-		public void SetEnableIconButton(bool enable)
-		{
-		}
+	public void SetEnableIconButton(bool enable)
+	{
 	}
 }

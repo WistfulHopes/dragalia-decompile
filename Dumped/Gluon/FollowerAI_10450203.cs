@@ -1,20 +1,19 @@
-namespace Gluon
+namespace Gluon;
+
+public class FollowerAI_10450203 : FollowerAIBase
 {
-	public class FollowerAI_10450203 : FollowerAIBase
+	public override bool CheckAndSwitchMode(PlayerCharacter owner, CharacterBase target)
 	{
-		public override bool CheckAndSwitchMode(PlayerCharacter owner, CharacterBase target)
-		{
-			return default(bool);
-		}
+		return default(bool);
+	}
 
-		public override bool IsEnableSkill1(PlayerCharacter owner, CharacterBase target)
-		{
-			return default(bool);
-		}
+	public override bool IsEnableSkill1(PlayerCharacter owner, CharacterBase target)
+	{
+		return default(bool);
+	}
 
-		public override bool IsEnableSkill2(PlayerCharacter owner, CharacterBase target)
-		{
-			return default(bool);
-		}
+	public override bool IsEnableSkill2(PlayerCharacter owner, CharacterBase target)
+	{
+		return default(bool);
 	}
 }

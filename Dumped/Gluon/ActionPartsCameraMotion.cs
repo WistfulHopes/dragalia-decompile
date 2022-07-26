@@ -1,17 +1,16 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsCameraMotion : ActionParts
 {
-	public class ActionPartsCameraMotion : ActionParts
+	private readonly CameraMotionData _partsData;
+
+	public ActionPartsCameraMotion(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly CameraMotionData _partsData;
+	}
 
-		public ActionPartsCameraMotion(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

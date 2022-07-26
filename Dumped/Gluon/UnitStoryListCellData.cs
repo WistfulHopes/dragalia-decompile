@@ -1,30 +1,29 @@
 using Gluon.Master;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class UnitStoryListCellData
 {
-	public class UnitStoryListCellData
-	{
-		public UnitStoryElement storyElement;
+	public UnitStoryElement storyElement;
 
-		public UnitStoryGroupElement groupElement;
+	public UnitStoryGroupElement groupElement;
 
-		public string triggerStoryTitle;
+	public string triggerStoryTitle;
 
-		public bool isNew;
+	public bool isNew;
 
-		public bool isLock;
+	public bool isLock;
 
-		public int unlockNum;
+	public int unlockNum;
 
-		public CharaDataElement charaElement;
+	public CharaDataElement charaElement;
 
-		public int isPickup;
+	public int isPickup;
 
-		public CastleStoryElement castleStoryElement;
+	public CastleStoryElement castleStoryElement;
 
-		public bool isShortage;
+	public bool isShortage;
 
-		public UnityAction<int> callback;
-	}
+	public UnityAction<int> callback;
 }

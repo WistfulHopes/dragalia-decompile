@@ -1,32 +1,31 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeStoneShopView : ShopTradePanelBase
 {
-	public class ShopTradeStoneShopView : ShopTradePanelBase
+	public Transform frameParent;
+
+	public RectTransform referenceRect;
+
+	public static ShopTradeStoneShopView Create(Transform parent, ShopTradeScene scene)
 	{
-		public Transform frameParent;
+		return null;
+	}
 
-		public RectTransform referenceRect;
+	private void Start()
+	{
+	}
 
-		public static ShopTradeStoneShopView Create(Transform parent, ShopTradeScene scene)
-		{
-			return null;
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	public void ReloadPage()
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
-
-		public void ReloadPage()
-		{
-		}
-
-		public override void RefreshCurrentPage()
-		{
-		}
+	public override void RefreshCurrentPage()
+	{
 	}
 }

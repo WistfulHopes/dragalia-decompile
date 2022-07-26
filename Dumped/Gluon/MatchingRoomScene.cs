@@ -6,160 +6,159 @@ using Cute.Cri;
 using UniRx.Async;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingRoomScene : SceneBase
 {
-	public class MatchingRoomScene : SceneBase
+	public enum MatchingReturToType
 	{
-		public enum MatchingReturToType
+		None,
+		HostQuestSelect,
+		GuestJoinCoop,
+		GuestQuestSelect,
+		GuestGuild
+	}
+
+	public Camera mainCamera;
+
+	[HideInInspector]
+	public MatchingRoomCanvas matchingRoomCanvas;
+
+	private readonly string mainCanvasPath;
+
+	public static MatchingReturToType returnFlag;
+
+	private static MatchingReturToType _savedReturnFlag;
+
+	public static bool isExecutedBgLightProbesTetrahedralize;
+
+	private AudioPlayback bgmPlayback;
+
+	private GameObject mainCanvasObj;
+
+	private PartyScene partyScene;
+
+	private int questId;
+
+	private Canvas canvas;
+
+	private List<MatchingRoomCharacterModelLoadTask> loadTaskList;
+
+	private const string defaultBgm = "BGM_OUT_0003_01";
+
+	private readonly string stampVoice;
+
+	private bool _isGotoPartyScene;
+
+	private bool beforeIsShowWeaponSkin;
+
+	public static MatchingReturToType savedReturnFlag
+	{
+		get
 		{
-			None,
-			HostQuestSelect,
-			GuestJoinCoop,
-			GuestQuestSelect,
-			GuestGuild
+			return default(MatchingReturToType);
 		}
-
-		public Camera mainCamera;
-
-		[HideInInspector]
-		public MatchingRoomCanvas matchingRoomCanvas;
-
-		private readonly string mainCanvasPath;
-
-		public static MatchingReturToType returnFlag;
-
-		private static MatchingReturToType _savedReturnFlag;
-
-		public static bool isExecutedBgLightProbesTetrahedralize;
-
-		private AudioPlayback bgmPlayback;
-
-		private GameObject mainCanvasObj;
-
-		private PartyScene partyScene;
-
-		private int questId;
-
-		private Canvas canvas;
-
-		private List<MatchingRoomCharacterModelLoadTask> loadTaskList;
-
-		private const string defaultBgm = "BGM_OUT_0003_01";
-
-		private readonly string stampVoice;
-
-		private bool _isGotoPartyScene;
-
-		private bool beforeIsShowWeaponSkin;
-
-		public static MatchingReturToType savedReturnFlag
-		{
-			get
-			{
-				return default(MatchingReturToType);
-			}
-			set
-			{
-			}
-		}
-
-		public bool isGoToPartyScene
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		private void Awake()
+		set
 		{
 		}
+	}
 
-		private bool IsValidPlayFlow()
+	public bool isGoToPartyScene
+	{
+		get
 		{
 			return default(bool);
 		}
-
-		private IEnumerator Start()
-		{
-			return null;
-		}
-
-		private void Update()
+		set
 		{
 		}
+	}
 
-		public static void RemoveReturnFlagForQuest()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private IEnumerator SetupRenderBg()
-		{
-			return null;
-		}
+	private bool IsValidPlayFlow()
+	{
+		return default(bool);
+	}
 
-		public static UniTask LoadMatchingRoomBg(int questId, bool needLightProbeseTetrahedralize)
-		{
-			return default(UniTask);
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		public void OnInsertCharacter(int index, MatchingService.Room myRoom, int playerIndex, int memberIndex, bool isPlayVoice, int delayIndex = 0)
-		{
-		}
+	private void Update()
+	{
+	}
 
-		public void OnRemoveCharacter(int index, MatchingService.Room myRoom, int delayIndex = 0)
-		{
-		}
+	public static void RemoveReturnFlagForQuest()
+	{
+	}
 
-		public void OnReplaceCharacter(int index, MatchingService.Room myRoom, int playerIndex, int memberIndex, bool isPlayVoice, int delayIndex = 0)
-		{
-		}
+	private IEnumerator SetupRenderBg()
+	{
+		return null;
+	}
 
-		public void OnReplacePlayerAndCharacter(int index, MatchingService.Room myRoom, int playerIndex, int memberIndex, bool isPlayVoice, int delayIndex = 0)
-		{
-		}
+	public static UniTask LoadMatchingRoomBg(int questId, bool needLightProbeseTetrahedralize)
+	{
+		return default(UniTask);
+	}
 
-		public void UpdateCharacterInfoOnly(int index, MatchingService.Room myRoom, int playerIndex, int memberIndex)
-		{
-		}
+	public void OnInsertCharacter(int index, MatchingService.Room myRoom, int playerIndex, int memberIndex, bool isPlayVoice, int delayIndex = 0)
+	{
+	}
 
-		public void LandCharacter(int positionIndex, MatchingRoomPlayerData playerData, int memberIndex, bool isPlayCharaVoice, Action<GameObject> onLoaded)
-		{
-		}
+	public void OnRemoveCharacter(int index, MatchingService.Room myRoom, int delayIndex = 0)
+	{
+	}
 
-		public void TakeOffCharacter(int positionIndex)
-		{
-		}
+	public void OnReplaceCharacter(int index, MatchingService.Room myRoom, int playerIndex, int memberIndex, bool isPlayVoice, int delayIndex = 0)
+	{
+	}
 
-		public override void OnBeforeLeaving()
-		{
-		}
+	public void OnReplacePlayerAndCharacter(int index, MatchingService.Room myRoom, int playerIndex, int memberIndex, bool isPlayVoice, int delayIndex = 0)
+	{
+	}
 
-		public static void OnTryExitFromMatchingScene(Action onOK, [Optional] Action onCancel, bool isExitFromMatchingRoomButton = false)
-		{
-		}
+	public void UpdateCharacterInfoOnly(int index, MatchingService.Room myRoom, int playerIndex, int memberIndex)
+	{
+	}
 
-		private void OnChangeWeaponSkinSetting()
-		{
-		}
+	public void LandCharacter(int positionIndex, MatchingRoomPlayerData playerData, int memberIndex, bool isPlayCharaVoice, Action<GameObject> onLoaded)
+	{
+	}
 
-		public static void MatchingServiceDestroy()
-		{
-		}
+	public void TakeOffCharacter(int positionIndex)
+	{
+	}
 
-		public static void OnGuestExitToList()
-		{
-		}
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		public void SetupTutorial()
-		{
-		}
+	public static void OnTryExitFromMatchingScene(Action onOK, [Optional] Action onCancel, bool isExitFromMatchingRoomButton = false)
+	{
+	}
 
-		public static void ClearMatchingRoomBgTetrahedralizedFlag()
-		{
-		}
+	private void OnChangeWeaponSkinSetting()
+	{
+	}
+
+	public static void MatchingServiceDestroy()
+	{
+	}
+
+	public static void OnGuestExitToList()
+	{
+	}
+
+	public void SetupTutorial()
+	{
+	}
+
+	public static void ClearMatchingRoomBgTetrahedralizedFlag()
+	{
 	}
 }

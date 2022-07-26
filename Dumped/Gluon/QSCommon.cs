@@ -1,38 +1,37 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QSCommon : MonoBehaviour
 {
-	public class QSCommon : MonoBehaviour
+	public QuestSelectScene sceneObj
 	{
-		public QuestSelectScene sceneObj
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		public QuestMapShaderParamSetter mapShaderParamSetter
+	public QuestMapShaderParamSetter mapShaderParamSetter
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		public virtual void Reset()
-		{
-		}
+	public virtual void Reset()
+	{
 	}
 }

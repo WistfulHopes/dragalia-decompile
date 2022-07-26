@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum UseMaterialType
 {
-	public enum UseMaterialType
-	{
-		None,
-		Item,
-		BaseEqualType
-	}
+	None,
+	Item,
+	BaseEqualType
 }

@@ -1,16 +1,15 @@
-namespace XLua
+namespace XLua;
+
+internal sealed class LuaIndexes
 {
-	internal sealed class LuaIndexes
+	public static int LUA_REGISTRYINDEX
 	{
-		public static int LUA_REGISTRYINDEX
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
+		}
+		set
+		{
 		}
 	}
 }

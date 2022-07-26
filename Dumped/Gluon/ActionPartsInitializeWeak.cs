@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsInitializeWeak : ActionParts
 {
-	public class ActionPartsInitializeWeak : ActionParts
+	private readonly InitializeWeakData _partsData;
+
+	private bool _isInitializeWeakDone;
+
+	public ActionPartsInitializeWeak(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly InitializeWeakData _partsData;
+	}
 
-		private bool _isInitializeWeakDone;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public ActionPartsInitializeWeak(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
-
-		private void InitializeWeak()
-		{
-		}
+	private void InitializeWeak()
+	{
 	}
 }

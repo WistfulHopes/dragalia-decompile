@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventRankingListBase : MonoBehaviour
 {
-	public class EventRankingListBase : MonoBehaviour
-	{
-		public UnityAction<EventRankingListCellData> CellPressCallBack;
-	}
+	public UnityAction<EventRankingListCellData> CellPressCallBack;
 }

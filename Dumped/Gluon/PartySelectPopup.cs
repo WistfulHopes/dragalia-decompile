@@ -3,90 +3,89 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartySelectPopup : PopupBase
 {
-	public class PartySelectPopup : PopupBase
+	[SerializeField]
+	private PartySelectPopupCell[] cells;
+
+	public Image partyGroupIcon;
+
+	public Sprite[] partyGroupSprites;
+
+	public Text partyNameText;
+
+	[SerializeField]
+	private Image partyPowerBgImage;
+
+	[SerializeField]
+	private Image raidPartyPowerBgImage;
+
+	[SerializeField]
+	private Text powerText;
+
+	[SerializeField]
+	private GameObject pagerParent;
+
+	[SerializeField]
+	private float pagerWidth;
+
+	[SerializeField]
+	private GameObject editSkillPanel;
+
+	private int selectPartyNo;
+
+	private int selectPartyGroup;
+
+	private bool isSixteenRandomMatching;
+
+	private bool isRaidBoostOn;
+
+	private bool showFullPartyPower;
+
+	private List<PartyPager> pagers;
+
+	private UnityAction onPartyChanged;
+
+	private const string popupPrefabPath = "Prefabs/OutGame/QuestSupportSelect/Popup/PartySelectPopup";
+
+	private const string raidPopupPrefabPath = "Prefabs/OutGame/QuestSupportSelect/Popup/RaidPartySelectPopup";
+
+	public static PartySelectPopup Create(bool useRaidPartySelectPopup, bool isSixteenRandomMatching, bool isRaidBoostOn, bool showFullPartyPower, UnityAction onPartyChanged)
 	{
-		[SerializeField]
-		private PartySelectPopupCell[] cells;
+		return null;
+	}
 
-		public Image partyGroupIcon;
+	private void Initialize(bool isSixteenRandomMatching, bool isRaidBoostOn, bool showFullPartyPower, UnityAction onPartyChanged)
+	{
+	}
 
-		public Sprite[] partyGroupSprites;
+	private void UpdatePartyData()
+	{
+	}
 
-		public Text partyNameText;
+	public void OnOk()
+	{
+	}
 
-		[SerializeField]
-		private Image partyPowerBgImage;
+	public void OnCloseButton()
+	{
+	}
 
-		[SerializeField]
-		private Image raidPartyPowerBgImage;
+	private void OnPagerPressed(int pressedPagerIndex)
+	{
+	}
 
-		[SerializeField]
-		private Text powerText;
+	public void OnPartyChangeButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private GameObject pagerParent;
+	public void OnArrowPressed(int increment)
+	{
+	}
 
-		[SerializeField]
-		private float pagerWidth;
-
-		[SerializeField]
-		private GameObject editSkillPanel;
-
-		private int selectPartyNo;
-
-		private int selectPartyGroup;
-
-		private bool isSixteenRandomMatching;
-
-		private bool isRaidBoostOn;
-
-		private bool showFullPartyPower;
-
-		private List<PartyPager> pagers;
-
-		private UnityAction onPartyChanged;
-
-		private const string popupPrefabPath = "Prefabs/OutGame/QuestSupportSelect/Popup/PartySelectPopup";
-
-		private const string raidPopupPrefabPath = "Prefabs/OutGame/QuestSupportSelect/Popup/RaidPartySelectPopup";
-
-		public static PartySelectPopup Create(bool useRaidPartySelectPopup, bool isSixteenRandomMatching, bool isRaidBoostOn, bool showFullPartyPower, UnityAction onPartyChanged)
-		{
-			return null;
-		}
-
-		private void Initialize(bool isSixteenRandomMatching, bool isRaidBoostOn, bool showFullPartyPower, UnityAction onPartyChanged)
-		{
-		}
-
-		private void UpdatePartyData()
-		{
-		}
-
-		public void OnOk()
-		{
-		}
-
-		public void OnCloseButton()
-		{
-		}
-
-		private void OnPagerPressed(int pressedPagerIndex)
-		{
-		}
-
-		public void OnPartyChangeButtonPressed()
-		{
-		}
-
-		public void OnArrowPressed(int increment)
-		{
-		}
-
-		private void ReloadPager()
-		{
-		}
+	private void ReloadPager()
+	{
 	}
 }

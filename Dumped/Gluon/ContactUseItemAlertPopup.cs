@@ -2,39 +2,38 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactUseItemAlertPopup : PopupBase
 {
-	public class ContactUseItemAlertPopup : PopupBase
+	[SerializeField]
+	private CommonIcon beforeIcon;
+
+	[SerializeField]
+	private CommonIcon afterIcon;
+
+	[SerializeField]
+	private Text messageText;
+
+	[SerializeField]
+	private Text overText;
+
+	private UnityAction okButtonAction;
+
+	public static ContactUseItemAlertPopup Create()
 	{
-		[SerializeField]
-		private CommonIcon beforeIcon;
+		return null;
+	}
 
-		[SerializeField]
-		private CommonIcon afterIcon;
+	public void Setup(int dragonId, int currentLevel, int afterLevel, int overValue, UnityAction onPlessOk, bool isWalker)
+	{
+	}
 
-		[SerializeField]
-		private Text messageText;
+	public void OnPresseOk()
+	{
+	}
 
-		[SerializeField]
-		private Text overText;
-
-		private UnityAction okButtonAction;
-
-		public static ContactUseItemAlertPopup Create()
-		{
-			return null;
-		}
-
-		public void Setup(int dragonId, int currentLevel, int afterLevel, int overValue, UnityAction onPlessOk, bool isWalker)
-		{
-		}
-
-		public void OnPresseOk()
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
+	protected override void OnDestroy()
+	{
 	}
 }

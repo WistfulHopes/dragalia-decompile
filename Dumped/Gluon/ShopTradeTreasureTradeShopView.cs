@@ -2,56 +2,53 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeTreasureTradeShopView : ShopTradePanelBase
 {
-	public class ShopTradeTreasureTradeShopView : ShopTradePanelBase
+	[SerializeField]
+	private ShopTradeTableViewController tableview;
+
+	[SerializeField]
+	public TabBase[] tabControllers;
+
+	[SerializeField]
+	public RectTransform frameDialogRectTransform;
+
+	private List<ShopTradeTableViewController> tableViewList;
+
+	private TabBase usingTabBase;
+
+	private static Action onHttpDone;
+
+	private ShopTradeProductData.TradeShopItemData selectedData;
+
+	public static ShopTradeTreasureTradeShopView Create(Transform parent, ShopTradeScene scene)
 	{
-		[SerializeField]
-		[Header("TableView")]
-		private ShopTradeTableViewController tableview;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("TabControl")]
-		public TabBase[] tabControllers;
+	private static void ReloadData()
+	{
+	}
 
-		[SerializeField]
-		public RectTransform frameDialogRectTransform;
+	private void Awake()
+	{
+	}
 
-		private List<ShopTradeTableViewController> tableViewList;
+	private void Start()
+	{
+	}
 
-		private TabBase usingTabBase;
+	public override void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data)
+	{
+	}
 
-		private static Action onHttpDone;
+	public void ReloadPage()
+	{
+	}
 
-		private ShopTradeProductData.TradeShopItemData selectedData;
-
-		public static ShopTradeTreasureTradeShopView Create(Transform parent, ShopTradeScene scene)
-		{
-			return null;
-		}
-
-		private static void ReloadData()
-		{
-		}
-
-		private void Awake()
-		{
-		}
-
-		private void Start()
-		{
-		}
-
-		public override void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data)
-		{
-		}
-
-		public void ReloadPage()
-		{
-		}
-
-		public override void RefreshCurrentPage()
-		{
-		}
+	public override void RefreshCurrentPage()
+	{
 	}
 }

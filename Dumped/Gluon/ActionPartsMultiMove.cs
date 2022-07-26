@@ -2,96 +2,95 @@ using System.Collections.Generic;
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsMultiMove : ActionParts
 {
-	public class ActionPartsMultiMove : ActionParts
+	public enum TargetType
 	{
-		public enum TargetType
-		{
-			FixedPosition
-		}
+		FixedPosition
+	}
 
-		public enum BaseType
-		{
-			AreaAnchor,
-			Owner
-		}
+	public enum BaseType
+	{
+		AreaAnchor,
+		Owner
+	}
 
-		public enum State
-		{
-			Idle,
-			Turn,
-			BeginMove,
-			Move,
-			EndMove,
-			Wait,
-			End
-		}
+	public enum State
+	{
+		Idle,
+		Turn,
+		BeginMove,
+		Move,
+		EndMove,
+		Wait,
+		End
+	}
 
-		private readonly MultiMoveData _partsData;
+	private readonly MultiMoveData _partsData;
 
-		private State _state;
+	private State _state;
 
-		private List<Vector3> _listTarget;
+	private List<Vector3> _listTarget;
 
-		private int _targetingCnt;
+	private int _targetingCnt;
 
-		private float _timer;
+	private float _timer;
 
-		private ActionMove _move;
+	private ActionMove _move;
 
-		private int _moveProperty;
+	private int _moveProperty;
 
-		private Vector3 _preForward;
+	private Vector3 _preForward;
 
-		public ActionPartsMultiMove(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsMultiMove(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		private void ProcClear()
-		{
-		}
+	private void ProcClear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		protected override bool OnFixedUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnFixedUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		private void ProcTurn()
-		{
-		}
+	private void ProcTurn()
+	{
+	}
 
-		private void ProcBeginMove()
-		{
-		}
+	private void ProcBeginMove()
+	{
+	}
 
-		private void ProcMove(float delta)
-		{
-		}
+	private void ProcMove(float delta)
+	{
+	}
 
-		private void ProcEndMove()
-		{
-		}
+	private void ProcEndMove()
+	{
+	}
 
-		private void CreateTargetList()
-		{
-		}
+	private void CreateTargetList()
+	{
+	}
 
-		private void MoveToEndPos()
-		{
-		}
+	private void MoveToEndPos()
+	{
 	}
 }

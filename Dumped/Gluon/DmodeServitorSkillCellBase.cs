@@ -1,29 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeServitorSkillCellBase : TableViewCell<DmodeServitorSkillCellData>
 {
-	public class DmodeServitorSkillCellBase : TableViewCell<DmodeServitorSkillCellData>
+	[SerializeField]
+	private CommonIcon commonIcon;
+
+	[SerializeField]
+	private Text nameText;
+
+	[SerializeField]
+	private Text detailText;
+
+	public override void UpdateContent(DmodeServitorSkillCellData itemData)
 	{
-		[SerializeField]
-		private CommonIcon commonIcon;
+	}
 
-		[SerializeField]
-		private Text nameText;
+	public virtual void UpdateContent()
+	{
+	}
 
-		[SerializeField]
-		private Text detailText;
-
-		public override void UpdateContent(DmodeServitorSkillCellData itemData)
-		{
-		}
-
-		public virtual void UpdateContent()
-		{
-		}
-
-		public void OnSkillIcon()
-		{
-		}
+	public void OnSkillIcon()
+	{
 	}
 }

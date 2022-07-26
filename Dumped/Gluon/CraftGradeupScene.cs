@@ -4,135 +4,134 @@ using FLATOUT.Main;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CraftGradeupScene : SceneBase
 {
-	public class CraftGradeupScene : SceneBase
+	public static int gradeupTargetId;
+
+	public bool isChildData;
+
+	public CraftGradeupCanvas mainCanvas;
+
+	public Camera uiCamera;
+
+	public Camera flashCamera;
+
+	public Canvas bgCanvas;
+
+	public Camera frontEffectCamera;
+
+	public Camera backEffectCamera;
+
+	[SerializeField]
+	private Transform overlayParent;
+
+	private BaseCanvasContents baseCanvasContents;
+
+	private BackButton backButton;
+
+	private GameObject craftAnimation;
+
+	private GameObject craftHeaderAnimation;
+
+	private EffectObject frontEffectObject;
+
+	private EffectObject backEffectObject;
+
+	private GameObject weaponModel;
+
+	private bool isTapAndBackKeyLockFlag;
+
+	private List<FlMotion> outMotionList;
+
+	private int effectSkipSortOderKey;
+
+	private bool isGoToPowerup;
+
+	private Canvas uiCanvas;
+
+	public const string basePrefabPath = "Prefabs/OutGame/Growth/";
+
+	private UnitDetailUnitShaderSettings growthWeaponShaderSetting;
+
+	private static readonly string shaderSettingPath;
+
+	private void Awake()
 	{
-		public static int gradeupTargetId;
+	}
 
-		public bool isChildData;
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		public CraftGradeupCanvas mainCanvas;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		public Camera uiCamera;
+	private void OnInitReady()
+	{
+	}
 
-		public Camera flashCamera;
+	private IEnumerator LoadMaterialData()
+	{
+		return null;
+	}
 
-		public Canvas bgCanvas;
+	private void OnEnterScene()
+	{
+	}
 
-		public Camera frontEffectCamera;
+	private void OnDestroy()
+	{
+	}
 
-		public Camera backEffectCamera;
+	public override void OnPresentReceived()
+	{
+	}
 
-		[SerializeField]
-		private Transform overlayParent;
+	public void BackButtonPressed()
+	{
+	}
 
-		private BaseCanvasContents baseCanvasContents;
+	private void OnCraftButtonPressed()
+	{
+	}
 
-		private BackButton backButton;
+	private GrowMaterialList[] GetMaterialListData()
+	{
+		return null;
+	}
 
-		private GameObject craftAnimation;
+	private AtgenWeaponSetList[] GetMaterialWeaponSendData()
+	{
+		return null;
+	}
 
-		private GameObject craftHeaderAnimation;
+	private void ShowCraftEffect()
+	{
+	}
 
-		private EffectObject frontEffectObject;
+	private IEnumerator StartAnimationDelay(FlMotion craftAnimeMotion, int matCount, int rarity)
+	{
+		return null;
+	}
 
-		private EffectObject backEffectObject;
+	private IEnumerator StartHeaderAnimationDelay()
+	{
+		return null;
+	}
 
-		private GameObject weaponModel;
+	private void SetupAwakeEffect()
+	{
+	}
 
-		private bool isTapAndBackKeyLockFlag;
+	private void CloseCraftEffect()
+	{
+	}
 
-		private List<FlMotion> outMotionList;
-
-		private int effectSkipSortOderKey;
-
-		private bool isGoToPowerup;
-
-		private Canvas uiCanvas;
-
-		public const string basePrefabPath = "Prefabs/OutGame/Growth/";
-
-		private UnitDetailUnitShaderSettings growthWeaponShaderSetting;
-
-		private static readonly string shaderSettingPath;
-
-		private void Awake()
-		{
-		}
-
-		private IEnumerator Start()
-		{
-			return null;
-		}
-
-		private void OnPrevSceneExitDone()
-		{
-		}
-
-		private void OnInitReady()
-		{
-		}
-
-		private IEnumerator LoadMaterialData()
-		{
-			return null;
-		}
-
-		private void OnEnterScene()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public override void OnPresentReceived()
-		{
-		}
-
-		public void BackButtonPressed()
-		{
-		}
-
-		private void OnCraftButtonPressed()
-		{
-		}
-
-		private GrowMaterialList[] GetMaterialListData()
-		{
-			return null;
-		}
-
-		private AtgenWeaponSetList[] GetMaterialWeaponSendData()
-		{
-			return null;
-		}
-
-		private void ShowCraftEffect()
-		{
-		}
-
-		private IEnumerator StartAnimationDelay(FlMotion craftAnimeMotion, int matCount, int rarity)
-		{
-			return null;
-		}
-
-		private IEnumerator StartHeaderAnimationDelay()
-		{
-			return null;
-		}
-
-		private void SetupAwakeEffect()
-		{
-		}
-
-		private void CloseCraftEffect()
-		{
-		}
-
-		private void PlayNextEffect(bool isBackKey = false)
-		{
-		}
+	private void PlayNextEffect(bool isBackKey = false)
+	{
 	}
 }

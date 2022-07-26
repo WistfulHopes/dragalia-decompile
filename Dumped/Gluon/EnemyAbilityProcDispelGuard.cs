@@ -1,38 +1,37 @@
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcDispelGuard : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcDispelGuard : EnemyAbilityProcBase
+	private CharacterBase _linked;
+
+	private bool _isStopAbilityActionReserved;
+
+	private bool _isStopAbilityActionReceived;
+
+	public EnemyAbilityProcDispelGuard(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
 	{
-		private CharacterBase _linked;
+	}
 
-		private bool _isStopAbilityActionReserved;
+	public override void Play()
+	{
+	}
 
-		private bool _isStopAbilityActionReceived;
+	public override void Stop()
+	{
+	}
 
-		public EnemyAbilityProcDispelGuard(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
+	public override void OnUpdate()
+	{
+	}
 
-		public override void Play()
-		{
-		}
+	public override void OnDispel(ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void Stop()
-		{
-		}
-
-		public override void OnUpdate()
-		{
-		}
-
-		public override void OnDispel(ref EnemyAbility.Argument arg)
-		{
-		}
-
-		public override void OnRecieveCharacterState(CharacterState characterState)
-		{
-		}
+	public override void OnRecieveCharacterState(CharacterState characterState)
+	{
 	}
 }

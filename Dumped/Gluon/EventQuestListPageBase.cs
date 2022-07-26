@@ -6,120 +6,117 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventQuestListPageBase : EventQuestPageBase, ICustomMessage
 {
-	public class EventQuestListPageBase : EventQuestPageBase, ICustomMessage
+	public EventListCtrl eventListCtrl;
+
+	[SerializeField]
+	private float statusDelayTime;
+
+	[SerializeField]
+	private float statusExitDelayTime;
+
+	[SerializeField]
+	private GameObject buttonsParent;
+
+	[SerializeField]
+	private GameObject buttonsParent4;
+
+	[SerializeField]
+	private EventCommonButtonCtrl commonButtonCtrl;
+
+	[SerializeField]
+	private EventCommonButtonCtrl commonButtonCtrl4;
+
+	[SerializeField]
+	private Transform subPageContent;
+
+	[SerializeField]
+	private GameObject subPage;
+
+	[SerializeField]
+	private GameObject mainPage;
+
+	[SerializeField]
+	private UIAnimationPublisher subPageSwitchPublisher;
+
+	[SerializeField]
+	private UIAnimationPublisher mainPageSwitchPublisher;
+
+	[SerializeField]
+	private AnimationListOneCol subPageListAnimation;
+
+	private const float waitSubPageChangeTime = 0.3f;
+
+	private bool isInSubPage;
+
+	public override void OnPageBecomeActive(object data)
 	{
-		public EventListCtrl eventListCtrl;
+	}
 
-		[SerializeField]
-		private float statusDelayTime;
+	public override void OnPageBecomeInActive()
+	{
+	}
 
-		[SerializeField]
-		private float statusExitDelayTime;
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		[SerializeField]
-		private GameObject buttonsParent;
+	public void ReturnToMainPage()
+	{
+	}
 
-		[SerializeField]
-		private GameObject buttonsParent4;
+	private IEnumerator ReturnToMainPageCoroutine()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		[Header("ButtonCtrl")]
-		private EventCommonButtonCtrl commonButtonCtrl;
+	public void GoSubPage(List<QuestEventMenuElement> cellData)
+	{
+	}
 
-		[SerializeField]
-		private EventCommonButtonCtrl commonButtonCtrl4;
+	private IEnumerator GoSubPageCoroutine(List<QuestEventMenuElement> cellData)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		[Header("SubPage")]
-		private Transform subPageContent;
+	public void StartSubPageEnterAnimation(float delayTime = 0f)
+	{
+	}
 
-		[SerializeField]
-		private GameObject subPage;
+	public void StartSubPageExitAnimation(float delayTime = 0f)
+	{
+	}
 
-		[SerializeField]
-		private GameObject mainPage;
+	private void SetBackKey(UnityAction action)
+	{
+	}
 
-		[SerializeField]
-		private UIAnimationPublisher subPageSwitchPublisher;
+	public void OnBackButtonTouched()
+	{
+	}
 
-		[SerializeField]
-		private UIAnimationPublisher mainPageSwitchPublisher;
+	private IEnumerator WaitForHideButtons(float delay)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private AnimationListOneCol subPageListAnimation;
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		private const float waitSubPageChangeTime = 0.3f;
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		private bool isInSubPage;
+	public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
+	{
+		return default(bool);
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
-
-		public override void OnPageBecomeInActive()
-		{
-		}
-
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
-
-		public void ReturnToMainPage()
-		{
-		}
-
-		private IEnumerator ReturnToMainPageCoroutine()
-		{
-			return null;
-		}
-
-		public void GoSubPage(List<QuestEventMenuElement> cellData)
-		{
-		}
-
-		private IEnumerator GoSubPageCoroutine(List<QuestEventMenuElement> cellData)
-		{
-			return null;
-		}
-
-		public void StartSubPageEnterAnimation(float delayTime = 0f)
-		{
-		}
-
-		public void StartSubPageExitAnimation(float delayTime = 0f)
-		{
-		}
-
-		private void SetBackKey(UnityAction action)
-		{
-		}
-
-		public void OnBackButtonTouched()
-		{
-		}
-
-		private IEnumerator WaitForHideButtons(float delay)
-		{
-			return null;
-		}
-
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
-		{
-			return default(bool);
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

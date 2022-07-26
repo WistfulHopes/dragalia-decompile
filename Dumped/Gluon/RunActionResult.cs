@@ -1,25 +1,24 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public struct RunActionResult
 {
-	public struct RunActionResult
+	public ActionBase action;
+
+	public RunActionParameterBase param;
+
+	public RunActionResult(ActionBase action, RunActionParameterBase param)
 	{
-		public ActionBase action;
+	}
 
-		public RunActionParameterBase param;
+	public static RunActionResult Empty()
+	{
+		return default(RunActionResult);
+	}
 
-		public RunActionResult(ActionBase action, RunActionParameterBase param)
-		{
-		}
-
-		public static RunActionResult Empty()
-		{
-			return default(RunActionResult);
-		}
-
-		public bool IsEmpty()
-		{
-			return default(bool);
-		}
+	public bool IsEmpty()
+	{
+		return default(bool);
 	}
 }

@@ -1,31 +1,30 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MonsterLibraryTopScene : SceneBase
 {
-	public class MonsterLibraryTopScene : SceneBase
+	public GameObject bgPanel;
+
+	public Canvas mainCanvas;
+
+	private MonsterLibraryListController monsterLibraryListController;
+
+	private MonsterLibraryListSort nowSort;
+
+	private void Start()
 	{
-		public GameObject bgPanel;
+	}
 
-		public Canvas mainCanvas;
+	private void BackButtonPressed()
+	{
+	}
 
-		private MonsterLibraryListController monsterLibraryListController;
+	private void SortButtonPressed()
+	{
+	}
 
-		private MonsterLibraryListSort nowSort;
-
-		private void Start()
-		{
-		}
-
-		private void BackButtonPressed()
-		{
-		}
-
-		private void SortButtonPressed()
-		{
-		}
-
-		private void MonsterIconPressed(int selectMonsterID)
-		{
-		}
+	private void MonsterIconPressed(int selectMonsterID)
+	{
 	}
 }

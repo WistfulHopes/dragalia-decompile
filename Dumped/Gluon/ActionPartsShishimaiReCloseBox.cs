@@ -1,27 +1,26 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsShishimaiReCloseBox : ActionParts
 {
-	public class ActionPartsShishimaiReCloseBox : ActionParts
+	private readonly ShishimaiReCloseBoxData _partsData;
+
+	private bool _isReCloseDone;
+
+	public ActionPartsShishimaiReCloseBox(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly ShishimaiReCloseBoxData _partsData;
+	}
 
-		private bool _isReCloseDone;
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsShishimaiReCloseBox(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
-
-		private void ReClose()
-		{
-		}
+	private void ReClose()
+	{
 	}
 }

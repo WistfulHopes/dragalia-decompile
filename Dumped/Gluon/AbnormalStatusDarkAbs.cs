@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class AbnormalStatusDarkAbs : AbnormalStatusSlipBase
 {
-	public class AbnormalStatusDarkAbs : AbnormalStatusSlipBase
-	{
-	}
 }

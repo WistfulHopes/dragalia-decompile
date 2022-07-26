@@ -3,73 +3,72 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcScapegoat : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcScapegoat : EnemyAbilityProcBase
+	private float _timer;
+
+	private float _totalTime;
+
+	public List<EnemyCharacter> SubtractedTargets
 	{
-		private float _timer;
-
-		private float _totalTime;
-
-		public List<EnemyCharacter> SubtractedTargets
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public EnemyAbilityProcScapegoat(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public override void Setup()
-		{
-		}
+	public EnemyAbilityProcScapegoat(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+	{
+	}
 
-		public override void Stop()
-		{
-		}
+	public override void Setup()
+	{
+	}
 
-		public override void Play()
-		{
-		}
+	public override void Stop()
+	{
+	}
 
-		public override void OnUpdate()
-		{
-		}
+	public override void Play()
+	{
+	}
 
-		public void SetTimer(float time)
-		{
-		}
+	public override void OnUpdate()
+	{
+	}
 
-		private void ShowUI()
-		{
-		}
+	public void SetTimer(float time)
+	{
+	}
 
-		private void HideUI()
-		{
-		}
+	private void ShowUI()
+	{
+	}
 
-		private void SetUIGaugeTimer()
-		{
-		}
+	private void HideUI()
+	{
+	}
 
-		public override void CreateCharacterMarkRelationUI()
-		{
-		}
+	private void SetUIGaugeTimer()
+	{
+	}
 
-		public void OnScapegoatRites(CharacterBase enemy, string effName, int effTrigger)
-		{
-		}
+	public override void CreateCharacterMarkRelationUI()
+	{
+	}
 
-		public override void OnEnemyAbilityEvent(Gluon.Event.EnemyAbility recvData)
-		{
-		}
+	public void OnScapegoatRites(CharacterBase enemy, string effName, int effTrigger)
+	{
+	}
+
+	public override void OnEnemyAbilityEvent(Gluon.Event.EnemyAbility recvData)
+	{
 	}
 }

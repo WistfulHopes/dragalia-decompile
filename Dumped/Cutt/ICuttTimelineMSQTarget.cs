@@ -1,15 +1,14 @@
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public interface ICuttTimelineMSQTarget
 {
-	public interface ICuttTimelineMSQTarget
-	{
-		Animation cuttMSQAnimation { get; }
+	Animation cuttMSQAnimation { get; }
 
-		bool cuttMSQControlled { get; set; }
+	bool cuttMSQControlled { get; set; }
 
-		AnimationState cuttMSQCurrentAnimState { get; set; }
+	AnimationState cuttMSQCurrentAnimState { get; set; }
 
-		float cuttMSQCurrentAnimStartTime { get; set; }
-	}
+	float cuttMSQCurrentAnimStartTime { get; set; }
 }

@@ -1,23 +1,22 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsHunterHorn : ActionParts
 {
-	public class ActionPartsHunterHorn : ActionParts
+	private readonly HunterHornData _partsData;
+
+	private CollisionHitAttribute _hitAttribute;
+
+	public ActionPartsHunterHorn(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly HunterHornData _partsData;
+	}
 
-		private CollisionHitAttribute _hitAttribute;
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsHunterHorn(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
 	}
 }

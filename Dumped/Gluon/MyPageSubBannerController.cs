@@ -4,139 +4,138 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPageSubBannerController : MonoBehaviour, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
 {
-	public class MyPageSubBannerController : MonoBehaviour, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
+	public RectTransform pagerCenter;
+
+	public GameObject bannerRoot;
+
+	[HideInInspector]
+	public MyPageScene scene;
+
+	private MyPageSubBanner dummyBanner;
+
+	private List<MyPageSubBanner> banners;
+
+	private List<CommonPager> pagers;
+
+	private GameObject bannerPrefab;
+
+	private Vector2 beginDragPosition;
+
+	private bool isDragging;
+
+	private bool isAnimating;
+
+	private int currentIndex;
+
+	private int bannerCount;
+
+	private float lastMoveTime;
+
+	private const float moveInterval = 8f;
+
+	private const float bannerWidth = 280f;
+
+	private const float resolutionFixRate = 100f;
+
+	private void Awake()
 	{
-		public RectTransform pagerCenter;
+	}
 
-		public GameObject bannerRoot;
+	private IEnumerator InitCoroutine()
+	{
+		return null;
+	}
 
-		[HideInInspector]
-		public MyPageScene scene;
+	private MyPageBannerElement GetSummonBannerElement()
+	{
+		return null;
+	}
 
-		private MyPageSubBanner dummyBanner;
+	public void Reload()
+	{
+	}
 
-		private List<MyPageSubBanner> banners;
+	private void Update()
+	{
+	}
 
-		private List<CommonPager> pagers;
+	private void CreateDummyBanner()
+	{
+	}
 
-		private GameObject bannerPrefab;
+	private IEnumerator CreateDummyBannerCoroutine(MyPageBannerElement element)
+	{
+		return null;
+	}
 
-		private Vector2 beginDragPosition;
+	private void AddBanner(MyPageBannerElement element)
+	{
+	}
 
-		private bool isDragging;
+	private IEnumerator AddBannerCoroutine(MyPageSubBanner.BannerInfo info, MyPageBannerElement element)
+	{
+		return null;
+	}
 
-		private bool isAnimating;
+	public void CloneBanner(MyPageSubBanner srcBanner)
+	{
+	}
 
-		private int currentIndex;
+	public void SetBannersEnable(bool enabled)
+	{
+	}
 
-		private int bannerCount;
+	private IEnumerator SetBannerEnableCoroutine(bool enabled)
+	{
+		return null;
+	}
 
-		private float lastMoveTime;
+	private void CreatePagers(int pagerNum)
+	{
+	}
 
-		private const float moveInterval = 8f;
+	public void OnBeginDrag(PointerEventData eventData)
+	{
+	}
 
-		private const float bannerWidth = 280f;
+	public void OnDrag(PointerEventData eventData)
+	{
+	}
 
-		private const float resolutionFixRate = 100f;
+	public void OnEndDrag(PointerEventData eventData)
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public void OnPressed()
+	{
+	}
 
-		private IEnumerator InitCoroutine()
-		{
-			return null;
-		}
+	public void ShowNextStatusObject()
+	{
+	}
 
-		private MyPageBannerElement GetSummonBannerElement()
-		{
-			return null;
-		}
+	public void ShowPrevStatusObject()
+	{
+	}
 
-		public void Reload()
-		{
-		}
+	public void SetAllPageOff()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void SetPageOn(int index)
+	{
+	}
 
-		private void CreateDummyBanner()
-		{
-		}
+	private void AddBanner(MyPageSubBanner banner)
+	{
+	}
 
-		private IEnumerator CreateDummyBannerCoroutine(MyPageBannerElement element)
-		{
-			return null;
-		}
-
-		private void AddBanner(MyPageBannerElement element)
-		{
-		}
-
-		private IEnumerator AddBannerCoroutine(MyPageSubBanner.BannerInfo info, MyPageBannerElement element)
-		{
-			return null;
-		}
-
-		public void CloneBanner(MyPageSubBanner srcBanner)
-		{
-		}
-
-		public void SetBannersEnable(bool enabled)
-		{
-		}
-
-		private IEnumerator SetBannerEnableCoroutine(bool enabled)
-		{
-			return null;
-		}
-
-		private void CreatePagers(int pagerNum)
-		{
-		}
-
-		public void OnBeginDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnEndDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnPressed()
-		{
-		}
-
-		public void ShowNextStatusObject()
-		{
-		}
-
-		public void ShowPrevStatusObject()
-		{
-		}
-
-		public void SetAllPageOff()
-		{
-		}
-
-		private void SetPageOn(int index)
-		{
-		}
-
-		private void AddBanner(MyPageSubBanner banner)
-		{
-		}
-
-		public bool IsExist()
-		{
-			return default(bool);
-		}
+	public bool IsExist()
+	{
+		return default(bool);
 	}
 }

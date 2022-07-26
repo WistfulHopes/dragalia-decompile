@@ -1,32 +1,31 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FollowerStateApproach : IState<FollowerController>
 {
-	public class FollowerStateApproach : IState<FollowerController>
+	private float elapsedSec;
+
+	private bool playedEffect;
+
+	public override void OnStateEnter()
 	{
-		private float elapsedSec;
+	}
 
-		private bool playedEffect;
+	public override void OnStateExit()
+	{
+	}
 
-		public override void OnStateEnter()
-		{
-		}
+	public override void OnStateUpdate()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	private bool CheckBRItem()
+	{
+		return default(bool);
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
-
-		private bool CheckBRItem()
-		{
-			return default(bool);
-		}
-
-		private void SetMoveTarget(Vector3 moveTarget)
-		{
-		}
+	private void SetMoveTarget(Vector3 moveTarget)
+	{
 	}
 }

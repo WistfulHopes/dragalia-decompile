@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public class DmodeServitorPassiveListPopupListCellData
 {
-	public class DmodeServitorPassiveListPopupListCellData
-	{
-		public DmodeServitorPassiveType type;
+	public DmodeServitorPassiveType type;
 
-		public int level;
+	public int level;
 
-		public int sortId;
-	}
+	public int sortId;
 }

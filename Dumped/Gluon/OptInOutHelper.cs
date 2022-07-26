@@ -1,16 +1,15 @@
-namespace Gluon
+namespace Gluon;
+
+public class OptInOutHelper
 {
-	public class OptInOutHelper
+	private const string prefsKeyOptinSettingKey = "OptinSetting";
+
+	public static bool IsOptin()
 	{
-		private const string prefsKeyOptinSettingKey = "OptinSetting";
+		return default(bool);
+	}
 
-		public static bool IsOptin()
-		{
-			return default(bool);
-		}
-
-		public static void SetOptin(bool optIn)
-		{
-		}
+	public static void SetOptin(bool optIn)
+	{
 	}
 }

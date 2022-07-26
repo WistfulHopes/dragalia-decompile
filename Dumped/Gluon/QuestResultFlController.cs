@@ -3,85 +3,84 @@ using System.Runtime.CompilerServices;
 using FLATOUT.Main;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultFlController
 {
-	public class QuestResultFlController
+	private FlashPlayer _flashPlayer;
+
+	private FlMotion rootMotion;
+
+	private FlMotion _effectTriggerMotion;
+
+	private FlMotion numberTargetMotion;
+
+	private int flashNumberValue;
+
+	private List<FlMotion> effectFlMotionList;
+
+	public FlashPlayer flashPlayer
 	{
-		private FlashPlayer _flashPlayer;
-
-		private FlMotion rootMotion;
-
-		private FlMotion _effectTriggerMotion;
-
-		private FlMotion numberTargetMotion;
-
-		private int flashNumberValue;
-
-		private List<FlMotion> effectFlMotionList;
-
-		public FlashPlayer flashPlayer
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		public bool isInit
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public FlMotion effectTriggerMotion
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		private FlMotion GetMotion(string motionName)
+		get
 		{
 			return null;
 		}
-
-		private void SetEffectFlMotion(string trigger, string[] effects)
+		set
 		{
 		}
+	}
 
-		public bool LoadFlashPrefab(string path, Transform parent, string triggerName, string[] effects, int numberValue, string numberTargetName, int numberTargetValue, int sortingOrder)
+	public bool isInit
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public void FlEnter()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void FlExit()
+	public FlMotion effectTriggerMotion
+	{
+		get
+		{
+			return null;
+		}
+		set
 		{
 		}
+	}
 
-		public void FlEffectStart()
-		{
-		}
+	private FlMotion GetMotion(string motionName)
+	{
+		return null;
+	}
 
-		public void FlEffectReset()
-		{
-		}
+	private void SetEffectFlMotion(string trigger, string[] effects)
+	{
+	}
+
+	public bool LoadFlashPrefab(string path, Transform parent, string triggerName, string[] effects, int numberValue, string numberTargetName, int numberTargetValue, int sortingOrder)
+	{
+		return default(bool);
+	}
+
+	public void FlEnter()
+	{
+	}
+
+	public void FlExit()
+	{
+	}
+
+	public void FlEffectStart()
+	{
+	}
+
+	public void FlEffectReset()
+	{
 	}
 }

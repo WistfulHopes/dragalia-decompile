@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum QuestResetIntervalType
 {
-	public enum QuestResetIntervalType
-	{
-		NONE,
-		DAILY,
-		WEEKLY,
-		TOTAL
-	}
+	NONE,
+	DAILY,
+	WEEKLY,
+	TOTAL
 }

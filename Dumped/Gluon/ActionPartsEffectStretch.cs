@@ -1,56 +1,55 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsEffectStretch : ActionParts
 {
-	public class ActionPartsEffectStretch : ActionParts
+	private enum State
 	{
-		private enum State
-		{
-			Init,
-			Update
-		}
+		Init,
+		Update
+	}
 
-		private readonly EffectStretchData _partsData;
+	private readonly EffectStretchData _partsData;
 
-		private State _state;
+	private State _state;
 
-		private EffectObject _effectObject;
+	private EffectObject _effectObject;
 
-		private float _elapsedSec;
+	private float _elapsedSec;
 
-		private float _stretchSec;
+	private float _stretchSec;
 
-		private Vector3 _targetPos;
+	private Vector3 _targetPos;
 
-		private Transform startTransform;
+	private Transform startTransform;
 
-		private Vector3 startPosForNullEffectObject;
+	private Vector3 startPosForNullEffectObject;
 
-		public ActionPartsEffectStretch(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsEffectStretch(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		private void CalcStartTransfrom(out Vector3 pos, out Vector3 scale)
-		{
-		}
+	private void CalcStartTransfrom(out Vector3 pos, out Vector3 scale)
+	{
+	}
 
-		private Vector3 CalcTargetPos(Vector3 startPos)
-		{
-			return default(Vector3);
-		}
+	private Vector3 CalcTargetPos(Vector3 startPos)
+	{
+		return default(Vector3);
 	}
 }

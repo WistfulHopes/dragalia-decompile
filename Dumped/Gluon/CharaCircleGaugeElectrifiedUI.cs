@@ -1,20 +1,18 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharaCircleGaugeElectrifiedUI : CharaCircleGaugeUI
 {
-	public class CharaCircleGaugeElectrifiedUI : CharaCircleGaugeUI
+	[SerializeField]
+	protected Sprite[] _iconSprites;
+
+	public static CharaCircleGaugeElectrifiedUI Create(GameObject parent, CharacterBase owner, CharacterMarkUI markUI, float adjustPosY, int siblingIndex = -1)
 	{
-		[SerializeField]
-		[Header("resource")]
-		protected Sprite[] _iconSprites;
+		return null;
+	}
 
-		public static CharaCircleGaugeElectrifiedUI Create(GameObject parent, CharacterBase owner, CharacterMarkUI markUI, float adjustPosY, int siblingIndex = -1)
-		{
-			return null;
-		}
-
-		public override void SetCount(int count)
-		{
-		}
+	public override void SetCount(int count)
+	{
 	}
 }

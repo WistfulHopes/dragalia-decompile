@@ -1,57 +1,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class HitException
 {
-	public class HitException
+	private class HitVictim
 	{
-		private class HitVictim
-		{
-			public GameObject victim;
+		public GameObject victim;
 
-			public float durationSec;
-		}
+		public float durationSec;
+	}
 
-		private List<HitVictim> _hitVictims;
+	private List<HitVictim> _hitVictims;
 
-		private List<HitVictim> _removedVictims;
+	private List<HitVictim> _removedVictims;
 
-		private bool useErrorElimination;
+	private bool useErrorElimination;
 
-		public int HitVictimNum => default(int);
+	public int HitVictimNum => default(int);
 
-		public void SetUseErrorElimination(bool useErrorElimination)
-		{
-		}
+	public void SetUseErrorElimination(bool useErrorElimination)
+	{
+	}
 
-		public void AddHitVictims(GameObject victim, float durationSec)
-		{
-		}
+	public void AddHitVictims(GameObject victim, float durationSec)
+	{
+	}
 
-		public bool IsExcept(GameObject victim)
-		{
-			return default(bool);
-		}
+	public bool IsExcept(GameObject victim)
+	{
+		return default(bool);
+	}
 
-		public void Clear()
-		{
-		}
+	public void Clear()
+	{
+	}
 
-		public void Remove(GameObject victim)
-		{
-		}
+	public void Remove(GameObject victim)
+	{
+	}
 
-		public void Update()
-		{
-		}
+	public void Update()
+	{
+	}
 
-		public void Update(float deltaTime)
-		{
-		}
+	public void Update(float deltaTime)
+	{
+	}
 
-		public bool ContainsGameObject(GameObject obj)
-		{
-			return default(bool);
-		}
+	public bool ContainsGameObject(GameObject obj)
+	{
+		return default(bool);
 	}
 }

@@ -1,21 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MissionGuideListCell : TableViewCell<MissionGuideListCellData>
 {
-	public class MissionGuideListCell : TableViewCell<MissionGuideListCellData>
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Text desText;
+
+	[SerializeField]
+	private GameObject clearObj;
+
+	public override void UpdateContent(MissionGuideListCellData data)
 	{
-		[SerializeField]
-		private Text titleText;
-
-		[SerializeField]
-		private Text desText;
-
-		[SerializeField]
-		private GameObject clearObj;
-
-		public override void UpdateContent(MissionGuideListCellData data)
-		{
-		}
 	}
 }

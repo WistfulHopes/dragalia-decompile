@@ -6,96 +6,95 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyChangePopup : CommonPopup
 {
-	public class PartyChangePopup : CommonPopup
+	public TabBase partyGroupTab;
+
+	public Transform listParentTransform;
+
+	public GameObject originCell;
+
+	private PartyChangePopupCell[] cells;
+
+	public Text popupTopText;
+
+	public Action<int, bool> partyChangeAction;
+
+	public Action<int, bool> partyCopyAction;
+
+	public Action<int, PartyList> partySetAction;
+
+	private static bool _showEditSkill;
+
+	private int nowGroupIndex;
+
+	private int nowPartyIndex;
+
+	private int selectGroupIndex;
+
+	private int clearPartySampleDataIndex;
+
+	private PartyList questClearParty;
+
+	public static bool isShowEditSkill => default(bool);
+
+	public static PartyChangePopup Create()
 	{
-		public TabBase partyGroupTab;
+		return null;
+	}
 
-		public Transform listParentTransform;
+	protected override void OnDestroy()
+	{
+	}
 
-		public GameObject originCell;
+	public void InitPopup(int questId, int partyGroupIndex = -1, int partyIndex = -1, bool isHideCopyButton = false)
+	{
+	}
 
-		private PartyChangePopupCell[] cells;
+	public void InitPopup(int sampleDataIndex, int indexInParty)
+	{
+	}
 
-		public Text popupTopText;
+	public override void StartShowAnimation([Optional] UnityEvent onCompleted)
+	{
+	}
 
-		public Action<int, bool> partyChangeAction;
+	private void OnSelectedGroupTab(int index)
+	{
+	}
 
-		public Action<int, bool> partyCopyAction;
+	private void ReloadCell()
+	{
+	}
 
-		public Action<int, PartyList> partySetAction;
+	private void ChangeButtonAction(int partyIndex)
+	{
+	}
 
-		private static bool _showEditSkill;
+	private void CopyButtonAction(int partyIndex)
+	{
+	}
 
-		private int nowGroupIndex;
+	private void OnQuestClearPartyPopDetailButtonPressed(int questId, int partyIndex)
+	{
+	}
 
-		private int nowPartyIndex;
+	private void CreateQuestClearPartyData(int indexInParty)
+	{
+	}
 
-		private int selectGroupIndex;
+	private void CreateQuestClearPartyData()
+	{
+	}
 
-		private int clearPartySampleDataIndex;
+	private PartySettingList CreateEquipableClearPartyUnitData(AtgenArchivePartyUnitList unitList, Dictionary<int, int> weaponDict, Dictionary<int, int> dragonDict, Dictionary<int, int> crestDict, List<ulong> equipDragonKeyIds)
+	{
+		return null;
+	}
 
-		private PartyList questClearParty;
-
-		public static bool isShowEditSkill => default(bool);
-
-		public static PartyChangePopup Create()
-		{
-			return null;
-		}
-
-		protected override void OnDestroy()
-		{
-		}
-
-		public void InitPopup(int questId, int partyGroupIndex = -1, int partyIndex = -1, bool isHideCopyButton = false)
-		{
-		}
-
-		public void InitPopup(int sampleDataIndex, int indexInParty)
-		{
-		}
-
-		public override void StartShowAnimation([Optional] UnityEvent onCompleted)
-		{
-		}
-
-		private void OnSelectedGroupTab(int index)
-		{
-		}
-
-		private void ReloadCell()
-		{
-		}
-
-		private void ChangeButtonAction(int partyIndex)
-		{
-		}
-
-		private void CopyButtonAction(int partyIndex)
-		{
-		}
-
-		private void OnQuestClearPartyPopDetailButtonPressed(int questId, int partyIndex)
-		{
-		}
-
-		private void CreateQuestClearPartyData(int indexInParty)
-		{
-		}
-
-		private void CreateQuestClearPartyData()
-		{
-		}
-
-		private PartySettingList CreateEquipableClearPartyUnitData(AtgenArchivePartyUnitList unitList, Dictionary<int, int> weaponDict, Dictionary<int, int> dragonDict, Dictionary<int, int> crestDict, List<ulong> equipDragonKeyIds)
-		{
-			return null;
-		}
-
-		private void SetButtonAction(int partyIndex)
-		{
-		}
+	private void SetButtonAction(int partyIndex)
+	{
 	}
 }

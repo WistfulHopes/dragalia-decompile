@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateBind : PlayerStateBase
 {
-	public class PlayerStateBind : PlayerStateBase
+	public override void OnStateUpdate()
 	{
-		public override void OnStateUpdate()
-		{
-		}
 	}
 }

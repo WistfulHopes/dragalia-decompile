@@ -1,255 +1,260 @@
 using System;
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class InGameTime
 {
-	public class InGameTime
+	public enum StopKind
 	{
-		public enum StopKind
-		{
-			All,
-			CharaMove,
-			CharaInput,
-			Direction,
-			BuffAbnormalStatusDragon,
-			EnumMax
-		}
+		All,
+		CharaMove,
+		CharaInput,
+		Direction,
+		BuffAbnormalStatusDragon,
+		EnumMax
+	}
 
-		public enum PauseControlTypes
-		{
-			None,
-			GameFlow,
-			TimeStop
-		}
+	public enum PauseControlTypes
+	{
+		None,
+		GameFlow,
+		TimeStop
+	}
 
-		private class GameSpeedTimeSpan
-		{
-			private long startTicks;
+	private class GameSpeedTimeSpan
+	{
+		private long startTicks;
 
-			private long pauseTicks;
+		private long pauseTicks;
 
-			private double span;
+		private double span;
 
-			private float rate;
+		private float rate;
 
-			public long PauseTicks => default(long);
+		public long PauseTicks => default(long);
 
-			public GameSpeedTimeSpan(float rate)
-			{
-			}
-
-			public void Ready()
-			{
-			}
-
-			public void Start()
-			{
-			}
-
-			public void SaveSpan()
-			{
-			}
-
-			public void UpdateSpan()
-			{
-			}
-
-			public float GetTimeSpanSeconds()
-			{
-				return default(float);
-			}
-
-			public void Pause(bool pause)
-			{
-			}
-
-			public void AddElapsedSec(float elapsedSec)
-			{
-			}
-		}
-
-		public enum GameSpeed
-		{
-			Rate_1_0,
-			Rate_1_2,
-			Rate_1_5,
-			Rate_2_0,
-			None
-		}
-
-		public enum Mode
-		{
-			INGAME,
-			FINISH,
-			PAUSE,
-			ExitGame
-		}
-
-		private bool[] isStopProductionFlag;
-
-		public const string prefsKeyLastGameSpeedRate = "LastGameSpeedRate";
-
-		private float storedFixedDeltaTime;
-
-		private List<PauseControlTypes> pauseControlList;
-
-		private long _startLeaveAloneTicks;
-
-		private long _pauseLeaveAloneTicks;
-
-		private float elapsedSecForGraphic;
-
-		private GameSpeedTimeSpan[] gameSpeedTimeSpans;
-
-		private GameSpeedTimeSpan[] dmodeGameSpeedTimeSpans;
-
-		private GameSpeed gameSpeedRate;
-
-		private GameSpeed pushedGameSpeedRate;
-
-		public Action<GameSpeed> onChangedGameSpeedRate;
-
-		private Mode currentMode;
-
-		public bool pause => default(bool);
-
-		public bool IsPauseLeaveAlone => default(bool);
-
-		private GameSpeedTimeSpan CurrentGameSpeedTimeSpan => null;
-
-		private GameSpeedTimeSpan CurrentDmodeGameSpeedTimeSpan => null;
-
-		public GameSpeed GameSpeedRate
-		{
-			get
-			{
-				return default(GameSpeed);
-			}
-			private set
-			{
-			}
-		}
-
-		public Mode CurrentMode => default(Mode);
-
-		public void SetStopProductionFlag(bool charaFlag, bool inputFlag, bool dirFlag, bool buffAbnormalStatusDragonTimer)
+		public GameSpeedTimeSpan(float rate)
 		{
 		}
 
-		public bool IsStopProduction(StopKind kind)
+		public void Ready()
 		{
-			return default(bool);
 		}
 
-		public float GetElapsedSecForGraphic()
+		public void Start()
+		{
+		}
+
+		public void SaveSpan()
+		{
+		}
+
+		public void UpdateSpan()
+		{
+		}
+
+		public float GetTimeSpanSeconds()
 		{
 			return default(float);
 		}
 
-		private float GetTimeScale(GameSpeed rate)
+		public void Pause(bool pause)
 		{
-			return default(float);
 		}
 
-		public GameSpeed ChangeGameSpeed()
+		public void AddElapsedSec(float elapsedSec)
+		{
+		}
+	}
+
+	public enum GameSpeed
+	{
+		Rate_1_0,
+		Rate_1_2,
+		Rate_1_5,
+		Rate_2_0,
+		None
+	}
+
+	public enum Mode
+	{
+		INGAME,
+		FINISH,
+		PAUSE,
+		ExitGame
+	}
+
+	private bool[] isStopProductionFlag;
+
+	public const string prefsKeyLastGameSpeedRate = "LastGameSpeedRate";
+
+	private float storedFixedDeltaTime;
+
+	private List<PauseControlTypes> pauseControlList;
+
+	private long _startLeaveAloneTicks;
+
+	private long _pauseLeaveAloneTicks;
+
+	private float elapsedSecForGraphic;
+
+	private GameSpeedTimeSpan[] gameSpeedTimeSpans;
+
+	private GameSpeedTimeSpan[] dmodeGameSpeedTimeSpans;
+
+	private GameSpeed gameSpeedRate;
+
+	private GameSpeed pushedGameSpeedRate;
+
+	public Action<GameSpeed> onChangedGameSpeedRate;
+
+	private Mode currentMode;
+
+	private float graphicTimeScale;
+
+	public bool pause => default(bool);
+
+	public bool IsPauseLeaveAlone => default(bool);
+
+	private GameSpeedTimeSpan CurrentGameSpeedTimeSpan => null;
+
+	private GameSpeedTimeSpan CurrentDmodeGameSpeedTimeSpan => null;
+
+	public GameSpeed GameSpeedRate
+	{
+		get
 		{
 			return default(GameSpeed);
 		}
-
-		public void RestoreGameSpeedRate()
+		private set
 		{
 		}
+	}
 
-		public void PushGameSpeedRateAndSet_1_0()
-		{
-		}
+	public Mode CurrentMode => default(Mode);
 
-		public void PopGameSpeedRate()
-		{
-		}
+	public void SetStopProductionFlag(bool charaFlag, bool inputFlag, bool dirFlag, bool buffAbnormalStatusDragonTimer)
+	{
+	}
 
-		public void StoreFixedDeltaTime()
-		{
-		}
+	public bool IsStopProduction(StopKind kind)
+	{
+		return default(bool);
+	}
 
-		public void SetMode(Mode mode)
-		{
-		}
+	public float GetElapsedSecForGraphic()
+	{
+		return default(float);
+	}
 
-		public void StartGame()
-		{
-		}
+	private float GetTimeScale(GameSpeed rate)
+	{
+		return default(float);
+	}
 
-		public void StartDmodeFloor()
-		{
-		}
+	public GameSpeed ChangeGameSpeed()
+	{
+		return default(GameSpeed);
+	}
 
-		public float GetPlayTime()
-		{
-			return default(float);
-		}
+	public void RestoreGameSpeedRate()
+	{
+	}
 
-		public float GetDmodeFloorPlayTime()
-		{
-			return default(float);
-		}
+	public void PushGameSpeedRateAndSet_1_0()
+	{
+	}
 
-		private float GetPlayTime(GameSpeedTimeSpan[] timespans)
-		{
-			return default(float);
-		}
+	public void PopGameSpeedRate()
+	{
+	}
 
-		public void Pause(PauseControlTypes type, bool pause)
-		{
-		}
+	public void StoreFixedDeltaTime()
+	{
+	}
 
-		public void SetTimeScale_1_0()
-		{
-		}
+	public void SetMode(Mode mode)
+	{
+	}
 
-		public void StartLeaveAlone()
-		{
-		}
+	public void StartGame()
+	{
+	}
 
-		public void ResetLeaveAlone()
-		{
-		}
+	public void StartDmodeFloor()
+	{
+	}
 
-		public float GetLeaveAloneTime()
-		{
-			return default(float);
-		}
+	public float GetPlayTime()
+	{
+		return default(float);
+	}
 
-		public void PauseLeaveAlone(bool pause)
-		{
-		}
+	public float GetDmodeFloorPlayTime()
+	{
+		return default(float);
+	}
 
-		public void SetGameElapsedTime(float elapsedSec)
-		{
-		}
+	private float GetPlayTime(GameSpeedTimeSpan[] timespans)
+	{
+		return default(float);
+	}
 
-		public void InitializeBgModelProduction()
-		{
-		}
+	public void Pause(PauseControlTypes type, bool pause)
+	{
+	}
 
-		public void SetChronosStopProduction(bool stopFlag, float productionDelay)
-		{
-		}
+	public void SetTimeScale_1_0()
+	{
+	}
 
-		public void SetCharacterStopFlag(bool stopFlag)
-		{
-		}
+	public void StartLeaveAlone()
+	{
+	}
 
-		public void SetCharacterStopFlagForCutIn(bool stopFlag, int type)
-		{
-		}
+	public void ResetLeaveAlone()
+	{
+	}
 
-		private void SetSoundStopFlag(bool stopFlag)
-		{
-		}
+	public float GetLeaveAloneTime()
+	{
+		return default(float);
+	}
 
-		public void Update()
-		{
-		}
+	public void PauseLeaveAlone(bool pause)
+	{
+	}
+
+	public void SetGameElapsedTime(float elapsedSec)
+	{
+	}
+
+	public void InitializeBgModelProduction()
+	{
+	}
+
+	public void SetChronosStopProduction(bool stopFlag, float productionDelay)
+	{
+	}
+
+	public void SetCharacterStopFlag(bool stopFlag)
+	{
+	}
+
+	public void SetCharacterStopFlagForCutIn(bool stopFlag, int type)
+	{
+	}
+
+	private void SetSoundStopFlag(bool stopFlag)
+	{
+	}
+
+	public void SetGraphicTimeScale(float timeScale)
+	{
+	}
+
+	public void Update()
+	{
 	}
 }

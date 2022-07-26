@@ -1,99 +1,98 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class FortSortingOrderSetter : MonoBehaviour
 {
-	[ExecuteAlways]
-	public class FortSortingOrderSetter : MonoBehaviour
+	public enum OrderType
 	{
-		public enum OrderType
+		TransparentOnGround,
+		FacilityTurf,
+		FacilityBase,
+		FacilityBaseDecoration,
+		FacilityBaseFire,
+		FacilitySubLayerBack,
+		FacilitySubLayerMiddle,
+		FacilitySubLayerFront,
+		FacilitySphere,
+		FacilityProduct,
+		FacilityBalloon,
+		FrontEffect,
+		BackEffect,
+		OrderTypeNum
+	}
+
+	private class SortingLayerAttribute : PropertyAttribute
+	{
+	}
+
+	private static readonly int[] orderTypeOrderNumArray;
+
+	private static readonly int selectedObjectOrderNum;
+
+	[SerializeField]
+	[SortingLayer]
+	private string layerName;
+
+	[SerializeField]
+	private int baseOrder;
+
+	[SerializeField]
+	private OrderType orderInLayer;
+
+	public string LayerName
+	{
+		get
 		{
-			TransparentOnGround,
-			FacilityTurf,
-			FacilityBase,
-			FacilityBaseDecoration,
-			FacilityBaseFire,
-			FacilitySubLayerBack,
-			FacilitySubLayerMiddle,
-			FacilitySubLayerFront,
-			FacilitySphere,
-			FacilityProduct,
-			FacilityBalloon,
-			FrontEffect,
-			BackEffect,
-			OrderTypeNum
+			return null;
 		}
-
-		private class SortingLayerAttribute : PropertyAttribute
-		{
-		}
-
-		private static readonly int[] orderTypeOrderNumArray;
-
-		private static readonly int selectedObjectOrderNum;
-
-		[SerializeField]
-		[SortingLayer]
-		private string layerName;
-
-		[SerializeField]
-		private int baseOrder;
-
-		[SerializeField]
-		private OrderType orderInLayer;
-
-		public string LayerName
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		public OrderType OrderInLayer
-		{
-			get
-			{
-				return default(OrderType);
-			}
-			set
-			{
-			}
-		}
-
-		private void Awake()
+		set
 		{
 		}
+	}
 
-		private void OnValidate()
+	public OrderType OrderInLayer
+	{
+		get
+		{
+			return default(OrderType);
+		}
+		set
 		{
 		}
+	}
 
-		public static void SetSortingOrder(GameObject go, Vector2 gridPos)
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public static void UpdateSortingOrder(GameObject go)
-		{
-		}
+	private void OnValidate()
+	{
+	}
 
-		public void SetBaseOrder(Vector2 gridPos)
-		{
-		}
+	public static void SetSortingOrder(GameObject go, Vector2 gridPos)
+	{
+	}
 
-		public void SetSelectedBaseOrder(Vector2 gridPos)
-		{
-		}
+	public static void UpdateSortingOrder(GameObject go)
+	{
+	}
 
-		private void RefreshSortingOrder()
-		{
-		}
+	public void SetBaseOrder(Vector2 gridPos)
+	{
+	}
 
-		private int GetGridBaseOrder(Vector2 gridPos)
-		{
-			return default(int);
-		}
+	public void SetSelectedBaseOrder(Vector2 gridPos)
+	{
+	}
+
+	private void RefreshSortingOrder()
+	{
+	}
+
+	private int GetGridBaseOrder(Vector2 gridPos)
+	{
+		return default(int);
 	}
 }

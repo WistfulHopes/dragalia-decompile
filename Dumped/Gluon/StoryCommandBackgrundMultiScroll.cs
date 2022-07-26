@@ -1,31 +1,29 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandBackgrundMultiScroll : IStoryCommand
 {
-	[CommandName("multi_scroll")]
-	public class StoryCommandBackgrundMultiScroll : IStoryCommand
+	private IEnumerator coroutine;
+
+	private float sec;
+
+	private Color color;
+
+	private Vector3 endPos;
+
+	public void Start(float sec, float endPosX, float endPosY, int[] rgb)
 	{
-		private IEnumerator coroutine;
+	}
 
-		private float sec;
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		private Color color;
-
-		private Vector3 endPos;
-
-		public void Start(float sec, float endPosX, float endPosY, int[] rgb)
-		{
-		}
-
-		public override bool Update()
-		{
-			return default(bool);
-		}
-
-		private IEnumerator _Update()
-		{
-			return null;
-		}
+	private IEnumerator _Update()
+	{
+		return null;
 	}
 }

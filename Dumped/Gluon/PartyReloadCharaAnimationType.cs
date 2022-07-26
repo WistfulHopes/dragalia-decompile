@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum PartyReloadCharaAnimationType
 {
-	public enum PartyReloadCharaAnimationType
-	{
-		NoAnimation,
-		IdleAnimation,
-		LandAnimation,
-		LandAnimationNotDelay
-	}
+	NoAnimation,
+	IdleAnimation,
+	LandAnimation,
+	LandAnimationNotDelay
 }

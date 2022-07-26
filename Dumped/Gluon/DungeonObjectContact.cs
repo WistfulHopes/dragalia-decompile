@@ -1,48 +1,47 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DungeonObjectContact : ICollideCallback
 {
-	public class DungeonObjectContact : ICollideCallback
+	private HitException hitException;
+
+	private CollisionHitAttribute hitAttr;
+
+	public void InitializeFromCommonActionHitAttribute(string elementId)
 	{
-		private HitException hitException;
+	}
 
-		private CollisionHitAttribute hitAttr;
+	public void InitializeFromPlayerActionHitAttribute(string elementId)
+	{
+	}
 
-		public void InitializeFromCommonActionHitAttribute(string elementId)
-		{
-		}
+	private void InitializeException()
+	{
+	}
 
-		public void InitializeFromPlayerActionHitAttribute(string elementId)
-		{
-		}
+	public void Update(CharacterBase owner, Vector3 dir)
+	{
+	}
 
-		private void InitializeException()
-		{
-		}
+	private void CheckHitDungeonObject(CharacterBase owner, Vector3 dir)
+	{
+	}
 
-		public void Update(CharacterBase owner, Vector3 dir)
-		{
-		}
+	public virtual void OnCollided(GameObject target, bool isPropagation)
+	{
+	}
 
-		private void CheckHitDungeonObject(CharacterBase owner, Vector3 dir)
-		{
-		}
+	public virtual void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot)
+	{
+	}
 
-		public virtual void OnCollided(GameObject target, bool isPropagation)
-		{
-		}
+	public virtual void OnNotCollided(CharacterBase chara)
+	{
+	}
 
-		public virtual void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot)
-		{
-		}
-
-		public virtual void OnNotCollided(CharacterBase chara)
-		{
-		}
-
-		public virtual bool IsExcept(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	public virtual bool IsExcept(CharacterBase chara)
+	{
+		return default(bool);
 	}
 }

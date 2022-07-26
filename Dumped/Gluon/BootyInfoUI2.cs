@@ -1,52 +1,49 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BootyInfoUI2 : BootyInfoUIBase
 {
-	public class BootyInfoUI2 : BootyInfoUIBase
+	[SerializeField]
+	private RectTransform dpointIconRt;
+
+	[SerializeField]
+	private RectTransform dpointRareInfoRt;
+
+	[SerializeField]
+	private Text dpointText;
+
+	[SerializeField]
+	private Text dpointRareText;
+
+	[SerializeField]
+	protected float displayTime;
+
+	protected float displayTimer;
+
+	public static BootyInfoUI2 Create(GameObject parent)
 	{
-		[SerializeField]
-		[Header("component")]
-		private RectTransform dpointIconRt;
+		return null;
+	}
 
-		[SerializeField]
-		private RectTransform dpointRareInfoRt;
+	protected override void Initialize()
+	{
+	}
 
-		[SerializeField]
-		private Text dpointText;
+	public override void FastUpdate()
+	{
+	}
 
-		[SerializeField]
-		private Text dpointRareText;
+	public override void MoveIn()
+	{
+	}
 
-		[SerializeField]
-		[Header("parameter")]
-		protected float displayTime;
+	public override void SetDPoint(int val)
+	{
+	}
 
-		protected float displayTimer;
-
-		public static BootyInfoUI2 Create(GameObject parent)
-		{
-			return null;
-		}
-
-		protected override void Initialize()
-		{
-		}
-
-		public override void FastUpdate()
-		{
-		}
-
-		public override void MoveIn()
-		{
-		}
-
-		public override void SetDPoint(int val)
-		{
-		}
-
-		public override void SetDPointRare(int val)
-		{
-		}
+	public override void SetDPointRare(int val)
+	{
 	}
 }

@@ -1,331 +1,364 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbility
 {
-	public class EnemyAbility
+	public struct Argument
 	{
-		public struct Argument
-		{
-			public int argInt01;
+		public int argInt01;
 
-			public float argFloat01;
+		public float argFloat01;
 
-			public float argFloat02;
+		public float argFloat02;
 
-			public string argString01;
+		public string argString01;
 
-			public CharacterBase argChara01;
-		}
+		public CharacterBase argChara01;
+	}
 
-		private List<EnemyAbilityProcBase> _abilities;
+	private List<EnemyAbilityProcBase> _abilities;
 
-		private EnemyCharacter _owner;
+	private EnemyCharacter _owner;
 
-		private bool _isWaitInitState;
+	private bool _isWaitInitState;
 
-		private bool _isDoneInitState;
+	private bool _isDoneInitState;
 
-		public const int PLAY_EFF_TRIG = 8;
+	public const int PLAY_EFF_TRIG = 8;
 
-		public const int HIDE_EFF_TRIG = 13;
+	public const int HIDE_EFF_TRIG = 13;
 
-		private const float VODING_SE_WAIT_TIME = 1f;
+	private const float VODING_SE_WAIT_TIME = 1f;
 
-		private float _voidingSeTime;
+	private float _voidingSeTime;
 
-		public List<EnemyAbilityProcBase> abilities => null;
+	public List<EnemyAbilityProcBase> abilities => null;
 
-		public bool isExistBerserkAbility
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public EnemyAbility(EnemyCharacter owner)
-		{
-		}
-
-		private EnemyAbilityProcBase Create(int id)
-		{
-			return null;
-		}
-
-		private EnemyAbilityProcBase CreateBerserk(int id)
-		{
-			return null;
-		}
-
-		private void Reset()
-		{
-		}
-
-		public bool IsActive(int abilityId)
+	public bool isExistBerserkAbility
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public bool IsActive(EnemyAbilityType type)
-		{
-			return default(bool);
-		}
-
-		public bool IsActiveBerserk()
-		{
-			return default(bool);
-		}
-
-		public EnemyAbilityProcBase GetAbility(int abilityId)
-		{
-			return null;
-		}
-
-		public EnemyAbilityProcBase GetAbility(EnemyAbilityType type)
-		{
-			return null;
-		}
-
-		public int GetAbilityId(EnemyAbilityType type)
-		{
-			return default(int);
-		}
-
-		public bool HasAbility(EnemyAbilityType type)
-		{
-			return default(bool);
-		}
-
-		public void HideEffect()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void RestoreEffect()
-		{
-		}
+	public EnemyAbility(EnemyCharacter owner)
+	{
+	}
 
-		public void PlayVoidingSe()
-		{
-		}
+	private EnemyAbilityProcBase Create(int id)
+	{
+		return null;
+	}
 
-		public void OnUpdate()
-		{
-		}
+	private EnemyAbilityProcBase CreateBerserk(int id)
+	{
+		return null;
+	}
 
-		public void OnCharacterInit()
-		{
-		}
+	private void Reset()
+	{
+	}
 
-		public void OnCharacterEntry()
-		{
-		}
+	public bool IsActive(int abilityId)
+	{
+		return default(bool);
+	}
 
-		public void OnCharacterRevive()
-		{
-		}
+	public bool IsActive(EnemyAbilityType type)
+	{
+		return default(bool);
+	}
 
-		public void OnCharacterDead()
-		{
-		}
+	public bool IsActiveBerserk()
+	{
+		return default(bool);
+	}
 
-		public void OnCharacterLeave()
-		{
-		}
+	public EnemyAbilityProcBase GetAbility(int abilityId)
+	{
+		return null;
+	}
 
-		public void OnDeadParts(EnemyCharacter parts)
-		{
-		}
+	public EnemyAbilityProcBase GetAbility(EnemyAbilityType type)
+	{
+		return null;
+	}
 
-		public void OnCollideOffense(CharacterBase receiver, CollisionHitAttribute hitAttr, bool isFollowerAvoid)
-		{
-		}
+	public int GetAbilityId(EnemyAbilityType type)
+	{
+		return default(int);
+	}
 
-		public void OnCollideReceive(CollisionHitAttribute attr, int damage)
-		{
-		}
+	public bool HasAbility(EnemyAbilityType type)
+	{
+		return default(bool);
+	}
 
-		public void OnCalcBaseDamageAttack(CharacterBase receiver, ref Argument arg)
-		{
-		}
+	public void HideEffect()
+	{
+	}
 
-		public void OnCalcBaseDamageReceive(CollisionHitAttribute attr, DamageCalculation.DamageStatus.Type damageType, ref Argument arg)
-		{
-		}
+	public void RestoreEffect([Optional] Func<EffectObject, bool> needsCheckEffectTriggerFunc)
+	{
+	}
 
-		public void OnApplyDamage(CharacterDamageIntermediate damageData, bool alive)
-		{
-		}
+	public void PlayVoidingSe()
+	{
+	}
 
-		public void OnCalcAbnormalSlipDamage(CharacterBase attacker, ref Argument arg)
-		{
-		}
+	public void DisplayIconForZako(bool onoff)
+	{
+	}
 
-		public void OnApplySlipDamage(ref Argument arg, int damage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType)
-		{
-		}
+	public void OnUpdate()
+	{
+	}
 
-		public void OnApplyDebuffExtraDamage(ref Argument arg)
-		{
-		}
+	public void OnCharacterInit()
+	{
+	}
 
-		public void OnBuildDamage(ref Argument arg)
-		{
-		}
+	public void OnCharacterEntry()
+	{
+	}
 
-		public void OnCheckDamageReaction(bool isBarrierBroken, ref Argument arg)
-		{
-		}
+	public void OnCharacterRevive()
+	{
+	}
 
-		public void OnActionParts(int abilityId, bool onoff = true)
-		{
-		}
+	public void OnCharacterDead()
+	{
+	}
 
-		public void OnOverdrive(ref Argument arg)
-		{
-		}
+	public void OnCharacterLeave()
+	{
+	}
 
-		public void OnOverdriveDamage(CollisionHitAttribute hitAttr, float od_rate, ref Argument arg)
-		{
-		}
+	public void OnDeadParts(EnemyCharacter parts)
+	{
+	}
 
-		public void OnBreak()
-		{
-		}
+	public void OnCollideOffense(CharacterBase receiver, CollisionHitAttribute hitAttr, bool isFollowerAvoid)
+	{
+	}
 
-		public void OnBreakRemotely()
-		{
-		}
+	public void OnCollideReceive(CollisionHitAttribute attr, int damage)
+	{
+	}
 
-		public void OnBreakFinish()
-		{
-		}
+	public void OnCalcBaseDamageAttack(CharacterBase receiver, ref Argument arg)
+	{
+	}
 
-		public void OnCalcDefCoefForMirage(CharacterBase attacker, ref Argument arg)
-		{
-		}
+	public void OnCalcBaseDamageReceive(CollisionHitAttribute attr, DamageCalculation.DamageStatus.Type damageType, ref Argument arg)
+	{
+	}
 
-		public void OnExecHit(CharacterBase receiver, CollisionHitAttribute hitAttr, ref Argument arg)
-		{
-		}
+	public void OnApplyDamage(CharacterDamageIntermediate damageData, bool alive)
+	{
+	}
 
-		public void OnCalcModeDifense(CharacterBase attacker, ref Argument arg)
-		{
-		}
+	public void OnCalcAbnormalSlipDamage(CharacterBase attacker, ref Argument arg)
+	{
+	}
 
-		public void OnDrain(CharacterBase receiver, CollisionHitAttribute hitAttr, ref Argument arg)
-		{
-		}
+	public void OnApplySlipDamage(ref Argument arg, ref int damage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType)
+	{
+	}
 
-		public void OnPostDrain()
-		{
-		}
+	public void OnApplyBuffExtraDamage(ref Argument arg)
+	{
+	}
 
-		public void OnStartBarrier(ref Argument arg)
-		{
-		}
+	public void OnCalcAdditionalDamage(ref Argument arg)
+	{
+	}
 
-		public void OnHitBarrier(CharacterBase attacker, ref Argument arg)
-		{
-		}
+	public void OnCalcFinalDamageAttack(ref Argument arg)
+	{
+	}
 
-		public void OnApplyReduceHp(ref Argument arg)
-		{
-		}
+	public void OnCalcFinalDamageReceive(ref Argument arg)
+	{
+	}
 
-		public void OnFatalAttack(ref Argument arg)
-		{
-		}
+	public void OnCalcFinalAdditionalDamage(ref Argument arg)
+	{
+	}
 
-		public void OnStateEnter_ShapeShift()
-		{
-		}
+	public void OnCalcFinalBuffExtraDamage(ref Argument arg)
+	{
+	}
 
-		public void OnShiftIntoForm2nd()
-		{
-		}
+	public void OnBuildDamage(ref Argument arg)
+	{
+	}
 
-		public void OnShiftIntoOriginal()
-		{
-		}
+	public void OnCheckDamageReaction(bool isBarrierBroken, ref Argument arg)
+	{
+	}
 
-		public void OnApplyBuffDebuff(ref Argument arg)
-		{
-		}
+	public void OnActionParts(int abilityId, bool onoff = true)
+	{
+	}
 
-		public void OnApplyBuffDebuffVarious(CharacterBuffType buffType, bool isBuff, CharacterBase from, ref Argument arg)
-		{
-		}
+	public void OnOverdrive(ref Argument arg)
+	{
+	}
 
-		public void OnPlayEffectBuff(ref Argument arg)
-		{
-		}
+	public void OnOverdriveDamage(CollisionHitAttribute hitAttr, float od_rate, ref Argument arg)
+	{
+	}
 
-		public void OnStopEffectBuff(CharacterBuff buff)
-		{
-		}
+	public void OnBreak()
+	{
+	}
 
-		public void OnDispTextBuff(ref Argument arg)
-		{
-		}
+	public void OnBreakRemotely()
+	{
+	}
 
-		public void OnStopBuffField(List<CharacterBase> outCharaList, ref Argument arg)
-		{
-		}
+	public void OnBreakFinish()
+	{
+	}
 
-		public void OnDispel(ref Argument arg)
-		{
-		}
+	public void OnCalcDefCoefForMirage(CharacterBase attacker, ref Argument arg)
+	{
+	}
 
-		public void OnAbnormalStatusProbability(int type, float probability, ref Argument arg)
-		{
-		}
+	public void OnExecHit(CharacterBase receiver, CollisionHitAttribute hitAttr, ref Argument arg)
+	{
+	}
 
-		public void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref Argument arg)
-		{
-		}
+	public void OnCalcModeDifense(CharacterBase attacker, ref Argument arg)
+	{
+	}
 
-		public void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability)
-		{
-		}
+	public void OnDrain(CharacterBase receiver, CollisionHitAttribute hitAttr, ref Argument arg)
+	{
+	}
 
-		public void OnAbnormalClearType(AbnormalStatusType type, ref Argument arg)
-		{
-		}
+	public void OnPostDrain()
+	{
+	}
 
-		public void OnWeakPointDestroy(bool isPlayAction = true)
-		{
-		}
+	public void OnStartBarrier(ref Argument arg)
+	{
+	}
 
-		public void OnWeakPointDefeated(bool isPlayAction = true)
-		{
-		}
+	public void OnHitBarrier(CharacterBase attacker, ref Argument arg)
+	{
+	}
 
-		public void OnSwitchElement()
-		{
-		}
+	public void OnApplyReduceHp(ref Argument arg)
+	{
+	}
 
-		public void OnChangeRoomGroup(CharacterBase target)
-		{
-		}
+	public void OnFatalAttack(ref Argument arg)
+	{
+	}
 
-		public void OnDisconnectUser(int disconnectActorId)
-		{
-		}
+	public void OnStateEnter_ShapeShift()
+	{
+	}
 
-		public void OnRecieveCharacterState(CharacterState recvEvent)
-		{
-		}
+	public void OnShiftIntoForm2nd()
+	{
+	}
 
-		public void OnRecieveEnemyDead(DeadReason reason, float prevHpRate)
-		{
-		}
+	public void OnShiftIntoOriginal()
+	{
+	}
+
+	public void OnApplyBuffDebuff(ref Argument arg)
+	{
+	}
+
+	public void OnApplyBuffDebuffVarious(CharacterBuffType buffType, bool isBuff, CharacterBase from, ref Argument arg)
+	{
+	}
+
+	public void OnPlayEffectBuff(ref Argument arg)
+	{
+	}
+
+	public void OnStopEffectBuff(CharacterBuff buff)
+	{
+	}
+
+	public void OnDispTextBuff(ref Argument arg)
+	{
+	}
+
+	public void OnStopBuffField(List<CharacterBase> outCharaList, ref Argument arg)
+	{
+	}
+
+	public void OnDispel(ref Argument arg)
+	{
+	}
+
+	public void OnAbnormalStatusProbabilityAttack(float probability, ref Argument arg)
+	{
+	}
+
+	public void OnAbnormalStatusProbabilityReceive(int type, float probability, ref Argument arg)
+	{
+	}
+
+	public void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref Argument arg)
+	{
+	}
+
+	public void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability)
+	{
+	}
+
+	public void OnAbnormalClearType(AbnormalStatusType type, ref Argument arg)
+	{
+	}
+
+	public void OnWeakPointDestroy(bool isPlayAction = true)
+	{
+	}
+
+	public void OnWeakPointDefeated(bool isPlayAction = true)
+	{
+	}
+
+	public void OnSwitchElement()
+	{
+	}
+
+	public void OnChangeRoomGroup(CharacterBase target)
+	{
+	}
+
+	public void OnPlayQTECutt()
+	{
+	}
+
+	public void OnDisconnectUser(int disconnectActorId)
+	{
+	}
+
+	public void OnRecieveCharacterState(CharacterState recvEvent)
+	{
+	}
+
+	public void OnRecieveEnemyDead(DeadReason reason, float prevHpRate)
+	{
 	}
 }

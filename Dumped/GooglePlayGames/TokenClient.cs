@@ -1,38 +1,37 @@
 using System;
 using GooglePlayGames.BasicApi;
 
-namespace GooglePlayGames
+namespace GooglePlayGames;
+
+internal interface TokenClient
 {
-	internal interface TokenClient
-	{
-		string GetEmail();
+	string GetEmail();
 
-		string GetAuthCode();
+	string GetAuthCode();
 
-		string GetIdToken();
+	string GetIdToken();
 
-		void GetAnotherServerAuthCode(bool reAuthenticateIfNeeded, Action<string> callback);
+	void GetAnotherServerAuthCode(bool reAuthenticateIfNeeded, Action<string> callback);
 
-		void Signout();
+	void Signout();
 
-		void SetRequestAuthCode(bool flag, bool forceRefresh);
+	void SetRequestAuthCode(bool flag, bool forceRefresh);
 
-		void SetRequestEmail(bool flag);
+	void SetRequestEmail(bool flag);
 
-		void SetRequestIdToken(bool flag);
+	void SetRequestIdToken(bool flag);
 
-		void SetWebClientId(string webClientId);
+	void SetWebClientId(string webClientId);
 
-		void SetAccountName(string accountName);
+	void SetAccountName(string accountName);
 
-		void AddOauthScopes(string[] scopes);
+	void AddOauthScopes(string[] scopes);
 
-		void SetHidePopups(bool flag);
+	void SetHidePopups(bool flag);
 
-		void FetchTokens(bool silent, Action<int> callback);
+	void FetchTokens(bool silent, Action<int> callback);
 
-		void RequestPermissions(string[] scopes, Action<SignInStatus> callback);
+	void RequestPermissions(string[] scopes, Action<SignInStatus> callback);
 
-		bool HasPermissions(string[] scopes);
-	}
+	bool HasPermissions(string[] scopes);
 }

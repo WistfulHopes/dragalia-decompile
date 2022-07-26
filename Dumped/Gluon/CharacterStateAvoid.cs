@@ -1,26 +1,25 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateAvoid : CharacterStateBase
 {
-	public class CharacterStateAvoid : CharacterStateBase
+	private int currentLayer;
+
+	public int actionId
 	{
-		private int currentLayer;
-
-		public int actionId
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
 		}
-
-		protected override void OnStateEnter_Internal()
+		set
 		{
 		}
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	protected override void OnStateEnter_Internal()
+	{
+	}
+
+	public override void OnStateExit()
+	{
 	}
 }

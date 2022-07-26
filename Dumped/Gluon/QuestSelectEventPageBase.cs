@@ -4,76 +4,75 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSelectEventPageBase : PageBase
 {
-	public class QuestSelectEventPageBase : PageBase
+	[SerializeField]
+	protected PageViewBase pageView;
+
+	[SerializeField]
+	protected Transform contentTransform;
+
+	[SerializeField]
+	protected RectTransform maskRectTransform;
+
+	[SerializeField]
+	public AnimationListOneCol listAnimation;
+
+	[SerializeField]
+	protected float duration;
+
+	private Vector2 maskDefaultSize;
+
+	[SerializeField]
+	private float autoMovePageInterval;
+
+	private float totalTime;
+
+	protected bool canAutoMovePage;
+
+	protected bool isAnimating;
+
+	protected bool isEnableTouchGuardOnAnimation;
+
+	private bool _initialized;
+
+	protected NormalEventSelectScene questSelectScene;
+
+	public bool initialized
 	{
-		[SerializeField]
-		protected PageViewBase pageView;
-
-		[SerializeField]
-		protected Transform contentTransform;
-
-		[SerializeField]
-		protected RectTransform maskRectTransform;
-
-		[SerializeField]
-		public AnimationListOneCol listAnimation;
-
-		[SerializeField]
-		protected float duration;
-
-		private Vector2 maskDefaultSize;
-
-		[SerializeField]
-		private float autoMovePageInterval;
-
-		private float totalTime;
-
-		protected bool canAutoMovePage;
-
-		protected bool isAnimating;
-
-		protected bool isEnableTouchGuardOnAnimation;
-
-		private bool _initialized;
-
-		protected NormalEventSelectScene questSelectScene;
-
-		public bool initialized
+		get
 		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public override void OnPageBecomeActive(object data)
+		set
 		{
 		}
+	}
 
-		protected void InitPageView(List<QuestSelectInstance.QuestEventData> recommendEventsData)
-		{
-		}
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	protected void InitPageView(List<QuestSelectInstance.QuestEventData> recommendEventsData)
+	{
+	}
 
-		private IEnumerator WaitForPageViewInited()
-		{
-			return null;
-		}
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	private IEnumerator WaitForPageViewInited()
+	{
+		return null;
+	}
 
-		private void Update()
-		{
-		}
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
+
+	private void Update()
+	{
 	}
 }

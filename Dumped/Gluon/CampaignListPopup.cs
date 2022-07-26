@@ -1,37 +1,36 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class CampaignListPopup : CommonPopup
 {
-	public class CampaignListPopup : CommonPopup
+	private class TmpListData
 	{
-		private class TmpListData
-		{
-			public CampaignType type;
+		public CampaignType type;
 
-			public int questGroupId;
+		public int questGroupId;
 
-			public TmpListData(CampaignType type, int questGroupId)
-			{
-			}
-		}
-
-		public CampaignListController listController;
-
-		private List<CampaignCellData> cellDataList;
-
-		private List<TmpListData> tmpList;
-
-		public static CampaignListPopup CreateCampaignListPopup()
-		{
-			return null;
-		}
-
-		protected override void Awake()
+		public TmpListData(CampaignType type, int questGroupId)
 		{
 		}
+	}
 
-		protected override void Start()
-		{
-		}
+	public CampaignListController listController;
+
+	private List<CampaignCellData> cellDataList;
+
+	private List<TmpListData> tmpList;
+
+	public static CampaignListPopup CreateCampaignListPopup()
+	{
+		return null;
+	}
+
+	protected override void Awake()
+	{
+	}
+
+	protected override void Start()
+	{
 	}
 }

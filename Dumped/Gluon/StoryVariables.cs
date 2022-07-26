@@ -1,10 +1,9 @@
 using System;
 using SerializableCollections;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class StoryVariables : SerializableDictionary<string, string>
 {
-	[Serializable]
-	public class StoryVariables : SerializableDictionary<string, string>
-	{
-	}
 }

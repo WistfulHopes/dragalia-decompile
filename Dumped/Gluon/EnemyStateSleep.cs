@@ -1,13 +1,12 @@
-namespace Gluon
-{
-	public class EnemyStateSleep : IState<EnemyCtrl>
-	{
-		public override void OnStateEnter()
-		{
-		}
+namespace Gluon;
 
-		public override void OnStateUpdate()
-		{
-		}
+public class EnemyStateSleep : IState<EnemyCtrl>
+{
+	public override void OnStateEnter()
+	{
+	}
+
+	public override void OnStateUpdate()
+	{
 	}
 }

@@ -4,37 +4,36 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CollectEventGiftRewardPopup : PopupBase
 {
-	public class CollectEventGiftRewardPopup : PopupBase
+	[SerializeField]
+	private Transform iconParent;
+
+	private List<CommonIcon> iconList;
+
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Text commentText;
+
+	public static CollectEventGiftRewardPopup Create(UnityAction onClose)
 	{
-		[SerializeField]
-		private Transform iconParent;
+		return null;
+	}
 
-		private List<CommonIcon> iconList;
+	public void SetupEventStoryReward()
+	{
+	}
 
-		[SerializeField]
-		private Text titleText;
+	private CommonIcon CreateIcon(AtgenBuildEventRewardEntityList reward)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Text commentText;
-
-		public static CollectEventGiftRewardPopup Create(UnityAction onClose)
-		{
-			return null;
-		}
-
-		public void SetupEventStoryReward()
-		{
-		}
-
-		private CommonIcon CreateIcon(AtgenBuildEventRewardEntityList reward)
-		{
-			return null;
-		}
-
-		protected override void OnDestroy()
-		{
-		}
+	protected override void OnDestroy()
+	{
 	}
 }

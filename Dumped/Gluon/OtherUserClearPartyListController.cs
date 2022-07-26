@@ -1,56 +1,55 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class OtherUserClearPartyListController : TableViewController<OtherUserClearPartyListCellData>
 {
-	public class OtherUserClearPartyListController : TableViewController<OtherUserClearPartyListCellData>
+	public enum OtherUserClearPartyCellType
 	{
-		public enum OtherUserClearPartyCellType
-		{
-			normalType,
-			partySwitchType
-		}
+		normalType,
+		partySwitchType
+	}
 
-		public Action<OtherUserClearPartyListCellData, int> sampleButtonCallBack;
+	public Action<OtherUserClearPartyListCellData, int> sampleButtonCallBack;
 
-		public GameObject emptyListTextObj;
+	public GameObject emptyListTextObj;
 
-		public float cellWidth;
+	public float cellWidth;
 
-		public float cellHeight;
+	public float cellHeight;
 
-		public float partySwitchCellHeight;
+	public float partySwitchCellHeight;
 
-		public OtherUserClearPartyCellType cellType;
+	public OtherUserClearPartyCellType cellType;
 
-		public GameObject[] listOriginalCells;
+	public GameObject[] listOriginalCells;
 
-		private const int maxListCellCount = 20;
+	private const int maxListCellCount = 20;
 
-		public bool hasListData => default(bool);
+	public bool hasListData => default(bool);
 
-		public void LoadList(int questId, int pageIdex)
-		{
-		}
+	public void LoadList(int questId, int pageIdex)
+	{
+	}
 
-		protected override TableViewCell<OtherUserClearPartyListCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
+	protected override TableViewCell<OtherUserClearPartyListCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		private GameObject GetOriginCellObject(OtherUserClearPartyCellType type)
-		{
-			return null;
-		}
+	private GameObject GetOriginCellObject(OtherUserClearPartyCellType type)
+	{
+		return null;
 	}
 }

@@ -1,25 +1,24 @@
-namespace Gluon
+namespace Gluon;
+
+public class AnotherNameCellData
 {
-	public class AnotherNameCellData
-	{
-		public int nameId;
+	public int nameId;
 
-		public int sortId;
+	public int sortId;
 
-		public bool selectNowFlg;
+	public bool selectNowFlg;
 
-		public bool newFlg;
+	public bool newFlg;
 
-		public IconRarity rarity;
+	public IconRarity rarity;
 
-		public NameCategory category;
+	public NameCategory category;
 
-		public bool isNotObtained;
+	public bool isNotObtained;
 
-		public ElementalType targetElement;
+	public ElementalType targetElement;
 
-		public WeaponType targetWeapon;
+	public WeaponType targetWeapon;
 
-		public int targetMasterId;
-	}
+	public int targetMasterId;
 }

@@ -1,29 +1,28 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AfterPrologueDownloadPageParent : MonoBehaviour
 {
-	public class AfterPrologueDownloadPageParent : MonoBehaviour
+	public int myIndex;
+
+	private AfterPrologueDownloadTutorialPage tutorialPage;
+
+	private AfterPrologueDownloadCharaDetailPage charaPage;
+
+	private string tutorialPrefabPath;
+
+	private string charaPrefabPath;
+
+	private void Awake()
 	{
-		public int myIndex;
+	}
 
-		private AfterPrologueDownloadTutorialPage tutorialPage;
+	public void ShowTutorialPage()
+	{
+	}
 
-		private AfterPrologueDownloadCharaDetailPage charaPage;
-
-		private string tutorialPrefabPath;
-
-		private string charaPrefabPath;
-
-		private void Awake()
-		{
-		}
-
-		public void ShowTutorialPage()
-		{
-		}
-
-		public void ShowCharaPage(int charaId)
-		{
-		}
+	public void ShowCharaPage(int charaId)
+	{
 	}
 }

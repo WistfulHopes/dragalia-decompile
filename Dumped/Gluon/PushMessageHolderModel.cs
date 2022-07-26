@@ -1,55 +1,54 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class PushMessageHolderModel
 {
-	public class PushMessageHolderModel
+	private static PushMessageHolderModel instance;
+
+	public List<PushNoticeData> pushMessageList
 	{
-		private static PushMessageHolderModel instance;
-
-		public List<PushNoticeData> pushMessageList
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public static PushMessageHolderModel Instance => null;
-
-		public static void DeleteInstance()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public static bool IsInstanceEmpty()
-		{
-			return default(bool);
-		}
+	public static PushMessageHolderModel Instance => null;
 
-		public void Init()
-		{
-		}
+	public static void DeleteInstance()
+	{
+	}
 
-		private void AddMessage(int id, string message)
-		{
-		}
+	public static bool IsInstanceEmpty()
+	{
+		return default(bool);
+	}
 
-		public bool isLoadGuildScene()
-		{
-			return default(bool);
-		}
+	public void Init()
+	{
+	}
 
-		private PushMessageHolderModel()
-		{
-		}
+	private void AddMessage(int id, string message)
+	{
+	}
 
-		static PushMessageHolderModel()
-		{
-		}
+	public bool isLoadGuildScene()
+	{
+		return default(bool);
+	}
+
+	private PushMessageHolderModel()
+	{
+	}
+
+	static PushMessageHolderModel()
+	{
 	}
 }

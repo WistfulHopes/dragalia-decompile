@@ -1,50 +1,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventRewardCtrl : TableViewController<EventRewardCellData>
 {
-	public class EventRewardCtrl : TableViewController<EventRewardCellData>
+	public float cellHeight;
+
+	[SerializeField]
+	private AnimationListOneCol listAnimation;
+
+	[SerializeField]
+	private float delayFrame;
+
+	protected override void Awake()
 	{
-		public float cellHeight;
+	}
 
-		[SerializeField]
-		private AnimationListOneCol listAnimation;
+	public void LoadOriginalCell(bool isTotalDamageEvent)
+	{
+	}
 
-		[SerializeField]
-		private float delayFrame;
+	public void LoadData(List<EventRewardCellData> cellList)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override TableViewCell<EventRewardCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		public void LoadOriginalCell(bool isTotalDamageEvent)
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public void LoadData(List<EventRewardCellData> cellList)
-		{
-		}
+	public void UpdateReceiveButtonInformation()
+	{
+	}
 
-		protected override TableViewCell<EventRewardCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
+	public void StartEnterAnimation()
+	{
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public void UpdateReceiveButtonInformation()
-		{
-		}
-
-		public void StartEnterAnimation()
-		{
-		}
-
-		public void StartExitAnimation()
-		{
-		}
+	public void StartExitAnimation()
+	{
 	}
 }

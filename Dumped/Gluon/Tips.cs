@@ -9,163 +9,161 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class Tips : MonoBehaviour
 {
-	public class Tips : MonoBehaviour
+	public enum TipsLayoutType
 	{
-		public enum TipsLayoutType
-		{
-			None = -1,
-			Word,
-			Image,
-			Chara,
-			World,
-			Max
-		}
+		None = -1,
+		Word,
+		Image,
+		Chara,
+		World,
+		Max
+	}
 
-		private enum TipsType
-		{
-			General,
-			GameOver
-		}
+	private enum TipsType
+	{
+		General,
+		GameOver
+	}
 
-		private readonly string[] prefabResourcePath;
+	private readonly string[] prefabResourcePath;
 
-		private readonly string[] imageResourcePath;
+	private readonly string[] imageResourcePath;
 
-		private readonly string prefabFTUPath;
+	private readonly string prefabFTUPath;
 
-		private TipsObject tipsObject;
+	private TipsObject tipsObject;
 
-		public static bool isGameOver;
+	public static bool isGameOver;
 
-		public Transform flashParent;
+	public Transform flashParent;
 
-		private const int selectedIdMax = 6;
+	private const int selectedIdMax = 6;
 
-		public static List<int> selectedTipsIdList;
+	public static List<int> selectedTipsIdList;
 
-		private GameObject charaTips;
+	private GameObject charaTips;
 
-		private GameObject tipsTitle;
+	private GameObject tipsTitle;
 
-		private FlMotion charaTipsMotion;
+	private FlMotion charaTipsMotion;
 
-		private FlMotion tipsTitleMotion;
+	private FlMotion tipsTitleMotion;
 
-		[SerializeField]
-		[Header("ã\u0082­ã\u0083£ã\u0083©ç\u00b4¹ä»\u008bé\u0081\u0085å»¶")]
-		private float charaTipsDelay;
+	[SerializeField]
+	private float charaTipsDelay;
 
-		private Image[] tipsCharaImages;
+	private Image[] tipsCharaImages;
 
-		private static int changeLayoutType;
+	private static int changeLayoutType;
 
-		public const int MaxTipsPage = 3;
+	public const int MaxTipsPage = 3;
 
-		private List<Tweener> updateTweens;
+	private List<Tweener> updateTweens;
 
-		private FlPlane[] charaFlPlanes;
+	private FlPlane[] charaFlPlanes;
 
-		private FlText[] charaFlTexts;
+	private FlText[] charaFlTexts;
 
-		private Dictionary<int, Material> charaTipsMaterialDict;
+	private Dictionary<int, Material> charaTipsMaterialDict;
 
-		private string oldTipsTitle;
+	private string oldTipsTitle;
 
-		public bool isOnCharaAnimation;
+	public bool isOnCharaAnimation;
 
-		public IEnumerator SetData(LoadingTipsElement tipsData)
-		{
-			return null;
-		}
+	public IEnumerator SetData(LoadingTipsElement tipsData)
+	{
+		return null;
+	}
 
-		public void ReloadTipsData(LoadingTipsElement tipsData)
-		{
-		}
+	public void ReloadTipsData(LoadingTipsElement tipsData)
+	{
+	}
 
-		public static LoadingTipsElement GetLoadingTipsDataFromID(int targetId)
-		{
-			return null;
-		}
+	public static LoadingTipsElement GetLoadingTipsDataFromID(int targetId)
+	{
+		return null;
+	}
 
-		public static LoadingTipsElement[] GetLoadingTipsDatas(TargetTipsType type, int targetId)
-		{
-			return null;
-		}
+	public static LoadingTipsElement[] GetLoadingTipsDatas(TargetTipsType type, int targetId)
+	{
+		return null;
+	}
 
-		private void SetDefault()
-		{
-		}
+	private void SetDefault()
+	{
+	}
 
-		public void ReleaseResources()
-		{
-		}
+	public void ReleaseResources()
+	{
+	}
 
-		public IEnumerator LoadCharaMaterial(LoadingTipsElement[] tipsDatas)
-		{
-			return null;
-		}
+	public IEnumerator LoadCharaMaterial(LoadingTipsElement[] tipsDatas)
+	{
+		return null;
+	}
 
-		public IEnumerator SetupTipsTitleFTU(string title, bool isCharaTips)
-		{
-			return null;
-		}
+	public IEnumerator SetupTipsTitleFTU(string title, bool isCharaTips)
+	{
+		return null;
+	}
 
-		public IEnumerator SetupCharaTipsFTU(int imageId)
-		{
-			return null;
-		}
+	public IEnumerator SetupCharaTipsFTU(int imageId)
+	{
+		return null;
+	}
 
-		private void LoadAsyncTipsTitleFTU(Action<GameObject> onLoad)
-		{
-		}
+	private void LoadAsyncTipsTitleFTU(Action<GameObject> onLoad)
+	{
+	}
 
-		private void LoadAsyncCharaTipsFTU(Action<GameObject> onLoad)
-		{
-		}
+	private void LoadAsyncCharaTipsFTU(Action<GameObject> onLoad)
+	{
+	}
 
-		public void StartCharaTips()
-		{
-		}
+	public void StartCharaTips()
+	{
+	}
 
-		public float GetCharaTipsDelay()
-		{
-			return default(float);
-		}
+	public float GetCharaTipsDelay()
+	{
+		return default(float);
+	}
 
-		private void SetCharaImage(int imageId, FlPlane flPlane)
-		{
-		}
+	private void SetCharaImage(int imageId, FlPlane flPlane)
+	{
+	}
 
-		private void CreateUpdateTween(Image image, MeshRenderer renderer, [Optional] UnityAction callback)
-		{
-		}
+	private void CreateUpdateTween(Image image, MeshRenderer renderer, [Optional] UnityAction callback)
+	{
+	}
 
-		public void ExitCharaTips()
-		{
-		}
+	public void ExitCharaTips()
+	{
+	}
 
-		public void ChangeCharaTips(LoadingTipsElement tipsData, bool isToLeft)
-		{
-		}
+	public void ChangeCharaTips(LoadingTipsElement tipsData, bool isToLeft)
+	{
+	}
 
-		public void ChangeTipsTitle(LoadingTipsElement tipsData, bool isToLeft)
-		{
-		}
+	public void ChangeTipsTitle(LoadingTipsElement tipsData, bool isToLeft)
+	{
+	}
 
-		public static string GetTipsDir()
-		{
-			return null;
-		}
+	public static string GetTipsDir()
+	{
+		return null;
+	}
 
-		private string GetTipsPrefabPath(TipsLayoutType type)
-		{
-			return null;
-		}
+	private string GetTipsPrefabPath(TipsLayoutType type)
+	{
+		return null;
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void OnDestroy()
+	{
 	}
 }

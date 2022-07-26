@@ -2,125 +2,124 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ManagedFacilityDialogController : PopupBase
 {
-	public class ManagedFacilityDialogController : PopupBase
+	public enum ExecutedFacilityAction
 	{
-		public enum ExecutedFacilityAction
+		Store,
+		LevelUp,
+		CompleteBuilding,
+		ExchangeMaterial,
+		UpdsateWorkableSmith
+	}
+
+	[SerializeField]
+	private TabViewBase tabView;
+
+	[SerializeField]
+	private Transform sortParentTransform;
+
+	private List<ManagedFacilityController> managedFacilityCtrlList;
+
+	private CommonSortButton sortButton;
+
+	private FlashPlayer managedFacilityFlashPlayer;
+
+	private ManagedFacilityCell selectedCell;
+
+	private PopupCanvas popupCanvasComponent;
+
+	private static List<string> managedFacilityTabNameList;
+
+	public Canvas canvas
+	{
+		[CompilerGenerated]
+		get
 		{
-			Store,
-			LevelUp,
-			CompleteBuilding,
-			ExchangeMaterial,
-			UpdsateWorkableSmith
+			return null;
 		}
-
-		[SerializeField]
-		private TabViewBase tabView;
-
-		[SerializeField]
-		private Transform sortParentTransform;
-
-		private List<ManagedFacilityController> managedFacilityCtrlList;
-
-		private CommonSortButton sortButton;
-
-		private FlashPlayer managedFacilityFlashPlayer;
-
-		private ManagedFacilityCell selectedCell;
-
-		private PopupCanvas popupCanvasComponent;
-
-		private static List<string> managedFacilityTabNameList;
-
-		public Canvas canvas
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public GameObject fortRoot
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		private void Awake()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		protected override void Start()
+	public GameObject fortRoot
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void OnSortButtonClicked()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void OnCloseButtonPressd()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		public void SetActiveSortButton(bool isActive)
-		{
-		}
+	private void OnSortButtonClicked()
+	{
+	}
 
-		private void SetManagedFacilityFlashPlayer(string flashPath, Transform target)
-		{
-		}
+	public void OnCloseButtonPressd()
+	{
+	}
 
-		private void UpdateSortAndFilter(int tabIndex)
-		{
-		}
+	public void SetActiveSortButton(bool isActive)
+	{
+	}
 
-		public void StoreFacility(Facility facility)
-		{
-		}
+	private void SetManagedFacilityFlashPlayer(string flashPath, Transform target)
+	{
+	}
 
-		public void LevelUpFacility(Facility currentFacility)
-		{
-		}
+	private void UpdateSortAndFilter(int tabIndex)
+	{
+	}
 
-		public void CompleteAtOnceFacility(Facility facility)
-		{
-		}
+	public void StoreFacility(Facility facility)
+	{
+	}
 
-		public void ShowFacilityInformation(Facility facility)
-		{
-		}
+	public void LevelUpFacility(Facility currentFacility)
+	{
+	}
 
-		public void SetSelectedCell(ManagedFacilityCell selectedCell)
-		{
-		}
+	public void CompleteAtOnceFacility(Facility facility)
+	{
+	}
 
-		public void OnFalicitySelectCofirm(Facility facility)
-		{
-		}
+	public void ShowFacilityInformation(Facility facility)
+	{
+	}
 
-		public void UpdateCurrentContents(ExecutedFacilityAction executedFacilityAction)
-		{
-		}
+	public void SetSelectedCell(ManagedFacilityCell selectedCell)
+	{
+	}
 
-		public static void ResetTabSetting()
-		{
-		}
+	public void OnFalicitySelectCofirm(Facility facility)
+	{
+	}
 
-		private void RegisterTabNameList()
-		{
-		}
+	public void UpdateCurrentContents(ExecutedFacilityAction executedFacilityAction)
+	{
+	}
+
+	public static void ResetTabSetting()
+	{
+	}
+
+	private void RegisterTabNameList()
+	{
 	}
 }

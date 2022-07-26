@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public class AbnormalStatusSwoon : AbnormalStatusBase
 {
-	public class AbnormalStatusSwoon : AbnormalStatusBase
+	public override bool Update()
 	{
-		public override bool Update()
-		{
-			return default(bool);
-		}
+		return default(bool);
 	}
 }

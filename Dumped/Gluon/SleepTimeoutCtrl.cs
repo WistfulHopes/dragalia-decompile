@@ -1,43 +1,42 @@
-namespace Gluon
+namespace Gluon;
+
+public class SleepTimeoutCtrl
 {
-	public class SleepTimeoutCtrl
+	private bool _isInMatchingRoom;
+
+	private bool _isInMultiPlay;
+
+	private bool _isInQuest;
+
+	public void EnterMatchingRoom()
 	{
-		private bool _isInMatchingRoom;
+	}
 
-		private bool _isInMultiPlay;
+	public void LeaveMatchingRoom()
+	{
+	}
 
-		private bool _isInQuest;
+	public void EnterMultiPlay()
+	{
+	}
 
-		public void EnterMatchingRoom()
-		{
-		}
+	public void LeaveMultiPlay()
+	{
+	}
 
-		public void LeaveMatchingRoom()
-		{
-		}
+	public void EnterQuest(bool isAutoPlayMode)
+	{
+	}
 
-		public void EnterMultiPlay()
-		{
-		}
+	public void LeaveQuest()
+	{
+	}
 
-		public void LeaveMultiPlay()
-		{
-		}
+	public void SetAutoPlayMode(bool isAutoPlayMode)
+	{
+	}
 
-		public void EnterQuest(bool isAutoPlayMode)
-		{
-		}
-
-		public void LeaveQuest()
-		{
-		}
-
-		public void SetAutoPlayMode(bool isAutoPlayMode)
-		{
-		}
-
-		private void SetSleepPreventEnabled(bool enable)
-		{
-		}
+	private void SetSleepPreventEnabled(bool enable)
+	{
 	}
 }

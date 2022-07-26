@@ -2,81 +2,80 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTableViewTradeAmuletCell : TableViewCell<ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData>
 {
-	public class ShopTableViewTradeAmuletCell : TableViewCell<ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData>
+	[SerializeField]
+	private CommonIcon amuletImage;
+
+	[SerializeField]
+	private Text amuletNameText;
+
+	[SerializeField]
+	private Text[] amuletAbilityTexts;
+
+	[SerializeField]
+	private Image[] amuletAbilityIcons;
+
+	[SerializeField]
+	private Text amuletDurationText;
+
+	[SerializeField]
+	private Button exchangeButton;
+
+	[SerializeField]
+	private GameObject[] rarityObjs;
+
+	[SerializeField]
+	private GameObject limitBreakInfo;
+
+	[SerializeField]
+	private Text exchangeConditionText;
+
+	[SerializeField]
+	private GameObject newIcon;
+
+	[SerializeField]
+	private GameObject memoryTitle;
+
+	[SerializeField]
+	private Image recommendedRibbon;
+
+	public ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData data
 	{
-		[SerializeField]
-		private CommonIcon amuletImage;
-
-		[SerializeField]
-		private Text amuletNameText;
-
-		[SerializeField]
-		private Text[] amuletAbilityTexts;
-
-		[SerializeField]
-		private Image[] amuletAbilityIcons;
-
-		[SerializeField]
-		private Text amuletDurationText;
-
-		[SerializeField]
-		private Button exchangeButton;
-
-		[SerializeField]
-		private GameObject[] rarityObjs;
-
-		[SerializeField]
-		private GameObject limitBreakInfo;
-
-		[SerializeField]
-		private Text exchangeConditionText;
-
-		[SerializeField]
-		private GameObject newIcon;
-
-		[SerializeField]
-		private GameObject memoryTitle;
-
-		[SerializeField]
-		private Image recommendedRibbon;
-
-		public ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData data
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public override void UpdateContent(ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData data)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SwitchContent()
-		{
-		}
+	public override void UpdateContent(ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData data)
+	{
+	}
 
-		public void UpdateNewIcon()
-		{
-		}
+	public void SwitchContent()
+	{
+	}
 
-		private void SetAbility(int abilityId, ElementalType elementType, Image icon, Text abilityName)
-		{
-		}
+	public void UpdateNewIcon()
+	{
+	}
 
-		public void OnExchangeButtonPressed()
-		{
-		}
+	private void SetAbility(int abilityId, ElementalType elementType, Image icon, Text abilityName)
+	{
+	}
 
-		public void OnIconTouched()
-		{
-		}
+	public void OnExchangeButtonPressed()
+	{
+	}
+
+	public void OnIconTouched()
+	{
 	}
 }

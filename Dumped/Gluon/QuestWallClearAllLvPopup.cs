@@ -3,23 +3,22 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestWallClearAllLvPopup : CommonPopup
 {
-	public class QuestWallClearAllLvPopup : CommonPopup
+	[SerializeField]
+	private Image elementImage;
+
+	[SerializeField]
+	private Text questName;
+
+	public static QuestWallClearAllLvPopup Create(int wallId, [Optional] UnityAction OnCloseCallback)
 	{
-		[SerializeField]
-		private Image elementImage;
+		return null;
+	}
 
-		[SerializeField]
-		private Text questName;
-
-		public static QuestWallClearAllLvPopup Create(int wallId, [Optional] UnityAction OnCloseCallback)
-		{
-			return null;
-		}
-
-		public void InitData(int wallId)
-		{
-		}
+	public void InitData(int wallId)
+	{
 	}
 }

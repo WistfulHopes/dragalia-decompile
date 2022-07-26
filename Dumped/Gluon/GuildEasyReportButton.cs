@@ -3,49 +3,48 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildEasyReportButton : MonoBehaviour
 {
-	public class GuildEasyReportButton : MonoBehaviour
+	[SerializeField]
+	public GuildReportConfirmPopup.ReportAbuseType type;
+
+	public Button onClickEventButton;
+
+	private PointerEventHandler eventHandler;
+
+	private Text text;
+
+	private bool isDeletedContent;
+
+	public int targetGuildId
 	{
-		[SerializeField]
-		public GuildReportConfirmPopup.ReportAbuseType type;
-
-		public Button onClickEventButton;
-
-		private PointerEventHandler eventHandler;
-
-		private Text text;
-
-		private bool isDeletedContent;
-
-		public int targetGuildId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public static GuildEasyReportButton BindToText(Text text, GuildReportConfirmPopup.ReportAbuseType type, int guildId, bool isDeletedContent, [Optional] Button onClickEventButton)
-		{
-			return null;
-		}
-
-		private void RefreshComponent()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void Start()
-		{
-		}
+	public static GuildEasyReportButton BindToText(Text text, GuildReportConfirmPopup.ReportAbuseType type, int guildId, bool isDeletedContent, [Optional] Button onClickEventButton)
+	{
+		return null;
+	}
 
-		public void OnLongTouched()
-		{
-		}
+	private void RefreshComponent()
+	{
+	}
+
+	private void Start()
+	{
+	}
+
+	public void OnLongTouched()
+	{
 	}
 }

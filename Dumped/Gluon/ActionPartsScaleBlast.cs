@@ -1,88 +1,87 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsScaleBlast : ActionParts
 {
-	public class ActionPartsScaleBlast : ActionParts
+	public enum ChildType
 	{
-		public enum ChildType
-		{
-			Black,
-			White,
-			Both
-		}
+		Black,
+		White,
+		Both
+	}
 
-		public enum ChildParam
-		{
-			Child01Param,
-			Child02Param,
-			Child03Param
-		}
+	public enum ChildParam
+	{
+		Child01Param,
+		Child02Param,
+		Child03Param
+	}
 
-		private enum State
-		{
-			Init,
-			Idle,
-			Play,
-			Wait,
-			Attack,
-			Fail
-		}
+	private enum State
+	{
+		Init,
+		Idle,
+		Play,
+		Wait,
+		Attack,
+		Fail
+	}
 
-		private readonly ScaleBlastData _partsData;
+	private readonly ScaleBlastData _partsData;
 
-		private State _state;
+	private State _state;
 
-		private EnemyCharacter _enemy;
+	private EnemyCharacter _enemy;
 
-		private float _idleTime;
+	private float _idleTime;
 
-		private float _waiting;
+	private float _waiting;
 
-		private int _blastActionId;
+	private int _blastActionId;
 
-		private bool _isPlayDone;
+	private bool _isPlayDone;
 
-		public ActionPartsScaleBlast(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsScaleBlast(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void OnPostCreated(CharacterBase chara)
-		{
-		}
+	public override void OnPostCreated(CharacterBase chara)
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnFinish()
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		private bool Play()
-		{
-			return default(bool);
-		}
+	private bool Play()
+	{
+		return default(bool);
+	}
 
-		private int GetChildParamId(ChildParam param)
-		{
-			return default(int);
-		}
+	private int GetChildParamId(ChildParam param)
+	{
+		return default(int);
+	}
 
-		private void PlayAction(int actionId)
-		{
-		}
+	private void PlayAction(int actionId)
+	{
 	}
 }

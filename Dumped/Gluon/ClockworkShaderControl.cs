@@ -1,44 +1,43 @@
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ClockworkShaderControl : FastUpdateMonoBehaviour
 {
-	public class ClockworkShaderControl : FastUpdateMonoBehaviour
+	private Material targetMaterial;
+
+	private float lightRatio;
+
+	private const float minDotProductLimit = -1.01f;
+
+	public float LightRatio => default(float);
+
+	public void SetMaterial(Material mat)
 	{
-		private Material targetMaterial;
+	}
 
-		private float lightRatio;
+	public void SetLightColor(Color32 col)
+	{
+	}
 
-		private const float minDotProductLimit = -1.01f;
+	public void SetDarkColor(float contrast, float saturation, float brightness)
+	{
+	}
 
-		public float LightRatio => default(float);
+	public void SetLightRatio(float f)
+	{
+	}
 
-		public void SetMaterial(Material mat)
-		{
-		}
+	private void UpdateMaterialParameter()
+	{
+	}
 
-		public void SetLightColor(Color32 col)
-		{
-		}
+	public void ResetMaterialParameter()
+	{
+	}
 
-		public void SetDarkColor(float contrast, float saturation, float brightness)
-		{
-		}
-
-		public void SetLightRatio(float f)
-		{
-		}
-
-		private void UpdateMaterialParameter()
-		{
-		}
-
-		public void ResetMaterialParameter()
-		{
-		}
-
-		public static void ResetMaterialParameter(Material mat)
-		{
-		}
+	public static void ResetMaterialParameter(Material mat)
+	{
 	}
 }

@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateEvent : CharacterStateBase
 {
-	public class CharacterStateEvent : CharacterStateBase
-	{
-	}
 }

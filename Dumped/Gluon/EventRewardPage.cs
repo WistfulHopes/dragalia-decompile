@@ -4,92 +4,91 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventRewardPage : EventQuestPageBase, ICustomMessage
 {
-	public class EventRewardPage : EventQuestPageBase, ICustomMessage
+	private TabViewBase tabView;
+
+	[SerializeField]
+	private EventRewardTabButton[] tabButtons;
+
+	[SerializeField]
+	private Button receiveAllButton;
+
+	[SerializeField]
+	private EventRewardCtrl bronzeCtrl;
+
+	[SerializeField]
+	private EventRewardCtrl silverCtrl;
+
+	[SerializeField]
+	private EventRewardCtrl goldCtrl;
+
+	private bool isInited;
+
+	public override void OnPageBecomeActive(object data)
 	{
-		private TabViewBase tabView;
+	}
 
-		[SerializeField]
-		private EventRewardTabButton[] tabButtons;
+	public override void OnPageBecomeInActive()
+	{
+	}
 
-		[SerializeField]
-		private Button receiveAllButton;
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		[SerializeField]
-		private EventRewardCtrl bronzeCtrl;
+	private void Start()
+	{
+	}
 
-		[SerializeField]
-		private EventRewardCtrl silverCtrl;
+	protected override void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		private EventRewardCtrl goldCtrl;
+	private void SetTabPage(int index)
+	{
+	}
 
-		private bool isInited;
+	public void UpdateReceivedItems()
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public void UpdateReceiveButtonInformation()
+	{
+	}
 
-		public override void OnPageBecomeInActive()
-		{
-		}
+	public void SetContent()
+	{
+	}
 
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
+	public void OnBackButtonTouched()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	public void UpdateTabButtons(int curIndex)
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	public void OnReceipAllButtonTouched()
+	{
+	}
 
-		private void SetTabPage(int index)
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
 
-		public void UpdateReceivedItems()
-		{
-		}
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		public void UpdateReceiveButtonInformation()
-		{
-		}
+	private IEnumerator WaitForInitialzing(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+		return null;
+	}
 
-		public void SetContent()
-		{
-		}
-
-		public void OnBackButtonTouched()
-		{
-		}
-
-		public void UpdateTabButtons(int curIndex)
-		{
-		}
-
-		public void OnReceipAllButtonTouched()
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
-
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		private IEnumerator WaitForInitialzing(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-			return null;
-		}
-
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
 	}
 }

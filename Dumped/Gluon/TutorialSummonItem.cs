@@ -1,41 +1,40 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialSummonItem : MonoBehaviour
 {
-	public class TutorialSummonItem : MonoBehaviour
+	[SerializeField]
+	protected CommonIcon icon;
+
+	[SerializeField]
+	private Image iconDragonElements;
+
+	[SerializeField]
+	private Sprite[] dragonElements;
+
+	private GiftType giftType;
+
+	private int id;
+
+	public void SetContent(SummonResultItemData data, IconLoader.Size size)
 	{
-		[SerializeField]
-		protected CommonIcon icon;
+	}
 
-		[SerializeField]
-		private Image iconDragonElements;
+	private void SetIconDoragonElement(SummonResultItemData data)
+	{
+	}
 
-		[SerializeField]
-		private Sprite[] dragonElements;
+	public void OnIconTouched()
+	{
+	}
 
-		private GiftType giftType;
+	public void ShowItemDetail(SummonResultItemData itemData)
+	{
+	}
 
-		private int id;
-
-		public void SetContent(SummonResultItemData data, IconLoader.Size size)
-		{
-		}
-
-		private void SetIconDoragonElement(SummonResultItemData data)
-		{
-		}
-
-		public void OnIconTouched()
-		{
-		}
-
-		public void ShowItemDetail(SummonResultItemData itemData)
-		{
-		}
-
-		private void TutorialFlagReset()
-		{
-		}
+	private void TutorialFlagReset()
+	{
 	}
 }

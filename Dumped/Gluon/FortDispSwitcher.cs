@@ -2,49 +2,48 @@ using System.Collections.Generic;
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortDispSwitcher : FastUpdateMonoBehaviour
 {
-	public class FortDispSwitcher : FastUpdateMonoBehaviour
+	public enum SwitchTarget
 	{
-		public enum SwitchTarget
-		{
-			GameObject,
-			Renderer
-		}
+		GameObject,
+		Renderer
+	}
 
-		public enum SwitchType
-		{
-			ByDistanceFromCamera
-		}
+	public enum SwitchType
+	{
+		ByDistanceFromCamera
+	}
 
-		[SerializeField]
-		private SwitchTarget switchTarget;
+	[SerializeField]
+	private SwitchTarget switchTarget;
 
-		[SerializeField]
-		private GameObject[] targets;
+	[SerializeField]
+	private GameObject[] targets;
 
-		[SerializeField]
-		private SwitchType switchType;
+	[SerializeField]
+	private SwitchType switchType;
 
-		[SerializeField]
-		private float distanceFromCamera;
+	[SerializeField]
+	private float distanceFromCamera;
 
-		private List<Renderer> rendererList;
+	private List<Renderer> rendererList;
 
-		private bool isInit;
+	private bool isInit;
 
-		private bool isDisp;
+	private bool isDisp;
 
-		private Transform cachedCamTrans;
+	private Transform cachedCamTrans;
 
-		private float thresholdValueByDistanceFromCamera;
+	private float thresholdValueByDistanceFromCamera;
 
-		private void Initialize()
-		{
-		}
+	private void Initialize()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	public override void FastUpdate()
+	{
 	}
 }

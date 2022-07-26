@@ -1,37 +1,36 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonTop : MonoBehaviour
 {
-	public class SummonTop : MonoBehaviour
+	public GameObject summonUIContentNode;
+
+	public RectTransform backGround;
+
+	[HideInInspector]
+	public SummonScene scene;
+
+	[HideInInspector]
+	public SummonTopItemView itemView;
+
+	public void LoadMainUI()
 	{
-		public GameObject summonUIContentNode;
+	}
 
-		public RectTransform backGround;
+	public void RefreshPrice()
+	{
+	}
 
-		[HideInInspector]
-		public SummonScene scene;
+	public void DisableButtonsForTutorial(bool enableMultiButton)
+	{
+	}
 
-		[HideInInspector]
-		public SummonTopItemView itemView;
+	public void OnBeforeSceneLeaving()
+	{
+	}
 
-		public void LoadMainUI()
-		{
-		}
-
-		public void RefreshPrice()
-		{
-		}
-
-		public void DisableButtonsForTutorial(bool enableMultiButton)
-		{
-		}
-
-		public void OnBeforeSceneLeaving()
-		{
-		}
-
-		public void FadeOut()
-		{
-		}
+	public void FadeOut()
+	{
 	}
 }

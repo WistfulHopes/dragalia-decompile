@@ -1,11 +1,10 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+[Flags]
+public enum OptimizeFlag
 {
-	[Flags]
-	public enum OptimizeFlag
-	{
-		Default = 0x0,
-		PackAsTable = 0x1
-	}
+	Default = 0,
+	PackAsTable = 1
 }

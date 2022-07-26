@@ -1,77 +1,76 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class MultiPlaySystemMessageCtrl
 {
-	public class MultiPlaySystemMessageCtrl
+	private bool _needsOtherPlayerDisconnectMessage;
+
+	private bool _needsDisconnectOwnMessage;
+
+	private bool _needsRankingDisabledMessage;
+
+	private bool _needsSumUpTotalDamageDisabledMessage;
+
+	private bool _needsInstructorBonusMessage;
+
+	private List<ulong> _instructorBonusViewerIdList;
+
+	public void SetupInstructorBonusViewerList(List<ulong> roomViewerIds)
 	{
-		private bool _needsOtherPlayerDisconnectMessage;
+	}
 
-		private bool _needsDisconnectOwnMessage;
+	public bool HasInstructorBonusPlayer()
+	{
+		return default(bool);
+	}
 
-		private bool _needsRankingDisabledMessage;
+	public void DisplayDisconnectOwnMessage(MultiPlayErrorEventService.Event e)
+	{
+	}
 
-		private bool _needsSumUpTotalDamageDisabledMessage;
+	public void DisplayDisconnectOtherPlayerMessage(MultiPlayErrorEventService.Event e, MultiPlayManager.PlayerInfo playerInfo)
+	{
+	}
 
-		private bool _needsInstructorBonusMessage;
+	public void DisplayDisableInstructorBonusMessage(ulong disconnectViwerId = 0uL)
+	{
+	}
 
-		private List<ulong> _instructorBonusViewerIdList;
+	public void DisplayRankingDisabledMessage()
+	{
+	}
 
-		public void SetupInstructorBonusViewerList(List<ulong> roomViewerIds)
-		{
-		}
+	public void DisplaySumUpTotalDamageDisabledMessage()
+	{
+	}
 
-		public bool HasInstructorBonusPlayer()
-		{
-			return default(bool);
-		}
+	public bool NeedsInstructorBonusMessage()
+	{
+		return default(bool);
+	}
 
-		public void DisplayDisconnectOwnMessage(MultiPlayErrorEventService.Event e)
-		{
-		}
+	public bool NeedsDisconnectOwnMessage()
+	{
+		return default(bool);
+	}
 
-		public void DisplayDisconnectOtherPlayerMessage(MultiPlayErrorEventService.Event e, MultiPlayManager.PlayerInfo playerInfo)
-		{
-		}
+	public bool NeedsOtherPlayerDisconnectMessage()
+	{
+		return default(bool);
+	}
 
-		public void DisplayDisableInstructorBonusMessage(ulong disconnectViwerId = 0uL)
-		{
-		}
+	public bool NeedsRankingDisabledMessage()
+	{
+		return default(bool);
+	}
 
-		public void DisplayRankingDisabledMessage()
-		{
-		}
+	public bool NeedsSumUpTotalDAmageDisabledMessage()
+	{
+		return default(bool);
+	}
 
-		public void DisplaySumUpTotalDamageDisabledMessage()
-		{
-		}
-
-		public bool NeedsInstructorBonusMessage()
-		{
-			return default(bool);
-		}
-
-		public bool NeedsDisconnectOwnMessage()
-		{
-			return default(bool);
-		}
-
-		public bool NeedsOtherPlayerDisconnectMessage()
-		{
-			return default(bool);
-		}
-
-		public bool NeedsRankingDisabledMessage()
-		{
-			return default(bool);
-		}
-
-		public bool NeedsSumUpTotalDAmageDisabledMessage()
-		{
-			return default(bool);
-		}
-
-		public void OnClearQuest()
-		{
-		}
+	public void OnClearQuest()
+	{
 	}
 }

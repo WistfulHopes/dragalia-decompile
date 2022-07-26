@@ -1,8 +1,7 @@
-namespace Gluon
+namespace Gluon;
+
+public enum AlbumStoryType
 {
-	public enum AlbumStoryType
-	{
-		mainStory = 1,
-		eventStory
-	}
+	mainStory = 1,
+	eventStory
 }

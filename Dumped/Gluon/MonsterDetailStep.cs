@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum MonsterDetailStep
 {
-	public enum MonsterDetailStep
-	{
-		None,
-		FirstStep,
-		SecondStep,
-		FinalStep
-	}
+	None,
+	FirstStep,
+	SecondStep,
+	FinalStep
 }

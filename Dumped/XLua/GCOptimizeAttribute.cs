@@ -1,15 +1,14 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+public class GCOptimizeAttribute : Attribute
 {
-	public class GCOptimizeAttribute : Attribute
+	private OptimizeFlag flag;
+
+	public OptimizeFlag Flag => default(OptimizeFlag);
+
+	public GCOptimizeAttribute(OptimizeFlag flag = OptimizeFlag.Default)
 	{
-		private OptimizeFlag flag;
-
-		public OptimizeFlag Flag => default(OptimizeFlag);
-
-		public GCOptimizeAttribute(OptimizeFlag flag = OptimizeFlag.Default)
-		{
-		}
 	}
 }

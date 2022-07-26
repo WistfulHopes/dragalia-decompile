@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum QuestType
 {
-	public enum QuestType
-	{
-		NONE,
-		DUNGEON,
-		STORY,
-		TREASURE,
-		WALL
-	}
+	NONE,
+	DUNGEON,
+	STORY,
+	TREASURE,
+	WALL
 }

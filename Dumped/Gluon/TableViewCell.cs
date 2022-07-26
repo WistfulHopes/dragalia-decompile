@@ -1,67 +1,66 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class TableViewCell<T> : MonoBehaviour
 {
-	public class TableViewCell<T> : MonoBehaviour
+	[HideInInspector]
+	public RectTransform rectTransform;
+
+	protected T itemData;
+
+	public int dataIndex
 	{
-		[HideInInspector]
-		public RectTransform rectTransform;
-
-		protected T itemData;
-
-		public int dataIndex
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public float height
-		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
-		}
-
-		public Vector2 top
-		{
-			get
-			{
-				return default(Vector2);
-			}
-			set
-			{
-			}
-		}
-
-		public Vector2 bottom
-		{
-			get
-			{
-				return default(Vector2);
-			}
-			set
-			{
-			}
-		}
-
-		protected virtual void Awake()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public virtual void UpdateContent(T itemData)
+	public float height
+	{
+		get
+		{
+			return default(float);
+		}
+		set
 		{
 		}
+	}
+
+	public Vector2 top
+	{
+		get
+		{
+			return default(Vector2);
+		}
+		set
+		{
+		}
+	}
+
+	public Vector2 bottom
+	{
+		get
+		{
+			return default(Vector2);
+		}
+		set
+		{
+		}
+	}
+
+	protected virtual void Awake()
+	{
+	}
+
+	public virtual void UpdateContent(T itemData)
+	{
 	}
 }

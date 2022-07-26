@@ -1,15 +1,14 @@
 using UnityEngine;
 
-namespace Gluon
-{
-	public class DebugPartyButton : MonoBehaviour
-	{
-		private void Start()
-		{
-		}
+namespace Gluon;
 
-		public void OnClick()
-		{
-		}
+public class DebugPartyButton : MonoBehaviour
+{
+	private void Start()
+	{
+	}
+
+	public void OnClick()
+	{
 	}
 }

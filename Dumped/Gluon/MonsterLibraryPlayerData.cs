@@ -1,13 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public class MonsterLibraryPlayerData
 {
-	public class MonsterLibraryPlayerData
-	{
-		public int monsterId;
+	public int monsterId;
 
-		public int pieceCount;
+	public int pieceCount;
 
-		public bool newFlg;
+	public bool newFlg;
 
-		public int killCount;
-	}
+	public int killCount;
 }

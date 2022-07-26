@@ -1,118 +1,117 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthUICanvas : AnimationUICanvas
 {
-	public class GrowthUICanvas : AnimationUICanvas
+	public GrowthScene scene;
+
+	public Button menuButton;
+
+	public Button itemButton;
+
+	public Button growthCharacterButton;
+
+	public Button growthManaCircleButton;
+
+	public Button growthWeaponButton;
+
+	public Button growthDragonButton;
+
+	public Button growthAmuletButton;
+
+	public GameObject balloon;
+
+	public GameObject growthCharacterMaintenance;
+
+	public GameObject growthManaCircleMaintenance;
+
+	public GameObject growthWeaponMaintenance;
+
+	public GameObject growthDragonMaintenance;
+
+	public GameObject growthAmuletMaintenance;
+
+	public Text manaNumText;
+
+	public Text awakeningNumText;
+
+	public Text rupiNumText;
+
+	public Text talkName;
+
+	public Text talkText;
+
+	public Badge weaponBadgeIcon;
+
+	public Badge crestBadgeIcon;
+
+	private void Start()
 	{
-		public GrowthScene scene;
+	}
 
-		public Button menuButton;
+	public void OnGrowthCharacterButtonPressed()
+	{
+	}
 
-		public Button itemButton;
+	public void OnGrowthManaCircleButtonPressed()
+	{
+	}
 
-		public Button growthCharacterButton;
+	public void OnGrowthDragonButtonPressed()
+	{
+	}
 
-		public Button growthManaCircleButton;
+	public void OnGrowthWeaponButtonPressed()
+	{
+	}
 
-		public Button growthWeaponButton;
+	public void OnGrowthAmuletButtonPressed()
+	{
+	}
 
-		public Button growthDragonButton;
+	public void OnGrowthCraftButtonPressed()
+	{
+	}
 
-		public Button growthAmuletButton;
+	public void SetTalkTextString(string text)
+	{
+	}
 
-		public GameObject balloon;
+	public void SetTalkNameString(string text)
+	{
+	}
 
-		public GameObject growthCharacterMaintenance;
+	public void StartBalloonAnimation(OutGameTopCharaTalkSelector.TalkData talkData, bool dontRunCloseAnimation = false, bool ignoreDelay = false)
+	{
+	}
 
-		public GameObject growthManaCircleMaintenance;
+	public void CheckTutorialLockButton(bool isIgnorePressed = false)
+	{
+	}
 
-		public GameObject growthWeaponMaintenance;
+	public void DisableAllButtonExceptGrowthAmulet()
+	{
+	}
 
-		public GameObject growthDragonMaintenance;
+	public void DisableAllButtonExceptManaCircle()
+	{
+	}
 
-		public GameObject growthAmuletMaintenance;
+	public void DisableAllButtonExceptCraft()
+	{
+	}
 
-		public Text manaNumText;
+	public void CheckMaintenance()
+	{
+	}
 
-		public Text awakeningNumText;
+	public void UpdateFundsTexts()
+	{
+	}
 
-		public Text rupiNumText;
-
-		public Text talkName;
-
-		public Text talkText;
-
-		public Badge weaponBadgeIcon;
-
-		public Badge crestBadgeIcon;
-
-		private void Start()
-		{
-		}
-
-		public void OnGrowthCharacterButtonPressed()
-		{
-		}
-
-		public void OnGrowthManaCircleButtonPressed()
-		{
-		}
-
-		public void OnGrowthDragonButtonPressed()
-		{
-		}
-
-		public void OnGrowthWeaponButtonPressed()
-		{
-		}
-
-		public void OnGrowthAmuletButtonPressed()
-		{
-		}
-
-		public void OnGrowthCraftButtonPressed()
-		{
-		}
-
-		public void SetTalkTextString(string text)
-		{
-		}
-
-		public void SetTalkNameString(string text)
-		{
-		}
-
-		public void StartBalloonAnimation(OutGameTopCharaTalkSelector.TalkData talkData, bool dontRunCloseAnimation = false, bool ignoreDelay = false)
-		{
-		}
-
-		public void CheckTutorialLockButton(bool isIgnorePressed = false)
-		{
-		}
-
-		public void DisableAllButtonExceptGrowthAmulet()
-		{
-		}
-
-		public void DisableAllButtonExceptManaCircle()
-		{
-		}
-
-		public void DisableAllButtonExceptCraft()
-		{
-		}
-
-		public void CheckMaintenance()
-		{
-		}
-
-		public void UpdateFundsTexts()
-		{
-		}
-
-		public void UpdateBadge()
-		{
-		}
+	public void UpdateBadge()
+	{
 	}
 }

@@ -5,48 +5,47 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPage2dCharacter : MonoBehaviour, IPointerClickHandler, IEventSystemHandler
 {
-	public class MyPage2dCharacter : MonoBehaviour, IPointerClickHandler, IEventSystemHandler
+	public Image image;
+
+	private string voiceSheetName;
+
+	private List<string> lastVoiceGroup;
+
+	private int numOfVoice;
+
+	private int lastVoiceIndex;
+
+	private Vector2 initialPosition;
+
+	[NonSerialized]
+	public Action overrideAction;
+
+	private void Awake()
 	{
-		public Image image;
+	}
 
-		private string voiceSheetName;
+	public void SetBgCharacterImage(int charaId)
+	{
+	}
 
-		private List<string> lastVoiceGroup;
+	public void OnPointerClick(PointerEventData eventData)
+	{
+	}
 
-		private int numOfVoice;
+	private IEnumerator PlayVoiceCoroutine()
+	{
+		return null;
+	}
 
-		private int lastVoiceIndex;
+	private void OnDestroy()
+	{
+	}
 
-		private Vector2 initialPosition;
-
-		[NonSerialized]
-		public Action overrideAction;
-
-		private void Awake()
-		{
-		}
-
-		public void SetBgCharacterImage(int charaId)
-		{
-		}
-
-		public void OnPointerClick(PointerEventData eventData)
-		{
-		}
-
-		private IEnumerator PlayVoiceCoroutine()
-		{
-			return null;
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		private void ReleaseAllVoiceGroup()
-		{
-		}
+	private void ReleaseAllVoiceGroup()
+	{
 	}
 }

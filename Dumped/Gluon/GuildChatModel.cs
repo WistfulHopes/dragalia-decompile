@@ -4,299 +4,298 @@ using System.Threading.Tasks;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildChatModel
 {
-	public class GuildChatModel
+	public enum ContentType
 	{
-		public enum ContentType
+		None,
+		Text,
+		Stamp,
+		System,
+		MultiLink
+	}
+
+	public enum GuildSystemMessageType
+	{
+		TextOnly = 1,
+		TextAndIcon,
+		MultiLink
+	}
+
+	public enum ChatAnimationWaitMode
+	{
+		None,
+		Set,
+		Wait,
+		Animation
+	}
+
+	public enum ChatUpdateState
+	{
+		None,
+		NewMessage,
+		LinkUpdate
+	}
+
+	public enum GuildSystemMessageLabel
+	{
+		AssignLeader = 3
+	}
+
+	public class ChatTableViewData
+	{
+		public enum RoomStatus
 		{
 			None,
-			Text,
-			Stamp,
-			System,
-			MultiLink
+			NoData,
+			Available,
+			Full,
+			InvalidCompatibleId,
+			Error
 		}
 
-		public enum GuildSystemMessageType
-		{
-			TextOnly = 1,
-			TextAndIcon,
-			MultiLink
-		}
+		public ulong chatMessageId;
 
-		public enum ChatAnimationWaitMode
-		{
-			None,
-			Set,
-			Wait,
-			Animation
-		}
+		public ulong viewerId;
 
-		public enum ChatUpdateState
-		{
-			None,
-			NewMessage,
-			LinkUpdate
-		}
+		public GuildModel.ProfileIconData iconData;
 
-		public enum GuildSystemMessageLabel
-		{
-			AssignLeader = 3
-		}
+		public string name;
 
-		public class ChatTableViewData
-		{
-			public enum RoomStatus
-			{
-				None,
-				NoData,
-				Available,
-				Full,
-				InvalidCompatibleId,
-				Error
-			}
+		public ContentType contentType;
 
-			public ulong chatMessageId;
+		public string text;
 
-			public ulong viewerId;
+		public int stampId;
 
-			public GuildModel.ProfileIconData iconData;
+		public int systemMessageId;
 
-			public string name;
+		public int paramValue1;
 
-			public ContentType contentType;
+		public int paramValue2;
 
-			public string text;
+		public int paramValue3;
 
-			public int stampId;
+		public int paramValue4;
 
-			public int systemMessageId;
+		public DateTime time;
 
-			public int paramValue1;
+		public int roomId;
 
-			public int paramValue2;
+		public RoomStatus roomStatus;
 
-			public int paramValue3;
+		public int currentMemberCount;
 
-			public int paramValue4;
+		public int questId;
 
-			public DateTime time;
+		public float roomUpdateWaitTime;
 
-			public int roomId;
+		public Vector2 cellSize;
 
-			public RoomStatus roomStatus;
+		public bool isReportState;
 
-			public int currentMemberCount;
+		public bool isReportStateClear;
 
-			public int questId;
+		public bool isChangeRoomStatus;
 
-			public float roomUpdateWaitTime;
+		public ChatAnimationWaitMode animationWaitState;
 
-			public Vector2 cellSize;
+		public bool shouldShowDateChange;
 
-			public bool isReportState;
+		private Guid _guid;
 
-			public bool isReportStateClear;
+		public Guid guid => default(Guid);
 
-			public bool isChangeRoomStatus;
-
-			public ChatAnimationWaitMode animationWaitState;
-
-			public bool shouldShowDateChange;
-
-			private Guid _guid;
-
-			public Guid guid => default(Guid);
-
-			public bool IsEnabledRoomStates()
-			{
-				return default(bool);
-			}
-
-			public bool IsTextOnly()
-			{
-				return default(bool);
-			}
-		}
-
-		private static GuildChatModel instance;
-
-		private Action updateAction;
-
-		private List<ChatTableViewData> chatLog;
-
-		public TextToSpeechPlayer textToSpeechPlayer;
-
-		private const int maxChatCount = 500;
-
-		public const string stampSE = "SE_OUT_COMMON_0028";
-
-		private const float roomUpdateWaitTime = 3f;
-
-		public static GuildChatModel Instance => null;
-
-		public static void DeleteInstance()
-		{
-		}
-
-		public static bool IsInstanceNull()
+		public bool IsEnabledRoomStates()
 		{
 			return default(bool);
 		}
 
-		private GuildChatModel()
-		{
-		}
-
-		static GuildChatModel()
-		{
-		}
-
-		public List<ChatTableViewData> GetChatLogList(List<ContentType> enableContentType)
-		{
-			return null;
-		}
-
-		private List<ChatTableViewData> GetTypeOfChatLogList(List<ChatTableViewData> chatList, ContentType type)
-		{
-			return null;
-		}
-
-		public List<ChatTableViewData> GetEnabledMultiLinkList()
-		{
-			return null;
-		}
-
-		private bool IsExistMatchingRoom()
+		public bool IsTextOnly()
 		{
 			return default(bool);
 		}
+	}
 
-		public void UpdateMultiLink(Action onFinished)
-		{
-		}
+	private static GuildChatModel instance;
 
-		private void UpdateRoomData(ChatTableViewData data, RoomList room)
-		{
-		}
+	private Action updateAction;
 
-		private void SetRoomStatus(ChatTableViewData data, ChatTableViewData.RoomStatus status)
-		{
-		}
+	private List<ChatTableViewData> chatLog;
 
-		public ulong GetFirstChatMassageId()
-		{
-			return default(ulong);
-		}
+	public TextToSpeechPlayer textToSpeechPlayer;
 
-		public ulong GetCurrentChatMassageId()
-		{
-			return default(ulong);
-		}
+	private const int maxChatCount = 500;
 
-		public Task<GuildChatGetOldMessageListResponse> RequestGuildOldMessageList()
-		{
-			return null;
-		}
+	public const string stampSE = "SE_OUT_COMMON_0028";
 
-		public Task<GuildChatGetNewMessageListResponse> RequestGuildNewMessageList()
-		{
-			return null;
-		}
+	private const float roomUpdateWaitTime = 3f;
 
-		public Task<GuildChatPostMessageTextResponse> RequestGuildChatPost(string text)
-		{
-			return null;
-		}
+	public static GuildChatModel Instance => null;
 
-		public Task<GuildChatPostMessageStampResponse> RequestGuildChatStampPost(int stampId)
-		{
-			return null;
-		}
+	public static void DeleteInstance()
+	{
+	}
 
-		public Task<MatchingGetRoomListByGuildResponse> RequestMatchingGetRoomListByGuildPost()
-		{
-			return null;
-		}
+	public static bool IsInstanceNull()
+	{
+		return default(bool);
+	}
 
-		public ChatUpdateState ProcessChat(bool isNew, bool isFirst, bool isWaitAnime)
-		{
-			return default(ChatUpdateState);
-		}
+	private GuildChatModel()
+	{
+	}
 
-		private List<ChatTableViewData> CheckChatLogCountLimit(List<ChatTableViewData> dataList)
-		{
-			return null;
-		}
+	static GuildChatModel()
+	{
+	}
 
-		public bool IsChatLogCountOver()
-		{
-			return default(bool);
-		}
+	public List<ChatTableViewData> GetChatLogList(List<ContentType> enableContentType)
+	{
+		return null;
+	}
 
-		public bool IsChatLogEmpty()
-		{
-			return default(bool);
-		}
+	private List<ChatTableViewData> GetTypeOfChatLogList(List<ChatTableViewData> chatList, ContentType type)
+	{
+		return null;
+	}
 
-		public void SetSpeech(string text, bool isAnimation)
-		{
-		}
+	public List<ChatTableViewData> GetEnabledMultiLinkList()
+	{
+		return null;
+	}
 
-		private List<ChatTableViewData> GetChatTableViewDataList(bool isNew, bool isFirst, bool isWaitAnime)
-		{
-			return null;
-		}
+	private bool IsExistMatchingRoom()
+	{
+		return default(bool);
+	}
 
-		private bool IsExistData(ChatTableViewData data)
-		{
-			return default(bool);
-		}
+	public void UpdateMultiLink(Action onFinished)
+	{
+	}
 
-		private ChatTableViewData GetChatTableViewData(GuildChatMessageList chatMessage, bool isNew, bool isFirst, bool isWaitAnime)
-		{
-			return null;
-		}
+	private void UpdateRoomData(ChatTableViewData data, RoomList room)
+	{
+	}
 
-		public void SetUpdateAction(Action action)
-		{
-		}
+	private void SetRoomStatus(ChatTableViewData data, ChatTableViewData.RoomStatus status)
+	{
+	}
 
-		public void CallUpdateAction()
-		{
-		}
+	public ulong GetFirstChatMassageId()
+	{
+		return default(ulong);
+	}
 
-		public bool IsReportState()
-		{
-			return default(bool);
-		}
+	public ulong GetCurrentChatMassageId()
+	{
+		return default(ulong);
+	}
 
-		public void ClearReportState()
-		{
-		}
+	public Task<GuildChatGetOldMessageListResponse> RequestGuildOldMessageList()
+	{
+		return null;
+	}
 
-		public void ResetReportState()
-		{
-		}
+	public Task<GuildChatGetNewMessageListResponse> RequestGuildNewMessageList()
+	{
+		return null;
+	}
 
-		public void OpenReportDialog(ChatTableViewData data)
-		{
-		}
+	public Task<GuildChatPostMessageTextResponse> RequestGuildChatPost(string text)
+	{
+		return null;
+	}
 
-		public void ResetAnimationState(Guid guid)
-		{
-		}
+	public Task<GuildChatPostMessageStampResponse> RequestGuildChatStampPost(int stampId)
+	{
+		return null;
+	}
 
-		public void UpdateChatIcon()
-		{
-		}
+	public Task<MatchingGetRoomListByGuildResponse> RequestMatchingGetRoomListByGuildPost()
+	{
+		return null;
+	}
 
-		private void UpdateAllIcon()
-		{
-		}
+	public ChatUpdateState ProcessChat(bool isNew, bool isFirst, bool isWaitAnime)
+	{
+		return default(ChatUpdateState);
+	}
 
-		public void ClearData()
-		{
-		}
+	private List<ChatTableViewData> CheckChatLogCountLimit(List<ChatTableViewData> dataList)
+	{
+		return null;
+	}
+
+	public bool IsChatLogCountOver()
+	{
+		return default(bool);
+	}
+
+	public bool IsChatLogEmpty()
+	{
+		return default(bool);
+	}
+
+	public void SetSpeech(string text, bool isAnimation)
+	{
+	}
+
+	private List<ChatTableViewData> GetChatTableViewDataList(bool isNew, bool isFirst, bool isWaitAnime)
+	{
+		return null;
+	}
+
+	private bool IsExistData(ChatTableViewData data)
+	{
+		return default(bool);
+	}
+
+	private ChatTableViewData GetChatTableViewData(GuildChatMessageList chatMessage, bool isNew, bool isFirst, bool isWaitAnime)
+	{
+		return null;
+	}
+
+	public void SetUpdateAction(Action action)
+	{
+	}
+
+	public void CallUpdateAction()
+	{
+	}
+
+	public bool IsReportState()
+	{
+		return default(bool);
+	}
+
+	public void ClearReportState()
+	{
+	}
+
+	public void ResetReportState()
+	{
+	}
+
+	public void OpenReportDialog(ChatTableViewData data)
+	{
+	}
+
+	public void ResetAnimationState(Guid guid)
+	{
+	}
+
+	public void UpdateChatIcon()
+	{
+	}
+
+	private void UpdateAllIcon()
+	{
+	}
+
+	public void ClearData()
+	{
 	}
 }

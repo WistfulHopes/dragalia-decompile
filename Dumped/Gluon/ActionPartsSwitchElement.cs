@@ -1,25 +1,24 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsSwitchElement : ActionParts
 {
-	public class ActionPartsSwitchElement : ActionParts
+	private readonly SwitchElementData _partsData;
+
+	public ActionPartsSwitchElement(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly SwitchElementData _partsData;
+	}
 
-		public ActionPartsSwitchElement(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		private void Procedure()
-		{
-		}
+	private void Procedure()
+	{
 	}
 }

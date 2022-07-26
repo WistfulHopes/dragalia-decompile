@@ -4,163 +4,162 @@ using Cutt;
 using Gluon.GraphicParameter;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SimpleCharacterModel : MonoBehaviour
 {
-	public class SimpleCharacterModel : MonoBehaviour
+	public enum FacialControlKind
 	{
-		public enum FacialControlKind
-		{
-			NotAvailable = -1,
-			Eye,
-			Mouth,
-			Nof
-		}
+		NotAvailable = -1,
+		Eye,
+		Mouth,
+		Nof
+	}
 
-		public enum ShadowCastMethod
-		{
-			TexturedQuad,
-			TextureProjection,
-			MaxNum
-		}
+	public enum ShadowCastMethod
+	{
+		TexturedQuad,
+		TextureProjection,
+		MaxNum
+	}
 
-		private Renderer[] renderers;
+	private Renderer[] renderers;
 
-		private MaterialPropertyBlock _materialPropertyBlock;
+	private MaterialPropertyBlock _materialPropertyBlock;
 
-		private bool isSwitchTexture;
+	private bool isSwitchTexture;
 
-		private SkinnedMeshRenderer[] skinnedMeshRendererList;
+	private SkinnedMeshRenderer[] skinnedMeshRendererList;
 
-		private MaterialPropertyBlock textureSwitchMaterialPropertyBlock;
+	private MaterialPropertyBlock textureSwitchMaterialPropertyBlock;
 
-		public Transform weaponNodeR;
+	public Transform weaponNodeR;
 
-		public Transform weaponNodeL;
+	public Transform weaponNodeL;
 
-		public Transform modelCenter;
+	public Transform modelCenter;
 
-		private bool renderDestroyFlg;
+	private bool renderDestroyFlg;
 
-		public bool isDummyModel;
+	public bool isDummyModel;
 
-		private CuttCharacterFaceData faceData;
+	private CuttCharacterFaceData faceData;
 
-		private List<Material>[] facialMaterialListArray;
+	private List<Material>[] facialMaterialListArray;
 
-		private SimpleCharacterFacialControlInterface[] facialControls;
+	private SimpleCharacterFacialControlInterface[] facialControls;
 
-		public const int cuttDefaultTextureIndexEye = 0;
+	public const int cuttDefaultTextureIndexEye = 0;
 
-		public const int cuttDefaultTextureIndexMouth = 0;
+	public const int cuttDefaultTextureIndexMouth = 0;
 
-		public bool isBlinkEnabled
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		public bool isMouthAnimationEnabled
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		public bool IsFacialControlEnabled(FacialControlKind kind)
+	public bool isBlinkEnabled
+	{
+		get
 		{
 			return default(bool);
 		}
-
-		public void SetFacialControlEnabled(FacialControlKind kind, bool f)
+		set
 		{
 		}
+	}
 
-		public void SetTriggerToFacialControl(FacialControlKind kind, string triggerName)
+	public bool isMouthAnimationEnabled
+	{
+		get
+		{
+			return default(bool);
+		}
+		set
 		{
 		}
+	}
 
-		public void SetCharaFace(CharaFaceEye eye, CharaFaceMouth mouth)
-		{
-		}
+	public bool IsFacialControlEnabled(FacialControlKind kind)
+	{
+		return default(bool);
+	}
 
-		private void Awake()
-		{
-		}
+	public void SetFacialControlEnabled(FacialControlKind kind, bool f)
+	{
+	}
 
-		public void DestroyWeapon()
-		{
-		}
+	public void SetTriggerToFacialControl(FacialControlKind kind, string triggerName)
+	{
+	}
 
-		private IEnumerator GetRenderersDelay()
-		{
-			return null;
-		}
+	public void SetCharaFace(CharaFaceEye eye, CharaFaceMouth mouth)
+	{
+	}
 
-		public void SetupDefaultFacialTexture()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void SetDefaultFacialAnimation()
-		{
-		}
+	public void DestroyWeapon()
+	{
+	}
 
-		public void SetupFacialMaterials()
-		{
-		}
+	private IEnumerator GetRenderersDelay()
+	{
+		return null;
+	}
 
-		private List<Material> GetInstantiatedMaterialByName(string materialNamePrefix)
-		{
-			return null;
-		}
+	public void SetupDefaultFacialTexture()
+	{
+	}
 
-		public void SetFacialTextureByIndex(FacialControlKind kind, int cuttTextureIndex)
-		{
-		}
+	public void SetDefaultFacialAnimation()
+	{
+	}
 
-		public void SetFacialTextureOffset(FacialControlKind kind, Vector2 offset)
-		{
-		}
+	public void SetupFacialMaterials()
+	{
+	}
 
-		private void SetDefaultBlinkAnimation(bool isPlay)
-		{
-		}
+	private List<Material> GetInstantiatedMaterialByName(string materialNamePrefix)
+	{
+		return null;
+	}
 
-		private void SetDefaultMouthAnimation(bool isPlay)
-		{
-		}
+	public void SetFacialTextureByIndex(FacialControlKind kind, int cuttTextureIndex)
+	{
+	}
 
-		public void SetFacialControl(FacialControlKind kind, SimpleCharacterFacialControlInterface control, bool isPlay = true)
-		{
-		}
+	public void SetFacialTextureOffset(FacialControlKind kind, Vector2 offset)
+	{
+	}
 
-		private void SetProperties(MaterialPropertyBlock materialPropertyBlock, Color color)
-		{
-		}
+	private void SetDefaultBlinkAnimation(bool isPlay)
+	{
+	}
 
-		public void SetColor(Color color)
-		{
-		}
+	private void SetDefaultMouthAnimation(bool isPlay)
+	{
+	}
 
-		private void LateUpdate()
-		{
-		}
+	public void SetFacialControl(FacialControlKind kind, SimpleCharacterFacialControlInterface control, bool isPlay = true)
+	{
+	}
 
-		public void SwitchModelTexture(RenderPartsData.PartsNo changePartsNo)
-		{
-		}
+	private void SetProperties(MaterialPropertyBlock materialPropertyBlock, Color color)
+	{
+	}
 
-		public static Transform FindOptimizedChildTransform(Transform parent, string path)
-		{
-			return null;
-		}
+	public void SetColor(Color color)
+	{
+	}
+
+	private void LateUpdate()
+	{
+	}
+
+	public void SwitchModelTexture(RenderPartsData.PartsNo changePartsNo)
+	{
+	}
+
+	public static Transform FindOptimizedChildTransform(Transform parent, string path)
+	{
+		return null;
 	}
 }

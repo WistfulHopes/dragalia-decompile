@@ -2,22 +2,21 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultEventRewardGetPopup : PopupBase
 {
-	public class QuestResultEventRewardGetPopup : PopupBase
+	[SerializeField]
+	private CommonIcon commonIcon;
+
+	[SerializeField]
+	private Text nameText;
+
+	public void Set(MazeEventRewardElement reward)
 	{
-		[SerializeField]
-		private CommonIcon commonIcon;
+	}
 
-		[SerializeField]
-		private Text nameText;
-
-		public void Set(MazeEventRewardElement reward)
-		{
-		}
-
-		public void Set(BuildEventRewardElement reward)
-		{
-		}
+	public void Set(BuildEventRewardElement reward)
+	{
 	}
 }

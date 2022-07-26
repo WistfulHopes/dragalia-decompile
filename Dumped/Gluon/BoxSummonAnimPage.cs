@@ -6,159 +6,158 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BoxSummonAnimPage : EventQuestPageBase
 {
-	public class BoxSummonAnimPage : EventQuestPageBase
+	[SerializeField]
+	private BoxSummonResult boxSummonResult;
+
+	[SerializeField]
+	private Image whiteOutImage;
+
+	[SerializeField]
+	private GameObject screenTapObj;
+
+	[SerializeField]
+	private Button skipButton;
+
+	[SerializeField]
+	private GameObject nowLoading;
+
+	[SerializeField]
+	private RectTransform itemsParentRectTransform;
+
+	[SerializeField]
+	private RectTransform edgeToEdgeRectTransform;
+
+	[SerializeField]
+	private RectTransform resultItemsRectTransform;
+
+	public RawImage bg3dRenderTextureImage;
+
+	private GameObject renderTextureCameraObj;
+
+	private Sequence whiteOutSeq;
+
+	private BoxSummonAnimScene animScene;
+
+	private Canvas uiCanvas;
+
+	private const string boxSummonAnimBGM = "BGM_SUMMON_0002_01";
+
+	private bool is3DSceneLoaded;
+
+	public Vector2 _canvasSize;
+
+	private Vector2 basePos;
+
+	public Canvas UiCanvas => null;
+
+	public AudioPlayback bgmAudioPlayer
 	{
-		[SerializeField]
-		private BoxSummonResult boxSummonResult;
-
-		[SerializeField]
-		private Image whiteOutImage;
-
-		[SerializeField]
-		private GameObject screenTapObj;
-
-		[SerializeField]
-		private Button skipButton;
-
-		[SerializeField]
-		private GameObject nowLoading;
-
-		[SerializeField]
-		private RectTransform itemsParentRectTransform;
-
-		[SerializeField]
-		private RectTransform edgeToEdgeRectTransform;
-
-		[SerializeField]
-		private RectTransform resultItemsRectTransform;
-
-		public RawImage bg3dRenderTextureImage;
-
-		private GameObject renderTextureCameraObj;
-
-		private Sequence whiteOutSeq;
-
-		private BoxSummonAnimScene animScene;
-
-		private Canvas uiCanvas;
-
-		private const string boxSummonAnimBGM = "BGM_SUMMON_0002_01";
-
-		private bool is3DSceneLoaded;
-
-		public Vector2 _canvasSize;
-
-		private Vector2 basePos;
-
-		public Canvas UiCanvas => null;
-
-		public AudioPlayback bgmAudioPlayer
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(AudioPlayback);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(AudioPlayback);
 		}
-
-		public Vector2 canvasSize => default(Vector2);
-
-		private void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public Vector2 canvasSize => default(Vector2);
 
-		public override void OnPageBecomeInActive()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public override void ResetSummonData()
-		{
-		}
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		public void ResetFlashCameraSize()
-		{
-		}
+	public override void OnPageBecomeInActive()
+	{
+	}
 
-		public void StartSummonAnimation()
-		{
-		}
+	public override void ResetSummonData()
+	{
+	}
 
-		public void StartNextSummonAnimation()
-		{
-		}
+	public void ResetFlashCameraSize()
+	{
+	}
 
-		private void Load3DScene(Action callback)
-		{
-		}
+	public void StartSummonAnimation()
+	{
+	}
 
-		private void StartLoadingResources()
-		{
-		}
+	public void StartNextSummonAnimation()
+	{
+	}
 
-		public void StartWhiteOutEffect(float inTime, float outTime)
-		{
-		}
+	private void Load3DScene(Action callback)
+	{
+	}
 
-		private void SkipAnimation(bool needFadeOut)
-		{
-		}
+	private void StartLoadingResources()
+	{
+	}
 
-		public void OnSkipButtonPressed()
-		{
-		}
+	public void StartWhiteOutEffect(float inTime, float outTime)
+	{
+	}
 
-		public void Show(bool isResult)
-		{
-		}
+	private void SkipAnimation(bool needFadeOut)
+	{
+	}
 
-		public void ShowResultUIs(bool toShow)
-		{
-		}
+	public void OnSkipButtonPressed()
+	{
+	}
 
-		public void ShowSkipButton(bool isShown)
-		{
-		}
+	public void Show(bool isResult)
+	{
+	}
 
-		public IEnumerator ChangeToResultPage(bool isFadingOut, float waitingTime)
-		{
-			return null;
-		}
+	public void ShowResultUIs(bool toShow)
+	{
+	}
 
-		public void OnScreenTapped()
-		{
-		}
+	public void ShowSkipButton(bool isShown)
+	{
+	}
 
-		public void CreateBgRenderTexture()
-		{
-		}
+	public IEnumerator ChangeToResultPage(bool isFadingOut, float waitingTime)
+	{
+		return null;
+	}
 
-		public Vector2 GetIconPosition(Vector2 pos)
-		{
-			return default(Vector2);
-		}
+	public void OnScreenTapped()
+	{
+	}
 
-		public Vector3 GetFlashPositionFromLayoutPosition(Vector2 pos)
-		{
-			return default(Vector3);
-		}
+	public void CreateBgRenderTexture()
+	{
+	}
 
-		protected override int GetMaxExecCount()
-		{
-			return default(int);
-		}
+	public Vector2 GetIconPosition(Vector2 pos)
+	{
+		return default(Vector2);
+	}
 
-		public void Release3DObjects()
-		{
-		}
+	public Vector3 GetFlashPositionFromLayoutPosition(Vector2 pos)
+	{
+		return default(Vector3);
+	}
+
+	protected override int GetMaxExecCount()
+	{
+		return default(int);
+	}
+
+	public void Release3DObjects()
+	{
 	}
 }

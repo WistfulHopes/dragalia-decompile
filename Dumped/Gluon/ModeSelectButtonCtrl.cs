@@ -1,31 +1,30 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class ModeSelectButtonCtrl
 {
-	public class ModeSelectButtonCtrl
+	private Dictionary<CharacterBase, List<ModeSelectButton>> _charaSelectorDic;
+
+	private List<CharacterBase> _workCharaList;
+
+	public void Reset()
 	{
-		private Dictionary<CharacterBase, List<ModeSelectButton>> _charaSelectorDic;
+	}
 
-		private List<CharacterBase> _workCharaList;
+	public void Attach(HumanCharacter human)
+	{
+	}
 
-		public void Reset()
-		{
-		}
+	public void Update()
+	{
+	}
 
-		public void Attach(HumanCharacter human)
-		{
-		}
+	public void ApplyMode(CharacterBase chara, bool playSe = true, bool force = false)
+	{
+	}
 
-		public void Update()
-		{
-		}
-
-		public void ApplyMode(CharacterBase chara, bool playSe = true, bool force = false)
-		{
-		}
-
-		public void ApplyLayoutStyle()
-		{
-		}
+	public void ApplyLayoutStyle()
+	{
 	}
 }

@@ -6,118 +6,112 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildMemberListPopup : PopupBase
 {
-	public class GuildMemberListPopup : PopupBase
+	private enum TabType
 	{
-		private enum TabType
-		{
-			Member,
-			Waiting,
-			Inviting
-		}
+		Member,
+		Waiting,
+		Inviting
+	}
 
-		[SerializeField]
-		[Header("Title")]
-		public Text titleText;
+	[SerializeField]
+	public Text titleText;
 
-		[SerializeField]
-		[Header("TabView")]
-		public TabBase tabView;
+	[SerializeField]
+	public TabBase tabView;
 
-		public GameObject tabViewLine;
+	public GameObject tabViewLine;
 
-		private int activeTabIndex;
+	private int activeTabIndex;
 
-		[SerializeField]
-		[Header("TableViews")]
-		public GuildMemberTableViewController memberController;
+	[SerializeField]
+	public GuildMemberTableViewController memberController;
 
-		public GuildMemberTableViewController waitingController;
+	public GuildMemberTableViewController waitingController;
 
-		public GuildMemberTableViewController invitingController;
+	public GuildMemberTableViewController invitingController;
 
-		[SerializeField]
-		[Header("RejectAll")]
-		public Button rejectAllButton;
+	[SerializeField]
+	public Button rejectAllButton;
 
-		public GameObject rejectAllGO;
+	public GameObject rejectAllGO;
 
-		[SerializeField]
-		[Header("Badge")]
-		public Badge waitingListBadge;
+	[SerializeField]
+	public Badge waitingListBadge;
 
-		public GameObject invitingListBadge;
+	public GameObject invitingListBadge;
 
-		public const string prefabPath = "Prefabs/OutGame/Guild/GuildMemberListPopup";
+	public const string prefabPath = "Prefabs/OutGame/Guild/GuildMemberListPopup";
 
-		private TabType currentTab;
+	private TabType currentTab;
 
-		private List<GuildModel.MemberInfo> memberDataList;
+	private List<GuildModel.MemberInfo> memberDataList;
 
-		private List<GuildModel.MemberInfo> waitingDataList;
+	private List<GuildModel.MemberInfo> waitingDataList;
 
-		private List<GuildModel.MemberInfo> invitingDataList;
+	private List<GuildModel.MemberInfo> invitingDataList;
 
-		private GuildModel.Occupation occupation;
+	private GuildModel.Occupation occupation;
 
-		[SerializeField]
-		private Text inviteNumText;
+	[SerializeField]
+	private Text inviteNumText;
 
-		public static void CreateModule(GuildModel.Occupation occupation, UnityAction onClose)
-		{
-		}
+	public static void CreateModule(GuildModel.Occupation occupation, UnityAction onClose)
+	{
+	}
 
-		private void SetupWithOccupation(GuildModel.Occupation occupation)
-		{
-		}
+	private void SetupWithOccupation(GuildModel.Occupation occupation)
+	{
+	}
 
-		private static Task<GuildGetGuildMemberDataResponse> RequestMemberList()
-		{
-			return null;
-		}
+	private static Task<GuildGetGuildMemberDataResponse> RequestMemberList()
+	{
+		return null;
+	}
 
-		private Task<GuildGetGuildApplyDataResponse> RequestWaitingList()
-		{
-			return null;
-		}
+	private Task<GuildGetGuildApplyDataResponse> RequestWaitingList()
+	{
+		return null;
+	}
 
-		private Task<GuildInviteGetGuildInviteSendDataResponse> RequestInvitingList()
-		{
-			return null;
-		}
+	private Task<GuildInviteGetGuildInviteSendDataResponse> RequestInvitingList()
+	{
+		return null;
+	}
 
-		private void RequestUpdateMemberList()
-		{
-		}
+	private void RequestUpdateMemberList()
+	{
+	}
 
-		private void RequestUpdateWaitingList(bool updateData = true)
-		{
-		}
+	private void RequestUpdateWaitingList(bool updateData = true)
+	{
+	}
 
-		private void RequestUpdateInvitingList(bool updateData = true)
-		{
-		}
+	private void RequestUpdateInvitingList(bool updateData = true)
+	{
+	}
 
-		public void OnRejectAllButtonPressed()
-		{
-		}
+	public void OnRejectAllButtonPressed()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void SetTitleText()
-		{
-		}
+	private void SetTitleText()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private IEnumerator EnterCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator EnterCoroutine()
+	{
+		return null;
 	}
 }

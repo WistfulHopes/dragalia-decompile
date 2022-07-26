@@ -1,35 +1,34 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateStopDash : PlayerStateBase
 {
-	public class PlayerStateStopDash : PlayerStateBase
+	private float elapsedTime;
+
+	public float AttackInterval
 	{
-		private float elapsedTime;
-
-		public float AttackInterval
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(float);
 		}
-
-		public override void OnStateEnter()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateEnter()
+	{
+	}
 
-		protected bool CheckDashAttack()
-		{
-			return default(bool);
-		}
+	public override void OnStateUpdate()
+	{
+	}
+
+	protected bool CheckDashAttack()
+	{
+		return default(bool);
 	}
 }

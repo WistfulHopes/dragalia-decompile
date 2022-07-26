@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum BoxSummonEventId
 {
-	public enum BoxSummonEventId
-	{
-		None,
-		FirstCutWhiteOutStart,
-		FirstCutSkipFrame
-	}
+	None,
+	FirstCutWhiteOutStart,
+	FirstCutSkipFrame
 }

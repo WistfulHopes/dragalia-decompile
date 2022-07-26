@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandWindowVisible : IStoryCommand
 {
-	[CommandName("window_visible")]
-	public class StoryCommandWindowVisible : IStoryCommand
+	public void Start(bool visible)
 	{
-		public void Start(bool visible)
-		{
-		}
 	}
 }

@@ -1,15 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestMissionElement : MonoBehaviour
 {
-	public class QuestMissionElement : MonoBehaviour
-	{
-		[SerializeField]
-		public Image uiCrownOnImage;
+	[SerializeField]
+	public Image uiCrownOnImage;
 
-		public Image uiCrownOffImage;
+	public Image uiCrownOffImage;
 
-		public Text uiText;
-	}
+	public Text uiText;
 }

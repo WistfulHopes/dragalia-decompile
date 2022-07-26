@@ -1,19 +1,18 @@
-namespace Gluon
+namespace Gluon;
+
+public class EventTopPageRaid : EventTopPageBase
 {
-	public class EventTopPageRaid : EventTopPageBase
+	private const string raidDailyMissionPUPrefsTemplate = "RaidEVDailyMissionPU_{0}_{1}";
+
+	public override void OnPageBecomeActive(object data)
 	{
-		private const string raidDailyMissionPUPrefsTemplate = "RaidEVDailyMissionPU_{0}_{1}";
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	protected override void OnBeginningPopupShown()
+	{
+	}
 
-		protected override void OnBeginningPopupShown()
-		{
-		}
-
-		public void OnRaidTradeButtonPressed()
-		{
-		}
+	public void OnRaidTradeButtonPressed()
+	{
 	}
 }

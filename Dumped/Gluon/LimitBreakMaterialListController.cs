@@ -1,62 +1,61 @@
-namespace Gluon
+namespace Gluon;
+
+public class LimitBreakMaterialListController : CommonIconListController
 {
-	public class LimitBreakMaterialListController : CommonIconListController
+	public int growthBaseId;
+
+	public GrowthBaseType growthBaseType;
+
+	public TutorialDataManager.GrowthTutorialType tutorialType;
+
+	protected override void Awake()
 	{
-		public int growthBaseId;
+	}
 
-		public GrowthBaseType growthBaseType;
+	protected override CommonIconListCellData CreateDragonCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		public TutorialDataManager.GrowthTutorialType tutorialType;
+	protected override CommonIconListCellData CreateWeaponCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override CommonIconListCellData CreateAmuletCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		protected override CommonIconListCellData CreateDragonCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	public void AllListIconLock()
+	{
+	}
 
-		protected override CommonIconListCellData CreateWeaponCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	public void AllListIconUnlock()
+	{
+	}
 
-		protected override CommonIconListCellData CreateAmuletCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	public void UpdateCellByKeyIds(ulong[] keyIds)
+	{
+	}
 
-		public void AllListIconLock()
-		{
-		}
+	public void UpdateCellDataSelectNumber(ulong[] keyIds)
+	{
+	}
 
-		public void AllListIconUnlock()
-		{
-		}
+	private void AddItemIcon()
+	{
+	}
 
-		public void UpdateCellByKeyIds(ulong[] keyIds)
-		{
-		}
+	private void AddSphereMaterialIcon()
+	{
+	}
 
-		public void UpdateCellDataSelectNumber(ulong[] keyIds)
-		{
-		}
+	protected override void AddExceptionButton(CommonIconListType type)
+	{
+	}
 
-		private void AddItemIcon()
-		{
-		}
-
-		private void AddSphereMaterialIcon()
-		{
-		}
-
-		protected override void AddExceptionButton(CommonIconListType type)
-		{
-		}
-
-		public void UpdateContentByIndex(int index)
-		{
-		}
+	public void UpdateContentByIndex(int index)
+	{
 	}
 }

@@ -1,78 +1,77 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class UIAnimationTopMenu : UIAnimationBase
 {
-	public class UIAnimationTopMenu : UIAnimationBase
+	protected Vector3 startRotation;
+
+	protected Vector3 vanishingPointInCanvas;
+
+	protected float exitVanishingT;
+
+	protected float enterScale;
+
+	protected float enterOffsetScale;
+
+	protected float exitScale;
+
+	protected float enterShakePostOverrunExtension;
+
+	protected Vector3 enterShakeRotationStart;
+
+	protected float enterVanishingT => default(float);
+
+	protected override void Awake()
 	{
-		protected Vector3 startRotation;
+	}
 
-		protected Vector3 vanishingPointInCanvas;
+	public override void RecordCurrentStateAsDefault()
+	{
+	}
 
-		protected float exitVanishingT;
+	public override void ResetUIAnimations()
+	{
+	}
 
-		protected float enterScale;
+	public Vector3 GetWorldVanishingPoint()
+	{
+		return default(Vector3);
+	}
 
-		protected float enterOffsetScale;
+	public Vector3 GetWorldRectTransformCenter()
+	{
+		return default(Vector3);
+	}
 
-		protected float exitScale;
+	public Vector3 GetWorldEnterPosition(Vector3 worldVanishingPoint, Vector3 centerStartWorldPos)
+	{
+		return default(Vector3);
+	}
 
-		protected float enterShakePostOverrunExtension;
+	public Vector3 GetWorldExitPosition(Vector3 worldVanishingPoint, Vector3 centerStartWorldPos)
+	{
+		return default(Vector3);
+	}
 
-		protected Vector3 enterShakeRotationStart;
+	private void ReCalculateVanishingPoint()
+	{
+	}
 
-		protected float enterVanishingT => default(float);
+	protected override void OnReadyToCalculatePosition()
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override void JoinEnterAnimation()
+	{
+	}
 
-		public override void RecordCurrentStateAsDefault()
-		{
-		}
+	protected override void JoinExitCanvasGroupAnimation()
+	{
+	}
 
-		public override void ResetUIAnimations()
-		{
-		}
-
-		public Vector3 GetWorldVanishingPoint()
-		{
-			return default(Vector3);
-		}
-
-		public Vector3 GetWorldRectTransformCenter()
-		{
-			return default(Vector3);
-		}
-
-		public Vector3 GetWorldEnterPosition(Vector3 worldVanishingPoint, Vector3 centerStartWorldPos)
-		{
-			return default(Vector3);
-		}
-
-		public Vector3 GetWorldExitPosition(Vector3 worldVanishingPoint, Vector3 centerStartWorldPos)
-		{
-			return default(Vector3);
-		}
-
-		private void ReCalculateVanishingPoint()
-		{
-		}
-
-		protected override void OnReadyToCalculatePosition()
-		{
-		}
-
-		protected override void JoinEnterAnimation()
-		{
-		}
-
-		protected override void JoinExitCanvasGroupAnimation()
-		{
-		}
-
-		protected override float AppendExtraToEnterAnimation()
-		{
-			return default(float);
-		}
+	protected override float AppendExtraToEnterAnimation()
+	{
+		return default(float);
 	}
 }

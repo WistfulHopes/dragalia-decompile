@@ -1,162 +1,161 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialCtrl : MonoBehaviour
 {
-	public class TutorialCtrl : MonoBehaviour
+	private enum DialogState
 	{
-		private enum DialogState
-		{
-			Select,
-			Ok,
-			Cancel
-		}
+		Select,
+		Ok,
+		Cancel
+	}
 
-		private const float SystemMsgTutorialUIAdjustPosY = 100f;
+	private const float SystemMsgTutorialUIAdjustPosY = 100f;
 
-		private const float SystemMsgDisplayTimeLength = 6f;
+	private const float SystemMsgDisplayTimeLength = 6f;
 
-		private const int WALK_FRAME = 45;
+	private const int WALK_FRAME = 45;
 
-		private const int BUTTON_PRIORITY_OFFSET = 10;
+	private const int BUTTON_PRIORITY_OFFSET = 10;
 
-		private const float MOVE_TUTORIAL_FINISH_POS_Z = 12f;
+	private const float MOVE_TUTORIAL_FINISH_POS_Z = 12f;
 
-		private SysMessageUI sysMessage;
+	private SysMessageUI sysMessage;
 
-		private FingerUI finger;
+	private FingerUI finger;
 
-		private Color backgroundColor;
+	private Color backgroundColor;
 
-		private int startCurrentArea;
+	private int startCurrentArea;
 
-		private const int fontSize = 24;
+	private const int fontSize = 24;
 
-		private bool isPopEnemy;
+	private bool isPopEnemy;
 
-		private string dialogTitle;
+	private string dialogTitle;
 
-		private bool isOpenDualWindow;
+	private bool isOpenDualWindow;
 
-		private Canvas dualWindowCanvas;
+	private Canvas dualWindowCanvas;
 
-		private InGameUICtrl inGameUICtrl;
+	private InGameUICtrl inGameUICtrl;
 
-		private Coroutine tutorialJudgeCoroutine;
+	private Coroutine tutorialJudgeCoroutine;
 
-		private bool isChangeSysMessagePos;
+	private bool isChangeSysMessagePos;
 
-		private const int TUTORIAL_FLT_HEAD = 32;
+	private const int TUTORIAL_FLT_HEAD = 32;
 
-		private const int TUTORIAL_FLT_LAST = 39;
+	private const int TUTORIAL_FLT_LAST = 39;
 
-		private const int TUTORIAL_FLT_MAX = 8;
+	private const int TUTORIAL_FLT_MAX = 8;
 
-		private const int TUTORIAL_FLASH_REACT_MAX = 3;
+	private const int TUTORIAL_FLASH_REACT_MAX = 3;
 
-		private float[] anime_react_frame;
+	private float[] anime_react_frame;
 
-		private const float SKILL_DRAGON_FINGER_SHOWFRAME = 35f;
+	private const float SKILL_DRAGON_FINGER_SHOWFRAME = 35f;
 
-		private const float FLASH_ANIM_CREATED_RATE = 30f;
+	private const float FLASH_ANIM_CREATED_RATE = 30f;
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private void EventPopEnemy()
-		{
-		}
+	private void EventPopEnemy()
+	{
+	}
 
-		private IEnumerator TutorialArea1()
-		{
-			return null;
-		}
+	private IEnumerator TutorialArea1()
+	{
+		return null;
+	}
 
-		private IEnumerator TutorialArea2()
-		{
-			return null;
-		}
+	private IEnumerator TutorialArea2()
+	{
+		return null;
+	}
 
-		private IEnumerator TutorialArea3()
-		{
-			return null;
-		}
+	private IEnumerator TutorialArea3()
+	{
+		return null;
+	}
 
-		private IEnumerator PlayScript(string scriptName)
-		{
-			return null;
-		}
+	private IEnumerator PlayScript(string scriptName)
+	{
+		return null;
+	}
 
-		private IEnumerator WaitStartTutorial()
-		{
-			return null;
-		}
+	private IEnumerator WaitStartTutorial()
+	{
+		return null;
+	}
 
-		private IEnumerator WaitSysMessage()
-		{
-			return null;
-		}
+	private IEnumerator WaitSysMessage()
+	{
+		return null;
+	}
 
-		private void PauseInGame(bool pause)
-		{
-		}
+	private void PauseInGame(bool pause)
+	{
+	}
 
-		private void OpenDualWindow(int[] key)
-		{
-		}
+	private void OpenDualWindow(int[] key)
+	{
+	}
 
-		private void OnCompleteDualWindow()
-		{
-		}
+	private void OnCompleteDualWindow()
+	{
+	}
 
-		private IEnumerator WaitDualWindow()
-		{
-			return null;
-		}
+	private IEnumerator WaitDualWindow()
+	{
+		return null;
+	}
 
-		private string GetGuideWindowText(int key)
-		{
-			return null;
-		}
+	private string GetGuideWindowText(int key)
+	{
+		return null;
+	}
 
-		public bool IsOpenWindow()
-		{
-			return default(bool);
-		}
+	public bool IsOpenWindow()
+	{
+		return default(bool);
+	}
 
-		private IEnumerator MoveAttackTutorialCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator MoveAttackTutorialCoroutine()
+	{
+		return null;
+	}
 
-		private IEnumerator AvoidTutorialCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator AvoidTutorialCoroutine()
+	{
+		return null;
+	}
 
-		private void AddSkillButtonOrderInLayer(int add)
-		{
-		}
+	private void AddSkillButtonOrderInLayer(int add)
+	{
+	}
 
-		private void SetSkillButtonEnableTap(bool enable)
-		{
-		}
+	private void SetSkillButtonEnableTap(bool enable)
+	{
+	}
 
-		private void AddDragonButtonOrderInLayer(int add)
-		{
-		}
+	private void AddDragonButtonOrderInLayer(int add)
+	{
+	}
 
-		private void ChangeSystemMessagePos()
-		{
-		}
+	private void ChangeSystemMessagePos()
+	{
+	}
 
-		private void CloseSystemMessage()
-		{
-		}
+	private void CloseSystemMessage()
+	{
 	}
 }

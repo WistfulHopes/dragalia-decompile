@@ -1,44 +1,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FacilityContentBase : TabContentBase
 {
-	public class FacilityContentBase : TabContentBase
+	[SerializeField]
+	public GameObject tabBadgeObject;
+
+	[SerializeField]
+	protected Transform contentParent;
+
+	protected List<FacilityCellBase> cells;
+
+	public bool hasNewFacility;
+
+	public List<Facility> newFacilities;
+
+	protected virtual void OnInit()
 	{
-		[SerializeField]
-		public GameObject tabBadgeObject;
+	}
 
-		[SerializeField]
-		protected Transform contentParent;
+	protected void OnEnable()
+	{
+	}
 
-		protected List<FacilityCellBase> cells;
+	private void SortCells()
+	{
+	}
 
-		public bool hasNewFacility;
+	private void SwapCell(int index1, int index2)
+	{
+	}
 
-		public List<Facility> newFacilities;
+	protected void UpdateBadges()
+	{
+	}
 
-		protected virtual void OnInit()
-		{
-		}
-
-		protected void OnEnable()
-		{
-		}
-
-		private void SortCells()
-		{
-		}
-
-		private void SwapCell(int index1, int index2)
-		{
-		}
-
-		protected void UpdateBadges()
-		{
-		}
-
-		public virtual void SetNewFlagToFalse()
-		{
-		}
+	public virtual void SetNewFlagToFalse()
+	{
 	}
 }

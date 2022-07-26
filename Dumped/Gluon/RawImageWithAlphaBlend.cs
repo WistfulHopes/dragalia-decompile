@@ -1,47 +1,46 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class RawImageWithAlphaBlend : RawImage
 {
-	public class RawImageWithAlphaBlend : RawImage
+	private RenderTexture rtB;
+
+	private RenderTexture rtW;
+
+	private Camera cam;
+
+	private bool isSPFX;
+
+	private bool useBlackBg;
+
+	private const string externalWhiteAlphaTextureMat = "Materials/Common/UIDefaultWithExternalWhiteBGTexture";
+
+	private const string externalBlackAlphaTextureMat = "Materials/Common/UIDefaultWithExternalBlackBGTexture";
+
+	public void InitRenderTexture(string name, int w, int h, Camera cam, bool isSpark = false, bool useBlackBg = false)
 	{
-		private RenderTexture rtB;
+	}
 
-		private RenderTexture rtW;
+	public bool IsExternalAlphaBlendEnabled()
+	{
+		return default(bool);
+	}
 
-		private Camera cam;
+	public void EnableExternalAlphaBlend(string nameAlphaRT)
+	{
+	}
 
-		private bool isSPFX;
+	protected override void OnDestroy()
+	{
+	}
 
-		private bool useBlackBg;
+	public void ReleaseRenderTexture()
+	{
+	}
 
-		private const string externalWhiteAlphaTextureMat = "Materials/Common/UIDefaultWithExternalWhiteBGTexture";
-
-		private const string externalBlackAlphaTextureMat = "Materials/Common/UIDefaultWithExternalBlackBGTexture";
-
-		public void InitRenderTexture(string name, int w, int h, Camera cam, bool isSpark = false, bool useBlackBg = false)
-		{
-		}
-
-		public bool IsExternalAlphaBlendEnabled()
-		{
-			return default(bool);
-		}
-
-		public void EnableExternalAlphaBlend(string nameAlphaRT)
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
-
-		public void ReleaseRenderTexture()
-		{
-		}
-
-		private void Update()
-		{
-		}
+	private void Update()
+	{
 	}
 }

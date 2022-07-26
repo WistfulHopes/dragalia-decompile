@@ -1,22 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public interface SimpleCharacterFacialControlInterface
 {
-	public interface SimpleCharacterFacialControlInterface
-	{
-		void Setup(List<Material> materialList);
+	void Setup(List<Material> materialList);
 
-		void SetEnable(bool f);
+	void SetEnable(bool f);
 
-		bool GetEnable();
+	bool GetEnable();
 
-		void LateUpdate();
+	void LateUpdate();
 
-		void SetTrigger(string triggerName);
+	void SetTrigger(string triggerName);
 
-		void SetFaceEye(CharaFaceEye faceEye);
+	void SetFaceEye(CharaFaceEye faceEye);
 
-		void SetFaceMouth(CharaFaceMouth faceMouth);
-	}
+	void SetFaceMouth(CharaFaceMouth faceMouth);
 }

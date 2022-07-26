@@ -6,115 +6,111 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FEHQuestMapPage : EventQuestPageBase
 {
-	public class FEHQuestMapPage : EventQuestPageBase
+	[SerializeField]
+	public Image bgImage;
+
+	public Image fadeImage;
+
+	[SerializeField]
+	private Image bgPlane;
+
+	[SerializeField]
+	public AnimationUIBg bgAnimation;
+
+	public UIAnimationPublisher mainPublisher;
+
+	[SerializeField]
+	private AnimationUIBg bgPlaneAnimation;
+
+	[SerializeField]
+	public Transform miniCharaParentNode;
+
+	public FEHQuestMapMiniCharaButton miniCharaButtonTemplate;
+
+	public FlashPlayerManager flashPlayerManager;
+
+	private FlashPlayer[] miniCharaFlashPlayers;
+
+	private Transform[] miniCharaMoveTransforms;
+
+	private List<int> miniCharaDisplayOrder;
+
+	private CanvasGroup bgCanvasGroup;
+
+	private static float locSizeScale;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		[Header("BG")]
-		public Image bgImage;
+	}
 
-		public Image fadeImage;
+	protected override void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		private Image bgPlane;
+	private QuestUtil.QuestState GetLocationState(bool isEventEnded, int locationId)
+	{
+		return default(QuestUtil.QuestState);
+	}
 
-		[SerializeField]
-		[Header("Animation")]
-		public AnimationUIBg bgAnimation;
+	private void LoadMiniChara()
+	{
+	}
 
-		public UIAnimationPublisher mainPublisher;
+	private void OnMiniCharaTouched(int masterIndex)
+	{
+	}
 
-		[SerializeField]
-		private AnimationUIBg bgPlaneAnimation;
+	private void TakeScreenshot()
+	{
+	}
 
-		[SerializeField]
-		[Header("MiniChara")]
-		public Transform miniCharaParentNode;
+	public void OnBackFromQuestList()
+	{
+	}
 
-		public FEHQuestMapMiniCharaButton miniCharaButtonTemplate;
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		public FlashPlayerManager flashPlayerManager;
+	private void Start()
+	{
+	}
 
-		private FlashPlayer[] miniCharaFlashPlayers;
+	private void LateUpdate()
+	{
+	}
 
-		private Transform[] miniCharaMoveTransforms;
+	public void OnBackButtonTouched()
+	{
+	}
 
-		private List<int> miniCharaDisplayOrder;
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		private CanvasGroup bgCanvasGroup;
+	private IEnumerator EnterAnimationCoroutine()
+	{
+		return null;
+	}
 
-		private static float locSizeScale;
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
+	{
+		return default(bool);
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	private void GoQuestDetailListPage(Clb01EventLocationElement loc)
+	{
+	}
 
-		private QuestUtil.QuestState GetLocationState(bool isEventEnded, int locationId)
-		{
-			return default(QuestUtil.QuestState);
-		}
-
-		private void LoadMiniChara()
-		{
-		}
-
-		private void OnMiniCharaTouched(int masterIndex)
-		{
-		}
-
-		private void TakeScreenshot()
-		{
-		}
-
-		public void OnBackFromQuestList()
-		{
-		}
-
-		public override void OnPageBecomeActive(object data)
-		{
-		}
-
-		private void Start()
-		{
-		}
-
-		private void LateUpdate()
-		{
-		}
-
-		public void OnBackButtonTouched()
-		{
-		}
-
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		private IEnumerator EnterAnimationCoroutine()
-		{
-			return null;
-		}
-
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
-		{
-			return default(bool);
-		}
-
-		private void GoQuestDetailListPage(Clb01EventLocationElement loc)
-		{
-		}
-
-		public static void CheckSecondHarlPopup(bool isOpenPopup)
-		{
-		}
+	public static void CheckSecondHarlPopup(bool isOpenPopup)
+	{
 	}
 }

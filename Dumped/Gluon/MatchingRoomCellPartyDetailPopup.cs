@@ -2,66 +2,65 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingRoomCellPartyDetailPopup : PopupBase
 {
-	public class MatchingRoomCellPartyDetailPopup : PopupBase
+	[SerializeField]
+	private MatchingRoomCellPartyDetailPopupCell[] cells;
+
+	[SerializeField]
+	private GameObject raidBoostButton;
+
+	[SerializeField]
+	private GameObject oneButtonObj;
+
+	[SerializeField]
+	private GameObject twoButtonObj;
+
+	private ulong viewerId;
+
+	private List<RaidBoostPopup.RaidBoostModel.CellData> raidBoostList;
+
+	private List<RaidBoostPopup.RaidBoostModel.CellData> rareRaidBoostList;
+
+	private const string popupPrefabPath = "Prefabs/OutGame/Matching/MatchingRoom/MatchingRoomCellPartyDetailPopup";
+
+	public int questId
 	{
-		[SerializeField]
-		private MatchingRoomCellPartyDetailPopupCell[] cells;
-
-		[SerializeField]
-		private GameObject raidBoostButton;
-
-		[SerializeField]
-		private GameObject oneButtonObj;
-
-		[SerializeField]
-		private GameObject twoButtonObj;
-
-		private ulong viewerId;
-
-		private List<RaidBoostPopup.RaidBoostModel.CellData> raidBoostList;
-
-		private List<RaidBoostPopup.RaidBoostModel.CellData> rareRaidBoostList;
-
-		private const string popupPrefabPath = "Prefabs/OutGame/Matching/MatchingRoom/MatchingRoomCellPartyDetailPopup";
-
-		public int questId
+		[CompilerGenerated]
+		private get
 		{
-			[CompilerGenerated]
-			private get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		private new void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public static MatchingRoomCellPartyDetailPopup CreateWithMatchingData(MatchingRoomPlayerData data)
-		{
-			return null;
-		}
+	private new void Start()
+	{
+	}
 
-		private void InitWithMatchingData(MatchingRoomPlayerData data)
-		{
-		}
+	public static MatchingRoomCellPartyDetailPopup CreateWithMatchingData(MatchingRoomPlayerData data)
+	{
+		return null;
+	}
 
-		public void OnPlayerInfoButton()
-		{
-		}
+	private void InitWithMatchingData(MatchingRoomPlayerData data)
+	{
+	}
 
-		public void OnCloseButton()
-		{
-		}
+	public void OnPlayerInfoButton()
+	{
+	}
 
-		public void OnPressedRaidPowerButton()
-		{
-		}
+	public void OnCloseButton()
+	{
+	}
+
+	public void OnPressedRaidPowerButton()
+	{
 	}
 }

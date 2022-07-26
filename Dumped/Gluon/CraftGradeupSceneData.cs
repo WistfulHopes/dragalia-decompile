@@ -1,13 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public class CraftGradeupSceneData : SceneModelBase
 {
-	public class CraftGradeupSceneData : SceneModelBase
+	public int gradeupTargetId;
+
+	public bool isChild;
+
+	public CraftGradeupSceneData(int id, bool child)
 	{
-		public int gradeupTargetId;
-
-		public bool isChild;
-
-		public CraftGradeupSceneData(int id, bool child)
-		{
-		}
 	}
 }

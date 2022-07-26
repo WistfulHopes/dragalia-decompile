@@ -1,13 +1,12 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class StonePurchaseConfirmPopup
 {
-	public class StonePurchaseConfirmPopup
+	public static ShopCommonPopup Create([Optional] Action onPurchased)
 	{
-		public static ShopCommonPopup Create([Optional] Action onPurchased)
-		{
-			return null;
-		}
+		return null;
 	}
 }

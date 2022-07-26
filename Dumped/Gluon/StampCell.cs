@@ -2,24 +2,23 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class StampCell : MonoBehaviour
 {
-	public class StampCell : MonoBehaviour
+	[SerializeField]
+	private Image stampImage;
+
+	[SerializeField]
+	private PointerEventHandler peh;
+
+	private UnityAction<int> onIconPressed;
+
+	public void Initialize(int stampId, UnityAction<int> action)
 	{
-		[SerializeField]
-		private Image stampImage;
+	}
 
-		[SerializeField]
-		private PointerEventHandler peh;
-
-		private UnityAction<int> onIconPressed;
-
-		public void Initialize(int stampId, UnityAction<int> action)
-		{
-		}
-
-		public void OnIconPressed(int stampId)
-		{
-		}
+	public void OnIconPressed(int stampId)
+	{
 	}
 }

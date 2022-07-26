@@ -2,33 +2,32 @@ using System;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FriendTopView : FriendPanelBase
 {
-	public class FriendTopView : FriendPanelBase
+	private static Action onHttpDone;
+
+	[SerializeField]
+	private Badge friendListBadge;
+
+	[SerializeField]
+	private Badge approvalWaitBadge;
+
+	public static FriendTopView Create(Transform parent, FriendScene scene)
 	{
-		private static Action onHttpDone;
+		return null;
+	}
 
-		[SerializeField]
-		private Badge friendListBadge;
+	private void Start()
+	{
+	}
 
-		[SerializeField]
-		private Badge approvalWaitBadge;
+	public static void RequestForEntryHttp(Action onHttpDoneCallback)
+	{
+	}
 
-		public static FriendTopView Create(Transform parent, FriendScene scene)
-		{
-			return null;
-		}
-
-		private void Start()
-		{
-		}
-
-		public static void RequestForEntryHttp(Action onHttpDoneCallback)
-		{
-		}
-
-		public static void OnEntryHttpSuccess(FriendFriendIndexResponse response)
-		{
-		}
+	public static void OnEntryHttpSuccess(FriendFriendIndexResponse response)
+	{
 	}
 }

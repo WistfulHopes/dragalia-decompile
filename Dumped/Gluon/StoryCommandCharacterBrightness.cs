@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandCharacterBrightness : IStoryCommand
 {
-	[CommandName("chara_brightness")]
-	public class StoryCommandCharacterBrightness : IStoryCommand
+	public void Start(string charaId, float value, float fadeSec = 0f)
 	{
-		public void Start(string charaId, float value, float fadeSec = 0f)
-		{
-		}
 	}
 }

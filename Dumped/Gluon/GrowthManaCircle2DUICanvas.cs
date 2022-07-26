@@ -3,160 +3,159 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircle2DUICanvas : MonoBehaviour
 {
-	public class GrowthManaCircle2DUICanvas : MonoBehaviour
+	public GameObject star;
+
+	public GameObject manaPoint;
+
+	public GameObject platinumCrystal;
+
+	public Button menuButton;
+
+	public Button autoButton;
+
+	public Button abilityListButton;
+
+	public Button platinumButton;
+
+	public Text abilityDetailButtonText;
+
+	public Text growthButtonText;
+
+	public Text autoButtonText;
+
+	public Text manaPointText;
+
+	public Text releasedNumText;
+
+	public Text platinumCrystalCountText;
+
+	[SerializeField]
+	private Image usePlatinumCrystalButtonImage;
+
+	[SerializeField]
+	private Sprite spriteUsePlatinumCrystal1;
+
+	[SerializeField]
+	private Sprite spriteUsePlatinumCrystal2;
+
+	public DragEventScrollRect CircleScrollRect;
+
+	public RectTransform circlrObjectParent;
+
+	[HideInInspector]
+	public GrowthManaCircle2DScene scene;
+
+	private GrowthManaCircleModel model;
+
+	private ManaCircle2DCircleObject[] firstCircleObjects;
+
+	private SecondManaCircle2DCircleObject secondCircleObject;
+
+	private int currentCircleIndex;
+
+	private bool isFirstLoadEnded;
+
+	private Vector3 manaPointDefaultPosition;
+
+	private Vector3 manaPointCenterPosition;
+
+	public const int firstCircleLastIndex = 4;
+
+	public const float firstCircleLastCircleObjectHeight = 250f;
+
+	private void Awake()
 	{
-		public GameObject star;
+	}
 
-		public GameObject manaPoint;
+	private void Start()
+	{
+	}
 
-		public GameObject platinumCrystal;
+	private void InitScrollPosition()
+	{
+	}
 
-		public Button menuButton;
+	public void Reload()
+	{
+	}
 
-		public Button autoButton;
+	public void SetUIInteractable(bool interactable)
+	{
+	}
 
-		public Button abilityListButton;
+	public void SetActiveTutorialPiece()
+	{
+	}
 
-		public Button platinumButton;
+	public void OnAbilityListButtonPressed()
+	{
+	}
 
-		public Text abilityDetailButtonText;
+	public void OnAutoButtonPressed()
+	{
+	}
 
-		public Text growthButtonText;
+	public void FirstCircleAutoReleaseAction()
+	{
+	}
 
-		public Text autoButtonText;
+	public void SecondCircleAutoReleaseAction()
+	{
+	}
 
-		public Text manaPointText;
+	public void OnManaCircleMenuButtonPressed()
+	{
+	}
 
-		public Text releasedNumText;
+	public void MoveCircleListByCircleIndex(int circleIndex)
+	{
+	}
 
-		public Text platinumCrystalCountText;
+	public void PlayReleaseLimitBreakEffect([Optional] Action onCompleteCallBack)
+	{
+	}
 
-		[SerializeField]
-		private Image usePlatinumCrystalButtonImage;
+	public void PlayReleaseAllPieceEffect(Action onCompleteCallBack, bool isUsePlatinumCrystal = false)
+	{
+	}
 
-		[SerializeField]
-		private Sprite spriteUsePlatinumCrystal1;
+	public void CreateAllReleasedRewardPopup([Optional] Action onCompleteCallBack, bool isReloadUI = true)
+	{
+	}
 
-		[SerializeField]
-		private Sprite spriteUsePlatinumCrystal2;
+	public void PlayLevelupEffect([Optional] Action onCompleteCallBack, bool isReloadUI = true)
+	{
+	}
 
-		public DragEventScrollRect CircleScrollRect;
+	public void AutoReleasePiece(bool isReleaseSecondCircle = false)
+	{
+	}
 
-		public RectTransform circlrObjectParent;
+	public void AutoReleasePieceByPieceData(GrowthManaCircleManaPieceData pieceData, bool isReleaseSecondCircle = false)
+	{
+	}
 
-		[HideInInspector]
-		public GrowthManaCircle2DScene scene;
+	public void AutoReleasePieceByCircleIndex(int circleIndex)
+	{
+	}
 
-		private GrowthManaCircleModel model;
+	private void AutoReleaseCommonAction(AutoReleasableAllCirclePointData autoReleasableData, Action autoReleasePopOkButtonCallBack)
+	{
+	}
 
-		private ManaCircle2DCircleObject[] firstCircleObjects;
+	private void AutoReleaseDataSendCallBackAction(AutoReleasableAllCirclePointData autoReleasableData)
+	{
+	}
 
-		private SecondManaCircle2DCircleObject secondCircleObject;
+	private void PlayUsePlatinumCrystalDirection(GrowthAwakeResultPop.BeforeData beforeData, GrowthManaCircleManaPieceData[] pieceDataList, int limitBreakCount)
+	{
+	}
 
-		private int currentCircleIndex;
-
-		private bool isFirstLoadEnded;
-
-		private Vector3 manaPointDefaultPosition;
-
-		private Vector3 manaPointCenterPosition;
-
-		public const int firstCircleLastIndex = 4;
-
-		public const float firstCircleLastCircleObjectHeight = 250f;
-
-		private void Awake()
-		{
-		}
-
-		private void Start()
-		{
-		}
-
-		private void InitScrollPosition()
-		{
-		}
-
-		public void Reload()
-		{
-		}
-
-		public void SetUIInteractable(bool interactable)
-		{
-		}
-
-		public void SetActiveTutorialPiece()
-		{
-		}
-
-		public void OnAbilityListButtonPressed()
-		{
-		}
-
-		public void OnAutoButtonPressed()
-		{
-		}
-
-		public void FirstCircleAutoReleaseAction()
-		{
-		}
-
-		public void SecondCircleAutoReleaseAction()
-		{
-		}
-
-		public void OnManaCircleMenuButtonPressed()
-		{
-		}
-
-		public void MoveCircleListByCircleIndex(int circleIndex)
-		{
-		}
-
-		public void PlayReleaseLimitBreakEffect([Optional] Action onCompleteCallBack)
-		{
-		}
-
-		public void PlayReleaseAllPieceEffect(Action onCompleteCallBack, bool isUsePlatinumCrystal = false)
-		{
-		}
-
-		public void CreateAllReleasedRewardPopup([Optional] Action onCompleteCallBack, bool isReloadUI = true)
-		{
-		}
-
-		public void PlayLevelupEffect([Optional] Action onCompleteCallBack, bool isReloadUI = true)
-		{
-		}
-
-		public void AutoReleasePiece(bool isReleaseSecondCircle = false)
-		{
-		}
-
-		public void AutoReleasePieceByPieceData(GrowthManaCircleManaPieceData pieceData, bool isReleaseSecondCircle = false)
-		{
-		}
-
-		public void AutoReleasePieceByCircleIndex(int circleIndex)
-		{
-		}
-
-		private void AutoReleaseCommonAction(AutoReleasableAllCirclePointData autoReleasableData, Action autoReleasePopOkButtonCallBack)
-		{
-		}
-
-		private void AutoReleaseDataSendCallBackAction(AutoReleasableAllCirclePointData autoReleasableData)
-		{
-		}
-
-		private void PlayUsePlatinumCrystalDirection(GrowthAwakeResultPop.BeforeData beforeData, GrowthManaCircleManaPieceData[] pieceDataList, int limitBreakCount)
-		{
-		}
-
-		public void OnPlatinumCrystalPressed()
-		{
-		}
+	public void OnPlatinumCrystalPressed()
+	{
 	}
 }

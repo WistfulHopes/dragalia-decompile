@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class ActionBlastSp : ActionBlastBase
 {
-	public class ActionBlastSp : ActionBlastBase
+	protected override void SetCoefficient(out float coef)
 	{
-		protected override void SetCoefficient(out float coef)
-		{
-		}
 	}
 }

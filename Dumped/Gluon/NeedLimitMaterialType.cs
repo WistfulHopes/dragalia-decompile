@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum NeedLimitMaterialType
 {
-	public enum NeedLimitMaterialType
-	{
-		None,
-		ManaCircle,
-		Album
-	}
+	None,
+	ManaCircle,
+	Album
 }

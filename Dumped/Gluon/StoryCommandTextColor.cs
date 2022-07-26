@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandTextColor : IStoryCommand
 {
-	[CommandName("text_color")]
-	public class StoryCommandTextColor : IStoryCommand
+	public void Start(int[] rgb)
 	{
-		public void Start(int[] rgb)
-		{
-		}
 	}
 }

@@ -1,12 +1,11 @@
-namespace Gluon
+namespace Gluon;
+
+public enum GrowthActionType
 {
-	public enum GrowthActionType
-	{
-		None,
-		Powerup,
-		LimitBreak,
-		Awakeing,
-		ResetHpPlus,
-		ResetAtkPlus
-	}
+	None,
+	Powerup,
+	LimitBreak,
+	Awakeing,
+	ResetHpPlus,
+	ResetAtkPlus
 }

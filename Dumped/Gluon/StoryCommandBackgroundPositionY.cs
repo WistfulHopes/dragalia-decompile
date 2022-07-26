@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandBackgroundPositionY : IStoryCommand
 {
-	[CommandName("bg_pos_y")]
-	public class StoryCommandBackgroundPositionY : IStoryCommand
+	public void Start(float[] posY)
 	{
-		public void Start(float[] posY)
-		{
-		}
 	}
 }

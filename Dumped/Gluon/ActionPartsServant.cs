@@ -1,25 +1,24 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsServant : ActionParts
 {
-	public class ActionPartsServant : ActionParts
+	private readonly ServantData _partsData;
+
+	public int popNum => default(int);
+
+	public ActionPartsServant(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly ServantData _partsData;
+	}
 
-		public int popNum => default(int);
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsServant(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		private Vector3 CalcPopPos(int index)
-		{
-			return default(Vector3);
-		}
+	private Vector3 CalcPopPos(int index)
+	{
+		return default(Vector3);
 	}
 }

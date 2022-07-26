@@ -2,34 +2,33 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CheckBoxAnimation : MonoBehaviour
 {
-	public class CheckBoxAnimation : MonoBehaviour
+	private Graphic onImage;
+
+	private Sequence runningSeq;
+
+	public bool isAddToggleClickAction;
+
+	private void Awake()
 	{
-		private Graphic onImage;
+	}
 
-		private Sequence runningSeq;
+	public void CheckOnAnimation()
+	{
+	}
 
-		public bool isAddToggleClickAction;
+	public void CheckOffAnimation()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public void CompleteAnimation(bool isOn)
+	{
+	}
 
-		public void CheckOnAnimation()
-		{
-		}
-
-		public void CheckOffAnimation()
-		{
-		}
-
-		public void CompleteAnimation(bool isOn)
-		{
-		}
-
-		public void OnToggleClicked(bool isOn)
-		{
-		}
+	public void OnToggleClicked(bool isOn)
+	{
 	}
 }

@@ -1,92 +1,105 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSelectEventSubPage : QuestSelectEventPageBase, ICustomMessage
 {
-	public class QuestSelectEventSubPage : QuestSelectEventPageBase, ICustomMessage
+	[SerializeField]
+	private FlashPlayerManager flashPlayerManager;
+
+	[SerializeField]
+	private QuestSelectEventShortCut questSelectEventShortCut;
+
+	[SerializeField]
+	private TabBase questMultiTab;
+
+	[SerializeField]
+	private DragEventScrollRect scrollRect;
+
+	public QuestSupportCanvas.PlayType playType;
+
+	private int baseQuestGroupId;
+
+	private QuestEventBannerPage bannerPage;
+
+	private QuestSelectInstance.QuestEventData eventData;
+
+	private Dictionary<int, float> scrollValueDic;
+
+	private List<EventMenuCell> eventMenuCellList;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		private FlashPlayerManager flashPlayerManager;
+	}
 
-		[SerializeField]
-		private QuestSelectEventShortCut questSelectEventShortCut;
+	protected override void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		private TabBase questMultiTab;
+	private void Start()
+	{
+	}
 
-		public QuestSupportCanvas.PlayType playType;
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		private int baseQuestGroupId;
+	private void OpenDefaultTab(int baseQuestGroupId)
+	{
+	}
 
-		private QuestEventBannerPage bannerPage;
+	public void OnSelectedTab(int num)
+	{
+	}
 
-		private QuestSelectInstance.QuestEventData eventData;
+	public override void OnPageBecomeInActive()
+	{
+	}
 
-		private Dictionary<int, float> scrollValueDic;
+	public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
+	{
+		return default(bool);
+	}
 
-		private List<EventMenuCell> eventMenuCellList;
+	private void CreateEventList(QuestSelectInstance.QuestEventData eventData)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	public void OnBackButtonTouched()
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	public void OnMainQuestButtonTouched()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		private void OpenDefaultTab(int baseQuestGroupId)
-		{
-		}
+	private void TutorialReleaseSubdue()
+	{
+	}
 
-		public void OnSelectedTab(int num)
-		{
-		}
+	private IEnumerator TutorialReleaseSubdueCoroutine()
+	{
+		return null;
+	}
 
-		public override void OnPageBecomeInActive()
-		{
-		}
+	private IEnumerator LoadScrollPosition()
+	{
+		return null;
+	}
 
-		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
-		{
-			return default(bool);
-		}
-
-		private void CreateEventList(QuestSelectInstance.QuestEventData eventData)
-		{
-		}
-
-		public void OnBackButtonTouched()
-		{
-		}
-
-		public void OnMainQuestButtonTouched()
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
-
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
-
-		private void TutorialReleaseSubdue()
-		{
-		}
-
-		private IEnumerator TutorialReleaseSubdueCoroutine()
-		{
-			return null;
-		}
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
 	}
 }

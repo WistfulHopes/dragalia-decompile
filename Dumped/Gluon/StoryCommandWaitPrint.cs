@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandWaitPrint : IStoryCommand
 {
-	[CommandName("wait_print")]
-	public class StoryCommandWaitPrint : IStoryCommand
+	public void Start(bool isWait = true)
 	{
-		public void Start(bool isWait = true)
-		{
-		}
 	}
 }

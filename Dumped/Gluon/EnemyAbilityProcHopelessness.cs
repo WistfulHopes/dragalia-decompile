@@ -2,40 +2,39 @@ using System.Collections.Generic;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcHopelessness : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcHopelessness : EnemyAbilityProcBase
+	private CharacterBase _linked;
+
+	private List<CharacterBase> _listReceiver;
+
+	private bool _isStopAbilityActionReserved;
+
+	private bool _isStopAbilityActionReceived;
+
+	public EnemyAbilityProcHopelessness(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
 	{
-		private CharacterBase _linked;
+	}
 
-		private List<CharacterBase> _listReceiver;
+	public override void Play()
+	{
+	}
 
-		private bool _isStopAbilityActionReserved;
+	public override void Stop()
+	{
+	}
 
-		private bool _isStopAbilityActionReceived;
+	public override void OnUpdate()
+	{
+	}
 
-		public EnemyAbilityProcHopelessness(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
+	public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr)
+	{
+	}
 
-		public override void Play()
-		{
-		}
-
-		public override void Stop()
-		{
-		}
-
-		public override void OnUpdate()
-		{
-		}
-
-		public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr)
-		{
-		}
-
-		public override void OnRecieveCharacterState(CharacterState characterState)
-		{
-		}
+	public override void OnRecieveCharacterState(CharacterState characterState)
+	{
 	}
 }

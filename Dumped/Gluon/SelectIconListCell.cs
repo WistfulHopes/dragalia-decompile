@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class SelectIconListCell : CommonIconListCell
 {
-	public class SelectIconListCell : CommonIconListCell
+	public override void UpdateContent(CommonIconListCellData data)
 	{
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
 	}
 }

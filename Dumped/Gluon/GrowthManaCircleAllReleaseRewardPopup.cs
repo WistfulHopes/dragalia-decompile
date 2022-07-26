@@ -1,24 +1,23 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleAllReleaseRewardPopup : CommonPopup
 {
-	public class GrowthManaCircleAllReleaseRewardPopup : CommonPopup
+	public Text presentText;
+
+	public Text hpBonusText;
+
+	public Text atkBonusText;
+
+	public Text albumBonusText;
+
+	public static GrowthManaCircleAllReleaseRewardPopup Create(int id)
 	{
-		public Text presentText;
+		return null;
+	}
 
-		public Text hpBonusText;
-
-		public Text atkBonusText;
-
-		public Text albumBonusText;
-
-		public static GrowthManaCircleAllReleaseRewardPopup Create(int id)
-		{
-			return null;
-		}
-
-		public void SetParameters(int hpPlus, int atkPlus)
-		{
-		}
+	public void SetParameters(int hpPlus, int atkPlus)
+	{
 	}
 }

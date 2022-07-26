@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class OutGameBaseScene : MonoBehaviour
 {
-	public class OutGameBaseScene : MonoBehaviour
-	{
-	}
 }

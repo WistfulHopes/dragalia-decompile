@@ -1,32 +1,31 @@
 using System;
 using UnityEngine.EventSystems;
 
-namespace Gluon
+namespace Gluon;
+
+public class DragonStrokePointerEventHandler : PointerEventHandler, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
 {
-	public class DragonStrokePointerEventHandler : PointerEventHandler, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
+	public Action onBeginDrag;
+
+	public Action onEndDrag;
+
+	private bool isDrag;
+
+	private PointerEventData currentEventData;
+
+	public void OnBeginDrag(PointerEventData eventData)
 	{
-		public Action onBeginDrag;
+	}
 
-		public Action onEndDrag;
+	public void OnDrag(PointerEventData eventData)
+	{
+	}
 
-		private bool isDrag;
+	public void OnEndDrag(PointerEventData eventData)
+	{
+	}
 
-		private PointerEventData currentEventData;
-
-		public void OnBeginDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnEndDrag(PointerEventData eventData)
-		{
-		}
-
-		private void OnApplicationPause(bool pause)
-		{
-		}
+	private void OnApplicationPause(bool pause)
+	{
 	}
 }

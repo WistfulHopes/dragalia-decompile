@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class SellListCanvas : AnimationUICanvas
 {
-	public class SellListCanvas : AnimationUICanvas
-	{
-	}
 }

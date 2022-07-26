@@ -1,16 +1,15 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryLocalizeTextBinder : AutoLocalizeTextBinderBase
 {
-	public class StoryLocalizeTextBinder : AutoLocalizeTextBinderBase
+	protected override string prefixType
 	{
-		protected override string prefixType
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return null;
+		}
+		set
+		{
 		}
 	}
 }

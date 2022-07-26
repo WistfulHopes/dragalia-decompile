@@ -1,54 +1,52 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class RevolvingImage : BaseMeshEffect
 {
-	public class RevolvingImage : BaseMeshEffect
+	[SerializeField]
+	private float perspective;
+
+	private UIVertex v;
+
+	private float revolve;
+
+	private Material backMaterial;
+
+	private Sprite backSprite;
+
+	private float duration;
+
+	private float lapse;
+
+	private bool doing;
+
+	private bool done;
+
+	private Image image;
+
+	public void Initialize()
 	{
-		[SerializeField]
-		[Header("parameter")]
-		private float perspective;
+	}
 
-		private UIVertex v;
+	private void Update()
+	{
+	}
 
-		private float revolve;
+	public override void ModifyMesh(VertexHelper vh)
+	{
+	}
 
-		private Material backMaterial;
+	private void Refresh()
+	{
+	}
 
-		private Sprite backSprite;
+	public void StartRevolve(Material material, float time)
+	{
+	}
 
-		private float duration;
-
-		private float lapse;
-
-		private bool doing;
-
-		private bool done;
-
-		private Image image;
-
-		public void Initialize()
-		{
-		}
-
-		private void Update()
-		{
-		}
-
-		public override void ModifyMesh(VertexHelper vh)
-		{
-		}
-
-		private void Refresh()
-		{
-		}
-
-		public void StartRevolve(Material material, float time)
-		{
-		}
-
-		public void StartRevolve(Sprite sprite, float time)
-		{
-		}
+	public void StartRevolve(Sprite sprite, float time)
+	{
 	}
 }

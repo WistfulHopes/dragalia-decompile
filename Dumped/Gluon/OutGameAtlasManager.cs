@@ -2,41 +2,40 @@ using System.Collections.Generic;
 using Cute.UI;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class OutGameAtlasManager : MonoBehaviour
 {
-	public class OutGameAtlasManager : MonoBehaviour
+	private static OutGameAtlasManager _instance;
+
+	private Dictionary<string, Atlas> spriteCacheOld;
+
+	private Dictionary<string, AtlasReference> spriteCache;
+
+	public static OutGameAtlasManager instance => null;
+
+	public static bool hasInstance => default(bool);
+
+	public Sprite GetSpriteOld(string atlasPath, string spriteName)
 	{
-		private static OutGameAtlasManager _instance;
+		return null;
+	}
 
-		private Dictionary<string, Atlas> spriteCacheOld;
+	public Sprite GetSprite(string atlasPath, string spriteName)
+	{
+		return null;
+	}
 
-		private Dictionary<string, AtlasReference> spriteCache;
+	public Material GetMaterial(string atlasPath)
+	{
+		return null;
+	}
 
-		public static OutGameAtlasManager instance => null;
+	public void Clear()
+	{
+	}
 
-		public static bool hasInstance => default(bool);
-
-		public Sprite GetSpriteOld(string atlasPath, string spriteName)
-		{
-			return null;
-		}
-
-		public Sprite GetSprite(string atlasPath, string spriteName)
-		{
-			return null;
-		}
-
-		public Material GetMaterial(string atlasPath)
-		{
-			return null;
-		}
-
-		public void Clear()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
+	private void OnDestroy()
+	{
 	}
 }

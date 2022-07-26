@@ -1,22 +1,21 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeySoundFilterData : CuttTimelineKeyWithInterpolate
 {
-	[Serializable]
-	public class CuttTimelineKeySoundFilterData : CuttTimelineKeyWithInterpolate
+	public enum FilterType
 	{
-		public enum FilterType
-		{
-			None,
-			DspBusEq
-		}
-
-		public FilterType filterType;
-
-		public bool isFadeIn;
-
-		public float fadeValue;
-
-		public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
+		None,
+		DspBusEq
 	}
+
+	public FilterType filterType;
+
+	public bool isFadeIn;
+
+	public float fadeValue;
+
+	public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
 }

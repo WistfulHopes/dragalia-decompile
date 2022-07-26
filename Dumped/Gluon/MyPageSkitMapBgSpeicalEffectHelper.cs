@@ -1,19 +1,18 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPageSkitMapBgSpeicalEffectHelper : MonoBehaviour
 {
-	public class MyPageSkitMapBgSpeicalEffectHelper : MonoBehaviour
+	public EffectObject[] effects;
+
+	public int[] triggers;
+
+	public float interval;
+
+	private float timeCount;
+
+	private void Update()
 	{
-		public EffectObject[] effects;
-
-		public int[] triggers;
-
-		public float interval;
-
-		private float timeCount;
-
-		private void Update()
-		{
-		}
 	}
 }

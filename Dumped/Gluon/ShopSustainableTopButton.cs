@@ -1,56 +1,60 @@
+using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopSustainableTopButton : MonoBehaviour
 {
-	public class ShopSustainableTopButton : MonoBehaviour
+	public enum Status
 	{
-		public enum Status
-		{
-			NotPurchased,
-			Claimable,
-			Claimed
-		}
+		NotPurchased,
+		Claimable,
+		Claimed
+	}
 
-		public ShopTradeProductData.CommonShopItemData.PackContentType contentType;
+	public ShopTradeProductData.CommonShopItemData.PackContentType contentType;
 
-		public Text remainText;
+	public Text remainText;
 
-		public GameObject badge;
+	public GameObject badge;
 
-		private Button button;
+	private Button button;
 
-		private bool preOrderable;
+	private bool preOrderable;
 
-		private ShopTradeModel.ShopTopData.SustainableBonusData data;
+	private ShopTradeModel.ShopTopData.SustainableBonusData data;
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void SetupByRemainings()
-		{
-		}
+	private void SetupByRemainings()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void SetAsInactive()
-		{
-		}
+	private void SetAsInactive()
+	{
+	}
 
-		public void OnButtonPressed()
-		{
-		}
+	public void OnButtonPressed()
+	{
+	}
 
-		private void CreateClaimedPopup(bool isChargeDone)
-		{
-		}
+	private void OnGetDailyCrystal(ShopGetBonusResponse res)
+	{
+	}
 
-		public static string CreateRenewalRemainDaysComment(int remainDays, long endUnixTime)
-		{
-			return null;
-		}
+	private void CreateClaimedPopup(bool isChargeDone)
+	{
+	}
+
+	public static string CreateRenewalRemainDaysComment(int remainDays, long endUnixTime)
+	{
+		return null;
 	}
 }

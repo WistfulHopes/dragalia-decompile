@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum WWWErrorCode
 {
-	public enum WWWErrorCode
-	{
-		ConnectError,
-		SessionError,
-		IdTokenError,
-		InvalidIdTokenError,
-		VersionUpError
-	}
+	ConnectError,
+	SessionError,
+	IdTokenError,
+	InvalidIdTokenError,
+	VersionUpError
 }

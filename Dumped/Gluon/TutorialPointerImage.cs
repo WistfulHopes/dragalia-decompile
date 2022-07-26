@@ -2,40 +2,39 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialPointerImage : MonoBehaviour
 {
-	public class TutorialPointerImage : MonoBehaviour
+	private RectTransform rectTransform;
+
+	private Image pointerImage;
+
+	private Tweener doColor;
+
+	private Tweener doPointerAnimation;
+
+	private void OnEnable()
 	{
-		private RectTransform rectTransform;
+	}
 
-		private Image pointerImage;
+	public void FadeIn()
+	{
+	}
 
-		private Tweener doColor;
+	private void DoAnimation()
+	{
+	}
 
-		private Tweener doPointerAnimation;
+	public void FadeOut()
+	{
+	}
 
-		private void OnEnable()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public void FadeIn()
-		{
-		}
-
-		private void DoAnimation()
-		{
-		}
-
-		public void FadeOut()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		private void KillAllAnimation()
-		{
-		}
+	private void KillAllAnimation()
+	{
 	}
 }

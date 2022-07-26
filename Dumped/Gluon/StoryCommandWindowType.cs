@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandWindowType : IStoryCommand
 {
-	[CommandName("window_type")]
-	public class StoryCommandWindowType : IStoryCommand
+	public void Start(int type)
 	{
-		public void Start(int type)
-		{
-		}
 	}
 }

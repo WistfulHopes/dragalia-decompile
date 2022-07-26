@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsAppearWeak : ActionPartsAppearEnemy
 {
-	public class ActionPartsAppearWeak : ActionPartsAppearEnemy
+	private readonly AppearWeakData _partsData;
+
+	private int currentHp;
+
+	private RunActionIntParameter reviveHpParam;
+
+	public ActionPartsAppearWeak(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly AppearWeakData _partsData;
+	}
 
-		private int currentHp;
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		private RunActionIntParameter reviveHpParam;
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		public ActionPartsAppearWeak(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		public override RunActionParameterBase CreateRunActionParameter()
-		{
-			return null;
-		}
-
-		public override void SetRunActionParameter(RunActionParameterBase param)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

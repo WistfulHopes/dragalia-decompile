@@ -1,18 +1,16 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeTableViewMoonController : ShopTradeTableViewController
 {
-	public class ShopTradeTableViewMoonController : ShopTradeTableViewController
+	[SerializeField]
+	public int highCellSize;
+
+	public int lowCellSize;
+
+	protected override float GetCellHeightAtIndex(int index)
 	{
-		[SerializeField]
-		[Header("Size")]
-		public int highCellSize;
-
-		public int lowCellSize;
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
+		return default(float);
 	}
 }

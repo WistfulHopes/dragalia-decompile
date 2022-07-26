@@ -4,120 +4,117 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class Viewer2DCanvas : MonoBehaviour
 {
-	public class Viewer2DCanvas : MonoBehaviour
+	[HideInInspector]
+	public UnitDetailScene detailScene;
+
+	public RectTransform[] contentView;
+
+	public DragEventScrollRect dragEventScrollRect;
+
+	public RectTransform imageOffset;
+
+	public UnitDetail2dModel unitImage;
+
+	public Transform movingContent;
+
+	public RectTransform talismanImageOffset;
+
+	public UnitDetail2dModel talismanUnitImage;
+
+	public Transform talismanMovingContent;
+
+	public UIImageMaskToAlpha talismanUIImageMaskToAlpha;
+
+	public Image maskImage;
+
+	public Mask mask;
+
+	[SerializeField]
+	public UIAnimationPublisher mainPublisher;
+
+	[SerializeField]
+	public CanvasGroup canvasGroup;
+
+	public Transform zoomTarget;
+
+	private float startPinchDistance;
+
+	private float oldPinchDistance;
+
+	private Vector3 viewOffset;
+
+	private bool imageSetDone;
+
+	public bool ImageSetDone
 	{
-		[HideInInspector]
-		public UnitDetailScene detailScene;
-
-		public RectTransform[] contentView;
-
-		public DragEventScrollRect dragEventScrollRect;
-
-		public RectTransform imageOffset;
-
-		public UnitDetail2dModel unitImage;
-
-		public Transform movingContent;
-
-		public RectTransform talismanImageOffset;
-
-		public UnitDetail2dModel talismanUnitImage;
-
-		public Transform talismanMovingContent;
-
-		public UIImageMaskToAlpha talismanUIImageMaskToAlpha;
-
-		public Image maskImage;
-
-		public Mask mask;
-
-		[SerializeField]
-		[Header("Publisher")]
-		public UIAnimationPublisher mainPublisher;
-
-		[SerializeField]
-		[Header("CanvasGroup")]
-		public CanvasGroup canvasGroup;
-
-		public Transform zoomTarget;
-
-		private float startPinchDistance;
-
-		private float oldPinchDistance;
-
-		private Vector3 viewOffset;
-
-		private bool imageSetDone;
-
-		public bool ImageSetDone
+		get
 		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		private void Start()
+		set
 		{
 		}
+	}
 
-		public void SwitchFromMainPage()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void SwitchSubId(int forceSubId)
-		{
-		}
+	public void SwitchFromMainPage()
+	{
+	}
 
-		public void SwitchChangeDragonId()
-		{
-		}
+	public void SwitchSubId(int forceSubId)
+	{
+	}
 
-		public void SwitchFrom3DMode()
-		{
-		}
+	public void SwitchChangeDragonId()
+	{
+	}
 
-		public void SwitchTo3DPage()
-		{
-		}
+	public void SwitchFrom3DMode()
+	{
+	}
 
-		public void ReturnToMainPage([Optional] Action onDone)
-		{
-		}
+	public void SwitchTo3DPage()
+	{
+	}
 
-		protected void OnEnable()
-		{
-		}
+	public void ReturnToMainPage([Optional] Action onDone)
+	{
+	}
 
-		private void OnApplicationPause(bool pause)
-		{
-		}
+	protected void OnEnable()
+	{
+	}
 
-		protected void OnDisable()
-		{
-		}
+	private void OnApplicationPause(bool pause)
+	{
+	}
 
-		private void Pinch(OutGameTouchManager.PinchState state)
-		{
-		}
+	protected void OnDisable()
+	{
+	}
 
-		private float PinchOnDevice(OutGameTouchManager.PinchState state)
-		{
-			return default(float);
-		}
+	private void Pinch(OutGameTouchManager.PinchState state)
+	{
+	}
 
-		public void SetUnit2DImage(int forceSubId = -1)
-		{
-		}
+	private float PinchOnDevice(OutGameTouchManager.PinchState state)
+	{
+		return default(float);
+	}
 
-		public IEnumerator Mask()
-		{
-			return null;
-		}
+	public void SetUnit2DImage(int forceSubId = -1)
+	{
+	}
+
+	public IEnumerator Mask()
+	{
+		return null;
 	}
 }

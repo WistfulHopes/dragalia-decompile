@@ -5,105 +5,104 @@ using Cute.Cri;
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class OutGameBgChara : AnimationUIBase, ICustomMessage
 {
-	public class OutGameBgChara : AnimationUIBase, ICustomMessage
+	public DifferenceImageController imageCtrl;
+
+	public string assetPath;
+
+	public bool isAutoInit;
+
+	public bool isLipSyncOnStart;
+
+	protected Tweener eyeBlinkTween;
+
+	protected Tweener lipSynchTween;
+
+	protected const float DefaultEyeBlinkIntervalMin = 2f;
+
+	protected const float DefaultEyeBlinkIntervalMax = 5f;
+
+	protected const float DefaultEyeBlinkingTime = 0.05f;
+
+	protected const float DefaultLipSynchIntervalMin = 1f / 15f;
+
+	protected const float DefaultLipSynchIntervalMax = 1f / 15f;
+
+	protected const float DefaultLipSynchingTime = 0.1f;
+
+	protected float eyeBlinkIntervalMin;
+
+	protected float eyeBlinkIntervalMax;
+
+	protected float eyeBlinkingTime;
+
+	protected float lipSynchIntervalMin;
+
+	protected float lipSynchIntervalMax;
+
+	protected float lipSynchingTime;
+
+	protected bool isLipSynch;
+
+	public AudioPlayback voice;
+
+	private string voiceGroupName;
+
+	private Coroutine waitCoroutine;
+
+	private void Start()
 	{
-		public DifferenceImageController imageCtrl;
+	}
 
-		public string assetPath;
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
 
-		public bool isAutoInit;
+	private void RemoveCharaVoiceGroup()
+	{
+	}
 
-		public bool isLipSyncOnStart;
+	private void OnDestroy()
+	{
+	}
 
-		protected Tweener eyeBlinkTween;
+	public void Init(string path, Action<bool> onCompleted)
+	{
+	}
 
-		protected Tweener lipSynchTween;
+	protected void InitDifferenceImage(string path, Action<bool> onCompleted)
+	{
+	}
 
-		protected const float DefaultEyeBlinkIntervalMin = 2f;
+	public override void StartExitAnimation([Optional] Action onAnimationDone)
+	{
+	}
 
-		protected const float DefaultEyeBlinkIntervalMax = 5f;
+	public void ShowDifference(bool show)
+	{
+	}
 
-		protected const float DefaultEyeBlinkingTime = 0.05f;
+	public void DoLipSynch()
+	{
+	}
 
-		protected const float DefaultLipSynchIntervalMin = 71f / (339f * (float)Math.PI);
+	private IEnumerator WaitWhileVoicePlay()
+	{
+		return null;
+	}
 
-		protected const float DefaultLipSynchIntervalMax = 71f / (339f * (float)Math.PI);
+	private void SetEyeBlink()
+	{
+	}
 
-		protected const float DefaultLipSynchingTime = 0.1f;
+	private void SetLipSynch()
+	{
+	}
 
-		protected float eyeBlinkIntervalMin;
-
-		protected float eyeBlinkIntervalMax;
-
-		protected float eyeBlinkingTime;
-
-		protected float lipSynchIntervalMin;
-
-		protected float lipSynchIntervalMax;
-
-		protected float lipSynchingTime;
-
-		protected bool isLipSynch;
-
-		public AudioPlayback voice;
-
-		private string voiceGroupName;
-
-		private Coroutine waitCoroutine;
-
-		private void Start()
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
-
-		private void RemoveCharaVoiceGroup()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public void Init(string path, Action<bool> onCompleted)
-		{
-		}
-
-		protected void InitDifferenceImage(string path, Action<bool> onCompleted)
-		{
-		}
-
-		public override void StartExitAnimation([Optional] Action onAnimationDone)
-		{
-		}
-
-		public void ShowDifference(bool show)
-		{
-		}
-
-		public void DoLipSynch()
-		{
-		}
-
-		private IEnumerator WaitWhileVoicePlay()
-		{
-			return null;
-		}
-
-		private void SetEyeBlink()
-		{
-		}
-
-		private void SetLipSynch()
-		{
-		}
-
-		public void PlayTalkSound(string voiceGroupName, string voiceName)
-		{
-		}
+	public void PlayTalkSound(string voiceGroupName, string voiceName)
+	{
 	}
 }

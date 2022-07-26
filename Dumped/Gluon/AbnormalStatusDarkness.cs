@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public class AbnormalStatusDarkness : AbnormalStatusBase
 {
-	public class AbnormalStatusDarkness : AbnormalStatusBase
+	public override bool Update()
 	{
-		public override bool Update()
-		{
-			return default(bool);
-		}
+		return default(bool);
 	}
 }

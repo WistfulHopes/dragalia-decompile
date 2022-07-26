@@ -1,85 +1,84 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public struct CharacterRemoveBuffTrigger
 {
-	public struct CharacterRemoveBuffTrigger
+	public int ActionConditionId
 	{
-		public int ActionConditionId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public int ActionId
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
 		}
+	}
 
-		public CharacterBase BuffOwner
+	public int ActionId
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public CharacterBase BuffAppender
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
 		}
+	}
 
-		public CharacterBuff.BuffUnion TargetBuff
+	public CharacterBase BuffOwner
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(CharacterBuff.BuffUnion);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		public RemoveBuffReason Reason
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(RemoveBuffReason);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+		}
+	}
+
+	public CharacterBase BuffAppender
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public CharacterBuff.BuffUnion TargetBuff
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(CharacterBuff.BuffUnion);
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public RemoveBuffReason Reason
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(RemoveBuffReason);
+		}
+		[CompilerGenerated]
+		set
+		{
 		}
 	}
 }

@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class QuestSupportList : QuestMenuList<QuestSupportListCellData>
 {
-	public class QuestSupportList : QuestMenuList<QuestSupportListCellData>
-	{
-	}
 }

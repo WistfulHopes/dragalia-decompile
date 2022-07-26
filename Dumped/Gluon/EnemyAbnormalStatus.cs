@@ -2,132 +2,131 @@ using System.Collections.Generic;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbnormalStatus : CharacterAbnormalStatus
 {
-	public class EnemyAbnormalStatus : CharacterAbnormalStatus
+	private Dictionary<AbnormalStatusType, AbnormalStatusBase> _enemyAbnormals;
+
+	private Dictionary<int, float> recoveryAbsCoolTimeDict;
+
+	private Dictionary<AbnormalStatusType, List<AbnormalStatusSyncData>> _tmpNextAbnormalStatusDic;
+
+	private CharacterColor.State nextColor;
+
+	public Dictionary<AbnormalStatusType, AbnormalStatusBase> enemyAbnormals => null;
+
+	public override bool SetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability, bool ignoreEA = false)
 	{
-		private Dictionary<AbnormalStatusType, AbnormalStatusBase> _enemyAbnormals;
+		return default(bool);
+	}
 
-		private Dictionary<int, float> recoveryAbsCoolTimeDict;
+	private AbnormalStatusBase AddNewAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, AbnormalStatusType newType, bool ignoreEA = false)
+	{
+		return null;
+	}
 
-		private Dictionary<AbnormalStatusType, List<AbnormalStatusSyncData>> _tmpNextAbnormalStatusDic;
+	public bool EnableOverlap(AbnormalStatusType newType)
+	{
+		return default(bool);
+	}
 
-		private CharacterColor.State nextColor;
+	public override void Reset(bool isRestoreEffect = true)
+	{
+	}
 
-		public Dictionary<AbnormalStatusType, AbnormalStatusBase> enemyAbnormals => null;
+	public override void ClearType(AbnormalStatusType type)
+	{
+	}
 
-		public override bool SetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability, bool ignoreEA = false)
-		{
-			return default(bool);
-		}
+	public override void Update()
+	{
+	}
 
-		private AbnormalStatusBase AddNewAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, AbnormalStatusType newType, bool ignoreEA = false)
-		{
-			return null;
-		}
+	public override bool HasType(AbnormalStatusType type = AbnormalStatusType.NONE)
+	{
+		return default(bool);
+	}
 
-		public bool EnableOverlap(AbnormalStatusType newType)
-		{
-			return default(bool);
-		}
+	public override CharacterBase GetAttacker(AbnormalStatusType type)
+	{
+		return null;
+	}
 
-		public override void Reset(bool isRestoreEffect = true)
-		{
-		}
+	public override int GetProbability(AbnormalStatusType type)
+	{
+		return default(int);
+	}
 
-		public override void ClearType(AbnormalStatusType type)
-		{
-		}
+	public override float GetMinDurationTime(AbnormalStatusType type)
+	{
+		return default(float);
+	}
 
-		public override void Update()
-		{
-		}
+	public override float GetDurationTime(AbnormalStatusType type)
+	{
+		return default(float);
+	}
 
-		public override bool HasType(AbnormalStatusType type = AbnormalStatusType.NONE)
-		{
-			return default(bool);
-		}
+	public override void ReduceDurationTime(float time)
+	{
+	}
 
-		public override CharacterBase GetAttacker(AbnormalStatusType type)
-		{
-			return null;
-		}
+	public override void ApplyParalysisReaction()
+	{
+	}
 
-		public override int GetProbability(AbnormalStatusType type)
-		{
-			return default(int);
-		}
+	public override int GetEventProbability(AbnormalStatusType type)
+	{
+		return default(int);
+	}
 
-		public override float GetMinDurationTime(AbnormalStatusType type)
-		{
-			return default(float);
-		}
+	public override float GetDamageCoefficient(AbnormalStatusType type)
+	{
+		return default(float);
+	}
 
-		public override float GetDurationTime(AbnormalStatusType type)
-		{
-			return default(float);
-		}
+	public override int GetOverlapNum(AbnormalStatusType type)
+	{
+		return default(int);
+	}
 
-		public override void ReduceDurationTime(float time)
-		{
-		}
+	public bool isHighestDisplayPriority(AbnormalStatusType type)
+	{
+		return default(bool);
+	}
 
-		public override void ApplyParalysisReaction()
-		{
-		}
+	public override void SetActiveInterval()
+	{
+	}
 
-		public override int GetEventProbability(AbnormalStatusType type)
-		{
-			return default(int);
-		}
+	public override void PlayEffect()
+	{
+	}
 
-		public override float GetDamageCoefficient(AbnormalStatusType type)
-		{
-			return default(float);
-		}
+	public override void StopEffect()
+	{
+	}
 
-		public override int GetOverlapNum(AbnormalStatusType type)
-		{
-			return default(int);
-		}
+	public override bool ReleaseFreezeOnCollided()
+	{
+		return default(bool);
+	}
 
-		public bool isHighestDisplayPriority(AbnormalStatusType type)
-		{
-			return default(bool);
-		}
+	public override bool AddDurationTime(CollisionHitAttribute attr)
+	{
+		return default(bool);
+	}
 
-		public override void SetActiveInterval()
-		{
-		}
+	public override void ReadSyncData(ChangeAbnormalStatus changeAbnormalStatusEvent)
+	{
+	}
 
-		public override void PlayEffect()
-		{
-		}
+	public override void WriteSyncData(ref List<AbnormalStatusSyncData> outResult, ref short[] outResists)
+	{
+	}
 
-		public override void StopEffect()
-		{
-		}
-
-		public override bool ReleaseFreezeOnCollided()
-		{
-			return default(bool);
-		}
-
-		public override bool AddDurationTime(CollisionHitAttribute attr)
-		{
-			return default(bool);
-		}
-
-		public override void ReadSyncData(ChangeAbnormalStatus changeAbnormalStatusEvent)
-		{
-		}
-
-		public override void WriteSyncData(ref List<AbnormalStatusSyncData> outResult, ref short[] outResists)
-		{
-		}
-
-		public override void OnDisconnectOwner()
-		{
-		}
+	public override void OnDisconnectOwner()
+	{
 	}
 }

@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class EventTopPageBuild : EventTopPageBase
 {
-	public class EventTopPageBuild : EventTopPageBase
-	{
-	}
 }

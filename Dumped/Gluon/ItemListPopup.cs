@@ -4,107 +4,106 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class ItemListPopup : CommonPopup
 {
-	public class ItemListPopup : CommonPopup
+	public enum TypeTab
 	{
-		public enum TypeTab
-		{
-			None = -1,
-			Useful,
-			Material,
-			Max
-		}
+		None = -1,
+		Useful,
+		Material,
+		Max
+	}
 
-		private enum CaptionCategory
-		{
-			Funds,
-			RecoveryItem,
-			Ticket,
-			PowerUpMaterial,
-			Treasure,
-			Valuable,
-			Other,
-			Max
-		}
+	private enum CaptionCategory
+	{
+		Funds,
+		RecoveryItem,
+		Ticket,
+		PowerUpMaterial,
+		Treasure,
+		Valuable,
+		Other,
+		Max
+	}
 
-		private struct SummonTicket
-		{
-			public SummonTicketElement element;
+	private struct SummonTicket
+	{
+		public SummonTicketElement element;
 
-			public int count;
+		public int count;
 
-			public int uselimit;
-		}
+		public int uselimit;
+	}
 
-		private struct ExchangeTicket
-		{
-			public ExchangeTicketElement element;
+	private struct ExchangeTicket
+	{
+		public ExchangeTicketElement element;
 
-			public int count;
-		}
+		public int count;
+	}
 
-		public TypeTab currentTypeTab;
+	public TypeTab currentTypeTab;
 
-		[SerializeField]
-		private ItemListController baseListController;
+	[SerializeField]
+	private ItemListController baseListController;
 
-		[SerializeField]
-		private TabBase typeTabBase;
+	[SerializeField]
+	private TabBase typeTabBase;
 
-		private bool[] isShowCaptionCell;
+	private bool[] isShowCaptionCell;
 
-		private ItemListController[] listController;
+	private ItemListController[] listController;
 
-		private List<ItemListCellData>[] cellDataList;
+	private List<ItemListCellData>[] cellDataList;
 
-		private const string prefabPath = "Prefabs/OutGame/Item/ItemListPopup";
+	private const string prefabPath = "Prefabs/OutGame/Item/ItemListPopup";
 
-		private readonly Localize.TextId[] CaptionCategoryTextId;
+	private readonly Localize.TextId[] CaptionCategoryTextId;
 
-		public static ItemListPopup Create()
-		{
-			return null;
-		}
+	public static ItemListPopup Create()
+	{
+		return null;
+	}
 
-		public void InitSetting()
-		{
-		}
+	public void InitSetting()
+	{
+	}
 
-		private void RecreateItemListPopup()
-		{
-		}
+	private void RecreateItemListPopup()
+	{
+	}
 
-		public void SetListData()
-		{
-		}
+	public void SetListData()
+	{
+	}
 
-		private void SetTypeTab(int typeIndex)
-		{
-		}
+	private void SetTypeTab(int typeIndex)
+	{
+	}
 
-		private void CreateItemDetailPopup(ItemListCellData data)
-		{
-		}
+	private void CreateItemDetailPopup(ItemListCellData data)
+	{
+	}
 
-		public void CreateItemUseLimitOverPopup()
-		{
-		}
+	public void CreateItemUseLimitOverPopup()
+	{
+	}
 
-		private void CreateRecoveryDetailPopup(ItemListCellData data)
-		{
-		}
+	private void CreateRecoveryDetailPopup(ItemListCellData data)
+	{
+	}
 
-		private void AddCaptionCellData(CaptionCategory category, int typeNum)
-		{
-		}
+	private void AddCaptionCellData(CaptionCategory category, int typeNum)
+	{
+	}
 
-		private void RequestGetItemList(UnityAction successCallback)
-		{
-		}
+	private void RequestGetItemList(UnityAction successCallback)
+	{
+	}
 
-		public void OnError(ErrorType errorType, int resultCode)
-		{
-		}
+	public void OnError(ErrorType errorType, int resultCode)
+	{
 	}
 }

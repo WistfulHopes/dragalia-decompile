@@ -1,39 +1,38 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GlossaryScene : SceneBase
 {
-	public class GlossaryScene : SceneBase
+	public GameObject bgPanel;
+
+	public Canvas mainCanvas;
+
+	public GameObject viewTopPos;
+
+	public GameObject viewBottomPos;
+
+	private void Awake()
 	{
-		public GameObject bgPanel;
+	}
 
-		public Canvas mainCanvas;
+	private void Start()
+	{
+	}
 
-		public GameObject viewTopPos;
+	private void SetMargin()
+	{
+	}
 
-		public GameObject viewBottomPos;
+	private void OnDestroy()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public void WebMessageCallBack(string msg)
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		private void SetMargin()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public void WebMessageCallBack(string msg)
-		{
-		}
-
-		private void BackButtonPressed()
-		{
-		}
+	private void BackButtonPressed()
+	{
 	}
 }

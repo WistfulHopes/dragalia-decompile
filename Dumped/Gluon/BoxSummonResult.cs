@@ -4,187 +4,186 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BoxSummonResult : MonoBehaviour, ICustomMessage
 {
-	public class BoxSummonResult : MonoBehaviour, ICustomMessage
+	[SerializeField]
+	public GameObject resultItemTemplate;
+
+	[SerializeField]
+	private GameObject captionObj;
+
+	[SerializeField]
+	private GameObject bottomObj;
+
+	[SerializeField]
+	private Button resetButton;
+
+	[SerializeField]
+	private Button summonButton;
+
+	[SerializeField]
+	private Text summonButtonText;
+
+	[SerializeField]
+	private Button nextButton;
+
+	[SerializeField]
+	private Text nextButtonText;
+
+	[SerializeField]
+	private Button skipButton;
+
+	[SerializeField]
+	private Text pointRemain;
+
+	[SerializeField]
+	private Text pointCost;
+
+	[SerializeField]
+	private Text captionText;
+
+	[SerializeField]
+	private Image captionImage;
+
+	[SerializeField]
+	private Transform[] resultItemParents;
+
+	[SerializeField]
+	private BackButton backButton;
+
+	[SerializeField]
+	private UIAnimationPublisher enterPublisher;
+
+	private List<GameObject> resultItems;
+
+	public static readonly float NEXT_SUMMON_DELAY_START_TIME;
+
+	public static readonly float NEXT_SUMMON_DELAY_WAIT_TIME;
+
+	public static readonly float NEXT_SUMMON_DELAY_END_TIME;
+
+	private BoxSummonAnimPage animPage;
+
+	private Coroutine resultPopupCorutine;
+
+	private BoxSummonResultPopup summonResultPopup;
+
+	private bool summonContentsFromResult;
+
+	public void Show(bool toShow)
 	{
-		[SerializeField]
-		public GameObject resultItemTemplate;
+	}
 
-		[SerializeField]
-		private GameObject captionObj;
+	public void SetContent(BoxSummonAnimPage animPage, bool isFadingOut)
+	{
+	}
 
-		[SerializeField]
-		private GameObject bottomObj;
+	private IEnumerator ShowResultPopup()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Button resetButton;
+	private void ShowReceivedOverLimitPopup()
+	{
+	}
 
-		[SerializeField]
-		private Button summonButton;
+	private bool IsShowingResultPopup()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private Text summonButtonText;
+	protected void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		private Button nextButton;
+	private void OnEnable()
+	{
+	}
 
-		[SerializeField]
-		private Text nextButtonText;
+	private void OnDisable()
+	{
+	}
 
-		[SerializeField]
-		private Button skipButton;
+	private void Start()
+	{
+	}
 
-		[SerializeField]
-		private Text pointRemain;
+	public void ResetSummonData()
+	{
+	}
 
-		[SerializeField]
-		private Text pointCost;
+	private void SetupContents()
+	{
+	}
 
-		[SerializeField]
-		private Text captionText;
+	private void SetupCaption()
+	{
+	}
 
-		[SerializeField]
-		private Image captionImage;
+	private void SetupItemList()
+	{
+	}
 
-		[SerializeField]
-		private Transform[] resultItemParents;
+	private void SetupItemListSub(AtgenDrawDetails drawInfo, int index, int total)
+	{
+	}
 
-		[SerializeField]
-		private BackButton backButton;
+	private void SetupPointRemain()
+	{
+	}
 
-		[SerializeField]
-		private UIAnimationPublisher enterPublisher;
+	private void SetupPointCost()
+	{
+	}
 
-		private List<GameObject> resultItems;
+	private void SetupResetButton()
+	{
+	}
 
-		public static readonly float NEXT_SUMMON_DELAY_START_TIME;
+	private void UpdateNextItems()
+	{
+	}
 
-		public static readonly float NEXT_SUMMON_DELAY_WAIT_TIME;
+	private void TeardownContents()
+	{
+	}
 
-		public static readonly float NEXT_SUMMON_DELAY_END_TIME;
+	public void OnContentButtonTouched()
+	{
+	}
 
-		private BoxSummonAnimPage animPage;
+	public void OnBackButtonTouched()
+	{
+	}
 
-		private Coroutine resultPopupCorutine;
+	public void OnSummonButtonTouched()
+	{
+	}
 
-		private BoxSummonResultPopup summonResultPopup;
+	public void OnNextButtonTouched()
+	{
+	}
 
-		private bool summonContentsFromResult;
+	public void OnSkipButtonTouched()
+	{
+	}
 
-		public void Show(bool toShow)
-		{
-		}
+	private void ShowNextItems()
+	{
+	}
 
-		public void SetContent(BoxSummonAnimPage animPage, bool isFadingOut)
-		{
-		}
+	private IEnumerator nextSummon()
+	{
+		return null;
+	}
 
-		private IEnumerator ShowResultPopup()
-		{
-			return null;
-		}
+	private void StopResultPopupCorutine()
+	{
+	}
 
-		private void ShowReceivedOverLimitPopup()
-		{
-		}
-
-		private bool IsShowingResultPopup()
-		{
-			return default(bool);
-		}
-
-		protected void OnDestroy()
-		{
-		}
-
-		private void OnEnable()
-		{
-		}
-
-		private void OnDisable()
-		{
-		}
-
-		private void Start()
-		{
-		}
-
-		public void ResetSummonData()
-		{
-		}
-
-		private void SetupContents()
-		{
-		}
-
-		private void SetupCaption()
-		{
-		}
-
-		private void SetupItemList()
-		{
-		}
-
-		private void SetupItemListSub(AtgenDrawDetails drawInfo, int index, int total)
-		{
-		}
-
-		private void SetupPointRemain()
-		{
-		}
-
-		private void SetupPointCost()
-		{
-		}
-
-		private void SetupResetButton()
-		{
-		}
-
-		private void UpdateNextItems()
-		{
-		}
-
-		private void TeardownContents()
-		{
-		}
-
-		public void OnContentButtonTouched()
-		{
-		}
-
-		public void OnBackButtonTouched()
-		{
-		}
-
-		public void OnSummonButtonTouched()
-		{
-		}
-
-		public void OnNextButtonTouched()
-		{
-		}
-
-		public void OnSkipButtonTouched()
-		{
-		}
-
-		private void ShowNextItems()
-		{
-		}
-
-		private IEnumerator nextSummon()
-		{
-			return null;
-		}
-
-		private void StopResultPopupCorutine()
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

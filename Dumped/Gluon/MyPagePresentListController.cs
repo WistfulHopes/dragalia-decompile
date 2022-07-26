@@ -1,34 +1,33 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPagePresentListController : TableViewController<MyPagePresentListCellData>
 {
-	public class MyPagePresentListController : TableViewController<MyPagePresentListCellData>
+	public Text NoPresentText;
+
+	public const float cellHeight = 168f;
+
+	protected override void Awake()
 	{
-		public Text NoPresentText;
+	}
 
-		public const float cellHeight = 168f;
+	protected override TableViewCell<MyPagePresentListCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		protected override void Awake()
-		{
-		}
+	public void LoadData(List<MyPagePresentListCellData> cellList)
+	{
+	}
 
-		protected override TableViewCell<MyPagePresentListCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
+	public void ReloadData(List<MyPagePresentListCellData> cellList)
+	{
+	}
 
-		public void LoadData(List<MyPagePresentListCellData> cellList)
-		{
-		}
-
-		public void ReloadData(List<MyPagePresentListCellData> cellList)
-		{
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
 	}
 }

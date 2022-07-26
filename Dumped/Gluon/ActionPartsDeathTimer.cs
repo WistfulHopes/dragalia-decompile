@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsDeathTimer : ActionParts
 {
-	public class ActionPartsDeathTimer : ActionParts
+	public enum ProcType
 	{
-		public enum ProcType
-		{
-			Give,
-			TimeMarker
-		}
+		Give,
+		TimeMarker
+	}
 
-		private readonly DeathTimerData _partsData;
+	private readonly DeathTimerData _partsData;
 
-		public ActionPartsDeathTimer(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsDeathTimer(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void CreateTimeMarker(DeathTimerUniqueCtrl ctrl)
-		{
-		}
+	private void CreateTimeMarker(DeathTimerUniqueCtrl ctrl)
+	{
 	}
 }

@@ -2,28 +2,27 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortAssetsManager
 {
-	public class FortAssetsManager
+	public Dictionary<string, UnityEngine.Object> assetPools;
+
+	public GameObject FetchAsset(string path)
 	{
-		public Dictionary<string, UnityEngine.Object> assetPools;
+		return null;
+	}
 
-		public GameObject FetchAsset(string path)
-		{
-			return null;
-		}
+	public UnityEngine.Object FetchAsset<T>(string path) where T : UnityEngine.Object
+	{
+		return null;
+	}
 
-		public UnityEngine.Object FetchAsset<T>(string path) where T : UnityEngine.Object
-		{
-			return null;
-		}
+	public void FetchAssetAsync<T>(string path, Action<T> OnCompleted) where T : UnityEngine.Object
+	{
+	}
 
-		public void FetchAssetAsync<T>(string path, Action<T> OnCompleted) where T : UnityEngine.Object
-		{
-		}
-
-		public void Clear()
-		{
-		}
+	public void Clear()
+	{
 	}
 }

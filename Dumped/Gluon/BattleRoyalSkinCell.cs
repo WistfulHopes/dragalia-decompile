@@ -3,41 +3,39 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BattleRoyalSkinCell : MonoBehaviour
 {
-	public class BattleRoyalSkinCell : MonoBehaviour
+	[SerializeField]
+	public GameObject selectedMark;
+
+	public RawImage icon;
+
+	private Action<int> onDecided;
+
+	public int skinId
 	{
-		[SerializeField]
-		[Header("Content")]
-		public GameObject selectedMark;
-
-		public RawImage icon;
-
-		private Action<int> onDecided;
-
-		public int skinId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
-
-		public void Setup(int skinId, Action<int> onDecided)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetSelectedState(bool v)
-		{
-		}
+	public void Setup(int skinId, Action<int> onDecided)
+	{
+	}
 
-		public void OnPressed()
-		{
-		}
+	public void SetSelectedState(bool v)
+	{
+	}
+
+	public void OnPressed()
+	{
 	}
 }

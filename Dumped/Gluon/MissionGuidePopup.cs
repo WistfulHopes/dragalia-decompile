@@ -1,35 +1,34 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MissionGuidePopup : CommonPopup
 {
-	public class MissionGuidePopup : CommonPopup
+	[SerializeField]
+	private MissionGuideListController missionGuideListController;
+
+	[SerializeField]
+	private MaintenanceButtonController maintenanceCtrl;
+
+	public static MissionGuidePopup Create()
 	{
-		[SerializeField]
-		private MissionGuideListController missionGuideListController;
+		return null;
+	}
 
-		[SerializeField]
-		private MaintenanceButtonController maintenanceCtrl;
+	public void InitPopup()
+	{
+	}
 
-		public static MissionGuidePopup Create()
-		{
-			return null;
-		}
+	public override void OnOkButtonPressed()
+	{
+	}
 
-		public void InitPopup()
-		{
-		}
+	private void GoNowPlayChapter()
+	{
+	}
 
-		public override void OnOkButtonPressed()
-		{
-		}
-
-		private void GoNowPlayChapter()
-		{
-		}
-
-		private bool isContentClear(QuestType questType, int contentId)
-		{
-			return default(bool);
-		}
+	private bool isContentClear(QuestType questType, int contentId)
+	{
+		return default(bool);
 	}
 }

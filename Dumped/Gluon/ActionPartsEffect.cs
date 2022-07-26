@@ -2,92 +2,91 @@ using System;
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsEffect : ActionParts
 {
-	public class ActionPartsEffect : ActionParts
+	private struct StartActionParam
 	{
-		private struct StartActionParam
-		{
-			public CommonObjectStatus target;
+		public CommonObjectStatus target;
 
-			public Vector3 initialPosition;
+		public Vector3 initialPosition;
 
-			public Vector3 initialDirection;
+		public Vector3 initialDirection;
 
-			public void Clear()
-			{
-			}
-		}
-
-		private readonly Gluon.ActionData.EffectData _partsData;
-
-		private EffectObject _effectObject;
-
-		public Action<EffectObject> onEffectCreatedAction;
-
-		private CharacterBase _firstTargetPlayer;
-
-		private AnimatableObject _animatableObject;
-
-		private StartActionParam _startActionParam;
-
-		public ActionPartsEffect(Gluon.ActionData.ActionParts resource)
+		public void Clear()
 		{
 		}
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	private readonly Gluon.ActionData.EffectData _partsData;
 
-		protected override void OnStart()
-		{
-		}
+	private EffectObject _effectObject;
 
-		protected override void OnFinish()
-		{
-		}
+	public Action<EffectObject> onEffectCreatedAction;
 
-		public override void Clear()
-		{
-		}
+	private CharacterBase _firstTargetPlayer;
 
-		private EffectObject CreateEffect(CharacterBase owner, Gluon.ActionData.EffectData data, out Vector3 effectPos)
-		{
-			return null;
-		}
+	private AnimatableObject _animatableObject;
 
-		private float GetEffectPlaySpeedScale(Gluon.ActionData.EffectData data)
-		{
-			return default(float);
-		}
+	private StartActionParam _startActionParam;
 
-		public override bool Update(float delta)
-		{
-			return default(bool);
-		}
+	public ActionPartsEffect(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public static EffectObject CreateEffectObject(CharacterBase owner, Transform target, Gluon.ActionData.EffectData data, int skillId)
-		{
-			return null;
-		}
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public static EffectObject CreateEffectObject(CharacterBase owner, Transform target, Vector3 targetPosition, Vector3 targetForward, Quaternion targetRotation, Vector3 targetScale, Gluon.ActionData.EffectData data, int skillId)
-		{
-			return null;
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private bool CalcGeneratePos(Gluon.ActionData.EffectData data, CharacterBase owner, ref Vector3 position, ref Quaternion rotation, ref Vector3 scale, ref Transform attachNode)
-		{
-			return default(bool);
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		public void ForceStop(CharacterBase effectOwner, bool isAnimatableObjectOnly = false)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		private CharacterBase GetOwnerToStartActionCharacter()
-		{
-			return null;
-		}
+	private EffectObject CreateEffect(CharacterBase owner, Gluon.ActionData.EffectData data, out Vector3 effectPos)
+	{
+		return null;
+	}
+
+	private float GetEffectPlaySpeedScale(Gluon.ActionData.EffectData data)
+	{
+		return default(float);
+	}
+
+	public override bool Update(float delta)
+	{
+		return default(bool);
+	}
+
+	public static EffectObject CreateEffectObject(CharacterBase owner, Transform target, Gluon.ActionData.EffectData data, int skillId)
+	{
+		return null;
+	}
+
+	public static EffectObject CreateEffectObject(CharacterBase owner, Transform target, Vector3 targetPosition, Vector3 targetForward, Quaternion targetRotation, Vector3 targetScale, Gluon.ActionData.EffectData data, int skillId)
+	{
+		return null;
+	}
+
+	private bool CalcGeneratePos(Gluon.ActionData.EffectData data, CharacterBase owner, ref Vector3 position, ref Quaternion rotation, ref Vector3 scale, ref Transform attachNode)
+	{
+		return default(bool);
+	}
+
+	public void ForceStop(CharacterBase effectOwner, bool isAnimatableObjectOnly = false, bool is377803BugCase = false)
+	{
+	}
+
+	private CharacterBase GetOwnerToStartActionCharacter()
+	{
+		return null;
 	}
 }

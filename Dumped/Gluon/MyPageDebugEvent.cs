@@ -1,10 +1,8 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPageDebugEvent : MonoBehaviour
 {
-	public class MyPageDebugEvent : MonoBehaviour
-	{
-		[Header("MyPageLimitedArea.csv ã\u0081® id")]
-		public int areaId;
-	}
+	public int areaId;
 }

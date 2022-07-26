@@ -1,19 +1,18 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class UnitProfilePage : MonoBehaviour
 {
-	public class UnitProfilePage : MonoBehaviour
+	private void Start()
 	{
-		private void Start()
-		{
-		}
+	}
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		public void SetUpProfilePage(UnitDetailModel.UnitDetailType type)
-		{
-		}
+	public void SetUpProfilePage(UnitDetailModel.UnitDetailType type)
+	{
 	}
 }

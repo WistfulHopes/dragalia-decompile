@@ -1,44 +1,43 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FacilityShaderExchanger : MonoBehaviour
 {
-	public class FacilityShaderExchanger : MonoBehaviour
+	[Serializable]
+	private struct TargetInfo
 	{
-		[Serializable]
-		private struct TargetInfo
-		{
-			public string targetShaderName;
+		public string targetShaderName;
 
-			public Shader exchangeShader;
+		public Shader exchangeShader;
 
-			public string[] transferTextureParamNameArray;
+		public string[] transferTextureParamNameArray;
 
-			public bool createNewMaterial;
-		}
+		public bool createNewMaterial;
+	}
 
-		[SerializeField]
-		protected GameObject targetObj;
+	[SerializeField]
+	protected GameObject targetObj;
 
-		[SerializeField]
-		private TargetInfo[] targetInfoArray;
+	[SerializeField]
+	private TargetInfo[] targetInfoArray;
 
-		[SerializeField]
-		private bool exchangeOnStart;
+	[SerializeField]
+	private bool exchangeOnStart;
 
-		[SerializeField]
-		private bool exchangeAllChildren;
+	[SerializeField]
+	private bool exchangeAllChildren;
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void SetShader()
-		{
-		}
+	public void SetShader()
+	{
+	}
 
-		public void SetMaterialShader(Renderer targetRenderer)
-		{
-		}
+	public void SetMaterialShader(Renderer targetRenderer)
+	{
 	}
 }

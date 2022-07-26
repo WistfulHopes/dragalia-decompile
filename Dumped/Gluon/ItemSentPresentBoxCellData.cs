@@ -1,21 +1,20 @@
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class ItemSentPresentBoxCellData
 {
-	public class ItemSentPresentBoxCellData
+	public int id;
+
+	public int quantity;
+
+	public GiftType entityType;
+
+	public ItemSentPresentBoxCellData(int id, int quantity, GiftType type)
 	{
-		public int id;
+	}
 
-		public int quantity;
-
-		public GiftType entityType;
-
-		public ItemSentPresentBoxCellData(int id, int quantity, GiftType type)
-		{
-		}
-
-		public ItemSentPresentBoxCellData(AtgenBuildEventRewardEntityList rewardEntityData)
-		{
-		}
+	public ItemSentPresentBoxCellData(AtgenBuildEventRewardEntityList rewardEntityData)
+	{
 	}
 }

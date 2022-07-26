@@ -2,88 +2,87 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestCommonTableViewController<T> : TableViewController<T>
 {
-	public class QuestCommonTableViewController<T> : TableViewController<T>
+	[SerializeField]
+	private Text _tableViewTitle;
+
+	private QuestSelectScene.Difficulty _difficulty;
+
+	protected AnimationListOneCol animationListOneCol;
+
+	public QuestSelectScene.Difficulty difficulty
 	{
-		[SerializeField]
-		private Text _tableViewTitle;
-
-		private QuestSelectScene.Difficulty _difficulty;
-
-		protected AnimationListOneCol animationListOneCol;
-
-		public QuestSelectScene.Difficulty difficulty
+		get
 		{
-			get
-			{
-				return default(QuestSelectScene.Difficulty);
-			}
-			set
-			{
-			}
+			return default(QuestSelectScene.Difficulty);
 		}
-
-		public Text tableViewTitle => null;
-
-		public QuestCommonTableViewData curViewData
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		protected override void Awake()
+		set
 		{
 		}
+	}
 
-		protected override void Start()
+	public Text tableViewTitle => null;
+
+	public QuestCommonTableViewData curViewData
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public virtual void LoadData()
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		public int GetTableDataCount()
-		{
-			return default(int);
-		}
+	protected override void Start()
+	{
+	}
 
-		public T GetTableDataByIndex(int index)
-		{
-			return (T)null;
-		}
+	public virtual void LoadData()
+	{
+	}
 
-		public void SetAlphaToCellsList(float alpha)
-		{
-		}
+	public int GetTableDataCount()
+	{
+		return default(int);
+	}
 
-		public void OnOpen(float eachWaitTime)
-		{
-		}
+	public T GetTableDataByIndex(int index)
+	{
+		return (T)null;
+	}
 
-		public void OnClose()
-		{
-		}
+	public void SetAlphaToCellsList(float alpha)
+	{
+	}
 
-		protected void SetupAnimationCell(TableViewCell<T> cell, int index)
-		{
-		}
+	public void OnOpen(float eachWaitTime)
+	{
+	}
 
-		protected void ClearAnimationCells()
-		{
-		}
+	public void OnClose()
+	{
+	}
 
-		public bool IsOnAnimation()
-		{
-			return default(bool);
-		}
+	protected void SetupAnimationCell(TableViewCell<T> cell, int index)
+	{
+	}
+
+	protected void ClearAnimationCells()
+	{
+	}
+
+	public bool IsOnAnimation()
+	{
+		return default(bool);
 	}
 }

@@ -2,83 +2,82 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SelectIconListControllerBase : CommonIconListController
 {
-	public class SelectIconListControllerBase : CommonIconListController
+	[HideInInspector]
+	public List<ulong> selectKeys;
+
+	public Action<CommonIconListCellData> onIconPressedCallBack;
+
+	[HideInInspector]
+	protected int maxSelectCount;
+
+	protected bool isAllListIconLock;
+
+	protected override CommonIconListCellData CreateDragonCellData(ulong keyId, int decoNum)
 	{
-		[HideInInspector]
-		public List<ulong> selectKeys;
+		return null;
+	}
 
-		public Action<CommonIconListCellData> onIconPressedCallBack;
+	protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		[HideInInspector]
-		protected int maxSelectCount;
+	protected override CommonIconListCellData CreateAmuletCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		protected bool isAllListIconLock;
+	public int CheckSelectIcon(ulong keyId)
+	{
+		return default(int);
+	}
 
-		protected override CommonIconListCellData CreateDragonCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	public void UpdateCellByKeyIds(ulong[] keyIds)
+	{
+	}
 
-		protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	public void SetMultiSelectFlag(bool flag)
+	{
+	}
 
-		protected override CommonIconListCellData CreateAmuletCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	public void UpdateCellDataSelectNumber()
+	{
+	}
 
-		public int CheckSelectIcon(ulong keyId)
-		{
-			return default(int);
-		}
+	public void AllListIconLock()
+	{
+	}
 
-		public void UpdateCellByKeyIds(ulong[] keyIds)
-		{
-		}
+	public void AllListIconUnlock()
+	{
+	}
 
-		public void SetMultiSelectFlag(bool flag)
-		{
-		}
+	public void IconListSelectClear()
+	{
+	}
 
-		public void UpdateCellDataSelectNumber()
-		{
-		}
+	protected void UpdateSelectIconNumber()
+	{
+	}
 
-		public void AllListIconLock()
-		{
-		}
+	protected virtual void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		public void AllListIconUnlock()
-		{
-		}
+	protected virtual bool IsSelectableData(CommonIconListCellData data)
+	{
+		return default(bool);
+	}
 
-		public void IconListSelectClear()
-		{
-		}
+	protected virtual void UnSelectIcon(ulong targetKey)
+	{
+	}
 
-		protected void UpdateSelectIconNumber()
-		{
-		}
-
-		protected virtual void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		protected virtual bool IsSelectableData(CommonIconListCellData data)
-		{
-			return default(bool);
-		}
-
-		protected virtual void UnSelectIcon(ulong targetKey)
-		{
-		}
-
-		protected void UpdateEquipIconLock(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	protected void UpdateEquipIconLock(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
 	}
 }

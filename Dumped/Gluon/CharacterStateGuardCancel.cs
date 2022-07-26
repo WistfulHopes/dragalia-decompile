@@ -1,13 +1,12 @@
-namespace Gluon
-{
-	public class CharacterStateGuardCancel : CharacterStateBase
-	{
-		protected override void OnStateEnter_Internal()
-		{
-		}
+namespace Gluon;
 
-		public override void OnStateExit()
-		{
-		}
+public class CharacterStateGuardCancel : CharacterStateBase
+{
+	protected override void OnStateEnter_Internal()
+	{
+	}
+
+	public override void OnStateExit()
+	{
 	}
 }

@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class MissionGuideListCellData
 {
-	public class MissionGuideListCellData
-	{
-		public int id;
+	public int id;
 
-		public int priority;
+	public int priority;
 
-		public string titleText;
+	public string titleText;
 
-		public string desText;
+	public string desText;
 
-		public bool isClear;
-	}
+	public bool isClear;
 }

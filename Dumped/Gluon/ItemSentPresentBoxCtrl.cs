@@ -1,46 +1,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ItemSentPresentBoxCtrl : TableViewController<ItemSentPresentBoxCellData>
 {
-	public class ItemSentPresentBoxCtrl : TableViewController<ItemSentPresentBoxCellData>
+	public float cellHeight;
+
+	[SerializeField]
+	private AnimationListOneCol listAnimation;
+
+	[SerializeField]
+	private float delayFrame;
+
+	protected override void Awake()
 	{
-		public float cellHeight;
+	}
 
-		[SerializeField]
-		private AnimationListOneCol listAnimation;
+	public void LoadData(List<ItemSentPresentBoxCellData> cellList)
+	{
+	}
 
-		[SerializeField]
-		private float delayFrame;
+	protected override TableViewCell<ItemSentPresentBoxCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public void LoadData(List<ItemSentPresentBoxCellData> cellList)
-		{
-		}
+	public void UpdateReceiveButtonInformation()
+	{
+	}
 
-		protected override TableViewCell<ItemSentPresentBoxCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
+	public void StartEnterAnimation()
+	{
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public void UpdateReceiveButtonInformation()
-		{
-		}
-
-		public void StartEnterAnimation()
-		{
-		}
-
-		public void StartExitAnimation()
-		{
-		}
+	public void StartExitAnimation()
+	{
 	}
 }

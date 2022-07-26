@@ -1,34 +1,33 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineFade
 {
-	public class CuttTimelineFade
+	private CuttTimelineKeyFadeDataList _keys;
+
+	private GameObject _canvas;
+
+	private GameObject fadeObject;
+
+	private Image image;
+
+	private Sprite whiteSprite;
+
+	public void Initialize(CuttTimelineKeyFadeDataList keys, CuttTimelineControl timelineControl, GameObject canvasObject, int siblingIndex = -1)
 	{
-		private CuttTimelineKeyFadeDataList _keys;
+	}
 
-		private GameObject _canvas;
+	public void Release()
+	{
+	}
 
-		private GameObject fadeObject;
+	public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	{
+	}
 
-		private Image image;
-
-		private Sprite whiteSprite;
-
-		public void Initialize(CuttTimelineKeyFadeDataList keys, CuttTimelineControl timelineControl, GameObject canvasObject, int siblingIndex = -1)
-		{
-		}
-
-		public void Release()
-		{
-		}
-
-		public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
-		{
-		}
-
-		public void SetFadePanel(bool enableFlag)
-		{
-		}
+	public void SetFadePanel(bool enableFlag)
+	{
 	}
 }

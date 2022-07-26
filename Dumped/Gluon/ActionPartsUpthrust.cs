@@ -2,55 +2,54 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsUpthrust : ActionParts
 {
-	public class ActionPartsUpthrust : ActionParts
+	private class Target
 	{
-		private class Target
+		public List<int> partyIndex;
+	}
+
+	private readonly UpthrustData _partsData;
+
+	private Target _targets;
+
+	public List<EnemyCharacter> enemyObjects
+	{
+		[CompilerGenerated]
+		get
 		{
-			public List<int> partyIndex;
+			return null;
 		}
-
-		private readonly UpthrustData _partsData;
-
-		private Target _targets;
-
-		public List<EnemyCharacter> enemyObjects
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public ActionPartsUpthrust(Gluon.ActionData.ActionParts resource)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		protected override void OnFinish()
-		{
-		}
+	public ActionPartsUpthrust(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override void OnStart()
+	{
+	}
+
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

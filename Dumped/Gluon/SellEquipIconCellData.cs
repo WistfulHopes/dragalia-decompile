@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class SellEquipIconCellData : SellIconListCellData
 {
-	public class SellEquipIconCellData : SellIconListCellData
-	{
-	}
 }

@@ -2,41 +2,38 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopDrawMaterialSummonPopup : PopupBase
 {
-	public class ShopDrawMaterialSummonPopup : PopupBase
+	[SerializeField]
+	public Text comment;
+
+	public Text priceText;
+
+	public Text beforeCountText;
+
+	public Text afterCountText;
+
+	public Text insufficientText;
+
+	[SerializeField]
+	public Button okButton;
+
+	private int price;
+
+	private Action onDraw;
+
+	public static ShopDrawMaterialSummonPopup Create(int price, Action onDraw)
 	{
-		[SerializeField]
-		[Header("Texts")]
-		public Text comment;
+		return null;
+	}
 
-		public Text priceText;
+	protected override void Start()
+	{
+	}
 
-		public Text beforeCountText;
-
-		public Text afterCountText;
-
-		public Text insufficientText;
-
-		[SerializeField]
-		[Header("Button")]
-		public Button okButton;
-
-		private int price;
-
-		private Action onDraw;
-
-		public static ShopDrawMaterialSummonPopup Create(int price, Action onDraw)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnSummonButtonPressed()
-		{
-		}
+	public void OnSummonButtonPressed()
+	{
 	}
 }

@@ -1,29 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeDragonSkillAbilityPopup : PopupBase
 {
-	public class DmodeDragonSkillAbilityPopup : PopupBase
+	private static readonly string prefabPath;
+
+	[SerializeField]
+	private Text nameText;
+
+	[SerializeField]
+	private DmodeItemDetailInfoBaseCell skillCell;
+
+	[SerializeField]
+	private DmodeItemDetailInfoBaseCell abilityCell;
+
+	public static DmodeDragonSkillAbilityPopup Create(int id, ElementalType elementalType = ElementalType.NOELEMENT)
 	{
-		private static readonly string prefabPath;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Contents")]
-		private Text nameText;
-
-		[SerializeField]
-		private DmodeItemDetailInfoBaseCell skillCell;
-
-		[SerializeField]
-		private DmodeItemDetailInfoBaseCell abilityCell;
-
-		public static DmodeDragonSkillAbilityPopup Create(int id, ElementalType elementalType = ElementalType.NOELEMENT)
-		{
-			return null;
-		}
-
-		private void Initialize(int id, ElementalType elementalType)
-		{
-		}
+	private void Initialize(int id, ElementalType elementalType)
+	{
 	}
 }

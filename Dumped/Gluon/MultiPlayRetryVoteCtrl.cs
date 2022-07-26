@@ -1,126 +1,134 @@
 using System.Runtime.CompilerServices;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class MultiPlayRetryVoteCtrl
 {
-	public class MultiPlayRetryVoteCtrl
+	private enum ControlState
 	{
-		private enum ControlState
+		None,
+		Ready,
+		Waiting,
+		Accepted,
+		Denied,
+		ContinueImpossible
+	}
+
+	private ControlState _ctrlState;
+
+	private MultiPlayRetryVoteModel.VoteState _lastMyVoteState;
+
+	public int _myActorIndex;
+
+	private RetryVoteEvent _tmpSendEvent;
+
+	private bool _isLastVote;
+
+	public MultiPlayRetryVoteModel RetryVoteModel
+	{
+		[CompilerGenerated]
+		get
 		{
-			None,
-			Ready,
-			Waiting,
-			Accepted,
-			Denied,
-			ContinueImpossible
+			return null;
 		}
-
-		private ControlState _ctrlState;
-
-		private MultiPlayRetryVoteModel.VoteState _lastMyVoteState;
-
-		public int _myActorIndex;
-
-		private RetryVoteEvent _tmpSendEvent;
-
-		private bool _isLastVote;
-
-		public MultiPlayRetryVoteModel RetryVoteModel
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void Initialize()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Update()
-		{
-		}
+	public void Initialize()
+	{
+	}
 
-		private void UpdateAlways()
-		{
-		}
+	public void Update()
+	{
+	}
 
-		private void UpdateReady()
-		{
-		}
+	private void UpdateAlways()
+	{
+	}
 
-		private void UpdateWaiting()
-		{
-		}
+	private void UpdateReady()
+	{
+	}
 
-		private void UpdateAccepted()
-		{
-		}
+	private void UpdateWaiting()
+	{
+	}
 
-		private void UpdateDenied()
-		{
-		}
+	private void UpdateAccepted()
+	{
+	}
 
-		private bool UpdateTimeUp()
-		{
-			return default(bool);
-		}
+	private void UpdateDenied()
+	{
+	}
 
-		private void ToReady()
-		{
-		}
+	private bool UpdateTimeUp()
+	{
+		return default(bool);
+	}
 
-		public void OnReceiveEvent(RetryVoteEvent recvEvent)
-		{
-		}
+	private void ToReady()
+	{
+	}
 
-		public void OnDisconnectUser(int disconnectActorId)
-		{
-		}
+	public void OnReceiveEvent(RetryVoteEvent recvEvent)
+	{
+	}
 
-		private void SendChangeVoteEvent(MultiPlayRetryVoteModel.VoteState state)
-		{
-		}
+	public void OnDisconnectUser(int disconnectActorId)
+	{
+	}
 
-		private void SendGoToRetryEvent()
-		{
-		}
+	private void SendChangeVoteEvent(MultiPlayRetryVoteModel.VoteState state)
+	{
+	}
 
-		private void SendSetIsLastVote()
-		{
-		}
+	private void SendGoToRetryEvent()
+	{
+	}
 
-		private void SendGoToContinueImpossibleEvent()
-		{
-		}
+	private void SendSetIsLastVote()
+	{
+	}
 
-		private void SendLostStartVoteRightEvent(int actorId)
-		{
-		}
+	private void SendGoToContinueImpossibleEvent()
+	{
+	}
 
-		private void OnReceiveChangeVoteStateEvent(RetryVoteEvent recvEvent)
-		{
-		}
+	private void SendLostStartVoteRightEvent(int actorId)
+	{
+	}
 
-		private void OnReceiveGoToRetryStateEvent(RetryVoteEvent recvEvent)
-		{
-		}
+	private void SendToReadyEvent()
+	{
+	}
 
-		private void OnReceiveSetIsLastVoteEvent(RetryVoteEvent recvEvent)
-		{
-		}
+	private void OnReceiveChangeVoteStateEvent(RetryVoteEvent recvEvent)
+	{
+	}
 
-		private void OnReceiveGoToContinueImpossibleEvent(RetryVoteEvent recvEvent)
-		{
-		}
+	private void OnReceiveGoToRetryStateEvent(RetryVoteEvent recvEvent)
+	{
+	}
 
-		private void OnReceiveLostStartVoteRightEvent(RetryVoteEvent recvEvent)
-		{
-		}
+	private void OnReceiveSetIsLastVoteEvent(RetryVoteEvent recvEvent)
+	{
+	}
+
+	private void OnReceiveGoToContinueImpossibleEvent(RetryVoteEvent recvEvent)
+	{
+	}
+
+	private void OnReceiveLostStartVoteRightEvent(RetryVoteEvent recvEvent)
+	{
+	}
+
+	public bool CanRetry()
+	{
+		return default(bool);
 	}
 }

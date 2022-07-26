@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public class GrowMaterialCellData : CommonEquipIconCellData
 {
-	public class GrowMaterialCellData : CommonEquipIconCellData
-	{
-		public int selectNumber;
+	public int selectNumber;
 
-		public bool isSelectLock;
+	public bool isSelectLock;
 
-		public bool isTarget;
-	}
+	public bool isTarget;
 }

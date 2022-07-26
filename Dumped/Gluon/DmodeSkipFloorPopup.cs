@@ -2,44 +2,41 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeSkipFloorPopup : PopupBase
 {
-	public class DmodeSkipFloorPopup : PopupBase
+	[SerializeField]
+	private Text remainDailySkipCountText;
+
+	[SerializeField]
+	private Text emptySkipFloorText;
+
+	[SerializeField]
+	private DmodeSkipFloorListController skipFloorListController;
+
+	private int remainDailySkipCount;
+
+	private Action<int> okButtonPressed;
+
+	private static readonly DateTime skipCountResetTime;
+
+	private static readonly string popupPrefabPath;
+
+	public static DmodeSkipFloorPopup Create(int maxFloorNum)
 	{
-		[SerializeField]
-		[Header("UI")]
-		private Text remainDailySkipCountText;
+		return null;
+	}
 
-		[SerializeField]
-		private Text emptySkipFloorText;
+	private void Initialize(int maxFloorNum)
+	{
+	}
 
-		[SerializeField]
-		[Header("Contoller")]
-		private DmodeSkipFloorListController skipFloorListController;
+	private void ShowSKipConfirmPopup(int destinationFloorNum)
+	{
+	}
 
-		private int remainDailySkipCount;
-
-		private Action<int> okButtonPressed;
-
-		private static readonly DateTime skipCountResetTime;
-
-		private static readonly string popupPrefabPath;
-
-		public static DmodeSkipFloorPopup Create(int maxFloorNum)
-		{
-			return null;
-		}
-
-		private void Initialize(int maxFloorNum)
-		{
-		}
-
-		private void ShowSKipConfirmPopup(int destinationFloorNum)
-		{
-		}
-
-		public void AddOnOKButtonPressed(Action<int> callback)
-		{
-		}
+	public void AddOnOKButtonPressed(Action<int> callback)
+	{
 	}
 }

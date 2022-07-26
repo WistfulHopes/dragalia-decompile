@@ -3,63 +3,62 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestTreasureBoxRewardPopup : CommonPopup
 {
-	public class QuestTreasureBoxRewardPopup : CommonPopup
+	private enum RewardIconType
 	{
-		private enum RewardIconType
-		{
-			Dragon,
-			Weapon,
-			Amulet
-		}
+		Dragon,
+		Weapon,
+		Amulet
+	}
 
-		[SerializeField]
-		public Text uiTitle;
+	[SerializeField]
+	public Text uiTitle;
 
-		public Text uiSuccessText;
+	public Text uiSuccessText;
 
-		public Text uiConditionTitle;
+	public Text uiConditionTitle;
 
-		public Text uiConditionText;
+	public Text uiConditionText;
 
-		public Image uiConditionTextUnderline;
+	public Image uiConditionTextUnderline;
 
-		public RectTransform uiContents;
+	public RectTransform uiContents;
 
-		[SerializeField]
-		public GameObject uiCell;
+	[SerializeField]
+	public GameObject uiCell;
 
-		[SerializeField]
-		private GameObject possessionRoot;
+	[SerializeField]
+	private GameObject possessionRoot;
 
-		[SerializeField]
-		private Image rewardTypeIcon;
+	[SerializeField]
+	private Image rewardTypeIcon;
 
-		[SerializeField]
-		private Text posessionText;
+	[SerializeField]
+	private Text posessionText;
 
-		[SerializeField]
-		private Text curPosessionNum;
+	[SerializeField]
+	private Text curPosessionNum;
 
-		[SerializeField]
-		private Text newPosessionNum;
+	[SerializeField]
+	private Text newPosessionNum;
 
-		private readonly int underlineAddtionalLength;
+	private readonly int underlineAddtionalLength;
 
-		private UiImageExchanger iconExchanger;
+	private UiImageExchanger iconExchanger;
 
-		public static QuestTreasureBoxRewardPopup Create(QuestSelectScene qss, QuestMainLocationElement qmle, int chapterNumber, QuestSelectScene.Difficulty difficulty, bool isEnable, UnityAction onCloseCallback, bool showBlackLayer = true)
-		{
-			return null;
-		}
+	public static QuestTreasureBoxRewardPopup Create(QuestSelectScene qss, QuestMainLocationElement qmle, int chapterNumber, QuestSelectScene.Difficulty difficulty, bool isEnable, UnityAction onCloseCallback, bool showBlackLayer = true)
+	{
+		return null;
+	}
 
-		private void ReflectParam(QuestMainLocationElement qmle, int chapterNumber, QuestSelectScene.Difficulty difficulty, bool isEnable)
-		{
-		}
+	private void ReflectParam(QuestMainLocationElement qmle, int chapterNumber, QuestSelectScene.Difficulty difficulty, bool isEnable)
+	{
+	}
 
-		private void SetDisp(Transform trans, bool value)
-		{
-		}
+	private void SetDisp(Transform trans, bool value)
+	{
 	}
 }

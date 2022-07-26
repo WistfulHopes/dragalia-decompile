@@ -1,20 +1,19 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlreadyEquipedDialog : CommonPopup
 {
-	public class AlreadyEquipedDialog : CommonPopup
+	public Image charaIcon;
+
+	public Text charaName;
+
+	public static AlreadyEquipedDialog Create(bool showBlackLayer = true)
 	{
-		public Image charaIcon;
+		return null;
+	}
 
-		public Text charaName;
-
-		public static AlreadyEquipedDialog Create(bool showBlackLayer = true)
-		{
-			return null;
-		}
-
-		public void SetupEquipCharaData(int charaId, int rarity)
-		{
-		}
+	public void SetupEquipCharaData(int charaId, int rarity)
+	{
 	}
 }

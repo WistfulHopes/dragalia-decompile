@@ -1,69 +1,65 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeItemManagementPopup : PopupBase
 {
-	public class DmodeItemManagementPopup : PopupBase
+	[SerializeField]
+	public DmodeCommonInGameIcon charaBagIconTemplate;
+
+	[SerializeField]
+	public DmodeCommonInGameIcon fafnirBagIconTemplate;
+
+	[SerializeField]
+	public GameObject emptyGO;
+
+	public static readonly string prefabPath;
+
+	private List<DmodeCommonInGameIcon> charaBagIcons;
+
+	private List<DmodeCommonInGameIcon> fafnirBagIcons;
+
+	private DmodeDungeonItemManager.ContainerType selectedContainerType;
+
+	private int selectedPos;
+
+	private DmodeDungeonItemType selectedItemType;
+
+	private List<int> charaBagItems;
+
+	private List<int> fafnirBagItems;
+
+	public static DmodeItemManagementPopup Create()
 	{
-		[SerializeField]
-		[Header("CharaBag")]
-		public DmodeCommonInGameIcon charaBagIconTemplate;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("FafnirBag")]
-		public DmodeCommonInGameIcon fafnirBagIconTemplate;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		[Header("Control")]
-		public GameObject emptyGO;
+	private void OnCharaBagButtonPressed(DmodeDungeonItemType type, int index)
+	{
+	}
 
-		public static readonly string prefabPath;
+	private void OnFafnirBagButtonPressed(DmodeDungeonItemType type, int index)
+	{
+	}
 
-		private List<DmodeCommonInGameIcon> charaBagIcons;
+	private void OnBagButtonPressed(DmodeDungeonItemManager.ContainerType containerType, DmodeDungeonItemType type, int index)
+	{
+	}
 
-		private List<DmodeCommonInGameIcon> fafnirBagIcons;
+	private void SwitchItems(DmodeDungeonItemManager.ContainerType fromContainer, int fromIndex, DmodeDungeonItemManager.ContainerType toContainer, int toIndex)
+	{
+	}
 
-		private DmodeDungeonItemManager.ContainerType selectedContainerType;
+	public void OnOKButtonPressed()
+	{
+	}
 
-		private int selectedPos;
-
-		private DmodeDungeonItemType selectedItemType;
-
-		private List<int> charaBagItems;
-
-		private List<int> fafnirBagItems;
-
-		public static DmodeItemManagementPopup Create()
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		private void OnCharaBagButtonPressed(DmodeDungeonItemType type, int index)
-		{
-		}
-
-		private void OnFafnirBagButtonPressed(DmodeDungeonItemType type, int index)
-		{
-		}
-
-		private void OnBagButtonPressed(DmodeDungeonItemManager.ContainerType containerType, DmodeDungeonItemType type, int index)
-		{
-		}
-
-		private void SwitchItems(DmodeDungeonItemManager.ContainerType fromContainer, int fromIndex, DmodeDungeonItemManager.ContainerType toContainer, int toIndex)
-		{
-		}
-
-		public void OnOKButtonPressed()
-		{
-		}
-
-		private void UpdateView()
-		{
-		}
+	private void UpdateView()
+	{
 	}
 }

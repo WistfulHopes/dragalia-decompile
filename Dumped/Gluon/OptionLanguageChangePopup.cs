@@ -1,65 +1,64 @@
 using System;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class OptionLanguageChangePopup : PopupBase
 {
-	public class OptionLanguageChangePopup : PopupBase
+	public OptionLanguageSelectToggle[] toggles;
+
+	public OptionLanguageSelectToggle[] voiceToggles;
+
+	public Text voiceComment;
+
+	private Action<Localize.Language, Localize.Language> onActionDone;
+
+	private Localize.Language toChangeLanguage;
+
+	private Localize.Language selectedLanguage;
+
+	private Localize.Language toChangeVoiceLanguage;
+
+	private Localize.Language selectedVoiceLanguage;
+
+	private OptionLanguageSettingPopup.FromType fromType;
+
+	private bool isVoiceOn;
+
+	public static OptionLanguageChangePopup Create(Action<Localize.Language, Localize.Language> onActionDone, OptionLanguageSettingPopup.FromType fromType)
 	{
-		public OptionLanguageSelectToggle[] toggles;
+		return null;
+	}
 
-		public OptionLanguageSelectToggle[] voiceToggles;
+	protected override void Start()
+	{
+	}
 
-		public Text voiceComment;
+	private void UpdateVoiceComment()
+	{
+	}
 
-		private Action<Localize.Language, Localize.Language> onActionDone;
+	private void SetupToggle(OptionLanguageSelectToggle[] settingToggles, Localize.Language settingSelectedLanguage)
+	{
+	}
 
-		private Localize.Language toChangeLanguage;
+	public void OnCancelButtonPressed()
+	{
+	}
 
-		private Localize.Language selectedLanguage;
+	public void OnOKButtonPressed()
+	{
+	}
 
-		private Localize.Language toChangeVoiceLanguage;
+	public void OnLanguageChecked(Localize.Language uiSelectedLanguage)
+	{
+	}
 
-		private Localize.Language selectedVoiceLanguage;
+	public void OnVoiceLanguageChecked(Localize.Language uiSelectedLanguage)
+	{
+	}
 
-		private OptionLanguageSettingPopup.FromType fromType;
-
-		private bool isVoiceOn;
-
-		public static OptionLanguageChangePopup Create(Action<Localize.Language, Localize.Language> onActionDone, OptionLanguageSettingPopup.FromType fromType)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		private void UpdateVoiceComment()
-		{
-		}
-
-		private void SetupToggle(OptionLanguageSelectToggle[] settingToggles, Localize.Language settingSelectedLanguage)
-		{
-		}
-
-		public void OnCancelButtonPressed()
-		{
-		}
-
-		public void OnOKButtonPressed()
-		{
-		}
-
-		public void OnLanguageChecked(Localize.Language uiSelectedLanguage)
-		{
-		}
-
-		public void OnVoiceLanguageChecked(Localize.Language uiSelectedLanguage)
-		{
-		}
-
-		public void RefreshDisplayLanguage()
-		{
-		}
+	public void RefreshDisplayLanguage()
+	{
 	}
 }

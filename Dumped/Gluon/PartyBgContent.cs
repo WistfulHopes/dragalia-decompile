@@ -1,16 +1,15 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyBgContent : MonoBehaviour
 {
-	public class PartyBgContent : MonoBehaviour
+	[SerializeField]
+	private GameObject[] effects;
+
+	public static bool changeLayer;
+
+	private void Awake()
 	{
-		[SerializeField]
-		private GameObject[] effects;
-
-		public static bool changeLayer;
-
-		private void Awake()
-		{
-		}
 	}
 }

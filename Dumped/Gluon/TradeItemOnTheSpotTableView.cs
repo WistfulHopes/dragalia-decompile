@@ -1,41 +1,40 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class TradeItemOnTheSpotTableView : TableViewController<ShopTradeProductData.TradeShopItemData>
 {
-	public class TradeItemOnTheSpotTableView : TableViewController<ShopTradeProductData.TradeShopItemData>
+	private float cellHeight;
+
+	public TradeItemOnTheSpotPopup parentPopup
 	{
-		private float cellHeight;
-
-		public TradeItemOnTheSpotPopup parentPopup
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		protected override void Awake()
-		{
-		}
-
-		public void LoadData(List<ShopTradeProductData.TradeShopItemData> dataList)
-		{
-		}
-
-		protected override TableViewCell<ShopTradeProductData.TradeShopItemData> CreateCellForIndex(int index)
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		protected override float GetCellHeightAtIndex(int index)
+		[CompilerGenerated]
+		set
 		{
-			return default(float);
 		}
+	}
+
+	protected override void Awake()
+	{
+	}
+
+	public void LoadData(List<ShopTradeProductData.TradeShopItemData> dataList)
+	{
+	}
+
+	protected override TableViewCell<ShopTradeProductData.TradeShopItemData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
+
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
 	}
 }

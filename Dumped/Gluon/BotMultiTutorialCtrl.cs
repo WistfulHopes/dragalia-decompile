@@ -1,46 +1,45 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BotMultiTutorialCtrl : MonoBehaviour
 {
-	public class BotMultiTutorialCtrl : MonoBehaviour
+	private float[] prevHpRates;
+
+	private int deadEnemiesCount;
+
+	private void Start()
 	{
-		private float[] prevHpRates;
+	}
 
-		private int deadEnemiesCount;
+	private void OnEnemyDead(CharacterBase murderer)
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void OnEnemyDead(CharacterBase murderer)
-		{
-		}
+	public void PlayQuestStartStamp()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private IEnumerator PlayQuestStartStampCoroutine()
+	{
+		return null;
+	}
 
-		public void PlayQuestStartStamp()
-		{
-		}
+	public void ReplyStamp(int stampId)
+	{
+	}
 
-		private IEnumerator PlayQuestStartStampCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator ReplyStampCoroutine(int charaIndex, int stampId)
+	{
+		return null;
+	}
 
-		public void ReplyStamp(int stampId)
-		{
-		}
-
-		private IEnumerator ReplyStampCoroutine(int charaIndex, int stampId)
-		{
-			return null;
-		}
-
-		private void PlayStamp(int charaIndex, int stampId)
-		{
-		}
+	private void PlayStamp(int charaIndex, int stampId)
+	{
 	}
 }

@@ -1,9 +1,8 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyFogDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyFogData>
 {
-	[Serializable]
-	public class CuttTimelineKeyFogDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyFogData>
-	{
-	}
 }

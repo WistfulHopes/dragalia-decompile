@@ -1,79 +1,78 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSelectRouteDot : QuestSelectRoutePoint
 {
-	public class QuestSelectRouteDot : QuestSelectRoutePoint
+	private enum TriggerId
 	{
-		private enum TriggerId
+		Blue = 8,
+		Orange,
+		BlueLoop
+	}
+
+	public enum DotStatus
+	{
+		DropWhiteIcon,
+		DropBlueIcon,
+		AppearBlueIcon
+	}
+
+	[SerializeField]
+	private Image baseImage;
+
+	[SerializeField]
+	private Image activeImage;
+
+	[SerializeField]
+	private Vector3 effectOffsetPos;
+
+	[SerializeField]
+	private Vector3 effectScale;
+
+	private EffectObject activationEffect;
+
+	public DotStatus _status;
+
+	private Quaternion quaternion;
+
+	public DotStatus dotStatus
+	{
+		get
 		{
-			Blue = 8,
-			Orange,
-			BlueLoop
+			return default(DotStatus);
 		}
-
-		public enum DotStatus
-		{
-			DropWhiteIcon,
-			DropBlueIcon,
-			AppearBlueIcon
-		}
-
-		[SerializeField]
-		private Image baseImage;
-
-		[SerializeField]
-		private Image activeImage;
-
-		[SerializeField]
-		private Vector3 effectOffsetPos;
-
-		[SerializeField]
-		private Vector3 effectScale;
-
-		private EffectObject activationEffect;
-
-		public DotStatus _status;
-
-		private Quaternion quaternion;
-
-		public DotStatus dotStatus
-		{
-			get
-			{
-				return default(DotStatus);
-			}
-			set
-			{
-			}
-		}
-
-		private void Start()
+		set
 		{
 		}
+	}
 
-		public override void StartActivation()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void IconDrop(Image image)
-		{
-		}
+	public override void StartActivation()
+	{
+	}
 
-		public override void ActivateImmediately()
-		{
-		}
+	private void IconDrop(Image image)
+	{
+	}
 
-		public void PlayActivationEffect()
-		{
-		}
+	public override void ActivateImmediately()
+	{
+	}
 
-		public void ShowActiveImage()
-		{
-		}
+	public void PlayActivationEffect()
+	{
+	}
 
-		public void SetActiveImageRotation(float angle)
-		{
-		}
+	public void ShowActiveImage()
+	{
+	}
+
+	public void SetActiveImageRotation(float angle)
+	{
 	}
 }

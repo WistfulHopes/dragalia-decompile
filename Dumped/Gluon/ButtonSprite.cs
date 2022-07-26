@@ -1,22 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ButtonSprite : MonoBehaviour
 {
-	public class ButtonSprite : MonoBehaviour
+	public enum ButtonState
 	{
-		public enum ButtonState
-		{
-			Normal,
-			Disabled
-		}
+		Normal,
+		Disabled
+	}
 
-		public Image onImage;
+	public Image onImage;
 
-		public Image offImage;
+	public Image offImage;
 
-		public void SetButtonImage(ButtonState toState)
-		{
-		}
+	public void SetButtonImage(ButtonState toState)
+	{
 	}
 }

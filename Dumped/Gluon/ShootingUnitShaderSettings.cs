@@ -1,18 +1,17 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class ShootingUnitShaderSettings : SceneShaderSettings
 {
-	[ExecuteAlways]
-	public class ShootingUnitShaderSettings : SceneShaderSettings
+	private ShootingUnitShaderSettings asset;
+
+	public void Load(ShootingUnitShaderSettings asset)
 	{
-		private ShootingUnitShaderSettings asset;
+	}
 
-		public void Load(ShootingUnitShaderSettings asset)
-		{
-		}
-
-		public void Save()
-		{
-		}
+	public void Save()
+	{
 	}
 }

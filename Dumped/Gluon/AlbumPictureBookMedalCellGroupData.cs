@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumPictureBookMedalCellGroupData
 {
-	public class AlbumPictureBookMedalCellGroupData
-	{
-		public List<AlbumPictureBookMedalCellData> albumPictureBookMedalCellGroupData;
-	}
+	public List<AlbumPictureBookMedalCellData> albumPictureBookMedalCellGroupData;
 }

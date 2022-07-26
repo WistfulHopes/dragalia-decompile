@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsOperateBg : ActionParts
 {
-	public class ActionPartsOperateBg : ActionParts
+	public enum OperateType
 	{
-		public enum OperateType
-		{
-			ChangeTexture,
-			SwitchTransformParam
-		}
+		ChangeTexture,
+		SwitchTransformParam
+	}
 
-		private readonly OperateBgData _partsData;
+	private readonly OperateBgData _partsData;
 
-		public ActionPartsOperateBg(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsOperateBg(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
 	}
 }

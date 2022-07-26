@@ -1,9 +1,7 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+internal class HotfixDelegateAttribute : Attribute
 {
-	[AttributeUsage(AttributeTargets.Delegate)]
-	internal class HotfixDelegateAttribute : Attribute
-	{
-	}
 }

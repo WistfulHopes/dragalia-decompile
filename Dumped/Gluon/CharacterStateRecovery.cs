@@ -1,42 +1,41 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateRecovery : CharacterStateBase
 {
-	public class CharacterStateRecovery : CharacterStateBase
+	public float gravity
 	{
-		public float gravity
+		get
 		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
+			return default(float);
 		}
+		set
+		{
+		}
+	}
 
-		public float angle
+	public float angle
+	{
+		get
 		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
+			return default(float);
 		}
+		set
+		{
+		}
+	}
 
-		public bool isCtrl
+	public bool isCtrl
+	{
+		get
 		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
+			return default(bool);
 		}
+		set
+		{
+		}
+	}
 
-		protected override void OnStateEnter_Internal()
-		{
-		}
+	protected override void OnStateEnter_Internal()
+	{
 	}
 }

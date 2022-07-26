@@ -1,46 +1,45 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class HeaderExpHover : MonoBehaviour
 {
-	public class HeaderExpHover : MonoBehaviour
+	[SerializeField]
+	private Text nextExpText;
+
+	[SerializeField]
+	private Text nextStaminaText;
+
+	[SerializeField]
+	private Text nextCPText;
+
+	[SerializeField]
+	private Text nextExpNum;
+
+	[SerializeField]
+	private Text nextStaminaNum;
+
+	[SerializeField]
+	private Text nextCPNum;
+
+	private void Start()
 	{
-		[SerializeField]
-		private Text nextExpText;
+	}
 
-		[SerializeField]
-		private Text nextStaminaText;
+	public void Update()
+	{
+	}
 
-		[SerializeField]
-		private Text nextCPText;
+	public void Reload()
+	{
+	}
 
-		[SerializeField]
-		private Text nextExpNum;
+	public void LoadExpData()
+	{
+	}
 
-		[SerializeField]
-		private Text nextStaminaNum;
-
-		[SerializeField]
-		private Text nextCPNum;
-
-		private void Start()
-		{
-		}
-
-		public void Update()
-		{
-		}
-
-		public void Reload()
-		{
-		}
-
-		public void LoadExpData()
-		{
-		}
-
-		public void LoadStaminaData()
-		{
-		}
+	public void LoadStaminaData()
+	{
 	}
 }

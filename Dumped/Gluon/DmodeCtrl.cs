@@ -7,284 +7,289 @@ using Cute.Cri;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeCtrl : MonoBehaviour
 {
-	public class DmodeCtrl : MonoBehaviour
+	public enum AnnounceFlagType
 	{
-		public enum AnnounceFlagType
+		Rare3 = 1,
+		Rare4 = 2,
+		Rare5 = 4,
+		Skill = 8,
+		All = 15
+	}
+
+	public const string prefsKeyAnnounceType = "DmodeAnnounceType";
+
+	public const string prefsKeyVisibleBttleLog = "DmodeVisibleBattleLog";
+
+	private bool needsAddDragonAbility;
+
+	private string bgm;
+
+	private int bgmContinuousPlayCount;
+
+	private int prevDungeonThemeIdForBGM;
+
+	public static readonly int DefaultPlayerLevelGroup;
+
+	public static readonly int DefaultServitorLevelGroup;
+
+	private List<DmodeDungeonThemeElement> _themeListForLocalMode;
+
+	private Coroutine floorSkillResourceCoroutine;
+
+	private bool isRequestFloorSkillResource;
+
+	public int CurrentFloorNumber
+	{
+		[CompilerGenerated]
+		get
 		{
-			Rare3 = 1,
-			Rare4 = 2,
-			Rare5 = 4,
-			Skill = 8,
-			All = 0xF
+			return default(int);
 		}
-
-		public const string prefsKeyAnnounceType = "DmodeAnnounceType";
-
-		public const string prefsKeyVisibleBttleLog = "DmodeVisibleBattleLog";
-
-		private bool needsAddDragonAbility;
-
-		private string bgm;
-
-		private int bgmContinuousPlayCount;
-
-		private int prevDungeonThemeIdForBGM;
-
-		private List<DmodeDungeonThemeElement> _themeListForLocalMode;
-
-		private Coroutine floorSkillResourceCoroutine;
-
-		private bool isRequestFloorSkillResource;
-
-		public int CurrentFloorNumber
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool IsLastFloor => default(bool);
-
-		public int DPoint
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public int DPointRare
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public int Score
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public DmodeGameDataManager DmodeGameDataManager => null;
-
-		public int RecoveryMaxCount => default(int);
-
-		public int RecoveryCount => default(int);
-
-		public int RecoveryRemainCount => default(int);
-
-		public bool IsEnableRecovery => default(bool);
-
-		public int announceType
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public DmodeDungeonDropItemManager dmodeDungeonDropItemManager
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public DmodeResourceLoader resourceLoader
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public DmodeDungeonThemeElement CurrentTheme => null;
-
-		public QuestClearType CurrentClearType => default(QuestClearType);
-
-		public QuestFailedType CurrentFailedType => default(QuestFailedType);
-
-		public float CurrentTimeElapsed => default(float);
-
-		public bool IsViewAreaStartEquipment => default(bool);
-
-		private void Start()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void OnDestroy()
+	public bool IsLastFloor => default(bool);
+
+	public int DPoint
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void Update()
+	public int DPointRare
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void NextFloor()
+	public int Score
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void InitializeForLocalMode(List<DmodeDungeonThemeElement> themeList)
+	public DmodeGameDataManager DmodeGameDataManager => null;
+
+	public int RecoveryMaxCount => default(int);
+
+	public int RecoveryCount => default(int);
+
+	public int RecoveryRemainCount => default(int);
+
+	public bool IsEnableRecovery => default(bool);
+
+	public int announceType
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetupWeaponsAndSkills(HumanCharacter player)
-		{
-		}
-
-		public void SetupFloorSkillResource(CharacterBase chara)
-		{
-		}
-
-		public IEnumerator LoadFloorSkillResource(CharacterBase chara, [Optional] Action onLoaded)
+	public DmodeDungeonDropItemManager dmodeDungeonDropItemManager
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private void AppendFloorWeaponSkillId(ref HashSet<int> skillIds)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void AppendFloorShareSkillId(ref HashSet<int> skillIds)
+	public DmodeResourceLoader resourceLoader
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void ClearWeaponsAndSkills()
-		{
-		}
+	public DmodeDungeonThemeElement CurrentTheme => null;
 
-		public void ChangeEquipWeapon(int weaponSkinId, int hp, int atk, DmodeDungeonItem prevWeapon)
-		{
-		}
+	public QuestClearType CurrentClearType => default(QuestClearType);
 
-		public void ChangeEquipAbilityCrests(List<DmodeDungeonItem> prevAbilityCrests, int hp, int atk)
-		{
-		}
+	public QuestFailedType CurrentFailedType => default(QuestFailedType);
 
-		public void SetupDragons(CharacterSelector selector, List<DmodeDungeonItem> dragonItems)
-		{
-		}
+	public float CurrentTimeElapsed => default(float);
 
-		public void AddDragon()
-		{
-		}
+	public bool IsViewAreaStartEquipment => default(bool);
 
-		public void SetupDPoint()
-		{
-		}
+	public int PlayerLevelGroup => default(int);
 
-		public void AddDPoint(int value)
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void AddDPointRare(int value)
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public void SetupScore()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		public void AddScore(int value)
-		{
-		}
+	public void NextFloor()
+	{
+	}
 
-		public void SetupAnnounceType()
-		{
-		}
+	public void InitializeForLocalMode(List<DmodeDungeonThemeElement> themeList)
+	{
+	}
 
-		public void SetAnnounceType(AnnounceFlagType type, bool b, bool isSave = false)
-		{
-		}
+	public void SetupWeaponsAndSkills(HumanCharacter player)
+	{
+	}
 
-		public bool IsAnnounceType(AnnounceFlagType type)
-		{
-			return default(bool);
-		}
+	public void SetupFloorSkillResource(CharacterBase chara)
+	{
+	}
 
-		public void SaveAnnounceType()
-		{
-		}
+	public IEnumerator LoadFloorSkillResource(CharacterBase chara, [Optional] Action onLoaded)
+	{
+		return null;
+	}
 
-		public void ResetAnnounceType()
-		{
-		}
+	private void AppendFloorWeaponSkillId(ref HashSet<int> skillIds)
+	{
+	}
 
-		public bool IsDragonSelectArea()
-		{
-			return default(bool);
-		}
+	private void AppendFloorShareSkillId(ref HashSet<int> skillIds)
+	{
+	}
 
-		public bool IsOrganizeItems()
-		{
-			return default(bool);
-		}
+	public void ClearWeaponsAndSkills()
+	{
+	}
 
-		public AudioPlayback PlayBGM(bool isOnEndDragon)
-		{
-			return default(AudioPlayback);
-		}
+	public void ChangeEquipWeapon(int weaponSkinId, int hp, int atk, DmodeDungeonItem prevWeapon)
+	{
+	}
 
-		public bool IsShareSkillIndex(int index)
-		{
-			return default(bool);
-		}
+	public void ChangeEquipAbilityCrests(List<DmodeDungeonItem> prevAbilityCrests, int hp, int atk)
+	{
+	}
 
-		public void SetVisibleBattleLog(bool isVisible)
-		{
-		}
+	public void SetupDragons(CharacterSelector selector, List<DmodeDungeonItem> dragonItems)
+	{
+	}
 
-		public bool IsVisibleBattleLog()
-		{
-			return default(bool);
-		}
+	public void AddDragon()
+	{
+	}
 
-		public bool GetDashSpeedCoef(float dashElapsedTime, out float speedCoef)
-		{
-			return default(bool);
-		}
+	public void SetupDPoint()
+	{
+	}
+
+	public void AddDPoint(int value)
+	{
+	}
+
+	public void AddDPointRare(int value)
+	{
+	}
+
+	public void SetupScore()
+	{
+	}
+
+	public void AddScore(int value)
+	{
+	}
+
+	public void SetupAnnounceType()
+	{
+	}
+
+	public void SetAnnounceType(AnnounceFlagType type, bool b, bool isSave = false)
+	{
+	}
+
+	public bool IsAnnounceType(AnnounceFlagType type)
+	{
+		return default(bool);
+	}
+
+	public void SaveAnnounceType()
+	{
+	}
+
+	public void ResetAnnounceType()
+	{
+	}
+
+	public bool IsDragonSelectArea()
+	{
+		return default(bool);
+	}
+
+	public bool IsOrganizeItems()
+	{
+		return default(bool);
+	}
+
+	public AudioPlayback PlayBGM(bool isOnEndDragon)
+	{
+		return default(AudioPlayback);
+	}
+
+	public bool IsShareSkillIndex(int index)
+	{
+		return default(bool);
+	}
+
+	public void SetVisibleBattleLog(bool isVisible)
+	{
+	}
+
+	public bool IsVisibleBattleLog()
+	{
+		return default(bool);
+	}
+
+	public bool GetDashSpeedCoef(float dashElapsedTime, out float speedCoef)
+	{
+		return default(bool);
 	}
 }

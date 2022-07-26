@@ -1,14 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
-{
-	public class ShopTradeMenuButton : MonoBehaviour
-	{
-		public ShopTradeModel.PanelType type;
+namespace Gluon;
 
-		[SerializeField]
-		[Header("For Disable (can be null)")]
-		public Text disableReasonText;
-	}
+public class ShopTradeMenuButton : MonoBehaviour
+{
+	public ShopTradeModel.PanelType type;
+
+	[SerializeField]
+	public Text disableReasonText;
 }

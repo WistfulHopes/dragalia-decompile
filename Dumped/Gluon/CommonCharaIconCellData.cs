@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class CommonCharaIconCellData : CommonIconListCellData
 {
-	public class CommonCharaIconCellData : CommonIconListCellData
+	public enum DisableType
 	{
-		public enum DisableType
-		{
-			None,
-			DmodeSuspendedCharacter
-		}
-
-		public bool isParty;
-
-		public DisableType disableType;
+		None,
+		DmodeSuspendedCharacter
 	}
+
+	public bool isParty;
+
+	public DisableType disableType;
 }

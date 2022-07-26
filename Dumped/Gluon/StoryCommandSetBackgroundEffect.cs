@@ -1,35 +1,33 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandSetBackgroundEffect : IStoryCommand
 {
-	[CommandName("set_BG_effect")]
-	public class StoryCommandSetBackgroundEffect : IStoryCommand
+	private IEnumerator coroutine;
+
+	private string[] effectIds;
+
+	public void Start(string[] effectIds)
 	{
-		private IEnumerator coroutine;
+	}
 
-		private string[] effectIds;
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		public void Start(string[] effectIds)
-		{
-		}
+	private IEnumerator _Update()
+	{
+		return null;
+	}
 
-		public override bool Update()
-		{
-			return default(bool);
-		}
+	private void SetBackgroundEffect(string[] effectIds)
+	{
+	}
 
-		private IEnumerator _Update()
-		{
-			return null;
-		}
-
-		private void SetBackgroundEffect(string[] effectIds)
-		{
-		}
-
-		public string[] GetResourceNames(string[] effectIds)
-		{
-			return null;
-		}
+	public string[] GetResourceNames(string[] effectIds)
+	{
+		return null;
 	}
 }

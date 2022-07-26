@@ -3,62 +3,61 @@ using FLATOUT.Main;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestFlashPopup : CommonPopup
 {
-	public class QuestFlashPopup : CommonPopup
+	public static readonly string questFlashPopupPath;
+
+	private FlRoot flashRoot;
+
+	private FlText flText;
+
+	private FlPlane flPlane;
+
+	private Image elementImage;
+
+	private Text nameText;
+
+	private FlText flDetailText;
+
+	private Text detailText;
+
+	private const string seGroupName = "OUT_COMMON";
+
+	private const string seName = "SE_OUT_COMMON_0058";
+
+	public static QuestFlashPopup Create(string flashPath, [Optional] UnityAction<FlRoot> action)
 	{
-		public static readonly string questFlashPopupPath;
+		return null;
+	}
 
-		private FlRoot flashRoot;
+	public void SetContent(string flashPath, [Optional] UnityAction<FlRoot> action)
+	{
+	}
 
-		private FlText flText;
+	public static QuestFlashPopup CreateQuestWallComplete(string flashPath, ElementalType elementType, string name, string detail)
+	{
+		return null;
+	}
 
-		private FlPlane flPlane;
+	public void SetContent(string flashPath, ElementalType elementType, string name, string detail)
+	{
+	}
 
-		private Image elementImage;
+	private void Update()
+	{
+	}
 
-		private Text nameText;
+	public void OnInAnimation()
+	{
+	}
 
-		private FlText flDetailText;
+	public void OnOutAnimation()
+	{
+	}
 
-		private Text detailText;
-
-		private const string seGroupName = "OUT_COMMON";
-
-		private const string seName = "SE_OUT_COMMON_0058";
-
-		public static QuestFlashPopup Create(string flashPath, [Optional] UnityAction<FlRoot> action)
-		{
-			return null;
-		}
-
-		public void SetContent(string flashPath, [Optional] UnityAction<FlRoot> action)
-		{
-		}
-
-		public static QuestFlashPopup CreateQuestWallComplete(string flashPath, ElementalType elementType, string name, string detail)
-		{
-			return null;
-		}
-
-		public void SetContent(string flashPath, ElementalType elementType, string name, string detail)
-		{
-		}
-
-		private void Update()
-		{
-		}
-
-		public void OnInAnimation()
-		{
-		}
-
-		public void OnOutAnimation()
-		{
-		}
-
-		public void OnClose()
-		{
-		}
+	public void OnClose()
+	{
 	}
 }

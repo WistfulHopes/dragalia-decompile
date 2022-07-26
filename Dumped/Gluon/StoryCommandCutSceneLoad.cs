@@ -1,24 +1,22 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandCutSceneLoad : IStoryCommand
 {
-	[CommandName("cutscene_load")]
-	public class StoryCommandCutSceneLoad : IStoryCommand
+	private IEnumerator coroutine;
+
+	public void Start(string cutScenePath)
 	{
-		private IEnumerator coroutine;
+	}
 
-		public void Start(string cutScenePath)
-		{
-		}
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		public override bool Update()
-		{
-			return default(bool);
-		}
-
-		private IEnumerator _Update()
-		{
-			return null;
-		}
+	private IEnumerator _Update()
+	{
+		return null;
 	}
 }

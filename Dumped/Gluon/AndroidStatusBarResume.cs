@@ -1,19 +1,18 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AndroidStatusBarResume : MonoBehaviour
 {
-	public class AndroidStatusBarResume : MonoBehaviour
+	public bool isStatusBarOn;
+
+	public bool isNavigationBarOn;
+
+	public void InitOnBoot()
 	{
-		public bool isStatusBarOn;
+	}
 
-		public bool isNavigationBarOn;
-
-		public void InitOnBoot()
-		{
-		}
-
-		private void OnApplicationPause(bool pause)
-		{
-		}
+	private void OnApplicationPause(bool pause)
+	{
 	}
 }

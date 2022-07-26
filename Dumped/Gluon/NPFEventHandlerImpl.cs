@@ -7,103 +7,115 @@ using NPF.User;
 using NPF.VCM;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class NPFEventHandlerImpl : NPFSDK.NPFEventHandler
 {
-	public class NPFEventHandlerImpl : NPFSDK.NPFEventHandler
+	private NPFAccount account;
+
+	public UnityAction<BaaSUser> BaaSUserAuthSucceed;
+
+	public static bool isHandlingPendingPurchase;
+
+	private static bool isIgnoreNAAuthError;
+
+	private static bool isBassAuthNetworkErrorPopupOpened;
+
+	public static bool isBootScene
 	{
-		private NPFAccount account;
-
-		public UnityAction<BaaSUser> BaaSUserAuthSucceed;
-
-		public static bool isHandlingPendingPurchase;
-
-		private static bool isIgnoreNAAuthError;
-
-		private static bool isBassAuthNetworkErrorPopupOpened;
-
-		public static bool isBootScene
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public static bool IsIgnoreNAAuthError
-		{
-			set
-			{
-			}
-		}
-
-		public void OnBaaSAuthError(NPFError error)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void OnBaaSAuthStart()
+	public static bool isNpfInitializingPhase
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void OnBaaSAuthUpdate(BaaSUser user)
+	public static bool IsIgnoreNAAuthError
+	{
+		set
 		{
 		}
+	}
 
-		private void CheckBaaSUserStatus(BaaSUser user)
-		{
-		}
+	public void OnBaaSAuthError(NPFError error)
+	{
+	}
 
-		public void OnNintendoAccountAuthError(NPFError error)
-		{
-		}
+	public void OnBaaSAuthStart()
+	{
+	}
 
-		private static void CallAfterBootScene(Action next)
-		{
-		}
+	public void OnBaaSAuthUpdate(BaaSUser user)
+	{
+	}
 
-		private static IEnumerator DelayedCall(Action next)
-		{
-			return null;
-		}
+	private void CheckBaaSUserStatus(BaaSUser user)
+	{
+	}
 
-		public void OnVirtualCurrencyPurchaseProcessError(NPFError error)
-		{
-		}
+	public void OnNintendoAccountAuthError(NPFError error)
+	{
+	}
 
-		public void OnVirtualCurrencyPurchaseProcessSuccess(IDictionary<string, VirtualCurrencyWallet> wallets)
-		{
-		}
+	private static void CallAfterBootScene(Action next)
+	{
+	}
 
-		public void OnVirtualCurrencyPurchaseHasPendingPurchase()
-		{
-		}
+	private static IEnumerator DelayedCall(Action next)
+	{
+		return null;
+	}
 
-		private void BassAuthNetworkErrorPopup(NPFError error)
-		{
-		}
+	public void OnVirtualCurrencyPurchaseProcessError(NPFError error)
+	{
+	}
 
-		private void BassAuthErrorPopup(NPFError error)
-		{
-		}
+	public void OnVirtualCurrencyPurchaseProcessSuccess(IDictionary<string, VirtualCurrencyWallet> wallets)
+	{
+	}
 
-		private void SetLanguage()
-		{
-		}
+	public void OnVirtualCurrencyPurchaseHasPendingPurchase()
+	{
+	}
 
-		public void OnPendingAuthorizationByNintendoAccount2()
-		{
-		}
+	private void BassAuthNetworkErrorPopup(NPFError error)
+	{
+	}
 
-		public void OnPendingSwitchByNintendoAccount2()
-		{
-		}
+	private void BassAuthErrorPopup(NPFError error)
+	{
+	}
 
-		public void OnVirtualCurrencyPurchasesUpdated()
-		{
-		}
+	private void SetLanguage()
+	{
+	}
+
+	public void OnPendingAuthorizationByNintendoAccount2()
+	{
+	}
+
+	public void OnPendingSwitchByNintendoAccount2()
+	{
+	}
+
+	public void OnVirtualCurrencyPurchasesUpdated()
+	{
 	}
 }

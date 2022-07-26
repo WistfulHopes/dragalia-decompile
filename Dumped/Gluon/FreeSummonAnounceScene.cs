@@ -4,91 +4,90 @@ using FLATOUT.Main;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FreeSummonAnounceScene : SceneBase
 {
-	public class FreeSummonAnounceScene : SceneBase
+	[SerializeField]
+	private Canvas flashAnimationCanvas;
+
+	[SerializeField]
+	private CanvasGroup frontBlackPanel;
+
+	private bool isPressedBackKey;
+
+	private CampaignDataElement anounceCampaignData;
+
+	private static readonly string loginBonusGroup;
+
+	private static readonly string loginBonusBGM;
+
+	private static readonly string freeSummonAppearLogoSe;
+
+	private static readonly int oneHundredFreeSummonCount;
+
+	private static readonly string oneHundredFreeSummonAnimationPath;
+
+	private static readonly string freeSummonAnimationStartKey;
+
+	private static readonly string freeSummonAnimationPlaySeKey;
+
+	public static readonly string oneHundredFreeSummonAnouncePrefsPrefix;
+
+	private static readonly string insertPeriodTextObjectName;
+
+	private static float exitSceneFadeCount;
+
+	private static float blackPanelAlphaEnd;
+
+	private void Awake()
 	{
-		[SerializeField]
-		private Canvas flashAnimationCanvas;
+	}
 
-		[SerializeField]
-		private CanvasGroup frontBlackPanel;
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private bool isPressedBackKey;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private CampaignDataElement anounceCampaignData;
+	private IEnumerator LoadScene()
+	{
+		return null;
+	}
 
-		private static readonly string loginBonusGroup;
+	private void ReplacePeriodTtext(FlRoot flRoot)
+	{
+	}
 
-		private static readonly string loginBonusBGM;
+	private void GoToNextScene()
+	{
+	}
 
-		private static readonly string freeSummonAppearLogoSe;
+	private IEnumerator GoToMyPage()
+	{
+		return null;
+	}
 
-		private static readonly int oneHundredFreeSummonCount;
+	private IEnumerator WaitTap(Action onTap)
+	{
+		return null;
+	}
 
-		private static readonly string oneHundredFreeSummonAnimationPath;
+	private static CampaignDataElement SearchPlayAnounceCampaignData()
+	{
+		return null;
+	}
 
-		private static readonly string freeSummonAnimationStartKey;
+	public static bool NeedPlayFreeSummonAnounce()
+	{
+		return default(bool);
+	}
 
-		private static readonly string freeSummonAnimationPlaySeKey;
-
-		public static readonly string oneHundredFreeSummonAnouncePrefsPrefix;
-
-		private static readonly string insertPeriodTextObjectName;
-
-		private static float exitSceneFadeCount;
-
-		private static float blackPanelAlphaEnd;
-
-		private void Awake()
-		{
-		}
-
-		private IEnumerator Start()
-		{
-			return null;
-		}
-
-		private void OnPrevSceneExitDone()
-		{
-		}
-
-		private IEnumerator LoadScene()
-		{
-			return null;
-		}
-
-		private void ReplacePeriodTtext(FlRoot flRoot)
-		{
-		}
-
-		private void GoToNextScene()
-		{
-		}
-
-		private IEnumerator GoToMyPage()
-		{
-			return null;
-		}
-
-		private IEnumerator WaitTap(Action onTap)
-		{
-			return null;
-		}
-
-		private static CampaignDataElement SearchPlayAnounceCampaignData()
-		{
-			return null;
-		}
-
-		public static bool NeedPlayFreeSummonAnounce()
-		{
-			return default(bool);
-		}
-
-		public static IEnumerator GoToFreeSummonsAnounce()
-		{
-			return null;
-		}
+	public static IEnumerator GoToFreeSummonsAnounce()
+	{
+		return null;
 	}
 }

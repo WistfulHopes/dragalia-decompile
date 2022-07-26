@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class StampListData
 {
-	public class StampListData
-	{
-		public bool newFlg;
+	public bool newFlg;
 
-		public bool tapSelectFlg;
+	public bool tapSelectFlg;
 
-		public bool nowSelectFlg;
+	public bool nowSelectFlg;
 
-		public int stampID;
+	public int stampID;
 
-		public int sortid;
-	}
+	public int sortid;
 }

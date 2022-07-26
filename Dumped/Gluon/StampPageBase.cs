@@ -2,66 +2,65 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class StampPageBase : MonoBehaviour
 {
-	public class StampPageBase : MonoBehaviour
+	public UnityAction<int> pageButtonCallBack;
+
+	public UnityAction<int> pageButtonLongPressCallBack;
+
+	public UnityAction pageChangeCallBack;
+
+	public StampSetData nowStampSet;
+
+	[SerializeField]
+	private PageViewBase stampPageView;
+
+	[SerializeField]
+	private StampPageCell stampPageCell;
+
+	private List<StampPageData> stampDataList;
+
+	private int oldSelectedPageIndex;
+
+	private int oldSelectedCellIndex;
+
+	private int selectPageIconIndex;
+
+	private int createPageCount;
+
+	private void Start()
 	{
-		public UnityAction<int> pageButtonCallBack;
+	}
 
-		public UnityAction<int> pageButtonLongPressCallBack;
+	public void ChangePageButton(int direction)
+	{
+	}
 
-		public UnityAction pageChangeCallBack;
+	private void OnCellButtonLongPressed(int index)
+	{
+	}
 
-		public StampSetData nowStampSet;
+	private void UpdateViewPage()
+	{
+	}
 
-		[SerializeField]
-		private PageViewBase stampPageView;
+	private void OnCellButtonPressed(int index)
+	{
+	}
 
-		[SerializeField]
-		private StampPageCell stampPageCell;
+	public void RemoveStamp()
+	{
+	}
 
-		private List<StampPageData> stampDataList;
+	public bool ChangeStamp(int stampId)
+	{
+		return default(bool);
+	}
 
-		private int oldSelectedPageIndex;
-
-		private int oldSelectedCellIndex;
-
-		private int selectPageIconIndex;
-
-		private int createPageCount;
-
-		private void Start()
-		{
-		}
-
-		public void ChangePageButton(int direction)
-		{
-		}
-
-		private void OnCellButtonLongPressed(int index)
-		{
-		}
-
-		private void UpdateViewPage()
-		{
-		}
-
-		private void OnCellButtonPressed(int index)
-		{
-		}
-
-		public void RemoveStamp()
-		{
-		}
-
-		public bool ChangeStamp(int stampId)
-		{
-			return default(bool);
-		}
-
-		public int[] GetNowStampSetData()
-		{
-			return null;
-		}
+	public int[] GetNowStampSetData()
+	{
+		return null;
 	}
 }

@@ -1,17 +1,16 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class SpecialWeaponDetail
 {
-	[Serializable]
-	public class SpecialWeaponDetail
-	{
-		public int weaponId;
+	public int weaponId;
 
-		public Vector3 weaponDetailPos;
+	public Vector3 weaponDetailPos;
 
-		public Vector3 weaponDetailRotation;
+	public Vector3 weaponDetailRotation;
 
-		public float weaponDetailZoom;
-	}
+	public float weaponDetailZoom;
 }

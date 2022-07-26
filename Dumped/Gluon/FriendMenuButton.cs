@@ -1,9 +1,8 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FriendMenuButton : MonoBehaviour
 {
-	public class FriendMenuButton : MonoBehaviour
-	{
-		public FriendModel.PanelType type;
-	}
+	public FriendModel.PanelType type;
 }

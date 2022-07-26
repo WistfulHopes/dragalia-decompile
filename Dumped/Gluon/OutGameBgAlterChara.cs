@@ -2,25 +2,24 @@ using System.Collections;
 using Cute.Cri;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class OutGameBgAlterChara : MonoBehaviour
 {
-	public class OutGameBgAlterChara : MonoBehaviour
+	private AudioPlayback voice;
+
+	private string voiceGroupName;
+
+	private void OnDestroy()
 	{
-		private AudioPlayback voice;
+	}
 
-		private string voiceGroupName;
+	public void PlayTalkSound(string voiceGroupName, string voiceName)
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
-
-		public void PlayTalkSound(string voiceGroupName, string voiceName)
-		{
-		}
-
-		private IEnumerator WaitForPlayTalkSound(string voiceGroupName, string voiceName)
-		{
-			return null;
-		}
+	private IEnumerator WaitForPlayTalkSound(string voiceGroupName, string voiceName)
+	{
+		return null;
 	}
 }

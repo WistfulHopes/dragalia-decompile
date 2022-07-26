@@ -1,11 +1,10 @@
 using Gluon.Http;
 
-namespace Gluon
-{
-	public class GameWallData : IngameWallData
-	{
-		public int WallId => default(int);
+namespace Gluon;
 
-		public int WallLevel => default(int);
-	}
+public class GameWallData : IngameWallData
+{
+	public int WallId => default(int);
+
+	public int WallLevel => default(int);
 }

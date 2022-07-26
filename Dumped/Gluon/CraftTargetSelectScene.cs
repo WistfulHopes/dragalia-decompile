@@ -4,170 +4,169 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class CraftTargetSelectScene : CraftEffectSceneBase
 {
-	public class CraftTargetSelectScene : CraftEffectSceneBase
+	public static bool isShowCraftPage;
+
+	[SerializeField]
+	private Transform overlayParent;
+
+	private CraftTargetSelectMainCanvas mainCanvas;
+
+	private WeaponCraftDataElement craftTargetData;
+
+	private CraftCreateResponse craftResponse;
+
+	private bool isReloadList;
+
+	private bool isGoToPowerup;
+
+	private void Awake()
 	{
-		public static bool isShowCraftPage;
+	}
 
-		[SerializeField]
-		private Transform overlayParent;
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private CraftTargetSelectMainCanvas mainCanvas;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private WeaponCraftDataElement craftTargetData;
+	private void OnInitReady()
+	{
+	}
 
-		private CraftCreateResponse craftResponse;
+	private IEnumerator LoadCraftDataCoroutine()
+	{
+		return null;
+	}
 
-		private bool isReloadList;
+	private void OnEnterScene()
+	{
+	}
 
-		private bool isGoToPowerup;
+	private void OnDestroy()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public void BackButtonPressed()
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void LoadCraftList(WeaponType type)
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void LoadEvolutionList(bool isShowAll)
+	{
+	}
 
-		private IEnumerator LoadCraftDataCoroutine()
-		{
-			return null;
-		}
+	private void TabChangeCallBack(WeaponType type)
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void OnCraftCellButtonPressed(CraftTargetSelectCellData cellData, bool isUseBackup = false)
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void OnTreeButtonPressed(CraftTargetSelectCellData cellData)
+	{
+	}
 
-		public void BackButtonPressed()
-		{
-		}
+	private void SendCraftData(CraftStepupSendData sendData)
+	{
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	private void FooterButtonPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
 
-		private void LoadCraftList(WeaponType type)
-		{
-		}
+	private void ChangeSceneCallback(UnityAction nextSceneCallback)
+	{
+	}
 
-		private void LoadEvolutionList(bool isShowAll)
-		{
-		}
+	private void TabSelected(int index)
+	{
+	}
 
-		private void TabChangeCallBack(WeaponType type)
-		{
-		}
+	private ulong[] CreateDataIdList()
+	{
+		return null;
+	}
 
-		private void OnCraftCellButtonPressed(CraftTargetSelectCellData cellData, bool isUseBackup = false)
-		{
-		}
+	public static bool IsEnableGradeup(WeaponCraftDataElement masterCraftData, int weaponId)
+	{
+		return default(bool);
+	}
 
-		private void OnTreeButtonPressed(CraftTargetSelectCellData cellData)
-		{
-		}
+	private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private void SendCraftData(CraftStepupSendData sendData)
-		{
-		}
+	private void GoNextScene(ulong baseKeyId)
+	{
+	}
 
-		private void FooterButtonPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
+	public void GoNextSceneByMasterId(int baseMasterId)
+	{
+	}
 
-		private void ChangeSceneCallback(UnityAction nextSceneCallback)
-		{
-		}
+	private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private void TabSelected(int index)
-		{
-		}
+	public void OnSortButtonClicked()
+	{
+	}
 
-		private ulong[] CreateDataIdList()
-		{
-			return null;
-		}
+	protected override void SetupCraftEffectData()
+	{
+	}
 
-		public static bool IsEnableGradeup(WeaponCraftDataElement masterCraftData, int weaponId)
-		{
-			return default(bool);
-		}
+	private void AfterResultAction()
+	{
+	}
 
-		private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	protected override void CloseCraftEffect()
+	{
+	}
 
-		private void GoNextScene(ulong baseKeyId)
-		{
-		}
+	protected override bool PlayNextEffect(bool isBackKey = false)
+	{
+		return default(bool);
+	}
 
-		public void GoNextSceneByMasterId(int baseMasterId)
-		{
-		}
+	private void OnDismantleWeaponButtonPressed()
+	{
+	}
 
-		private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private void SetupTutorial()
+	{
+	}
 
-		public void OnSortButtonClicked()
-		{
-		}
+	private void Tutorial_2_6_2()
+	{
+	}
 
-		protected override void SetupCraftEffectData()
-		{
-		}
+	private IEnumerator Tutorial_2_6_2_Coroutine()
+	{
+		return null;
+	}
 
-		private void AfterResultAction()
-		{
-		}
+	private void Tutorial_2_6_2_ToFort()
+	{
+	}
 
-		protected override void CloseCraftEffect()
-		{
-		}
-
-		protected override bool PlayNextEffect(bool isBackKey = false)
-		{
-			return default(bool);
-		}
-
-		private void OnDismantleWeaponButtonPressed()
-		{
-		}
-
-		private void SetupTutorial()
-		{
-		}
-
-		private void Tutorial_2_6_2()
-		{
-		}
-
-		private IEnumerator Tutorial_2_6_2_Coroutine()
-		{
-			return null;
-		}
-
-		private void Tutorial_2_6_2_ToFort()
-		{
-		}
-
-		private IEnumerator Tutorial_2_6_2_ToFort_Coroutine()
-		{
-			return null;
-		}
+	private IEnumerator Tutorial_2_6_2_ToFort_Coroutine()
+	{
+		return null;
 	}
 }

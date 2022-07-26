@@ -2,220 +2,174 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyMarkUI : EnemyMarkSimpleUI
 {
-	public class EnemyMarkUI : EnemyMarkSimpleUI
+	[SerializeField]
+	protected RectTransform conditionRt;
+
+	[SerializeField]
+	protected RectTransform nameRt;
+
+	[SerializeField]
+	protected RectTransform rateRt;
+
+	[SerializeField]
+	protected RectTransform hpGaugeShineRootRt;
+
+	[SerializeField]
+	protected RectTransform hpGaugeShineImageAdjustRt;
+
+	[SerializeField]
+	protected ElementIconUISpriteRenderer elementIcon;
+
+	[SerializeField]
+	protected Text nameText;
+
+	[SerializeField]
+	protected InGameGaugeUISpriteRenderer gauge;
+
+	[SerializeField]
+	protected SpriteRenderer elementIconImage;
+
+	[SerializeField]
+	protected SpriteRenderer emphasisBase;
+
+	[SerializeField]
+	protected SpriteRenderer emphasisText;
+
+	[SerializeField]
+	protected SpriteRenderer hpGaugeShineGaugeImage;
+
+	[SerializeField]
+	protected EnemyRareTimerCtrl enemyRareTimerCtrl;
+
+	[SerializeField]
+	protected Sprite[] emphasisBaseSprite;
+
+	[SerializeField]
+	protected Sprite[] emphasisTextSprite;
+
+	[SerializeField]
+	protected float scaleTargetChara;
+
+	[SerializeField]
+	protected float scaleMobEnemy;
+
+	[SerializeField]
+	public float durationMarkHP;
+
+	[SerializeField]
+	protected float hpGaugeShineAdjustStartPosX;
+
+	[SerializeField]
+	protected float hpGaugeShineAdjustEndPosX;
+
+	[SerializeField]
+	protected float rareInfoDmodeAdjustPosY;
+
+	protected RectTransform gaugeRt;
+
+	protected VisibleUIObject conditionVisible;
+
+	protected VisibleUIObject labelVisible;
+
+	protected VisibleUIObject hpGaugeShineVisible;
+
+	protected SpriteRenderer[] rareLabelSpriteRenderers;
+
+	protected HitCountUI hitCountUI;
+
+	protected EnemyAbilityHeadGaugeUI enemyAbilityHeadGaugeUI;
+
+	protected DisplayType currentType;
+
+	protected float displayDuration;
+
+	protected bool isVisibleEmphasisMark;
+
+	protected float untargetDuration;
+
+	protected const float untargetTime = 0.5f;
+
+	public override void Initialize(EnemyCharacter enemy, InGameUICtrl inGameUI)
 	{
-		[SerializeField]
-		[Header("component")]
-		protected RectTransform conditionRt;
+	}
 
-		[SerializeField]
-		protected RectTransform nameRt;
+	protected override void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		protected RectTransform rateRt;
+	private void LateUpdate()
+	{
+	}
 
-		[SerializeField]
-		[Tooltip("è¼\u009dã\u0081\u008dã\u0083«ã\u0083¼ã\u0083\u0088ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		protected RectTransform hpGaugeShineRootRt;
+	protected void UpdateChara()
+	{
+	}
 
-		[SerializeField]
-		[Tooltip("è¼\u009dã\u0081\u008dç\u0094»å\u0083\u008fèª¿æ\u0095\u00b4ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		protected RectTransform hpGaugeShineImageAdjustRt;
+	protected bool IsVisibleAttachUI()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		protected ElementIconUISpriteRenderer elementIcon;
+	public void UpdateHpGaugeShine()
+	{
+	}
 
-		[SerializeField]
-		protected Text nameText;
+	protected void Invisible()
+	{
+	}
 
-		[SerializeField]
-		protected InGameGaugeUISpriteRenderer gauge;
+	public override void Show(DisplayType type, [Optional] CharacterBase target)
+	{
+	}
 
-		[SerializeField]
-		[Tooltip("å±\u009eæ\u0080§ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ã\u0082¤ã\u0083¡ã\u0083¼ã\u0082\u00b8")]
-		protected SpriteRenderer elementIconImage;
+	protected void CharaHPRoutine(bool bTarget)
+	{
+	}
 
-		[SerializeField]
-		protected SpriteRenderer emphasisBase;
+	public void CharaHpGaugeClear()
+	{
+	}
 
-		[SerializeField]
-		protected SpriteRenderer emphasisText;
+	public void ApplyCharaHpGauge(bool immediate = false)
+	{
+	}
 
-		[SerializeField]
-		[Tooltip("è¼\u009dã\u0081\u008dã\u0082²ã\u0083¼ã\u0082\u00b8ç\u0094»å\u0083\u008f")]
-		protected SpriteRenderer hpGaugeShineGaugeImage;
+	protected void ApplyInfoIcon(CharacterBase chara, bool isForce = false)
+	{
+	}
 
-		[SerializeField]
-		protected EnemyRareTimerCtrl enemyRareTimerCtrl;
+	protected bool ApplyElementIcon(ElementalType elementType, bool isForce = false)
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		[Header("resource")]
-		protected Sprite[] emphasisBaseSprite;
+	protected bool ApplyTribeIcon(TribeType tribeType, bool isForce = false)
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		protected Sprite[] emphasisTextSprite;
+	protected void TargetChara(bool bTarget)
+	{
+	}
 
-		[SerializeField]
-		[Header("parameter")]
-		protected float scaleTargetChara;
+	protected void RareVisible(bool b)
+	{
+	}
 
-		[SerializeField]
-		protected float scaleMobEnemy;
+	public override EnemyAbilityHeadGaugeUI CreateEnemyAbilityHeadGaugeUI(EnemyAbilityHeadGaugeUI.IconType type)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		[Tooltip("HPè¡\u00a8ç¤ºæ\u0099\u0082é\u0096\u0093(s)")]
-		public float durationMarkHP;
+	public override void OnUpdateHpGaugeShineGaugeFade(float value)
+	{
+	}
 
-		[SerializeField]
-		protected float hpGaugeShineAdjustStartPosX;
-
-		[SerializeField]
-		protected float hpGaugeShineAdjustEndPosX;
-
-		[SerializeField]
-		protected float rareInfoDmodeAdjustPosY;
-
-		protected RectTransform gaugeRt;
-
-		protected VisibleUIObject conditionVisible;
-
-		protected VisibleUIObject labelVisible;
-
-		protected VisibleUIObject hpGaugeShineVisible;
-
-		protected SpriteRenderer[] rareLabelSpriteRenderers;
-
-		protected CharaCircleGaugeUI circleGaugeUI;
-
-		protected HitCountUI hitCountUI;
-
-		protected EnemyAbilityHeadGaugeUI enemyAbilityHeadGaugeUI;
-
-		protected DisplayType currentType;
-
-		protected float displayDuration;
-
-		protected bool isVisibleEmphasisMark;
-
-		protected float untargetDuration;
-
-		protected const float untargetTime = 0.5f;
-
-		protected const float circleGaugeOffsetY = 55f;
-
-		public override void Initialize(EnemyCharacter enemy, InGameUICtrl inGameUI)
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
-
-		private void LateUpdate()
-		{
-		}
-
-		protected void UpdateChara()
-		{
-		}
-
-		protected bool IsVisibleAttachUI()
-		{
-			return default(bool);
-		}
-
-		public void UpdateHpGaugeShine()
-		{
-		}
-
-		protected void Invisible()
-		{
-		}
-
-		public override void Show(DisplayType type, [Optional] CharacterBase target)
-		{
-		}
-
-		protected void CharaHPRoutine(bool bTarget)
-		{
-		}
-
-		public void CharaHpGaugeClear()
-		{
-		}
-
-		public void ApplyCharaHpGauge(bool immediate = false)
-		{
-		}
-
-		protected void ApplyInfoIcon(CharacterBase chara, bool isForce = false)
-		{
-		}
-
-		protected bool ApplyElementIcon(ElementalType elementType, bool isForce = false)
-		{
-			return default(bool);
-		}
-
-		protected bool ApplyTribeIcon(TribeType tribeType, bool isForce = false)
-		{
-			return default(bool);
-		}
-
-		protected void TargetChara(bool bTarget)
-		{
-		}
-
-		protected void RareVisible(bool b)
-		{
-		}
-
-		public override void CreateCircleGaugeUI(CharaCircleGaugeUI.Type type)
-		{
-		}
-
-		public override void ShowCircleGaugeUI(CharaCircleGaugeUI.Type type)
-		{
-		}
-
-		public override void HideCircleGaugeUI(CharaCircleGaugeUI.Type type)
-		{
-		}
-
-		public override void SetCircleGaugeUIGaugeTimer(CharaCircleGaugeUI.Type type, float time, float initialTime)
-		{
-		}
-
-		public override void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count)
-		{
-		}
-
-		public override void SetCircleGaugeUIAdjustPos(CharaCircleGaugeUI.Type type, Vector3 pos)
-		{
-		}
-
-		public override void SetCircleGaugeUIAdjustScale(CharaCircleGaugeUI.Type type, float scale)
-		{
-		}
-
-		public override bool IsVisibleCircleGauge()
-		{
-			return default(bool);
-		}
-
-		public override EnemyAbilityHeadGaugeUI CreateEnemyAbilityHeadGaugeUI(EnemyAbilityHeadGaugeUI.IconType type)
-		{
-			return null;
-		}
-
-		public override void OnUpdateHpGaugeShineGaugeFade(float value)
-		{
-		}
-
-		public override void OnUpdateHpGaugeShineLocalPosX(float value)
-		{
-		}
+	public override void OnUpdateHpGaugeShineLocalPosX(float value)
+	{
 	}
 }

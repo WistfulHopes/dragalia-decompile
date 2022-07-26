@@ -3,90 +3,89 @@ using Cute.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TimeAttackRankingPopup : PopupBase
 {
-	public class TimeAttackRankingPopup : PopupBase
+	public enum WebViewCategory
 	{
-		public enum WebViewCategory
-		{
-			timeAttackRanking,
-			timeAttackRankingEvent
-		}
+		timeAttackRanking,
+		timeAttackRankingEvent
+	}
 
-		private const string prefabPath = "Prefabs/OutGame/TitleMenu/TimeAttackRankingPopup";
+	private const string prefabPath = "Prefabs/OutGame/TitleMenu/TimeAttackRankingPopup";
 
-		[SerializeField]
-		private Rect margin;
+	[SerializeField]
+	private Rect margin;
 
-		[SerializeField]
-		private RectTransform popupRect;
+	[SerializeField]
+	private RectTransform popupRect;
 
-		[SerializeField]
-		private Text titleText;
+	[SerializeField]
+	private Text titleText;
 
-		[SerializeField]
-		private Text noInfoText;
+	[SerializeField]
+	private Text noInfoText;
 
-		private int questId;
+	private int questId;
 
-		private WebViewCategory categoryType;
+	private WebViewCategory categoryType;
 
-		private readonly Localize.TextId[] webViewTitleTextId;
+	private readonly Localize.TextId[] webViewTitleTextId;
 
-		private readonly string[] webViewUrlFunctionName;
+	private readonly string[] webViewUrlFunctionName;
 
-		private const string urlParameterFormatForQuestId = "&quest_id={0}";
+	private const string urlParameterFormatForQuestId = "&quest_id={0}";
 
-		private const string urlParameterFormatForViewerId = "&viewer_id={0}";
+	private const string urlParameterFormatForViewerId = "&viewer_id={0}";
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public static TimeAttackRankingPopup Create()
-		{
-			return null;
-		}
+	public static TimeAttackRankingPopup Create()
+	{
+		return null;
+	}
 
-		public void InitSetting(WebViewCategory category, int id = 0)
-		{
-		}
+	public void InitSetting(WebViewCategory category, int id = 0)
+	{
+	}
 
-		private IEnumerator ShowWebView(WebViewCategory category, string path)
-		{
-			return null;
-		}
+	private IEnumerator ShowWebView(WebViewCategory category, string path)
+	{
+		return null;
+	}
 
-		private void SetMargin()
-		{
-		}
+	private void SetMargin()
+	{
+	}
 
-		public void WebMessageCallBack(string msg)
-		{
-		}
+	public void WebMessageCallBack(string msg)
+	{
+	}
 
-		public void OnRewardButtonPressed()
-		{
-		}
+	public void OnRewardButtonPressed()
+	{
+	}
 
-		public void OnHelpButtonPressed()
-		{
-		}
+	public void OnHelpButtonPressed()
+	{
+	}
 
-		private void OnHide()
-		{
-		}
+	private void OnHide()
+	{
+	}
 
-		public void OnCloseButtonPressed()
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
+	}
 
-		public static void OnError(ErrorType errorType, int resultCode)
-		{
-		}
+	public static void OnError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	protected override void OnDestroy()
+	{
 	}
 }

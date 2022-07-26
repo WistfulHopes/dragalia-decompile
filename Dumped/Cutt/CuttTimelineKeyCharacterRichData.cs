@@ -1,42 +1,41 @@
 using System;
 using Gluon;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyCharacterRichData : CuttTimelineKeyWithInterpolate
 {
-	[Serializable]
-	public class CuttTimelineKeyCharacterRichData : CuttTimelineKeyWithInterpolate
+	private CuttCharacterController targetCharaCtrl;
+
+	private RichModelController richModelController;
+
+	public float outlineWidth;
+
+	public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
+
+	public override bool IsInterpolateKey()
 	{
-		private CuttCharacterController targetCharaCtrl;
+		return default(bool);
+	}
 
-		private RichModelController richModelController;
+	public override void OnLoad(CuttTimelineControl timelineControl)
+	{
+	}
 
-		public float outlineWidth;
+	public void Initialize(CuttCharacterController charaCtrl)
+	{
+	}
 
-		public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
+	public void SetData(CuttTimelineKeyCharacterRichData srcData)
+	{
+	}
 
-		public override bool IsInterpolateKey()
-		{
-			return default(bool);
-		}
+	public void Lerp(CuttTimelineKeyCharacterRichData a, CuttTimelineKeyCharacterRichData b, float ratio)
+	{
+	}
 
-		public override void OnLoad(CuttTimelineControl timelineControl)
-		{
-		}
-
-		public void Initialize(CuttCharacterController charaCtrl)
-		{
-		}
-
-		public void SetData(CuttTimelineKeyCharacterRichData srcData)
-		{
-		}
-
-		public void Lerp(CuttTimelineKeyCharacterRichData a, CuttTimelineKeyCharacterRichData b, float ratio)
-		{
-		}
-
-		public void UpdateData()
-		{
-		}
+	public void UpdateData()
+	{
 	}
 }

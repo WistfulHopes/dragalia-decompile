@@ -1,46 +1,45 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyOutsideWall
 {
-	public class EnemyOutsideWall
+	private EnemyCharacter _owner;
+
+	private const float CHECK_TIME = 2f;
+
+	private float _checkTiming;
+
+	private int _rayHitTimes;
+
+	private Vector3 _safePosition;
+
+	private bool _active;
+
+	public bool active
 	{
-		private EnemyCharacter _owner;
-
-		private const float CHECK_TIME = 2f;
-
-		private float _checkTiming;
-
-		private int _rayHitTimes;
-
-		private Vector3 _safePosition;
-
-		private bool _active;
-
-		public bool active
+		get
 		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public EnemyOutsideWall(EnemyCharacter owner)
+		set
 		{
 		}
+	}
 
-		public void Update()
-		{
-		}
+	public EnemyOutsideWall(EnemyCharacter owner)
+	{
+	}
 
-		private void Warp()
-		{
-		}
+	public void Update()
+	{
+	}
 
-		public void Reset()
-		{
-		}
+	private void Warp()
+	{
+	}
+
+	public void Reset()
+	{
 	}
 }

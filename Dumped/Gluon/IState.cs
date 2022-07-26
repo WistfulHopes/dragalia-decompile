@@ -1,44 +1,43 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public abstract class IState<T>
 {
-	public abstract class IState<T>
+	public StateMachine<T> stateMachine
 	{
-		public StateMachine<T> stateMachine
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public string dispEnterLabel => null;
-
-		public string dispUpdateLabel => null;
-
-		public string dispExitLabel => null;
-
-		public T owner => (T)null;
-
-		public void Build(StateMachine<T> stateMachine)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public virtual void OnStateEnter()
-		{
-		}
+	public string dispEnterLabel => null;
 
-		public virtual void OnStateUpdate()
-		{
-		}
+	public string dispUpdateLabel => null;
 
-		public virtual void OnStateExit()
-		{
-		}
+	public string dispExitLabel => null;
+
+	public T owner => (T)null;
+
+	public void Build(StateMachine<T> stateMachine)
+	{
+	}
+
+	public virtual void OnStateEnter()
+	{
+	}
+
+	public virtual void OnStateUpdate()
+	{
+	}
+
+	public virtual void OnStateExit()
+	{
 	}
 }

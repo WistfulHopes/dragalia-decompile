@@ -1,25 +1,24 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[CreateAssetMenu]
+public class BackgroundImageLayerObject : ScriptableObject
 {
-	[CreateAssetMenu]
-	public class BackgroundImageLayerObject : ScriptableObject
+	[Serializable]
+	public class BackgroundImageLayer
 	{
-		[Serializable]
-		public class BackgroundImageLayer
-		{
-			public Material material;
+		public Material material;
 
-			public Vector2 scrollSpeed;
+		public Vector2 scrollSpeed;
 
-			public float trancateTop;
+		public float trancateTop;
 
-			public float trancateBottom;
+		public float trancateBottom;
 
-			public Vector2 offsetUV;
-		}
-
-		public BackgroundImageLayer[] layerData;
+		public Vector2 offsetUV;
 	}
+
+	public BackgroundImageLayer[] layerData;
 }

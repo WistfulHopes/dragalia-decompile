@@ -5,152 +5,151 @@ using Cute.Cri;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthCrestEnhanceMainCanvas : GrowthUnitEnhanceMainCanvas
 {
-	public class GrowthCrestEnhanceMainCanvas : GrowthUnitEnhanceMainCanvas
+	public GrowthUnitEnhanceListCell[] listCells;
+
+	public Button growPlusButton;
+
+	public GameObject effectBaseObject;
+
+	private BaseCanvasContents baseCanvasContents;
+
+	private GameObject amuletAnimation;
+
+	private GameObject amuletHeaderAnimation;
+
+	private EffectObject frontEffectObject;
+
+	private EffectObject backEffectObject;
+
+	private EffectObject firstEffectObject;
+
+	private bool isSkipButtonLocked;
+
+	private GrowthLimitBreak.SkipEffectStatus nowEffectStatus;
+
+	private int effectSkipSortOderKey;
+
+	private AudioPlayback amuletSePlayback;
+
+	private Canvas uiCanvas;
+
+	private TouchGuardObject playCloseEffectTouchGuard;
+
+	private FlashTextType playTextType;
+
+	private int beforeLimitBreak;
+
+	private bool isPlayMemorialRiseEffect;
+
+	public static GrowthCrestEnhanceMainCanvas GetUICanvas(Transform parentTransform)
 	{
-		public GrowthUnitEnhanceListCell[] listCells;
+		return null;
+	}
 
-		public Button growPlusButton;
+	public override void InitCanvas(GrowthUnitEnhanceScene scene, GrowthUnitEnhanceModel model)
+	{
+	}
 
-		public GameObject effectBaseObject;
+	public override void PlayResultEffects(GrowthUnitEnhanceSendData[] sendDatas, [Optional] Action effectEndCallBack)
+	{
+	}
 
-		private BaseCanvasContents baseCanvasContents;
+	protected override GrowthUnitEnhanceListCell GetEnhanceListCell(UnitEnhanceListCellType type)
+	{
+		return null;
+	}
 
-		private GameObject amuletAnimation;
+	public override void OnAutoButtonPressed()
+	{
+	}
 
-		private GameObject amuletHeaderAnimation;
+	private void OnCellButtonPressed(UnitEnhanceListCellType type)
+	{
+	}
 
-		private EffectObject frontEffectObject;
+	protected override void UpdateCell()
+	{
+	}
 
-		private EffectObject backEffectObject;
+	protected override bool IsAllCellComplete()
+	{
+		return default(bool);
+	}
 
-		private EffectObject firstEffectObject;
+	protected override bool IsUsableAutoButton()
+	{
+		return default(bool);
+	}
 
-		private bool isSkipButtonLocked;
+	private void SendAutoEnhanceData(GrowthAutoUnitEnhanceConfirmPopup autoUnitEnhanceConfirmPopup, Action resultAction)
+	{
+	}
 
-		private GrowthLimitBreak.SkipEffectStatus nowEffectStatus;
+	public void OnPlusButtonPressed()
+	{
+	}
 
-		private int effectSkipSortOderKey;
+	private void ShowPlusParamConfirmPopup(Dictionary<int, int> materialData)
+	{
+	}
 
-		private AudioPlayback amuletSePlayback;
+	private void PlayPlusParamGrowEffect(bool isPlayGrowHPEffect, bool isPlayGrowAtkEffect, Action playEndCallBack)
+	{
+	}
 
-		private Canvas uiCanvas;
+	private void ShowCrestLimitBreakResultPopup(int beforeLimitBreak, bool isUpdateAbility)
+	{
+	}
 
-		private TouchGuardObject playCloseEffectTouchGuard;
+	private void ShowCrestPlusParamResultPopup(GrowthCrestPlusParamResultPopup.BeforeData data)
+	{
+	}
 
-		private FlashTextType playTextType;
+	private void ShowAutoEnhanceResultPopup(int totalReleaseCount, int beforeBuildup)
+	{
+	}
 
-		private int beforeLimitBreak;
+	private void StartLimitBreakTutorial()
+	{
+	}
 
-		private bool isPlayMemorialRiseEffect;
+	private void EndLimitBreakTutorial()
+	{
+	}
 
-		public static GrowthCrestEnhanceMainCanvas GetUICanvas(Transform parentTransform)
-		{
-			return null;
-		}
+	private void ShowMemorialRiseEffect(Action memorialRiseEffectEndCallBack)
+	{
+	}
 
-		public override void InitCanvas(GrowthUnitEnhanceScene scene, GrowthUnitEnhanceModel model)
-		{
-		}
+	private void SetupMemorialRiseEffect()
+	{
+	}
 
-		public override void PlayResultEffects(GrowthUnitEnhanceSendData[] sendDatas, [Optional] Action effectEndCallBack)
-		{
-		}
+	private void CloseMemorialRiseEffect(Action endCallBack)
+	{
+	}
 
-		protected override GrowthUnitEnhanceListCell GetEnhanceListCell(UnitEnhanceListCellType type)
-		{
-			return null;
-		}
+	private void PlayMemorialRiseEffect()
+	{
+	}
 
-		public override void OnAutoButtonPressed()
-		{
-		}
+	private void OnSkipButtonPressed(bool isBackKey = false)
+	{
+	}
 
-		private void OnCellButtonPressed(UnitEnhanceListCellType type)
-		{
-		}
+	private void PlayCloseMemorialRiseEffect()
+	{
+	}
 
-		protected override void UpdateCell()
-		{
-		}
+	private void ShowTutorialPointer()
+	{
+	}
 
-		protected override bool IsAllCellComplete()
-		{
-			return default(bool);
-		}
-
-		protected override bool IsUsableAutoButton()
-		{
-			return default(bool);
-		}
-
-		private void SendAutoEnhanceData(GrowthAutoUnitEnhanceConfirmPopup autoUnitEnhanceConfirmPopup, Action resultAction)
-		{
-		}
-
-		public void OnPlusButtonPressed()
-		{
-		}
-
-		private void ShowPlusParamConfirmPopup(Dictionary<int, int> materialData)
-		{
-		}
-
-		private void PlayPlusParamGrowEffect(bool isPlayGrowHPEffect, bool isPlayGrowAtkEffect, Action playEndCallBack)
-		{
-		}
-
-		private void ShowCrestLimitBreakResultPopup(int beforeLimitBreak, bool isUpdateAbility)
-		{
-		}
-
-		private void ShowCrestPlusParamResultPopup(GrowthCrestPlusParamResultPopup.BeforeData data)
-		{
-		}
-
-		private void ShowAutoEnhanceResultPopup(int totalReleaseCount, int beforeBuildup)
-		{
-		}
-
-		private void StartLimitBreakTutorial()
-		{
-		}
-
-		private void EndLimitBreakTutorial()
-		{
-		}
-
-		private void ShowMemorialRiseEffect(Action memorialRiseEffectEndCallBack)
-		{
-		}
-
-		private void SetupMemorialRiseEffect()
-		{
-		}
-
-		private void CloseMemorialRiseEffect(Action endCallBack)
-		{
-		}
-
-		private void PlayMemorialRiseEffect()
-		{
-		}
-
-		private void OnSkipButtonPressed(bool isBackKey = false)
-		{
-		}
-
-		private void PlayCloseMemorialRiseEffect()
-		{
-		}
-
-		private void ShowTutorialPointer()
-		{
-		}
-
-		private void UpdatePlusButton(bool interactable)
-		{
-		}
+	private void UpdatePlusButton(bool interactable)
+	{
 	}
 }

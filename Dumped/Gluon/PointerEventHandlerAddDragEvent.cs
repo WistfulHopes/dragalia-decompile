@@ -1,19 +1,18 @@
 using UnityEngine.EventSystems;
 
-namespace Gluon
+namespace Gluon;
+
+public class PointerEventHandlerAddDragEvent : PointerEventHandler, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
 {
-	public class PointerEventHandlerAddDragEvent : PointerEventHandler, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
+	public void OnBeginDrag(PointerEventData eventData)
 	{
-		public void OnBeginDrag(PointerEventData eventData)
-		{
-		}
+	}
 
-		public void OnDrag(PointerEventData eventData)
-		{
-		}
+	public void OnDrag(PointerEventData eventData)
+	{
+	}
 
-		public void OnEndDrag(PointerEventData eventData)
-		{
-		}
+	public void OnEndDrag(PointerEventData eventData)
+	{
 	}
 }

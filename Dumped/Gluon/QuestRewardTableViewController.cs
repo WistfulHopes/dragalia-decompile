@@ -3,72 +3,71 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestRewardTableViewController : TableViewController<QuestResultModel.FirstClearModel.FirstClearItemInfo>
 {
-	public class QuestRewardTableViewController : TableViewController<QuestResultModel.FirstClearModel.FirstClearItemInfo>
+	[SerializeField]
+	private int _maxCellCount;
+
+	[SerializeField]
+	protected Button closeButton;
+
+	[SerializeField]
+	protected Text uiTitle;
+
+	[SerializeField]
+	protected Text uiMainText;
+
+	[SerializeField]
+	protected DragEventScrollRect dragScrollRect;
+
+	[SerializeField]
+	protected Image _frame;
+
+	[SerializeField]
+	protected Vector3 centerPos;
+
+	protected float cellHeight;
+
+	public int maxCellCount => default(int);
+
+	public Image frame => null;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		private int _maxCellCount;
+	}
 
-		[SerializeField]
-		protected Button closeButton;
+	protected virtual void LoadData()
+	{
+	}
 
-		[SerializeField]
-		protected Text uiTitle;
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		[SerializeField]
-		protected Text uiMainText;
+	public virtual void SetRewardItemInfo(List<QuestResultModel.FirstClearModel.FirstClearItemInfo> rewardItemList)
+	{
+	}
 
-		[SerializeField]
-		protected DragEventScrollRect dragScrollRect;
+	public void SetCloseButtonEvent(UnityAction action)
+	{
+	}
 
-		[SerializeField]
-		protected Image _frame;
+	public void SetText(string title, string mainText)
+	{
+	}
 
-		[SerializeField]
-		protected Vector3 centerPos;
+	public void DisableScroll()
+	{
+	}
 
-		protected float cellHeight;
+	public void SetCellTopToCenter()
+	{
+	}
 
-		public int maxCellCount => default(int);
-
-		public Image frame => null;
-
-		protected override void Start()
-		{
-		}
-
-		protected virtual void LoadData()
-		{
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public virtual void SetRewardItemInfo(List<QuestResultModel.FirstClearModel.FirstClearItemInfo> rewardItemList)
-		{
-		}
-
-		public void SetCloseButtonEvent(UnityAction action)
-		{
-		}
-
-		public void SetText(string title, string mainText)
-		{
-		}
-
-		public void DisableScroll()
-		{
-		}
-
-		public void SetCellTopToCenter()
-		{
-		}
-
-		public void SetCellCenterPositionY(float setPositionY)
-		{
-		}
+	public void SetCellCenterPositionY(float setPositionY)
+	{
 	}
 }

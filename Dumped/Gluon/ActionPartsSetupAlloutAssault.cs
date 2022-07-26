@@ -1,28 +1,27 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsSetupAlloutAssault : ActionParts
 {
-	public class ActionPartsSetupAlloutAssault : ActionParts
+	private readonly SetupAlloutAssaultData _partsData;
+
+	private AlloutAssaultUniqueCtrl _ctrl;
+
+	public ActionPartsSetupAlloutAssault(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly SetupAlloutAssaultData _partsData;
+	}
 
-		private AlloutAssaultUniqueCtrl _ctrl;
+	public override void OnPostCreated(CharacterBase chara)
+	{
+	}
 
-		public ActionPartsSetupAlloutAssault(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void OnPostCreated(CharacterBase chara)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		private CollisionHitAttribute CreateHitAttribute()
-		{
-			return null;
-		}
+	private CollisionHitAttribute CreateHitAttribute()
+	{
+		return null;
 	}
 }

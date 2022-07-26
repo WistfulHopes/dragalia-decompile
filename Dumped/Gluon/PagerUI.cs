@@ -1,47 +1,44 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PagerUI : MonoBehaviour
 {
-	public class PagerUI : MonoBehaviour
+	[SerializeField]
+	private Material material;
+
+	[SerializeField]
+	private Sprite offSprite;
+
+	[SerializeField]
+	private Sprite onSprite;
+
+	[SerializeField]
+	private float margin;
+
+	private int currentPage;
+
+	private int maxPage;
+
+	private Image[] images;
+
+	public int CurrentPage
 	{
-		[SerializeField]
-		[Header("resource")]
-		private Material material;
-
-		[SerializeField]
-		private Sprite offSprite;
-
-		[SerializeField]
-		private Sprite onSprite;
-
-		[SerializeField]
-		[Header("parameter")]
-		private float margin;
-
-		private int currentPage;
-
-		private int maxPage;
-
-		private Image[] images;
-
-		public int CurrentPage
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public void Initialize(int max)
+		set
 		{
 		}
+	}
 
-		private void SetPage(int value)
-		{
-		}
+	public void Initialize(int max)
+	{
+	}
+
+	private void SetPage(int value)
+	{
 	}
 }

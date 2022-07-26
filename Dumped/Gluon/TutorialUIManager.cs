@@ -7,280 +7,279 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialUIManager : MonoBehaviour
 {
-	public class TutorialUIManager : MonoBehaviour
+	private enum SortingOrder
 	{
-		private enum SortingOrder
-		{
-			Character = 150,
-			UIBackground,
-			UIMain
-		}
+		Character = 150,
+		UIBackground,
+		UIMain
+	}
 
-		public enum LockButtonType
-		{
-			None = -1,
-			MultiPlay,
-			Event,
-			ManaCircle,
-			DragonGrowth,
-			DragonLimitBreak,
-			WeaponGrowth,
-			WeaponLimitBreak,
-			DragonContact,
-			DragonStory,
-			CastleStory,
-			DragonBattle,
-			SummonStory,
-			FortMenu,
-			Growth,
-			CastleStoryByClosed,
-			Sell,
-			AmuletGrowth,
-			AmuletLimitBreak,
-			CharaStory,
-			Craft,
-			DragonSell,
-			ShopQuestBonus,
-			InterceptionBattle,
-			SecondAmulet,
-			ResetPlus,
-			Guild,
-			EditSkill,
-			DragonSphere,
-			AlbumStoryReview
-		}
+	public enum LockButtonType
+	{
+		None = -1,
+		MultiPlay,
+		Event,
+		ManaCircle,
+		DragonGrowth,
+		DragonLimitBreak,
+		WeaponGrowth,
+		WeaponLimitBreak,
+		DragonContact,
+		DragonStory,
+		CastleStory,
+		DragonBattle,
+		SummonStory,
+		FortMenu,
+		Growth,
+		CastleStoryByClosed,
+		Sell,
+		AmuletGrowth,
+		AmuletLimitBreak,
+		CharaStory,
+		Craft,
+		DragonSell,
+		ShopQuestBonus,
+		InterceptionBattle,
+		SecondAmulet,
+		ResetPlus,
+		Guild,
+		EditSkill,
+		DragonSphere,
+		AlbumStoryReview
+	}
 
-		public CameraGroup characterCamera;
+	public CameraGroup characterCamera;
 
-		public static Action onInitCompleted;
+	public static Action onInitCompleted;
 
-		public const float StartTutorialDelay = 1f;
+	public const float StartTutorialDelay = 1f;
 
-		private TutorialUIMainCanvas mainCanvas;
+	private TutorialUIMainCanvas mainCanvas;
 
-		private GameObject storyCanvasObject;
+	private GameObject storyCanvasObject;
 
-		private GameObject storyBgCanvasObject;
+	private GameObject storyBgCanvasObject;
 
-		private GameObject storyCharaCanvasObject;
+	private GameObject storyCharaCanvasObject;
 
-		private TutorialDualWindow showDualWindows;
+	private TutorialDualWindow showDualWindows;
 
-		private bool isShowPointer;
+	private bool isShowPointer;
 
-		public bool isShowExceptionPop;
+	public bool isShowExceptionPop;
 
-		public bool isShowCloseAppPop;
+	public bool isShowCloseAppPop;
 
-		public bool isForceBackkeyAction;
+	public bool isForceBackkeyAction;
 
-		private Transform objectTransform;
+	private Transform objectTransform;
 
-		private Transform parentTransform;
+	private Transform parentTransform;
 
-		private Vector2 parentPos;
+	private Vector2 parentPos;
 
-		private CommonPopup closeAppPopup;
+	private CommonPopup closeAppPopup;
 
-		private RubySupportedPopup showTutorialPop;
+	private RubySupportedPopup showTutorialPop;
 
-		public static bool isShowLockIcon;
+	public static bool isShowLockIcon;
 
-		private static TutorialUIManager _instance;
+	private static TutorialUIManager _instance;
 
-		public Canvas mainCanvasCanvas
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public static TutorialUIManager instance => null;
-
-		public static void Run(Action onCompleted)
-		{
-		}
-
-		private void Start()
-		{
-		}
-
-		public void DryRun()
-		{
-		}
-
-		private static void ProductionRun(Action onCompleted)
-		{
-		}
-
-		public static IEnumerator WaitConnected(Action onCompleted)
+	public Canvas mainCanvasCanvas
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public static void DestroyInstance()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetMainCanvasForce(TutorialUIMainCanvas canvas)
-		{
-		}
+	public static TutorialUIManager instance => null;
 
-		public void CreateMainCanvas()
-		{
-		}
+	public static void Run(Action onCompleted)
+	{
+	}
 
-		public void DestroyMainCanvas()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void DestroyStoryCanvas()
-		{
-		}
+	public void DryRun()
+	{
+	}
 
-		public void SetupStory()
-		{
-		}
+	private static void ProductionRun(Action onCompleted)
+	{
+	}
 
-		public void ExecScript(string scriptName, Action onCompleted, bool hideBlackTouchLayerOnCompeted = true, [Optional] Action touchWaitCallBack)
-		{
-		}
+	public static IEnumerator WaitConnected(Action onCompleted)
+	{
+		return null;
+	}
 
-		public bool IsBlockMissionNotice()
-		{
-			return default(bool);
-		}
+	public static void DestroyInstance()
+	{
+	}
 
-		private IEnumerator RunActionAfterPopupClose(Action action)
-		{
-			return null;
-		}
+	public void SetMainCanvasForce(TutorialUIMainCanvas canvas)
+	{
+	}
 
-		public TutorialSimpleWindow ShowWindow(string text)
-		{
-			return null;
-		}
+	public void CreateMainCanvas()
+	{
+	}
 
-		public TutorialDualWindow ShowDualWindows(string[] imagefilenames, string[] titleTexts, string[] descTexts, Action onWindowClosed, string skipConfirmText = "", [Optional] Action skipCallback)
-		{
-			return null;
-		}
+	public void DestroyMainCanvas()
+	{
+	}
 
-		public void ShowPointerOnFooter(Footer.MenuTab menuTab, bool useTouchGuard = true)
-		{
-		}
+	public void DestroyStoryCanvas()
+	{
+	}
 
-		public void SetTouchGuardExceptFooterActive(bool isActive)
-		{
-		}
+	public void SetupStory()
+	{
+	}
 
-		public void SetTouchGuardExceptBottomActive(bool isActive)
-		{
-		}
+	public void ExecScript(string scriptName, Action onCompleted, bool hideBlackTouchLayerOnCompeted = true, [Optional] Action touchWaitCallBack)
+	{
+	}
 
-		public void ShowPointerInPosition(float x, float y)
-		{
-		}
+	public bool IsBlockMissionNotice()
+	{
+		return default(bool);
+	}
 
-		public void SetPointerAnchorePos(float x, float y)
-		{
-		}
+	private IEnumerator RunActionAfterPopupClose(Action action)
+	{
+		return null;
+	}
 
-		public void ShowPointerInAbsolutePosition(float x, float y)
-		{
-		}
+	public TutorialSimpleWindow ShowWindow(string text)
+	{
+		return null;
+	}
 
-		public void ResetPointerAbsolutePosition()
-		{
-		}
+	public TutorialDualWindow ShowDualWindows(string[] imagefilenames, string[] titleTexts, string[] descTexts, Action onWindowClosed, string skipConfirmText = "", [Optional] Action skipCallback)
+	{
+		return null;
+	}
 
-		public void HidePointer()
-		{
-		}
+	public void ShowPointerOnFooter(Footer.MenuTab menuTab, bool useTouchGuard = true)
+	{
+	}
 
-		public void SetBlackTouchGuardActive(bool isActive, bool isUseFooter = false, bool isClearColor = false)
-		{
-		}
+	public void SetTouchGuardExceptFooterActive(bool isActive)
+	{
+	}
 
-		public bool IsBlackTouchGuardActive()
-		{
-			return default(bool);
-		}
+	public void SetTouchGuardExceptBottomActive(bool isActive)
+	{
+	}
 
-		public void ShowTutorialPop(string title, string text, UnityAction closeCallBack)
-		{
-		}
+	public void ShowPointerInPosition(float x, float y)
+	{
+	}
 
-		public static bool IsInstanceEmpty()
-		{
-			return default(bool);
-		}
+	public void SetPointerAnchorePos(float x, float y)
+	{
+	}
 
-		protected virtual void OnDestroy()
-		{
-		}
+	public void ShowPointerInAbsolutePosition(float x, float y)
+	{
+	}
 
-		public static GameObject SetLockButton(Button button, LockButtonType type, float lockScale = 1f, bool isForFooter = false)
-		{
-			return null;
-		}
+	public void ResetPointerAbsolutePosition()
+	{
+	}
 
-		public static GameObject SetLockButtonRect(RectTransform rect, LockButtonType type, float lockScale = 1f, bool isForFooter = false)
-		{
-			return null;
-		}
+	public void HidePointer()
+	{
+	}
 
-		public static void RemoveLockButton(Button button)
-		{
-		}
+	public void SetBlackTouchGuardActive(bool isActive, bool isUseFooter = false, bool isClearColor = false)
+	{
+	}
 
-		public static void RemoveLockButton(GameObject rootObj)
-		{
-		}
+	public bool IsBlackTouchGuardActive()
+	{
+		return default(bool);
+	}
 
-		public static void ShowLockPopup(LockButtonType type)
-		{
-		}
+	public void ShowTutorialPop(string title, string text, UnityAction closeCallBack)
+	{
+	}
 
-		public static Color GetTutorialLockColor()
-		{
-			return default(Color);
-		}
+	public static bool IsInstanceEmpty()
+	{
+		return default(bool);
+	}
 
-		public static string GetLockData(LockButtonType type)
-		{
-			return null;
-		}
+	protected virtual void OnDestroy()
+	{
+	}
 
-		private static string GetFuncName(LockButtonType type)
-		{
-			return null;
-		}
+	public static GameObject SetLockButton(Button button, LockButtonType type, float lockScale = 1f, bool isForFooter = false)
+	{
+		return null;
+	}
 
-		private static QuestStoryElement GetTriggerQuestStory(LockButtonType type)
-		{
-			return null;
-		}
+	public static GameObject SetLockButtonRect(RectTransform rect, LockButtonType type, float lockScale = 1f, bool isForFooter = false)
+	{
+		return null;
+	}
 
-		public bool TutorialBackKeyAction()
-		{
-			return default(bool);
-		}
+	public static void RemoveLockButton(Button button)
+	{
+	}
 
-		public void SetObjectOnBlackTouchGuard(Transform objTransform)
-		{
-		}
+	public static void RemoveLockButton(GameObject rootObj)
+	{
+	}
 
-		public void OutObjectOnBlackTouchGuard()
-		{
-		}
+	public static void ShowLockPopup(LockButtonType type)
+	{
+	}
+
+	public static Color GetTutorialLockColor()
+	{
+		return default(Color);
+	}
+
+	public static string GetLockData(LockButtonType type)
+	{
+		return null;
+	}
+
+	private static string GetFuncName(LockButtonType type)
+	{
+		return null;
+	}
+
+	private static QuestStoryElement GetTriggerQuestStory(LockButtonType type)
+	{
+		return null;
+	}
+
+	public bool TutorialBackKeyAction()
+	{
+		return default(bool);
+	}
+
+	public void SetObjectOnBlackTouchGuard(Transform objTransform)
+	{
+	}
+
+	public void OutObjectOnBlackTouchGuard()
+	{
 	}
 }

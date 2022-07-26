@@ -1,19 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ChapterCell : MonoBehaviour
 {
-	public class ChapterCell : MonoBehaviour
+	public Text cellTitle;
+
+	public int cellTag;
+
+	[SerializeField]
+	public StoryButtonEvent buttonPressed;
+
+	public void OnButtonPressed()
 	{
-		public Text cellTitle;
-
-		public int cellTag;
-
-		[SerializeField]
-		public StoryButtonEvent buttonPressed;
-
-		public void OnButtonPressed()
-		{
-		}
 	}
 }

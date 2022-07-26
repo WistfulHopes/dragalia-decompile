@@ -1,68 +1,67 @@
 using System.Collections.Generic;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeTalkDataModel
 {
-	public class DmodeTalkDataModel
+	public enum DmodeTalkTopCategory0
 	{
-		public enum DmodeTalkTopCategory0
-		{
-			Top = 1
-		}
+		Top = 1
+	}
 
-		public enum DmodeTalkTopCategory1
-		{
-			Versatility = 1
-		}
+	public enum DmodeTalkTopCategory1
+	{
+		Versatility = 1
+	}
 
-		private static DmodeTalkDataModel instance;
+	private static DmodeTalkDataModel instance;
 
-		public Dictionary<string, List<EventQuestTalkDataModel.TalkSet>> availableTalkCharaSetDic;
+	public Dictionary<string, List<EventQuestTalkDataModel.TalkSet>> availableTalkCharaSetDic;
 
-		private int currentPlayingId;
+	private int currentPlayingId;
 
-		public List<string> preferredCharaList;
+	public List<string> preferredCharaList;
 
-		public static DmodeTalkDataModel Instance => null;
+	public static DmodeTalkDataModel Instance => null;
 
-		public static void DeleteInstance()
-		{
-		}
+	public static void DeleteInstance()
+	{
+	}
 
-		public static bool IsInstanceNull()
-		{
-			return default(bool);
-		}
+	public static bool IsInstanceNull()
+	{
+		return default(bool);
+	}
 
-		private DmodeTalkDataModel()
-		{
-		}
+	private DmodeTalkDataModel()
+	{
+	}
 
-		static DmodeTalkDataModel()
-		{
-		}
+	static DmodeTalkDataModel()
+	{
+	}
 
-		public void Clear()
-		{
-		}
+	public void Clear()
+	{
+	}
 
-		public EventQuestTalkDataModel.TalkSet GetAvailableTalk()
-		{
-			return null;
-		}
+	public EventQuestTalkDataModel.TalkSet GetAvailableTalk()
+	{
+		return null;
+	}
 
-		public void GatherAvailableTalks()
-		{
-		}
+	public void GatherAvailableTalks()
+	{
+	}
 
-		private EventQuestTalkDataModel.TalkSet WrapDmodeTalk(DmodeTalkElement item)
-		{
-			return null;
-		}
+	private EventQuestTalkDataModel.TalkSet WrapDmodeTalk(DmodeTalkElement item)
+	{
+		return null;
+	}
 
-		public EventQuestTalkDataModel.TalkSet GetCurrentPlayingTalk()
-		{
-			return null;
-		}
+	public EventQuestTalkDataModel.TalkSet GetCurrentPlayingTalk()
+	{
+		return null;
 	}
 }

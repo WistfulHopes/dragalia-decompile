@@ -1,45 +1,44 @@
 using System.Runtime.InteropServices;
 using Gluon.Dungeon;
 
-namespace Gluon
+namespace Gluon;
+
+public class NotifyDungeonObject
 {
-	public class NotifyDungeonObject
+	public enum NoticeType
 	{
-		public enum NoticeType
-		{
-			TargetObject,
-			Death
-		}
+		TargetObject,
+		Death
+	}
 
-		public delegate void NotifyDelegate(DungeonObjectBase sender, NoticeType notice, object param);
+	public delegate void NotifyDelegate(DungeonObjectBase sender, NoticeType notice, object param);
 
-		private static int numNotice;
+	private static int numNotice;
 
-		private NotifyDelegate[] notifyDelegates;
+	private NotifyDelegate[] notifyDelegates;
 
-		private static int GetNoticeNum()
-		{
-			return default(int);
-		}
+	private static int GetNoticeNum()
+	{
+		return default(int);
+	}
 
-		public void Attach(NoticeType notice, NotifyDelegate func)
-		{
-		}
+	public void Attach(NoticeType notice, NotifyDelegate func)
+	{
+	}
 
-		public void Detach(NoticeType notice, NotifyDelegate func)
-		{
-		}
+	public void Detach(NoticeType notice, NotifyDelegate func)
+	{
+	}
 
-		public void Detach(NotifyDelegate func)
-		{
-		}
+	public void Detach(NotifyDelegate func)
+	{
+	}
 
-		public void Detach()
-		{
-		}
+	public void Detach()
+	{
+	}
 
-		public void Notify(DungeonObjectBase sender, NoticeType notice, [Optional] object param)
-		{
-		}
+	public void Notify(DungeonObjectBase sender, NoticeType notice, [Optional] object param)
+	{
 	}
 }

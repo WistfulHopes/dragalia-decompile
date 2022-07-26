@@ -1,69 +1,68 @@
 using System.Runtime.CompilerServices;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineColorAdjustment
 {
-	public class CuttTimelineColorAdjustment
+	private CuttTimelineKeyColorAdjustmentDataList _keys;
+
+	public bool isEnableColorAdjustment
 	{
-		private CuttTimelineKeyColorAdjustmentDataList _keys;
-
-		public bool isEnableColorAdjustment
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		public float bright
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float saturation
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float contrast
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void Initialize(CuttTimelineKeyColorAdjustmentDataList keys)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	public float bright
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
+
+	public float saturation
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public float contrast
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public void Initialize(CuttTimelineKeyColorAdjustmentDataList keys)
+	{
+	}
+
+	public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	{
 	}
 }

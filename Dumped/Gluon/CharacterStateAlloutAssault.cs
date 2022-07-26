@@ -1,36 +1,35 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateAlloutAssault : CharacterStateBase
 {
-	public class CharacterStateAlloutAssault : CharacterStateBase
+	private const string EFFECT_NAME = "EFF_EIG_003";
+
+	private EffectObject _effectObject;
+
+	public bool isStateEffect
 	{
-		private const string EFFECT_NAME = "EFF_EIG_003";
-
-		private EffectObject _effectObject;
-
-		public bool isStateEffect
+		get
 		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		protected override void OnStateEnter_Internal()
+		set
 		{
 		}
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	protected override void OnStateEnter_Internal()
+	{
+	}
 
-		public override void OnDisconnectOwner()
-		{
-		}
+	public override void OnStateExit()
+	{
+	}
 
-		private void SetMeshVisibility(bool visibility)
-		{
-		}
+	public override void OnDisconnectOwner()
+	{
+	}
+
+	private void SetMeshVisibility(bool visibility)
+	{
 	}
 }

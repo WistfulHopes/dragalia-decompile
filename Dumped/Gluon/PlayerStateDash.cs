@@ -1,32 +1,31 @@
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateDash : PlayerStateBase
 {
-	public class PlayerStateDash : PlayerStateBase
+	private float elapsedTime;
+
+	private DungeonObjectContact dunObjContact;
+
+	private bool needsPlayAnimationForAutoPlayMode;
+
+	public override void OnStateEnter()
 	{
-		private float elapsedTime;
+	}
 
-		private DungeonObjectContact dunObjContact;
+	public override void OnStateExit()
+	{
+	}
 
-		private bool needsPlayAnimationForAutoPlayMode;
+	public override void OnStateUpdate()
+	{
+	}
 
-		public override void OnStateEnter()
-		{
-		}
+	protected override bool IsOperateState()
+	{
+		return default(bool);
+	}
 
-		public override void OnStateExit()
-		{
-		}
-
-		public override void OnStateUpdate()
-		{
-		}
-
-		protected override bool IsOperateState()
-		{
-			return default(bool);
-		}
-
-		private void PlayAnimation()
-		{
-		}
+	private void PlayAnimation()
+	{
 	}
 }

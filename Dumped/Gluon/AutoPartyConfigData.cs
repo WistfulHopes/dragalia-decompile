@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public class AutoPartyConfigData
 {
-	public class AutoPartyConfigData
-	{
-		public ElementalType selectElement;
+	public ElementalType selectElement;
 
-		public UnitType selectPriorityType;
+	public UnitType selectPriorityType;
 
-		public bool[] selectTargets;
-	}
+	public bool[] selectTargets;
 }

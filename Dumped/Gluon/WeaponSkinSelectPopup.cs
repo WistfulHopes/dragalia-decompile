@@ -2,65 +2,64 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class WeaponSkinSelectPopup : CommonPopup
 {
-	public class WeaponSkinSelectPopup : CommonPopup
+	[SerializeField]
+	private Image nowEquipIcon;
+
+	[SerializeField]
+	private WeaponSkinSelectListController skinListController;
+
+	[SerializeField]
+	private GameObject emptyTextObj;
+
+	private int equipWeaponId;
+
+	private CommonIconListCellData nowSelectData;
+
+	public static WeaponSkinSelectPopup Create(bool showBlackLayer = true)
 	{
-		[SerializeField]
-		private Image nowEquipIcon;
+		return null;
+	}
 
-		[SerializeField]
-		private WeaponSkinSelectListController skinListController;
+	public void InitPopup(int nowEquipWeaponId)
+	{
+	}
 
-		[SerializeField]
-		private GameObject emptyTextObj;
+	private IEnumerator LoadSkinList()
+	{
+		return null;
+	}
 
-		private int equipWeaponId;
+	private int[] CreateDataIdList()
+	{
+		return null;
+	}
 
-		private CommonIconListCellData nowSelectData;
+	public void OnSortButtonClicked()
+	{
+	}
 
-		public static WeaponSkinSelectPopup Create(bool showBlackLayer = true)
-		{
-			return null;
-		}
+	public void OnSortApplied()
+	{
+	}
 
-		public void InitPopup(int nowEquipWeaponId)
-		{
-		}
+	public int GetSelectWeaponSkinId()
+	{
+		return default(int);
+	}
 
-		private IEnumerator LoadSkinList()
-		{
-			return null;
-		}
+	private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private int[] CreateDataIdList()
-		{
-			return null;
-		}
+	private void OutButtonPressed()
+	{
+	}
 
-		public void OnSortButtonClicked()
-		{
-		}
-
-		public void OnSortApplied()
-		{
-		}
-
-		public int GetSelectWeaponSkinId()
-		{
-			return default(int);
-		}
-
-		private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private void OutButtonPressed()
-		{
-		}
-
-		private void OnIconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private void OnIconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
 	}
 }

@@ -2,45 +2,44 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortDetailCell : MonoBehaviour
 {
-	public class FortDetailCell : MonoBehaviour
+	[SerializeField]
+	private Image icon;
+
+	[SerializeField]
+	private Text facilityName;
+
+	[SerializeField]
+	private FacilityDialogContent facilityDialogContent;
+
+	public void SetContentProduction(AtgenProductionRp production, MaterialHarvester.HarvestType type)
 	{
-		[SerializeField]
-		private Image icon;
+	}
 
-		[SerializeField]
-		private Text facilityName;
+	public void SetContentWeapon(AtgenParamBonus weaponParam)
+	{
+	}
 
-		[SerializeField]
-		private FacilityDialogContent facilityDialogContent;
+	public void SetContentElement(AtgenElementBonus elementParam)
+	{
+	}
 
-		public void SetContentProduction(AtgenProductionRp production, MaterialHarvester.HarvestType type)
-		{
-		}
+	public void SetContentAllBonus(AtgenAllBonus allBonus)
+	{
+	}
 
-		public void SetContentWeapon(AtgenParamBonus weaponParam)
-		{
-		}
+	public void SetContentDragonBoost(AtgenDragonBonus dragonBoost, bool isSetAllPrameters = false)
+	{
+	}
 
-		public void SetContentElement(AtgenElementBonus elementParam)
-		{
-		}
+	public void SetContentDragonBoostTime(AtgenDragonTimeBonus dragonBoostTime)
+	{
+	}
 
-		public void SetContentAllBonus(AtgenAllBonus allBonus)
-		{
-		}
-
-		public void SetContentDragonBoost(AtgenDragonBonus dragonBoost, bool isSetAllPrameters = false)
-		{
-		}
-
-		public void SetContentDragonBoostTime(AtgenDragonTimeBonus dragonBoostTime)
-		{
-		}
-
-		private void LoadIconPrefab(string path)
-		{
-		}
+	private void LoadIconPrefab(string path)
+	{
 	}
 }

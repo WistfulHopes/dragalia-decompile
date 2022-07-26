@@ -1,24 +1,23 @@
 using System;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class AIScriptParam
 {
 	[Serializable]
-	public class AIScriptParam
+	public class Column
 	{
-		[Serializable]
-		public class Column
-		{
-			public AIScriptValue[] values;
+		public AIScriptValue[] values;
 
-			public TermsCompare.eCompare compare;
-		}
-
-		public Column[] columns;
-
-		public string ValueString => null;
-
-		public AIScriptValue Value => null;
-
-		public bool IsValueString => default(bool);
+		public TermsCompare.eCompare compare;
 	}
+
+	public Column[] columns;
+
+	public string ValueString => null;
+
+	public AIScriptValue Value => null;
+
+	public bool IsValueString => default(bool);
 }

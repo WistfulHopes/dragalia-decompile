@@ -1,44 +1,43 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class MultiPlayWaitingList
 {
-	public class MultiPlayWaitingList
+	private List<int> _actorIds;
+
+	public void StartWaitForAllOthers()
 	{
-		private List<int> _actorIds;
+	}
 
-		public void StartWaitForAllOthers()
-		{
-		}
+	public void StartWaitFor(int actorId)
+	{
+	}
 
-		public void StartWaitFor(int actorId)
-		{
-		}
+	public void Update()
+	{
+	}
 
-		public void Update()
-		{
-		}
+	public void StopWaitFor(int actorId)
+	{
+	}
 
-		public void StopWaitFor(int actorId)
-		{
-		}
+	public void Clear()
+	{
+	}
 
-		public void Clear()
-		{
-		}
+	public bool IsWaitingForActor(int actorId)
+	{
+		return default(bool);
+	}
 
-		public bool IsWaitingForActor(int actorId)
-		{
-			return default(bool);
-		}
+	public bool IsWaitingForAny()
+	{
+		return default(bool);
+	}
 
-		public bool IsWaitingForAny()
-		{
-			return default(bool);
-		}
-
-		private bool IsRoomAvailable()
-		{
-			return default(bool);
-		}
+	private bool IsRoomAvailable()
+	{
+		return default(bool);
 	}
 }

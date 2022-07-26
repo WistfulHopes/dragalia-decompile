@@ -6,88 +6,87 @@ using DG.Tweening;
 using Gluon.GraphicParameter;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharaStateActionTrigger : FastUpdateMonoBehaviour
 {
-	public class CharaStateActionTrigger : FastUpdateMonoBehaviour
+	[Serializable]
+	public class MotionState
 	{
-		[Serializable]
-		public class MotionState
+		public List<string> matchingMotionNames;
+
+		public int actionId;
+
+		public int delayFrame;
+
+		public List<int> motionTags
 		{
-			public List<string> matchingMotionNames;
-
-			public int actionId;
-
-			public int delayFrame;
-
-			public List<int> motionTags
+			[CompilerGenerated]
+			get
 			{
-				[CompilerGenerated]
-				get
-				{
-					return null;
-				}
-				[CompilerGenerated]
-				private set
-				{
-				}
+				return null;
+			}
+			[CompilerGenerated]
+			private set
+			{
 			}
 		}
+	}
 
-		[SerializeField]
-		private int initActionId;
+	[SerializeField]
+	private int initActionId;
 
-		[SerializeField]
-		private int defaultOffActionId;
+	[SerializeField]
+	private int defaultOffActionId;
 
-		private CharacterBase chara;
+	private CharacterBase chara;
 
-		private int currentTriggeredActionId;
+	private int currentTriggeredActionId;
 
-		[SerializeField]
-		private MotionState[] motionStateList;
+	[SerializeField]
+	private MotionState[] motionStateList;
 
-		private Animator animator;
+	private Animator animator;
 
-		private int prevStateHash;
+	private int prevStateHash;
 
-		private Tweener runningTweener;
+	private Tweener runningTweener;
 
-		private RenderPartsData renderPartsData;
+	private RenderPartsData renderPartsData;
 
-		private List<RenderPartsData.PartsNo> initPartsNos;
+	private List<RenderPartsData.PartsNo> initPartsNos;
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void RefreshMotionStateList()
-		{
-		}
+	private void RefreshMotionStateList()
+	{
+	}
 
-		protected override void OnEnable()
-		{
-		}
+	protected override void OnEnable()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		private bool SwitchState(MotionState state)
-		{
-			return default(bool);
-		}
+	private bool SwitchState(MotionState state)
+	{
+		return default(bool);
+	}
 
-		private void RunAction(int actionId, float delay)
-		{
-		}
+	private void RunAction(int actionId, float delay)
+	{
+	}
 
-		private void RunAction(int actionId)
-		{
-		}
+	private void RunAction(int actionId)
+	{
+	}
 
-		public List<int> GetActionIdsForLoad()
-		{
-			return null;
-		}
+	public List<int> GetActionIdsForLoad()
+	{
+		return null;
 	}
 }

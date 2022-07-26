@@ -1,23 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialAccessory : MonoBehaviour
 {
-	public class TutorialAccessory : MonoBehaviour
-	{
-		[SerializeField]
-		public GameObject blackShade;
+	[SerializeField]
+	public GameObject blackShade;
 
-		[SerializeField]
-		public List<string> reactSoundCueNameList;
+	[SerializeField]
+	public List<string> reactSoundCueNameList;
 
-		[SerializeField]
-		public string skillReactSoundCueName;
+	[SerializeField]
+	public string skillReactSoundCueName;
 
-		[SerializeField]
-		public string dragonReactSoundCueName;
+	[SerializeField]
+	public string dragonReactSoundCueName;
 
-		[SerializeField]
-		public Canvas tutorialCanvas;
-	}
+	[SerializeField]
+	public Canvas tutorialCanvas;
 }

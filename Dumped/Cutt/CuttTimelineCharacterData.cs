@@ -1,67 +1,66 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineCharacterData : ICuttTimelineSetData
 {
-	[Serializable]
-	public class CuttTimelineCharacterData : ICuttTimelineSetData
+	public enum KeyIndex
 	{
-		public enum KeyIndex
-		{
-			Transform,
-			Motion,
-			Eye,
-			Mouth,
-			Motion2,
-			Motion3,
-			Motion4,
-			Motion5,
-			GameObject,
-			Rich
-		}
+		Transform,
+		Motion,
+		Eye,
+		Mouth,
+		Motion2,
+		Motion3,
+		Motion4,
+		Motion5,
+		GameObject,
+		Rich
+	}
 
-		public CuttTimelineKeyCharacterTransformDataList transformKeys;
+	public CuttTimelineKeyCharacterTransformDataList transformKeys;
 
-		public CuttTimelineKeyCharacterMotionDataList motionKeys;
+	public CuttTimelineKeyCharacterMotionDataList motionKeys;
 
-		public CuttTimelineKeyCharacterEyeDataList eyeKeys;
+	public CuttTimelineKeyCharacterEyeDataList eyeKeys;
 
-		public CuttTimelineKeyCharacterMouthDataList mouthKeys;
+	public CuttTimelineKeyCharacterMouthDataList mouthKeys;
 
-		public CuttTimelineKeyCharacterMotionDataList motion2Keys;
+	public CuttTimelineKeyCharacterMotionDataList motion2Keys;
 
-		public CuttTimelineKeyCharacterMotionDataList motion3Keys;
+	public CuttTimelineKeyCharacterMotionDataList motion3Keys;
 
-		public CuttTimelineKeyCharacterMotionDataList motion4Keys;
+	public CuttTimelineKeyCharacterMotionDataList motion4Keys;
 
-		public CuttTimelineKeyCharacterMotionDataList motion5Keys;
+	public CuttTimelineKeyCharacterMotionDataList motion5Keys;
 
-		public CuttTimelineKeyCharacterGameObjectDataList gameObjectKeys;
+	public CuttTimelineKeyCharacterGameObjectDataList gameObjectKeys;
 
-		public CuttTimelineKeyCharacterRichDataList richKeys;
+	public CuttTimelineKeyCharacterRichDataList richKeys;
 
-		private const int arraySize = 10;
+	private const int arraySize = 10;
 
-		private ICuttTimelineKeyDataList[] keyDataListArray;
+	private ICuttTimelineKeyDataList[] keyDataListArray;
 
-		private CuttTimelineKeyDataType[] keyDataType;
+	private CuttTimelineKeyDataType[] keyDataType;
 
-		private void BuildKeyDataListArray()
-		{
-		}
+	private void BuildKeyDataListArray()
+	{
+	}
 
-		public ICuttTimelineKeyDataList GetKeyList(int index)
-		{
-			return null;
-		}
+	public ICuttTimelineKeyDataList GetKeyList(int index)
+	{
+		return null;
+	}
 
-		public ICuttTimelineKeyDataList[] GetKeyListArray()
-		{
-			return null;
-		}
+	public ICuttTimelineKeyDataList[] GetKeyListArray()
+	{
+		return null;
+	}
 
-		public CuttTimelineKeyDataType[] GetKeyTypeArray()
-		{
-			return null;
-		}
+	public CuttTimelineKeyDataType[] GetKeyTypeArray()
+	{
+		return null;
 	}
 }

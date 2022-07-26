@@ -5,114 +5,109 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestBatchRunSettingCell : MonoBehaviour
 {
-	public class QuestBatchRunSettingCell : MonoBehaviour
+	private class QuestBatchRunCellState
 	{
-		private class QuestBatchRunCellState
-		{
-			public bool isTarget;
+		public bool isTarget;
 
-			public int targetQuestId;
-		}
+		public int targetQuestId;
+	}
 
-		[SerializeField]
-		[Header("MainTitle")]
-		private Image mainTitleBanner;
+	[SerializeField]
+	private Image mainTitleBanner;
 
-		[SerializeField]
-		private Toggle isTargetToggle;
+	[SerializeField]
+	private Toggle isTargetToggle;
 
-		[SerializeField]
-		private CheckBoxAnimation isTargetToggleAnimationComponent;
+	[SerializeField]
+	private CheckBoxAnimation isTargetToggleAnimationComponent;
 
-		[SerializeField]
-		[Header("QuestDifficulty")]
-		private TabBase questDifficultyTabBase;
+	[SerializeField]
+	private TabBase questDifficultyTabBase;
 
-		[SerializeField]
-		private List<Text> questDifficultyTabTextList;
+	[SerializeField]
+	private List<Text> questDifficultyTabTextList;
 
-		[SerializeField]
-		[Header("QuestElemental")]
-		private GameObject questElementalPanel;
+	[SerializeField]
+	private GameObject questElementalPanel;
 
-		[SerializeField]
-		private List<Toggle> questElementalToggleList;
+	[SerializeField]
+	private List<Toggle> questElementalToggleList;
 
-		[SerializeField]
-		[Header("Campaign")]
-		private CampaignButtons campaignButton;
+	[SerializeField]
+	private CampaignButtons campaignButton;
 
-		private QuestBatchRunCellState cellState;
+	private QuestBatchRunCellState cellState;
 
-		private int questEventId;
+	private int questEventId;
 
-		private Dictionary<ElementalType, List<QuestMultipleSkipElement>> skipableQuestDataTable;
+	private Dictionary<ElementalType, List<QuestMultipleSkipElement>> skipableQuestDataTable;
 
-		private static readonly string questBatchRunSettingKeyPrefix;
+	private static readonly string questBatchRunSettingKeyPrefix;
 
-		private ElementalType selectedElementalType;
+	private ElementalType selectedElementalType;
 
-		private Action onIsTargetChangedCallback;
+	private Action onIsTargetChangedCallback;
 
-		public bool IsTargetQuest()
-		{
-			return default(bool);
-		}
+	public bool IsTargetQuest()
+	{
+		return default(bool);
+	}
 
-		private bool ExistEachElementalQuest(int eventId)
-		{
-			return default(bool);
-		}
+	private bool ExistEachElementalQuest(int eventId)
+	{
+		return default(bool);
+	}
 
-		private void Initialize()
-		{
-		}
+	private void Initialize()
+	{
+	}
 
-		private void UpdateUIByIsTargetToggle(bool isOn)
-		{
-		}
+	private void UpdateUIByIsTargetToggle(bool isOn)
+	{
+	}
 
-		private void EnableDifficultyTabButtons(bool isEnabled)
-		{
-		}
+	private void EnableDifficultyTabButtons(bool isEnabled)
+	{
+	}
 
-		private void UpdateDifficultyButtons()
-		{
-		}
+	private void UpdateDifficultyButtons()
+	{
+	}
 
-		private void UpdateCellStateData()
-		{
-		}
+	private void UpdateCellStateData()
+	{
+	}
 
-		private void SetCampaignData([In] ref List<QuestMultipleSkipElement> skipableQuestDataList)
-		{
-		}
+	private void SetCampaignData([In] ref List<QuestMultipleSkipElement> skipableQuestDataList)
+	{
+	}
 
-		public void OnIsTargetCheckBoxPressed(Toggle isTargetCheckBox)
-		{
-		}
+	public void OnIsTargetCheckBoxPressed(Toggle isTargetCheckBox)
+	{
+	}
 
-		public void OnElementalTogglePressed(int elementalToggleIndex)
-		{
-		}
+	public void OnElementalTogglePressed(int elementalToggleIndex)
+	{
+	}
 
-		public void AddIsTargetChangedCallback(Action callback)
-		{
-		}
+	public void AddIsTargetChangedCallback(Action callback)
+	{
+	}
 
-		public void SetContents(int targetEventId, [In] ref List<QuestMultipleSkipElement> skipableQuestDataList)
-		{
-		}
+	public void SetContents(int targetEventId, [In] ref List<QuestMultipleSkipElement> skipableQuestDataList)
+	{
+	}
 
-		public void SaveSettingData()
-		{
-		}
+	public void SaveSettingData()
+	{
+	}
 
-		public int TakeQuestId()
-		{
-			return default(int);
-		}
+	public int TakeQuestId()
+	{
+		return default(int);
 	}
 }

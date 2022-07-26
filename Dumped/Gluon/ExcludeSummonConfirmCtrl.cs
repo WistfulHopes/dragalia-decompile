@@ -1,46 +1,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ExcludeSummonConfirmCtrl : TableViewController<ExcludeSummonConfirmCellData>
 {
-	public class ExcludeSummonConfirmCtrl : TableViewController<ExcludeSummonConfirmCellData>
+	[SerializeField]
+	private AnimationListOneCol listAnimation;
+
+	[SerializeField]
+	private float delayFrame;
+
+	private const float cellHeight = 148f;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		private AnimationListOneCol listAnimation;
+	}
 
-		[SerializeField]
-		private float delayFrame;
+	public void Init(int summonId, GiftType entityType, List<int> idList)
+	{
+	}
 
-		private const float cellHeight = 148f;
+	public void ReloadContents(List<ExcludeSummonConfirmCellData> idList)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override TableViewCell<ExcludeSummonConfirmCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		public void Init(int summonId, GiftType entityType, List<int> idList)
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public void ReloadContents(List<ExcludeSummonConfirmCellData> idList)
-		{
-		}
+	public void StartEnterAnimation()
+	{
+	}
 
-		protected override TableViewCell<ExcludeSummonConfirmCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public void StartEnterAnimation()
-		{
-		}
-
-		public void StartExitAnimation()
-		{
-		}
+	public void StartExitAnimation()
+	{
 	}
 }

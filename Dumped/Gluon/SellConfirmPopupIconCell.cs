@@ -1,18 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SellConfirmPopupIconCell : MonoBehaviour
 {
-	public class SellConfirmPopupIconCell : MonoBehaviour
+	public Image sellIcon;
+
+	public Text plusText;
+
+	public Image[] talismanAbilityIcons;
+
+	public void SetupCell(ConfigDialogSortData data)
 	{
-		public Image sellIcon;
-
-		public Text plusText;
-
-		public Image[] talismanAbilityIcons;
-
-		public void SetupCell(ConfigDialogSortData data)
-		{
-		}
 	}
 }

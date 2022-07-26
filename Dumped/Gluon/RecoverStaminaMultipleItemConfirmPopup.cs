@@ -2,110 +2,106 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class RecoverStaminaMultipleItemConfirmPopup : PopupBase
 {
-	public class RecoverStaminaMultipleItemConfirmPopup : PopupBase
+	[SerializeField]
+	private Text commentText;
+
+	[SerializeField]
+	private GameObject LackStaminaTextParent;
+
+	[SerializeField]
+	private Text insufficientStaminaCommentText;
+
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Text beforeStaminaText;
+
+	[SerializeField]
+	private Text afterStaminaText;
+
+	[SerializeField]
+	private Text staminaTabText;
+
+	[SerializeField]
+	private Text staminaExceedsLimitText;
+
+	[SerializeField]
+	private Button useButton;
+
+	[SerializeField]
+	private RecoverStaminaMultiItemListController controller;
+
+	private int _afterStamina;
+
+	private bool isCreateRecoverDonePopup;
+
+	private StaminaUtilBase staminaUtil;
+
+	private int beforeStamina
 	{
-		[SerializeField]
-		[Header("Contents")]
-		private Text commentText;
-
-		[SerializeField]
-		private GameObject LackStaminaTextParent;
-
-		[SerializeField]
-		private Text insufficientStaminaCommentText;
-
-		[SerializeField]
-		private Text titleText;
-
-		[SerializeField]
-		[Header("BeforeAfter")]
-		private Text beforeStaminaText;
-
-		[SerializeField]
-		private Text afterStaminaText;
-
-		[SerializeField]
-		private Text staminaTabText;
-
-		[SerializeField]
-		[Header("OnOff")]
-		private Text staminaExceedsLimitText;
-
-		[SerializeField]
-		private Button useButton;
-
-		[SerializeField]
-		private RecoverStaminaMultiItemListController controller;
-
-		private int _afterStamina;
-
-		private bool isCreateRecoverDonePopup;
-
-		private StaminaUtilBase staminaUtil;
-
-		private int beforeStamina
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public int afterStamina
-		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
-		}
-
-		public int absoluteStaminaMax
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public static RecoverStaminaMultipleItemConfirmPopup CreateWithModel(bool isCreateRecoverDonePopup)
-		{
-			return null;
-		}
-
-		private void Setup(bool isCreateRecoverDonePopup)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private bool IsUseButtonInteractable()
+	public int afterStamina
+	{
+		get
 		{
-			return default(bool);
+			return default(int);
 		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnUseButtonPressed()
+		set
 		{
 		}
+	}
 
-		public void OnCloseButtonPressed()
+	public int absoluteStaminaMax
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
+
+	public static RecoverStaminaMultipleItemConfirmPopup CreateWithModel(bool isCreateRecoverDonePopup)
+	{
+		return null;
+	}
+
+	private void Setup(bool isCreateRecoverDonePopup)
+	{
+	}
+
+	private bool IsUseButtonInteractable()
+	{
+		return default(bool);
+	}
+
+	protected override void Start()
+	{
+	}
+
+	public void OnUseButtonPressed()
+	{
+	}
+
+	public void OnCloseButtonPressed()
+	{
 	}
 }

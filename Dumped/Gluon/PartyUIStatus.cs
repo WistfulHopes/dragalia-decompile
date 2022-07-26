@@ -5,254 +5,253 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyUIStatus : MonoBehaviour
 {
-	public class PartyUIStatus : MonoBehaviour
+	public enum AttributeMatchEffectParentType
 	{
-		public enum AttributeMatchEffectParentType
+		Weapon,
+		Dragon,
+		Max
+	}
+
+	protected const int maxNameFrameStrLength = 10;
+
+	protected const int maxNameFrameEnStrLength = 20;
+
+	public PartyUICanvas canvas;
+
+	public RawImage render3dImage;
+
+	public int myIndex;
+
+	public CanvasGroup activeCanvasGroup;
+
+	public Text lvText;
+
+	public Image elementIcon;
+
+	public Image weaponTypeIcon;
+
+	public Image dragonIcon;
+
+	public Image dragonBlankPlusIcon;
+
+	public Image weaponIcon;
+
+	public Image[] crestIcons;
+
+	public Button[] crestIconButtons;
+
+	public Image[] crestBlankPlusIcons;
+
+	public Image[] crestLockIcons;
+
+	public CommonUnionIcon[] crestUnionIcons;
+
+	public Image charaStatusUIBase;
+
+	public Text equipEditText;
+
+	public Button emptyFrameButton;
+
+	public Text SizeControllText;
+
+	public Text NameText;
+
+	public Image baseImage;
+
+	public Image baseImageEmpty;
+
+	public Text totalPlusText;
+
+	public GameObject skinIconObj;
+
+	public Image skill3Icon;
+
+	public Image skill4Icon;
+
+	[SerializeField]
+	protected GameObject emptyEditSkillBaseObject;
+
+	[SerializeField]
+	protected GameObject[] crestEmptyMessageObject;
+
+	[SerializeField]
+	private GameObject normalModeParent;
+
+	[SerializeField]
+	private GameObject crestMode1Parent;
+
+	[SerializeField]
+	private GameObject crestMode2Parent;
+
+	private int _curCharaId;
+
+	public GameObject[] rarityIcons;
+
+	public GameObject[] attributeMatchEffects;
+
+	public bool[] isFinishSettingAttributeMatchEffect;
+
+	private FlRoot[] _attributeMatchEffectsFlRoot;
+
+	public const string attributeMatchEffectPathBase = "Prefabs/OutGame/Party/Flash/pf_AttributeMatchEffect";
+
+	protected int curCharaId
+	{
+		get
 		{
-			Weapon,
-			Dragon,
-			Max
+			return default(int);
 		}
-
-		protected const int maxNameFrameStrLength = 10;
-
-		protected const int maxNameFrameEnStrLength = 20;
-
-		public PartyUICanvas canvas;
-
-		public RawImage render3dImage;
-
-		public int myIndex;
-
-		public CanvasGroup activeCanvasGroup;
-
-		public Text lvText;
-
-		public Image elementIcon;
-
-		public Image weaponTypeIcon;
-
-		public Image dragonIcon;
-
-		public Image dragonBlankPlusIcon;
-
-		public Image weaponIcon;
-
-		public Image[] crestIcons;
-
-		public Button[] crestIconButtons;
-
-		public Image[] crestBlankPlusIcons;
-
-		public Image[] crestLockIcons;
-
-		public CommonUnionIcon[] crestUnionIcons;
-
-		public Image charaStatusUIBase;
-
-		public Text equipEditText;
-
-		public Button emptyFrameButton;
-
-		public Text SizeControllText;
-
-		public Text NameText;
-
-		public Image baseImage;
-
-		public Image baseImageEmpty;
-
-		public Text totalPlusText;
-
-		public GameObject skinIconObj;
-
-		public Image skill3Icon;
-
-		public Image skill4Icon;
-
-		[SerializeField]
-		protected GameObject emptyEditSkillBaseObject;
-
-		[SerializeField]
-		protected GameObject[] crestEmptyMessageObject;
-
-		[SerializeField]
-		private GameObject normalModeParent;
-
-		[SerializeField]
-		private GameObject crestMode1Parent;
-
-		[SerializeField]
-		private GameObject crestMode2Parent;
-
-		private int _curCharaId;
-
-		public GameObject[] rarityIcons;
-
-		public GameObject[] attributeMatchEffects;
-
-		public bool[] isFinishSettingAttributeMatchEffect;
-
-		private FlRoot[] _attributeMatchEffectsFlRoot;
-
-		public const string attributeMatchEffectPathBase = "Prefabs/OutGame/Party/Flash/pf_AttributeMatchEffect";
-
-		protected int curCharaId
-		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
-		}
-
-		private void Awake()
+		set
 		{
 		}
+	}
 
-		public void ShowNormalUI()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void ShowCrestUI(PartyModel.PartySceneUnitStatusMode statusMode)
-		{
-		}
+	public void ShowNormalUI()
+	{
+	}
 
-		public void Reload()
-		{
-		}
+	public void ShowCrestUI(PartyModel.PartySceneUnitStatusMode statusMode)
+	{
+	}
 
-		protected virtual void SetEmptyStatus()
-		{
-		}
+	public void Reload()
+	{
+	}
 
-		public virtual void Reload(int charaId, ulong dragonKeyId, ulong weaponBodyId, int type1Crest1Id, int type1Crest2Id, int type1Crest3Id, int type2Crest1Id, int type2Crest2Id, int type3Crest1Id, int type3Crest2Id, ulong talismanKeyId, int skill3CharaId = 0, int skill4CharaId = 0)
-		{
-		}
+	protected virtual void SetEmptyStatus()
+	{
+	}
 
-		protected void SetCrestIconState(Image icon, Image plusIcon, Image lockIcon, Button crestButton, int slotIndex, int baseSlotCount, int maxSlotCount, int unlockedSlotCount)
-		{
-		}
+	public virtual void Reload(int charaId, ulong dragonKeyId, ulong weaponBodyId, int type1Crest1Id, int type1Crest2Id, int type1Crest3Id, int type2Crest1Id, int type2Crest2Id, int type3Crest1Id, int type3Crest2Id, ulong talismanKeyId, int skill3CharaId = 0, int skill4CharaId = 0)
+	{
+	}
 
-		private void EquipChangeSetting()
-		{
-		}
+	protected void SetCrestIconState(Image icon, Image plusIcon, Image lockIcon, Button crestButton, int slotIndex, int baseSlotCount, int maxSlotCount, int unlockedSlotCount)
+	{
+	}
 
-		public virtual void OnEquipChangeButtonPressed()
-		{
-		}
+	private void EquipChangeSetting()
+	{
+	}
 
-		public void OnStatusPressed()
-		{
-		}
+	public virtual void OnEquipChangeButtonPressed()
+	{
+	}
 
-		public void DragonEquipIconPressed(int tag)
-		{
-		}
+	public void OnStatusPressed()
+	{
+	}
 
-		public void WeaponEquipIconPressed(int tag)
-		{
-		}
+	public void DragonEquipIconPressed(int tag)
+	{
+	}
 
-		public void OnCrestIconPressed(int crestIndex)
-		{
-		}
+	public void WeaponEquipIconPressed(int tag)
+	{
+	}
 
-		public void OnLockedSlotPressed()
-		{
-		}
+	public void OnCrestIconPressed(int crestIndex)
+	{
+	}
 
-		public void Skill3EquipIconPressed()
-		{
-		}
+	public void OnLockedSlotPressed()
+	{
+	}
 
-		public void Skill4EquipIconPressed()
-		{
-		}
+	public void Skill3EquipIconPressed()
+	{
+	}
 
-		public void OnShareSkillPopupEnd()
-		{
-		}
+	public void Skill4EquipIconPressed()
+	{
+	}
 
-		public void EmptyFramePressed(int tag)
-		{
-		}
+	public void OnShareSkillPopupEnd()
+	{
+	}
 
-		public void OnDragonIconLongPressed()
-		{
-		}
+	public void EmptyFramePressed(int tag)
+	{
+	}
 
-		public void OnWeaponIconLongPressed()
-		{
-		}
+	public void OnDragonIconLongPressed()
+	{
+	}
 
-		public void OnCrestIconLongPressed(int crestIndex)
-		{
-		}
+	public void OnWeaponIconLongPressed()
+	{
+	}
 
-		public void OnTalismanIconLongPressed()
-		{
-		}
+	public void OnCrestIconLongPressed(int crestIndex)
+	{
+	}
 
-		public void OnSkill3IconLongPressed()
-		{
-		}
+	public void OnTalismanIconLongPressed()
+	{
+	}
 
-		public void OnSkill4IconLongPressed()
-		{
-		}
+	public void OnSkill3IconLongPressed()
+	{
+	}
 
-		protected void CreateAttributeMatchEffect(ElementalType elementalType, AttributeMatchEffectParentType parentType, bool isSync, bool isStay)
-		{
-		}
+	public void OnSkill4IconLongPressed()
+	{
+	}
 
-		private void SetAttributeMatchEffect(AttributeMatchEffectParentType parentType)
-		{
-		}
+	protected void CreateAttributeMatchEffect(ElementalType elementalType, AttributeMatchEffectParentType parentType, bool isSync, bool isStay)
+	{
+	}
 
-		public virtual void SyncAttributeMatchEffect([Optional] AutoPartyConfigData selectData)
-		{
-		}
+	private void SetAttributeMatchEffect(AttributeMatchEffectParentType parentType)
+	{
+	}
 
-		public IEnumerator WaitExistFlRootMotion(UnityAction callback, AttributeMatchEffectParentType parentType, bool withWaitSetAttributeMatchEffect = false)
-		{
-			return null;
-		}
+	public virtual void SyncAttributeMatchEffect([Optional] AutoPartyConfigData selectData)
+	{
+	}
 
-		public FlRoot GetAttributeMatchEffectsFlRoot(AttributeMatchEffectParentType parentType)
-		{
-			return null;
-		}
+	public IEnumerator WaitExistFlRootMotion(UnityAction callback, AttributeMatchEffectParentType parentType, bool withWaitSetAttributeMatchEffect = false)
+	{
+		return null;
+	}
 
-		protected void DestroyAttributeMatchEffect(AttributeMatchEffectParentType parentType)
-		{
-		}
+	public FlRoot GetAttributeMatchEffectsFlRoot(AttributeMatchEffectParentType parentType)
+	{
+		return null;
+	}
 
-		private void OnDestroy()
-		{
-		}
+	protected void DestroyAttributeMatchEffect(AttributeMatchEffectParentType parentType)
+	{
+	}
 
-		public static string GetMotionLabel(AttributeMatchEffectParentType parentType)
-		{
-			return null;
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public static string GetAttributePathAdder(ElementalType element)
-		{
-			return null;
-		}
+	public static string GetMotionLabel(AttributeMatchEffectParentType parentType)
+	{
+		return null;
+	}
 
-		public static void CorrectDisplayAttributeMatchEffect(AttributeMatchEffectParentType parentType, int charaId, int parentTargetId, UnityAction createCallback, UnityAction destroyCallback)
-		{
-		}
+	public static string GetAttributePathAdder(ElementalType element)
+	{
+		return null;
+	}
 
-		public static bool IsAutoPartySelectTargetAttributeMatchEffect(AutoPartyConfigData selectData, AttributeMatchEffectParentType parentType)
-		{
-			return default(bool);
-		}
+	public static void CorrectDisplayAttributeMatchEffect(AttributeMatchEffectParentType parentType, int charaId, int parentTargetId, UnityAction createCallback, UnityAction destroyCallback)
+	{
+	}
+
+	public static bool IsAutoPartySelectTargetAttributeMatchEffect(AutoPartyConfigData selectData, AttributeMatchEffectParentType parentType)
+	{
+		return default(bool);
 	}
 }

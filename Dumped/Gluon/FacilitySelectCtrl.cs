@@ -2,45 +2,43 @@ using System.Collections.Generic;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FacilitySelectCtrl : FacilityContentBase
 {
-	public class FacilitySelectCtrl : FacilityContentBase
+	public class FacilityBuildingData
 	{
-		public class FacilityBuildingData
-		{
-			public FortPlantDataElement plantElement;
+		public FortPlantDataElement plantElement;
 
-			public Facility facility;
+		public Facility facility;
 
-			public int currentCount;
+		public int currentCount;
 
-			public int sortId;
+		public int sortId;
 
-			public FortModel.BuildFacilityResult canBuild;
-		}
+		public FortModel.BuildFacilityResult canBuild;
+	}
 
-		[SerializeField]
-		[Header("æ\u0096½è\u00a8­Group")]
-		public FortMenuGroupType facilityGroup;
+	[SerializeField]
+	public FortMenuGroupType facilityGroup;
 
-		[SerializeField]
-		protected RectTransform prefab;
+	[SerializeField]
+	protected RectTransform prefab;
 
-		[SerializeField]
-		protected GameObject dialogObj;
+	[SerializeField]
+	protected GameObject dialogObj;
 
-		private List<FacilityBuildingData> plantList;
+	private List<FacilityBuildingData> plantList;
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		protected virtual void SetContent(FacilityBuildingData plantData, RectTransform cellObj)
-		{
-		}
+	protected virtual void SetContent(FacilityBuildingData plantData, RectTransform cellObj)
+	{
+	}
 
-		public override void SetNewFlagToFalse()
-		{
-		}
+	public override void SetNewFlagToFalse()
+	{
 	}
 }

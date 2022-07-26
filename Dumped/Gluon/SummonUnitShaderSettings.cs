@@ -1,9 +1,8 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class SummonUnitShaderSettings : SceneShaderSettings
 {
-	[ExecuteAlways]
-	public class SummonUnitShaderSettings : SceneShaderSettings
-	{
-	}
 }

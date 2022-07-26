@@ -1,50 +1,62 @@
+using System.Runtime.CompilerServices;
 using Cute.Core;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DropItemBright : FastUpdateMonoBehaviour
 {
-	public class DropItemBright : FastUpdateMonoBehaviour
+	[SerializeField]
+	private Image baseImage;
+
+	[SerializeField]
+	private Image brightImage0;
+
+	[SerializeField]
+	private Image brightImage1;
+
+	private float animTime;
+
+	private const float animDuration = 8f;
+
+	private const float animDurationHalf = 4f;
+
+	public bool isPlaying
 	{
-		[SerializeField]
-		[Header("component")]
-		private Image baseImage;
-
-		[SerializeField]
-		private Image brightImage0;
-
-		[SerializeField]
-		private Image brightImage1;
-
-		private Tweener baseTweener;
-
-		private Tweener brightTweener;
-
-		public static DropItemBright Create(GameObject parent, GameObject prefab)
-		{
-			return null;
-		}
-
-		private void Initialize()
-		{
-		}
-
-		public void Play()
-		{
-		}
-
-		public bool IsPlaying()
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public void Stop()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetAlpha(float alpha)
-		{
-		}
+	public static DropItemBright Create(GameObject parent, GameObject prefab)
+	{
+		return null;
+	}
+
+	private void Initialize()
+	{
+	}
+
+	public override void FastUpdate()
+	{
+	}
+
+	public void Play()
+	{
+	}
+
+	public void Stop()
+	{
+	}
+
+	public void SetFade(float alpha)
+	{
 	}
 }

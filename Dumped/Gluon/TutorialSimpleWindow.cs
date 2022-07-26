@@ -1,76 +1,74 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialSimpleWindow : MonoBehaviour
 {
-	public class TutorialSimpleWindow : MonoBehaviour
+	public enum Menu
 	{
-		public enum Menu
-		{
-			MyPage,
-			Growth,
-			Party,
-			Battle,
-			Fort,
-			Summon
-		}
+		MyPage,
+		Growth,
+		Party,
+		Battle,
+		Fort,
+		Summon
+	}
 
-		[SerializeField]
-		[Header("ã\u0083¡ã\u0083\u008bã\u0083¥ã\u0083¼")]
-		public Footer.MenuTab menuTab;
+	[SerializeField]
+	public Footer.MenuTab menuTab;
 
-		[SerializeField]
-		[TextArea]
-		public string text;
+	[SerializeField]
+	[TextArea]
+	public string text;
 
-		[SerializeField]
-		protected Image frame;
+	[SerializeField]
+	protected Image frame;
 
-		[SerializeField]
-		protected Text title;
+	[SerializeField]
+	protected Text title;
 
-		[SerializeField]
-		protected RubySupportedText textObj;
+	[SerializeField]
+	protected RubySupportedText textObj;
 
-		protected Color whiteColor;
+	protected Color whiteColor;
 
-		protected Color blackColor;
+	protected Color blackColor;
 
-		protected Color blackOutlineColor;
+	protected Color blackOutlineColor;
 
-		protected float textWidthMargin;
+	protected float textWidthMargin;
 
-		protected float textHeightMargin;
+	protected float textHeightMargin;
 
-		protected float textPositionOffsetY;
+	protected float textPositionOffsetY;
 
-		public static TutorialSimpleWindow CreateTutorialSimpleWindow(Canvas canvas)
-		{
-			return null;
-		}
+	public static TutorialSimpleWindow CreateTutorialSimpleWindow(Canvas canvas)
+	{
+		return null;
+	}
 
-		protected virtual void Awake()
-		{
-		}
+	protected virtual void Awake()
+	{
+	}
 
-		protected virtual void Start()
-		{
-		}
+	protected virtual void Start()
+	{
+	}
 
-		public void Close()
-		{
-		}
+	public void Close()
+	{
+	}
 
-		public void SetTitleText(string str)
-		{
-		}
+	public void SetTitleText(string str)
+	{
+	}
 
-		public void SetTitleSize(Vector2 vec)
-		{
-		}
+	public void SetTitleSize(Vector2 vec)
+	{
+	}
 
-		public void SetText(string str)
-		{
-		}
+	public void SetText(string str)
+	{
 	}
 }

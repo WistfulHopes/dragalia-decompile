@@ -1,45 +1,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BattleRoyalSelectJobPopup : PopupBase
 {
-	public class BattleRoyalSelectJobPopup : PopupBase
+	public enum Mode
 	{
-		public enum Mode
-		{
-			SelectJob,
-			SelectSkin
-		}
+		SelectJob,
+		SelectSkin
+	}
 
-		[SerializeField]
-		[Header("Content")]
-		public RectTransform layoutParent;
+	[SerializeField]
+	public RectTransform layoutParent;
 
-		public BattleRoyalJobCell templateCell;
+	public BattleRoyalJobCell templateCell;
 
-		public GameObject[] selectJobGOs;
+	public GameObject[] selectJobGOs;
 
-		public GameObject[] selectSkinGOs;
+	public GameObject[] selectSkinGOs;
 
-		private Mode mode;
+	private Mode mode;
 
-		private Dictionary<WeaponType, BattleRoyalJobCell> cellList;
+	private Dictionary<WeaponType, BattleRoyalJobCell> cellList;
 
-		public static BattleRoyalSelectJobPopup Create(Mode mode)
-		{
-			return null;
-		}
+	public static BattleRoyalSelectJobPopup Create(Mode mode)
+	{
+		return null;
+	}
 
-		private void Setup(Mode mode)
-		{
-		}
+	private void Setup(Mode mode)
+	{
+	}
 
-		private void UpdateSelectedSkin(WeaponType wt)
-		{
-		}
+	private void UpdateSelectedSkin(WeaponType wt)
+	{
+	}
 
-		private void OnDecided(WeaponType wt, bool isValid)
-		{
-		}
+	private void OnDecided(WeaponType wt, bool isValid)
+	{
 	}
 }

@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandChapterIntroductionNext : IStoryCommand
 {
-	[CommandName("chapter_intro_next")]
-	public class StoryCommandChapterIntroductionNext : IStoryCommand
+	public void Start(string label)
 	{
-		public void Start(string label)
-		{
-		}
 	}
 }

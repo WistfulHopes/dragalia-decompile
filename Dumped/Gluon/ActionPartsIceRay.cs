@@ -1,39 +1,38 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsIceRay : ActionParts
 {
-	public class ActionPartsIceRay : ActionParts
+	private readonly IceRayData _partsData;
+
+	private SheruSheiruUniqueCtrl _ctrl;
+
+	private Transform startTransform;
+
+	private bool OverlapSphereChecked;
+
+	private int layerMask;
+
+	public ActionPartsIceRay(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly IceRayData _partsData;
+	}
 
-		private SheruSheiruUniqueCtrl _ctrl;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		private Transform startTransform;
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		private bool OverlapSphereChecked;
+	protected override void OnFinish()
+	{
+	}
 
-		private int layerMask;
-
-		public ActionPartsIceRay(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		public override void Initialize(CharacterBase chara)
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		protected override void OnFinish()
-		{
-		}
-
-		private void CalcStartTransfrom()
-		{
-		}
+	private void CalcStartTransfrom()
+	{
 	}
 }

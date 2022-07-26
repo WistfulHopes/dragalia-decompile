@@ -1,9 +1,8 @@
-namespace Gluon
-{
-	public class SellIconListCellData : AmuletInfoListCellData
-	{
-		public int selectNumber;
+namespace Gluon;
 
-		public bool isSelectLock;
-	}
+public class SellIconListCellData : AmuletInfoListCellData
+{
+	public int selectNumber;
+
+	public bool isSelectLock;
 }

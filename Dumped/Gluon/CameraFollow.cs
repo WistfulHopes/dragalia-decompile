@@ -1,71 +1,69 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CameraFollow : MonoBehaviour
 {
-	[AddComponentMenu("Camera-Control/Smooth Follow")]
-	public class CameraFollow : MonoBehaviour
+	private struct ShakeCtrl
 	{
-		private struct ShakeCtrl
-		{
-			public bool isActive;
+		public bool isActive;
 
-			public float sec;
+		public float sec;
 
-			public float power;
+		public float power;
 
-			public bool isResume;
-		}
+		public bool isResume;
+	}
 
-		public Transform target;
+	public Transform target;
 
-		[SerializeField]
-		private float distance;
+	[SerializeField]
+	private float distance;
 
-		[SerializeField]
-		private float minDistance;
+	[SerializeField]
+	private float minDistance;
 
-		[SerializeField]
-		private float maxDistance;
+	[SerializeField]
+	private float maxDistance;
 
-		private float addDistance;
+	private float addDistance;
 
-		[SerializeField]
-		private float distanceDamping;
+	[SerializeField]
+	private float distanceDamping;
 
-		private bool _isZoomControl;
+	private bool _isZoomControl;
 
-		private float zoomRatio;
+	private float zoomRatio;
 
-		[SerializeField]
-		private Vector3 rotate;
+	[SerializeField]
+	private Vector3 rotate;
 
-		private ShakeCtrl shakeCtrl;
+	private ShakeCtrl shakeCtrl;
 
-		public bool isZoomControl => default(bool);
+	public bool isZoomControl => default(bool);
 
-		private void LateUpdate()
-		{
-		}
+	private void LateUpdate()
+	{
+	}
 
-		public void ZoomOutWithDash()
-		{
-		}
+	public void ZoomOutWithDash()
+	{
+	}
 
-		public void SetShake(float sec = 0.2f, float power = 0.08f, bool resume = false)
-		{
-		}
+	public void SetShake(float sec = 0.2f, float power = 0.08f, bool resume = false)
+	{
+	}
 
-		private void UpdateShakeCtrl(Transform target)
-		{
-		}
+	private void UpdateShakeCtrl(Transform target)
+	{
+	}
 
-		public void AddDistance(float value)
-		{
-		}
+	public void AddDistance(float value)
+	{
+	}
 
-		public float GetDistance()
-		{
-			return default(float);
-		}
+	public float GetDistance()
+	{
+		return default(float);
 	}
 }

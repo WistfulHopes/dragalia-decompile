@@ -1,113 +1,110 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FingerUI : MonoBehaviour
 {
-	public class FingerUI : MonoBehaviour
+	[SerializeField]
+	private RectTransform pointNode;
+
+	[SerializeField]
+	private RectTransform rotNode;
+
+	[SerializeField]
+	private int repeatCount;
+
+	[SerializeField]
+	private float moveTime;
+
+	[SerializeField]
+	private float waitTime;
+
+	[SerializeField]
+	private float distance;
+
+	[SerializeField]
+	private float swipeRotate;
+
+	[SerializeField]
+	private float swipeDistance;
+
+	[SerializeField]
+	private float swipeTime1;
+
+	[SerializeField]
+	private float swipeWaitTime;
+
+	[SerializeField]
+	private float swipeTime2;
+
+	private int count;
+
+	private Tweener tweenerPoint;
+
+	private Tweener tweenerSwipe;
+
+	private RectTransform rectTransform;
+
+	public static FingerUI Create(GameObject parent, int siblingIndex = -1)
 	{
-		[SerializeField]
-		private RectTransform pointNode;
+		return null;
+	}
 
-		[SerializeField]
-		private RectTransform rotNode;
+	private void Initialize()
+	{
+	}
 
-		[SerializeField]
-		[Header("pointing")]
-		private int repeatCount;
+	public bool IsActive()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private float moveTime;
+	public void Open(Vector2 pos, float rotateZ = 0f, bool isLeft = false)
+	{
+	}
 
-		[SerializeField]
-		private float waitTime;
+	public void OpenSwipe(Vector2 pos)
+	{
+	}
 
-		[SerializeField]
-		private float distance;
+	public void Close()
+	{
+	}
 
-		[SerializeField]
-		[Header("swipe")]
-		private float swipeRotate;
+	public void Release()
+	{
+	}
 
-		[SerializeField]
-		private float swipeDistance;
+	private void DoAnimation(bool isLeft)
+	{
+	}
 
-		[SerializeField]
-		private float swipeTime1;
+	public void SetPosition(Vector2 pos)
+	{
+	}
 
-		[SerializeField]
-		private float swipeWaitTime;
+	private void OnUpdatePoint(float value)
+	{
+	}
 
-		[SerializeField]
-		private float swipeTime2;
+	private void OnCompletePoint0()
+	{
+	}
 
-		private int count;
+	private void OnCompletePoint1()
+	{
+	}
 
-		private Tweener tweenerPoint;
+	private void OnUpdateSwipe(float value)
+	{
+	}
 
-		private Tweener tweenerSwipe;
+	private void OnCompleteSwipe0()
+	{
+	}
 
-		private RectTransform rectTransform;
-
-		public static FingerUI Create(GameObject parent, int siblingIndex = -1)
-		{
-			return null;
-		}
-
-		private void Initialize()
-		{
-		}
-
-		public bool IsActive()
-		{
-			return default(bool);
-		}
-
-		public void Open(Vector2 pos, float rotateZ = 0f, bool isLeft = false)
-		{
-		}
-
-		public void OpenSwipe(Vector2 pos)
-		{
-		}
-
-		public void Close()
-		{
-		}
-
-		public void Release()
-		{
-		}
-
-		private void DoAnimation(bool isLeft)
-		{
-		}
-
-		public void SetPosition(Vector2 pos)
-		{
-		}
-
-		private void OnUpdatePoint(float value)
-		{
-		}
-
-		private void OnCompletePoint0()
-		{
-		}
-
-		private void OnCompletePoint1()
-		{
-		}
-
-		private void OnUpdateSwipe(float value)
-		{
-		}
-
-		private void OnCompleteSwipe0()
-		{
-		}
-
-		private void OnCompleteSwipe1()
-		{
-		}
+	private void OnCompleteSwipe1()
+	{
 	}
 }

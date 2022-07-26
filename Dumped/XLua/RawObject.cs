@@ -1,7 +1,6 @@
-namespace XLua
+namespace XLua;
+
+public interface RawObject
 {
-	public interface RawObject
-	{
-		object Target { get; }
-	}
+	object Target { get; }
 }

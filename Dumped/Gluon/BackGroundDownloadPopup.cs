@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public class BackGroundDownloadPopup : CommonPopup
 {
-	public class BackGroundDownloadPopup : CommonPopup
+	public static BackGroundDownloadPopup CreateBackGroundDownloadPopup()
 	{
-		public static BackGroundDownloadPopup CreateBackGroundDownloadPopup()
-		{
-			return null;
-		}
+		return null;
 	}
 }

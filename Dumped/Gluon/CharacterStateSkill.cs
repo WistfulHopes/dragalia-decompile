@@ -4,166 +4,165 @@ using System.Runtime.InteropServices;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateSkill : CharacterStateBase
 {
-	public class CharacterStateSkill : CharacterStateBase
+	private int currSkillIndex;
+
+	private int currActionId;
+
+	private int currProductId;
+
+	private int loopActionProductId;
+
+	private bool isWaitingForAdditinalInput;
+
+	private CharacterStateAdditionalInputCountSyncBody reservedAdditionalInputForDisconnect;
+
+	private CharacterStateAdditionalInputCountSyncBody receivedAdditionalInput;
+
+	private bool _prevEnableNavMeshAgent;
+
+	private ActionStartParameter startParameter;
+
+	private bool isBuffPaused;
+
+	private bool hasHiding;
+
+	public int skillIndex
 	{
-		private int currSkillIndex;
-
-		private int currActionId;
-
-		private int currProductId;
-
-		private int loopActionProductId;
-
-		private bool isWaitingForAdditinalInput;
-
-		private CharacterStateAdditionalInputCountSyncBody reservedAdditionalInputForDisconnect;
-
-		private CharacterStateAdditionalInputCountSyncBody receivedAdditionalInput;
-
-		private bool _prevEnableNavMeshAgent;
-
-		private ActionStartParameter startParameter;
-
-		private bool isBuffPaused;
-
-		private bool hasHiding;
-
-		public int skillIndex
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public int actionId
-		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
-		}
-
-		public CommonObjectStatus target
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public int skillId
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		protected override void OnStateEnter_Internal()
+		set
 		{
 		}
+	}
 
-		public override void OnStateUpdate()
+	public int actionId
+	{
+		get
+		{
+			return default(int);
+		}
+		set
 		{
 		}
+	}
 
-		public override void OnStateExit()
-		{
-		}
-
-		protected override ActionBase RunAction(int actionId, int skillId = 0, float tempoScale = 1f, [Optional] CommonObjectStatus target, [Optional] Action<ActionBase> actionFinishCallback, int overrideActionProductId = -1, bool dontLootAtReservedTarget = false, bool isFromOption = false, [Optional] Action<ActionBase> onActionLoadedCallback, [Optional] Action<ActionBase> onActionRunCallback)
+	public CommonObjectStatus target
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private void SkillActionFinishCallback(ActionBase action)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void CheckAdditionInputAction(ref PlayerActionElement pae)
+	public int skillId
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private bool CheckAdditionInputChangedAction(ref PlayerActionElement pae, ActionStartParameter startParameter)
-		{
-			return default(bool);
-		}
+	protected override void OnStateEnter_Internal()
+	{
+	}
 
-		private void SetStartParam(ActionContainer container)
-		{
-		}
+	public override void OnStateUpdate()
+	{
+	}
 
-		private void RunNextAction(int nextActionId, bool dontLootAtReservedTarget = false)
-		{
-		}
+	public override void OnStateExit()
+	{
+	}
 
-		private void RunAdditionalInputAction(int actionId)
-		{
-		}
+	protected override ActionBase RunAction(int actionId, int skillId = 0, float tempoScale = 1f, [Optional] CommonObjectStatus target, [Optional] Action<ActionBase> actionFinishCallback, int overrideActionProductId = -1, bool dontLootAtReservedTarget = false, bool isFromOption = false, [Optional] Action<ActionBase> onActionLoadedCallback, [Optional] Action<ActionBase> onActionRunCallback)
+	{
+		return null;
+	}
 
-		private void StartModeChange()
-		{
-		}
+	private void SkillActionFinishCallback(ActionBase action)
+	{
+	}
 
-		private void StartTransformSkill()
-		{
-		}
+	private void CheckAdditionInputAction(ref PlayerActionElement pae)
+	{
+	}
 
-		private void TransformSkill()
-		{
-		}
+	private bool CheckAdditionInputChangedAction(ref PlayerActionElement pae, ActionStartParameter startParameter)
+	{
+		return default(bool);
+	}
 
-		private bool SetChainSkill(PlayerCharacter player, int index)
-		{
-			return default(bool);
-		}
+	private void SetStartParam(ActionContainer container)
+	{
+	}
 
-		private void ResetTensionBuff(RemoveBuffReason reason, ActionStartParameter startParameter)
-		{
-		}
+	private void RunNextAction(int nextActionId, bool dontLootAtReservedTarget = false)
+	{
+	}
 
-		private void ResetInspirationBuff(RemoveBuffReason reason, ActionStartParameter startParameter)
-		{
-		}
+	private void RunAdditionalInputAction(int actionId)
+	{
+	}
 
-		private void SetLoopActionProductId(int actionId)
-		{
-		}
+	private void StartModeChange()
+	{
+	}
 
-		private void SetLoopActionProductId()
-		{
-		}
+	private void StartTransformSkill()
+	{
+	}
 
-		public override void OnRecieveExSync(CharacterStateExtraSync recvData)
-		{
-		}
+	private void TransformSkill()
+	{
+	}
 
-		public override void OnDisconnectOwner()
-		{
-		}
+	private bool SetChainSkill(PlayerCharacter player, int index)
+	{
+		return default(bool);
+	}
 
-		protected override bool NeedsResetHidingBuffOnEnter()
-		{
-			return default(bool);
-		}
+	private void ResetTensionBuff(RemoveBuffReason reason, ActionStartParameter startParameter)
+	{
+	}
+
+	private void ResetInspirationBuff(RemoveBuffReason reason, ActionStartParameter startParameter)
+	{
+	}
+
+	private void SetLoopActionProductId(int actionId)
+	{
+	}
+
+	private void SetLoopActionProductId()
+	{
+	}
+
+	public override void OnRecieveExSync(CharacterStateExtraSync recvData)
+	{
+	}
+
+	public override void OnDisconnectOwner()
+	{
+	}
+
+	protected override bool NeedsResetHidingBuffOnEnter()
+	{
+		return default(bool);
 	}
 }

@@ -1,47 +1,46 @@
-namespace Gluon
+namespace Gluon;
+
+public class CommonFriendListCellData
 {
-	public class CommonFriendListCellData
-	{
-		public ulong viewrId;
+	public ulong viewrId;
 
-		public int emblemId;
+	public int emblemId;
 
-		public string userName;
+	public string userName;
 
-		public int playerLevel;
+	public int playerLevel;
 
-		public int maxPower;
+	public int maxPower;
 
-		public int lastPlayTime;
+	public int lastPlayTime;
 
-		public bool isFriend;
+	public bool isFriend;
 
-		public int manaPoint;
+	public int manaPoint;
 
-		public bool isFriendApplying;
+	public bool isFriendApplying;
 
-		public int guildEmblemdId;
+	public int guildEmblemdId;
 
-		public int guildId;
+	public int guildId;
 
-		public string guildName;
+	public string guildName;
 
-		public bool isGuildNameDeleted;
+	public bool isGuildNameDeleted;
 
-		public SupportData supportCharacterData;
+	public SupportData supportCharacterData;
 
-		public SupportData supportDragonData;
+	public SupportData supportDragonData;
 
-		public SupportData supportWeaponData;
+	public SupportData supportWeaponData;
 
-		public SupportData supportAmuletData;
+	public SupportData supportAmuletData;
 
-		public SupportData supportAmuletData2;
+	public SupportData supportAmuletData2;
 
-		public SupportData[] supportAbilityCrestData;
+	public SupportData[] supportAbilityCrestData;
 
-		public SupportData[] supportAbilityCrestData2;
+	public SupportData[] supportAbilityCrestData2;
 
-		public SupportData[] supportAbilityCrestData3;
-	}
+	public SupportData[] supportAbilityCrestData3;
 }

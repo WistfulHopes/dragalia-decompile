@@ -3,117 +3,116 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcSubspace : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcSubspace : EnemyAbilityProcBase
+	private enum SubspaceState
 	{
-		private enum SubspaceState
+		Deactive,
+		Open,
+		Active,
+		TargetDead,
+		TargetLeave,
+		Close
+	}
+
+	private SubspaceState _state;
+
+	private CharacterBase _target;
+
+	private const float RETURN_TIME = 3f;
+
+	private float _timer;
+
+	private List<CharacterBase> _targets;
+
+	private bool IsFinishedWarpOnMulti
+	{
+		[CompilerGenerated]
+		get
 		{
-			Deactive,
-			Open,
-			Active,
-			TargetDead,
-			TargetLeave,
-			Close
+			return default(bool);
 		}
-
-		private SubspaceState _state;
-
-		private CharacterBase _target;
-
-		private const float RETURN_TIME = 3f;
-
-		private float _timer;
-
-		private List<CharacterBase> _targets;
-
-		private bool IsFinishedWarpOnMulti
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public EnemyAbilityProcSubspace(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public override void Play()
-		{
-		}
+	public EnemyAbilityProcSubspace(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+	{
+	}
 
-		public override void Stop()
-		{
-		}
+	public override void Play()
+	{
+	}
 
-		public override void OnUpdate()
-		{
-		}
+	public override void Stop()
+	{
+	}
 
-		private void ProcDeactive()
-		{
-		}
+	public override void OnUpdate()
+	{
+	}
 
-		private void ProcOpen()
-		{
-		}
+	private void ProcDeactive()
+	{
+	}
 
-		private void ProcTargetDead()
-		{
-		}
+	private void ProcOpen()
+	{
+	}
 
-		private void ProcTargetLeave()
-		{
-		}
+	private void ProcTargetDead()
+	{
+	}
 
-		private void ProcClose()
-		{
-		}
+	private void ProcTargetLeave()
+	{
+	}
 
-		private CharacterBase GetTargetSolo()
-		{
-			return null;
-		}
+	private void ProcClose()
+	{
+	}
 
-		private CharacterBase GetTargetMulti()
-		{
-			return null;
-		}
+	private CharacterBase GetTargetSolo()
+	{
+		return null;
+	}
 
-		private void ReleaseSpRegenerationBuff(CharacterBase target)
-		{
-		}
+	private CharacterBase GetTargetMulti()
+	{
+		return null;
+	}
 
-		private void ReleasePhaseShiftInSubspace()
-		{
-		}
+	private void ReleaseSpRegenerationBuff(CharacterBase target)
+	{
+	}
 
-		public override void OnChangeRoomGroup(CharacterBase target)
-		{
-		}
+	private void ReleasePhaseShiftInSubspace()
+	{
+	}
 
-		public override void OnDisconnectUser(int disconnectActorId)
-		{
-		}
+	public override void OnChangeRoomGroup(CharacterBase target)
+	{
+	}
 
-		public override void OnRecieveEnemyDead(DeadReason reason, float prevHpRate)
-		{
-		}
+	public override void OnDisconnectUser(int disconnectActorId)
+	{
+	}
 
-		private CharacterBase FindPlayerCharacter()
-		{
-			return null;
-		}
+	public override void OnRecieveEnemyDead(DeadReason reason, float prevHpRate)
+	{
+	}
 
-		private CharacterBase FindOtherPlayerCharacter()
-		{
-			return null;
-		}
+	private CharacterBase FindPlayerCharacter()
+	{
+		return null;
+	}
+
+	private CharacterBase FindOtherPlayerCharacter()
+	{
+		return null;
 	}
 }

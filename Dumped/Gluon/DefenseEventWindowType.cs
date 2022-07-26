@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum DefenseEventWindowType
 {
-	public enum DefenseEventWindowType
-	{
-		NONE,
-		EventL,
-		EventS,
-		System
-	}
+	NONE,
+	EventL,
+	EventS,
+	System
 }

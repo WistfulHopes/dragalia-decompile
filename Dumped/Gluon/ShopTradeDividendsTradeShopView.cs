@@ -2,49 +2,46 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeDividendsTradeShopView : ShopTradePanelBase
 {
-	public class ShopTradeDividendsTradeShopView : ShopTradePanelBase
+	[SerializeField]
+	public ShopTradeTableViewController tableview;
+
+	[SerializeField]
+	public Text ownedCountText;
+
+	private static Action onHttpDone;
+
+	private ShopTradeProductData.TradeShopItemData selectedData;
+
+	public static ShopTradeDividendsTradeShopView Create(Transform parent, ShopTradeScene scene)
 	{
-		[SerializeField]
-		[Header("TableView")]
-		public ShopTradeTableViewController tableview;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Holding")]
-		public Text ownedCountText;
+	private static void ReloadData()
+	{
+	}
 
-		private static Action onHttpDone;
+	private void Start()
+	{
+	}
 
-		private ShopTradeProductData.TradeShopItemData selectedData;
+	public override void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data)
+	{
+	}
 
-		public static ShopTradeDividendsTradeShopView Create(Transform parent, ShopTradeScene scene)
-		{
-			return null;
-		}
+	private void SetupHoldingCount()
+	{
+	}
 
-		private static void ReloadData()
-		{
-		}
+	public void ReloadPage()
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		public override void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data)
-		{
-		}
-
-		private void SetupHoldingCount()
-		{
-		}
-
-		public void ReloadPage()
-		{
-		}
-
-		public override void RefreshCurrentPage()
-		{
-		}
+	public override void RefreshCurrentPage()
+	{
 	}
 }

@@ -1,19 +1,18 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsTanatosHourglassSetAction : ActionParts
 {
-	public class ActionPartsTanatosHourglassSetAction : ActionParts
+	private readonly TanatosHourglassSetActionData _partsData;
+
+	private TanatosUniqueCtrl _uniqCtrl;
+
+	public ActionPartsTanatosHourglassSetAction(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly TanatosHourglassSetActionData _partsData;
+	}
 
-		private TanatosUniqueCtrl _uniqCtrl;
-
-		public ActionPartsTanatosHourglassSetAction(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

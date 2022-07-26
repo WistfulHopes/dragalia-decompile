@@ -1,13 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public class GrowthUnitEnhanceSendData
 {
-	public class GrowthUnitEnhanceSendData
-	{
-		public BuildupPieceType type;
+	public BuildupPieceType type;
 
-		public int pieceNo;
+	public int pieceNo;
 
-		public int step;
+	public int step;
 
-		public bool isUseItem;
-	}
+	public bool isUseItem;
 }

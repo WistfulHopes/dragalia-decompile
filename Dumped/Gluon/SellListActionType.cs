@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum SellListActionType
 {
-	public enum SellListActionType
-	{
-		None,
-		List,
-		Sell
-	}
+	None,
+	List,
+	Sell
 }

@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public static class AudioListenerController
 {
-	public static class AudioListenerController
+	private const float ListenerDistance = 3.55f;
+
+	public static void Initialize()
 	{
-		private const float ListenerDistance = 3.55f;
+	}
 
-		public static void Initialize()
-		{
-		}
-
-		public static void UpdateAudioListener()
-		{
-		}
+	public static void UpdateAudioListener()
+	{
 	}
 }

@@ -1,73 +1,72 @@
 using System.Collections.Generic;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class MultiPlayAuraCtrl
 {
-	public class MultiPlayAuraCtrl
+	public static readonly int DefaultKey;
+
+	private AuraEvent _tempSendAuraEvent;
+
+	private Queue<AuraEventCommandData> _auraEventCommandDataQueue;
+
+	private int _nextMultiPlayKey;
+
+	private int _stackLevel;
+
+	public void Initialize()
 	{
-		public static readonly int DefaultKey;
+	}
 
-		private AuraEvent _tempSendAuraEvent;
+	public void CommandClear()
+	{
+	}
 
-		private Queue<AuraEventCommandData> _auraEventCommandDataQueue;
+	public int CreateMultiPlayKey()
+	{
+		return default(int);
+	}
 
-		private int _nextMultiPlayKey;
+	private AuraEventCommandData CreateCommandData(CharacterBase target, AuraEventCommandType commandType, int multiPlayKey)
+	{
+		return default(AuraEventCommandData);
+	}
 
-		private int _stackLevel;
+	private AuraEventCommandData CreateCommandData(CharacterBase target, AuraEventCommandType commandType, CharacterAuraCtrl.Parameter parameter, RemoveBuffReason reason = RemoveBuffReason.Other)
+	{
+		return default(AuraEventCommandData);
+	}
 
-		public void Initialize()
-		{
-		}
+	public void NotifyAdd(CharacterBase owner, CharacterAuraCtrl.Parameter parameter)
+	{
+	}
 
-		public void CommandClear()
-		{
-		}
+	public void NotifyUpdate(CharacterBase owner, CharacterBase from, CharacterAuraCtrl.Parameter parameter, bool durationUpdate, bool hideCaption = false)
+	{
+	}
 
-		public int CreateMultiPlayKey()
-		{
-			return default(int);
-		}
+	public void NotifyRemove(CharacterBase owner, int multiPlayKey, RemoveBuffReason reason)
+	{
+	}
 
-		private AuraEventCommandData CreateCommandData(CharacterBase target, AuraEventCommandType commandType, int multiPlayKey)
-		{
-			return default(AuraEventCommandData);
-		}
+	public void NotifyPublished(CharacterBase owner, int multiPlayKey, CharacterAuraCtrl.PublishParam publishParam, int maxLimitLevel)
+	{
+	}
 
-		private AuraEventCommandData CreateCommandData(CharacterBase target, AuraEventCommandType commandType, CharacterAuraCtrl.Parameter parameter, RemoveBuffReason reason = RemoveBuffReason.Other)
-		{
-			return default(AuraEventCommandData);
-		}
+	public void OnRecieveAuraEvent(AuraEvent recvEvent)
+	{
+	}
 
-		public void NotifyAdd(CharacterBase owner, CharacterAuraCtrl.Parameter parameter)
-		{
-		}
+	public void BeginStack()
+	{
+	}
 
-		public void NotifyUpdate(CharacterBase owner, CharacterBase from, CharacterAuraCtrl.Parameter parameter, bool durationUpdate, bool hideCaption = false)
-		{
-		}
+	public void EndStack()
+	{
+	}
 
-		public void NotifyRemove(CharacterBase owner, int multiPlayKey, RemoveBuffReason reason)
-		{
-		}
-
-		public void NotifyPublished(CharacterBase owner, int multiPlayKey, CharacterAuraCtrl.PublishParam publishParam, int maxLimitLevel)
-		{
-		}
-
-		public void OnRecieveAuraEvent(AuraEvent recvEvent)
-		{
-		}
-
-		public void BeginStack()
-		{
-		}
-
-		public void EndStack()
-		{
-		}
-
-		private void SendAuraEvent()
-		{
-		}
+	private void SendAuraEvent()
+	{
 	}
 }

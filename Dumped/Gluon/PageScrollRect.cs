@@ -2,83 +2,82 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class PageScrollRect : DragEventScrollRect
 {
-	public class PageScrollRect : DragEventScrollRect
+	public int startPage;
+
+	public int maxPage;
+
+	public float smooth;
+
+	public float pageSwipeOffset;
+
+	public bool loopPage;
+
+	public UnityAction<int> changePage;
+
+	private Vector2 targetPosition;
+
+	private float hPerPage;
+
+	public int nowIndex;
+
+	private int hIndex;
+
+	private int horizontalPages;
+
+	private Vector2 oldNormalizedPosition;
+
+	private Vector2 moveStartPosition;
+
+	private bool isMoveLeft;
+
+	private const float boundMarginX = 0.02f;
+
+	private new void Awake()
 	{
-		public int startPage;
+	}
 
-		public int maxPage;
+	private new void Start()
+	{
+	}
 
-		public float smooth;
+	public override void OnBeginDrag(PointerEventData eventData)
+	{
+	}
 
-		public float pageSwipeOffset;
+	public override void OnEndDrag(PointerEventData eventData)
+	{
+	}
 
-		public bool loopPage;
+	private void MovePageAnimation(float posx)
+	{
+	}
 
-		public UnityAction<int> changePage;
+	private void MoveAnimationComplete()
+	{
+	}
 
-		private Vector2 targetPosition;
+	private void UpdateIndex()
+	{
+	}
 
-		private float hPerPage;
+	private Vector2 GetSnapPosition()
+	{
+		return default(Vector2);
+	}
 
-		public int nowIndex;
+	public void NextPageChange(int nextPage)
+	{
+	}
 
-		private int hIndex;
+	private void SetMovePageAnimation()
+	{
+	}
 
-		private int horizontalPages;
-
-		private Vector2 oldNormalizedPosition;
-
-		private Vector2 moveStartPosition;
-
-		private bool isMoveLeft;
-
-		private const float boundMarginX = 0.02f;
-
-		private new void Awake()
-		{
-		}
-
-		private new void Start()
-		{
-		}
-
-		public override void OnBeginDrag(PointerEventData eventData)
-		{
-		}
-
-		public override void OnEndDrag(PointerEventData eventData)
-		{
-		}
-
-		private void MovePageAnimation(float posx)
-		{
-		}
-
-		private void MoveAnimationComplete()
-		{
-		}
-
-		private void UpdateIndex()
-		{
-		}
-
-		private Vector2 GetSnapPosition()
-		{
-			return default(Vector2);
-		}
-
-		public void NextPageChange(int nextPage)
-		{
-		}
-
-		private void SetMovePageAnimation()
-		{
-		}
-
-		public void SetMaxPage(int max)
-		{
-		}
+	public void SetMaxPage(int max)
+	{
 	}
 }

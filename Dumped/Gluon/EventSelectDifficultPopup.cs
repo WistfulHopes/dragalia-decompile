@@ -3,101 +3,98 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventSelectDifficultPopup : PopupBase, ICustomMessage
 {
-	public class EventSelectDifficultPopup : PopupBase, ICustomMessage
+	[SerializeField]
+	public RectTransform frameRT;
+
+	[SerializeField]
+	public Text titleText;
+
+	[SerializeField]
+	private Text closeButtonText;
+
+	[SerializeField]
+	private Text eventItemCountText;
+
+	[SerializeField]
+	private Transform contentTransform;
+
+	[SerializeField]
+	private Text descriptionText;
+
+	[SerializeField]
+	private Transform descriptionObj;
+
+	[SerializeField]
+	private Transform multiTag;
+
+	[SerializeField]
+	private Transform soloTag;
+
+	[SerializeField]
+	private Image itemIcon;
+
+	private FlashPlayerManager flashPlayerManager;
+
+	[SerializeField]
+	private TabBase questMultiTab;
+
+	private QuestSupportCanvas.PlayType playType;
+
+	private int baseQuestGroupId;
+
+	private List<QuestEventMenuElement> cellDataList;
+
+	private List<QuestCell> questCellList;
+
+	private void Awake()
 	{
-		[SerializeField]
-		public RectTransform frameRT;
+	}
 
-		[SerializeField]
-		public Text titleText;
+	protected override void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		private Text closeButtonText;
+	public void SetLSize()
+	{
+	}
 
-		[SerializeField]
-		private Text eventItemCountText;
+	public void SetContent(List<QuestEventMenuElement> cellDataList)
+	{
+	}
 
-		[SerializeField]
-		private Transform contentTransform;
+	private void UpdateMultiStaminaQuestCellList()
+	{
+	}
 
-		[SerializeField]
-		private Text descriptionText;
+	private void UpdateContent(List<QuestEventMenuElement> cellData)
+	{
+	}
 
-		[SerializeField]
-		private Transform descriptionObj;
+	private void SetDescriptionText(QuestEventMenuElement eventMenuElement)
+	{
+	}
 
-		[SerializeField]
-		[Header("Tags")]
-		private Transform multiTag;
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
 
-		[SerializeField]
-		private Transform soloTag;
+	private void SetBonus(QuestEventMenuElement eventMenuElement)
+	{
+	}
 
-		[SerializeField]
-		[Header("PriceIcons")]
-		private Image itemIcon;
+	public void OpenDefaultTab(int baseQuestGroupId)
+	{
+	}
 
-		private FlashPlayerManager flashPlayerManager;
+	public void OnSelectedTab(int num)
+	{
+	}
 
-		[SerializeField]
-		private TabBase questMultiTab;
-
-		private QuestSupportCanvas.PlayType playType;
-
-		private int baseQuestGroupId;
-
-		private List<QuestEventMenuElement> cellDataList;
-
-		private List<QuestCell> questCellList;
-
-		private void Awake()
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
-
-		public void SetLSize()
-		{
-		}
-
-		public void SetContent(List<QuestEventMenuElement> cellDataList)
-		{
-		}
-
-		private void UpdateMultiStaminaQuestCellList()
-		{
-		}
-
-		private void UpdateContent(List<QuestEventMenuElement> cellData)
-		{
-		}
-
-		private void SetDescriptionText(QuestEventMenuElement eventMenuElement)
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
-
-		private void SetBonus(QuestEventMenuElement eventMenuElement)
-		{
-		}
-
-		public void OpenDefaultTab(int baseQuestGroupId)
-		{
-		}
-
-		public void OnSelectedTab(int num)
-		{
-		}
-
-		private void UpdateContentWithTabData()
-		{
-		}
+	private void UpdateContentWithTabData()
+	{
 	}
 }

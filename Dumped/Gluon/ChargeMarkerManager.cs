@@ -1,39 +1,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ChargeMarkerManager : SingletonMonoBehaviour<ChargeMarkerManager>
 {
-	public class ChargeMarkerManager : SingletonMonoBehaviour<ChargeMarkerManager>
+	private struct PrefabData
 	{
-		private struct PrefabData
-		{
-			public static readonly string prefabPath;
+		public static readonly string prefabPath;
 
-			public string path;
+		public string path;
 
-			public int poolCount;
-		}
+		public int poolCount;
+	}
 
-		private List<ChargeMarker> _markers;
+	private List<ChargeMarker> _markers;
 
-		private static PrefabData[] _markerPrefabs;
+	private static PrefabData[] _markerPrefabs;
 
-		public List<ChargeMarker> MarkerList => null;
+	public List<ChargeMarker> MarkerList => null;
 
-		public int GetActiveMarkerNum => default(int);
+	public int GetActiveMarkerNum => default(int);
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public ChargeMarker CreateMarker(ChargeMarker.eType type)
-		{
-			return null;
-		}
+	public ChargeMarker CreateMarker(ChargeMarker.eType type)
+	{
+		return null;
+	}
 
-		public bool IsTargetedByMarker(GameObject obj)
-		{
-			return default(bool);
-		}
+	public bool IsTargetedByMarker(GameObject obj)
+	{
+		return default(bool);
 	}
 }

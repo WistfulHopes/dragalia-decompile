@@ -1,99 +1,97 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public abstract class RetireConfirmDialogBase : InGameDialogBase
 {
-	public abstract class RetireConfirmDialogBase : InGameDialogBase
+	public enum Size
 	{
-		public enum Size
-		{
-			M,
-			L
-		}
+		M,
+		L
+	}
 
-		public class Param
-		{
-			public bool isRetire;
+	public class Param
+	{
+		public bool isRetire;
 
-			public Size size;
+		public Size size;
 
-			public string title;
+		public string title;
 
-			public string detail;
+		public string detail;
 
-			public string okButtonText;
+		public string okButtonText;
 
-			public string okButtonText2;
+		public string okButtonText2;
 
-			public string cancelButtonText;
+		public string cancelButtonText;
 
-			public Action onClickOkButton;
+		public Action onClickOkButton;
 
-			public Action onClickOkButton2;
+		public Action onClickOkButton2;
 
-			public Action onClickCancelButton;
+		public Action onClickCancelButton;
 
-			public void Reset()
-			{
-			}
-
-			public void SetupRetryParam()
-			{
-			}
-
-			public void SetupRetireParam()
-			{
-			}
-		}
-
-		[SerializeField]
-		[Header("components")]
-		protected RectTransform frameRt;
-
-		public Param param;
-
-		protected RectTransform rootRt;
-
-		protected CommonDialog commonDialog;
-
-		protected CommonDialog.Param commonDialogParam;
-
-		protected int backKeyEventId;
-
-		protected static int backKeyEventCount;
-
-		protected virtual void Initialize()
+		public void Reset()
 		{
 		}
 
-		private void OnDestroy()
+		public void SetupRetryParam()
 		{
 		}
 
-		public virtual void Open()
+		public void SetupRetireParam()
 		{
 		}
+	}
 
-		public virtual bool Close(bool isPlayCloseSE = false)
-		{
-			return default(bool);
-		}
+	[SerializeField]
+	protected RectTransform frameRt;
 
-		public bool IsOpenMultiConfirmationDialog()
-		{
-			return default(bool);
-		}
+	public Param param;
 
-		protected override void SetEnableButtons(bool b)
-		{
-		}
+	protected RectTransform rootRt;
 
-		public void OnClickCancelButton()
-		{
-		}
+	protected CommonDialog commonDialog;
 
-		protected void ExecCancelButtonPressed()
-		{
-		}
+	protected CommonDialog.Param commonDialogParam;
+
+	protected int backKeyEventId;
+
+	protected static int backKeyEventCount;
+
+	protected virtual void Initialize()
+	{
+	}
+
+	private void OnDestroy()
+	{
+	}
+
+	public virtual void Open()
+	{
+	}
+
+	public virtual bool Close(bool isPlayCloseSE = false)
+	{
+		return default(bool);
+	}
+
+	public bool IsOpenMultiConfirmationDialog()
+	{
+		return default(bool);
+	}
+
+	protected override void SetEnableButtons(bool b)
+	{
+	}
+
+	public void OnClickCancelButton()
+	{
+	}
+
+	protected void ExecCancelButtonPressed()
+	{
 	}
 }

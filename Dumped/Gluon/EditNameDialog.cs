@@ -1,16 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EditNameDialog : MonoBehaviour
 {
-	public class EditNameDialog : MonoBehaviour
-	{
-		public InputField nameInput;
+	public InputField nameInput;
 
-		public Button closeButton;
+	public Button closeButton;
 
-		public Button cancelButton;
+	public Button cancelButton;
 
-		public Button okButton;
-	}
+	public Button okButton;
 }

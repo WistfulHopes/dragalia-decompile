@@ -1,105 +1,103 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FriendScene : SceneBase
 {
-	public class FriendScene : SceneBase
+	[SerializeField]
+	private Transform currentPanelNode;
+
+	[SerializeField]
+	private Transform nextPanelNode;
+
+	[HideInInspector]
+	public Canvas canvas;
+
+	private bool bPrevPanelExitDone;
+
+	private bool bNextHttpReady;
+
+	private FriendPanelBase activePanel;
+
+	private Coroutine waitReadyStateCoroutine;
+
+	private BackButton backButton;
+
+	private void Awake()
 	{
-		[SerializeField]
-		[Header("SwitchablePanels")]
-		private Transform currentPanelNode;
+	}
 
-		[SerializeField]
-		private Transform nextPanelNode;
+	private void Start()
+	{
+	}
 
-		[HideInInspector]
-		public Canvas canvas;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private bool bPrevPanelExitDone;
+	private void OnInitReady()
+	{
+	}
 
-		private bool bNextHttpReady;
+	private void LoadBG()
+	{
+	}
 
-		private FriendPanelBase activePanel;
+	public void SetCaption()
+	{
+	}
 
-		private Coroutine waitReadyStateCoroutine;
+	public void SetBackButton()
+	{
+	}
 
-		private BackButton backButton;
+	private void OnBackButtonPressed()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	private void OnEnterScene()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	public override void StartExitAnimation()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	public void SwitchToPanel(FriendModel.PanelType type)
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private IEnumerator WaitForReadyState(FriendModel.PanelType type)
+	{
+		return null;
+	}
 
-		private void LoadBG()
-		{
-		}
+	private void ReleasePanel(FriendModel.PanelType type)
+	{
+	}
 
-		public void SetCaption()
-		{
-		}
+	private void RequestHttpForPanel(FriendModel.PanelType type)
+	{
+	}
 
-		public void SetBackButton()
-		{
-		}
+	public void LoadPanel(FriendModel.PanelType type)
+	{
+	}
 
-		private void OnBackButtonPressed()
-		{
-		}
+	public void SetNextHttpReady()
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public override void StartExitAnimation()
-		{
-		}
+	public void ClearChangeSceneCallbacks()
+	{
+	}
 
-		public void SwitchToPanel(FriendModel.PanelType type)
-		{
-		}
-
-		private IEnumerator WaitForReadyState(FriendModel.PanelType type)
-		{
-			return null;
-		}
-
-		private void ReleasePanel(FriendModel.PanelType type)
-		{
-		}
-
-		private void RequestHttpForPanel(FriendModel.PanelType type)
-		{
-		}
-
-		public void LoadPanel(FriendModel.PanelType type)
-		{
-		}
-
-		public void SetNextHttpReady()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public void ClearChangeSceneCallbacks()
-		{
-		}
-
-		public override void OnPresentReceived()
-		{
-		}
+	public override void OnPresentReceived()
+	{
 	}
 }

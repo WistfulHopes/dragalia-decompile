@@ -1,8 +1,7 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PreferredSizeFitter : ContentSizeFitter
 {
-	public class PreferredSizeFitter : ContentSizeFitter
-	{
-	}
 }

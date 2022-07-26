@@ -1,17 +1,16 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class OnConnectIcon : MonoBehaviour
 {
-	public class OnConnectIcon : MonoBehaviour
+	public float rotationSpeed;
+
+	private void OnEnable()
 	{
-		public float rotationSpeed;
+	}
 
-		private void OnEnable()
-		{
-		}
-
-		private void Update()
-		{
-		}
+	private void Update()
+	{
 	}
 }

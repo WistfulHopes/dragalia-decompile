@@ -1,68 +1,67 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class InitialOptionStepPopup : PopupBase
 {
-	public class InitialOptionStepPopup : PopupBase
+	public enum PageIndex
 	{
-		public enum PageIndex
-		{
-			Vocal,
-			Graphic,
-			UILayout,
-			Max
-		}
+		Vocal,
+		Graphic,
+		UILayout,
+		Max
+	}
 
-		public static OptionModel.Setting setting;
+	public static OptionModel.Setting setting;
 
-		public PageViewBase pageView;
+	public PageViewBase pageView;
 
-		public UIAnimationPublisher publisher;
+	public UIAnimationPublisher publisher;
 
-		public ButtonPressedMarkEventSender nextButtonPressedMark;
+	public ButtonPressedMarkEventSender nextButtonPressedMark;
 
-		public ButtonPressedMarkEventSender prevButtonPressedMark;
+	public ButtonPressedMarkEventSender prevButtonPressedMark;
 
-		private Action onCompleted;
+	private Action onCompleted;
 
-		public static void CreateModule(Action onCompleted)
-		{
-		}
+	public static void CreateModule(Action onCompleted)
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private void SetPageContent(GameObject page, int index)
-		{
-		}
+	private void SetPageContent(GameObject page, int index)
+	{
+	}
 
-		public static void CreateFinalConfirmPopup(Action onCompelte, InitialOptionStepPopup thisPopup)
-		{
-		}
+	public static void CreateFinalConfirmPopup(Action onCompelte, InitialOptionStepPopup thisPopup)
+	{
+	}
 
-		public void OnNextButtonPressed()
-		{
-		}
+	public void OnNextButtonPressed()
+	{
+	}
 
-		public void OnReturnButtonPressed()
-		{
-		}
+	public void OnReturnButtonPressed()
+	{
+	}
 
-		private static void ReApplySetting()
-		{
-		}
+	private static void ReApplySetting()
+	{
+	}
 
-		public static void OnVocalSettingChanged(int value)
-		{
-		}
+	public static void OnVocalSettingChanged(int value)
+	{
+	}
 
-		public static void OnGraphicQualityChanged(int value)
-		{
-		}
+	public static void OnGraphicQualityChanged(int value)
+	{
+	}
 
-		public static void OnUILayoutChanged(bool value)
-		{
-		}
+	public static void OnUILayoutChanged(bool value)
+	{
 	}
 }

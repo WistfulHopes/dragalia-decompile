@@ -4,79 +4,78 @@ using System.Runtime.InteropServices;
 using Cute.AssetBundle;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class TitleDownloadHelper : SingletonMonoBehaviour<TitleDownloadHelper>
 {
-	public class TitleDownloadHelper : SingletonMonoBehaviour<TitleDownloadHelper>
+	public string manifestPath;
+
+	public string manifestVersion;
+
+	public bool exceptVoiceOnFullDownload;
+
+	public const string UseAssetBundlePrefs = "UseAssetBundle";
+
+	public const string UseLocalAssetBundlePrefs = "UseLocalAssetBundle";
+
+	private DownloadOperation manifestDownloadOperation;
+
+	private Action<DownloadOperation, DownloadOperation, DownloadOperation, bool> onCheckCompleted;
+
+	private Action onManifestDownloadedCallback;
+
+	private const string developBranch = "develop";
+
+	protected override void Awake()
 	{
-		public string manifestPath;
+	}
 
-		public string manifestVersion;
+	public void ReadyDownload(Action<DownloadOperation, DownloadOperation, DownloadOperation, bool> onCompleted, [Optional] Action<long> deletedSizeCallback)
+	{
+	}
 
-		public bool exceptVoiceOnFullDownload;
+	public void InitAssetBundleConfig()
+	{
+	}
 
-		public const string UseAssetBundlePrefs = "UseAssetBundle";
+	private void SetProductSettings(out string assetbundlePath)
+	{
+	}
 
-		public const string UseLocalAssetBundlePrefs = "UseLocalAssetBundle";
+	public void CheckDownload([Optional] Action onManifestDownloadedCallback, bool fullDownload = false, [Optional] Action<long> deletedSizeCallback)
+	{
+	}
 
-		private DownloadOperation manifestDownloadOperation;
+	public void DownloadManifest(Action onManifestDownloaded, [Optional] Action<long> deletedSizeCallback)
+	{
+	}
 
-		private Action<DownloadOperation, DownloadOperation, DownloadOperation, bool> onCheckCompleted;
+	private void OnManifestDownloaded()
+	{
+	}
 
-		private Action onManifestDownloadedCallback;
+	private IEnumerator OnManifestDownloadedCoroutine()
+	{
+		return null;
+	}
 
-		private const string developBranch = "develop";
+	private void CheckUnlockedFortAssets()
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	private void CheckAfterPrologueAssets()
+	{
+	}
 
-		public void ReadyDownload(Action<DownloadOperation, DownloadOperation, DownloadOperation, bool> onCompleted, [Optional] Action<long> deletedSizeCallback)
-		{
-		}
+	private void CheckBeforeProloguelAssets()
+	{
+	}
 
-		public void InitAssetBundleConfig()
-		{
-		}
+	private void CreateDownloadErrorPopup(DownloadErrorType type, UnityAction onDownloadFailed)
+	{
+	}
 
-		private void SetProductSettings(out string assetbundlePath)
-		{
-		}
-
-		public void CheckDownload([Optional] Action onManifestDownloadedCallback, bool fullDownload = false, [Optional] Action<long> deletedSizeCallback)
-		{
-		}
-
-		public void DownloadManifest(Action onManifestDownloaded, [Optional] Action<long> deletedSizeCallback)
-		{
-		}
-
-		private void OnManifestDownloaded()
-		{
-		}
-
-		private IEnumerator OnManifestDownloadedCoroutine()
-		{
-			return null;
-		}
-
-		private void CheckUnlockedFortAssets()
-		{
-		}
-
-		private void CheckAfterPrologueAssets()
-		{
-		}
-
-		private void CheckBeforeProloguelAssets()
-		{
-		}
-
-		private void CreateDownloadErrorPopup(DownloadErrorType type, UnityAction onDownloadFailed)
-		{
-		}
-
-		private void InvokeOnCheckCompleted(DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, DownloadOperation downloadOperationMinimum, bool isBeforePrologure)
-		{
-		}
+	private void InvokeOnCheckCompleted(DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, DownloadOperation downloadOperationMinimum, bool isBeforePrologure)
+	{
 	}
 }

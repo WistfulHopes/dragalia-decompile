@@ -1,27 +1,26 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsB00252 : ActionParts
 {
-	public class ActionPartsB00252 : ActionParts
+	private readonly B00252Data _partsData;
+
+	private StoneSatelliteUniqueCtrl ctrl;
+
+	public ActionPartsB00252(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly B00252Data _partsData;
+	}
 
-		private StoneSatelliteUniqueCtrl ctrl;
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsB00252(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		protected override void OnFinish()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
 	}
 }

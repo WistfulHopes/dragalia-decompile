@@ -3,188 +3,187 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShareSkillPopup : PopupBase
 {
-	public class ShareSkillPopup : PopupBase
+	[HideInInspector]
+	public SceneBase scene;
+
+	[SerializeField]
+	private CommonIconListBase equipUnitListBase;
+
+	[SerializeField]
+	private EquipUnitListController equipUnitListController;
+
+	[SerializeField]
+	private TabBase typeTab;
+
+	[SerializeField]
+	private Transform commonIconTrans;
+
+	[SerializeField]
+	private PointerEventHandler skillIconButton;
+
+	[SerializeField]
+	private Text shareSkillName;
+
+	[SerializeField]
+	private Text shareSkillDetail;
+
+	[SerializeField]
+	private Text equipTitle;
+
+	[SerializeField]
+	private Text noShareSkillName;
+
+	[SerializeField]
+	private GameObject shareSkillNode;
+
+	[SerializeField]
+	private Button okButton;
+
+	[SerializeField]
+	private Text equipSkillCost;
+
+	private CommonSkillIcon commonSkillIcon;
+
+	private UnityAction onReload;
+
+	private int cacheActiveSkill3CharaId;
+
+	private int cacheActiveSkill4CharaId;
+
+	private CommonSortModel.Preset cachePreset;
+
+	private GiftType cacheGiftType;
+
+	private ElementalType cacheElementlType;
+
+	private Func<CommonListCustomSortData, CommonListCustomSortData> customSortAction;
+
+	private bool isPlayingEditSkillTutorial;
+
+	private SkillListCellData skillData;
+
+	private TableViewCell<CommonIconListCellData> unlockEffectTargetCell;
+
+	public static ShareSkillPopup Create(SceneBase scene, UnityAction reload)
 	{
-		[HideInInspector]
-		public SceneBase scene;
+		return null;
+	}
 
-		[SerializeField]
-		private CommonIconListBase equipUnitListBase;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		private EquipUnitListController equipUnitListController;
+	private void InitActiveTab(int activeIndex)
+	{
+	}
 
-		[SerializeField]
-		private TabBase typeTab;
+	private void OnSelectedTypeTab(int typeIndex)
+	{
+	}
 
-		[SerializeField]
-		private Transform commonIconTrans;
+	private void SetTabMode(PartyModel.EquipMode nextMode)
+	{
+	}
 
-		[SerializeField]
-		private PointerEventHandler skillIconButton;
+	public void SetEquipListOutButton(PartyModel.EquipMode equipMode)
+	{
+	}
 
-		[SerializeField]
-		private Text shareSkillName;
+	private void InitIconList()
+	{
+	}
 
-		[SerializeField]
-		private Text shareSkillDetail;
+	public void LoadEquipListData()
+	{
+	}
 
-		[SerializeField]
-		private Text equipTitle;
+	public CommonListCustomSortData SkillListSort(CommonListCustomSortData data)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Text noShareSkillName;
+	private void EquipListReload()
+	{
+	}
 
-		[SerializeField]
-		private GameObject shareSkillNode;
+	public void OnSortButtonClicked()
+	{
+	}
 
-		[SerializeField]
-		private Button okButton;
+	private ulong[] CreateDataIdList()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Text equipSkillCost;
+	public void OnSelectedSkillIconPressed()
+	{
+	}
 
-		private CommonSkillIcon commonSkillIcon;
+	private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private UnityAction onReload;
+	private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private int cacheActiveSkill3CharaId;
+	private void outButtonPressed()
+	{
+	}
 
-		private int cacheActiveSkill4CharaId;
+	public void OnSkillCellPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private CommonSortModel.Preset cachePreset;
+	private void SendEditSkillUnlockData(int unlockCharaId)
+	{
+	}
 
-		private GiftType cacheGiftType;
+	private void PlayReleaseEditSkillUnlockEffect()
+	{
+	}
 
-		private ElementalType cacheElementlType;
+	private void SelectEquipUnit(CommonEquipIconCellData equipData)
+	{
+	}
 
-		private Func<CommonListCustomSortData, CommonListCustomSortData> customSortAction;
+	private void SelectEquipIconCellData(ulong keyId, CommonEquipIconCellData equipData, bool hasOutButtonSelectState)
+	{
+	}
 
-		private bool isPlayingEditSkillTutorial;
+	private void SetTopUI()
+	{
+	}
 
-		private SkillListCellData skillData;
+	public void SetSkillCost()
+	{
+	}
 
-		private TableViewCell<CommonIconListCellData> unlockEffectTargetCell;
+	public void OnOkButton()
+	{
+	}
 
-		public static ShareSkillPopup Create(SceneBase scene, UnityAction reload)
-		{
-			return null;
-		}
+	public void OnCancelButton()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	public void SavePartyData(UnityAction saveEndCallBack)
+	{
+	}
 
-		private void InitActiveTab(int activeIndex)
-		{
-		}
+	public void DisableAllButton()
+	{
+	}
 
-		private void OnSelectedTypeTab(int typeIndex)
-		{
-		}
+	public void SetSkill4TabEnable()
+	{
+	}
 
-		private void SetTabMode(PartyModel.EquipMode nextMode)
-		{
-		}
-
-		public void SetEquipListOutButton(PartyModel.EquipMode equipMode)
-		{
-		}
-
-		private void InitIconList()
-		{
-		}
-
-		public void LoadEquipListData()
-		{
-		}
-
-		public CommonListCustomSortData SkillListSort(CommonListCustomSortData data)
-		{
-			return null;
-		}
-
-		private void EquipListReload()
-		{
-		}
-
-		public void OnSortButtonClicked()
-		{
-		}
-
-		private ulong[] CreateDataIdList()
-		{
-			return null;
-		}
-
-		public void OnSelectedSkillIconPressed()
-		{
-		}
-
-		private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private void outButtonPressed()
-		{
-		}
-
-		public void OnSkillCellPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private void SendEditSkillUnlockData(int unlockCharaId)
-		{
-		}
-
-		private void PlayReleaseEditSkillUnlockEffect()
-		{
-		}
-
-		private void SelectEquipUnit(CommonEquipIconCellData equipData)
-		{
-		}
-
-		private void SelectEquipIconCellData(ulong keyId, CommonEquipIconCellData equipData, bool hasOutButtonSelectState)
-		{
-		}
-
-		private void SetTopUI()
-		{
-		}
-
-		public void SetSkillCost()
-		{
-		}
-
-		public void OnOkButton()
-		{
-		}
-
-		public void OnCancelButton()
-		{
-		}
-
-		public void SavePartyData(UnityAction saveEndCallBack)
-		{
-		}
-
-		public void DisableAllButton()
-		{
-		}
-
-		public void SetSkill4TabEnable()
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
+	protected override void OnDestroy()
+	{
 	}
 }

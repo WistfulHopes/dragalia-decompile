@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class FollowerStateServantCommand : IState<FollowerController>
 {
-	public class FollowerStateServantCommand : IState<FollowerController>
+	public override void OnStateUpdate()
 	{
-		public override void OnStateUpdate()
-		{
-		}
 	}
 }

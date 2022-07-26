@@ -1,29 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeChooseDragonRewardGetPointConfirmPopup : PopupBase
 {
-	public class DmodeChooseDragonRewardGetPointConfirmPopup : PopupBase
+	[SerializeField]
+	public Text beforeText;
+
+	public Text afterText;
+
+	public static readonly string prefabPath;
+
+	public static DmodeChooseDragonRewardGetPointConfirmPopup Create()
 	{
-		[SerializeField]
-		[Header("Content")]
-		public Text beforeText;
+		return null;
+	}
 
-		public Text afterText;
+	protected override void Start()
+	{
+	}
 
-		public static readonly string prefabPath;
-
-		public static DmodeChooseDragonRewardGetPointConfirmPopup Create()
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnOKButtonPressed()
-		{
-		}
+	public void OnOKButtonPressed()
+	{
 	}
 }

@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum BuffType
 {
-	public enum BuffType
-	{
-		NONE,
-		HP,
-		ATTACK,
-		DEFENSE,
-		CRITICAL
-	}
+	NONE,
+	HP,
+	ATTACK,
+	DEFENSE,
+	CRITICAL
 }

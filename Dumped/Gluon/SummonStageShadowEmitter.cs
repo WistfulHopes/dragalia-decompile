@@ -1,21 +1,20 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonStageShadowEmitter : MonoBehaviour
 {
-	public class SummonStageShadowEmitter : MonoBehaviour
+	public SummonStageShadowReceiver receiver;
+
+	public static void AttachEmitter(GameObject emitterGO)
 	{
-		public SummonStageShadowReceiver receiver;
+	}
 
-		public static void AttachEmitter(GameObject emitterGO)
-		{
-		}
+	public static void EmitShadow(GameObject emitterGO, SummonStageShadowReceiver receiver, SummonStageShadowReceiver.ShadowSetting shadowSetting)
+	{
+	}
 
-		public static void EmitShadow(GameObject emitterGO, SummonStageShadowReceiver receiver, SummonStageShadowReceiver.ShadowSetting shadowSetting)
-		{
-		}
-
-		public void AttachReceiver(SummonStageShadowReceiver receiver)
-		{
-		}
+	public void AttachReceiver(SummonStageShadowReceiver receiver)
+	{
 	}
 }

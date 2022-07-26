@@ -1,48 +1,47 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateBlastSp : CharacterStateBase
 {
-	public class CharacterStateBlastSp : CharacterStateBase
+	private ActionBlastSp action;
+
+	public float gravity
 	{
-		private ActionBlastSp action;
-
-		public float gravity
+		get
 		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
+			return default(float);
 		}
-
-		public float angle
-		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
-		}
-
-		public float height
-		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
-		}
-
-		protected override void OnStateEnter_Internal()
+		set
 		{
 		}
+	}
 
-		public override void OnStateExit()
+	public float angle
+	{
+		get
+		{
+			return default(float);
+		}
+		set
 		{
 		}
+	}
+
+	public float height
+	{
+		get
+		{
+			return default(float);
+		}
+		set
+		{
+		}
+	}
+
+	protected override void OnStateEnter_Internal()
+	{
+	}
+
+	public override void OnStateExit()
+	{
 	}
 }

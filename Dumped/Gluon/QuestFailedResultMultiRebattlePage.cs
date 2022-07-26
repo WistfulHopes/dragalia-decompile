@@ -6,173 +6,172 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestFailedResultMultiRebattlePage : MonoBehaviour
 {
-	public class QuestFailedResultMultiRebattlePage : MonoBehaviour
+	public enum EnumGuestStete
 	{
-		public enum EnumGuestStete
-		{
-			Prepare,
-			WaitHost,
-			Exit
-		}
+		Prepare,
+		WaitHost,
+		Exit
+	}
 
-		[SerializeField]
-		private QuestResultMultiFriendList[] friendList;
+	[SerializeField]
+	private QuestResultMultiFriendList[] friendList;
 
-		[SerializeField]
-		private Text rebattleCountDownText;
+	[SerializeField]
+	private Text rebattleCountDownText;
 
-		[SerializeField]
-		private Text conditionFailedText;
+	[SerializeField]
+	private Text conditionFailedText;
 
-		[SerializeField]
-		private Transform friendPanel;
+	[SerializeField]
+	private Transform friendPanel;
 
-		[SerializeField]
-		private CanvasGroup friendCanvas;
+	[SerializeField]
+	private CanvasGroup friendCanvas;
 
-		[SerializeField]
-		private Transform reBattlePanel;
+	[SerializeField]
+	private Transform reBattlePanel;
 
-		[SerializeField]
-		private CanvasGroup reBattleCanvas;
+	[SerializeField]
+	private CanvasGroup reBattleCanvas;
 
-		[SerializeField]
-		private Button reBattleButton;
+	[SerializeField]
+	private Button reBattleButton;
 
-		[SerializeField]
-		private Button notReBattleButton;
+	[SerializeField]
+	private Button notReBattleButton;
 
-		[SerializeField]
-		private Button nextButton;
+	[SerializeField]
+	private Button nextButton;
 
-		[SerializeField]
-		private UIAnimationPublisher animationPublisher;
+	[SerializeField]
+	private UIAnimationPublisher animationPublisher;
 
-		[SerializeField]
-		private UIAnimationPublisher animationPublisherNextButton;
+	[SerializeField]
+	private UIAnimationPublisher animationPublisherNextButton;
 
-		[SerializeField]
-		private float yDiffFirendAnimation;
+	[SerializeField]
+	private float yDiffFirendAnimation;
 
-		private bool isHost;
+	private bool isHost;
 
-		private bool isTapToNextFlag;
+	private bool isTapToNextFlag;
 
-		private QuestResultModel.FriendApplyModel.SingleFriendApplyInfo info;
+	private QuestResultModel.FriendApplyModel.SingleFriendApplyInfo info;
 
-		private int selectedFriend;
+	private int selectedFriend;
 
-		private DateTime rebattleStartTime;
+	private DateTime rebattleStartTime;
 
-		private const string NextSceneMatchingRoom = "PartyBase";
+	private const string NextSceneMatchingRoom = "PartyBase";
 
-		private bool isConnected;
+	private bool isConnected;
 
-		private bool isHostWait;
+	private bool isHostWait;
 
-		private const float waitTime = 71f / (339f * (float)Math.PI);
+	private const float waitTime = 1f / 15f;
 
-		private EventQuestConditionPopup conditionPopup;
+	private EventQuestConditionPopup conditionPopup;
 
-		private QuestResultMultiReBattleConfirm reBattleConfirm;
+	private QuestResultMultiReBattleConfirm reBattleConfirm;
 
-		private Action onRebbatlePageEnd;
+	private Action onRebbatlePageEnd;
 
-		private bool isOnMultiPageReballePanelDone;
+	private bool isOnMultiPageReballePanelDone;
 
-		private bool isMatchingRoomTransition;
+	private bool isMatchingRoomTransition;
 
-		private List<MatchingService.Player> notMyPlayerList;
+	private List<MatchingService.Player> notMyPlayerList;
 
-		private int questId;
+	private int questId;
 
-		private List<QuestResultModel.FriendApplyModel.SingleFriendApplyInfo> supportList;
+	private List<QuestResultModel.FriendApplyModel.SingleFriendApplyInfo> supportList;
 
-		private EnumGuestStete state;
+	private EnumGuestStete state;
 
-		public bool IsTapToNextFlag => default(bool);
+	public bool IsTapToNextFlag => default(bool);
 
-		public EnumGuestStete GuestRebattleSelectState => default(EnumGuestStete);
+	public EnumGuestStete GuestRebattleSelectState => default(EnumGuestStete);
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		public void Initialize(DateTime startTime, bool connection, Action rebattleEnd, int questId, List<MatchingService.Player> matchingPlayerModel)
-		{
-		}
+	public void Initialize(DateTime startTime, bool connection, Action rebattleEnd, int questId, List<MatchingService.Player> matchingPlayerModel)
+	{
+	}
 
-		private void OnRequestButton(int index)
-		{
-		}
+	private void OnRequestButton(int index)
+	{
+	}
 
-		private void OnInviteButton(int index)
-		{
-		}
+	private void OnInviteButton(int index)
+	{
+	}
 
-		private void OnClose(bool onClose)
-		{
-		}
+	private void OnClose(bool onClose)
+	{
+	}
 
-		public void OnReBattle()
-		{
-		}
+	public void OnReBattle()
+	{
+	}
 
-		public void OnNotReBattle()
-		{
-		}
+	public void OnNotReBattle()
+	{
+	}
 
-		private void checkDisconectType()
-		{
-		}
+	private void checkDisconectType()
+	{
+	}
 
-		private void PopupHostExitConfirmCreate([Optional] UnityAction close)
-		{
-		}
+	private void PopupHostExitConfirmCreate([Optional] UnityAction close)
+	{
+	}
 
-		private IEnumerator UpdateReBattle()
-		{
-			return null;
-		}
+	private IEnumerator UpdateReBattle()
+	{
+		return null;
+	}
 
-		private void HideRebattlePanel(Action onFinished)
-		{
-		}
+	private void HideRebattlePanel(Action onFinished)
+	{
+	}
 
-		private void ShowNextButton()
-		{
-		}
+	private void ShowNextButton()
+	{
+	}
 
-		private void IsReBattleButton(bool enabled)
-		{
-		}
+	private void IsReBattleButton(bool enabled)
+	{
+	}
 
-		private int GetSecondRemain()
-		{
-			return default(int);
-		}
+	private int GetSecondRemain()
+	{
+		return default(int);
+	}
 
-		private void Disconnect()
-		{
-		}
+	private void Disconnect()
+	{
+	}
 
-		private void CloseEventQuestConditionPopup()
-		{
-		}
+	private void CloseEventQuestConditionPopup()
+	{
+	}
 
-		private void GoNextScene(Action loadSceneAction)
-		{
-		}
+	private void GoNextScene(Action loadSceneAction)
+	{
+	}
 
-		private void PlayExitAnimation()
-		{
-		}
+	private void PlayExitAnimation()
+	{
+	}
 
-		private IEnumerator DelayActionCoroutine(float delayTime, Action action)
-		{
-			return null;
-		}
+	private IEnumerator DelayActionCoroutine(float delayTime, Action action)
+	{
+		return null;
 	}
 }

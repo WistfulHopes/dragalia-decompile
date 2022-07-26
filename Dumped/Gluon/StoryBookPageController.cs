@@ -3,138 +3,137 @@ using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryBookPageController : FastUpdateMonoBehaviour
 {
-	public class StoryBookPageController : FastUpdateMonoBehaviour
+	private enum State
 	{
-		private enum State
-		{
-			None,
-			Idle,
-			Proceeding
-		}
+		None,
+		Idle,
+		Proceeding
+	}
 
-		public const int numOfPages = 7;
+	public const int numOfPages = 7;
 
-		public GameObject[] pageObjects;
+	public GameObject[] pageObjects;
 
-		public List<GameObject> textPageObjects;
+	public List<GameObject> textPageObjects;
 
-		public List<StoryTextManager.LogData> textPageLogs;
+	public List<StoryTextManager.LogData> textPageLogs;
 
-		public const int maxBreakType = 3;
+	public const int maxBreakType = 3;
 
-		public GameObject[] textPageObjectsOriginal;
+	public GameObject[] textPageObjectsOriginal;
 
-		public const float renderWait = 0.1f;
+	public const float renderWait = 0.1f;
 
-		private const string texturePath = "Images/Story/BookPage/";
+	private const string texturePath = "Images/Story/BookPage/";
 
-		public const string pageMainTexture = "sty_3d_0001_{0:D2}";
+	public const string pageMainTexture = "sty_3d_0001_{0:D2}";
 
-		public const string pageBackTexture = "sty_3d_0001_00";
+	public const string pageBackTexture = "sty_3d_0001_00";
 
-		public bool isTextPage;
+	public bool isTextPage;
 
-		public int textSize;
+	public int textSize;
 
-		public Color textColor;
+	public Color textColor;
 
-		private int currentPageIndex;
+	private int currentPageIndex;
 
-		private Animation pageAnimation;
+	private Animation pageAnimation;
 
-		private State pageState;
+	private State pageState;
 
-		private Camera mainCamera;
+	private Camera mainCamera;
 
-		private Camera textCamera;
+	private Camera textCamera;
 
-		public StoryBookTextCanvas canvasScript;
+	public StoryBookTextCanvas canvasScript;
 
-		private RenderTexture renderTexture;
+	private RenderTexture renderTexture;
 
-		private StoryBookPageSettings settings;
+	private StoryBookPageSettings settings;
 
-		public static StoryBookPageController instance
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public static StoryBookPageController Create()
+	public static StoryBookPageController instance
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public static bool IsInstanceEmpty()
-		{
-			return default(bool);
-		}
-
-		private void Awake()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void StartProloguePage()
-		{
-		}
+	public static StoryBookPageController Create()
+	{
+		return null;
+	}
 
-		public void StartTextPage()
-		{
-		}
+	public static bool IsInstanceEmpty()
+	{
+		return default(bool);
+	}
 
-		public void Finish()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void StartPageControl()
-		{
-		}
+	public void StartProloguePage()
+	{
+	}
 
-		private GameObject CreatePageObject(int index)
-		{
-			return null;
-		}
+	public void StartTextPage()
+	{
+	}
 
-		public void AddTextPageObject(string fileName = "")
-		{
-		}
+	public void Finish()
+	{
+	}
 
-		public void ChangeBookTexture()
-		{
-		}
+	public void StartPageControl()
+	{
+	}
 
-		public void AdvancePage()
-		{
-		}
+	private GameObject CreatePageObject(int index)
+	{
+		return null;
+	}
 
-		private void AdjustPagesPositionOnAdvance()
-		{
-		}
+	public void AddTextPageObject(string fileName = "")
+	{
+	}
 
-		private void AdjustTextPagesPositionOnAdvance()
-		{
-		}
+	public void ChangeBookTexture()
+	{
+	}
 
-		private void StartPageDown(GameObject pageObject)
-		{
-		}
+	public void AdvancePage()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	private void AdjustPagesPositionOnAdvance()
+	{
+	}
 
-		public bool CanProcessPage()
-		{
-			return default(bool);
-		}
+	private void AdjustTextPagesPositionOnAdvance()
+	{
+	}
+
+	private void StartPageDown(GameObject pageObject)
+	{
+	}
+
+	public override void FastUpdate()
+	{
+	}
+
+	public bool CanProcessPage()
+	{
+		return default(bool);
 	}
 }

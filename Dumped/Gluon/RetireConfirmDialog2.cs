@@ -1,72 +1,68 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class RetireConfirmDialog2 : RetireConfirmDialogBase
 {
-	public class RetireConfirmDialog2 : RetireConfirmDialogBase
+	[SerializeField]
+	private RectTransform retireRootRt;
+
+	[SerializeField]
+	private RectTransform retryRootRt;
+
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Button retireCancelButton;
+
+	[SerializeField]
+	private Button retireOkButton;
+
+	[SerializeField]
+	private Text retireDPointText;
+
+	[SerializeField]
+	private Text retireDPointRareText;
+
+	[SerializeField]
+	private Text retireScoreText;
+
+	[SerializeField]
+	private Button retryCancelButton;
+
+	[SerializeField]
+	private Button retryTopButton;
+
+	[SerializeField]
+	private Button retryFloorButton;
+
+	[SerializeField]
+	private Text retryLifeText;
+
+	public static RetireConfirmDialog2 Create(GameObject parent)
 	{
-		[SerializeField]
-		[Header("components")]
-		private RectTransform retireRootRt;
+		return null;
+	}
 
-		[SerializeField]
-		private RectTransform retryRootRt;
+	public override void Open()
+	{
+	}
 
-		[SerializeField]
-		private Text titleText;
+	private void SetActive(RectTransform rt, bool b)
+	{
+	}
 
-		[SerializeField]
-		[Header("retire components")]
-		private Button retireCancelButton;
+	public void OnClickRetireOkButton()
+	{
+	}
 
-		[SerializeField]
-		private Button retireOkButton;
+	public void OnClickRetryTopButton()
+	{
+	}
 
-		[SerializeField]
-		private Text retireDPointText;
-
-		[SerializeField]
-		private Text retireDPointRareText;
-
-		[SerializeField]
-		private Text retireScoreText;
-
-		[SerializeField]
-		[Header("retry components")]
-		private Button retryCancelButton;
-
-		[SerializeField]
-		private Button retryTopButton;
-
-		[SerializeField]
-		private Button retryFloorButton;
-
-		[SerializeField]
-		private Text retryLifeText;
-
-		public static RetireConfirmDialog2 Create(GameObject parent)
-		{
-			return null;
-		}
-
-		public override void Open()
-		{
-		}
-
-		private void SetActive(RectTransform rt, bool b)
-		{
-		}
-
-		public void OnClickRetireOkButton()
-		{
-		}
-
-		public void OnClickRetryTopButton()
-		{
-		}
-
-		public void OnClickRetryFloorButton()
-		{
-		}
+	public void OnClickRetryFloorButton()
+	{
 	}
 }

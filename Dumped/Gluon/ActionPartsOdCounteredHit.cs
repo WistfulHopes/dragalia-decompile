@@ -1,137 +1,136 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsOdCounteredHit : ActionParts
 {
-	public class ActionPartsOdCounteredHit : ActionParts
+	private enum State
 	{
-		private enum State
-		{
-			Init,
-			MarkerSet,
-			MarkerRun,
-			HitRun,
-			End
-		}
+		Init,
+		MarkerSet,
+		MarkerRun,
+		HitRun,
+		End
+	}
 
-		public enum IconBasePosition
-		{
-			Marker,
-			Owner,
-			Stage,
-			AreaAnchor
-		}
+	public enum IconBasePosition
+	{
+		Marker,
+		Owner,
+		Stage,
+		AreaAnchor
+	}
 
-		private readonly OdCounteredHitData _partsData;
+	private readonly OdCounteredHitData _partsData;
 
-		private readonly long _partsDataId;
+	private readonly long _partsDataId;
 
-		private EnemyCharacter ownerEnemy;
+	private EnemyCharacter ownerEnemy;
 
-		private float timeCount;
+	private float timeCount;
 
-		private float _dynamicScaleElapsed;
+	private float _dynamicScaleElapsed;
 
-		private CollisionHitAttribute hitAttribute;
+	private CollisionHitAttribute hitAttribute;
 
-		protected HitException _hitException;
+	protected HitException _hitException;
 
-		private CharacterBase _firstTargetPlayer;
+	private CharacterBase _firstTargetPlayer;
 
-		private float _baseCollisionLength;
+	private float _baseCollisionLength;
 
-		private float _baseCollisionWidth;
+	private float _baseCollisionWidth;
 
-		private float _baseCollisionHeight;
+	private float _baseCollisionHeight;
 
-		private State _state;
+	private State _state;
 
-		private bool _1stFrame;
+	private bool _1stFrame;
 
-		private ChargeMarker _marker;
+	private ChargeMarker _marker;
 
-		private Transform _iconBase;
+	private Transform _iconBase;
 
-		private Vector2 _counterIconOffset;
+	private Vector2 _counterIconOffset;
 
-		private bool _canCounter;
+	private bool _canCounter;
 
-		public ActionPartsOdCounteredHit(Gluon.ActionData.ActionParts resource, long resourceId)
-		{
-		}
+	public ActionPartsOdCounteredHit(Gluon.ActionData.ActionParts resource, long resourceId)
+	{
+	}
 
-		public override void OnPostCreated(CharacterBase chara)
-		{
-		}
+	public override void OnPostCreated(CharacterBase chara)
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		private void MarkerSet()
-		{
-		}
+	private void MarkerSet()
+	{
+	}
 
-		private void MarkerRun(float delta)
-		{
-		}
+	private void MarkerRun(float delta)
+	{
+	}
 
-		private void HitSet()
-		{
-		}
+	private void HitSet()
+	{
+	}
 
-		private void HitRun(float delta)
-		{
-		}
+	private void HitRun(float delta)
+	{
+	}
 
-		private void ConvertHitAttribute(string label)
-		{
-		}
+	private void ConvertHitAttribute(string label)
+	{
+	}
 
-		private void SetupCollisionParameter(OdCounteredHitData data)
-		{
-		}
+	private void SetupCollisionParameter(OdCounteredHitData data)
+	{
+	}
 
-		private void CollisionScale()
-		{
-		}
+	private void CollisionScale()
+	{
+	}
 
-		private void DynamicScale()
-		{
-		}
+	private void DynamicScale()
+	{
+	}
 
-		private string GetLabel()
-		{
-			return null;
-		}
+	private string GetLabel()
+	{
+		return null;
+	}
 
-		private void PlayHitSE(CharacterBase target, Vector3 pos)
-		{
-		}
+	private void PlayHitSE(CharacterBase target, Vector3 pos)
+	{
+	}
 
-		public override void OnCollided(GameObject target, bool isPropagation)
-		{
-		}
+	public override void OnCollided(GameObject target, bool isPropagation)
+	{
+	}
 
-		public override void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot)
-		{
-		}
+	public override void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot)
+	{
+	}
 
-		private void CheckOdCounter()
-		{
-		}
+	private void CheckOdCounter()
+	{
 	}
 }

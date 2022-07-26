@@ -2,52 +2,51 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CraftMaterialWeaponSelectPopup : CommonPopup
 {
-	public class CraftMaterialWeaponSelectPopup : CommonPopup
+	public Action<int> createMaterialWeaponCallBack;
+
+	[SerializeField]
+	private CraftMaterialWeaponTargetCell[] materialTargetIcon;
+
+	[SerializeField]
+	private Text needCountText;
+
+	[SerializeField]
+	private CraftMaterialWeaponSelectListController listController;
+
+	private int needCount;
+
+	public ulong[] selectMaterialKeyIds => null;
+
+	public static CraftMaterialWeaponSelectPopup Create(bool showBlackLayer = true)
 	{
-		public Action<int> createMaterialWeaponCallBack;
+		return null;
+	}
 
-		[SerializeField]
-		private CraftMaterialWeaponTargetCell[] materialTargetIcon;
+	public void InitPopup(CraftMaterialCellData cellData, ulong[] usedKeyIds, bool isLockDetailPopup = false)
+	{
+	}
 
-		[SerializeField]
-		private Text needCountText;
+	public void SetSelectKeyIds(ulong[] selectKeyIds)
+	{
+	}
 
-		[SerializeField]
-		private CraftMaterialWeaponSelectListController listController;
+	public void OnAutoSelectPressed()
+	{
+	}
 
-		private int needCount;
+	public void UpdatePopup()
+	{
+	}
 
-		public ulong[] selectMaterialKeyIds => null;
+	private void OnMaterialIconPressed(CommonIconListCellData cellData)
+	{
+	}
 
-		public static CraftMaterialWeaponSelectPopup Create(bool showBlackLayer = true)
-		{
-			return null;
-		}
-
-		public void InitPopup(CraftMaterialCellData cellData, ulong[] usedKeyIds, bool isLockDetailPopup = false)
-		{
-		}
-
-		public void SetSelectKeyIds(ulong[] selectKeyIds)
-		{
-		}
-
-		public void OnAutoSelectPressed()
-		{
-		}
-
-		public void UpdatePopup()
-		{
-		}
-
-		private void OnMaterialIconPressed(CommonIconListCellData cellData)
-		{
-		}
-
-		private void ShowDetailPopup(int weaponId)
-		{
-		}
+	private void ShowDetailPopup(int weaponId)
+	{
 	}
 }

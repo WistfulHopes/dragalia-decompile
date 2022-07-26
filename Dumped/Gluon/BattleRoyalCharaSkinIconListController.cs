@@ -1,43 +1,42 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BattleRoyalCharaSkinIconListController : TableViewController<CommonIconListCellData>
 {
-	public class BattleRoyalCharaSkinIconListController : TableViewController<CommonIconListCellData>
+	public float cellWidth;
+
+	public float cellHeight;
+
+	public CommonIconListBase iconListBase;
+
+	[HideInInspector]
+	public int selectCharaSkinId;
+
+	public void LoadSkinData(ulong[] charaSkinIds)
 	{
-		public float cellWidth;
+	}
 
-		public float cellHeight;
+	protected override TableViewCell<CommonIconListCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		public CommonIconListBase iconListBase;
+	public void UpdateSelectCell()
+	{
+	}
 
-		[HideInInspector]
-		public int selectCharaSkinId;
+	public void Reload()
+	{
+	}
 
-		public void LoadSkinData(ulong[] charaSkinIds)
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected override TableViewCell<CommonIconListCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		public void UpdateSelectCell()
-		{
-		}
-
-		public void Reload()
-		{
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
 	}
 }

@@ -1,79 +1,78 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SellIconListController : CommonDualListTableViewController
 {
-	public class SellIconListController : CommonDualListTableViewController
+	[SerializeField]
+	private Vector2 weaponListCellSize;
+
+	public SellListScene scene;
+
+	public int CellCount => default(int);
+
+	protected override CommonIconListCellData CreateDragonCellData(ulong keyId, int decoNum)
 	{
-		[SerializeField]
-		private Vector2 weaponListCellSize;
+		return null;
+	}
 
-		public SellListScene scene;
+	protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		public int CellCount => default(int);
+	protected override CommonIconListCellData CreateAmuletCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		protected override CommonIconListCellData CreateDragonCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	protected override CommonIconListCellData CreateTalismanCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	public void UpdateCellByKeyIds(ulong[] keyIds)
+	{
+	}
 
-		protected override CommonIconListCellData CreateAmuletCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	public void SetMultiSelectFlag(bool flag)
+	{
+	}
 
-		protected override CommonIconListCellData CreateTalismanCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	protected override void UpdateContents()
+	{
+	}
 
-		public void UpdateCellByKeyIds(ulong[] keyIds)
-		{
-		}
+	public void UpdateAutoSelectButtonState()
+	{
+	}
 
-		public void SetMultiSelectFlag(bool flag)
-		{
-		}
+	public void UpdateCellDataSelectNumber()
+	{
+	}
 
-		protected override void UpdateContents()
-		{
-		}
+	public void AllListIconLock()
+	{
+	}
 
-		public void UpdateAutoSelectButtonState()
-		{
-		}
+	public void AllListIconUnlock()
+	{
+	}
 
-		public void UpdateCellDataSelectNumber()
-		{
-		}
+	public void IconListSelectClear()
+	{
+	}
 
-		public void AllListIconLock()
-		{
-		}
+	public ulong[] GetAutoSelectKeys(int maxSelect)
+	{
+		return null;
+	}
 
-		public void AllListIconUnlock()
-		{
-		}
+	public void SetLock(SellEquipIconCellData data, bool isLock, bool setUpdateFlag)
+	{
+	}
 
-		public void IconListSelectClear()
-		{
-		}
-
-		public ulong[] GetAutoSelectKeys(int maxSelect)
-		{
-			return null;
-		}
-
-		public void SetLock(SellEquipIconCellData data, bool isLock, bool setUpdateFlag)
-		{
-		}
-
-		protected override void CustomSort()
-		{
-		}
+	protected override void CustomSort()
+	{
 	}
 }

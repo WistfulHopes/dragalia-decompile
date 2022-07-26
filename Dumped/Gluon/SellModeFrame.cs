@@ -2,64 +2,63 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SellModeFrame : MonoBehaviour
 {
-	public class SellModeFrame : MonoBehaviour
+	public Button sellButton;
+
+	public Button autoSelectButton;
+
+	public Text totalGoldText;
+
+	public Text totalMoonext;
+
+	public Text selectCountText;
+
+	public Text autoSelectButtonText;
+
+	public Text sellButtonText;
+
+	public Text totalGold;
+
+	public Text totalMoon;
+
+	public Text selectCount;
+
+	public GameObject totalMoonBase;
+
+	public UnityAction<bool> backButtonCallBack;
+
+	public UnityAction autoSelectButtonCallBack;
+
+	public UnityAction sellButtonCallBack;
+
+	private void Start()
 	{
-		public Button sellButton;
+	}
 
-		public Button autoSelectButton;
+	public void SetTotalTradeInPrice(long gold, int moon)
+	{
+	}
 
-		public Text totalGoldText;
+	public void SetSelectCount(int nowCount, int maxCount)
+	{
+	}
 
-		public Text totalMoonext;
+	public void SetSellListType(SellListType listType)
+	{
+	}
 
-		public Text selectCountText;
+	public void BackButtonPressed()
+	{
+	}
 
-		public Text autoSelectButtonText;
+	public void AutoSelectButtonPressed()
+	{
+	}
 
-		public Text sellButtonText;
-
-		public Text totalGold;
-
-		public Text totalMoon;
-
-		public Text selectCount;
-
-		public GameObject totalMoonBase;
-
-		public UnityAction<bool> backButtonCallBack;
-
-		public UnityAction autoSelectButtonCallBack;
-
-		public UnityAction sellButtonCallBack;
-
-		private void Start()
-		{
-		}
-
-		public void SetTotalTradeInPrice(long gold, int moon)
-		{
-		}
-
-		public void SetSelectCount(int nowCount, int maxCount)
-		{
-		}
-
-		public void SetSellListType(SellListType listType)
-		{
-		}
-
-		public void BackButtonPressed()
-		{
-		}
-
-		public void AutoSelectButtonPressed()
-		{
-		}
-
-		public void SellButtonPressed()
-		{
-		}
+	public void SellButtonPressed()
+	{
 	}
 }

@@ -1,29 +1,28 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateDamaged : CharacterStateBase
 {
-	public class CharacterStateDamaged : CharacterStateBase
+	public float motionTimeScale
 	{
-		public float motionTimeScale
+		get
 		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
+			return default(float);
 		}
+		set
+		{
+		}
+	}
 
-		protected override void OnStateEnter_Internal()
-		{
-		}
+	protected override void OnStateEnter_Internal()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateExit()
+	{
+	}
 
-		protected override bool NeedsResetHidingBuffOnEnter()
-		{
-			return default(bool);
-		}
+	protected override bool NeedsResetHidingBuffOnEnter()
+	{
+		return default(bool);
 	}
 }

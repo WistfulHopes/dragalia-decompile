@@ -1,25 +1,24 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsEnemyBoost : ActionParts
 {
-	public class ActionPartsEnemyBoost : ActionParts
+	private readonly EnemyBoostData _partsData;
+
+	public ActionPartsEnemyBoost(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly EnemyBoostData _partsData;
+	}
 
-		public ActionPartsEnemyBoost(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
-
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
 	}
 }

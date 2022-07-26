@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class CraftNextStepSelectListController : CraftTargetSelectListController
 {
-	public class CraftNextStepSelectListController : CraftTargetSelectListController
+	public void LoadNextStepData(int groupId, int nodeId, int takeOverHpPlusParam, int takeOveratkPlusParam)
 	{
-		public void LoadNextStepData(int groupId, int nodeId, int takeOverHpPlusParam, int takeOveratkPlusParam)
-		{
-		}
 	}
 }

@@ -1,49 +1,48 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class PopupIconListView : TableViewController<PopupIconListData>
 {
-	public class PopupIconListView : TableViewController<PopupIconListData>
+	public const float cellHeight = 128f;
+
+	public PopupIconViewCell iconViewCell;
+
+	private GiftType showGiftType;
+
+	private PopupIconListData.IconListData[] itemList;
+
+	public PopupItemList rootScene
 	{
-		public const float cellHeight = 128f;
-
-		public PopupIconViewCell iconViewCell;
-
-		private GiftType showGiftType;
-
-		private PopupIconListData.IconListData[] itemList;
-
-		public PopupItemList rootScene
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		public void SetItemList(PopupIconListData.IconListData[] setList)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		protected override void Start()
-		{
-		}
+	public void SetItemList(PopupIconListData.IconListData[] setList)
+	{
+	}
 
-		public void SetData()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private void LoadData()
-		{
-		}
+	public void SetData()
+	{
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
+	private void LoadData()
+	{
+	}
+
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
 	}
 }

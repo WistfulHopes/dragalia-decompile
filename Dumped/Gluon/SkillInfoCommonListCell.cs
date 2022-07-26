@@ -3,43 +3,42 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SkillInfoCommonListCell : CommonIconListCell
 {
-	public class SkillInfoCommonListCell : CommonIconListCell
+	[SerializeField]
+	private Transform iconParentTransform;
+
+	[SerializeField]
+	private Text skillName;
+
+	[SerializeField]
+	private Text skillDetail;
+
+	[SerializeField]
+	private GameObject blackMaskObject;
+
+	[SerializeField]
+	private GameObject effectBaseObject;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		private Transform iconParentTransform;
+	}
 
-		[SerializeField]
-		private Text skillName;
+	public override void UpdateContent(CommonIconListCellData data)
+	{
+	}
 
-		[SerializeField]
-		private Text skillDetail;
+	public void OmitTextWithEllipsis(Text text)
+	{
+	}
 
-		[SerializeField]
-		private GameObject blackMaskObject;
+	public override void LoadUnitIcon()
+	{
+	}
 
-		[SerializeField]
-		private GameObject effectBaseObject;
-
-		protected override void Start()
-		{
-		}
-
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
-
-		public void OmitTextWithEllipsis(Text text)
-		{
-		}
-
-		public override void LoadUnitIcon()
-		{
-		}
-
-		public void PlayUnlockSkillEffect([Optional] Action endCallBack)
-		{
-		}
+	public void PlayUnlockSkillEffect([Optional] Action endCallBack)
+	{
 	}
 }

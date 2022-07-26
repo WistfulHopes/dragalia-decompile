@@ -3,107 +3,106 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestMenuListTitle : MonoBehaviour
 {
-	public class QuestMenuListTitle : MonoBehaviour
+	[SerializeField]
+	private GameObject rootObj;
+
+	[SerializeField]
+	private GameObject questDifficultyIconRoot;
+
+	[SerializeField]
+	private UiImageExchanger questDifficultyBg;
+
+	[SerializeField]
+	private Image landmarkIconImage;
+
+	[SerializeField]
+	private RectTransform _landmarkStartTrans;
+
+	[SerializeField]
+	private Text listTitle;
+
+	[SerializeField]
+	private UiTextColorExchanger uiTextClolor;
+
+	private GameObject questDifficultyIconObj;
+
+	public bool isCloseCompleted
 	{
-		[SerializeField]
-		private GameObject rootObj;
-
-		[SerializeField]
-		private GameObject questDifficultyIconRoot;
-
-		[SerializeField]
-		private UiImageExchanger questDifficultyBg;
-
-		[SerializeField]
-		private Image landmarkIconImage;
-
-		[SerializeField]
-		private RectTransform _landmarkStartTrans;
-
-		[SerializeField]
-		private Text listTitle;
-
-		[SerializeField]
-		private UiTextColorExchanger uiTextClolor;
-
-		private GameObject questDifficultyIconObj;
-
-		public bool isCloseCompleted
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public RectTransform landmarkStartTrans
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		private void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SetLandmarkIcon(QuestMainLocationElement qmle)
+	public RectTransform landmarkStartTrans
+	{
+		get
+		{
+			return null;
+		}
+		set
 		{
 		}
+	}
 
-		public void SetLandmarkIcon(QuestMainLocationElement qmle, Vector3 initialPos)
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void SetDifficulty(QuestSelectScene.Difficulty difficulty)
-		{
-		}
+	public void SetLandmarkIcon(QuestMainLocationElement qmle)
+	{
+	}
 
-		public void SetListTitle(QuestMainLocationElement qmle)
-		{
-		}
+	public void SetLandmarkIcon(QuestMainLocationElement qmle, Vector3 initialPos)
+	{
+	}
 
-		public virtual void OnOpen()
-		{
-		}
+	public void SetDifficulty(QuestSelectScene.Difficulty difficulty)
+	{
+	}
 
-		private void SetLandmarkIconAlpha(float alpha)
-		{
-		}
+	public void SetListTitle(QuestMainLocationElement qmle)
+	{
+	}
 
-		protected virtual void Open()
-		{
-		}
+	public virtual void OnOpen()
+	{
+	}
 
-		public virtual void OnClose()
-		{
-		}
+	private void SetLandmarkIconAlpha(float alpha)
+	{
+	}
 
-		protected virtual void Close()
-		{
-		}
+	protected virtual void Open()
+	{
+	}
 
-		public void OnCloseCompleted()
-		{
-		}
+	public virtual void OnClose()
+	{
+	}
 
-		public void Enable(bool enable)
-		{
-		}
+	protected virtual void Close()
+	{
+	}
 
-		private void EnableRootObj(bool enable)
-		{
-		}
+	public void OnCloseCompleted()
+	{
+	}
+
+	public void Enable(bool enable)
+	{
+	}
+
+	private void EnableRootObj(bool enable)
+	{
 	}
 }

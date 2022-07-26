@@ -1,32 +1,31 @@
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CameraTrackingRotator : FastUpdateMonoBehaviour
 {
-	public class CameraTrackingRotator : FastUpdateMonoBehaviour
+	private Camera _targetCamera;
+
+	private Transform _targetTransformCache;
+
+	[SerializeField]
+	protected Vector3 cameraEularRatation;
+
+	public Camera targetCamera
 	{
-		private Camera _targetCamera;
-
-		private Transform _targetTransformCache;
-
-		[SerializeField]
-		protected Vector3 cameraEularRatation;
-
-		public Camera targetCamera
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return null;
 		}
-
-		public Transform targetTransformCache => null;
-
-		private void Start()
+		set
 		{
 		}
+	}
+
+	public Transform targetTransformCache => null;
+
+	private void Start()
+	{
 	}
 }

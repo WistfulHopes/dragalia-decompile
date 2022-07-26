@@ -1,9 +1,8 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyHandShakeDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyHandShakeData>
 {
-	[Serializable]
-	public class CuttTimelineKeyHandShakeDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyHandShakeData>
-	{
-	}
 }

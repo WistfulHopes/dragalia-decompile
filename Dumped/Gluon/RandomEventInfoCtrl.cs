@@ -1,29 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class RandomEventInfoCtrl : EventInfoCtrlBase
 {
-	public class RandomEventInfoCtrl : EventInfoCtrlBase
+	[SerializeField]
+	private EventRewardInfoCtrl rewardInfo;
+
+	[SerializeField]
+	private Text[] exchangeMaterialTexts;
+
+	[SerializeField]
+	private Text nextMedalTitle;
+
+	[SerializeField]
+	private Text totalMedalTitle;
+
+	public static RandomEventInfoCtrl Create(Transform parent)
 	{
-		[SerializeField]
-		private EventRewardInfoCtrl rewardInfo;
+		return null;
+	}
 
-		[SerializeField]
-		private Text[] exchangeMaterialTexts;
-
-		[SerializeField]
-		private Text nextMedalTitle;
-
-		[SerializeField]
-		private Text totalMedalTitle;
-
-		public static RandomEventInfoCtrl Create(Transform parent)
-		{
-			return null;
-		}
-
-		public override void SetEventInfo()
-		{
-		}
+	public override void SetEventInfo()
+	{
 	}
 }

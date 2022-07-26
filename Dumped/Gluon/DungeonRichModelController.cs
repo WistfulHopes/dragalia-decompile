@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class DungeonRichModelController : RichModelController
 {
-	public class DungeonRichModelController : RichModelController
-	{
-	}
 }

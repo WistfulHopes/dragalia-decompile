@@ -1,17 +1,16 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ItemButton : MonoBehaviour
 {
-	public class ItemButton : MonoBehaviour
+	private Canvas canvas;
+
+	public void OnItemButtonPressed(bool state)
 	{
-		private Canvas canvas;
+	}
 
-		public void OnItemButtonPressed(bool state)
-		{
-		}
-
-		public void SetCanvas(Canvas argCanvas)
-		{
-		}
+	public void SetCanvas(Canvas argCanvas)
+	{
 	}
 }

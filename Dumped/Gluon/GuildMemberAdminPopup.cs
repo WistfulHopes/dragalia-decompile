@@ -1,53 +1,50 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildMemberAdminPopup : PopupBase
 {
-	public class GuildMemberAdminPopup : PopupBase
+	[SerializeField]
+	public Transform memberCellParent;
+
+	[SerializeField]
+	public GameObject assignSubMasterGO;
+
+	public GameObject dismissSubMasterGO;
+
+	private GuildMemberTableViewCell cell;
+
+	private GuildModel.MemberInfo data;
+
+	private GuildModel.MemberInfo subMasterData;
+
+	private Action onAnyActionDone;
+
+	public const string prefabPath = "Prefabs/OutGame/Guild/GuildMemberAdminPopup";
+
+	public static GuildMemberAdminPopup Create(GuildModel.MemberInfo data, Action onAnyActionDone, GuildModel.MemberInfo currentSubMasterData)
 	{
-		[SerializeField]
-		[Header("Cell")]
-		public Transform memberCellParent;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("SubMaster")]
-		public GameObject assignSubMasterGO;
+	protected override void Start()
+	{
+	}
 
-		public GameObject dismissSubMasterGO;
+	public void OnAssignAsMasterButtonPressed()
+	{
+	}
 
-		private GuildMemberTableViewCell cell;
+	public void OnDismissSubMasterButtonPressed()
+	{
+	}
 
-		private GuildModel.MemberInfo data;
+	public void OnFireMemberButtonPressed()
+	{
+	}
 
-		private GuildModel.MemberInfo subMasterData;
-
-		private Action onAnyActionDone;
-
-		public const string prefabPath = "Prefabs/OutGame/Guild/GuildMemberAdminPopup";
-
-		public static GuildMemberAdminPopup Create(GuildModel.MemberInfo data, Action onAnyActionDone, GuildModel.MemberInfo currentSubMasterData)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnAssignAsMasterButtonPressed()
-		{
-		}
-
-		public void OnDismissSubMasterButtonPressed()
-		{
-		}
-
-		public void OnFireMemberButtonPressed()
-		{
-		}
-
-		public void OnAssignAsSubMasterButtonPressed()
-		{
-		}
+	public void OnAssignAsSubMasterButtonPressed()
+	{
 	}
 }

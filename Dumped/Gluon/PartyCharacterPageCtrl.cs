@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyCharacterPageCtrl : MonoBehaviour
 {
-	public class PartyCharacterPageCtrl : MonoBehaviour
-	{
-	}
 }

@@ -1,10 +1,9 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineMaterialSettings
 {
-	[Serializable]
-	public class CuttTimelineMaterialSettings
-	{
-		public int[] indices;
-	}
+	public int[] indices;
 }

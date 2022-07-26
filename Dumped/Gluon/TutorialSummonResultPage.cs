@@ -5,167 +5,166 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialSummonResultPage : TutorialSummonPageBase
 {
-	public class TutorialSummonResultPage : TutorialSummonPageBase
+	[SerializeField]
+	private Image whiteOutImage;
+
+	[SerializeField]
+	private Button endButton;
+
+	[SerializeField]
+	private Button resetButton;
+
+	[SerializeField]
+	private Button unitListButton;
+
+	[SerializeField]
+	private Button nextButton;
+
+	[SerializeField]
+	private GameObject nowLoading;
+
+	[SerializeField]
+	private RectTransform itemsParentRectTransform;
+
+	[SerializeField]
+	private RectTransform edgeToEdgeRectTransform;
+
+	[SerializeField]
+	private RectTransform resultItemsRectTransform;
+
+	[SerializeField]
+	public RawImage bg3dRenderTextureImage;
+
+	[SerializeField]
+	public GameObject resultItemTemplate;
+
+	[SerializeField]
+	private Text nextButtonText;
+
+	[SerializeField]
+	private Transform[] resultItemParents;
+
+	[SerializeField]
+	private UIAnimationPublisher enterPublisher;
+
+	private List<GameObject> resultItems;
+
+	private Vector2 _canvasSize;
+
+	private Vector2 basePos;
+
+	private bool is3DSceneLoaded;
+
+	private TutorialSummonResultScene animScene;
+
+	private Sequence whiteOutSeq;
+
+	private GameObject renderTextureCameraObj;
+
+	private TouchGuardObject resetTouchGuard;
+
+	public Vector2 canvasSize => default(Vector2);
+
+	private void Start()
 	{
-		[SerializeField]
-		private Image whiteOutImage;
+	}
 
-		[SerializeField]
-		private Button endButton;
+	public override void OnPageBecomeInActive()
+	{
+	}
 
-		[SerializeField]
-		private Button resetButton;
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		[SerializeField]
-		private Button unitListButton;
+	private void Load3DScene(Action callback)
+	{
+	}
 
-		[SerializeField]
-		private Button nextButton;
+	public void ResetFlashCameraSize()
+	{
+	}
 
-		[SerializeField]
-		private GameObject nowLoading;
+	public void Show(bool isResult)
+	{
+	}
 
-		[SerializeField]
-		private RectTransform itemsParentRectTransform;
+	public Vector2 GetIconPosition(Vector2 pos)
+	{
+		return default(Vector2);
+	}
 
-		[SerializeField]
-		private RectTransform edgeToEdgeRectTransform;
+	public Vector3 GetFlashPositionFromLayoutPosition(Vector2 pos)
+	{
+		return default(Vector3);
+	}
 
-		[SerializeField]
-		private RectTransform resultItemsRectTransform;
+	public IEnumerator ChangeToResultPage(bool isFadingOut, float waitingTime)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		public RawImage bg3dRenderTextureImage;
+	public void CreateBgRenderTexture()
+	{
+	}
 
-		[SerializeField]
-		public GameObject resultItemTemplate;
+	public void StartWhiteOutEffect(float inTime, float outTime)
+	{
+	}
 
-		[SerializeField]
-		private Text nextButtonText;
+	public void SetContent(bool isFadingOut)
+	{
+	}
 
-		[SerializeField]
-		private Transform[] resultItemParents;
+	private void SetupContents()
+	{
+	}
 
-		[SerializeField]
-		private UIAnimationPublisher enterPublisher;
+	private void SetupItemList()
+	{
+	}
 
-		private List<GameObject> resultItems;
+	private void SetupItemListSub(SummonResultItemData drawInfo, int index, int total)
+	{
+	}
 
-		private Vector2 _canvasSize;
+	private void UpdateNextItems()
+	{
+	}
 
-		private Vector2 basePos;
+	private void TeardownContents()
+	{
+	}
 
-		private bool is3DSceneLoaded;
+	public void Release3DObjects()
+	{
+	}
 
-		private TutorialSummonResultScene animScene;
+	public void OnNextButton()
+	{
+	}
 
-		private Sequence whiteOutSeq;
+	public void ShowNextItems()
+	{
+	}
 
-		private GameObject renderTextureCameraObj;
+	public void OnTutorialSummonEndButton()
+	{
+	}
 
-		private TouchGuardObject resetTouchGuard;
+	public void OnSummonUnitList()
+	{
+	}
 
-		public Vector2 canvasSize => default(Vector2);
+	public void OnSummonResetButtonPressed()
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		public override void OnPageBecomeInActive()
-		{
-		}
-
-		public override void OnPageBecomeActive(object data)
-		{
-		}
-
-		private void Load3DScene(Action callback)
-		{
-		}
-
-		public void ResetFlashCameraSize()
-		{
-		}
-
-		public void Show(bool isResult)
-		{
-		}
-
-		public Vector2 GetIconPosition(Vector2 pos)
-		{
-			return default(Vector2);
-		}
-
-		public Vector3 GetFlashPositionFromLayoutPosition(Vector2 pos)
-		{
-			return default(Vector3);
-		}
-
-		public IEnumerator ChangeToResultPage(bool isFadingOut, float waitingTime)
-		{
-			return null;
-		}
-
-		public void CreateBgRenderTexture()
-		{
-		}
-
-		public void StartWhiteOutEffect(float inTime, float outTime)
-		{
-		}
-
-		public void SetContent(bool isFadingOut)
-		{
-		}
-
-		private void SetupContents()
-		{
-		}
-
-		private void SetupItemList()
-		{
-		}
-
-		private void SetupItemListSub(SummonResultItemData drawInfo, int index, int total)
-		{
-		}
-
-		private void UpdateNextItems()
-		{
-		}
-
-		private void TeardownContents()
-		{
-		}
-
-		public void Release3DObjects()
-		{
-		}
-
-		public void OnNextButton()
-		{
-		}
-
-		public void ShowNextItems()
-		{
-		}
-
-		public void OnTutorialSummonEndButton()
-		{
-		}
-
-		public void OnSummonUnitList()
-		{
-		}
-
-		public void OnSummonResetButtonPressed()
-		{
-		}
-
-		public void StartNextSummonAnimation()
-		{
-		}
+	public void StartNextSummonAnimation()
+	{
 	}
 }

@@ -1,18 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventBonusUIAbility : MonoBehaviour
 {
-	public class EventBonusUIAbility : MonoBehaviour
-	{
-		public GameObject amuletBase;
+	public GameObject amuletBase;
 
-		public GameObject charaBase;
+	public GameObject charaBase;
 
-		public GameObject dragonBase;
+	public GameObject dragonBase;
 
-		public Image icon;
+	public Image icon;
 
-		public Text abilityName;
-	}
+	public Text abilityName;
 }

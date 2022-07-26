@@ -1,19 +1,18 @@
 using Gluon.Http;
 using Gluon.Mission;
 
-namespace Gluon
+namespace Gluon;
+
+public class DuplicateConfirmPopup : CommonPopup
 {
-	public class DuplicateConfirmPopup : CommonPopup
+	public MissionWidgetDetail detail;
+
+	public static DuplicateConfirmPopup Create()
 	{
-		public MissionWidgetDetail detail;
+		return null;
+	}
 
-		public static DuplicateConfirmPopup Create()
-		{
-			return null;
-		}
-
-		public void InitializeDetailReward(ConvertedEntityList data)
-		{
-		}
+	public void InitializeDetailReward(ConvertedEntityList data)
+	{
 	}
 }

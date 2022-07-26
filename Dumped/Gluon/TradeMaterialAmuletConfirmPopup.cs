@@ -2,59 +2,57 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TradeMaterialAmuletConfirmPopup : ShopCommonPopup
 {
-	public class TradeMaterialAmuletConfirmPopup : ShopCommonPopup
+	[SerializeField]
+	private Text confirmText;
+
+	[SerializeField]
+	private Text needDew;
+
+	[SerializeField]
+	private Text curDewText;
+
+	[SerializeField]
+	private Text afterDewText;
+
+	[SerializeField]
+	private Text errorText;
+
+	[SerializeField]
+	private Button tradeButton;
+
+	[SerializeField]
+	private ShopTableViewTradeAmuletCell amuletCell;
+
+	private ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData data;
+
+	private bool canExchangeCrest;
+
+	private int needDewPoint;
+
+	private string crestName;
+
+	public static TradeMaterialAmuletConfirmPopup Create(ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData data)
 	{
-		[SerializeField]
-		[Header("Contents")]
-		private Text confirmText;
+		return null;
+	}
 
-		[SerializeField]
-		private Text needDew;
+	private void Init(ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData data)
+	{
+	}
 
-		[SerializeField]
-		private Text curDewText;
+	private void UpdateUI(bool canExchangeCrest)
+	{
+	}
 
-		[SerializeField]
-		private Text afterDewText;
+	public void OnExchangeButtonTouched()
+	{
+	}
 
-		[SerializeField]
-		private Text errorText;
-
-		[SerializeField]
-		private Button tradeButton;
-
-		[SerializeField]
-		private ShopTableViewTradeAmuletCell amuletCell;
-
-		private ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData data;
-
-		private bool canExchangeCrest;
-
-		private int needDewPoint;
-
-		private string crestName;
-
-		public static TradeMaterialAmuletConfirmPopup Create(ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData data)
-		{
-			return null;
-		}
-
-		private void Init(ShopTableViewTradeAmuletCtrl.ShopTableViewTradeAmuletData data)
-		{
-		}
-
-		private void UpdateUI(bool canExchangeCrest)
-		{
-		}
-
-		public void OnExchangeButtonTouched()
-		{
-		}
-
-		private void OnItemTradeSuccess(AbilityCrestTradeTradeResponse response)
-		{
-		}
+	private void OnItemTradeSuccess(AbilityCrestTradeTradeResponse response)
+	{
 	}
 }

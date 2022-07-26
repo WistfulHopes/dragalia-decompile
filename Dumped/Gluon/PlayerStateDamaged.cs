@@ -1,14 +1,13 @@
-namespace Gluon
-{
-	public class PlayerStateDamaged : PlayerStateBase
-	{
-		public override void OnStateUpdate()
-		{
-		}
+namespace Gluon;
 
-		protected override bool IsOperateState()
-		{
-			return default(bool);
-		}
+public class PlayerStateDamaged : PlayerStateBase
+{
+	public override void OnStateUpdate()
+	{
+	}
+
+	protected override bool IsOperateState()
+	{
+		return default(bool);
 	}
 }

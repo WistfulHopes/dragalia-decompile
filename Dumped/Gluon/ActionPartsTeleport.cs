@@ -2,91 +2,108 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsTeleport : ActionParts
 {
-	public class ActionPartsTeleport : ActionParts
+	private const float FALL_TIME = 0.25f;
+
+	private float elapsed;
+
+	private readonly TeleportData _partsData;
+
+	private RandomXorshift _random;
+
+	private RunActionRandomParameter _runActionRandomParam;
+
+	private Vector3 _syncTeleportPos;
+
+	private Quaternion _syncTeleportRot;
+
+	private RunActionPosRotParameter _runActionPosRotParam;
+
+	public ActionPartsTeleport(Gluon.ActionData.ActionParts resource)
 	{
-		private const float FALL_TIME = 0.25f;
+	}
 
-		private float elapsed;
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		private readonly TeleportData _partsData;
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		private RandomXorshift _random;
+	private Vector3 GetTeleportPos()
+	{
+		return default(Vector3);
+	}
 
-		private RunActionRandomParameter _runActionRandomParam;
+	private Quaternion GetTeleportRot()
+	{
+		return default(Quaternion);
+	}
 
-		private Vector3 _syncTeleportPos;
+	protected override void OnStart()
+	{
+	}
 
-		private Quaternion _syncTeleportRot;
+	public override void Clear()
+	{
+	}
 
-		private RunActionPosRotParameter _runActionPosRotParam;
+	private void ProcCommand()
+	{
+	}
 
-		public ActionPartsTeleport(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public override RunActionParameterBase CreateRunActionParameter()
-		{
-			return null;
-		}
+	private Vector3 CalcTeleportPosition_Oriented()
+	{
+		return default(Vector3);
+	}
 
-		public override void SetRunActionParameter(RunActionParameterBase param)
-		{
-		}
+	private Vector3 CalcTeleportPosition_Random()
+	{
+		return default(Vector3);
+	}
 
-		private Vector3 GetTeleportPos()
-		{
-			return default(Vector3);
-		}
+	private Vector3 CalcTeleportPosition_Fixed()
+	{
+		return default(Vector3);
+	}
 
-		private Quaternion GetTeleportRot()
-		{
-			return default(Quaternion);
-		}
+	private Vector3 CalcTeleportPosition_Veering()
+	{
+		return default(Vector3);
+	}
 
-		protected override void OnStart()
-		{
-		}
+	private Vector3 CalcTeleportPosition_AnchorTargetLine()
+	{
+		return default(Vector3);
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	private Vector3 CalcTeleportPosition_AnchorTargetLine2()
+	{
+		return default(Vector3);
+	}
 
-		private Vector3 CalcTeleportPosition_Oriented()
-		{
-			return default(Vector3);
-		}
+	private float CalcRadius()
+	{
+		return default(float);
+	}
 
-		private Vector3 CalcTeleportPosition_Random()
-		{
-			return default(Vector3);
-		}
+	private bool IsUseSyncTargetPos()
+	{
+		return default(bool);
+	}
 
-		private Vector3 CalcTeleportPosition_Fixed()
-		{
-			return default(Vector3);
-		}
-
-		private Vector3 CalcTeleportPosition_Veering()
-		{
-			return default(Vector3);
-		}
-
-		private float CalcRadius()
-		{
-			return default(float);
-		}
-
-		private bool IsUseSyncTargetPos()
-		{
-			return default(bool);
-		}
-
-		private CharacterBase TargetCorrection(CharacterBase target)
-		{
-			return null;
-		}
+	private CharacterBase TargetCorrection(CharacterBase target, bool bugfix = false)
+	{
+		return null;
 	}
 }

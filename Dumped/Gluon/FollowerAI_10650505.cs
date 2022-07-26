@@ -1,31 +1,30 @@
-namespace Gluon
+namespace Gluon;
+
+public class FollowerAI_10650505 : FollowerAIBase
 {
-	public class FollowerAI_10650505 : FollowerAIBase
+	private const int buffA = 1959;
+
+	private const int buffB = 1960;
+
+	private const int buffC = 1961;
+
+	public override bool NeedsCheckPrioritizeBurstAttack()
 	{
-		private const int buffA = 1959;
+		return default(bool);
+	}
 
-		private const int buffB = 1960;
+	public override bool IsIgnoreCommonConditionForBurstAttack(PlayerCharacter owner)
+	{
+		return default(bool);
+	}
 
-		private const int buffC = 1961;
+	public override bool IsPrioritizeBurstAttack(PlayerCharacter owner, CharacterBase target, float probabilityCoef = 1f, bool force = false)
+	{
+		return default(bool);
+	}
 
-		public override bool NeedsCheckPrioritizeBurstAttack()
-		{
-			return default(bool);
-		}
-
-		public override bool IsIgnoreCommonConditionForBurstAttack(PlayerCharacter owner)
-		{
-			return default(bool);
-		}
-
-		public override bool IsPrioritizeBurstAttack(PlayerCharacter owner, CharacterBase target, float probabilityCoef = 1f, bool force = false)
-		{
-			return default(bool);
-		}
-
-		public override bool ShouldUseDashOnAvoid(PlayerCharacter owner)
-		{
-			return default(bool);
-		}
+	public override bool ShouldUseDashOnAvoid(PlayerCharacter owner)
+	{
+		return default(bool);
 	}
 }

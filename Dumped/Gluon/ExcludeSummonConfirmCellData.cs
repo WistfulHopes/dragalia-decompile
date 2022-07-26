@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class ExcludeSummonConfirmCellData
 {
-	public class ExcludeSummonConfirmCellData
-	{
-		public int entityId;
+	public int entityId;
 
-		public GiftType entityType;
+	public GiftType entityType;
 
-		public Rarity rarity;
+	public Rarity rarity;
 
-		public ElementalType elementalType;
+	public ElementalType elementalType;
 
-		public WeaponType weaponType;
-	}
+	public WeaponType weaponType;
 }

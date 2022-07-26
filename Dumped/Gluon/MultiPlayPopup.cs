@@ -1,34 +1,33 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MultiPlayPopup : PopupBase
 {
-	public class MultiPlayPopup : PopupBase
+	[SerializeField]
+	private MultiPlaySelector multiPlay;
+
+	public void SetContent(int questId)
 	{
-		[SerializeField]
-		private MultiPlaySelector multiPlay;
+	}
 
-		public void SetContent(int questId)
-		{
-		}
+	public void OnPrivateButtonPressed()
+	{
+	}
 
-		public void OnPrivateButtonPressed()
-		{
-		}
+	public void OnCustomButtonPressed()
+	{
+	}
 
-		public void OnCustomButtonPressed()
-		{
-		}
+	public void OnGuildButtonPressed()
+	{
+	}
 
-		public void OnGuildButtonPressed()
-		{
-		}
+	public void OnAutoJoinButtonPressed()
+	{
+	}
 
-		public void OnAutoJoinButtonPressed()
-		{
-		}
-
-		public void OnCreateResult(bool result)
-		{
-		}
+	public void OnCreateResult(bool result)
+	{
 	}
 }

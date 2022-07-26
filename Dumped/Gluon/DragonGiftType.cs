@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum DragonGiftType
 {
-	public enum DragonGiftType
-	{
-		NONE,
-		COMMON,
-		DOG_FOOD
-	}
+	NONE,
+	COMMON,
+	DOG_FOOD
 }

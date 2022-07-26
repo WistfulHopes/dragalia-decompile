@@ -1,15 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
-{
-	public class QuestPresentLevel : MonoBehaviour
-	{
-		[SerializeField]
-		private Text walllevelText;
+namespace Gluon;
 
-		public void SetContent(int questWallId)
-		{
-		}
+public class QuestPresentLevel : MonoBehaviour
+{
+	[SerializeField]
+	private Text walllevelText;
+
+	public void SetContent(int questWallId)
+	{
 	}
 }

@@ -1,64 +1,63 @@
 using Cute.Cri;
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineSound
 {
-	public class CuttTimelineSound
+	private CuttTimelineKeySoundDataList _keys;
+
+	private CuttTimelineControl _timelineControl;
+
+	private GameObject soundObject;
+
+	private AudioPlayback playback;
+
+	private int lastPlayFrame;
+
+	private bool isEndStop;
+
+	private int endStopFadeFrame;
+
+	private const float stopAllTime = 0.5f;
+
+	private int ignoreSkipEventFrame;
+
+	public void Initialize(CuttTimelineKeySoundDataList keys, CuttTimelineControl timelineControl)
 	{
-		private CuttTimelineKeySoundDataList _keys;
+	}
 
-		private CuttTimelineControl _timelineControl;
+	public void Reset(int resetFrame)
+	{
+	}
 
-		private GameObject soundObject;
+	public void Stop(int fadeFrame, bool stopStoryVoice = false)
+	{
+	}
 
-		private AudioPlayback playback;
+	private void Stop(bool stopStoryVoice = false)
+	{
+	}
 
-		private int lastPlayFrame;
+	public static void StopAll()
+	{
+	}
 
-		private bool isEndStop;
+	public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	{
+	}
 
-		private int endStopFadeFrame;
+	private bool IsVoice(string cueName)
+	{
+		return default(bool);
+	}
 
-		private const float stopAllTime = 0.5f;
+	private void SetStoryAudioPlayback(AudioPlayback audioPlayback, string cueName)
+	{
+	}
 
-		private int ignoreSkipEventFrame;
-
-		public void Initialize(CuttTimelineKeySoundDataList keys, CuttTimelineControl timelineControl)
-		{
-		}
-
-		public void Reset(int resetFrame)
-		{
-		}
-
-		public void Stop(int fadeFrame, bool stopStoryVoice = false)
-		{
-		}
-
-		private void Stop(bool stopStoryVoice = false)
-		{
-		}
-
-		public static void StopAll()
-		{
-		}
-
-		public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
-		{
-		}
-
-		private bool IsVoice(string cueName)
-		{
-			return default(bool);
-		}
-
-		private void SetStoryAudioPlayback(AudioPlayback audioPlayback, string cueName)
-		{
-		}
-
-		private string GetReplaceSoundLabel(string label)
-		{
-			return null;
-		}
+	private string GetReplaceSoundLabel(string label)
+	{
+		return null;
 	}
 }

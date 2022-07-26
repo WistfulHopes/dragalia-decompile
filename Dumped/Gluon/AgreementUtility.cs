@@ -1,37 +1,36 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class AgreementUtility
 {
-	public class AgreementUtility
+	public static int eulaVersion;
+
+	public static int privacyVersion;
+
+	public static string region;
+
+	public static string lang;
+
+	private const string AgreementConfirmedKey = "ConfirmAgreement";
+
+	public static List<VersionInfo> versionInfos;
+
+	public void SetConfirmedAgreement(bool confirmed = false)
 	{
-		public static int eulaVersion;
+	}
 
-		public static int privacyVersion;
+	public bool GetConfirmedAgreement()
+	{
+		return default(bool);
+	}
 
-		public static string region;
+	public static void UpdateVersionInfo()
+	{
+	}
 
-		public static string lang;
-
-		private const string AgreementConfirmedKey = "ConfirmAgreement";
-
-		public static List<VersionInfo> versionInfos;
-
-		public void SetConfirmedAgreement(bool confirmed = false)
-		{
-		}
-
-		public bool GetConfirmedAgreement()
-		{
-			return default(bool);
-		}
-
-		public static void UpdateVersionInfo()
-		{
-		}
-
-		public static string GetEulaAgreementLanguageText(Localize.TextId textId)
-		{
-			return null;
-		}
+	public static string GetEulaAgreementLanguageText(Localize.TextId textId)
+	{
+		return null;
 	}
 }

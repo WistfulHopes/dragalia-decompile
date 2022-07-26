@@ -3,45 +3,44 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QREventRewardPopup : PopupBase
 {
-	public class QREventRewardPopup : PopupBase
+	[SerializeField]
+	private Transform cellTransform;
+
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Text randomInfoText;
+
+	[SerializeField]
+	private Text buildInfoText;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		private Transform cellTransform;
+	}
 
-		[SerializeField]
-		private Text titleText;
+	public void SetText(string title, string text)
+	{
+	}
 
-		[SerializeField]
-		private Text randomInfoText;
+	public void SetContent(List<MazeEventRewardElement> gotRewards)
+	{
+	}
 
-		[SerializeField]
-		private Text buildInfoText;
+	public void SetContent(int eventId, List<BuildEventRewardElement> gotRewards)
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	public void SetContent(List<QuestResultModel.QuestBonus.QuestBonusInfo> rewardList)
+	{
+	}
 
-		public void SetText(string title, string text)
-		{
-		}
-
-		public void SetContent(List<MazeEventRewardElement> gotRewards)
-		{
-		}
-
-		public void SetContent(int eventId, List<BuildEventRewardElement> gotRewards)
-		{
-		}
-
-		public void SetContent(List<QuestResultModel.QuestBonus.QuestBonusInfo> rewardList)
-		{
-		}
-
-		public static string GetEventItemName()
-		{
-			return null;
-		}
+	public static string GetEventItemName()
+	{
+		return null;
 	}
 }

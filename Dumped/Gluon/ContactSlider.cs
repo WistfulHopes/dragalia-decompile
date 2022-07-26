@@ -2,46 +2,45 @@ using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactSlider : FastUpdateMonoBehaviour
 {
-	public class ContactSlider : FastUpdateMonoBehaviour
+	public Slider slider;
+
+	public float stepValue;
+
+	private float _currentValue;
+
+	public float toValue
 	{
-		public Slider slider;
-
-		public float stepValue;
-
-		private float _currentValue;
-
-		public float toValue
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(float);
 		}
-
-		public float currentValue
-		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
-		}
-
-		private void Awake()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public override void FastUpdate()
+	public float currentValue
+	{
+		get
+		{
+			return default(float);
+		}
+		set
 		{
 		}
+	}
+
+	private void Awake()
+	{
+	}
+
+	public override void FastUpdate()
+	{
 	}
 }

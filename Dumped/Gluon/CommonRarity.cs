@@ -1,12 +1,11 @@
-namespace Gluon
+namespace Gluon;
+
+public enum CommonRarity
 {
-	public enum CommonRarity
-	{
-		None,
-		Rarity_1,
-		N,
-		R,
-		SR,
-		SSR
-	}
+	None,
+	Rarity_1,
+	N,
+	R,
+	SR,
+	SSR
 }

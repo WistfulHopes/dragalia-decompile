@@ -2,148 +2,147 @@ using System;
 using Cute.Http;
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class IngameApiController
 {
-	public class IngameApiController
+	private GameDataManager gameDataManager;
+
+	private bool isConnectingApiServer;
+
+	private bool isClearQuestSucceeded;
+
+	private Action<DungeonRetryResponse> dungeonRetryResponseCallback;
+
+	private Action dungeonRetryErrorResponseCallback;
+
+	private ClearQuestApiController clearQuestApiController;
+
+	private FailQuestApiController failQuestApiController;
+
+	private TimeupQuestApiController timeupQuestApiController;
+
+	private bool isFailQuestCalled;
+
+	private static readonly MaintenanceFunctionType[] InGameShopMaintenanceTypeList;
+
+	public void Initialize(GameDataManager gameDataManager)
 	{
-		private GameDataManager gameDataManager;
+	}
 
-		private bool isConnectingApiServer;
+	public bool IsConnectingApiServer()
+	{
+		return default(bool);
+	}
 
-		private bool isClearQuestSucceeded;
+	public bool IsClearQuestApiSucceeded()
+	{
+		return default(bool);
+	}
 
-		private Action<DungeonRetryResponse> dungeonRetryResponseCallback;
+	public void ApiClearQuest()
+	{
+	}
 
-		private Action dungeonRetryErrorResponseCallback;
+	public void ApiFailQuest(FailQuestApiController.DungeonFailState failState)
+	{
+	}
 
-		private ClearQuestApiController clearQuestApiController;
+	public void ApiTimeupQuest()
+	{
+	}
 
-		private FailQuestApiController failQuestApiController;
+	public TimeupQuestApiController.Result GetTimeupQuestResult()
+	{
+		return default(TimeupQuestApiController.Result);
+	}
 
-		private TimeupQuestApiController timeupQuestApiController;
+	private void OnSuccess()
+	{
+	}
 
-		private bool isFailQuestCalled;
+	private void OnSuccessClearQuest()
+	{
+	}
 
-		private static readonly MaintenanceFunctionType[] InGameShopMaintenanceTypeList;
+	private void OnError()
+	{
+	}
 
-		public void Initialize(GameDataManager gameDataManager)
-		{
-		}
+	public void ApiTutorialUpdateStep(int stepData)
+	{
+	}
 
-		public bool IsConnectingApiServer()
-		{
-			return default(bool);
-		}
+	private void OnSuccess(TutorialUpdateStepResponse res)
+	{
+	}
 
-		public bool IsClearQuestApiSucceeded()
-		{
-			return default(bool);
-		}
+	public void ApiDungeonRetry(PaymentType type, Action<DungeonRetryResponse> callback, Action errorCallback)
+	{
+	}
 
-		public void ApiClearQuest()
-		{
-		}
+	private void OnSuccess(DungeonRetryResponse res)
+	{
+	}
 
-		public void ApiFailQuest(FailQuestApiController.DungeonFailState failState)
-		{
-		}
+	public void ApiAreaChange(int areaIdx)
+	{
+	}
 
-		public void ApiTimeupQuest()
-		{
-		}
+	private void OnSuccess(DungeonGetAreaOddsResponse res)
+	{
+	}
 
-		public TimeupQuestApiController.Result GetTimeupQuestResult()
-		{
-			return default(TimeupQuestApiController.Result);
-		}
+	public void ApiWallRecord()
+	{
+	}
 
-		private void OnSuccess()
-		{
-		}
+	private void OnSuccess(WallRecordRecordResponse res)
+	{
+	}
 
-		private void OnSuccessClearQuest()
-		{
-		}
+	protected void OnError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		private void OnError()
-		{
-		}
+	protected void OnErrorDungeonRetry(ErrorType errorType, int resultCode)
+	{
+	}
 
-		public void ApiTutorialUpdateStep(int stepData)
-		{
-		}
+	public static bool IsInGameShopMaintenance(ErrorType errorType, int resultCode)
+	{
+		return default(bool);
+	}
 
-		private void OnSuccess(TutorialUpdateStepResponse res)
-		{
-		}
+	public void OnCloseCallback()
+	{
+	}
 
-		public void ApiDungeonRetry(PaymentType type, Action<DungeonRetryResponse> callback, Action errorCallback)
-		{
-		}
+	private static void PauseIngame(bool pause)
+	{
+	}
 
-		private void OnSuccess(DungeonRetryResponse res)
-		{
-		}
+	public void ApiFinishDmode(bool isIncomplete, bool isGameOver)
+	{
+	}
 
-		public void ApiAreaChange(int areaIdx)
-		{
-		}
+	public void ApiDmodeReturnToTop()
+	{
+	}
 
-		private void OnSuccess(DungeonGetAreaOddsResponse res)
-		{
-		}
+	public void ApiDmodeRetryFloor()
+	{
+	}
 
-		public void ApiWallRecord()
-		{
-		}
+	public void StartDmodeFloorApi(DmodePlayRecord dmodePlayRecord, Action onSuccess, Action onError)
+	{
+	}
 
-		private void OnSuccess(WallRecordRecordResponse res)
-		{
-		}
+	private void OnSuccessDmodeFloor(DmodeDungeonFloorResponse res, Action onSuccess)
+	{
+	}
 
-		protected void OnError(ErrorType errorType, int resultCode)
-		{
-		}
-
-		protected void OnErrorDungeonRetry(ErrorType errorType, int resultCode)
-		{
-		}
-
-		public static bool IsInGameShopMaintenance(ErrorType errorType, int resultCode)
-		{
-			return default(bool);
-		}
-
-		public void OnCloseCallback()
-		{
-		}
-
-		private static void PauseIngame(bool pause)
-		{
-		}
-
-		public void ApiFinishDmode(bool isIncomplete, bool isGameOver)
-		{
-		}
-
-		public void ApiDmodeReturnToTop()
-		{
-		}
-
-		public void ApiDmodeRetryFloor()
-		{
-		}
-
-		public void StartDmodeFloorApi(DmodePlayRecord dmodePlayRecord, Action onSuccess, Action onError)
-		{
-		}
-
-		private void OnSuccessDmodeFloor(DmodeDungeonFloorResponse res, Action onSuccess)
-		{
-		}
-
-		private void OnErrorDmodeFloor(ErrorType errorType, int resultCode, Action onError)
-		{
-		}
+	private void OnErrorDmodeFloor(ErrorType errorType, int resultCode, Action onError)
+	{
 	}
 }

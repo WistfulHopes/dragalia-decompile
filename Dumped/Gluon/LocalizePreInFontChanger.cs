@@ -1,17 +1,16 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class LocalizePreInFontChanger : MonoBehaviour
 {
-	public class LocalizePreInFontChanger : MonoBehaviour
+	public bool forceDefault;
+
+	private void Awake()
 	{
-		public bool forceDefault;
+	}
 
-		private void Awake()
-		{
-		}
-
-		public void Apply()
-		{
-		}
+	public void Apply()
+	{
 	}
 }

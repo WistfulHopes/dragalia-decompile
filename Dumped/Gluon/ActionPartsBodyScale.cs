@@ -1,26 +1,25 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsBodyScale : ActionParts
 {
-	public class ActionPartsBodyScale : ActionParts
+	private readonly BodyScaleData _partsData;
+
+	private float _scale;
+
+	private float _elapsed;
+
+	public ActionPartsBodyScale(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly BodyScaleData _partsData;
+	}
 
-		private float _scale;
+	protected override void OnStart()
+	{
+	}
 
-		private float _elapsed;
-
-		public ActionPartsBodyScale(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

@@ -1,23 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class UnitDetailAlbumProfilePopup : PopupBase
 {
-	public class UnitDetailAlbumProfilePopup : PopupBase
+	[SerializeField]
+	private Text unitProfilelTitleText;
+
+	[SerializeField]
+	private Text unitProfilelText;
+
+	public static UnitDetailAlbumProfilePopup Create()
 	{
-		[SerializeField]
-		private Text unitProfilelTitleText;
+		return null;
+	}
 
-		[SerializeField]
-		private Text unitProfilelText;
-
-		public static UnitDetailAlbumProfilePopup Create()
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
 	}
 }

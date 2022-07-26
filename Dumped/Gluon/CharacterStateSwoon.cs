@@ -1,28 +1,27 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateSwoon : CharacterStateBase
 {
-	public class CharacterStateSwoon : CharacterStateBase
+	public CharacterBase.AbnormalStatusProbabilityResult probability;
+
+	public CollisionHitAttribute hitAttr;
+
+	public int conditionId
 	{
-		public CharacterBase.AbnormalStatusProbabilityResult probability;
-
-		public CollisionHitAttribute hitAttr;
-
-		public int conditionId
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
 		}
-
-		protected override void OnStateEnter_Internal()
+		set
 		{
 		}
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	protected override void OnStateEnter_Internal()
+	{
+	}
+
+	public override void OnStateExit()
+	{
 	}
 }

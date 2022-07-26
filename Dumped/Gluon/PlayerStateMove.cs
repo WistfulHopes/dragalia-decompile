@@ -1,32 +1,31 @@
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateMove : PlayerStateBase
 {
-	public class PlayerStateMove : PlayerStateBase
+	private float elapsedTime;
+
+	private bool needsPlayAnimationForAutoPlayMode;
+
+	public const float WALK_INTERVAL_SEC = 1f;
+
+	public override void OnStateEnter()
 	{
-		private float elapsedTime;
+	}
 
-		private bool needsPlayAnimationForAutoPlayMode;
+	public override void OnStateExit()
+	{
+	}
 
-		public const float WALK_INTERVAL_SEC = 1f;
+	public override void OnStateUpdate()
+	{
+	}
 
-		public override void OnStateEnter()
-		{
-		}
+	protected override bool IsOperateState()
+	{
+		return default(bool);
+	}
 
-		public override void OnStateExit()
-		{
-		}
-
-		public override void OnStateUpdate()
-		{
-		}
-
-		protected override bool IsOperateState()
-		{
-			return default(bool);
-		}
-
-		private void PlayAnimation()
-		{
-		}
+	private void PlayAnimation()
+	{
 	}
 }

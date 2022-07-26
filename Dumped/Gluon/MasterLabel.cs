@@ -1,26 +1,25 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public static class MasterLabel
 {
-	public static class MasterLabel
+	private const string jstTimeStartLabel = "<Time_JST=\"";
+
+	private const string timeEndLabel = "\">";
+
+	public static string Get(string id)
 	{
-		private const string jstTimeStartLabel = "<Time_JST=\"";
+		return null;
+	}
 
-		private const string timeEndLabel = "\">";
+	[RuntimeInitializeOnLoadMethod]
+	private static void Initialize()
+	{
+	}
 
-		public static string Get(string id)
-		{
-			return null;
-		}
-
-		[RuntimeInitializeOnLoadMethod]
-		private static void Initialize()
-		{
-		}
-
-		public static string ConvertToLocalTime(string targetText)
-		{
-			return null;
-		}
+	public static string ConvertToLocalTime(string targetText)
+	{
+		return null;
 	}
 }

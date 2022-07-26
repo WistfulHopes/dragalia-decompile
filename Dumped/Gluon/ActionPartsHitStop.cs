@@ -1,21 +1,20 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsHitStop : ActionParts
 {
-	public class ActionPartsHitStop : ActionParts
+	private readonly HitStopData _partsData;
+
+	public ActionPartsHitStop(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly HitStopData _partsData;
+	}
 
-		public ActionPartsHitStop(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		protected override void OnFinish()
-		{
-		}
+	protected override void OnFinish()
+	{
 	}
 }

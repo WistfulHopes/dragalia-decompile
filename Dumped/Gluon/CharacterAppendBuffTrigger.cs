@@ -1,98 +1,97 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public struct CharacterAppendBuffTrigger
 {
-	public struct CharacterAppendBuffTrigger
+	public int ActionConditionId
 	{
-		public int ActionConditionId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public int ActionId
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
 		}
+	}
 
-		public int SkillId
+	public int ActionId
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public CharacterBase BuffOwner
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
 		}
+	}
 
-		public CharacterBase BuffAppender
+	public int SkillId
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public CharacterBuff.BuffUnion TargetBuff
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(CharacterBuff.BuffUnion);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
 		}
+	}
 
-		public CollisionHitAttribute HitAttribute
+	public CharacterBase BuffOwner
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public CharacterBase BuffAppender
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public CharacterBuff.BuffUnion TargetBuff
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(CharacterBuff.BuffUnion);
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public CollisionHitAttribute HitAttribute
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
 		}
 	}
 }

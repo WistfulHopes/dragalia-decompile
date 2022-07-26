@@ -1,40 +1,39 @@
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSupportListController : QuestCommonTableViewController<QuestSupportListCellData>
 {
-	public class QuestSupportListController : QuestCommonTableViewController<QuestSupportListCellData>
+	public float cellWidth;
+
+	public float cellHeight;
+
+	public QuestSupportListBase supportListBase;
+
+	public void LoadData(int questId, UserSupportList[] supportData)
 	{
-		public float cellWidth;
+	}
 
-		public float cellHeight;
+	public void Reload()
+	{
+	}
 
-		public QuestSupportListBase supportListBase;
+	public void ClearList()
+	{
+	}
 
-		public void LoadData(int questId, UserSupportList[] supportData)
-		{
-		}
+	protected override TableViewCell<QuestSupportListCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		public void Reload()
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public void ClearList()
-		{
-		}
-
-		protected override TableViewCell<QuestSupportListCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
 	}
 }

@@ -1,21 +1,20 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AbnormalStatusSlipBase : AbnormalStatusBase
 {
-	public class AbnormalStatusSlipBase : AbnormalStatusBase
+	public override bool Update()
 	{
-		public override bool Update()
-		{
-			return default(bool);
-		}
+		return default(bool);
+	}
 
-		protected override void OnEventInterval()
-		{
-		}
+	protected override void OnEventInterval()
+	{
+	}
 
-		public override void PlayEffect([Optional] GameObject node)
-		{
-		}
+	public override void PlayEffect([Optional] GameObject node)
+	{
 	}
 }

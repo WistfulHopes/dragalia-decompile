@@ -3,350 +3,176 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class OptionModel
 {
-	public class OptionModel
+	public enum SettingEventType
 	{
-		public enum SettingEventType
+		FPS,
+		GraphicQuality,
+		Resolution,
+		MyPageBG,
+		AntiAliasing
+	}
+
+	private class SettingChangedListenerInfo
+	{
+		public string uniqueID;
+
+		public Action<int> action;
+
+		public SettingEventType eventType;
+	}
+
+	public class SettingBase
+	{
+		public virtual void ResetToDefault()
 		{
-			FPS,
-			GraphicQuality,
-			Resolution,
-			MyPageBG,
-			AntiAliasing
 		}
+	}
 
-		private class SettingChangedListenerInfo
+	[Serializable]
+	public class Setting : SettingBase
+	{
+		[Serializable]
+		public class SoundSetting : SettingBase
 		{
-			public string uniqueID;
+			[Serializable]
+			public class BGMSetting : SettingBase
+			{
+				public bool isOn;
 
-			public Action<int> action;
+				public int settingValue;
 
-			public SettingEventType eventType;
-		}
+				public override void ResetToDefault()
+				{
+				}
+			}
 
-		public class SettingBase
-		{
-			public virtual void ResetToDefault()
+			[Serializable]
+			public class VocalSetting : SettingBase
+			{
+				public enum VocalType
+				{
+					On,
+					Off,
+					Humming
+				}
+
+				public VocalType vocalType;
+
+				public override void ResetToDefault()
+				{
+				}
+			}
+
+			[Serializable]
+			public class SESetting : SettingBase
+			{
+				public bool isOn;
+
+				public int settingValue;
+
+				public override void ResetToDefault()
+				{
+				}
+			}
+
+			[Serializable]
+			public class VoiceSetting : SettingBase
+			{
+				public bool isOn;
+
+				public int settingValue;
+
+				public override void ResetToDefault()
+				{
+				}
+			}
+
+			public BGMSetting bgmSetting;
+
+			public VocalSetting vocalSetting;
+
+			public SESetting seSetting;
+
+			public VoiceSetting voiceSetting;
+
+			public override void ResetToDefault()
 			{
 			}
 		}
 
 		[Serializable]
-		public class Setting : SettingBase
+		public class GameSetting : SettingBase
 		{
 			[Serializable]
-			public class SoundSetting : SettingBase
+			public class GraphicSetting : SettingBase
 			{
-				[Serializable]
-				public class BGMSetting : SettingBase
+				private enum ResultKeywordStatus
 				{
-					public bool isOn;
-
-					public int settingValue;
-
-					public override void ResetToDefault()
-					{
-					}
+					Empty,
+					Success,
+					Failed
 				}
 
-				[Serializable]
-				public class VocalSetting : SettingBase
+				public enum QualityType
 				{
-					public enum VocalType
-					{
-						On,
-						Off,
-						Humming
-					}
-
-					public VocalType vocalType;
-
-					public override void ResetToDefault()
-					{
-					}
-				}
-
-				[Serializable]
-				public class SESetting : SettingBase
-				{
-					public bool isOn;
-
-					public int settingValue;
-
-					public override void ResetToDefault()
-					{
-					}
-				}
-
-				[Serializable]
-				public class VoiceSetting : SettingBase
-				{
-					public bool isOn;
-
-					public int settingValue;
-
-					public override void ResetToDefault()
-					{
-					}
-				}
-
-				public BGMSetting bgmSetting;
-
-				public VocalSetting vocalSetting;
-
-				public SESetting seSetting;
-
-				public VoiceSetting voiceSetting;
-
-				public override void ResetToDefault()
-				{
-				}
-			}
-
-			[Serializable]
-			public class GameSetting : SettingBase
-			{
-				[Serializable]
-				public class GraphicSetting : SettingBase
-				{
-					private enum ResultKeywordStatus
-					{
-						Empty,
-						Success,
-						Failed
-					}
-
-					public enum QualityType
-					{
-						Lowest,
-						Low,
-						Medium,
-						High
-					}
-
-					public enum ResolutionType
-					{
-						Medium,
-						MediumHigh,
-						High
-					}
-
-					public const int lowFPS = 30;
-
-					public const int highFPS = 60;
-
-					public QualityType graphicQuality;
-
-					public int fps;
-
-					public ResolutionType resolution;
-
-					public bool antiAliasing;
-
-					public bool otherCharaEffect;
-
-					public override void ResetToDefault()
-					{
-					}
-
-					public void SetToRecommendation()
-					{
-					}
-
-					private ResultKeywordStatus CheckKeyword(string source, string keyword)
-					{
-						return default(ResultKeywordStatus);
-					}
-
-					public QualityType GetDefaultQualityType()
-					{
-						return default(QualityType);
-					}
-				}
-
-				[Serializable]
-				public class CameraSetting : SettingBase
-				{
-					public bool isShake;
-
-					public bool isAutoZoom;
-
-					public bool isShowSkillCameraMove;
-
-					public override void ResetToDefault()
-					{
-					}
-				}
-
-				[Serializable]
-				public class DisplaySetting : SettingBase
-				{
-					public bool isSwapCharacterAndSkill;
-
-					public bool isLeftHanded;
-
-					public bool isShowSkillCutin;
-
-					public override void ResetToDefault()
-					{
-					}
-				}
-
-				[Serializable]
-				public class SensorySetting : SettingBase
-				{
-					public enum FlickSensoryType
-					{
-						Lowest,
-						Low,
-						Medium,
-						High,
-						Highest
-					}
-
-					public FlickSensoryType flickSensitivity;
-
-					public override void ResetToDefault()
-					{
-					}
-				}
-
-				[Serializable]
-				public class QuickTurnSetting : SettingBase
-				{
-					public bool isEnable180;
-
-					public bool isEnable90;
-
-					public override void ResetToDefault()
-					{
-					}
-				}
-
-				[Serializable]
-				public class AutoUkemiSetting : SettingBase
-				{
-					public bool isEnable;
-
-					public override void ResetToDefault()
-					{
-					}
-				}
-
-				[Serializable]
-				public class ConfirmElementSetting : SettingBase
-				{
-					public bool isEnable;
-
-					public override void ResetToDefault()
-					{
-					}
-				}
-
-				[Serializable]
-				public class SkinWeaponSetting : SettingBase
-				{
-					public bool isEnable;
-
-					public override void ResetToDefault()
-					{
-					}
-				}
-
-				public GraphicSetting graphicSetting;
-
-				public CameraSetting cameraSetting;
-
-				public DisplaySetting displaySetting;
-
-				public SensorySetting sensorySetting;
-
-				public QuickTurnSetting quickTurnSetting;
-
-				public AutoUkemiSetting autoUkemiSetting;
-
-				public ConfirmElementSetting confirmElementSetting;
-
-				public SkinWeaponSetting skinWeaponSetting;
-
-				public override void ResetToDefault()
-				{
-				}
-			}
-
-			[Serializable]
-			public class SystemSetting : SettingBase
-			{
-				public enum TextSpeedType
-				{
+					Lowest,
 					Low,
 					Medium,
 					High
 				}
 
-				public enum MyPageBGMode
+				public enum ResolutionType
 				{
-					BG2D,
-					BG3D
+					Medium,
+					MediumHigh,
+					High
 				}
 
-				public enum ManacircleViewMode
+				public const int lowFPS = 30;
+
+				public const int highFPS = 60;
+
+				public QualityType graphicQuality;
+
+				public int fps;
+
+				public ResolutionType resolution;
+
+				public bool antiAliasing;
+
+				public bool otherCharaEffect;
+
+				public override void ResetToDefault()
 				{
-					View2D,
-					View3D
 				}
 
-				public enum DragonStrokeViewMode
+				public void SetToRecommendation()
 				{
-					View2D,
-					View3D
 				}
 
-				public class AutoLockSetting : SettingBase
+				private ResultKeywordStatus CheckKeyword(string source, string keyword)
 				{
-					public bool isAutoLockUnit;
-
-					public bool autoLockDragonSR;
-
-					public bool autoLockDragonSSR;
-
-					public override void ResetToDefault()
-					{
-					}
-
-					public AutoLockSetting MakeClone()
-					{
-						return null;
-					}
-
-					public bool EqualsTo(AutoLockSetting other)
-					{
-						return default(bool);
-					}
+					return default(ResultKeywordStatus);
 				}
 
-				public MyPageBGMode myPageBGMode;
+				public QualityType GetDefaultQualityType()
+				{
+					return default(QualityType);
+				}
+			}
 
-				public ManacircleViewMode manacircleViewMode;
+			[Serializable]
+			public class CameraSetting : SettingBase
+			{
+				public bool isShake;
 
-				public int myPageBgmId;
+				public bool isAutoZoom;
 
-				public DragonStrokeViewMode dragonStrokeViewMode;
-
-				public bool pettingGyro;
-
-				public TextSpeedType textSpeed;
-
-				public AutoLockSetting autoLockSetting;
-
-				public bool autoSkipReadSetting;
-
-				public bool performanceMode;
-
-				public bool androidStatusBarOn;
-
-				public bool androidNavigationBarOn;
+				public bool isShowSkillCameraMove;
 
 				public override void ResetToDefault()
 				{
@@ -354,189 +180,362 @@ namespace Gluon
 			}
 
 			[Serializable]
-			public class NotificationSetting : SettingBase
+			public class DisplaySetting : SettingBase
 			{
-				public bool allowOfficialNotifications;
+				public bool isSwapCharacterAndSkill;
 
-				public bool allowSingleStaminaNotifications;
+				public bool isLeftHanded;
 
-				public bool allowMultiStaminaNotifications;
+				public bool isShowSkillCutin;
 
-				public bool allowDragonSmithNotifications;
+				public override void ResetToDefault()
+				{
+				}
+			}
 
-				public bool allowBuildDoneNotifications;
+			[Serializable]
+			public class SensorySetting : SettingBase
+			{
+				public enum FlickSensoryType
+				{
+					Lowest,
+					Low,
+					Medium,
+					High,
+					Highest
+				}
 
-				public bool allowGoldFarmNotifications;
+				public FlickSensoryType flickSensitivity;
 
-				public bool allowDragonTreeFullNotifications;
+				public override void ResetToDefault()
+				{
+				}
+			}
 
-				public bool allowHoneyDrinkFullNotifications;
+			[Serializable]
+			public class QuickTurnSetting : SettingBase
+			{
+				public bool isEnable180;
 
-				public bool allowDmodeExpeditionEndNotifications;
+				public bool isEnable90;
 
-				public bool isSleepTimeOn;
+				public override void ResetToDefault()
+				{
+				}
+			}
 
-				public int sleepStartHour;
+			[Serializable]
+			public class AutoUkemiSetting : SettingBase
+			{
+				public bool isEnable;
 
-				public int sleepStartMin;
+				public override void ResetToDefault()
+				{
+				}
+			}
 
-				public int sleepEndHour;
+			[Serializable]
+			public class ConfirmElementSetting : SettingBase
+			{
+				public bool isEnable;
 
-				public int sleepEndMin;
+				public override void ResetToDefault()
+				{
+				}
+			}
+
+			[Serializable]
+			public class SkinWeaponSetting : SettingBase
+			{
+				public bool isEnable;
+
+				public override void ResetToDefault()
+				{
+				}
+			}
+
+			public GraphicSetting graphicSetting;
+
+			public CameraSetting cameraSetting;
+
+			public DisplaySetting displaySetting;
+
+			public SensorySetting sensorySetting;
+
+			public QuickTurnSetting quickTurnSetting;
+
+			public AutoUkemiSetting autoUkemiSetting;
+
+			public ConfirmElementSetting confirmElementSetting;
+
+			public SkinWeaponSetting skinWeaponSetting;
+
+			public override void ResetToDefault()
+			{
+			}
+		}
+
+		[Serializable]
+		public class SystemSetting : SettingBase
+		{
+			public enum TextSpeedType
+			{
+				Low,
+				Medium,
+				High
+			}
+
+			public enum MyPageBGMode
+			{
+				BG2D,
+				BG3D
+			}
+
+			public enum ManacircleViewMode
+			{
+				View2D,
+				View3D
+			}
+
+			public enum DragonStrokeViewMode
+			{
+				View2D,
+				View3D
+			}
+
+			public class AutoLockSetting : SettingBase
+			{
+				public bool isAutoLockUnit;
+
+				public bool autoLockDragonSR;
+
+				public bool autoLockDragonSSR;
 
 				public override void ResetToDefault()
 				{
 				}
 
-				public NotificationSetting MakeClone()
+				public AutoLockSetting MakeClone()
 				{
 					return null;
 				}
 
-				public bool EqualsTo(NotificationSetting other)
+				public bool EqualsTo(AutoLockSetting other)
 				{
 					return default(bool);
 				}
 			}
 
-			public SoundSetting soundSetting;
+			public MyPageBGMode myPageBGMode;
 
-			public GameSetting gameSetting;
+			public ManacircleViewMode manacircleViewMode;
 
-			public SystemSetting systemSetting;
+			public int myPageBgmId;
 
-			public NotificationSetting notificationSetting;
+			public DragonStrokeViewMode dragonStrokeViewMode;
 
-			[SerializeField]
-			private bool _initOptionValueSet;
+			public bool pettingGyro;
 
-			public bool initOptionValueSet
+			public TextSpeedType textSpeed;
+
+			public AutoLockSetting autoLockSetting;
+
+			public bool autoSkipReadSetting;
+
+			public bool performanceMode;
+
+			public bool androidStatusBarOn;
+
+			public bool androidNavigationBarOn;
+
+			public override void ResetToDefault()
 			{
-				get
-				{
-					return default(bool);
-				}
-				set
-				{
-				}
 			}
+		}
+
+		[Serializable]
+		public class NotificationSetting : SettingBase
+		{
+			public bool allowOfficialNotifications;
+
+			public bool allowSingleStaminaNotifications;
+
+			public bool allowMultiStaminaNotifications;
+
+			public bool allowDragonSmithNotifications;
+
+			public bool allowBuildDoneNotifications;
+
+			public bool allowGoldFarmNotifications;
+
+			public bool allowDragonTreeFullNotifications;
+
+			public bool allowHoneyDrinkFullNotifications;
+
+			public bool allowDmodeExpeditionEndNotifications;
+
+			public bool isSleepTimeOn;
+
+			public int sleepStartHour;
+
+			public int sleepStartMin;
+
+			public int sleepEndHour;
+
+			public int sleepEndMin;
 
 			public override void ResetToDefault()
 			{
 			}
 
-			public void SwitchPerformanceMode(bool toPerformanceMode)
+			public NotificationSetting MakeClone()
+			{
+				return null;
+			}
+
+			public bool EqualsTo(NotificationSetting other)
+			{
+				return default(bool);
+			}
+		}
+
+		public SoundSetting soundSetting;
+
+		public GameSetting gameSetting;
+
+		public SystemSetting systemSetting;
+
+		public NotificationSetting notificationSetting;
+
+		[SerializeField]
+		private bool _initOptionValueSet;
+
+		public bool initOptionValueSet
+		{
+			get
+			{
+				return default(bool);
+			}
+			set
 			{
 			}
 		}
 
-		private static OptionModel instance;
-
-		public const string optionPrefString = "OptionSetting";
-
-		public bool isUpdatedFromServer;
-
-		private List<SettingChangedListenerInfo> settingChangedListeners;
-
-		public Setting setting;
-
-		public static OptionModel Instance => null;
-
-		private OptionModel()
+		public override void ResetToDefault()
 		{
 		}
 
-		static OptionModel()
+		public void SwitchPerformanceMode(bool toPerformanceMode)
 		{
 		}
+	}
 
-		public void AddSettingChangedListener(Action<int> listener, SettingEventType eventType, [Optional] string methodUniqueID)
-		{
-		}
+	private static OptionModel instance;
 
-		public void RemoveSettingChangedListener(Action<int> listener)
-		{
-		}
+	public const string optionPrefString = "OptionSetting";
 
-		public void RemoveSettingChangedListenerByUniqueID(string methodUniqueID)
-		{
-		}
+	public bool isUpdatedFromServer;
 
-		public void InvokeOnSettingChangedForType(SettingEventType type, int value)
-		{
-		}
+	private List<SettingChangedListenerInfo> settingChangedListeners;
 
-		private static bool MemberWiseEqual<T>(T left, T right) where T : class
-		{
-			return default(bool);
-		}
+	public Setting setting;
 
-		public void OnInitSettingDone()
-		{
-		}
+	public static OptionModel Instance => null;
 
-		public static void ApplySoundOptions([Optional] Setting useSetting)
-		{
-		}
+	private OptionModel()
+	{
+	}
 
-		public static void ApplyGraphicSetting(bool force)
-		{
-		}
+	static OptionModel()
+	{
+	}
 
-		public static void ApplyFlickSensitivity()
-		{
-		}
+	public void AddSettingChangedListener(Action<int> listener, SettingEventType eventType, [Optional] string methodUniqueID)
+	{
+	}
 
-		public static void ApplyOptionsOnBoot()
-		{
-		}
+	public void RemoveSettingChangedListener(Action<int> listener)
+	{
+	}
 
-		private bool LoadSetting()
-		{
-			return default(bool);
-		}
+	public void RemoveSettingChangedListenerByUniqueID(string methodUniqueID)
+	{
+	}
 
-		public static bool IsOptionAndoirdSpecificStatusBarOn()
-		{
-			return default(bool);
-		}
+	public void InvokeOnSettingChangedForType(SettingEventType type, int value)
+	{
+	}
 
-		public static bool IsOptionAndoirdSpecificNavigationBarOn()
-		{
-			return default(bool);
-		}
+	private static bool MemberWiseEqual<T>(T left, T right) where T : class
+	{
+		return default(bool);
+	}
 
-		public static bool isSettingExist(bool checkInitOption = true)
-		{
-			return default(bool);
-		}
+	public void OnInitSettingDone()
+	{
+	}
 
-		public void SyncByServerSetting()
-		{
-		}
+	public static void ApplySoundOptions([Optional] Setting useSetting)
+	{
+	}
 
-		public void SaveSetting()
-		{
-		}
+	public static void ApplyGraphicSetting(bool force)
+	{
+	}
 
-		public static bool IsVoiceOn()
-		{
-			return default(bool);
-		}
+	public static void ApplyFlickSensitivity()
+	{
+	}
 
-		public static bool CantPlayOtherCharaEffects()
-		{
-			return default(bool);
-		}
+	public static void ApplyOptionsOnBoot()
+	{
+	}
 
-		public static string GetGraphicsDeviceName()
-		{
-			return null;
-		}
+	private bool LoadSetting()
+	{
+		return default(bool);
+	}
 
-		public static bool IsEnableAntiAliasingDevice(string deviceName)
-		{
-			return default(bool);
-		}
+	public static bool IsOptionAndoirdSpecificStatusBarOn()
+	{
+		return default(bool);
+	}
+
+	public static bool IsOptionAndoirdSpecificNavigationBarOn()
+	{
+		return default(bool);
+	}
+
+	public static bool isSettingExist(bool checkInitOption = true)
+	{
+		return default(bool);
+	}
+
+	public void SyncByServerSetting()
+	{
+	}
+
+	public void SaveSetting()
+	{
+	}
+
+	public static bool IsVoiceOn()
+	{
+		return default(bool);
+	}
+
+	public static bool CantPlayOtherCharaEffects()
+	{
+		return default(bool);
+	}
+
+	public static string GetGraphicsDeviceName()
+	{
+		return null;
+	}
+
+	public static bool IsEnableAntiAliasingDevice(string deviceName)
+	{
+		return default(bool);
 	}
 }

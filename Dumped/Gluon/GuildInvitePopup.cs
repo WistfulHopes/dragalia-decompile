@@ -1,52 +1,51 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildInvitePopup : PopupBase
 {
-	public class GuildInvitePopup : PopupBase
+	[SerializeField]
+	private Transform guildInfoParent;
+
+	[SerializeField]
+	private CommonSettingToggleBase[] inviteMessageToggles;
+
+	[SerializeField]
+	private Transform playerInfoParent;
+
+	private GuildInfoCellData guildInfo;
+
+	private GuildModel.MemberInfo playerInfo;
+
+	private const string prefabPath = "Prefabs/OutGame/Guild/GuildInvitePopup";
+
+	public static GuildInvitePopup Create()
 	{
-		[SerializeField]
-		private Transform guildInfoParent;
+		return null;
+	}
 
-		[SerializeField]
-		private CommonSettingToggleBase[] inviteMessageToggles;
+	public void Setup(GuildInfoCellData guildInfo, GuildModel.MemberInfo playerInfo)
+	{
+	}
 
-		[SerializeField]
-		private Transform playerInfoParent;
+	private void SetGuildInfoCell(GuildInfoCellData guildInfo)
+	{
+	}
 
-		private GuildInfoCellData guildInfo;
+	private void SetPlayerInfo(GuildModel.MemberInfo playerInfo)
+	{
+	}
 
-		private GuildModel.MemberInfo playerInfo;
+	public void OnToggleChanged(int num)
+	{
+	}
 
-		private const string prefabPath = "Prefabs/OutGame/Guild/GuildInvitePopup";
+	public void OnInviteButtonPressed()
+	{
+	}
 
-		public static GuildInvitePopup Create()
-		{
-			return null;
-		}
-
-		public void Setup(GuildInfoCellData guildInfo, GuildModel.MemberInfo playerInfo)
-		{
-		}
-
-		private void SetGuildInfoCell(GuildInfoCellData guildInfo)
-		{
-		}
-
-		private void SetPlayerInfo(GuildModel.MemberInfo playerInfo)
-		{
-		}
-
-		public void OnToggleChanged(int num)
-		{
-		}
-
-		public void OnInviteButtonPressed()
-		{
-		}
-
-		private int GetMessageId()
-		{
-			return default(int);
-		}
+	private int GetMessageId()
+	{
+		return default(int);
 	}
 }

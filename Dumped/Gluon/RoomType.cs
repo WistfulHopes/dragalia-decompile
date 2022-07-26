@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum RoomType
 {
-	public enum RoomType
-	{
-		Normal = 1,
-		Conditional = 2,
-		Undefined = -1
-	}
+	Normal = 1,
+	Conditional = 2,
+	Undefined = -1
 }

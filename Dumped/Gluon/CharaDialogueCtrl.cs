@@ -2,148 +2,147 @@ using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharaDialogueCtrl : FastUpdateMonoBehaviour
 {
-	public class CharaDialogueCtrl : FastUpdateMonoBehaviour
+	private class DialogueData
 	{
-		private class DialogueData
-		{
-			public CharaDialogueUI charaDialogue;
+		public CharaDialogueUI charaDialogue;
 
-			public int index;
-		}
+		public int index;
+	}
 
-		private class DialogueQueue
-		{
-			public Material material;
+	private class DialogueQueue
+	{
+		public Material material;
 
-			public string text;
+		public string text;
 
-			public bool leftIcon;
+		public bool leftIcon;
 
-			public string voice;
+		public string voice;
 
-			public InGameSound.Priority voicePriority;
+		public InGameSound.Priority voicePriority;
 
-			public int indexData;
+		public int indexData;
 
-			public bool waitVoiceEnd;
+		public bool waitVoiceEnd;
 
-			public bool isManual;
+		public bool isManual;
 
-			public bool fastForward;
+		public bool fastForward;
 
-			public CharaDialogueUI.Balloon balloon;
-		}
+		public CharaDialogueUI.Balloon balloon;
+	}
 
-		private const int numDialogue = 3;
+	private const int numDialogue = 3;
 
-		private DialogueData[] dialogueData;
+	private DialogueData[] dialogueData;
 
-		private const int numDialogueQueue = 10;
+	private const int numDialogueQueue = 10;
 
-		private DialogueQueue[] dialogueQueue;
+	private DialogueQueue[] dialogueQueue;
 
-		private int indexQueue;
+	private int indexQueue;
 
-		private int numQueue;
+	private int numQueue;
 
-		private RectTransform rootRect;
+	private RectTransform rootRect;
 
-		private bool isActive;
+	private bool isActive;
 
-		private InGameFollowLayout followLayout;
+	private InGameFollowLayout followLayout;
 
-		public int NumQueue => default(int);
+	public int NumQueue => default(int);
 
-		public CharacterTalkCtrl characterTalkCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		private void Visible(bool b, bool force = false)
-		{
-		}
-
-		public static CharaDialogueCtrl Create(GameObject parent, int siblingIndex = -1)
+	public CharacterTalkCtrl characterTalkCtrl
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private string GetAllSerifText(bool isDragon)
-		{
-			return null;
-		}
-
-		private void Initialize(GameObject parent, GameObject prefab)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void LoadDragonFont()
-		{
-		}
+	private void Visible(bool b, bool force = false)
+	{
+	}
 
-		private void OnAttachedFollowLayout()
-		{
-		}
+	public static CharaDialogueCtrl Create(GameObject parent, int siblingIndex = -1)
+	{
+		return null;
+	}
 
-		public int GetSiblingIndex()
-		{
-			return default(int);
-		}
+	private string GetAllSerifText(bool isDragon)
+	{
+		return null;
+	}
 
-		public bool Display(CharacterBase chara, string str, bool leftIcon, string voice, CharaDialogueUI.Balloon balloon = CharaDialogueUI.Balloon.Standard, bool isManual = false, bool waitVoiceEnd = false, bool fastForward = false)
-		{
-			return default(bool);
-		}
+	private void Initialize(GameObject parent, GameObject prefab)
+	{
+	}
 
-		public bool Display(int faceId, string str, bool leftIcon, string voice, InGameSound.Priority voicePriority, CharaDialogueUI.Balloon balloon = CharaDialogueUI.Balloon.Standard, bool isManual = false, bool waitVoiceEnd = false, bool fastForward = false)
-		{
-			return default(bool);
-		}
+	public void LoadDragonFont()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	private void OnAttachedFollowLayout()
+	{
+	}
 
-		private void SetFastForward(bool b)
-		{
-		}
+	public int GetSiblingIndex()
+	{
+		return default(int);
+	}
 
-		private int GetData()
-		{
-			return default(int);
-		}
+	public bool Display(CharacterBase chara, string str, bool leftIcon, string voice, CharaDialogueUI.Balloon balloon = CharaDialogueUI.Balloon.Standard, bool isManual = false, bool waitVoiceEnd = false, bool fastForward = false)
+	{
+		return default(bool);
+	}
 
-		public bool IsActive()
-		{
-			return default(bool);
-		}
+	public bool Display(int faceId, string str, bool leftIcon, string voice, InGameSound.Priority voicePriority, CharaDialogueUI.Balloon balloon = CharaDialogueUI.Balloon.Standard, bool isManual = false, bool waitVoiceEnd = false, bool fastForward = false)
+	{
+		return default(bool);
+	}
 
-		public void Release()
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		public bool SetText(string str, string voice)
-		{
-			return default(bool);
-		}
+	private void SetFastForward(bool b)
+	{
+	}
 
-		public bool Close(bool force = false)
-		{
-			return default(bool);
-		}
+	private int GetData()
+	{
+		return default(int);
+	}
 
-		public void ClearDialogueQueue()
-		{
-		}
+	public bool IsActive()
+	{
+		return default(bool);
+	}
+
+	public void Release()
+	{
+	}
+
+	public bool SetText(string str, string voice)
+	{
+		return default(bool);
+	}
+
+	public bool Close(bool force = false)
+	{
+		return default(bool);
+	}
+
+	public void ClearDialogueQueue()
+	{
 	}
 }

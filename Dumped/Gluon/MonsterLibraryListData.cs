@@ -1,19 +1,18 @@
-namespace Gluon
+namespace Gluon;
+
+public class MonsterLibraryListData
 {
-	public class MonsterLibraryListData
-	{
-		public int monsterId;
+	public int monsterId;
 
-		public int maxPieceCount;
+	public int maxPieceCount;
 
-		public int nowPieceCount;
+	public int nowPieceCount;
 
-		public bool newFlg;
+	public bool newFlg;
 
-		public ElementalType elemental;
+	public ElementalType elemental;
 
-		public TribeType monsterTribe;
+	public TribeType monsterTribe;
 
-		public int tribeIndex;
-	}
+	public int tribeIndex;
 }

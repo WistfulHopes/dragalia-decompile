@@ -1,18 +1,17 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class FortCharacterShaderSettings : SceneShaderSettings
 {
-	[ExecuteAlways]
-	public class FortCharacterShaderSettings : SceneShaderSettings
+	private FortCharacterShaderSettings asset;
+
+	public void Load(FortCharacterShaderSettings asset)
 	{
-		private FortCharacterShaderSettings asset;
+	}
 
-		public void Load(FortCharacterShaderSettings asset)
-		{
-		}
-
-		public void Save()
-		{
-		}
+	public void Save()
+	{
 	}
 }

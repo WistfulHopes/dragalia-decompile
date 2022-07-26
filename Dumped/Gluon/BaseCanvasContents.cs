@@ -2,126 +2,125 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BaseCanvasContents : MonoBehaviour
 {
-	public class BaseCanvasContents : MonoBehaviour
+	[Serializable]
+	public class DimToGraySetting
 	{
-		[Serializable]
-		public class DimToGraySetting
-		{
-			public ThemeColor themeColor;
+		public ThemeColor themeColor;
 
-			public float contrast;
+		public float contrast;
 
-			public float saturation;
+		public float saturation;
 
-			public float brightness;
-		}
+		public float brightness;
+	}
 
-		public enum CustomBg
-		{
-			None,
-			MyPage,
-			DragonStroke,
-			Album,
-			Dmode
-		}
+	public enum CustomBg
+	{
+		None,
+		MyPage,
+		DragonStroke,
+		Album,
+		Dmode
+	}
 
-		[SerializeField]
-		private GameObject[] bgObjects;
+	[SerializeField]
+	private GameObject[] bgObjects;
 
-		[SerializeField]
-		private Image[] bgImages;
+	[SerializeField]
+	private Image[] bgImages;
 
-		public RectTransform bgGroup;
+	public RectTransform bgGroup;
 
-		[SerializeField]
-		private RectTransform particleMaskParty;
+	[SerializeField]
+	private RectTransform particleMaskParty;
 
-		[SerializeField]
-		private RectTransform particleMaskNone;
+	[SerializeField]
+	private RectTransform particleMaskNone;
 
-		public Canvas myPageParticleCanvas;
+	public Canvas myPageParticleCanvas;
 
-		public CanvasGroup canvasGroup;
+	public CanvasGroup canvasGroup;
 
-		public BaseCanvasParticle particle;
+	public BaseCanvasParticle particle;
 
-		public BaseCanvasParticle myPage2dParticle;
+	public BaseCanvasParticle myPage2dParticle;
 
-		public DimToGraySetting[] dimToGraySettings;
+	public DimToGraySetting[] dimToGraySettings;
 
-		private ThemeColor currentThemeColor;
+	private ThemeColor currentThemeColor;
 
-		private bool isCurrentMyPage;
+	private bool isCurrentMyPage;
 
-		private CustomBg nowCustomBg;
+	private CustomBg nowCustomBg;
 
-		public Color[] customBgColor;
+	public Color[] customBgColor;
 
-		private const int customBgIndex = 9;
+	private const int customBgIndex = 9;
 
-		private int currentThemeColorForBGIndex => default(int);
+	private int currentThemeColorForBGIndex => default(int);
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void SetActiveBg(ThemeColor themeColor, bool isGoMyPage = false, bool doExitAnimation = true, bool isSkipEnterBgAnimation = false)
-		{
-		}
+	public void SetActiveBg(ThemeColor themeColor, bool isGoMyPage = false, bool doExitAnimation = true, bool isSkipEnterBgAnimation = false)
+	{
+	}
 
-		public void CloseCustomBg()
-		{
-		}
+	public void CloseCustomBg()
+	{
+	}
 
-		public void DiableAllBg()
-		{
-		}
+	public void DiableAllBg()
+	{
+	}
 
-		public void SetParticleEnable(bool enable)
-		{
-		}
+	public void SetParticleEnable(bool enable)
+	{
+	}
 
-		public void SetAlpha(float alpha)
-		{
-		}
+	public void SetAlpha(float alpha)
+	{
+	}
 
-		public void FadeOut(float duration = 1f, float startAlpha = 1f, float endAlpha = 0f)
-		{
-		}
+	public void FadeOut(float duration = 1f, float startAlpha = 1f, float endAlpha = 0f)
+	{
+	}
 
-		public void FadeIn(float duration = 1f, float startAlpha = 0f, float endAlpha = 1f)
-		{
-		}
+	public void FadeIn(float duration = 1f, float startAlpha = 0f, float endAlpha = 1f)
+	{
+	}
 
-		public void SetBgSaturation(float saturation)
-		{
-		}
+	public void SetBgSaturation(float saturation)
+	{
+	}
 
-		public void ResetAllBgSaturation()
-		{
-		}
+	public void ResetAllBgSaturation()
+	{
+	}
 
-		public void SetCustomBg(CustomBg customBg = CustomBg.MyPage, bool doExitAnimation = false)
-		{
-		}
+	public void SetCustomBg(CustomBg customBg = CustomBg.MyPage, bool doExitAnimation = false)
+	{
+	}
 
-		private void ValueShaderPropertyTo(Material mat, string propName, float toValue, float duration)
-		{
-		}
+	private void ValueShaderPropertyTo(Material mat, string propName, float toValue, float duration)
+	{
+	}
 
-		public void SetGrayoutBg(bool isGrayout, float duration = 0.3f)
-		{
-		}
+	public void SetGrayoutBg(bool isGrayout, float duration = 0.3f)
+	{
+	}
 
-		public Color GetBgColor(ThemeColor themeColor)
-		{
-			return default(Color);
-		}
+	public Color GetBgColor(ThemeColor themeColor)
+	{
+		return default(Color);
+	}
 
-		public void FadeParticleAlpha(bool isShow, float duration)
-		{
-		}
+	public void FadeParticleAlpha(bool isShow, float duration)
+	{
 	}
 }

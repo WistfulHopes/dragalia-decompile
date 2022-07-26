@@ -1,38 +1,37 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class BaseScript
 {
-	public class BaseScript
+	public List<StoryFunction> functions
 	{
-		public List<StoryFunction> functions
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public Dictionary<string, string> variables
+	public Dictionary<string, string> variables
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public void AddBaseScript(StoryScript baseScript)
-		{
-		}
+	public void AddBaseScript(StoryScript baseScript)
+	{
 	}
 }

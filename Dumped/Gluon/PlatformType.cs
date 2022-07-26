@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum PlatformType
 {
-	public enum PlatformType
-	{
-		NONE,
-		APPLE,
-		GOOGLE
-	}
+	NONE,
+	APPLE,
+	GOOGLE
 }

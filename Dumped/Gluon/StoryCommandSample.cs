@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandSample : IStoryCommand
 {
-	[CommandName("if_sample")]
-	public class StoryCommandSample : IStoryCommand
+	public void Start(string function)
 	{
-		public void Start(string function)
-		{
-		}
 	}
 }

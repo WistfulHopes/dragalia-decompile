@@ -2,71 +2,70 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ExcludeSummonCtrl : TableViewController<ExcludeSummonCellData>
 {
-	public class ExcludeSummonCtrl : TableViewController<ExcludeSummonCellData>
+	[SerializeField]
+	private AnimationListOneCol listAnimation;
+
+	[SerializeField]
+	private float delayFrame;
+
+	[SerializeField]
+	public Text canExcludeNum;
+
+	public GiftType giftType;
+
+	private const float cellHeight = 148f;
+
+	private List<ExcludeSummonCellData> excludeSummonCellDataList;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		private AnimationListOneCol listAnimation;
+	}
 
-		[SerializeField]
-		private float delayFrame;
+	public void Init(GiftType giftType, List<ulong> idList)
+	{
+	}
 
-		[SerializeField]
-		public Text canExcludeNum;
+	public void ReloadContents(List<ulong> idList)
+	{
+	}
 
-		public GiftType giftType;
+	public List<ExcludeSummonCellData> GetSortTableData()
+	{
+		return null;
+	}
 
-		private const float cellHeight = 148f;
+	public List<ExcludeSummonCellData> GetTableData()
+	{
+		return null;
+	}
 
-		private List<ExcludeSummonCellData> excludeSummonCellDataList;
+	public void SetAllExcludeSetting(bool excludeSetting)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	public void AllUpdateCell()
+	{
+	}
 
-		public void Init(GiftType giftType, List<ulong> idList)
-		{
-		}
+	protected override TableViewCell<ExcludeSummonCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		public void ReloadContents(List<ulong> idList)
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public List<ExcludeSummonCellData> GetSortTableData()
-		{
-			return null;
-		}
+	public void StartEnterAnimation()
+	{
+	}
 
-		public List<ExcludeSummonCellData> GetTableData()
-		{
-			return null;
-		}
-
-		public void SetAllExcludeSetting(bool excludeSetting)
-		{
-		}
-
-		public void AllUpdateCell()
-		{
-		}
-
-		protected override TableViewCell<ExcludeSummonCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public void StartEnterAnimation()
-		{
-		}
-
-		public void StartExitAnimation()
-		{
-		}
+	public void StartExitAnimation()
+	{
 	}
 }

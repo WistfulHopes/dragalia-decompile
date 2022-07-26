@@ -1,7 +1,6 @@
-namespace Cutt
+namespace Cutt;
+
+public static class CuttTimelineCharactorLocator_Define
 {
-	public static class CuttTimelineCharactorLocator_Define
-	{
-		public static string[] kCameraReferencePropertyNames;
-	}
+	public static string[] kCameraReferencePropertyNames;
 }

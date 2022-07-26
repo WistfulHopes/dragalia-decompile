@@ -5,347 +5,346 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class Footer : MonoBehaviour
 {
-	public class Footer : MonoBehaviour
+	public enum MenuTab
 	{
-		public enum MenuTab
-		{
-			None = -1,
-			MyPage,
-			Growth,
-			Party,
-			Fort,
-			Summon,
-			Menu,
-			Event,
-			VoidBattle,
-			Quest,
-			Drill,
-			Max
-		}
+		None = -1,
+		MyPage,
+		Growth,
+		Party,
+		Fort,
+		Summon,
+		Menu,
+		Event,
+		VoidBattle,
+		Quest,
+		Drill,
+		Max
+	}
 
-		public enum freeSummonIcon
-		{
-			FreeSummonOnceADay,
-			ConsecutionCampaignSummon
-		}
+	public enum freeSummonIcon
+	{
+		FreeSummonOnceADay,
+		ConsecutionCampaignSummon
+	}
 
-		public static int selectedIndex;
+	public static int selectedIndex;
 
-		public FooterIcon[] footerIcons;
+	public FooterIcon[] footerIcons;
 
-		public static MenuTab currentMenuTab;
+	public static MenuTab currentMenuTab;
 
-		private bool[] menuEnabled;
+	private bool[] menuEnabled;
 
-		private bool[] menuEnabledTutorial;
+	private bool[] menuEnabledTutorial;
 
-		private bool[] menuEnabledMaintenance;
+	private bool[] menuEnabledMaintenance;
 
-		public UnityAction<string, MenuTab> onFooterButtonPressed;
+	public UnityAction<string, MenuTab> onFooterButtonPressed;
 
-		public UnityAction<string, MenuTab> onFooterButtonLongPressed;
+	public UnityAction<string, MenuTab> onFooterButtonLongPressed;
 
-		[SerializeField]
-		private GameObject fortBadge;
+	[SerializeField]
+	private GameObject fortBadge;
 
-		[SerializeField]
-		private GameObject untouchableLayer;
+	[SerializeField]
+	private GameObject untouchableLayer;
 
-		[SerializeField]
-		private Button[] menuButtons;
+	[SerializeField]
+	private Button[] menuButtons;
 
-		[SerializeField]
-		private GameObject newStoryMark;
+	[SerializeField]
+	private GameObject newStoryMark;
 
-		[SerializeField]
-		private GameObject newChapterMark;
+	[SerializeField]
+	private GameObject newChapterMark;
 
-		private float prevPressedTime;
+	private float prevPressedTime;
 
-		private Material changeableMaterial;
+	private Material changeableMaterial;
 
-		private Material disabledMaterial;
+	private Material disabledMaterial;
 
-		private Material selectedMaterial;
+	private Material selectedMaterial;
 
-		private Material selectedTextMaterial;
+	private Material selectedTextMaterial;
 
-		public static int currentMenuTabForIndexing
-		{
-			get
-			{
-				return default(int);
-			}
-			private set
-			{
-			}
-		}
-
-		public static int MenuTabToIndex(MenuTab tab)
+	public static int currentMenuTabForIndexing
+	{
+		get
 		{
 			return default(int);
 		}
-
-		public static void SetNormalQuestMode()
+		private set
 		{
 		}
+	}
 
-		public static void SetSpecialEventMode()
-		{
-		}
+	public static int MenuTabToIndex(MenuTab tab)
+	{
+		return default(int);
+	}
 
-		public static void SetVoidBattleMode()
-		{
-		}
+	public static void SetNormalQuestMode()
+	{
+	}
 
-		public static bool IsSpecialEventMode()
-		{
-			return default(bool);
-		}
+	public static void SetSpecialEventMode()
+	{
+	}
 
-		public static bool IsVoidBattleMode()
-		{
-			return default(bool);
-		}
+	public static void SetVoidBattleMode()
+	{
+	}
 
-		public static bool IsCurrentTabQuest()
-		{
-			return default(bool);
-		}
+	public static bool IsSpecialEventMode()
+	{
+		return default(bool);
+	}
 
-		private static bool IsQuestTab(MenuTab tab)
-		{
-			return default(bool);
-		}
+	public static bool IsVoidBattleMode()
+	{
+		return default(bool);
+	}
 
-		private static bool IsMyPageTab(MenuTab tab)
-		{
-			return default(bool);
-		}
+	public static bool IsCurrentTabQuest()
+	{
+		return default(bool);
+	}
 
-		public static ThemeColor GetCurrentThemeColor()
-		{
-			return default(ThemeColor);
-		}
+	private static bool IsQuestTab(MenuTab tab)
+	{
+		return default(bool);
+	}
 
-		public static ThemeColor GetThemeColorFromMenuTab(MenuTab menuTab)
-		{
-			return default(ThemeColor);
-		}
+	private static bool IsMyPageTab(MenuTab tab)
+	{
+		return default(bool);
+	}
 
-		private void Awake()
-		{
-		}
+	public static ThemeColor GetCurrentThemeColor()
+	{
+		return default(ThemeColor);
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	public static ThemeColor GetThemeColorFromMenuTab(MenuTab menuTab)
+	{
+		return default(ThemeColor);
+	}
 
-		public void CheckFortBadge()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public static void ResetOnTitle()
-		{
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		public static void Reset()
-		{
-		}
+	public void CheckFortBadge()
+	{
+	}
 
-		private bool CanResponds()
-		{
-			return default(bool);
-		}
+	public static void ResetOnTitle()
+	{
+	}
 
-		private void RefreshPressedTime()
-		{
-		}
+	public static void Reset()
+	{
+	}
 
-		public void OnMyPageButtonPressed()
-		{
-		}
+	private bool CanResponds()
+	{
+		return default(bool);
+	}
 
-		public void OnMyPageButtonLongPressed()
-		{
-		}
+	private void RefreshPressedTime()
+	{
+	}
 
-		public void OnQuestButtonPressed()
-		{
-		}
+	public void OnMyPageButtonPressed()
+	{
+	}
 
-		public void OnGrowthButtonPressed()
-		{
-		}
+	public void OnMyPageButtonLongPressed()
+	{
+	}
 
-		public void OnPartyButtonPressed()
-		{
-		}
+	public void OnQuestButtonPressed()
+	{
+	}
 
-		public void OnFortButtonPressed()
-		{
-		}
+	public void OnGrowthButtonPressed()
+	{
+	}
 
-		public void OnFortButtonLongPressed()
-		{
-		}
+	public void OnPartyButtonPressed()
+	{
+	}
 
-		public void OnSummonButtonPressed()
-		{
-		}
+	public void OnFortButtonPressed()
+	{
+	}
 
-		public void OnMenuButtonPressed()
-		{
-		}
+	public void OnFortButtonLongPressed()
+	{
+	}
 
-		public void OnButtonPressed(string sceneName, MenuTab menuTab, bool isAddSceneClearInstantly = true, bool playSE = true)
-		{
-		}
+	public void OnSummonButtonPressed()
+	{
+	}
 
-		private void CleanupForTransition(MenuTab menuTab)
-		{
-		}
+	public void OnMenuButtonPressed()
+	{
+	}
 
-		public bool CanRespondWithButtonLongPressed(string sceneName, MenuTab menuTab)
-		{
-			return default(bool);
-		}
+	public void OnButtonPressed(string sceneName, MenuTab menuTab, bool isAddSceneClearInstantly = true, bool playSE = true)
+	{
+	}
 
-		public void OnButtonLongPressed(string sceneName, MenuTab menuTab)
-		{
-		}
+	private void CleanupForTransition(MenuTab menuTab)
+	{
+	}
 
-		public void OnButtonDown(MenuTab menuTab)
-		{
-		}
+	public bool CanRespondWithButtonLongPressed(string sceneName, MenuTab menuTab)
+	{
+		return default(bool);
+	}
 
-		public void OnButtonUp(MenuTab menuTab)
-		{
-		}
+	public void OnButtonLongPressed(string sceneName, MenuTab menuTab)
+	{
+	}
 
-		public void ResetButtonDownStatus()
-		{
-		}
+	public void OnButtonDown(MenuTab menuTab)
+	{
+	}
 
-		private bool IsSameTab(MenuTab menuTab)
-		{
-			return default(bool);
-		}
+	public void OnButtonUp(MenuTab menuTab)
+	{
+	}
 
-		public void SetActiveFooterMenu(MenuTab tab)
-		{
-		}
+	public void ResetButtonDownStatus()
+	{
+	}
 
-		public void SetActiveFooterMenuNormalQuestMode()
-		{
-		}
+	private bool IsSameTab(MenuTab menuTab)
+	{
+		return default(bool);
+	}
 
-		public void SetActiveFooterMenuSpecialEventMode()
-		{
-		}
+	public void SetActiveFooterMenu(MenuTab tab)
+	{
+	}
 
-		public void SetActiveFooterMenuVoidBattleMode()
-		{
-		}
+	public void SetActiveFooterMenuNormalQuestMode()
+	{
+	}
 
-		public void SetActiveFooterMenuNormalMenuMode()
-		{
-		}
+	public void SetActiveFooterMenuSpecialEventMode()
+	{
+	}
 
-		public void ResetSelectedStatus()
-		{
-		}
+	public void SetActiveFooterMenuVoidBattleMode()
+	{
+	}
 
-		public void DisableOthersTemporary(MenuTab tab)
-		{
-		}
+	public void SetActiveFooterMenuNormalMenuMode()
+	{
+	}
 
-		public void SetFortBadge(bool isActive)
-		{
-		}
+	public void ResetSelectedStatus()
+	{
+	}
 
-		public void SetMenuEnabled(MenuTab menuTab, bool enabled)
-		{
-		}
+	public void DisableOthersTemporary(MenuTab tab)
+	{
+	}
 
-		public void SetAllMenuEnabled(bool enabled)
-		{
-		}
+	public void SetFortBadge(bool isActive)
+	{
+	}
 
-		public void SetAllMenuTouchable(bool enabled)
-		{
-		}
+	public void SetMenuEnabled(MenuTab menuTab, bool enabled)
+	{
+	}
 
-		public static void SyncAnimationWithBgm()
-		{
-		}
+	public void SetAllMenuEnabled(bool enabled)
+	{
+	}
 
-		public void UpdateSummonBanner()
-		{
-		}
+	public void SetAllMenuTouchable(bool enabled)
+	{
+	}
 
-		private void HideSummonBanner()
-		{
-		}
+	public static void SyncAnimationWithBgm()
+	{
+	}
 
-		private bool ShowSummonBanner(SummonDataElement data)
-		{
-			return default(bool);
-		}
+	public void UpdateSummonBanner()
+	{
+	}
 
-		private bool ShowSummonBanners(List<SummonDataElement> data)
-		{
-			return default(bool);
-		}
+	private void HideSummonBanner()
+	{
+	}
 
-		public void CheckMaintenance()
-		{
-		}
+	private bool ShowSummonBanner(SummonDataElement data)
+	{
+		return default(bool);
+	}
 
-		public void CheckTutorial(bool isCheckOnTutorial = true)
-		{
-		}
+	private bool ShowSummonBanners(List<SummonDataElement> data)
+	{
+		return default(bool);
+	}
 
-		public void SetMenuEnabledTutorialFlag(MenuTab menuTab, bool enabled)
-		{
-		}
+	public void CheckMaintenance()
+	{
+	}
 
-		public void SetAllMenuEnabledTutorialFlag(bool enabled)
-		{
-		}
+	public void CheckTutorial(bool isCheckOnTutorial = true)
+	{
+	}
 
-		private void OnApplicationPause(bool pause)
-		{
-		}
+	public void SetMenuEnabledTutorialFlag(MenuTab menuTab, bool enabled)
+	{
+	}
 
-		public void UpdateQuestBanner()
-		{
-		}
+	public void SetAllMenuEnabledTutorialFlag(bool enabled)
+	{
+	}
 
-		public bool IsNewStoryMarkShow()
-		{
-			return default(bool);
-		}
+	private void OnApplicationPause(bool pause)
+	{
+	}
 
-		public void ShowNewStoryMark(bool enable)
-		{
-		}
+	public void UpdateQuestBanner()
+	{
+	}
 
-		private bool IsNewChapterMarkShow()
-		{
-			return default(bool);
-		}
+	public bool IsNewStoryMarkShow()
+	{
+		return default(bool);
+	}
 
-		private void ShowNewChapterMark(bool enable)
-		{
-		}
+	public void ShowNewStoryMark(bool enable)
+	{
+	}
 
-		public bool IsEnebledSelectFooter(MenuTab tabType)
-		{
-			return default(bool);
-		}
+	private bool IsNewChapterMarkShow()
+	{
+		return default(bool);
+	}
+
+	private void ShowNewChapterMark(bool enable)
+	{
+	}
+
+	public bool IsEnebledSelectFooter(MenuTab tabType)
+	{
+		return default(bool);
 	}
 }

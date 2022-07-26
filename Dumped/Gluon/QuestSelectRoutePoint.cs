@@ -1,51 +1,50 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSelectRoutePoint : MonoBehaviour
 {
-	public class QuestSelectRoutePoint : MonoBehaviour
+	[SerializeField]
+	private float _waitForNextArranging;
+
+	public int watchListIndex;
+
+	private bool _isActivateImmediately;
+
+	public List<float> waitForNextAnimationList;
+
+	public bool autoDestroyFlag;
+
+	public float startDelayTime;
+
+	public float waitForNextArranging
 	{
-		[SerializeField]
-		private float _waitForNextArranging;
-
-		public int watchListIndex;
-
-		private bool _isActivateImmediately;
-
-		public List<float> waitForNextAnimationList;
-
-		public bool autoDestroyFlag;
-
-		public float startDelayTime;
-
-		public float waitForNextArranging
+		get
 		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
+			return default(float);
 		}
-
-		public bool isActivateImmediately
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		public virtual void StartActivation()
+		set
 		{
 		}
+	}
 
-		public virtual void ActivateImmediately()
+	public bool isActivateImmediately
+	{
+		get
+		{
+			return default(bool);
+		}
+		set
 		{
 		}
+	}
+
+	public virtual void StartActivation()
+	{
+	}
+
+	public virtual void ActivateImmediately()
+	{
 	}
 }

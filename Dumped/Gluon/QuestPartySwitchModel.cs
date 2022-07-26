@@ -4,161 +4,160 @@ using System.Runtime.InteropServices;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestPartySwitchModel
 {
-	public class QuestPartySwitchModel
+	[Flags]
+	public enum LimitedElementalFlags
 	{
-		[Flags]
-		public enum LimitedElementalFlags
-		{
-			Party1Character = 0x1,
-			Party1Dragon = 0x2,
-			Party2Character = 0x4,
-			Party2Dragon = 0x8,
-			Max = 0x10
-		}
+		Party1Character = 1,
+		Party1Dragon = 2,
+		Party2Character = 4,
+		Party2Dragon = 8,
+		Max = 0x10
+	}
 
-		public class UnFulfilledUnitData
-		{
-			public int partyNo;
+	public class UnFulfilledUnitData
+	{
+		public int partyNo;
 
-			public int unitId;
+		public int unitId;
 
-			public ulong keyId;
+		public ulong keyId;
 
-			public int equipCharaId;
+		public int equipCharaId;
 
-			public GiftType unitType;
+		public GiftType unitType;
 
-			public UnFulfilledUnitData(int unitId, ulong keyId, int equipCharaId, GiftType unitType, int partyNo = 1)
-			{
-			}
-
-			public UnFulfilledUnitData()
-			{
-			}
-		}
-
-		public bool isFullMember;
-
-		public bool isUnFulfilledLimitedElemental;
-
-		public List<UnFulfilledUnitData> unFulfilledCharacterDataList;
-
-		public List<UnFulfilledUnitData> unFulfilledWeaponDataList;
-
-		public List<UnFulfilledUnitData> unFulfilledDragonDataList;
-
-		public List<UnFulfilledUnitData> unFulfilledAbilityCrestDataList;
-
-		public List<UnFulfilledUnitData> unFulfilledTalismanDataList;
-
-		public LimitedElementalFlags limitedElementalFlag;
-
-		public ElementalType limitedElementalType1;
-
-		public ElementalType limitedElementalType2;
-
-		private PartySettingList[] party1;
-
-		private PartySettingList[] party2;
-
-		private Dictionary<int, Material> charaIconMaterialList;
-
-		private Dictionary<int, Material> weaponIconMaterialList;
-
-		private Dictionary<int, Material> dragonIconMaterialList;
-
-		private Dictionary<int, Material> abilityCrestIconMaterialList;
-
-		private Dictionary<int, Material> talismanIconMaterialList;
-
-		private int questId;
-
-		public bool CanStartPartySwitchQuest()
-		{
-			return default(bool);
-		}
-
-		public void SettingData(PartySettingList[] party1, PartySettingList[] party2)
+		public UnFulfilledUnitData(int unitId, ulong keyId, int equipCharaId, GiftType unitType, int partyNo = 1)
 		{
 		}
 
-		public void SettingData(int questId)
+		public UnFulfilledUnitData()
 		{
 		}
+	}
 
-		private static bool IsFullMember(PartySettingList[] allPartyData)
-		{
-			return default(bool);
-		}
+	public bool isFullMember;
 
-		private LimitedElementalFlags CreateLimitedElementalFlag()
-		{
-			return default(LimitedElementalFlags);
-		}
+	public bool isUnFulfilledLimitedElemental;
 
-		private List<UnFulfilledUnitData> FilterUnFulfilledCharacter(PartySettingList[] allPartyData)
-		{
-			return null;
-		}
+	public List<UnFulfilledUnitData> unFulfilledCharacterDataList;
 
-		private List<UnFulfilledUnitData> FilterUnFulfilledWeapon(PartySettingList[] allPartyData)
-		{
-			return null;
-		}
+	public List<UnFulfilledUnitData> unFulfilledWeaponDataList;
 
-		private List<UnFulfilledUnitData> FilterUnFulfilledDragon(PartySettingList[] allPartyData)
-		{
-			return null;
-		}
+	public List<UnFulfilledUnitData> unFulfilledDragonDataList;
 
-		private List<UnFulfilledUnitData> FilterUnFulfilledAbilityCrest(PartySettingList[] allPartyData)
-		{
-			return null;
-		}
+	public List<UnFulfilledUnitData> unFulfilledAbilityCrestDataList;
 
-		private List<UnFulfilledUnitData> FilterUnFulfilledTalisman(PartySettingList[] allPartyData)
-		{
-			return null;
-		}
+	public List<UnFulfilledUnitData> unFulfilledTalismanDataList;
 
-		private List<int> GetPartyCharaIdList()
-		{
-			return null;
-		}
+	public LimitedElementalFlags limitedElementalFlag;
 
-		public void LoadMaterials()
-		{
-		}
+	public ElementalType limitedElementalType1;
 
-		public void DestroyMaterials()
-		{
-		}
+	public ElementalType limitedElementalType2;
 
-		public Material GetMaterial(GiftType type, int id)
-		{
-			return null;
-		}
+	private PartySettingList[] party1;
 
-		public static bool IsPartySwitchQuest(int questId)
-		{
-			return default(bool);
-		}
+	private PartySettingList[] party2;
 
-		private bool IsLimitedElementalTypeEnoughCharacter([In] ref PartySettingList[] party, ElementalType limitedElementalType)
-		{
-			return default(bool);
-		}
+	private Dictionary<int, Material> charaIconMaterialList;
 
-		private bool IsLimitedElementalTypeEnoughDragon([In] ref PartySettingList[] party, ElementalType limitedElementalType)
-		{
-			return default(bool);
-		}
+	private Dictionary<int, Material> weaponIconMaterialList;
 
-		public static bool IsCurrentClearParty()
-		{
-			return default(bool);
-		}
+	private Dictionary<int, Material> dragonIconMaterialList;
+
+	private Dictionary<int, Material> abilityCrestIconMaterialList;
+
+	private Dictionary<int, Material> talismanIconMaterialList;
+
+	private int questId;
+
+	public bool CanStartPartySwitchQuest()
+	{
+		return default(bool);
+	}
+
+	public void SettingData(PartySettingList[] party1, PartySettingList[] party2)
+	{
+	}
+
+	public void SettingData(int questId)
+	{
+	}
+
+	private static bool IsFullMember(PartySettingList[] allPartyData)
+	{
+		return default(bool);
+	}
+
+	private LimitedElementalFlags CreateLimitedElementalFlag()
+	{
+		return default(LimitedElementalFlags);
+	}
+
+	private List<UnFulfilledUnitData> FilterUnFulfilledCharacter(PartySettingList[] allPartyData)
+	{
+		return null;
+	}
+
+	private List<UnFulfilledUnitData> FilterUnFulfilledWeapon(PartySettingList[] allPartyData)
+	{
+		return null;
+	}
+
+	private List<UnFulfilledUnitData> FilterUnFulfilledDragon(PartySettingList[] allPartyData)
+	{
+		return null;
+	}
+
+	private List<UnFulfilledUnitData> FilterUnFulfilledAbilityCrest(PartySettingList[] allPartyData)
+	{
+		return null;
+	}
+
+	private List<UnFulfilledUnitData> FilterUnFulfilledTalisman(PartySettingList[] allPartyData)
+	{
+		return null;
+	}
+
+	private List<int> GetPartyCharaIdList()
+	{
+		return null;
+	}
+
+	public void LoadMaterials()
+	{
+	}
+
+	public void DestroyMaterials()
+	{
+	}
+
+	public Material GetMaterial(GiftType type, int id)
+	{
+		return null;
+	}
+
+	public static bool IsPartySwitchQuest(int questId)
+	{
+		return default(bool);
+	}
+
+	private bool IsLimitedElementalTypeEnoughCharacter([In] ref PartySettingList[] party, ElementalType limitedElementalType)
+	{
+		return default(bool);
+	}
+
+	private bool IsLimitedElementalTypeEnoughDragon([In] ref PartySettingList[] party, ElementalType limitedElementalType)
+	{
+		return default(bool);
+	}
+
+	public static bool IsCurrentClearParty()
+	{
+		return default(bool);
 	}
 }

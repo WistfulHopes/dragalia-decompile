@@ -2,85 +2,84 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DragonTransformCtrl : MonoBehaviour
 {
-	public class DragonTransformCtrl : MonoBehaviour
+	public enum State
 	{
-		public enum State
+		None,
+		Start,
+		End
+	}
+
+	public enum TransformType
+	{
+		None,
+		Dragon,
+		Unique,
+		Servant
+	}
+
+	private TransformType transformType;
+
+	private PlayerCtrl player;
+
+	private float elapsedTime;
+
+	public static readonly float forceChangeSec;
+
+	private List<CharacterBase> transformNgCharaList;
+
+	public State state
+	{
+		[CompilerGenerated]
+		get
 		{
-			None,
-			Start,
-			End
+			return default(State);
 		}
-
-		public enum TransformType
-		{
-			None,
-			Dragon,
-			Unique,
-			Servant
-		}
-
-		private TransformType transformType;
-
-		private PlayerCtrl player;
-
-		private float elapsedTime;
-
-		public static readonly float forceChangeSec;
-
-		private List<CharacterBase> transformNgCharaList;
-
-		public State state
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(State);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void SetTransformNgChara(CharacterBase chara, bool ngFlag)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool CheckTransformNgChara(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	public void SetTransformNgChara(CharacterBase chara, bool ngFlag)
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public bool CheckTransformNgChara(CharacterBase chara)
+	{
+		return default(bool);
+	}
 
-		private void Update()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void SetPlayer(PlayerCtrl player)
-		{
-		}
+	private void Update()
+	{
+	}
 
-		public void StartActive(PlayerCtrl player, TransformType type, bool isSkipProduction = false)
-		{
-		}
+	public void SetPlayer(PlayerCtrl player)
+	{
+	}
 
-		public void SetStateEnd()
-		{
-		}
+	public void StartActive(PlayerCtrl player, TransformType type, bool isSkipProduction = false)
+	{
+	}
 
-		public bool IsActive()
-		{
-			return default(bool);
-		}
+	public void SetStateEnd()
+	{
+	}
 
-		public static bool CanFinishTransform(HumanCharacter human)
-		{
-			return default(bool);
-		}
+	public bool IsActive()
+	{
+		return default(bool);
+	}
+
+	public static bool CanFinishTransform(HumanCharacter human)
+	{
+		return default(bool);
 	}
 }

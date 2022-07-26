@@ -1,19 +1,18 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DestroyAfterDelay : MonoBehaviour
 {
-	public class DestroyAfterDelay : MonoBehaviour
+	public float delay;
+
+	private void Start()
 	{
-		public float delay;
+	}
 
-		private void Start()
-		{
-		}
-
-		private IEnumerator DestroyCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator DestroyCoroutine()
+	{
+		return null;
 	}
 }

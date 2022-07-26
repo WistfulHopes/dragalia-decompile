@@ -1,57 +1,55 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class Dmode3dBgScene : SceneBase
 {
-	public class Dmode3dBgScene : SceneBase
+	public Camera mainCamera;
+
+	public Camera render3dCamera;
+
+	public GameObject renderBgCanvas;
+
+	public Dmode3dBgCanvas controlCanvas;
+
+	public QuestCharacterCtrl[] characterCtrls;
+
+	public GameObject characterShaderSettingsObj;
+
+	[SerializeField]
+	public PartyCharacterShaderSettings charaShaderSettings;
+
+	private void Awake()
 	{
-		public Camera mainCamera;
+	}
 
-		public Camera render3dCamera;
+	private void Start()
+	{
+	}
 
-		public GameObject renderBgCanvas;
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		public Dmode3dBgCanvas controlCanvas;
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		public QuestCharacterCtrl[] characterCtrls;
+	public void FadeOutBgCanvas()
+	{
+	}
 
-		public GameObject characterShaderSettingsObj;
+	private void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		[Header("Shader")]
-		public PartyCharacterShaderSettings charaShaderSettings;
+	public void SetupCharaShader()
+	{
+	}
 
-		private void Awake()
-		{
-		}
-
-		private void Start()
-		{
-		}
-
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
-
-		public override void OnBeforeLeaving()
-		{
-		}
-
-		public void FadeOutBgCanvas()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public void SetupCharaShader()
-		{
-		}
-
-		public void OnChangedBackgroundShaderParameter()
-		{
-		}
+	public void OnChangedBackgroundShaderParameter()
+	{
 	}
 }

@@ -2,77 +2,73 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeMoonTradeShopView : ShopTradePanelBase
 {
-	public class ShopTradeMoonTradeShopView : ShopTradePanelBase
+	private enum MoonType
 	{
-		private enum MoonType
-		{
-			None,
-			Bronze,
-			Silver,
-			Gold
-		}
+		None,
+		Bronze,
+		Silver,
+		Gold
+	}
 
-		[SerializeField]
-		[Header("Tab")]
-		public TabBase tabController;
+	[SerializeField]
+	public TabBase tabController;
 
-		[SerializeField]
-		[Header("Title")]
-		public Text[] ownedCountText;
+	[SerializeField]
+	public Text[] ownedCountText;
 
-		[SerializeField]
-		[Header("TableView")]
-		public ShopTradeTableViewController[] tableviews;
+	[SerializeField]
+	public ShopTradeTableViewController[] tableviews;
 
-		private int[] ownedMoonCount;
+	private int[] ownedMoonCount;
 
-		private MoonType currentTabType;
+	private MoonType currentTabType;
 
-		private static Action onHttpDone;
+	private static Action onHttpDone;
 
-		private ShopTradeProductData.TradeShopItemData selectedData;
+	private ShopTradeProductData.TradeShopItemData selectedData;
 
-		public static ShopTradeMoonTradeShopView Create(Transform parent, ShopTradeScene scene)
-		{
-			return null;
-		}
+	public static ShopTradeMoonTradeShopView Create(Transform parent, ShopTradeScene scene)
+	{
+		return null;
+	}
 
-		public void OnSwitchTab(int tabIndex, bool calledFromUI)
-		{
-		}
+	public void OnSwitchTab(int tabIndex, bool calledFromUI)
+	{
+	}
 
-		private static void ReloadData()
-		{
-		}
+	private static void ReloadData()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void UpdateTitleCount()
-		{
-		}
+	private void UpdateTitleCount()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void LoadTabs()
-		{
-		}
+	private void LoadTabs()
+	{
+	}
 
-		public override void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data)
-		{
-		}
+	public override void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data)
+	{
+	}
 
-		public void ReloadPage()
-		{
-		}
+	public void ReloadPage()
+	{
+	}
 
-		public override void RefreshCurrentPage()
-		{
-		}
+	public override void RefreshCurrentPage()
+	{
 	}
 }

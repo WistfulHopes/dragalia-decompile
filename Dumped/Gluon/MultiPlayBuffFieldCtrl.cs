@@ -1,44 +1,64 @@
 using System.Collections.Generic;
+using Gluon.Bullet;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MultiPlayBuffFieldCtrl
 {
-	public class MultiPlayBuffFieldCtrl
+	private static long _nextBuffFieldId;
+
+	private List<BuffFieldEvent> _requestEventQueue;
+
+	private List<BuffFieldEvent> _reserveDeleteEventQuene;
+
+	private ActionStartParameter _tmpActionStartParam;
+
+	public void Update()
 	{
-		private static long _nextBuffFieldId;
+	}
 
-		private List<BuffFieldEvent> _requestEventQueue;
+	public void RequestCreateBuffField(long buffFieldId, long actionPartsResourceId, string hitAttrLabel, Vector3 position, Quaternion rotation, CharacterBase owner, int actionId, int skillId, int actionProductId, ActionStartParameter actionStartParam, bool isHostRequest)
+	{
+	}
 
-		private ActionStartParameter _tmpActionStartParam;
+	public void OnReceiveBuffFieldEvent(BuffFieldEvent recvEvent)
+	{
+	}
 
-		public void Update()
-		{
-		}
+	public void OnDisconnectUser(int disconnectActorId)
+	{
+	}
 
-		public void RequestCreateBuffField(long buffFieldId, long actionPartsResourceId, string hitAttrLabel, Vector3 position, Quaternion rotation, CharacterBase owner, int actionId, int skillId, int actionProductId, ActionStartParameter actionStartParam, bool isHostRequest)
-		{
-		}
+	private void CreateBuffField(BuffFieldEvent recvEvent, CharacterBase owner, BuffFieldCreateEventParam param)
+	{
+	}
 
-		public void OnReceiveBuffFieldEvent(BuffFieldEvent recvEvent)
-		{
-		}
+	public static long CreateBuffFieldId()
+	{
+		return default(long);
+	}
 
-		public void OnDisconnectUser(int disconnectActorId)
-		{
-		}
+	public static void ResetBuffFieldId()
+	{
+	}
 
-		private void CreateBuffField(BuffFieldEvent recvEvent, CharacterBase owner, BuffFieldCreateEventParam param)
-		{
-		}
+	public void OnDeleteBuffField(SettingHitObject sh, CharacterBase owner, bool deleteEffectImmediately = false)
+	{
+	}
 
-		public static long CreateBuffFieldId()
-		{
-			return default(long);
-		}
+	public void OnDeleteSettingHitOfSelf(CharacterBase owner)
+	{
+	}
 
-		public static void ResetBuffFieldId()
-		{
-		}
+	public bool ResetReserveDeleteBuffField(long buffFieldId)
+	{
+		return default(bool);
+	}
+
+	public bool isReserveDeleteBuffField(long buffFieldId)
+	{
+		return default(bool);
 	}
 }

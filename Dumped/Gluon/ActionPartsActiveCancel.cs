@@ -1,46 +1,45 @@
 using System.Collections.Generic;
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsActiveCancel : ActionParts
 {
-	public class ActionPartsActiveCancel : ActionParts
+	public enum ActionType
 	{
-		public enum ActionType
-		{
-			None,
-			BurstAttack,
-			Avoid,
-			AvoidFront,
-			AvoidBack,
-			AnyCombo
-		}
+		None,
+		BurstAttack,
+		Avoid,
+		AvoidFront,
+		AvoidBack,
+		AnyCombo
+	}
 
-		private readonly ActiveCancelData _partsData;
+	private readonly ActiveCancelData _partsData;
 
-		private bool isStart;
+	private bool isStart;
 
-		private List<int> activeCancelActions;
+	private List<int> activeCancelActions;
 
-		public ActionPartsActiveCancel(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsActiveCancel(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public static int[] GetActionsByActionType(CharacterBase owner, ActionType actionType)
-		{
-			return null;
-		}
+	public static int[] GetActionsByActionType(CharacterBase owner, ActionType actionType)
+	{
+		return null;
+	}
 
-		private void AnalyzeActionType()
-		{
-		}
+	private void AnalyzeActionType()
+	{
 	}
 }

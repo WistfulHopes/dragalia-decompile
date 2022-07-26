@@ -4,139 +4,138 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ManaCircle2DCircleObject : MonoBehaviour
 {
-	public class ManaCircle2DCircleObject : MonoBehaviour
+	[SerializeField]
+	protected ManaCircle2DCirclePieceObject[] pieceIcons;
+
+	[SerializeField]
+	private ManaCircle2DCircleLimitBreakPieceObject limitBreakIcon;
+
+	[SerializeField]
+	private Image nextLimitBreakArrow;
+
+	[SerializeField]
+	private Image nextCircleArrow;
+
+	[SerializeField]
+	protected Image[] lineImages;
+
+	[SerializeField]
+	private Sprite enableArrowSprite;
+
+	[SerializeField]
+	protected Sprite enableleLineSprite;
+
+	protected int circleIndex;
+
+	protected GrowthManaCircle2DScene scene;
+
+	protected GrowthManaCircleModel model;
+
+	protected List<int> releaseTargetIdList;
+
+	private bool isShowLimitBreakIcon;
+
+	private TouchGuardObject endPieceEffectTouchGuard;
+
+	private int storyPopupCount;
+
+	public void InitCircle(GrowthManaCircle2DScene scene, int circleIndex)
 	{
-		[SerializeField]
-		protected ManaCircle2DCirclePieceObject[] pieceIcons;
+	}
 
-		[SerializeField]
-		private ManaCircle2DCircleLimitBreakPieceObject limitBreakIcon;
+	public void UpdatePiece()
+	{
+	}
 
-		[SerializeField]
-		private Image nextLimitBreakArrow;
+	public virtual void UpdateLine()
+	{
+	}
 
-		[SerializeField]
-		private Image nextCircleArrow;
+	public bool IsReleaseAllPiece()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		protected Image[] lineImages;
+	protected virtual void OnPieceIconPressed(GrowthManaCircleManaPieceData pieceData, ManaCircle2DCirclePieceBase.PieceState state)
+	{
+	}
 
-		[SerializeField]
-		private Sprite enableArrowSprite;
+	private void OnLimitBreakPieceIconPressed(ManaCircle2DCirclePieceBase.PieceState state)
+	{
+	}
 
-		[SerializeField]
-		protected Sprite enableleLineSprite;
+	private ManaCircle2DCirclePieceObject GetPieceObjectByPieceDataId(int id)
+	{
+		return null;
+	}
 
-		protected int circleIndex;
+	protected void PlayReleasePieceEffect(bool isShowStoryPopup = false)
+	{
+	}
 
-		protected GrowthManaCircle2DScene scene;
+	protected void PlayAutoReleasePieceEffect(bool isShowStoryPopup, bool isReleaseLimitBreak)
+	{
+	}
 
-		protected GrowthManaCircleModel model;
+	public void PlayReleaseAllCirclePieceEffect()
+	{
+	}
 
-		protected List<int> releaseTargetIdList;
+	private bool IsChangeGrowMaterialPopup(bool isGrowRelease)
+	{
+		return default(bool);
+	}
 
-		private bool isShowLimitBreakIcon;
+	public void PlayReleaseLimitBreakPieceEffect(int storyPopupCount = 0)
+	{
+	}
 
-		private TouchGuardObject endPieceEffectTouchGuard;
+	public void PlayReleasePieceAndLimitBreakEffect(GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount)
+	{
+	}
 
-		private int storyPopupCount;
+	public static void CreateCharaStoryPopup(int characterId, int storyIndex, int rarity, bool isTemporary, Action OnPopAnimationEnded, Action onCompleted)
+	{
+	}
 
-		public void InitCircle(GrowthManaCircle2DScene scene, int circleIndex)
-		{
-		}
+	public void AutoReleaseResultAction(GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount, bool isReleaseLimitBreak)
+	{
+	}
 
-		public void UpdatePiece()
-		{
-		}
+	public void PlayUsePlatinumCrystalDirection(GrowthAwakeResultPop.BeforeData beforeData, GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount, bool isReleaseLimitBreak)
+	{
+	}
 
-		public virtual void UpdateLine()
-		{
-		}
+	private void ShowStoryPopups()
+	{
+	}
 
-		public bool IsReleaseAllPiece()
-		{
-			return default(bool);
-		}
+	private void ShowGrowEndPopup([Optional] Action action)
+	{
+	}
 
-		protected virtual void OnPieceIconPressed(GrowthManaCircleManaPieceData pieceData, ManaCircle2DCirclePieceBase.PieceState state)
-		{
-		}
+	public void SetEnableAllPiece(bool enable)
+	{
+	}
 
-		private void OnLimitBreakPieceIconPressed(ManaCircle2DCirclePieceBase.PieceState state)
-		{
-		}
+	public void SetEnablePieceByPieceIndex(int index, bool enable)
+	{
+	}
 
-		private ManaCircle2DCirclePieceObject GetPieceObjectByPieceDataId(int id)
-		{
-			return null;
-		}
+	private bool IsRelesableCircleByRarity()
+	{
+		return default(bool);
+	}
 
-		protected void PlayReleasePieceEffect(bool isShowStoryPopup = false)
-		{
-		}
+	private void SetEndPieceTouchGuard(bool isSetTouchGuard)
+	{
+	}
 
-		protected void PlayAutoReleasePieceEffect(bool isShowStoryPopup, bool isReleaseLimitBreak)
-		{
-		}
-
-		public void PlayReleaseAllCirclePieceEffect()
-		{
-		}
-
-		private bool IsChangeGrowMaterialPopup(bool isGrowRelease)
-		{
-			return default(bool);
-		}
-
-		public void PlayReleaseLimitBreakPieceEffect(int storyPopupCount = 0)
-		{
-		}
-
-		public void PlayReleasePieceAndLimitBreakEffect(GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount)
-		{
-		}
-
-		public static void CreateCharaStoryPopup(int characterId, int storyIndex, int rarity, bool isTemporary, Action OnPopAnimationEnded, Action onCompleted)
-		{
-		}
-
-		public void AutoReleaseResultAction(GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount, bool isReleaseLimitBreak)
-		{
-		}
-
-		public void PlayUsePlatinumCrystalDirection(GrowthAwakeResultPop.BeforeData beforeData, GrowthManaCircleManaPieceData[] pieceDataList, int storyPopupCount, bool isReleaseLimitBreak)
-		{
-		}
-
-		private void ShowStoryPopups()
-		{
-		}
-
-		private void ShowGrowEndPopup([Optional] Action action)
-		{
-		}
-
-		public void SetEnableAllPiece(bool enable)
-		{
-		}
-
-		public void SetEnablePieceByPieceIndex(int index, bool enable)
-		{
-		}
-
-		private bool IsRelesableCircleByRarity()
-		{
-			return default(bool);
-		}
-
-		private void SetEndPieceTouchGuard(bool isSetTouchGuard)
-		{
-		}
-
-		private void RemoveEndPieceTouchGuard(bool isDelay = true)
-		{
-		}
+	private void RemoveEndPieceTouchGuard(bool isDelay = true)
+	{
 	}
 }

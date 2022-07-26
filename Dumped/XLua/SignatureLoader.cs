@@ -1,27 +1,26 @@
 using System.Security.Cryptography;
 
-namespace XLua
+namespace XLua;
+
+public class SignatureLoader
 {
-	public class SignatureLoader
+	private LuaEnv.CustomLoader userLoader;
+
+	private RSACryptoServiceProvider rsa;
+
+	private SHA1 sha;
+
+	public SignatureLoader(string publicKey, LuaEnv.CustomLoader loader)
 	{
-		private LuaEnv.CustomLoader userLoader;
+	}
 
-		private RSACryptoServiceProvider rsa;
+	private byte[] load_and_verify(ref string filepath)
+	{
+		return null;
+	}
 
-		private SHA1 sha;
-
-		public SignatureLoader(string publicKey, LuaEnv.CustomLoader loader)
-		{
-		}
-
-		private byte[] load_and_verify(ref string filepath)
-		{
-			return null;
-		}
-
-		public static implicit operator LuaEnv.CustomLoader(SignatureLoader signatureLoader)
-		{
-			return null;
-		}
+	public static implicit operator LuaEnv.CustomLoader(SignatureLoader signatureLoader)
+	{
+		return null;
 	}
 }

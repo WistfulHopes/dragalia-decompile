@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class FollowerStateReserverIn : IState<FollowerController>
 {
-	public class FollowerStateReserverIn : IState<FollowerController>
+	public override void OnStateUpdate()
 	{
-		public override void OnStateUpdate()
-		{
-		}
 	}
 }

@@ -2,36 +2,35 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestStoryPopup : CommonPopup
 {
-	public class QuestStoryPopup : CommonPopup
+	[SerializeField]
+	public Text uiTitle;
+
+	public Text uiMainText;
+
+	public Text downloadText;
+
+	public Text wifiText;
+
+	public Text helpText;
+
+	public static QuestStoryPopup Create(int questID, QuestGroupType groupType, UnityAction<int, QuestGroupType> OnOkCallback, UnityAction OnCancelCallback, bool showBlackLayer = true)
 	{
-		[SerializeField]
-		public Text uiTitle;
+		return null;
+	}
 
-		public Text uiMainText;
+	public void ReflectParam(int questID)
+	{
+	}
 
-		public Text downloadText;
+	public override void OnCancelButtonPressed()
+	{
+	}
 
-		public Text wifiText;
-
-		public Text helpText;
-
-		public static QuestStoryPopup Create(int questID, QuestGroupType groupType, UnityAction<int, QuestGroupType> OnOkCallback, UnityAction OnCancelCallback, bool showBlackLayer = true)
-		{
-			return null;
-		}
-
-		public void ReflectParam(int questID)
-		{
-		}
-
-		public override void OnCancelButtonPressed()
-		{
-		}
-
-		public void SetDownloadText(long baseByte)
-		{
-		}
+	public void SetDownloadText(long baseByte)
+	{
 	}
 }

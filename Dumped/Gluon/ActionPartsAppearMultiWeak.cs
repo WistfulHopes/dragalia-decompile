@@ -2,37 +2,36 @@ using System.Collections.Generic;
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsAppearMultiWeak : ActionParts
 {
-	public class ActionPartsAppearMultiWeak : ActionParts
+	private readonly AppearMultiWeakData _partsData;
+
+	private List<Vector3> _tmpPopPositionList;
+
+	public ActionPartsAppearMultiWeak(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly AppearMultiWeakData _partsData;
+	}
 
-		private List<Vector3> _tmpPopPositionList;
+	public override void Clear()
+	{
+	}
 
-		public ActionPartsAppearMultiWeak(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	protected void PopWeak()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	private Vector3 CalcPopPosition(Vector3 offset)
+	{
+		return default(Vector3);
+	}
 
-		protected void PopWeak()
-		{
-		}
-
-		private Vector3 CalcPopPosition(Vector3 offset)
-		{
-			return default(Vector3);
-		}
-
-		private void TargetCorrection(ref CommonObjectStatus target)
-		{
-		}
+	private void TargetCorrection(ref CommonObjectStatus target)
+	{
 	}
 }

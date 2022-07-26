@@ -1,10 +1,9 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DungeonEnvironObject : CommonObjectStatus
 {
-	public class DungeonEnvironObject : CommonObjectStatus
-	{
-		[SerializeField]
-		public bool isMiniMapDisp;
-	}
+	[SerializeField]
+	public bool isMiniMapDisp;
 }

@@ -3,126 +3,125 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public abstract class EventSenderBase : MonoBehaviour
 {
-	public abstract class EventSenderBase : MonoBehaviour
+	protected float sendTimer;
+
+	protected float idleTimer;
+
+	private Move move;
+
+	private Queue<CharacterState> _characterStateSendQueue;
+
+	private Queue<CharacterState> _unusedCharacterStatePool;
+
+	protected Vector3 lastSendPosition;
+
+	protected float lastSendRotation;
+
+	private bool sendMoveBundle;
+
+	private AIScriptContext lastSendAIScriptContext;
+
+	private AIScriptContext tmpSendAIScriptContext;
+
+	private bool isSyncPositionRequested;
+
+	private CharacterId _characterId;
+
+	public abstract CharacterBase character { get; }
+
+	protected bool delayedCharacterState => default(bool);
+
+	public float PrevSendMoveEventTime
 	{
-		protected float sendTimer;
-
-		protected float idleTimer;
-
-		private Move move;
-
-		private Queue<CharacterState> _characterStateSendQueue;
-
-		private Queue<CharacterState> _unusedCharacterStatePool;
-
-		protected Vector3 lastSendPosition;
-
-		protected float lastSendRotation;
-
-		private bool sendMoveBundle;
-
-		private AIScriptContext lastSendAIScriptContext;
-
-		private AIScriptContext tmpSendAIScriptContext;
-
-		private bool isSyncPositionRequested;
-
-		private CharacterId _characterId;
-
-		public abstract CharacterBase character { get; }
-
-		protected bool delayedCharacterState => default(bool);
-
-		public float PrevSendMoveEventTime
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(float);
 		}
-
-		public bool IsMoveSyncDisabled
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public virtual void Initialize(CharacterId characterId, bool useMoveBundle)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public virtual void Reset()
-		{
-		}
-
-		public void OnWarp()
-		{
-		}
-
-		public MoveBundleUnit OnBulkWarp()
-		{
-			return null;
-		}
-
-		public void RequestSyncPosition()
-		{
-		}
-
-		public bool CheckSendMoving(Vector3 lastSendPosition, float lastSendRotation, out bool moving, out bool externalVelocity)
+	public bool IsMoveSyncDisabled
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		private bool CanSendStateChange()
-		{
-			return default(bool);
-		}
-
-		protected void OnStateChanged(int state, int[] param, float[] paramf, RunActionEvent runActionEvent, bool ignoreSync)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		protected virtual void LateUpdate()
-		{
-		}
+	public virtual void Initialize(CharacterId characterId, bool useMoveBundle)
+	{
+	}
 
-		protected virtual bool IsAiAwake()
-		{
-			return default(bool);
-		}
+	public virtual void Reset()
+	{
+	}
 
-		protected void SendMoveEvent(bool moving, bool externalVelocity, bool isSkillMove)
-		{
-		}
+	public void OnWarp()
+	{
+	}
 
-		private void SendWarpEvent()
-		{
-		}
+	public MoveBundleUnit OnBulkWarp()
+	{
+		return null;
+	}
 
-		protected virtual void UpdateSkillState()
-		{
-		}
+	public void RequestSyncPosition()
+	{
+	}
 
-		protected virtual void UpdateChargeState()
-		{
-		}
+	public bool CheckSendMoving(Vector3 lastSendPosition, float lastSendRotation, out bool moving, out bool externalVelocity)
+	{
+		return default(bool);
+	}
 
-		private void SendAllChangeStateQueue()
-		{
-		}
+	private bool CanSendStateChange()
+	{
+		return default(bool);
+	}
+
+	protected void OnStateChanged(int state, int[] param, float[] paramf, RunActionEvent runActionEvent, bool ignoreSync)
+	{
+	}
+
+	protected virtual void LateUpdate()
+	{
+	}
+
+	protected virtual bool IsAiAwake()
+	{
+		return default(bool);
+	}
+
+	protected void SendMoveEvent(bool moving, bool externalVelocity, bool isSkillMove)
+	{
+	}
+
+	private void SendWarpEvent()
+	{
+	}
+
+	protected virtual void UpdateSkillState()
+	{
+	}
+
+	protected virtual void UpdateChargeState()
+	{
+	}
+
+	private void SendAllChangeStateQueue()
+	{
 	}
 }

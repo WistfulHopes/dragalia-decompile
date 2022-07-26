@@ -1,29 +1,28 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsEALinkedEnemyBuff : ActionParts
 {
-	public class ActionPartsEALinkedEnemyBuff : ActionParts
+	private readonly EALinkedEnemyBuffData _partsData;
+
+	public ActionPartsEALinkedEnemyBuff(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly EALinkedEnemyBuffData _partsData;
+	}
 
-		public ActionPartsEALinkedEnemyBuff(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	private void Proc()
+	{
+	}
 
-		private void Proc()
-		{
-		}
-
-		private void SetupAbiltiy(EnemyAbilityProcLinkedEnemyBuff ability)
-		{
-		}
+	private void SetupAbiltiy(EnemyAbilityProcLinkedEnemyBuff ability)
+	{
 	}
 }

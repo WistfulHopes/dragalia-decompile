@@ -1,62 +1,61 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumStoryReviewCharacterPage : AlbumStoryReviewPageBase
 {
-	public class AlbumStoryReviewCharacterPage : AlbumStoryReviewPageBase
+	[SerializeField]
+	private AlbumStoryReviewCharacterPageController commonIconListController;
+
+	[SerializeField]
+	private CommonIconListBase commonIconListBase;
+
+	[SerializeField]
+	private UIAnimationPublisher uiAnimation;
+
+	private SimpleAnimationButton backButton;
+
+	private AlbumStoryReviewQuestStoryData albumStoryReviewQuestStoryData;
+
+	public override void OnPageBecomeActive(object data)
 	{
-		[SerializeField]
-		private AlbumStoryReviewCharacterPageController commonIconListController;
+	}
 
-		[SerializeField]
-		private CommonIconListBase commonIconListBase;
+	private IEnumerator DelayLoadUnitDetail()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private UIAnimationPublisher uiAnimation;
+	public void OnlistButtonCallBack(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private SimpleAnimationButton backButton;
+	public void OnlistButtonLongPressCallBack(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private AlbumStoryReviewQuestStoryData albumStoryReviewQuestStoryData;
+	public void OnIconClick(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	private void LoadUnitDetailScene(int masterId, CommonIconListType listType)
+	{
+	}
 
-		private IEnumerator DelayLoadUnitDetail()
-		{
-			return null;
-		}
+	private void AlbumStorySceneSetActive(bool isActive)
+	{
+	}
 
-		public void OnlistButtonCallBack(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	public void BackButtonFadeIn()
+	{
+	}
 
-		public void OnlistButtonLongPressCallBack(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	public void BackButtonFadeOut()
+	{
+	}
 
-		public void OnIconClick(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private void LoadUnitDetailScene(int masterId, CommonIconListType listType)
-		{
-		}
-
-		private void AlbumStorySceneSetActive(bool isActive)
-		{
-		}
-
-		public void BackButtonFadeIn()
-		{
-		}
-
-		public void BackButtonFadeOut()
-		{
-		}
-
-		private void OnBackButtonTouched()
-		{
-		}
+	private void OnBackButtonTouched()
+	{
 	}
 }

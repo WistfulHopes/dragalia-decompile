@@ -4,60 +4,59 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TabBase : MonoBehaviour
 {
-	public class TabBase : MonoBehaviour
+	[SerializeField]
+	public GameObject[] activatedObjects;
+
+	public UnityAction<int> selectedCallback;
+
+	[SerializeField]
+	public bool shouldManageToggleSE;
+
+	public TabButton[] tabButtons;
+
+	private int currentActiveTabIndex;
+
+	private ToggleGroup toggleGroup;
+
+	private readonly string decideSound;
+
+	private Action<int, bool> onTabSwitched;
+
+	public int activeTabIndex => default(int);
+
+	private void Awake()
 	{
-		[SerializeField]
-		public GameObject[] activatedObjects;
+	}
 
-		public UnityAction<int> selectedCallback;
+	public void SetTabSwitchedCallback(Action<int, bool> onTabSwitched)
+	{
+	}
 
-		[SerializeField]
-		public bool shouldManageToggleSE;
+	public void SetCallbackAfterInitializedTheme(Action callback)
+	{
+	}
 
-		public TabButton[] tabButtons;
+	private void SwitchActivePage()
+	{
+	}
 
-		private int currentActiveTabIndex;
+	public void SetTabDisableState(int index, bool toDisable, bool allImage = false)
+	{
+	}
 
-		private ToggleGroup toggleGroup;
+	public virtual void SelectTabByManual(int index, bool callOnTabSwitched = true, bool shouldPlaySE = false)
+	{
+	}
 
-		private readonly string decideSound;
+	public virtual void OnTabSelected(int index, bool callOnTabSwitched = true, bool shouldPlaySE = true)
+	{
+	}
 
-		private Action<int, bool> onTabSwitched;
-
-		public int activeTabIndex => default(int);
-
-		private void Awake()
-		{
-		}
-
-		public void SetTabSwitchedCallback(Action<int, bool> onTabSwitched)
-		{
-		}
-
-		public void SetCallbackAfterInitializedTheme(Action callback)
-		{
-		}
-
-		private void SwitchActivePage()
-		{
-		}
-
-		public void SetTabDisableState(int index, bool toDisable, bool allImage = false)
-		{
-		}
-
-		public virtual void SelectTabByManual(int index, bool callOnTabSwitched = true, bool shouldPlaySE = false)
-		{
-		}
-
-		public virtual void OnTabSelected(int index, bool callOnTabSwitched = true, bool shouldPlaySE = true)
-		{
-		}
-
-		public void SetText(string[] nameButtons, [Optional] string[] nameActives)
-		{
-		}
+	public void SetText(string[] nameButtons, [Optional] string[] nameActives)
+	{
 	}
 }

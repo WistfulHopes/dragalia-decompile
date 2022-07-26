@@ -2,42 +2,41 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class UnionBonusDetailPopup : CommonPopup
 {
-	public class UnionBonusDetailPopup : CommonPopup
+	private const string prefabPath = "Prefabs/OutGame/Party/Party/UnionBonusDetailPopup";
+
+	[SerializeField]
+	private Image unionIcon;
+
+	[SerializeField]
+	private Text unionNameText;
+
+	[SerializeField]
+	private Image abilityIcon;
+
+	[SerializeField]
+	private Text abilityNameText;
+
+	[SerializeField]
+	private Text descriptionText;
+
+	public static UnionBonusDetailPopup Create()
 	{
-		private const string prefabPath = "Prefabs/OutGame/Party/Party/UnionBonusDetailPopup";
+		return null;
+	}
 
-		[SerializeField]
-		private Image unionIcon;
+	public void Setup(int charaId, UnionAbilityElement unionAbility, AbilityDataElement abilityData)
+	{
+	}
 
-		[SerializeField]
-		private Text unionNameText;
+	public void Setup(int charaId, int unionAbilityId, int abilityId)
+	{
+	}
 
-		[SerializeField]
-		private Image abilityIcon;
-
-		[SerializeField]
-		private Text abilityNameText;
-
-		[SerializeField]
-		private Text descriptionText;
-
-		public static UnionBonusDetailPopup Create()
-		{
-			return null;
-		}
-
-		public void Setup(int charaId, UnionAbilityElement unionAbility, AbilityDataElement abilityData)
-		{
-		}
-
-		public void Setup(int charaId, int unionAbilityId, int abilityId)
-		{
-		}
-
-		public void Setup(UnionAbilityElement unionAbility, AbilityDataElement abilityData)
-		{
-		}
+	public void Setup(UnionAbilityElement unionAbility, AbilityDataElement abilityData)
+	{
 	}
 }

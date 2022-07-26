@@ -4,125 +4,123 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class PopupBase : MonoBehaviour
 {
-	public class PopupBase : MonoBehaviour
+	public enum AnimationType
 	{
-		public enum AnimationType
-		{
-			None = -1,
-			Normal,
-			Floating
-		}
+		None = -1,
+		Normal,
+		Floating
+	}
 
-		[SerializeField]
-		[Header("Callbacks")]
-		public UnityEvent closeButtonPressed;
+	[SerializeField]
+	public UnityEvent closeButtonPressed;
 
-		[SerializeField]
-		public UnityEvent beforeCloseAnimation;
+	[SerializeField]
+	public UnityEvent beforeCloseAnimation;
 
-		[SerializeField]
-		protected PointerEventHandler backKeyEventHandler;
+	[SerializeField]
+	protected PointerEventHandler backKeyEventHandler;
 
-		protected UnityEvent overrideBackKeyEvent;
+	protected UnityEvent overrideBackKeyEvent;
 
-		protected bool showStartAnimation;
+	protected bool showStartAnimation;
 
-		protected bool isWaitingCloseAnimation;
+	protected bool isWaitingCloseAnimation;
 
-		public AnimationType animationType;
+	public AnimationType animationType;
 
-		public int animationFrame;
+	public int animationFrame;
 
-		private const int slowAnimationFrame = 6;
+	private const int slowAnimationFrame = 6;
 
-		private const int fastAnimationFrame = 5;
+	private const int fastAnimationFrame = 5;
 
-		private Vector2 oldMaskSizeForFloating;
+	private Vector2 oldMaskSizeForFloating;
 
-		protected bool isStartAnimationEnd;
+	protected bool isStartAnimationEnd;
 
-		public static int popupCount;
+	public static int popupCount;
 
-		public Canvas popupCanvas
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public bool IsStartAnimationEnd => default(bool);
-
-		public static T Create<T>(string path, [Optional] Transform parentTransform, bool useAssetLoader = true, bool asErrorPopup = false) where T : PopupBase
+	public Canvas popupCanvas
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public static bool isPopupCreate()
-		{
-			return default(bool);
-		}
-
-		protected virtual void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private IEnumerator WaitForStartAnimation()
-		{
-			return null;
-		}
+	public bool IsStartAnimationEnd => default(bool);
 
-		public void SetOverrideBackKeyEvent(UnityEvent backKeyEvent)
-		{
-		}
+	public static T Create<T>(string path, [Optional] Transform parentTransform, bool useAssetLoader = true, bool asErrorPopup = false) where T : PopupBase
+	{
+		return null;
+	}
 
-		public virtual void StartShowAnimation([Optional] UnityEvent onCompleted)
-		{
-		}
+	public static bool isPopupCreate()
+	{
+		return default(bool);
+	}
 
-		public virtual void StartCloseAnimation([Optional] UnityEvent onCompleted)
-		{
-		}
+	protected virtual void Start()
+	{
+	}
 
-		protected virtual IEnumerator StartCloseAnimationCoroutine([Optional] UnityEvent onCompleted)
-		{
-			return null;
-		}
+	private IEnumerator WaitForStartAnimation()
+	{
+		return null;
+	}
 
-		public bool IsWaitingCloseAnimation()
-		{
-			return default(bool);
-		}
+	public void SetOverrideBackKeyEvent(UnityEvent backKeyEvent)
+	{
+	}
 
-		public void Close()
-		{
-		}
+	public virtual void StartShowAnimation([Optional] UnityEvent onCompleted)
+	{
+	}
 
-		protected virtual void OnDestroy()
-		{
-		}
+	public virtual void StartCloseAnimation([Optional] UnityEvent onCompleted)
+	{
+	}
 
-		public void CloseWithAnimation()
-		{
-		}
+	protected virtual IEnumerator StartCloseAnimationCoroutine([Optional] UnityEvent onCompleted)
+	{
+		return null;
+	}
 
-		public void CloseWithAnimation(bool invokeCloseEvent)
-		{
-		}
+	public bool IsWaitingCloseAnimation()
+	{
+		return default(bool);
+	}
 
-		public void Show(bool withAnimation)
-		{
-		}
+	public void Close()
+	{
+	}
 
-		public void Hide(bool withAnimation)
-		{
-		}
+	protected virtual void OnDestroy()
+	{
+	}
+
+	public void CloseWithAnimation()
+	{
+	}
+
+	public void CloseWithAnimation(bool invokeCloseEvent)
+	{
+	}
+
+	public void Show(bool withAnimation)
+	{
+	}
+
+	public void Hide(bool withAnimation)
+	{
 	}
 }

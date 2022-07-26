@@ -1,12 +1,8 @@
-using System.Diagnostics;
+namespace Coneshell;
 
-namespace Coneshell
+public static class Dynamic
 {
-	public static class Dynamic
+	public static void UnloadLibrary()
 	{
-		[Conditional("UNITY_EDITOR_WIN")]
-		public static void UnloadLibrary()
-		{
-		}
 	}
 }

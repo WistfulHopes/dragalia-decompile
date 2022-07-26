@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum GimmickDelayType
 {
-	public enum GimmickDelayType
-	{
-		NON,
-		FIX,
-		ADD,
-		RANDOM
-	}
+	NON,
+	FIX,
+	ADD,
+	RANDOM
 }

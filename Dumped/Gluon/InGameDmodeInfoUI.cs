@@ -2,46 +2,41 @@ using Cute.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class InGameDmodeInfoUI : FastUpdateMonoBehaviour
 {
-	public class InGameDmodeInfoUI : FastUpdateMonoBehaviour
+	[SerializeField]
+	private RectTransform rootRt;
+
+	[SerializeField]
+	private Text scoreText;
+
+	[SerializeField]
+	private Text floorText;
+
+	public static InGameDmodeInfoUI Create(GameObject parent, int siblingIndex = -1)
 	{
-		[SerializeField]
-		[Header("component")]
-		[Tooltip("ã\u0083«ã\u0083¼ã\u0083\u0088ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform rootRt;
+		return null;
+	}
 
-		[SerializeField]
-		[Tooltip("ã\u0082¹ã\u0082³ã\u0082¢ã\u0083\u0086ã\u0082­ã\u0082¹ã\u0083\u0088")]
-		private Text scoreText;
+	private void Initialize()
+	{
+	}
 
-		[SerializeField]
-		[Tooltip("ã\u0083\u0095ã\u0083­ã\u0082¢ã\u0083\u0086ã\u0082­ã\u0082¹ã\u0083\u0088")]
-		private Text floorText;
+	public override void FastUpdate()
+	{
+	}
 
-		public static InGameDmodeInfoUI Create(GameObject parent, int siblingIndex = -1)
-		{
-			return null;
-		}
+	public void SetScore(int val)
+	{
+	}
 
-		private void Initialize()
-		{
-		}
+	public void SetFloor(int val, bool isForce = false)
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
-
-		public void SetScore(int val)
-		{
-		}
-
-		public void SetFloor(int val, bool isForce = false)
-		{
-		}
-
-		public void Visible(bool b)
-		{
-		}
+	public void Visible(bool b)
+	{
 	}
 }

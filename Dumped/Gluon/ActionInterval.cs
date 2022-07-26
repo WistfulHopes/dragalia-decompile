@@ -1,23 +1,22 @@
-namespace Gluon
+namespace Gluon;
+
+public class ActionInterval : ActionBase
 {
-	public class ActionInterval : ActionBase
+	protected TweenType _tweenType;
+
+	public TweenType tweenType
 	{
-		protected TweenType _tweenType;
-
-		public TweenType tweenType
+		get
 		{
-			get
-			{
-				return default(TweenType);
-			}
-			set
-			{
-			}
+			return default(TweenType);
 		}
-
-		public float GetTweenTime(float delta)
+		set
 		{
-			return default(float);
 		}
+	}
+
+	public float GetTweenTime(float delta)
+	{
+		return default(float);
 	}
 }

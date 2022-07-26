@@ -3,714 +3,727 @@ using System.Runtime.CompilerServices;
 using CodeStage.AntiCheat.ObscuredTypes;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterParameter
 {
-	public class CharacterParameter
+	public class ActionParam
 	{
-		public class ActionParam
+		public float actionPower;
+
+		public float actionPowerDown;
+
+		public float critical;
+
+		public float criticalForSkillAbility;
+
+		public float recoveryHP;
+
+		public float recoveryHP2;
+
+		public float recoveryMulForDying;
+
+		public float breakGauge;
+
+		public float breakPower;
+
+		public float[] abnormalAdd;
+
+		public float buffExtension;
+
+		public float debuffExtension;
+
+		public float[] abnormalExtension;
+
+		public float crisisRate;
+
+		public float spGainCut;
+
+		public Dictionary<int, float> actionPowerDependsOnHitCount;
+
+		public Dictionary<int, float> criticalUpForDebuffEnemy;
+
+		public Dictionary<int, float> criticalUpForAbnormalStatusEnemy;
+
+		public Dictionary<int, float> criticalDamageUpForDebuffEnemy;
+
+		public Dictionary<int, float> criticalDamageUpForAbnormalStatusEnemy;
+
+		public void Initialize()
 		{
-			public float actionPower;
-
-			public float actionPowerDown;
-
-			public float critical;
-
-			public float criticalForSkillAbility;
-
-			public float recoveryHP;
-
-			public float recoveryHP2;
-
-			public float recoveryMulForDying;
-
-			public float breakGauge;
-
-			public float breakPower;
-
-			public float[] abnormalAdd;
-
-			public float buffExtension;
-
-			public float debuffExtension;
-
-			public float[] abnormalExtension;
-
-			public float crisisRate;
-
-			public float spGainCut;
-
-			public Dictionary<int, float> actionPowerDependsOnHitCount;
-
-			public Dictionary<int, float> criticalUpForDebuffEnemy;
-
-			public Dictionary<int, float> criticalUpForAbnormalStatusEnemy;
-
-			public Dictionary<int, float> criticalDamageUprForAbnormalStatusEnemy;
-
-			public void Initialize()
-			{
-			}
 		}
+	}
 
-		public struct EnemyHpPower
-		{
-			public float value;
+	public struct EnemyHpPower
+	{
+		public float value;
 
-			public float enemyHpRate;
-		}
+		public float enemyHpRate;
+	}
 
-		public class FluctuationParameter
-		{
-			public float hp;
+	public class FluctuationParameter
+	{
+		public float hp;
 
-			public float[] sp;
+		public float[] sp;
 
-			public float[] ep;
+		public float[] ep;
 
-			public float shp;
+		public float shp;
 
-			public float attack;
+		public float attack;
 
-			public float defense;
+		public float defense;
 
-			public float defenseB;
+		public float defenseB;
 
-			public float moveSpeed;
+		public float moveSpeed;
 
-			public float moveSpeedRate;
+		public float moveSpeedRate;
 
-			public float moveSpeedRateB;
+		public float moveSpeedRateB;
 
-			public float attackSpeed;
+		public float moveSpeedRateC;
 
-			public float chargeSpeed;
+		public float attackSpeed;
 
-			public float burstSpeed;
+		public float chargeSpeed;
 
-			public float chargeTime;
+		public float burstSpeed;
 
-			public float dragonTime;
+		public float chargeTime;
 
-			public float dragonTimeRate;
+		public float dragonTime;
 
-			public float dragonTimeForParty;
+		public float dragonTimeRate;
 
-			public float dragonTimeSpeedRate;
+		public float dragonTimeForParty;
 
-			public float recoverySP;
+		public float dragonTimeSpeedRate;
 
-			public float recoveryDP;
+		public float recoverySP;
 
-			public float recoveryUtp;
+		public float recoveryDP;
 
-			public float[] abnormalResist;
+		public float recoveryUtp;
 
-			public float damageCut;
+		public float[] abnormalResist;
 
-			public float damageCutB;
+		public float damageCut;
 
-			public float damageCutTrap;
+		public float damageCutB;
 
-			public float[] damageShield;
+		public float damageCutTrap;
 
-			public float enhancedCritical;
+		public float[] damageShield;
 
-			public ActionParam[] actionParam;
+		public float enhancedCritical;
 
-			public float[] enhancedElement;
+		public ActionParam[] actionParam;
 
-			public float[] enhancedElement2;
+		public float[] enhancedElement;
 
-			public float enhancedDisadvantagedElement;
+		public float[] enhancedElement2;
 
-			public float[] resistElement;
+		public float enhancedDisadvantagedElement;
 
-			public float[] tribeKiller;
+		public float[] resistElement;
 
-			public float[] resistTribe;
+		public float[] tribeKiller;
 
-			public float[] abnormalKiller;
+		public float[] resistTribe;
 
-			public float[] abnormalKillerDependsOnTypeCount;
+		public float[] abnormalKiller;
 
-			public List<int> enemyAbilityKiller;
+		public float[] abnormalKillerDependsOnTypeCount;
 
-			public Dictionary<int, float> uniqueKillerDict;
+		public List<int> enemyAbilityKiller;
 
-			public Dictionary<int, float> resistUniqueDict;
+		public Dictionary<int, float> uniqueKillerDict;
 
-			public float overdrivekiller;
+		public Dictionary<int, float> resistUniqueDict;
 
-			public float modeGaugeSuppression;
+		public float overdrivekiller;
 
-			public float debuffSlipHp;
+		public float modeGaugeSuppression;
 
-			public float debuffGrantRate;
+		public float debuffSlipHp;
 
-			public float[] debuffKiller;
+		public float debuffGrantRate;
 
-			public float debuffTimeExtensionForSpecificDebuffs;
+		public float[] debuffKiller;
 
-			public float dragonDamageUp;
+		public float debuffTimeExtensionForSpecificDebuffs;
 
-			public float hpDrain;
+		public float dragonDamageUp;
 
-			public float chainTimeExtension;
+		public float hpDrain;
 
-			public float rebornHpRatioUp;
+		public float chainTimeExtension;
 
-			public EnemyHpPower enemyHpMorePower;
+		public float rebornHpRatioUp;
 
-			public EnemyHpPower enemyHpLessPower;
+		public EnemyHpPower enemyHpMorePower;
 
-			public float needDpRate;
+		public EnemyHpPower enemyHpLessPower;
 
-			public float consumeDpRate;
+		public float needDpRate;
 
-			public float finalDragonTimeRate;
+		public float consumeDpRate;
 
-			public float autoAvoidProbability;
+		public float finalDragonTimeRate;
 
-			public float criticalAddRateMaxLimit;
+		public float autoAvoidProbability;
 
-			public float dmodeExpUpRate;
+		public float criticalAddRateMaxLimit;
 
-			public void Initialize()
-			{
-			}
+		public float dmodeExpUpRate;
 
-			public void SetData(FluctuationParameter setData)
-			{
-			}
-
-			public void AddData(FluctuationParameter addData)
-			{
-			}
-
-			public void SubData(FluctuationParameter subData)
-			{
-			}
-
-			public void MulData(FluctuationParameter mulData)
-			{
-			}
-
-			public void CeilData()
-			{
-			}
-
-			public void SetValue(float value)
-			{
-			}
-
-			public void Release()
-			{
-			}
-		}
-
-		public static readonly int targetActionNum;
-
-		public static readonly int abnormalStatusNum;
-
-		public static readonly int tribeNum;
-
-		private static readonly int elementalNum;
-
-		public static readonly int overflowSpRate;
-
-		private bool _isUpdate;
-
-		private bool _isPause;
-
-		public ObscuredInt[] currSp;
-
-		public ObscuredInt[] consumeSp;
-
-		private ObscuredInt[] currEp;
-
-		private bool[] availableEp;
-
-		private int prevMaxHp;
-
-		private Dictionary<int, float> tempUniqueDict;
-
-		public FluctuationParameter total;
-
-		public FluctuationParameter immutable;
-
-		public FluctuationParameter origin;
-
-		public FluctuationParameter weapon;
-
-		public FluctuationParameter dragon;
-
-		public FluctuationParameter amulet;
-
-		public FluctuationParameter fortFixed;
-
-		public FluctuationParameter fortRatio;
-
-		public FluctuationParameter albumRatio;
-
-		public FluctuationParameter ability;
-
-		public FluctuationParameter abilityImmutable;
-
-		public FluctuationParameter abilityConditionally;
-
-		public FluctuationParameter amuletAbility;
-
-		public FluctuationParameter amuletAbilityImmutable;
-
-		public FluctuationParameter amuletAbilityConditionally;
-
-		public FluctuationParameter unionBonus;
-
-		public FluctuationParameter unionBonusImmutable;
-
-		public FluctuationParameter unionBonusConditionally;
-
-		public FluctuationParameter exAbility;
-
-		public FluctuationParameter buffAndAura;
-
-		public FluctuationParameter activeGauge;
-
-		public FluctuationParameter eventPassive;
-
-		public FluctuationParameter aura;
-
-		public FluctuationParameter buff;
-
-		public CharacterCustomPointController customPointController;
-
-		public bool isUpdate
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		public bool isPause
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		public ObscuredInt level
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(ObscuredInt);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public ObscuredInt currHp
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(ObscuredInt);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public ObscuredInt currShp
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(ObscuredInt);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public UtpCtrl utp
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public int currExp
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public int nextExp
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float dragonDamageCoef
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public int dragonReliability
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public float eventBoost
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public bool isWeakInvalid
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool isReraise
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool isArmored
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public CharacterBuff buffCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public Ability abilityCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public ExAbility exAbilityCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public ActiveGaugeAbility activeGaugeCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public CharacterAuraCtrl auraCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public BRCharaCtrl brCharaCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void Initialize(bool isPlayerCharacter)
+		public void Initialize()
 		{
 		}
 
-		public void InitializeCurrentParameter(CharacterBase owner, bool isQuestStart = true, bool withClearHumanSp = true, bool withRecoverHp = true)
+		public void SetData(FluctuationParameter setData)
 		{
 		}
 
-		private void SetupImmutableParameter()
+		public void AddData(FluctuationParameter addData)
 		{
 		}
 
-		private void InitializeAbilityParameter(ref FluctuationParameter param)
+		public void SubData(FluctuationParameter subData)
 		{
 		}
 
-		public void ResetAbilityImmutableParameter()
+		public void MulData(FluctuationParameter mulData)
 		{
 		}
 
-		public void InitializeForBR(PlayerCharacter chara)
+		public void CeilData()
 		{
 		}
 
-		public void CeilFortRatio()
+		public void SetValue(float value)
 		{
 		}
 
-		public void CeilAlbumRatio()
+		public void Release()
 		{
 		}
+	}
 
-		public void Update(CharacterBase owner, bool timerUpdate)
-		{
-		}
+	public static readonly int targetActionNum;
 
-		public void CalculateTotalParameter(CharacterBase owner, FluctuationParameter total, FluctuationParameter ability, FluctuationParameter fortRatio, FluctuationParameter albumRatio, FluctuationParameter immutable, FluctuationParameter exAbility, FluctuationParameter buffAndAura)
-		{
-		}
+	public static readonly int abnormalStatusNum;
 
-		private void CalculateParameter(CharacterBase owner, bool timerUpdate)
-		{
-		}
+	public static readonly int tribeNum;
 
-		public void CalculateParameter_BuffDebuffAll(CharacterBase owner)
-		{
-		}
+	private static readonly int elementalNum;
 
-		public void CalculateOtherParameter()
-		{
-		}
+	public static readonly int overflowSpRate;
 
-		private void UpdateAbility(CharacterBase owner, bool timerUpdate)
-		{
-		}
+	private bool _isUpdate;
 
-		private void ApplyAbilityParameterLimit()
-		{
-		}
+	private bool _isPause;
 
-		private void ApplyAbilityParameterLimit(AbilityLimitCalculation limitData, ref FluctuationParameter param, FluctuationParameter a, FluctuationParameter b)
-		{
-		}
+	public ObscuredInt[] currSp;
 
-		public void CalculateParameter_BuffDebuff(CharacterBase owner, CharacterBuffType buffType, bool calcuTotal = false)
-		{
-		}
+	public ObscuredInt[] consumeSp;
 
-		public void CalculateParameter_BuffDebuff_ToParts(CharacterBase owner, CharacterBuffType buffType)
-		{
-		}
+	private ObscuredInt[] currEp;
 
-		public void CalculateAbnormalResist()
-		{
-		}
+	private bool[] availableEp;
 
-		public float GetBurstAttackDamageRateExceptBuffAndAura()
-		{
-			return default(float);
-		}
+	private int prevMaxHp;
 
-		private void CalculateUnique(ref Dictionary<int, float> dict, Dictionary<int, float>.Enumerator e)
-		{
-		}
+	private Dictionary<int, float> tempUniqueDict;
 
-		public void CalculateEnemyAbilityKiller(List<int> list)
-		{
-		}
+	public FluctuationParameter total;
 
-		public void CalculateAbilityDragonTimeForParty()
-		{
-		}
+	public FluctuationParameter immutable;
 
-		public float GetActionPowerDependsOnHitCount(CharacterBase owner, int targetActionId)
-		{
-			return default(float);
-		}
+	public FluctuationParameter origin;
 
-		public float GetCriticalDamageUpDependsOnEnemyAbnormalStatus(CharacterBase src, CharacterBase dst, int actionId)
-		{
-			return default(float);
-		}
+	public FluctuationParameter weapon;
 
-		public void SetBuffDefaultValueZero()
-		{
-		}
+	public FluctuationParameter dragon;
 
-		public void ActivateReraise(CharacterBase owner, RemoveBuffReason reason)
-		{
-		}
+	public FluctuationParameter amulet;
 
-		public void ReleaseParameter()
-		{
-		}
+	public FluctuationParameter fortFixed;
 
-		public void SetRequireSp(CharacterBase owner, int sp, int skillIndex)
-		{
-		}
+	public FluctuationParameter fortRatio;
 
-		public void SetEp(CharacterBase owner, int value, int index)
-		{
-		}
+	public FluctuationParameter albumRatio;
 
-		public int GetEp(int index)
-		{
-			return default(int);
-		}
+	public FluctuationParameter ability;
 
-		private int GetConsumeEp(CharacterBase owner, int index)
-		{
-			return default(int);
-		}
+	public FluctuationParameter abilityImmutable;
 
-		public int GetEpNum()
-		{
-			return default(int);
-		}
+	public FluctuationParameter abilityConditionally;
 
-		private void SetAvailableEp(int ep, int consumeEp, int index)
-		{
-		}
+	public FluctuationParameter amuletAbility;
 
-		public bool IsAvailableEp(int index)
+	public FluctuationParameter amuletAbilityImmutable;
+
+	public FluctuationParameter amuletAbilityConditionally;
+
+	public FluctuationParameter unionBonus;
+
+	public FluctuationParameter unionBonusImmutable;
+
+	public FluctuationParameter unionBonusConditionally;
+
+	public FluctuationParameter exAbility;
+
+	public FluctuationParameter buffAndAura;
+
+	public FluctuationParameter activeGauge;
+
+	public FluctuationParameter eventPassive;
+
+	public FluctuationParameter aura;
+
+	public FluctuationParameter buff;
+
+	public CharacterCustomPointController customPointController;
+
+	public bool isUpdate
+	{
+		get
 		{
 			return default(bool);
 		}
-
-		public void AddExp(CharacterBase owner, CharacterBase from, int addValue)
+		set
 		{
 		}
+	}
 
-		private DmodeCharaLevelElement LevelUp()
+	public bool isPause
+	{
+		get
+		{
+			return default(bool);
+		}
+		set
+		{
+		}
+	}
+
+	public ObscuredInt level
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(ObscuredInt);
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public ObscuredInt currHp
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(ObscuredInt);
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public ObscuredInt currShp
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(ObscuredInt);
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public UtpCtrl utp
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public void ApplyNewLevelParameter(int hp, int atk, bool isHpRecovery)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void ApplyNewWeaponParameter(int hp, int atk, int def)
+	public int currExp
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void ApplyNewAmuletParameter(int hp, int atk)
+	public int nextExp
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public static bool GetDmodeServitorParameter(int level, out DmodeServitorDungeonLevelElement elem)
+	public float dragonDamageCoef
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public int dragonReliability
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public float eventBoost
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public bool isWeakInvalid
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public bool isReraise
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public bool isArmored
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public CharacterBuff buffCtrl
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public Ability abilityCtrl
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public ExAbility exAbilityCtrl
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public ActiveGaugeAbility activeGaugeCtrl
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public CharacterAuraCtrl auraCtrl
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public BRCharaCtrl brCharaCtrl
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public void Initialize(bool isPlayerCharacter)
+	{
+	}
+
+	public void InitializeCurrentParameter(CharacterBase owner, bool isQuestStart = true, bool withClearHumanSp = true, bool withRecoverHp = true)
+	{
+	}
+
+	private void SetupImmutableParameter()
+	{
+	}
+
+	private void InitializeAbilityParameter(ref FluctuationParameter param)
+	{
+	}
+
+	public void ResetAbilityImmutableParameter()
+	{
+	}
+
+	public void InitializeForBR(PlayerCharacter chara)
+	{
+	}
+
+	public void CeilFortRatio()
+	{
+	}
+
+	public void CeilAlbumRatio()
+	{
+	}
+
+	public void Update(CharacterBase owner, bool timerUpdate)
+	{
+	}
+
+	public void CalculateTotalParameter(CharacterBase owner, FluctuationParameter total, FluctuationParameter ability, FluctuationParameter fortRatio, FluctuationParameter albumRatio, FluctuationParameter immutable, FluctuationParameter exAbility, FluctuationParameter buffAndAura)
+	{
+	}
+
+	private void CalculateParameter(CharacterBase owner, bool timerUpdate)
+	{
+	}
+
+	public void CalculateParameter_BuffDebuffAll(CharacterBase owner)
+	{
+	}
+
+	public void CalculateOtherParameter()
+	{
+	}
+
+	private void UpdateAbility(CharacterBase owner, bool timerUpdate)
+	{
+	}
+
+	private void ApplyAbilityParameterLimit()
+	{
+	}
+
+	private void ApplyAbilityParameterLimit(AbilityLimitCalculation limitData, ref FluctuationParameter param, FluctuationParameter a, FluctuationParameter b)
+	{
+	}
+
+	public void CalculateParameter_BuffDebuff(CharacterBase owner, CharacterBuffType buffType, bool calcuTotal = false)
+	{
+	}
+
+	public void CalculateParameter_BuffDebuff_ToParts(CharacterBase owner, CharacterBuffType buffType)
+	{
+	}
+
+	public void CalculateAbnormalResist()
+	{
+	}
+
+	public float GetBurstAttackDamageRateExceptBuffAndAura()
+	{
+		return default(float);
+	}
+
+	private void CalculateUnique(ref Dictionary<int, float> dict, Dictionary<int, float>.Enumerator e)
+	{
+	}
+
+	public void CalculateEnemyAbilityKiller(List<int> list)
+	{
+	}
+
+	public void CalculateAbilityDragonTimeForParty()
+	{
+	}
+
+	public float GetActionPowerDependsOnHitCount(CharacterBase owner, int targetActionId)
+	{
+		return default(float);
+	}
+
+	public float GetCriticalDamageUpDependsOnEnemyDebuff(CharacterBase src, CharacterBase dst, int actionId)
+	{
+		return default(float);
+	}
+
+	public float GetCriticalDamageUpDependsOnEnemyAbnormalStatus(CharacterBase src, CharacterBase dst, int actionId)
+	{
+		return default(float);
+	}
+
+	public void SetBuffDefaultValueZero()
+	{
+	}
+
+	public void ActivateReraise(CharacterBase owner, RemoveBuffReason reason)
+	{
+	}
+
+	public void ReleaseParameter()
+	{
+	}
+
+	public void SetRequireSp(CharacterBase owner, int sp, int skillIndex)
+	{
+	}
+
+	public void SetEp(CharacterBase owner, int value, int index)
+	{
+	}
+
+	public int GetEp(int index)
+	{
+		return default(int);
+	}
+
+	private int GetConsumeEp(CharacterBase owner, int index)
+	{
+		return default(int);
+	}
+
+	public int GetEpNum()
+	{
+		return default(int);
+	}
+
+	private void SetAvailableEp(int ep, int consumeEp, int index)
+	{
+	}
+
+	public bool IsAvailableEp(int index)
+	{
+		return default(bool);
+	}
+
+	public int CalcDmodeLevelMax()
+	{
+		return default(int);
+	}
+
+	public void AddExp(CharacterBase owner, CharacterBase from, int addValue)
+	{
+	}
+
+	private DmodeCharaLevelElement LevelUp()
+	{
+		return null;
+	}
+
+	public void ApplyNewLevelParameter(int hp, int atk, bool isHpRecovery)
+	{
+	}
+
+	public void ApplyNewWeaponParameter(int hp, int atk, int def)
+	{
+	}
+
+	public void ApplyNewAmuletParameter(int hp, int atk)
+	{
+	}
+
+	public static bool GetDmodeServitorParameter(int level, out DmodeServitorDungeonLevelElement elem)
+	{
+		return default(bool);
 	}
 }

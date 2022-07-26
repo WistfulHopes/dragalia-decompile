@@ -1,11 +1,10 @@
 using UnityEngine;
 
-namespace Gluon
-{
-	public class QuestLocationInfo : MonoBehaviour
-	{
-		public int routeGroupNumber;
+namespace Gluon;
 
-		public int routeIndex;
-	}
+public class QuestLocationInfo : MonoBehaviour
+{
+	public int routeGroupNumber;
+
+	public int routeIndex;
 }

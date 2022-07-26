@@ -1,54 +1,53 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopQuestBonusButton : MonoBehaviour
 {
-	public class ShopQuestBonusButton : MonoBehaviour
+	[SerializeField]
+	private Text remainText;
+
+	[SerializeField]
+	private GameObject badge;
+
+	[SerializeField]
+	private Button bonusButton;
+
+	private bool preOrderable;
+
+	private QuestBonusData data;
+
+	private const int preOrderableCountDownDay = 3;
+
+	private PointerEventHandler bonusButtonPeh;
+
+	private void Start()
 	{
-		[SerializeField]
-		private Text remainText;
+	}
 
-		[SerializeField]
-		private GameObject badge;
+	private void SetupByRemainings()
+	{
+	}
 
-		[SerializeField]
-		private Button bonusButton;
+	private void Update()
+	{
+	}
 
-		private bool preOrderable;
+	private void SetAsInactive()
+	{
+	}
 
-		private QuestBonusData data;
+	public void OnButtonPressed()
+	{
+	}
 
-		private const int preOrderableCountDownDay = 3;
+	private void CreateClaimedPopup(bool isChargeDone)
+	{
+	}
 
-		private PointerEventHandler bonusButtonPeh;
-
-		private void Start()
-		{
-		}
-
-		private void SetupByRemainings()
-		{
-		}
-
-		private void Update()
-		{
-		}
-
-		private void SetAsInactive()
-		{
-		}
-
-		public void OnButtonPressed()
-		{
-		}
-
-		private void CreateClaimedPopup(bool isChargeDone)
-		{
-		}
-
-		public string CreateRenewalRemainDaysComment(int remainDays, long endUnixTime)
-		{
-			return null;
-		}
+	public string CreateRenewalRemainDaysComment(int remainDays, long endUnixTime)
+	{
+		return null;
 	}
 }

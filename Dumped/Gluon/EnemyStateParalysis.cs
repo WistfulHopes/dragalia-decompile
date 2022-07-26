@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class EnemyStateParalysis : IState<EnemyCtrl>
 {
-	public class EnemyStateParalysis : IState<EnemyCtrl>
+	public override void OnStateUpdate()
 	{
-		public override void OnStateUpdate()
-		{
-		}
 	}
 }

@@ -1,37 +1,36 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class TabViewHelper
 {
-	public class TabViewHelper
+	private static Dictionary<string, int> tabViewIndexes;
+
+	private static Dictionary<string, float> scrollPositions;
+
+	public static void SetTabCurIndex(string tabViewName, int curTabIndex)
 	{
-		private static Dictionary<string, int> tabViewIndexes;
+	}
 
-		private static Dictionary<string, float> scrollPositions;
+	public static void SetTabScrollPos(string tabName, float scrollPos)
+	{
+	}
 
-		public static void SetTabCurIndex(string tabViewName, int curTabIndex)
-		{
-		}
+	public static int GetCurTabIndex(string tabViewName)
+	{
+		return default(int);
+	}
 
-		public static void SetTabScrollPos(string tabName, float scrollPos)
-		{
-		}
+	public static float GetTabScrollPos(string tabName)
+	{
+		return default(float);
+	}
 
-		public static int GetCurTabIndex(string tabViewName)
-		{
-			return default(int);
-		}
+	public static void ResetTabViewCurrentIndex(string tabViewName)
+	{
+	}
 
-		public static float GetTabScrollPos(string tabName)
-		{
-			return default(float);
-		}
-
-		public static void ResetTabViewCurrentIndex(string tabViewName)
-		{
-		}
-
-		public static void ResetTabScrollPos(string tabName)
-		{
-		}
+	public static void ResetTabScrollPos(string tabName)
+	{
 	}
 }

@@ -2,41 +2,40 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cute.Core;
 
-namespace Gluon
+namespace Gluon;
+
+public class SameTimeHitChecker : FastUpdateMonoBehaviour
 {
-	public class SameTimeHitChecker : FastUpdateMonoBehaviour
+	public struct SameTimeHitData
 	{
-		public struct SameTimeHitData
+		public CharacterBase from;
+
+		public CharacterBase to;
+
+		public int actionId;
+
+		public int permitId;
+	}
+
+	private List<SameTimeHitData> listSameTimeHit
+	{
+		[CompilerGenerated]
+		get
 		{
-			public CharacterBase from;
-
-			public CharacterBase to;
-
-			public int actionId;
-
-			public int permitId;
+			return null;
 		}
+	}
 
-		private List<SameTimeHitData> listSameTimeHit
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-		}
+	private void LateUpdate()
+	{
+	}
 
-		private void LateUpdate()
-		{
-		}
+	public void Clear()
+	{
+	}
 
-		public void Clear()
-		{
-		}
-
-		public bool Check(CollisionHitAttribute hit, CharacterBase target)
-		{
-			return default(bool);
-		}
+	public bool Check(CollisionHitAttribute hit, CharacterBase target)
+	{
+		return default(bool);
 	}
 }

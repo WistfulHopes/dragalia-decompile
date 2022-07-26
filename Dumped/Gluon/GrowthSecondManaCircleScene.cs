@@ -2,100 +2,99 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthSecondManaCircleScene : GrowthManaCircleScene
 {
-	public class GrowthSecondManaCircleScene : GrowthManaCircleScene
+	public GrowthSecondManaCircleObjectsController secondObjectsController;
+
+	public GrowthSecondManaCircleModel secondModel;
+
+	private List<GrowthSecondManaCircleManaPieceObject> selectedTouchPointList;
+
+	public bool isPlayFirstEnterEffect;
+
+	private static GrowthAwakeResultPop.BeforeData beforeUsePlatinumCrystalData;
+
+	private int autoReleaseStartIndex;
+
+	protected override IEnumerator Start()
 	{
-		public GrowthSecondManaCircleObjectsController secondObjectsController;
+		return null;
+	}
 
-		public GrowthSecondManaCircleModel secondModel;
+	protected override IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		private List<GrowthSecondManaCircleManaPieceObject> selectedTouchPointList;
+	public void FirstEnterEffectComplete()
+	{
+	}
 
-		public bool isPlayFirstEnterEffect;
+	protected override void Update()
+	{
+	}
 
-		private static GrowthAwakeResultPop.BeforeData beforeUsePlatinumCrystalData;
+	protected override void LateUpdateTask()
+	{
+	}
 
-		private int autoReleaseStartIndex;
+	public override void Reset()
+	{
+	}
 
-		protected override IEnumerator Start()
-		{
-			return null;
-		}
+	public void OnTouchPointClicked(GrowthSecondManaCircleManaPieceObject touchedPoint)
+	{
+	}
 
-		protected override IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
+	protected void UpdatePointDesc(int centerTouchPointIndex)
+	{
+	}
 
-		public void FirstEnterEffectComplete()
-		{
-		}
+	private void DoReleasePoint()
+	{
+	}
 
-		protected override void Update()
-		{
-		}
+	private IEnumerator PlayReleasePointEffect(GrowthSecondManaCircleManaPieceObject touchedPoint)
+	{
+		return null;
+	}
 
-		protected override void LateUpdateTask()
-		{
-		}
+	public void PlayFirstEnterEffectAsync()
+	{
+	}
 
-		public override void Reset()
-		{
-		}
+	public void ResetDescCanvasParam()
+	{
+	}
 
-		public void OnTouchPointClicked(GrowthSecondManaCircleManaPieceObject touchedPoint)
-		{
-		}
+	public override void OnAutotButtonPressed()
+	{
+	}
 
-		protected void UpdatePointDesc(int centerTouchPointIndex)
-		{
-		}
+	protected override void SendAutoReleaseData(List<GrowthManaCircleManaPieceData> pieceDataList, bool isGrowMaterial)
+	{
+	}
 
-		private void DoReleasePoint()
-		{
-		}
+	protected override void DoAutoReleasePoint()
+	{
+	}
 
-		private IEnumerator PlayReleasePointEffect(GrowthSecondManaCircleManaPieceObject touchedPoint)
-		{
-			return null;
-		}
+	private void PlayAutoReleaseEffect(List<GrowthSecondManaCircleManaPieceObject> pointList, TouchGuardObject touchGuardObject)
+	{
+	}
 
-		public void PlayFirstEnterEffectAsync()
-		{
-		}
+	private Task PlayAutoReleaseEffectTask(List<GrowthSecondManaCircleManaPieceObject> pointList, bool isUsePlatinum)
+	{
+		return null;
+	}
 
-		public void ResetDescCanvasParam()
-		{
-		}
+	protected override void UsePlatinumCrystalResultAction(GrowthAwakeResultPop.BeforeData beforeData)
+	{
+	}
 
-		public override void OnAutotButtonPressed()
-		{
-		}
-
-		protected override void SendAutoReleaseData(List<GrowthManaCircleManaPieceData> pieceDataList, bool isGrowMaterial)
-		{
-		}
-
-		protected override void DoAutoReleasePoint()
-		{
-		}
-
-		private void PlayAutoReleaseEffect(List<GrowthSecondManaCircleManaPieceObject> pointList, TouchGuardObject touchGuardObject)
-		{
-		}
-
-		private Task PlayAutoReleaseEffectTask(List<GrowthSecondManaCircleManaPieceObject> pointList, bool isUsePlatinum)
-		{
-			return null;
-		}
-
-		protected override void UsePlatinumCrystalResultAction(GrowthAwakeResultPop.BeforeData beforeData)
-		{
-		}
-
-		private void PlayUsePlatinumCrystalDirection(GrowthAwakeResultPop.BeforeData beforeData, int startIndex, List<GrowthSecondManaCircleManaPieceObject> pointList)
-		{
-		}
+	private void PlayUsePlatinumCrystalDirection(GrowthAwakeResultPop.BeforeData beforeData, int startIndex, List<GrowthSecondManaCircleManaPieceObject> pointList)
+	{
 	}
 }

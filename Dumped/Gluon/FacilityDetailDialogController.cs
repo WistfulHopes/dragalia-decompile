@@ -3,113 +3,112 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FacilityDetailDialogController : FacilityDialogControllerBase
 {
-	public class FacilityDetailDialogController : FacilityDialogControllerBase
+	public enum DialogType
 	{
-		public enum DialogType
-		{
-			FacilityDetail,
-			BuildCancelConfirm,
-			LevelUpCancelConfirm,
-			ToStoreConfirm
-		}
+		FacilityDetail,
+		BuildCancelConfirm,
+		LevelUpCancelConfirm,
+		ToStoreConfirm
+	}
 
-		private enum UpdateType
-		{
-			None,
-			BuildDuration,
-			PassedIncomeTime
-		}
+	private enum UpdateType
+	{
+		None,
+		BuildDuration,
+		PassedIncomeTime
+	}
 
-		private DialogType dialogType;
+	private DialogType dialogType;
 
-		[SerializeField]
-		private Button cancelButton;
+	[SerializeField]
+	private Button cancelButton;
 
-		[SerializeField]
-		private Button okButton;
+	[SerializeField]
+	private Button okButton;
 
-		[SerializeField]
-		private Text titleText;
+	[SerializeField]
+	private Text titleText;
 
-		[SerializeField]
-		private Text infoText;
+	[SerializeField]
+	private Text infoText;
 
-		[SerializeField]
-		private GameObject infoOnlyOffset;
+	[SerializeField]
+	private GameObject infoOnlyOffset;
 
-		[SerializeField]
-		private GameObject buildDurationRoot;
+	[SerializeField]
+	private GameObject buildDurationRoot;
 
-		[SerializeField]
-		private Text buildDurationLabel;
+	[SerializeField]
+	private Text buildDurationLabel;
 
-		[SerializeField]
-		private GameObject buildDurationOnlyOffset;
+	[SerializeField]
+	private GameObject buildDurationOnlyOffset;
 
-		[SerializeField]
-		private GameObject maxIncomeTimeRoot;
+	[SerializeField]
+	private GameObject maxIncomeTimeRoot;
 
-		[SerializeField]
-		private GameObject eventEffectRoot;
+	[SerializeField]
+	private GameObject eventEffectRoot;
 
-		[SerializeField]
-		private Text eventTitleText;
+	[SerializeField]
+	private Text eventTitleText;
 
-		[SerializeField]
-		private Text eventEffectText;
+	[SerializeField]
+	private Text eventEffectText;
 
-		[SerializeField]
-		private Button gotoFortButton;
+	[SerializeField]
+	private Button gotoFortButton;
 
-		[SerializeField]
-		private Text gotoFortButtonText;
+	[SerializeField]
+	private Text gotoFortButtonText;
 
-		private FacilityViewController facilityCtrl;
+	private FacilityViewController facilityCtrl;
 
-		private const int frameSizeWithEventEffect = 900;
+	private const int frameSizeWithEventEffect = 900;
 
-		public Action onDialogClosed;
+	public Action onDialogClosed;
 
-		private UpdateType curUpdateType;
+	private UpdateType curUpdateType;
 
-		private FortBuildGaugeController fortBuildGaugeController;
+	private FortBuildGaugeController fortBuildGaugeController;
 
-		private readonly Vector3 leftButtonPos;
+	private readonly Vector3 leftButtonPos;
 
-		private const float mainFacilityTextSpace = 40f;
+	private const float mainFacilityTextSpace = 40f;
 
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void CloseDialog()
-		{
-		}
+	private void CloseDialog()
+	{
+	}
 
-		public void SetContent(FacilityViewController facilityVC, DialogType type, bool showGotoFortButton = false)
-		{
-		}
+	public void SetContent(FacilityViewController facilityVC, DialogType type, bool showGotoFortButton = false)
+	{
+	}
 
-		public void SetContent(Facility facility, DialogType type, bool showGotoFortButton = false)
-		{
-		}
+	public void SetContent(Facility facility, DialogType type, bool showGotoFortButton = false)
+	{
+	}
 
-		public void onGotoFortButtonTouched()
-		{
-		}
+	public void onGotoFortButtonTouched()
+	{
+	}
 
-		private void SetCancelButtonPosLeft()
-		{
-		}
+	private void SetCancelButtonPosLeft()
+	{
+	}
 
-		public void AddOnOkButtonCallback(UnityAction callBack)
-		{
-		}
+	public void AddOnOkButtonCallback(UnityAction callBack)
+	{
 	}
 }

@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum StoryReleaseType
 {
-	public enum StoryReleaseType
-	{
-		NONE,
-		CHARA_GET,
-		CHARA_CHARA_GROW,
-		DRAGON_RELIABILITY_LEVEL
-	}
+	NONE,
+	CHARA_GET,
+	CHARA_CHARA_GROW,
+	DRAGON_RELIABILITY_LEVEL
 }

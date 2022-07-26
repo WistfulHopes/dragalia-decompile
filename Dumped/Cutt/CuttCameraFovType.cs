@@ -1,7 +1,6 @@
-namespace Cutt
+namespace Cutt;
+
+public enum CuttCameraFovType
 {
-	public enum CuttCameraFovType
-	{
-		Direct
-	}
+	Direct
 }

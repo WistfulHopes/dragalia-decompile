@@ -1,13 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public enum CuttCharaMouth
 {
-	public enum CuttCharaMouth
-	{
-		CHU,
-		DAI,
-		EGAO,
-		SHYO,
-		ODOROKI,
-		KUISHIBARI,
-		SAKEBI
-	}
+	CHU,
+	DAI,
+	EGAO,
+	SHYO,
+	ODOROKI,
+	KUISHIBARI,
+	SAKEBI
 }

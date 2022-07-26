@@ -1,28 +1,29 @@
 using Cute.Core;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttCharacterAnimationEvent : FastUpdateMonoBehaviour
 {
-	public class CuttCharacterAnimationEvent : FastUpdateMonoBehaviour
+	private CuttCharacterController chara;
+
+	private const int INDEX_SPECIAL_FACE = 100;
+
+	public CuttCharacterController Chara
 	{
-		private CuttCharacterController chara;
-
-		public CuttCharacterController Chara
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return null;
 		}
-
-		public void SetFacialEye(int index)
+		set
 		{
 		}
+	}
 
-		public void SetFacialMouth(int index)
-		{
-		}
+	public void SetFacialEye(int index)
+	{
+	}
+
+	public void SetFacialMouth(int index)
+	{
 	}
 }

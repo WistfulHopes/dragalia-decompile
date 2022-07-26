@@ -1,50 +1,49 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPagePresentListCell : TableViewCell<MyPagePresentListCellData>
 {
-	public class MyPagePresentListCell : TableViewCell<MyPagePresentListCellData>
+	[SerializeField]
+	private CommonIcon itemIcon;
+
+	[SerializeField]
+	private Text itemNameText;
+
+	[SerializeField]
+	private Text discriptionText;
+
+	[SerializeField]
+	private Button listOnButton;
+
+	[SerializeField]
+	private Text listOnButtonText;
+
+	[SerializeField]
+	private Text dateAreaText;
+
+	private bool isInitialized;
+
+	private PreferredSizeFitter itemNameTextFitter;
+
+	private Vector2 itemNameTextBaseSizeDelta;
+
+	private MyPagePresentListCellData cellData;
+
+	private void Start()
 	{
-		[SerializeField]
-		private CommonIcon itemIcon;
+	}
 
-		[SerializeField]
-		private Text itemNameText;
+	public override void UpdateContent(MyPagePresentListCellData data)
+	{
+	}
 
-		[SerializeField]
-		private Text discriptionText;
+	public void OnItemIconLongPressed()
+	{
+	}
 
-		[SerializeField]
-		private Button listOnButton;
-
-		[SerializeField]
-		private Text listOnButtonText;
-
-		[SerializeField]
-		private Text dateAreaText;
-
-		private bool isInitialized;
-
-		private PreferredSizeFitter itemNameTextFitter;
-
-		private Vector2 itemNameTextBaseSizeDelta;
-
-		private MyPagePresentListCellData cellData;
-
-		private void Start()
-		{
-		}
-
-		public override void UpdateContent(MyPagePresentListCellData data)
-		{
-		}
-
-		public void OnItemIconLongPressed()
-		{
-		}
-
-		public void OnListOnButtonPressed()
-		{
-		}
+	public void OnListOnButtonPressed()
+	{
 	}
 }

@@ -1,147 +1,146 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthScene : SceneBase
 {
-	public class GrowthScene : SceneBase
+	public enum CharaType
 	{
-		public enum CharaType
-		{
-			None = -1,
-			Elphyllis,
-			Ranzarve,
-			Rosina
-		}
+		None = -1,
+		Elphyllis,
+		Ranzarve,
+		Rosina
+	}
 
-		public delegate void OnGrowCharaListPress(GiftType buttonType, int inventoryId);
+	public delegate void OnGrowCharaListPress(GiftType buttonType, int inventoryId);
 
-		public CharaType charaType;
+	public CharaType charaType;
 
-		public Camera mainCamera;
+	public Camera mainCamera;
 
-		public GrowthCharaTalkSelector charaTalkSelector;
+	public GrowthCharaTalkSelector charaTalkSelector;
 
-		public static string prefabDir;
+	public static string prefabDir;
 
-		private GrowthUICanvas mainCanvas;
+	private GrowthUICanvas mainCanvas;
 
-		private GrowthCharaCanvas charaCanvas;
+	private GrowthCharaCanvas charaCanvas;
 
-		private bool isTutorialRequired;
+	private bool isTutorialRequired;
 
-		private bool isTutorialStory;
+	private bool isTutorialStory;
 
-		private const string charaVoiceGroupName1 = "VO_CHR_100002_01_OUT";
+	private const string charaVoiceGroupName1 = "VO_CHR_100002_01_OUT";
 
-		private const string charaVoiceGroupName2 = "VO_CHR_100003_01_OUT";
+	private const string charaVoiceGroupName2 = "VO_CHR_100003_01_OUT";
 
-		private const string charaVoiceGroupName3 = "VO_CHR_110263_02_OUT";
+	private const string charaVoiceGroupName3 = "VO_CHR_110263_02_OUT";
 
-		private string charaCanvasPrefabName;
+	private string charaCanvasPrefabName;
 
-		private string charaVoiceGroupName;
+	private string charaVoiceGroupName;
 
-		private GameObject charaCanvasPrefab;
+	private GameObject charaCanvasPrefab;
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		public void OnCharaPressed()
-		{
-		}
+	public void OnCharaPressed()
+	{
+	}
 
-		private void CheckTutorialState()
-		{
-		}
+	private void CheckTutorialState()
+	{
+	}
 
-		private void SetupTutorialState()
-		{
-		}
+	private void SetupTutorialState()
+	{
+	}
 
-		private void StartTutorial()
-		{
-		}
+	private void StartTutorial()
+	{
+	}
 
-		private void Tutorial_1_1()
-		{
-		}
+	private void Tutorial_1_1()
+	{
+	}
 
-		private IEnumerator Tutorial_1_1_Coroutine()
-		{
-			return null;
-		}
+	private IEnumerator Tutorial_1_1_Coroutine()
+	{
+		return null;
+	}
 
-		private void Tutorial_1_2()
-		{
-		}
+	private void Tutorial_1_2()
+	{
+	}
 
-		private IEnumerator Tutorial_1_2_Coroutine()
-		{
-			return null;
-		}
+	private IEnumerator Tutorial_1_2_Coroutine()
+	{
+		return null;
+	}
 
-		private void Tutorial_1_2_ToGrowthAmulet()
-		{
-		}
+	private void Tutorial_1_2_ToGrowthAmulet()
+	{
+	}
 
-		private void Tutorial_1_4()
-		{
-		}
+	private void Tutorial_1_4()
+	{
+	}
 
-		private IEnumerator Tutorial_1_4_Coroutine()
-		{
-			return null;
-		}
+	private IEnumerator Tutorial_1_4_Coroutine()
+	{
+		return null;
+	}
 
-		private void Tutorial_2_6_2()
-		{
-		}
+	private void Tutorial_2_6_2()
+	{
+	}
 
-		private void TutorialGrowthDragon()
-		{
-		}
+	private void TutorialGrowthDragon()
+	{
+	}
 
-		private IEnumerator TutorialGrowthDragonCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator TutorialGrowthDragonCoroutine()
+	{
+		return null;
+	}
 
-		public void OnGrowthCharacterButtonPressed()
-		{
-		}
+	public void OnGrowthCharacterButtonPressed()
+	{
+	}
 
-		public void OnGrowthManaCircleButtonPressed()
-		{
-		}
+	public void OnGrowthManaCircleButtonPressed()
+	{
+	}
 
-		public void OnGrowthDragonButtonPressed()
-		{
-		}
+	public void OnGrowthDragonButtonPressed()
+	{
+	}
 
-		public void OnGrowthWeaponButtonPressed()
-		{
-		}
+	public void OnGrowthWeaponButtonPressed()
+	{
+	}
 
-		public void OnGrowthAmuletButtonPressed()
-		{
-		}
+	public void OnGrowthAmuletButtonPressed()
+	{
+	}
 
-		public void OnGrowthCraftButtonPressed()
-		{
-		}
+	public void OnGrowthCraftButtonPressed()
+	{
 	}
 }

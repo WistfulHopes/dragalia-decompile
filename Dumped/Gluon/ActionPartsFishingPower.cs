@@ -1,33 +1,32 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsFishingPower : ActionParts
 {
-	public class ActionPartsFishingPower : ActionParts
+	private readonly FishingPowerData _partsData;
+
+	private FishUniqueCtrl _ctrl;
+
+	private bool _isDone;
+
+	public ActionPartsFishingPower(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly FishingPowerData _partsData;
+	}
 
-		private FishUniqueCtrl _ctrl;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		private bool _isDone;
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsFishingPower(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
-
-		private void ProcCommand()
-		{
-		}
+	private void ProcCommand()
+	{
 	}
 }

@@ -1,15 +1,14 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AfterPrologueDownloadScene : MonoBehaviour
 {
-	public class AfterPrologueDownloadScene : MonoBehaviour
+	private GameObject canvasObject;
+
+	public static string charaIdPlayerPrefsKey;
+
+	private void Start()
 	{
-		private GameObject canvasObject;
-
-		public static string charaIdPlayerPrefsKey;
-
-		private void Start()
-		{
-		}
 	}
 }

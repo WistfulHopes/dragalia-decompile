@@ -1,11 +1,10 @@
-namespace Cutt
+namespace Cutt;
+
+public enum CuttTimelineSoundOperationID
 {
-	public enum CuttTimelineSoundOperationID
-	{
-		CONTINUE,
-		PLAY_3D,
-		PLAY_NORMAL,
-		STOP,
-		PLAY_INGAME
-	}
+	CONTINUE,
+	PLAY_3D,
+	PLAY_NORMAL,
+	STOP,
+	PLAY_INGAME
 }

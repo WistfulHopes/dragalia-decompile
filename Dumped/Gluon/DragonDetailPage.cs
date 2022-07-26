@@ -2,38 +2,36 @@ using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DragonDetailPage : EventQuestPageBase
 {
-	public class DragonDetailPage : EventQuestPageBase
+	[SerializeField]
+	public SummonResultStatusPlate statusPlate;
+
+	[SerializeField]
+	private Transform returnButtonTransform;
+
+	private SceneNameDefine.PageName previousPageName;
+
+	public Action onBeforLeaving
 	{
-		[SerializeField]
-		[Header("Plate")]
-		public SummonResultStatusPlate statusPlate;
-
-		[SerializeField]
-		private Transform returnButtonTransform;
-
-		private SceneNameDefine.PageName previousPageName;
-
-		public Action onBeforLeaving
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		public void OnButtonBackTouched()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SetContent(SummonResultItemData itemData, SceneNameDefine.PageName lastPage)
-		{
-		}
+	public void OnButtonBackTouched()
+	{
+	}
+
+	public void SetContent(SummonResultItemData itemData, SceneNameDefine.PageName lastPage)
+	{
 	}
 }

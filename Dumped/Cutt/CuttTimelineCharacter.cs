@@ -1,109 +1,108 @@
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineCharacter
 {
-	public class CuttTimelineCharacter
+	private class MotionControlData
 	{
-		private class MotionControlData
-		{
-			public int playFrame;
+		public int playFrame;
 
-			public string stateName;
+		public string stateName;
 
-			public int layerIndex;
+		public int layerIndex;
 
-			public bool isRandom;
+		public bool isRandom;
 
-			public float minRandomSec;
+		public float minRandomSec;
 
-			public float maxRandomSec;
+		public float maxRandomSec;
 
-			public float intervalRatio;
+		public float intervalRatio;
 
-			public float randomTime;
+		public float randomTime;
 
-			public float currentRandomTime;
+		public float currentRandomTime;
 
-			public bool trigger;
+		public bool trigger;
 
-			public string triggerName;
-		}
+		public string triggerName;
+	}
 
-		private CuttTimelineCharacterData _keys;
+	private CuttTimelineCharacterData _keys;
 
-		private CuttTimelineControl timelineControl;
+	private CuttTimelineControl timelineControl;
 
-		private MotionControlData[] motionControlData;
+	private MotionControlData[] motionControlData;
 
-		private CuttTimelineKeyCharacterTransformDataList transformKeys;
+	private CuttTimelineKeyCharacterTransformDataList transformKeys;
 
-		private CuttTimelineKeyCharacterMotionDataList motionKeys;
+	private CuttTimelineKeyCharacterMotionDataList motionKeys;
 
-		private CuttTimelineKeyCharacterEyeDataList eyeKeys;
+	private CuttTimelineKeyCharacterEyeDataList eyeKeys;
 
-		private CuttTimelineKeyCharacterMouthDataList mouthKeys;
+	private CuttTimelineKeyCharacterMouthDataList mouthKeys;
 
-		private CuttTimelineKeyCharacterMotionDataList motion2Keys;
+	private CuttTimelineKeyCharacterMotionDataList motion2Keys;
 
-		private CuttTimelineKeyCharacterMotionDataList motion3Keys;
+	private CuttTimelineKeyCharacterMotionDataList motion3Keys;
 
-		private CuttTimelineKeyCharacterMotionDataList motion4Keys;
+	private CuttTimelineKeyCharacterMotionDataList motion4Keys;
 
-		private CuttTimelineKeyCharacterMotionDataList motion5Keys;
+	private CuttTimelineKeyCharacterMotionDataList motion5Keys;
 
-		private CuttTimelineKeyCharacterGameObjectDataList gameObjectKeys;
+	private CuttTimelineKeyCharacterGameObjectDataList gameObjectKeys;
 
-		private CuttTimelineKeyCharacterRichDataList richKeys;
+	private CuttTimelineKeyCharacterRichDataList richKeys;
 
-		private CuttTimelineKeyCharacterMotionDataList[] motionKeysArray;
+	private CuttTimelineKeyCharacterMotionDataList[] motionKeysArray;
 
-		private CuttCharacterController _character;
+	private CuttCharacterController _character;
 
-		private bool isBillboard;
+	private bool isBillboard;
 
-		public CuttCharacterController character
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		public void Initialize(CuttTimelineCharacterData keys, CuttTimelineControl timelineControl, CuttCharacterController charaController)
-		{
-		}
-
-		public void ResetCharacterController(CuttCharacterController charaController)
-		{
-		}
-
-		public void ResetCharacterController(CuttCharacterController charaController, RuntimeAnimatorController animController)
-		{
-		}
-
-		public void AlterUpdate(float currentTime, float targetFps, int currentFrame, int oldFrame)
-		{
-		}
-
-		public void AlterLateUpdate(float currentTime, float targetFps, int currentFrame, int oldFrame)
-		{
-		}
-
-		private float GetCurrentMotionNormalizeTime(int layerIndex, int currentFrame, float targetFps)
-		{
-			return default(float);
-		}
-
-		public Transform FindTransform(string name)
+	public CuttCharacterController character
+	{
+		get
 		{
 			return null;
 		}
-
-		public void SetBillboardRotation(Quaternion camRot)
+		set
 		{
 		}
+	}
+
+	public void Initialize(CuttTimelineCharacterData keys, CuttTimelineControl timelineControl, CuttCharacterController charaController)
+	{
+	}
+
+	public void ResetCharacterController(CuttCharacterController charaController)
+	{
+	}
+
+	public void ResetCharacterController(CuttCharacterController charaController, RuntimeAnimatorController animController)
+	{
+	}
+
+	public void AlterUpdate(float currentTime, float targetFps, int currentFrame, int oldFrame)
+	{
+	}
+
+	public void AlterLateUpdate(float currentTime, float targetFps, int currentFrame, int oldFrame)
+	{
+	}
+
+	private float GetCurrentMotionNormalizeTime(int layerIndex, int currentFrame, float targetFps)
+	{
+		return default(float);
+	}
+
+	public Transform FindTransform(string name)
+	{
+		return null;
+	}
+
+	public void SetBillboardRotation(Quaternion camRot)
+	{
 	}
 }

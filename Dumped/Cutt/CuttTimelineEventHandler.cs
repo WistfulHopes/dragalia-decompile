@@ -1,4 +1,3 @@
-namespace Cutt
-{
-	public delegate void CuttTimelineEventHandler(CuttTimelineKeyEventData.EventData eventData);
-}
+namespace Cutt;
+
+public delegate void CuttTimelineEventHandler(CuttTimelineKeyEventData.EventData eventData);

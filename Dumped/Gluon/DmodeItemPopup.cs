@@ -5,165 +5,159 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeItemPopup : PopupBase
 {
-	public class DmodeItemPopup : PopupBase
+	[SerializeField]
+	public Text hpText;
+
+	public Text attackText;
+
+	[SerializeField]
+	public DmodeCommonInGameIcon weaponIcon;
+
+	public DmodeCommonInGameIcon[] abilityCrestIcons;
+
+	[SerializeField]
+	public DmodeCommonInGameIcon charaBagIconTemplate;
+
+	[SerializeField]
+	public DmodeCommonInGameIcon fafnirBagIconTemplate;
+
+	[SerializeField]
+	public Button okButton;
+
+	public static readonly string prefabPath;
+
+	private List<DmodeCommonInGameIcon> charaBagIcons;
+
+	private List<DmodeCommonInGameIcon> fafnirBagIcons;
+
+	private static DmodeItemPopup _instance;
+
+	private bool started;
+
+	private Action onClose;
+
+	private List<int> itemNewStateRecord;
+
+	public static DmodeItemPopup instance
 	{
-		[SerializeField]
-		[Header("TopPart")]
-		public Text hpText;
-
-		public Text attackText;
-
-		[SerializeField]
-		[Header("Equip")]
-		public DmodeCommonInGameIcon weaponIcon;
-
-		public DmodeCommonInGameIcon[] abilityCrestIcons;
-
-		[SerializeField]
-		[Header("CharaBag")]
-		public DmodeCommonInGameIcon charaBagIconTemplate;
-
-		[SerializeField]
-		[Header("FafnirBag")]
-		public DmodeCommonInGameIcon fafnirBagIconTemplate;
-
-		[SerializeField]
-		[Header("Button")]
-		public Button okButton;
-
-		public static readonly string prefabPath;
-
-		private List<DmodeCommonInGameIcon> charaBagIcons;
-
-		private List<DmodeCommonInGameIcon> fafnirBagIcons;
-
-		private static DmodeItemPopup _instance;
-
-		private bool started;
-
-		private Action onClose;
-
-		private List<int> itemNewStateRecord;
-
-		public static DmodeItemPopup instance
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public static DmodeItemPopup Create()
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public void ShowPopup([Optional] Action onClose)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		protected override void Start()
-		{
-		}
+	public static DmodeItemPopup Create()
+	{
+		return null;
+	}
 
-		public void ClosePopup()
-		{
-		}
+	public void ShowPopup([Optional] Action onClose)
+	{
+	}
 
-		private void RecordNewState()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		public static bool IsNew(int id)
-		{
-			return default(bool);
-		}
+	public void ClosePopup()
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	private void RecordNewState()
+	{
+	}
 
-		private void Initialize()
-		{
-		}
+	public static bool IsNew(int id)
+	{
+		return default(bool);
+	}
 
-		private void OnClose()
-		{
-		}
+	protected override void OnDestroy()
+	{
+	}
 
-		private void OnCharaBagButtonPressed(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void Initialize()
+	{
+	}
 
-		private void OnFafnirBagButtonPressed(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnClose()
+	{
+	}
 
-		private void OnBagButtonPressed(DmodeDungeonItemManager.ContainerType containerType, DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnCharaBagButtonPressed(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		public static void CallUpdateView()
-		{
-		}
+	private void OnFafnirBagButtonPressed(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		private void OnEquippedWeaponButtonPressed(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnBagButtonPressed(DmodeDungeonItemManager.ContainerType containerType, DmodeDungeonItemType type, int id)
+	{
+	}
 
-		private void OnEquippedWeaponButtonLongPressed(DmodeDungeonItemType type, int id)
-		{
-		}
+	public static void CallUpdateView()
+	{
+	}
 
-		private void OnEquippedDefaultWeaponButtonPressed(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnEquippedWeaponButtonPressed(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		private void OnEquippedDefaultWeaponButtonLongPressed(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnEquippedWeaponButtonLongPressed(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		private void OnEquippedAbilityCrestButtonPressed_1(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnEquippedDefaultWeaponButtonPressed(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		private void OnEquippedAbilityCrestButtonPressed_2(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnEquippedDefaultWeaponButtonLongPressed(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		private void OnEquippedAbilityCrestButtonPressed_3(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnEquippedAbilityCrestButtonPressed_1(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		private void OnEquippedAbilityCrestButtonLongPressed_1(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnEquippedAbilityCrestButtonPressed_2(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		private void OnEquippedAbilityCrestButtonLongPressed_2(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnEquippedAbilityCrestButtonPressed_3(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		private void OnEquippedAbilityCrestButtonLongPressed_3(DmodeDungeonItemType type, int id)
-		{
-		}
+	private void OnEquippedAbilityCrestButtonLongPressed_1(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		public void OnEmptyAbilityCrestButtonPressed(int equipIndex)
-		{
-		}
+	private void OnEquippedAbilityCrestButtonLongPressed_2(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		public void OnManagementButtonPressed()
-		{
-		}
+	private void OnEquippedAbilityCrestButtonLongPressed_3(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		private void UpdateView()
-		{
-		}
+	public void OnEmptyAbilityCrestButtonPressed(int equipIndex)
+	{
+	}
+
+	public void OnManagementButtonPressed()
+	{
+	}
+
+	private void UpdateView()
+	{
 	}
 }

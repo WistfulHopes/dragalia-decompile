@@ -1,12 +1,11 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public static class ExtendPlayerActionElement
 {
-	public static class ExtendPlayerActionElement
+	public static int MaxAdditionalInput(this PlayerActionElement self, CharacterBase chara, bool useInitVal = false)
 	{
-		public static int MaxAdditionalInput(this PlayerActionElement self, CharacterBase chara, bool useInitVal = false)
-		{
-			return default(int);
-		}
+		return default(int);
 	}
 }

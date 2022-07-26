@@ -1,32 +1,31 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsMotion : ActionParts
 {
-	public class ActionPartsMotion : ActionParts
+	private readonly PartsMotionData _partsData;
+
+	public string motion => null;
+
+	public ActionPartsMotion(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly PartsMotionData _partsData;
+	}
 
-		public string motion => null;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public ActionPartsMotion(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

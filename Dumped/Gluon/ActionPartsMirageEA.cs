@@ -1,33 +1,32 @@
 using Gluon.ActionData;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsMirageEA : ActionParts
 {
-	public class ActionPartsMirageEA : ActionParts
+	private readonly MirageEAData _partsData;
+
+	private EnemyCharacter.CallMinionInfo callMinionInfo;
+
+	private int currentHp;
+
+	private RunActionIntParameter setupHpParam;
+
+	public ActionPartsMirageEA(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly MirageEAData _partsData;
+	}
 
-		private EnemyCharacter.CallMinionInfo callMinionInfo;
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		private int currentHp;
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		private RunActionIntParameter setupHpParam;
-
-		public ActionPartsMirageEA(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		public override RunActionParameterBase CreateRunActionParameter()
-		{
-			return null;
-		}
-
-		public override void SetRunActionParameter(RunActionParameterBase param)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

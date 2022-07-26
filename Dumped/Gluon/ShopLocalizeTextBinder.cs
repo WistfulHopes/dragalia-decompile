@@ -1,16 +1,15 @@
-namespace Gluon
+namespace Gluon;
+
+public class ShopLocalizeTextBinder : AutoLocalizeTextBinderBase
 {
-	public class ShopLocalizeTextBinder : AutoLocalizeTextBinderBase
+	protected override string prefixType
 	{
-		protected override string prefixType
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return null;
+		}
+		set
+		{
 		}
 	}
 }

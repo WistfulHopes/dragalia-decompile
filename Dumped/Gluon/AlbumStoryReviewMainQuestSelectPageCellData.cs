@@ -1,15 +1,14 @@
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumStoryReviewMainQuestSelectPageCellData
 {
-	public class AlbumStoryReviewMainQuestSelectPageCellData
-	{
-		public int chapterNum;
+	public int chapterNum;
 
-		public int questGroupId;
+	public int questGroupId;
 
-		public int sortId;
+	public int sortId;
 
-		public UnityAction<int> onCellPressed;
-	}
+	public UnityAction<int> onCellPressed;
 }

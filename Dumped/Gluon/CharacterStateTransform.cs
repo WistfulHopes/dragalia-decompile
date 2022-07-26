@@ -1,22 +1,21 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateTransform : CharacterStateBase
 {
-	public class CharacterStateTransform : CharacterStateBase
+	protected override void OnStateEnter_Internal()
 	{
-		protected override void OnStateEnter_Internal()
-		{
-		}
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateUpdate()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateExit()
+	{
+	}
 
-		protected override bool NeedsResetHidingBuffOnEnter()
-		{
-			return default(bool);
-		}
+	protected override bool NeedsResetHidingBuffOnEnter()
+	{
+		return default(bool);
 	}
 }

@@ -3,102 +3,98 @@ using Cute.Core;
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DragonPointGaugeUI : FastUpdateMonoBehaviour
 {
-	public class DragonPointGaugeUI : FastUpdateMonoBehaviour
+	[Serializable]
+	protected class GaugeParam
 	{
-		[Serializable]
-		protected class GaugeParam
-		{
-			[SerializeField]
-			protected Sprite[] _gaugeSprites;
-
-			[SerializeField]
-			protected Color _gaugeColor;
-
-			public Sprite[] gaugeSprites => null;
-
-			public Color gaugeColor => default(Color);
-		}
-
-		public enum DispType
-		{
-			Valid_01,
-			Valid_02,
-			Invalid
-		}
+		[SerializeField]
+		protected Sprite[] _gaugeSprites;
 
 		[SerializeField]
-		[Header("component")]
-		private InGameButtonGaugeUI _buttonGauge1;
+		protected Color _gaugeColor;
 
-		[SerializeField]
-		private InGameButtonGaugeUI _buttonGauge2;
+		public Sprite[] gaugeSprites => null;
 
-		[SerializeField]
-		protected SpriteRenderer _gaugeEffect;
+		public Color gaugeColor => default(Color);
+	}
 
-		[SerializeField]
-		protected SpriteRenderer _gaugeLineEffect;
+	public enum DispType
+	{
+		Valid_01,
+		Valid_02,
+		Invalid
+	}
 
-		[SerializeField]
-		[Header("resource")]
-		[Tooltip("ã\u0082²ã\u0083¼ã\u0082\u00b8ã\u0083\u0091ã\u0083©ã\u0083¡ã\u0083¼ã\u0082¿ã\u0083ªã\u0082¹ã\u0083\u0088\n  0: æ\u009c\u0089å\u008a¹ï¼\u0088ç«\u009cå\u008c\u0096ä\u00b8\u008då\u008f\u00afï¼\u0089\n  1: æ\u009c\u0089å\u008a¹ï¼\u0088ç«\u009cå\u008c\u0096å\u008f\u00afï¼\u0089\n  2: ç\u0084¡å\u008a¹ï¼\u0088ã\u0082°ã\u0083¬ã\u0083¼ã\u0082¢ã\u0082¦ã\u0083\u0088è¡\u00a8ç¤ºï¼\u0089")]
-		protected GaugeParam[] _gaugeParams;
+	[SerializeField]
+	private InGameButtonGaugeUI _buttonGauge1;
 
-		protected DispType _dispType;
+	[SerializeField]
+	private InGameButtonGaugeUI _buttonGauge2;
 
-		protected RectTransform _gaugeEffectRt;
+	[SerializeField]
+	protected SpriteRenderer _gaugeEffect;
 
-		protected Tweener _twGaugeEffect;
+	[SerializeField]
+	protected SpriteRenderer _gaugeLineEffect;
 
-		protected Tweener _twGaugeLineEffect;
+	[SerializeField]
+	protected GaugeParam[] _gaugeParams;
 
-		protected int _targetGaugeLineEffect;
+	protected DispType _dispType;
 
-		protected float _rate;
+	protected RectTransform _gaugeEffectRt;
 
-		protected float _gaugeValue1;
+	protected Tweener _twGaugeEffect;
 
-		protected float _gaugeValue2;
+	protected Tweener _twGaugeLineEffect;
 
-		public void Initialize(DispType type)
-		{
-		}
+	protected int _targetGaugeLineEffect;
 
-		public void OnDestroy()
-		{
-		}
+	protected float _rate;
 
-		public void UpdateUI()
-		{
-		}
+	protected float _gaugeValue1;
 
-		public void SetDispType(DispType type, bool isForce = false)
-		{
-		}
+	protected float _gaugeValue2;
 
-		public bool SetGaugeRate(float rate, bool isForce = false, bool isImmediate = false, bool isWithEffectAndSE = true)
-		{
-			return default(bool);
-		}
+	public void Initialize(DispType type)
+	{
+	}
 
-		public float GetGaugeRate1()
-		{
-			return default(float);
-		}
+	public void OnDestroy()
+	{
+	}
 
-		public float GetGaugeRate2()
-		{
-			return default(float);
-		}
+	public void UpdateUI()
+	{
+	}
 
-		public void StartGaugeEffect()
-		{
-		}
+	public void SetDispType(DispType type, bool isForce = false)
+	{
+	}
 
-		protected void OnUpdateEffect(float value)
-		{
-		}
+	public bool SetGaugeRate(float rate, bool isForce = false, bool isImmediate = false, bool isWithEffectAndSE = true)
+	{
+		return default(bool);
+	}
+
+	public float GetGaugeRate1()
+	{
+		return default(float);
+	}
+
+	public float GetGaugeRate2()
+	{
+		return default(float);
+	}
+
+	public void StartGaugeEffect()
+	{
+	}
+
+	protected void OnUpdateEffect(float value)
+	{
 	}
 }

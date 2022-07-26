@@ -1,18 +1,17 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GradientCell : MonoBehaviour
 {
-	public class GradientCell : MonoBehaviour
+	protected bool isGradientShaderSetted;
+
+	private QuestListCellShaderExchanger _shaderExchanger;
+
+	public QuestListCellShaderExchanger shaderExchanger => null;
+
+	public virtual bool SetGradientShader()
 	{
-		protected bool isGradientShaderSetted;
-
-		private QuestListCellShaderExchanger _shaderExchanger;
-
-		public QuestListCellShaderExchanger shaderExchanger => null;
-
-		public virtual bool SetGradientShader()
-		{
-			return default(bool);
-		}
+		return default(bool);
 	}
 }

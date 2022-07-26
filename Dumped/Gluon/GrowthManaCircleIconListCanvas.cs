@@ -1,56 +1,55 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleIconListCanvas : MonoBehaviour
 {
-	public class GrowthManaCircleIconListCanvas : MonoBehaviour
+	public GrowthManaCircleScene scene;
+
+	public CommonIconListBase commonIconListBase;
+
+	private Canvas canvas;
+
+	private void Start()
 	{
-		public GrowthManaCircleScene scene;
+	}
 
-		public CommonIconListBase commonIconListBase;
+	private void OnDestroy()
+	{
+	}
 
-		private Canvas canvas;
+	public void OnOtherAreaPressed()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		public void OnOtherAreaPressed()
-		{
-		}
+	private IEnumerator LoadBaseListData()
+	{
+		return null;
+	}
 
-		private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private void DisableScrollRect()
+	{
+	}
 
-		private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	public void OnSortButtonClicked()
+	{
+	}
 
-		private IEnumerator LoadBaseListData()
-		{
-			return null;
-		}
+	public void OnSortApplied()
+	{
+	}
 
-		private void DisableScrollRect()
-		{
-		}
-
-		public void OnSortButtonClicked()
-		{
-		}
-
-		public void OnSortApplied()
-		{
-		}
-
-		private ulong[] CreateDataIdList()
-		{
-			return null;
-		}
+	private ulong[] CreateDataIdList()
+	{
+		return null;
 	}
 }

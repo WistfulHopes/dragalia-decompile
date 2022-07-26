@@ -1,50 +1,49 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsPuppet : ActionParts
 {
-	public class ActionPartsPuppet : ActionParts
+	public enum Mode
 	{
-		public enum Mode
-		{
-			Boot,
-			Abort,
-			Setup
-		}
+		Boot,
+		Abort,
+		Setup
+	}
 
-		private readonly PuppetData _partsData;
+	private readonly PuppetData _partsData;
 
-		private PuppetMasterUniqueCtrl ctrl;
+	private PuppetMasterUniqueCtrl ctrl;
 
-		public ActionPartsPuppet(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsPuppet(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
+	}
 
-		private void Setup()
-		{
-		}
+	private void Setup()
+	{
+	}
 
-		private void Boot()
-		{
-		}
+	private void Boot()
+	{
+	}
 
-		private void Abort()
-		{
-		}
+	private void Abort()
+	{
 	}
 }

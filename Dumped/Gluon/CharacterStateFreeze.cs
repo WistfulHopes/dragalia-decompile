@@ -1,13 +1,12 @@
-namespace Gluon
-{
-	public class CharacterStateFreeze : CharacterStateBase
-	{
-		protected override void OnStateEnter_Internal()
-		{
-		}
+namespace Gluon;
 
-		public override void OnStateExit()
-		{
-		}
+public class CharacterStateFreeze : CharacterStateBase
+{
+	protected override void OnStateEnter_Internal()
+	{
+	}
+
+	public override void OnStateExit()
+	{
 	}
 }

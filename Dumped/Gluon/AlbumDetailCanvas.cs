@@ -4,383 +4,364 @@ using Cute.Cri;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumDetailCanvas : MonoBehaviour
 {
-	public class AlbumDetailCanvas : MonoBehaviour
+	[HideInInspector]
+	public UnitDetailScene detailScene;
+
+	[SerializeField]
+	public Viewer2DCanvas viewer2DCanvas;
+
+	[SerializeField]
+	public Viewer3DCanvas viewer3DCanvas;
+
+	[SerializeField]
+	public RawImageWithAlphaBlend modelViewImage;
+
+	[SerializeField]
+	public UIAnimationPublisher mainPublisher;
+
+	[SerializeField]
+	public UIAnimationPublisher quitPublisher;
+
+	[SerializeField]
+	public GameObject viewerButtons;
+
+	[SerializeField]
+	public Image cvNameBase;
+
+	[SerializeField]
+	public Button voiceButton;
+
+	[SerializeField]
+	private Image seasonVoiceButtonImage;
+
+	[SerializeField]
+	private Button seasonVoiceButton;
+
+	[SerializeField]
+	public GameObject artistNameBase;
+
+	public RawImage artistNameImage;
+
+	[SerializeField]
+	private UnitDetail2dModel unitImage;
+
+	[SerializeField]
+	private RectTransform imageOffset;
+
+	[SerializeField]
+	public Transform switchEffectAttachPoint;
+
+	[SerializeField]
+	public GameObject switchButton;
+
+	[SerializeField]
+	public Text switchText;
+
+	[SerializeField]
+	public GameObject switchChangeDragonButton;
+
+	[SerializeField]
+	public Text switchChangeDragonText;
+
+	[SerializeField]
+	public GameObject switchSubButton;
+
+	[SerializeField]
+	public Button[] fullScreenButtons;
+
+	public UIAnimationPublisher fullScreenModePublisher;
+
+	public Image[] viewPageButtonsRaycast;
+
+	[SerializeField]
+	private Image rareIcon;
+
+	[SerializeField]
+	private Image elementalIcon;
+
+	[SerializeField]
+	private Image weaponTypeIcon;
+
+	[SerializeField]
+	private Text anotherName;
+
+	[SerializeField]
+	private Text anotherNameRuby;
+
+	[SerializeField]
+	private Text unitName;
+
+	[SerializeField]
+	private Button albumMemoryPopupButton;
+
+	[SerializeField]
+	private Text unitLevel;
+
+	[SerializeField]
+	private Text unitLevelTitle;
+
+	[SerializeField]
+	private Text unitManaCircle;
+
+	[SerializeField]
+	private Text unitManaCircleTitle;
+
+	[SerializeField]
+	private Text maxLimitBreakCount;
+
+	[SerializeField]
+	private Text maxLimitBreakCountTitle;
+
+	[SerializeField]
+	private Text reliabilityLevel;
+
+	[SerializeField]
+	private Text reliabilityLevelTitle;
+
+	[SerializeField]
+	private List<GameObject> allAchievementObj;
+
+	[SerializeField]
+	private List<GameObject> charaAchievementObj;
+
+	[SerializeField]
+	private List<GameObject> dragonAchievementObj;
+
+	[SerializeField]
+	private GameObject achievementParentObj;
+
+	[SerializeField]
+	private Button growthMenuButton;
+
+	[SerializeField]
+	private Button medalButton;
+
+	[SerializeField]
+	private Button profileButton;
+
+	[SerializeField]
+	private Button viewerModeButton;
+
+	private bool switchSubButtonEnabled;
+
+	private Canvas canvas;
+
+	private int talkIndex;
+
+	private string[] voiceNames;
+
+	private string voiceSheetName;
+
+	private AudioPlayback characterVoice;
+
+	private FlashPlayerManager flashPlayerManager;
+
+	private FlashPlayer switchFlashPlayer;
+
+	private string seasonVoiceSheetName;
+
+	private string seasonVoiceName;
+
+	private AudioPlayback seasonCharacterVoice;
+
+	private int currentNormalizedIndex;
+
+	private List<int> switchableNormalizedIdList;
+
+	private Color statusLevelDefaultTextColor;
+
+	private Color statusLevelMaxTextColor;
+
+	private Color statusLevelMax2TextColor;
+
+	public bool isFullScreenMode
 	{
-		[HideInInspector]
-		public UnitDetailScene detailScene;
-
-		[SerializeField]
-		[Header("BaseComponents")]
-		public Viewer2DCanvas viewer2DCanvas;
-
-		[SerializeField]
-		public Viewer3DCanvas viewer3DCanvas;
-
-		[SerializeField]
-		[Header("3DRenderTexture")]
-		public RawImageWithAlphaBlend modelViewImage;
-
-		[SerializeField]
-		[Header("Publisher")]
-		public UIAnimationPublisher mainPublisher;
-
-		[SerializeField]
-		public UIAnimationPublisher quitPublisher;
-
-		[SerializeField]
-		[Header("Buttons")]
-		public GameObject viewerButtons;
-
-		[SerializeField]
-		[Header("CV")]
-		public Image cvNameBase;
-
-		[SerializeField]
-		public Button voiceButton;
-
-		[SerializeField]
-		[Header("SeasonVoice")]
-		private Image seasonVoiceButtonImage;
-
-		[SerializeField]
-		private Button seasonVoiceButton;
-
-		[SerializeField]
-		[Header("ArtistName")]
-		public GameObject artistNameBase;
-
-		public RawImage artistNameImage;
-
-		[SerializeField]
-		[Header("unitImage")]
-		private UnitDetail2dModel unitImage;
-
-		[SerializeField]
-		private RectTransform imageOffset;
-
-		[SerializeField]
-		[Header("SwitchFor2D3D")]
-		public Transform switchEffectAttachPoint;
-
-		[SerializeField]
-		public GameObject switchButton;
-
-		[SerializeField]
-		public Text switchText;
-
-		[SerializeField]
-		[Header("SwitchForDragon")]
-		public GameObject switchChangeDragonButton;
-
-		[SerializeField]
-		public Text switchChangeDragonText;
-
-		[SerializeField]
-		[Header("SwitchForSub")]
-		public GameObject switchSubButton;
-
-		[SerializeField]
-		[Header("FullScreenMode")]
-		public Button[] fullScreenButtons;
-
-		public UIAnimationPublisher fullScreenModePublisher;
-
-		public Image[] viewPageButtonsRaycast;
-
-		[SerializeField]
-		[Header("AlbumStatus")]
-		private Image rareIcon;
-
-		[SerializeField]
-		private Image elementalIcon;
-
-		[SerializeField]
-		private Image weaponTypeIcon;
-
-		[SerializeField]
-		private Text anotherName;
-
-		[SerializeField]
-		private Text anotherNameRuby;
-
-		[SerializeField]
-		private Text unitName;
-
-		[SerializeField]
-		private Button albumMemoryPopupButton;
-
-		[SerializeField]
-		[Header("Achievement")]
-		private Text unitLevel;
-
-		[SerializeField]
-		private Text unitLevelTitle;
-
-		[SerializeField]
-		private Text unitManaCircle;
-
-		[SerializeField]
-		private Text unitManaCircleTitle;
-
-		[SerializeField]
-		private Text maxLimitBreakCount;
-
-		[SerializeField]
-		private Text maxLimitBreakCountTitle;
-
-		[SerializeField]
-		private Text reliabilityLevel;
-
-		[SerializeField]
-		private Text reliabilityLevelTitle;
-
-		[SerializeField]
-		private List<GameObject> allAchievementObj;
-
-		[SerializeField]
-		private List<GameObject> charaAchievementObj;
-
-		[SerializeField]
-		private List<GameObject> dragonAchievementObj;
-
-		[SerializeField]
-		private GameObject achievementParentObj;
-
-		[SerializeField]
-		[Header("Growth")]
-		private Button growthMenuButton;
-
-		[SerializeField]
-		[Header("medal")]
-		private Button medalButton;
-
-		[SerializeField]
-		[Header("Profile")]
-		private Button profileButton;
-
-		[SerializeField]
-		[Header("Profile")]
-		private Button viewerModeButton;
-
-		private bool switchSubButtonEnabled;
-
-		private Canvas canvas;
-
-		private int talkIndex;
-
-		private string[] voiceNames;
-
-		private string voiceSheetName;
-
-		private AudioPlayback characterVoice;
-
-		private FlashPlayerManager flashPlayerManager;
-
-		private FlashPlayer switchFlashPlayer;
-
-		private string seasonVoiceSheetName;
-
-		private string seasonVoiceName;
-
-		private AudioPlayback seasonCharacterVoice;
-
-		private int currentNormalizedIndex;
-
-		private List<int> switchableNormalizedIdList;
-
-		private Color statusLevelDefaultTextColor;
-
-		private Color statusLevelMaxTextColor;
-
-		private Color statusLevelMax2TextColor;
-
-		public bool isFullScreenMode
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public int sortingOrder => default(int);
-
-		private void Awake()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void Start()
-		{
-		}
+	public int sortingOrder => default(int);
 
-		protected void OnDestroy()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void SetUnit2DImage(int forceSubId = -1)
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void SetChangeDragonButton()
-		{
-		}
+	protected void OnDestroy()
+	{
+	}
 
-		private void SetGrowthMenuButton()
-		{
-		}
+	public void SetUnit2DImage(int forceSubId = -1)
+	{
+	}
 
-		private void SetMedalButton()
-		{
-		}
+	private void SetChangeDragonButton()
+	{
+	}
 
-		private void SetViewerModeButton()
-		{
-		}
+	private void SetGrowthMenuButton()
+	{
+	}
 
-		private void SetProfileButton()
-		{
-		}
+	private void SetMedalButton()
+	{
+	}
 
-		private void SetMemoryButton()
-		{
-		}
+	private void SetViewerModeButton()
+	{
+	}
 
-		private void SetAlbumStatus()
-		{
-		}
+	private void SetProfileButton()
+	{
+	}
 
-		private void SetAchievementObj()
-		{
-		}
+	private void SetMemoryButton()
+	{
+	}
 
-		private void SetLockButton()
-		{
-		}
+	private void SetAlbumStatus()
+	{
+	}
 
-		private void SetSwitchSubButton()
-		{
-		}
+	private void SetAchievementObj()
+	{
+	}
 
-		public void CVButtonPressed()
-		{
-		}
+	private void SetLockButton()
+	{
+	}
 
-		private void SetCVAndArtistBaseData(out string voiceSheetName, out string[] voiceNames)
-		{
-		}
+	private void SetSwitchSubButton()
+	{
+	}
 
-		public void SeasonVoiceButtonPressed()
-		{
-		}
+	public void CVButtonPressed()
+	{
+	}
 
-		private void SetSeasonVoiceData(out string voiceSheetName, out string voiceNames)
-		{
-		}
+	private void SetCVAndArtistBaseData(out string voiceSheetName, out string[] voiceNames)
+	{
+	}
 
-		private void LoadVoiceGroup(string voiceSheetName, Image cvNameBase, Button voiceButton)
-		{
-		}
+	public void SeasonVoiceButtonPressed()
+	{
+	}
 
-		public void OnMemoryButton()
-		{
-		}
+	private void SetSeasonVoiceData(out string voiceSheetName, out string voiceNames)
+	{
+	}
 
-		public void OnProfileButton()
-		{
-		}
+	private void LoadVoiceGroup(string voiceSheetName, Image cvNameBase, Button voiceButton)
+	{
+	}
 
-		public void OnMedalButton()
-		{
-		}
+	public void OnMemoryButton()
+	{
+	}
 
-		public void ToggleSwitchSubButton(bool toEnable)
-		{
-		}
+	public void OnProfileButton()
+	{
+	}
 
-		public void OnViewerButtonPressed()
-		{
-		}
+	public void OnMedalButton()
+	{
+	}
 
-		public void OnSwitchViewModeButtonPressed()
-		{
-		}
+	public void ToggleSwitchSubButton(bool toEnable)
+	{
+	}
 
-		public void SwitchTo3DMode()
-		{
-		}
+	public void OnViewerButtonPressed()
+	{
+	}
 
-		public void SwitchTo2DMode()
-		{
-		}
+	public void OnSwitchViewModeButtonPressed()
+	{
+	}
 
-		public void OnReturnFromViewMode()
-		{
-		}
+	public void SwitchTo3DMode()
+	{
+	}
 
-		public void PlayEnterAnimation()
-		{
-		}
+	public void SwitchTo2DMode()
+	{
+	}
 
-		public void PlayExitAnimation()
-		{
-		}
+	public void OnReturnFromViewMode()
+	{
+	}
 
-		public void SetUnitModel()
-		{
-		}
+	public void PlayEnterAnimation()
+	{
+	}
 
-		public void OnSwitchSubButtonPressed()
-		{
-		}
+	public void PlayExitAnimation()
+	{
+	}
 
-		public void EnableFullScreenButton(bool toEnable)
-		{
-		}
+	public void SetUnitModel()
+	{
+	}
 
-		public void OnFullScreenButtonPressed()
-		{
-		}
+	public void OnSwitchSubButtonPressed()
+	{
+	}
 
-		public void ToggleFullScreen(bool withBackButton = true)
-		{
-		}
+	public void EnableFullScreenButton(bool toEnable)
+	{
+	}
 
-		private void ButtonLaycastSetting(bool isLayCast)
-		{
-		}
+	public void OnFullScreenButtonPressed()
+	{
+	}
 
-		public void OnSwitchChangeDragonButton()
-		{
-		}
+	public void ToggleFullScreen(bool withBackButton = true)
+	{
+	}
 
-		private void MultipleCharacterSwitchButtonAction()
-		{
-		}
+	private void ButtonLaycastSetting(bool isLayCast)
+	{
+	}
 
-		public void SetSwitchChangeButtonText(int charaId, UnitDetailScene.MultipleCharacter3DMode mode)
-		{
-		}
+	public void OnSwitchChangeDragonButton()
+	{
+	}
 
-		private void SwitchChangeDragonButtonText()
-		{
-		}
+	private void MultipleCharacterSwitchButtonAction()
+	{
+	}
 
-		private void SwitchChangeDefaultDragonButtonText()
-		{
-		}
+	public void SetSwitchChangeButtonText(int charaId, UnitDetailScene.MultipleCharacter3DMode mode)
+	{
+	}
 
-		public void OnGrowthMenuPressed()
-		{
-		}
+	private void SwitchChangeDragonButtonText()
+	{
+	}
 
-		public void PlaySwitchFlash()
-		{
-		}
+	private void SwitchChangeDefaultDragonButtonText()
+	{
+	}
+
+	public void OnGrowthMenuPressed()
+	{
+	}
+
+	public void PlaySwitchFlash()
+	{
 	}
 }

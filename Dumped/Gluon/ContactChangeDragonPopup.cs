@@ -3,78 +3,77 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactChangeDragonPopup : PopupBase
 {
-	public class ContactChangeDragonPopup : PopupBase
+	[SerializeField]
+	private CommonIcon extraCharaIcon;
+
+	[SerializeField]
+	private Transform extraCharaDecoNode;
+
+	[SerializeField]
+	public CommonIcon[] recentPettedDragonIcons;
+
+	public Transform[] recentSortDecoNodes;
+
+	public GameObject[] favorIcons;
+
+	public ContactChangeDragonListController listController;
+
+	public ContactChangeDragonListBase listBase;
+
+	public Text emptyPettedDragonText;
+
+	private List<int> recentMasterIdList;
+
+	private int selectedId;
+
+	public static ContactChangeDragonPopup Create(UnityAction<int> onClose)
 	{
-		[SerializeField]
-		private CommonIcon extraCharaIcon;
+		return null;
+	}
 
-		[SerializeField]
-		private Transform extraCharaDecoNode;
+	public void Setup()
+	{
+	}
 
-		[SerializeField]
-		public CommonIcon[] recentPettedDragonIcons;
+	private void SetupExtraChara()
+	{
+	}
 
-		public Transform[] recentSortDecoNodes;
+	private void IconButtonPressed(CommonIconListCellData dataCommon, TableViewCell<CommonIconListCellData> cellCommon)
+	{
+	}
 
-		public GameObject[] favorIcons;
+	public void LoadListData()
+	{
+	}
 
-		public ContactChangeDragonListController listController;
+	public void OnSortButtonClicked()
+	{
+	}
 
-		public ContactChangeDragonListBase listBase;
+	public void OnSortApplied()
+	{
+	}
 
-		public Text emptyPettedDragonText;
+	private ulong[] CreateDataIdList()
+	{
+		return null;
+	}
 
-		private List<int> recentMasterIdList;
+	public void OnCloseButtonPressed()
+	{
+	}
 
-		private int selectedId;
+	public void OnSelect(int masterId)
+	{
+	}
 
-		public static ContactChangeDragonPopup Create(UnityAction<int> onClose)
-		{
-			return null;
-		}
-
-		public void Setup()
-		{
-		}
-
-		private void SetupExtraChara()
-		{
-		}
-
-		private void IconButtonPressed(CommonIconListCellData dataCommon, TableViewCell<CommonIconListCellData> cellCommon)
-		{
-		}
-
-		public void LoadListData()
-		{
-		}
-
-		public void OnSortButtonClicked()
-		{
-		}
-
-		public void OnSortApplied()
-		{
-		}
-
-		private ulong[] CreateDataIdList()
-		{
-			return null;
-		}
-
-		public void OnCloseButtonPressed()
-		{
-		}
-
-		public void OnSelect(int masterId)
-		{
-		}
-
-		private bool IsFavor(int dragonId)
-		{
-			return default(bool);
-		}
+	private bool IsFavor(int dragonId)
+	{
+		return default(bool);
 	}
 }

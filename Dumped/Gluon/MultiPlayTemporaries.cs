@@ -1,532 +1,531 @@
 using System.Runtime.CompilerServices;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class MultiPlayTemporaries
 {
-	public class MultiPlayTemporaries
+	private BindEvent _bindEvent;
+
+	public DeltaCompressionEncoder DeltaCompressionEncoder
 	{
-		private BindEvent _bindEvent;
-
-		public DeltaCompressionEncoder DeltaCompressionEncoder
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public DeltaCompressionDecoder DeltaCompressionDecoder
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public Dead DeadEvent
+	public DeltaCompressionDecoder DeltaCompressionDecoder
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public AbilityGauge AbilityGauge
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public FailQuestRequest FailQuestRequest
+	public Dead DeadEvent
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public RecoverySpRequest RecoverySpRequest
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public ClearTimerEvent ClearTimerEvent
+	public AbilityGauge AbilityGauge
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public ResetBuffRequest ResetBuffRequest
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public RecoveryHpRequest RecoveryHpRequest
+	public FailQuestRequest FailQuestRequest
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public CharacterStateExtraSync CharacterStateLoopCountSync
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public CharacterStateExtraSync CharacterStateChargeImpactSync
+	public RecoverySpRequest RecoverySpRequest
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public CharacterStateExtraSync CharacterStateChargeCancelSync
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public CharacterStateExtraSync CharacterStateCounterActionSync
+	public ClearTimerEvent ClearTimerEvent
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public ElectrifyEvent ElectrifyEvent
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public BindEvent BindEvent => null;
-
-		public CharacterSpecialState CharacterSpecialState
+	public ResetBuffRequest ResetBuffRequest
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public CallMinionEvent CallMinionEvent
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public AppearEnemyEvent AppearEnemyEvent
+	public RecoveryHpRequest RecoveryHpRequest
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public FireSpecialBullet FireSpecialBullet
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public DebuffExtraDamage DebuffExtraDamage
+	public CharacterStateExtraSync CharacterStateLoopCountSync
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public ReduceSacrificeShieldHp ReduceSacrificeShieldHp
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public MultiWeakEvent MultiWeakEvent
+	public CharacterStateExtraSync CharacterStateChargeImpactSync
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public DollEvent DollEvent
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public BRCreateItemEvent BRCreateItemEvent
+	public CharacterStateExtraSync CharacterStateChargeCancelSync
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public BRGetItemEvent BRGetItemEvent
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public BRInitWorld BRInitWorld
+	public CharacterStateExtraSync CharacterStateCounterActionSync
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public GameStepEvent GameStepEvent
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public BulletEvent BulletEvent
+	public ElectrifyEvent ElectrifyEvent
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public BRNotifyEvent BRNotifyEvent
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public ActionPartsNotifyEvent ActionPartsNotifyEvent
+	public BindEvent BindEvent => null;
+
+	public CharacterSpecialState CharacterSpecialState
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public CharacterCustomPointEvent CharacterCustomPointEvent
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public ApplyAbilityEvent ApplyAbilityEvent
+	public CallMinionEvent CallMinionEvent
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public Dodge Dodge
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public OverDriveCounter OverDriveCounter
+	public AppearEnemyEvent AppearEnemyEvent
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public PlayerEvent PlayerEvent
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public TransSkill TransSkill
+	public FireSpecialBullet FireSpecialBullet
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public DispBuffCaptionEvent DispBuffCaptionEvent
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public ConsumeUtpToRecoverHpEvent ConsumeUtpToRecoverHpEvent
+	public DebuffExtraDamage DebuffExtraDamage
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public TriggerAbility TriggerAbility
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public NevOptionEvent NevOptionEvent
+	public ReduceSacrificeShieldHp ReduceSacrificeShieldHp
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public ApplyOpeningDebuffEvent ApplyOpeningDebuffEvent
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+		}
+	}
+
+	public MultiWeakEvent MultiWeakEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public DollEvent DollEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public BRCreateItemEvent BRCreateItemEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public BRGetItemEvent BRGetItemEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public BRInitWorld BRInitWorld
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public GameStepEvent GameStepEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public BulletEvent BulletEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public BRNotifyEvent BRNotifyEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public ActionPartsNotifyEvent ActionPartsNotifyEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public CharacterCustomPointEvent CharacterCustomPointEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public ApplyAbilityEvent ApplyAbilityEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public Dodge Dodge
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public OverDriveCounter OverDriveCounter
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public PlayerEvent PlayerEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public TransSkill TransSkill
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public DispBuffCaptionEvent DispBuffCaptionEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public ConsumeUtpToRecoverHpEvent ConsumeUtpToRecoverHpEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public TriggerAbility TriggerAbility
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public NevOptionEvent NevOptionEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public ApplyOpeningDebuffEvent ApplyOpeningDebuffEvent
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
 		}
 	}
 }

@@ -4,48 +4,47 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TotalDamageEventNotifiyReceivableRewardPopup : PopupBase
 {
-	public class TotalDamageEventNotifiyReceivableRewardPopup : PopupBase
+	[SerializeField]
+	private Text descriptionText;
+
+	[SerializeField]
+	private Image eventLogoImage;
+
+	private EventDataElement receivableRewardEventData;
+
+	private UnityEvent okButtonPressed;
+
+	private static bool isFinishedShowingPopup;
+
+	private static readonly string notifiyReceivableRewardPopupPath;
+
+	private static readonly string eventLogoPath;
+
+	private static readonly Vector2 eventLogoSize;
+
+	public static TotalDamageEventNotifiyReceivableRewardPopup Create(EventDataElement eventData)
 	{
-		[SerializeField]
-		private Text descriptionText;
+		return null;
+	}
 
-		[SerializeField]
-		private Image eventLogoImage;
+	private void Initialize()
+	{
+	}
 
-		private EventDataElement receivableRewardEventData;
+	public static List<EventDataElement> CreateNeedShowPopupEventList()
+	{
+		return null;
+	}
 
-		private UnityEvent okButtonPressed;
+	public void OkButtonPressed()
+	{
+	}
 
-		private static bool isFinishedShowingPopup;
-
-		private static readonly string notifiyReceivableRewardPopupPath;
-
-		private static readonly string eventLogoPath;
-
-		private static readonly Vector2 eventLogoSize;
-
-		public static TotalDamageEventNotifiyReceivableRewardPopup Create(EventDataElement eventData)
-		{
-			return null;
-		}
-
-		private void Initialize()
-		{
-		}
-
-		public static List<EventDataElement> CreateNeedShowPopupEventList()
-		{
-			return null;
-		}
-
-		public void OkButtonPressed()
-		{
-		}
-
-		public void AddOkButtonPressedCallback(UnityAction callback)
-		{
-		}
+	public void AddOkButtonPressedCallback(UnityAction callback)
+	{
 	}
 }

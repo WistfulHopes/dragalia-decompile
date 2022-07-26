@@ -1,34 +1,33 @@
 using System.Collections.Generic;
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsShapeShift : ActionParts
 {
-	public class ActionPartsShapeShift : ActionParts
+	private readonly ShapeShiftData _partsData;
+
+	public List<EnemyCharacter> _subCharaList;
+
+	public bool _isActionDone;
+
+	public ActionPartsShapeShift(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly ShapeShiftData _partsData;
+	}
 
-		public List<EnemyCharacter> _subCharaList;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public bool _isActionDone;
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsShapeShift(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
-
-		public void ShapeShift()
-		{
-		}
+	public void ShapeShift()
+	{
 	}
 }

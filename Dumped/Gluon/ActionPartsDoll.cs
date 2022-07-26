@@ -1,75 +1,74 @@
 using System.Collections.Generic;
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsDoll : ActionParts
 {
-	public class ActionPartsDoll : ActionParts
+	public enum Mode
 	{
-		public enum Mode
-		{
-			Execute,
-			Release,
-			Field,
-			FieldOff
-		}
+		Execute,
+		Release,
+		Field,
+		FieldOff
+	}
 
-		public enum TargetType
-		{
-			ActionTarget,
-			HandlingPlayer,
-			ExceptHandlingPlayerInSameParty
-		}
+	public enum TargetType
+	{
+		ActionTarget,
+		HandlingPlayer,
+		ExceptHandlingPlayerInSameParty
+	}
 
-		private readonly DollData _partsData;
+	private readonly DollData _partsData;
 
-		private int[] _partyIdxs;
+	private int[] _partyIdxs;
 
-		private List<CharacterBase> _listTarget;
+	private List<CharacterBase> _listTarget;
 
-		private DollFieldUniqueCtrl _fieldCtrl;
+	private DollFieldUniqueCtrl _fieldCtrl;
 
-		public ActionPartsDoll(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsDoll(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void OnPostCreated(CharacterBase chara)
-		{
-		}
+	public override void OnPostCreated(CharacterBase chara)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
+	}
 
-		private void Execute()
-		{
-		}
+	private void Execute()
+	{
+	}
 
-		private void Release()
-		{
-		}
+	private void Release()
+	{
+	}
 
-		private void Field(bool on = true)
-		{
-		}
+	private void Field(bool on = true)
+	{
+	}
 
-		private void CreateCtrlDoll(CharacterBase target, CharacterSelector targetSelector)
-		{
-		}
+	private void CreateCtrlDoll(CharacterBase target, CharacterSelector targetSelector)
+	{
+	}
 
-		private void GetTargetOnExecute()
-		{
-		}
+	private void GetTargetOnExecute()
+	{
+	}
 
-		private void ExcludeOutOfRangeTargets(List<CharacterBase> targets)
-		{
-		}
+	private void ExcludeOutOfRangeTargets(List<CharacterBase> targets)
+	{
 	}
 }

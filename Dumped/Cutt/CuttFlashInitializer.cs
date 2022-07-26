@@ -2,38 +2,37 @@ using System.Collections.Generic;
 using Gluon;
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttFlashInitializer : MonoBehaviour
 {
-	public class CuttFlashInitializer : MonoBehaviour
+	[SerializeField]
+	public List<CuttFlashInitializeData> initializeDataList;
+
+	private bool isInitialized;
+
+	private bool isPlayingInGame;
+
+	public CuttFlashController GetFlashController(int index)
 	{
-		[SerializeField]
-		public List<CuttFlashInitializeData> initializeDataList;
+		return null;
+	}
 
-		private bool isInitialized;
+	public bool IsInitialized()
+	{
+		return default(bool);
+	}
 
-		private bool isPlayingInGame;
+	public void Load(bool isPlayingInGame, GameObject canvasObject)
+	{
+	}
 
-		public CuttFlashController GetFlashController(int index)
-		{
-			return null;
-		}
+	private CuttFlashController LoadFlash(CuttFlashInitializeData initData, GameObject canvasObject, int index)
+	{
+		return null;
+	}
 
-		public bool IsInitialized()
-		{
-			return default(bool);
-		}
-
-		public void Load(bool isPlayingInGame, GameObject canvasObject)
-		{
-		}
-
-		private CuttFlashController LoadFlash(CuttFlashInitializeData initData, GameObject canvasObject, int index)
-		{
-			return null;
-		}
-
-		private void OnDestroy()
-		{
-		}
+	private void OnDestroy()
+	{
 	}
 }

@@ -1,79 +1,78 @@
 using System;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class InitialOptionPopup : PopupBase
 {
-	public class InitialOptionPopup : PopupBase
+	public CommonSliderSelection bgmSlider;
+
+	public TabBase vocalTab;
+
+	public Toggle bgmToggle;
+
+	public CommonSliderSelection graphicQualitySlider;
+
+	public TabBase fpsTab;
+
+	public CommonSliderSelection resolutionSlider;
+
+	private const string muteText = "MUTE";
+
+	private void Awake()
 	{
-		public CommonSliderSelection bgmSlider;
+	}
 
-		public TabBase vocalTab;
+	private void BindEvents()
+	{
+	}
 
-		public Toggle bgmToggle;
+	protected override void Start()
+	{
+	}
 
-		public CommonSliderSelection graphicQualitySlider;
+	private int GetEnumMaxValue<T>() where T : struct, IConvertible
+	{
+		return default(int);
+	}
 
-		public TabBase fpsTab;
+	private void TabCallbackToToggle(TabBase tab, Action<bool> toggleCallback)
+	{
+	}
 
-		public CommonSliderSelection resolutionSlider;
+	public void OnAppliedAnyAction()
+	{
+	}
 
-		private const string muteText = "MUTE";
+	public void OnBGMValueChanged(float val)
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public void OnBGMToggled(bool value)
+	{
+	}
 
-		private void BindEvents()
-		{
-		}
+	public void OnVocalSettingChanged(int index, bool isFromUI)
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	public void OnGraphicQualityChanged(int value)
+	{
+	}
 
-		private int GetEnumMaxValue<T>() where T : struct, IConvertible
-		{
-			return default(int);
-		}
+	public void OnFPSToggled(bool value)
+	{
+	}
 
-		private void TabCallbackToToggle(TabBase tab, Action<bool> toggleCallback)
-		{
-		}
+	public void OnResolutionChanged(int value)
+	{
+	}
 
-		public void OnAppliedAnyAction()
-		{
-		}
+	public virtual void OnCloseButtonPressed()
+	{
+	}
 
-		public void OnBGMValueChanged(float val)
-		{
-		}
-
-		public void OnBGMToggled(bool value)
-		{
-		}
-
-		public void OnVocalSettingChanged(int index, bool isFromUI)
-		{
-		}
-
-		public void OnGraphicQualityChanged(int value)
-		{
-		}
-
-		public void OnFPSToggled(bool value)
-		{
-		}
-
-		public void OnResolutionChanged(int value)
-		{
-		}
-
-		public virtual void OnCloseButtonPressed()
-		{
-		}
-
-		private void SliderCallbackToInt(CommonSliderSelection slider, Action<int> sliderCallback)
-		{
-		}
+	private void SliderCallbackToInt(CommonSliderSelection slider, Action<int> sliderCallback)
+	{
 	}
 }

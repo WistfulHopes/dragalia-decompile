@@ -4,148 +4,147 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class PopupCanvas : MonoBehaviour
 {
-	public class PopupCanvas : MonoBehaviour
+	private class CanvasSortOrderInfo
 	{
-		private class CanvasSortOrderInfo
+		public int sortOrderIndex;
+
+		public PopupCanvas canvas;
+	}
+
+	[SerializeField]
+	private GameObject blackLayer;
+
+	[SerializeField]
+	private GameObject touchGuard;
+
+	[SerializeField]
+	private GameObject frontTouchGuard;
+
+	[SerializeField]
+	private GameObject initialTouchGuard;
+
+	private CanvasGroup canvasGroup;
+
+	protected bool showStartAnimation;
+
+	protected bool isIndependentTime;
+
+	public bool showOnBaseCanvas;
+
+	protected int autoStartAnimationFrame;
+
+	protected int animationFrame;
+
+	private bool _isWaitingAllPopupCanvasClosed;
+
+	public bool _isErrorPopupCanvas;
+
+	[HideInInspector]
+	public bool doNotRegisterBackKey;
+
+	private Canvas canvas;
+
+	private static List<CanvasSortOrderInfo> showingCanvasList;
+
+	public bool isWaitingAllPopupCanvasClosed
+	{
+		get
 		{
-			public int sortOrderIndex;
-
-			public PopupCanvas canvas;
+			return default(bool);
 		}
-
-		[SerializeField]
-		private GameObject blackLayer;
-
-		[SerializeField]
-		private GameObject touchGuard;
-
-		[SerializeField]
-		private GameObject frontTouchGuard;
-
-		[SerializeField]
-		private GameObject initialTouchGuard;
-
-		private CanvasGroup canvasGroup;
-
-		protected bool showStartAnimation;
-
-		protected bool isIndependentTime;
-
-		public bool showOnBaseCanvas;
-
-		protected int autoStartAnimationFrame;
-
-		protected int animationFrame;
-
-		private bool _isWaitingAllPopupCanvasClosed;
-
-		public bool _isErrorPopupCanvas;
-
-		[HideInInspector]
-		public bool doNotRegisterBackKey;
-
-		private Canvas canvas;
-
-		private static List<CanvasSortOrderInfo> showingCanvasList;
-
-		public bool isWaitingAllPopupCanvasClosed
-		{
-			get
-			{
-				return default(bool);
-			}
-			private set
-			{
-			}
-		}
-
-		public bool isErrorPopupCanvas
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		protected virtual void Awake()
+		private set
 		{
 		}
+	}
 
-		protected virtual void ApplyAutoSortingOrder()
+	public bool isErrorPopupCanvas
+	{
+		get
+		{
+			return default(bool);
+		}
+		set
 		{
 		}
+	}
 
-		protected virtual void Start()
-		{
-		}
+	protected virtual void Awake()
+	{
+	}
 
-		public static int GetCurrentPopupNum()
-		{
-			return default(int);
-		}
+	protected virtual void ApplyAutoSortingOrder()
+	{
+	}
 
-		private static int GetCurrentSortOrderMaxIndex()
-		{
-			return default(int);
-		}
+	protected virtual void Start()
+	{
+	}
 
-		public static PopupCanvas Create(bool showBlackLayer = false, bool showOnBaseCanvas = false, bool showStartAnimation = true, bool isErrorPopupCanvas = false, bool isIndependentTime = false)
-		{
-			return null;
-		}
+	public static int GetCurrentPopupNum()
+	{
+		return default(int);
+	}
 
-		public void SetAnimationTimeFrame(int animationFrame, int startAnimationFrame = -1)
-		{
-		}
+	private static int GetCurrentSortOrderMaxIndex()
+	{
+		return default(int);
+	}
 
-		public void ShowBlackLayer(bool isShown)
-		{
-		}
+	public static PopupCanvas Create(bool showBlackLayer = false, bool showOnBaseCanvas = false, bool showStartAnimation = true, bool isErrorPopupCanvas = false, bool isIndependentTime = false)
+	{
+		return null;
+	}
 
-		public void ShowTouchGuard(bool isShown)
-		{
-		}
+	public void SetAnimationTimeFrame(int animationFrame, int startAnimationFrame = -1)
+	{
+	}
 
-		public void ShowFrontTouchGuard(bool isShown)
-		{
-		}
+	public void ShowBlackLayer(bool isShown)
+	{
+	}
 
-		public void ShowInitialTouchGuard(bool isShown)
-		{
-		}
+	public void ShowTouchGuard(bool isShown)
+	{
+	}
 
-		public void SetBlackLayerAlpha(float alpha)
-		{
-		}
+	public void ShowFrontTouchGuard(bool isShown)
+	{
+	}
 
-		public void StartShowAnimation()
-		{
-		}
+	public void ShowInitialTouchGuard(bool isShown)
+	{
+	}
 
-		public void StartCloseAnimation()
-		{
-		}
+	public void SetBlackLayerAlpha(float alpha)
+	{
+	}
 
-		public void StartCloseAnimationAll([Optional] UnityEvent onCompleted)
-		{
-		}
+	public void StartShowAnimation()
+	{
+	}
 
-		private IEnumerator WaitCloseAnimationAll([Optional] UnityEvent onCompleted)
-		{
-			return null;
-		}
+	public void StartCloseAnimation()
+	{
+	}
 
-		protected virtual void OnDestroy()
-		{
-		}
+	public void StartCloseAnimationAll([Optional] UnityEvent onCompleted)
+	{
+	}
 
-		protected void ShowingCanvasListRemove()
-		{
-		}
+	private IEnumerator WaitCloseAnimationAll([Optional] UnityEvent onCompleted)
+	{
+		return null;
+	}
+
+	protected virtual void OnDestroy()
+	{
+	}
+
+	protected void ShowingCanvasListRemove()
+	{
 	}
 }

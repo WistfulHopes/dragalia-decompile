@@ -4,123 +4,122 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopAmuletTradeUI : ShopTradePanelBase, ICustomMessage
 {
-	public class ShopAmuletTradeUI : ShopTradePanelBase, ICustomMessage
+	[SerializeField]
+	private ShopTableViewTradeAmuletCtrl[] tabCtrls;
+
+	[SerializeField]
+	private TabBase tabView;
+
+	[SerializeField]
+	private Text curDewText;
+
+	[SerializeField]
+	private Text refreshText;
+
+	[SerializeField]
+	private Transform sortParentTransform;
+
+	[SerializeField]
+	private Vector2 sortButtonPos;
+
+	[SerializeField]
+	private GameObject emptyTextObject;
+
+	private CommonSortButton sortButton;
+
+	[SerializeField]
+	private CommonTagSearch tagSearch;
+
+	protected List<CommonIconListCellData> originalTableData;
+
+	public ulong[] originalKeyIdList
 	{
-		[SerializeField]
-		private ShopTableViewTradeAmuletCtrl[] tabCtrls;
-
-		[SerializeField]
-		private TabBase tabView;
-
-		[SerializeField]
-		private Text curDewText;
-
-		[SerializeField]
-		private Text refreshText;
-
-		[SerializeField]
-		private Transform sortParentTransform;
-
-		[SerializeField]
-		private Vector2 sortButtonPos;
-
-		[SerializeField]
-		private GameObject emptyTextObject;
-
-		private CommonSortButton sortButton;
-
-		[SerializeField]
-		private CommonTagSearch tagSearch;
-
-		protected List<CommonIconListCellData> originalTableData;
-
-		public ulong[] originalKeyIdList
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public ShopTradeProductData.CommonShopItemData itemData
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public static ShopAmuletTradeUI Create(Transform parent, ShopTradeScene scene)
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public static void RequestForEntryHttp(Action onHttpDoneCallback)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void Awake()
+	public ShopTradeProductData.CommonShopItemData itemData
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void OnInputFilterChanged(List<int> filteredId)
-		{
-		}
+	public static ShopAmuletTradeUI Create(Transform parent, ShopTradeScene scene)
+	{
+		return null;
+	}
 
-		private void OnEnable()
-		{
-		}
+	public static void RequestForEntryHttp(Action onHttpDoneCallback)
+	{
+	}
 
-		private void OnDisable()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		protected void Start()
-		{
-		}
+	private void OnInputFilterChanged(List<int> filteredId)
+	{
+	}
 
-		private void InitAbilityCrestTradeDataDictionary()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		private void OnSortButtonClicked()
-		{
-		}
+	private void OnDisable()
+	{
+	}
 
-		private void UpdateSortAndFilter(int tabViewIndex)
-		{
-		}
+	protected void Start()
+	{
+	}
 
-		public void OnChangeButtonTouched()
-		{
-		}
+	private void InitAbilityCrestTradeDataDictionary()
+	{
+	}
 
-		private void SetRefreshText()
-		{
-		}
+	private void OnSortButtonClicked()
+	{
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	private void UpdateSortAndFilter(int tabViewIndex)
+	{
+	}
 
-		public override void RefreshCurrentPage()
-		{
-		}
+	public void OnChangeButtonTouched()
+	{
+	}
 
-		public void OnRecommendedButton()
-		{
-		}
+	private void SetRefreshText()
+	{
+	}
+
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
+
+	public override void RefreshCurrentPage()
+	{
+	}
+
+	public void OnRecommendedButton()
+	{
 	}
 }

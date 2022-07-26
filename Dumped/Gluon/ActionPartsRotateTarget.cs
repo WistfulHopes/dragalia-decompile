@@ -1,33 +1,48 @@
 using Gluon.ActionData;
+using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsRotateTarget : ActionParts
 {
-	public class ActionPartsRotateTarget : ActionParts
+	private readonly RotateTargetData _partsData;
+
+	private float _baseRot;
+
+	private float _moveRot;
+
+	private Vector3 targetPos;
+
+	private CharacterBase _targetCharacter;
+
+	private float _elapsedSec;
+
+	private RunActionPosRotParameter _tmpRunActionParam;
+
+	public ActionPartsRotateTarget(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly RotateTargetData _partsData;
+	}
 
-		private float _baseRot;
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		private float _moveRot;
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		private Vector3 targetPos;
+	protected override void OnStart()
+	{
+	}
 
-		private CharacterBase _targetCharacter;
+	private void CalcTarget()
+	{
+	}
 
-		private float _elapsedSec;
-
-		public ActionPartsRotateTarget(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

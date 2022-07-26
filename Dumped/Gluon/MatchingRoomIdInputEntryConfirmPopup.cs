@@ -3,67 +3,65 @@ using System.Runtime.InteropServices;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingRoomIdInputEntryConfirmPopup : PopupBase
 {
-	public class MatchingRoomIdInputEntryConfirmPopup : PopupBase
+	[SerializeField]
+	public Transform cellFrame;
+
+	private const string matchingRoomListCellPrefabPath = "UI/Popup/MyPage/MatchingRoomListCell";
+
+	private RoomListData roomListData;
+
+	private Action onEnterRoom;
+
+	private Action<int> goPrepareScene;
+
+	private QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation;
+
+	private QuestRoomList cell;
+
+	private PartySwitchPopup switchPopup;
+
+	public static MatchingRoomIdInputEntryConfirmPopup Create(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, RoomList roomList, bool isFriend, Action onEnterRoom, Action<int> goPrepareScene, [Optional] Transform parentTransform)
 	{
-		[SerializeField]
-		[Header("Frame")]
-		public Transform cellFrame;
+		return null;
+	}
 
-		private const string matchingRoomListCellPrefabPath = "UI/Popup/MyPage/MatchingRoomListCell";
+	private void SetupWithData(RoomList roomList, bool isFriend)
+	{
+	}
 
-		private RoomListData roomListData;
+	public void OnEnterButtonPressed()
+	{
+	}
 
-		private Action onEnterRoom;
+	private void EnterRoom()
+	{
+	}
 
-		private Action<int> goPrepareScene;
+	protected override void OnDestroy()
+	{
+	}
 
-		private QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation;
+	public void OnMatchingServiceStateChanged(MatchingService.StateType state)
+	{
+	}
 
-		private QuestRoomList cell;
+	private void ErrorTypeCheck(MultiPlayError error)
+	{
+	}
 
-		private PartySwitchPopup switchPopup;
+	private void PopupNothingRoom()
+	{
+	}
 
-		public static MatchingRoomIdInputEntryConfirmPopup Create(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, RoomList roomList, bool isFriend, Action onEnterRoom, Action<int> goPrepareScene, [Optional] Transform parentTransform)
-		{
-			return null;
-		}
+	private void PopupLimitRoomCreate()
+	{
+	}
 
-		private void SetupWithData(RoomList roomList, bool isFriend)
-		{
-		}
-
-		public void OnEnterButtonPressed()
-		{
-		}
-
-		private void EnterRoom()
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
-
-		public void OnMatchingServiceStateChanged(MatchingService.StateType state)
-		{
-		}
-
-		private void ErrorTypeCheck(MultiPlayError error)
-		{
-		}
-
-		private void PopupNothingRoom()
-		{
-		}
-
-		private void PopupLimitRoomCreate()
-		{
-		}
-
-		private void PopupInvalidCompatibleId()
-		{
-		}
+	private void PopupInvalidCompatibleId()
+	{
 	}
 }

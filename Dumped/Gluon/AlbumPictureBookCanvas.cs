@@ -4,88 +4,87 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumPictureBookCanvas : AnimationUICanvas
 {
-	public class AlbumPictureBookCanvas : AnimationUICanvas
+	[SerializeField]
+	private AlbumPictureListController albumCtrl;
+
+	[SerializeField]
+	private CommonIconListBase iconListBase;
+
+	[SerializeField]
+	private TabBase tabBase;
+
+	private CommonIconListType listType;
+
+	[SerializeField]
+	private UIAnimationPublisher uiAnimation;
+
+	[SerializeField]
+	private Button medalButton;
+
+	public SimpleAnimationButton backButton;
+
+	private AlbumPictureBookMedalPopup albumPictureBookMedalPopup;
+
+	private bool isDetailScene;
+
+	private void Start()
 	{
-		[SerializeField]
-		private AlbumPictureListController albumCtrl;
+	}
 
-		[SerializeField]
-		private CommonIconListBase iconListBase;
+	private IEnumerator DelayLoadUnitDetail()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private TabBase tabBase;
+	public void OnSelectedTab(int index)
+	{
+	}
 
-		private CommonIconListType listType;
+	public void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		[SerializeField]
-		private UIAnimationPublisher uiAnimation;
+	public void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		[SerializeField]
-		private Button medalButton;
+	private void LoadUnitDetailScene(int masterId, CommonIconListType listType)
+	{
+	}
 
-		public SimpleAnimationButton backButton;
+	private void AlbumSceneSetActive(bool isActive)
+	{
+	}
 
-		private AlbumPictureBookMedalPopup albumPictureBookMedalPopup;
+	public void BackButtonFadeOut()
+	{
+	}
 
-		private bool isDetailScene;
+	public void BakButtonFadeIn()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	public void ListRefresh()
+	{
+	}
 
-		private IEnumerator DelayLoadUnitDetail()
-		{
-			return null;
-		}
+	public void OnBonusPopupButton()
+	{
+	}
 
-		public void OnSelectedTab(int index)
-		{
-		}
+	public void OnMedalPopupButton()
+	{
+	}
 
-		public void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private void SetMedalButton()
+	{
+	}
 
-		public void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private void LoadUnitDetailScene(int masterId, CommonIconListType listType)
-		{
-		}
-
-		private void AlbumSceneSetActive(bool isActive)
-		{
-		}
-
-		public void BackButtonFadeOut()
-		{
-		}
-
-		public void BakButtonFadeIn()
-		{
-		}
-
-		public void ListRefresh()
-		{
-		}
-
-		public void OnBonusPopupButton()
-		{
-		}
-
-		public void OnMedalPopupButton()
-		{
-		}
-
-		private void SetMedalButton()
-		{
-		}
-
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
 	}
 }

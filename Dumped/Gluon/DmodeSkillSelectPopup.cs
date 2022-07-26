@@ -4,85 +4,82 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeSkillSelectPopup : PopupBase
 {
-	public class DmodeSkillSelectPopup : PopupBase
+	[SerializeField]
+	public DmodeSkillSelectTableViewController controller;
+
+	[SerializeField]
+	public DmodeCommonInGameIcon iconTemplate;
+
+	public static readonly string prefabPath;
+
+	private Action<List<int>> onEditDone;
+
+	private Action onClose;
+
+	private List<DmodeCommonInGameIcon> icons;
+
+	public int selectingBottomIndex;
+
+	public List<int> selectedIds
 	{
-		[SerializeField]
-		[Header("TableViews")]
-		public DmodeSkillSelectTableViewController controller;
-
-		[SerializeField]
-		[Header("TopPart")]
-		public DmodeCommonInGameIcon iconTemplate;
-
-		public static readonly string prefabPath;
-
-		private Action<List<int>> onEditDone;
-
-		private Action onClose;
-
-		private List<DmodeCommonInGameIcon> icons;
-
-		public int selectingBottomIndex;
-
-		public List<int> selectedIds
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public int selectingTopIndex
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public static DmodeSkillSelectPopup Create(List<int> selectedIds, Action<List<int>> onEditDone, [Optional] Action onClose)
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		protected override void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void UpdateTopPartView()
+	public int selectingTopIndex
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void OnTopItemSelect(DmodeDungeonItemType type, int index)
-		{
-		}
+	public static DmodeSkillSelectPopup Create(List<int> selectedIds, Action<List<int>> onEditDone, [Optional] Action onClose)
+	{
+		return null;
+	}
 
-		public void OnBottomItemSelect(int data)
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		public void OnItemSelected(int index, bool fromTop)
-		{
-		}
+	private void UpdateTopPartView()
+	{
+	}
 
-		public void OnOKButtonPressed()
-		{
-		}
+	public void OnTopItemSelect(DmodeDungeonItemType type, int index)
+	{
+	}
 
-		private void OnClose()
-		{
-		}
+	public void OnBottomItemSelect(int data)
+	{
+	}
+
+	public void OnItemSelected(int index, bool fromTop)
+	{
+	}
+
+	public void OnOKButtonPressed()
+	{
+	}
+
+	private void OnClose()
+	{
 	}
 }

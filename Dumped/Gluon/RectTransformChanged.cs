@@ -1,16 +1,15 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class RectTransformChanged : MonoBehaviour
 {
-	public class RectTransformChanged : MonoBehaviour
+	private RectTransform rectTrans;
+
+	[SerializeField]
+	private RectTransform targetRectTrans;
+
+	private void OnRectTransformDimensionsChange()
 	{
-		private RectTransform rectTrans;
-
-		[SerializeField]
-		private RectTransform targetRectTrans;
-
-		private void OnRectTransformDimensionsChange()
-		{
-		}
 	}
 }

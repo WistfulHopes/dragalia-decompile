@@ -1,48 +1,47 @@
-namespace Gluon
+namespace Gluon;
+
+public class PlayerGuardReactionInChargeController
 {
-	public class PlayerGuardReactionInChargeController
+	private bool isWait;
+
+	private float[] damageCutRate;
+
+	private int[] actionId;
+
+	private PlayerCharacter player;
+
+	public PlayerGuardReactionInChargeController(PlayerCharacter player)
 	{
-		private bool isWait;
+	}
 
-		private float[] damageCutRate;
+	public void Reset()
+	{
+	}
 
-		private int[] actionId;
+	public bool IsWait()
+	{
+		return default(bool);
+	}
 
-		private PlayerCharacter player;
+	public void StartWait(float[] rate, int[] ids)
+	{
+	}
 
-		public PlayerGuardReactionInChargeController(PlayerCharacter player)
-		{
-		}
+	public void StopWait()
+	{
+	}
 
-		public void Reset()
-		{
-		}
+	public float GetDamageCutRateOnWait(int invincibleBreakLv)
+	{
+		return default(float);
+	}
 
-		public bool IsWait()
-		{
-			return default(bool);
-		}
+	public int GetActionIdOnWait(int invincibleBreakLv)
+	{
+		return default(int);
+	}
 
-		public void StartWait(float[] rate, int[] ids)
-		{
-		}
-
-		public void StopWait()
-		{
-		}
-
-		public float GetDamageCutRateOnWait(int invincibleBreakLv)
-		{
-			return default(float);
-		}
-
-		public int GetActionIdOnWait(int invincibleBreakLv)
-		{
-			return default(int);
-		}
-
-		public void Exec(int invincibleBreakLv)
-		{
-		}
+	public void Exec(int invincibleBreakLv)
+	{
 	}
 }

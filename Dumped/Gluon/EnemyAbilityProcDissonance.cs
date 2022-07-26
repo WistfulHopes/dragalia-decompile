@@ -3,73 +3,72 @@ using System.Runtime.CompilerServices;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcDissonance : EnemyAbilityProcBase, ICollideCallback
 {
-	public class EnemyAbilityProcDissonance : EnemyAbilityProcBase, ICollideCallback
+	private class CounterInfo
 	{
-		private class CounterInfo
+		public CharacterBase chara;
+
+		public int skillId;
+
+		public int skillProductId;
+	}
+
+	private CollisionHitAttribute _hitAttribute;
+
+	private List<CharacterBase> _counterTarget;
+
+	private List<CounterInfo> listCounterInfo
+	{
+		[CompilerGenerated]
+		get
 		{
-			public CharacterBase chara;
-
-			public int skillId;
-
-			public int skillProductId;
+			return null;
 		}
+	}
 
-		private CollisionHitAttribute _hitAttribute;
+	public bool isDissonanceBuff => default(bool);
 
-		private List<CharacterBase> _counterTarget;
+	public EnemyAbilityProcDissonance(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+	{
+	}
 
-		private List<CounterInfo> listCounterInfo
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-		}
+	public override void Setup()
+	{
+	}
 
-		public bool isDissonanceBuff => default(bool);
+	public override void Stop()
+	{
+	}
 
-		public EnemyAbilityProcDissonance(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
+	public override void OnUpdate()
+	{
+	}
 
-		public override void Setup()
-		{
-		}
+	public override void OnCheckExecHit(CharacterBase receiver, CollisionHitAttribute hitAttr, ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void Stop()
-		{
-		}
+	public override void OnCalcBaseDamageReceive(CollisionHitAttribute hitAttr, DamageCalculation.DamageStatus.Type damageType, ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnUpdate()
-		{
-		}
+	public void OnCollided(GameObject target, bool isPropagation)
+	{
+	}
 
-		public override void OnCheckExecHit(CharacterBase receiver, CollisionHitAttribute hitAttr, ref EnemyAbility.Argument arg)
-		{
-		}
+	public void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot)
+	{
+	}
 
-		public override void OnCalcBaseDamageReceive(CollisionHitAttribute hitAttr, DamageCalculation.DamageStatus.Type damageType, ref EnemyAbility.Argument arg)
-		{
-		}
+	public void OnNotCollided(CharacterBase chara)
+	{
+	}
 
-		public void OnCollided(GameObject target, bool isPropagation)
-		{
-		}
-
-		public void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot)
-		{
-		}
-
-		public void OnNotCollided(CharacterBase chara)
-		{
-		}
-
-		public bool IsExcept(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	public bool IsExcept(CharacterBase chara)
+	{
+		return default(bool);
 	}
 }

@@ -1,37 +1,36 @@
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class TotalDamageEventHistoryPopup : PopupBase
 {
-	public class TotalDamageEventHistoryPopup : PopupBase
+	[SerializeField]
+	private Transform layoutParent;
+
+	[SerializeField]
+	private GameObject emptyDataText;
+
+	private GameObject originalCell;
+
+	private int eventId;
+
+	private static readonly string totalDamageEventHistoryPopupPath;
+
+	private static readonly string totalDamageEventHistoryCellPath;
+
+	public static TotalDamageEventHistoryPopup Create(int eventId)
 	{
-		[SerializeField]
-		private Transform layoutParent;
+		return null;
+	}
 
-		[SerializeField]
-		private GameObject emptyDataText;
+	private Task RequestTotalDamageHistoryData()
+	{
+		return null;
+	}
 
-		private GameObject originalCell;
-
-		private int eventId;
-
-		private static readonly string totalDamageEventHistoryPopupPath;
-
-		private static readonly string totalDamageEventHistoryCellPath;
-
-		public static TotalDamageEventHistoryPopup Create(int eventId)
-		{
-			return null;
-		}
-
-		private Task RequestTotalDamageHistoryData()
-		{
-			return null;
-		}
-
-		private Task UpdateContents()
-		{
-			return null;
-		}
+	private Task UpdateContents()
+	{
+		return null;
 	}
 }

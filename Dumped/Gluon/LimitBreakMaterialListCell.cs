@@ -1,22 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class LimitBreakMaterialListCell : CommonIconListCell
 {
-	public class LimitBreakMaterialListCell : CommonIconListCell
+	[SerializeField]
+	private GameObject itemCountBaseObject;
+
+	[SerializeField]
+	private Text countText;
+
+	public override void UpdateContent(CommonIconListCellData data)
 	{
-		[SerializeField]
-		private GameObject itemCountBaseObject;
+	}
 
-		[SerializeField]
-		private Text countText;
-
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
-
-		public void SetDragonSphereCountText(int useCount, int needCount)
-		{
-		}
+	public void SetDragonSphereCountText(int useCount, int needCount)
+	{
 	}
 }

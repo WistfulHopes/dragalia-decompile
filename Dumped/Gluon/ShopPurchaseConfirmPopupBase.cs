@@ -2,132 +2,126 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopPurchaseConfirmPopupBase : PopupBase
 {
-	public class ShopPurchaseConfirmPopupBase : PopupBase
+	[SerializeField]
+	public Image packIcon;
+
+	public Text packName;
+
+	public Text packDescription;
+
+	[SerializeField]
+	public Text periodText;
+
+	public Text limitCountText;
+
+	public Text priceText;
+
+	public Text realMoneyText;
+
+	public Text okButtonText;
+
+	public Button okButton;
+
+	[SerializeField]
+	public GameObject crystalIcon;
+
+	public GameObject dragonDiamondIcon;
+
+	public GameObject goldIcon;
+
+	public GameObject moonIcon;
+
+	public GameObject manaIcon;
+
+	[SerializeField]
+	public Text beforeCountText;
+
+	public Text afterCountText;
+
+	public Text insufficientText;
+
+	public Text overflowText;
+
+	[SerializeField]
+	public GameObject periodObj;
+
+	public GameObject resourcesGO;
+
+	public GameObject insufficientTextGO;
+
+	public GameObject overflowTextGO;
+
+	protected ShopTradeProductData.CommonShopItemData data;
+
+	protected Action onPurchaseDone;
+
+	protected bool toPurchaseDia;
+
+	private int buyQuantity;
+
+	private bool isSentToPresentBox;
+
+	public virtual void Init(ShopTradeProductData.CommonShopItemData data, Action onPurchaseDone)
 	{
-		[SerializeField]
-		[Header("Top")]
-		public Image packIcon;
+	}
 
-		public Text packName;
+	protected override void Start()
+	{
+	}
 
-		public Text packDescription;
+	public long GetCurrentPaymentCount(out string insufficientTemplate)
+	{
+		return default(long);
+	}
 
-		[SerializeField]
-		[Header("Bottom")]
-		public Text periodText;
+	protected virtual void RefreshPurchaseInfo(int buyCount = 1)
+	{
+	}
 
-		public Text limitCountText;
+	protected void RefreshHoldingInfo(int buyCount = 1)
+	{
+	}
 
-		public Text priceText;
+	private bool CheckOverLimit(int buyCount)
+	{
+		return default(bool);
+	}
 
-		public Text realMoneyText;
+	private static int CalculateAgeCorrect(int year, int month, int day)
+	{
+		return default(int);
+	}
 
-		public Text okButtonText;
+	public static void CheckAgeGroup(Action<ShopTradeAgeSelectPopup.AgeGroup> onCheckDone)
+	{
+	}
 
-		public Button okButton;
+	public static ShopCommonPopup CheckUnableToPurchaseTimeForSustainablePack(ShopTradeProductData.CommonShopItemData.PackContentType packContentType)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Price")]
-		public GameObject crystalIcon;
+	public void OnPurchaseButtonPressed()
+	{
+	}
 
-		public GameObject dragonDiamondIcon;
+	private void ProcessPurchase(ShopTradeAgeSelectPopup.AgeGroup ageGroup = ShopTradeAgeSelectPopup.AgeGroup.None)
+	{
+	}
 
-		public GameObject goldIcon;
+	private void ProcessCommonPurchase(Action onDone)
+	{
+	}
 
-		public GameObject moonIcon;
+	public static void ProcessRealMoneyPurchase(string productId, ShopTradeAgeSelectPopup.AgeGroup ageGroup, ShopTradeProductData.CommonShopType shopType, int tradeId, Action onDone)
+	{
+	}
 
-		public GameObject manaIcon;
-
-		[SerializeField]
-		[Header("Holding")]
-		public Text beforeCountText;
-
-		public Text afterCountText;
-
-		public Text insufficientText;
-
-		public Text overflowText;
-
-		[SerializeField]
-		[Header("OnOffs")]
-		public GameObject periodObj;
-
-		public GameObject resourcesGO;
-
-		public GameObject insufficientTextGO;
-
-		public GameObject overflowTextGO;
-
-		protected ShopTradeProductData.CommonShopItemData data;
-
-		protected Action onPurchaseDone;
-
-		protected bool toPurchaseDia;
-
-		private int buyQuantity;
-
-		private bool isSentToPresentBox;
-
-		public virtual void Init(ShopTradeProductData.CommonShopItemData data, Action onPurchaseDone)
-		{
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public long GetCurrentPaymentCount(out string insufficientTemplate)
-		{
-			return default(long);
-		}
-
-		protected virtual void RefreshPurchaseInfo(int buyCount = 1)
-		{
-		}
-
-		protected void RefreshHoldingInfo(int buyCount = 1)
-		{
-		}
-
-		private bool CheckOverLimit(int buyCount)
-		{
-			return default(bool);
-		}
-
-		private static int CalculateAgeCorrect(int year, int month, int day)
-		{
-			return default(int);
-		}
-
-		public static void CheckAgeGroup(Action<ShopTradeAgeSelectPopup.AgeGroup> onCheckDone)
-		{
-		}
-
-		public static ShopCommonPopup CheckUnableToPurchaseTimeForSustainablePack(ShopTradeProductData.CommonShopItemData.PackContentType packContentType)
-		{
-			return null;
-		}
-
-		public void OnPurchaseButtonPressed()
-		{
-		}
-
-		private void ProcessPurchase(ShopTradeAgeSelectPopup.AgeGroup ageGroup = ShopTradeAgeSelectPopup.AgeGroup.None)
-		{
-		}
-
-		private void ProcessCommonPurchase(Action onDone)
-		{
-		}
-
-		public static void ProcessRealMoneyPurchase(string productId, ShopTradeAgeSelectPopup.AgeGroup ageGroup, ShopTradeProductData.CommonShopType shopType, int tradeId, Action onDone)
-		{
-		}
-
-		public void OnSpecifiedCommercialTransactionActPressed()
-		{
-		}
+	public void OnSpecifiedCommercialTransactionActPressed()
+	{
 	}
 }

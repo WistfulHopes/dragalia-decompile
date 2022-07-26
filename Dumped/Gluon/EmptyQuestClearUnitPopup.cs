@@ -1,22 +1,21 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EmptyQuestClearUnitPopup : CommonPopup
 {
-	public class EmptyQuestClearUnitPopup : CommonPopup
+	private const string prefabPath = "Prefabs/OutGame/QuestPrepare/EmptyQuestClearUnitPopup";
+
+	public GameObject originCell;
+
+	public Transform contentTransform;
+
+	public static EmptyQuestClearUnitPopup Create()
 	{
-		private const string prefabPath = "Prefabs/OutGame/QuestPrepare/EmptyQuestClearUnitPopup";
+		return null;
+	}
 
-		public GameObject originCell;
-
-		public Transform contentTransform;
-
-		public static EmptyQuestClearUnitPopup Create()
-		{
-			return null;
-		}
-
-		public void InitPopup(EmptyQuestClearUnitData[] datas)
-		{
-		}
+	public void InitPopup(EmptyQuestClearUnitData[] datas)
+	{
 	}
 }

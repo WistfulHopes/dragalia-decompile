@@ -1,68 +1,66 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandPrintText : IStoryCommand
 {
-	[CommandName("print")]
-	public class StoryCommandPrintText : IStoryCommand
+	private IEnumerator coroutine;
+
+	private bool isEnd;
+
+	private string name;
+
+	private string text;
+
+	private string voice;
+
+	private bool isVisiblePageIcon;
+
+	private bool isEndLipSynch;
+
+	private string overLineText;
+
+	private const string hideTrigger = "#";
+
+	private const string hideSecondTrigger = "$";
+
+	public const int waitFrameCountForDummyVoiceCheck = 5;
+
+	public void Start(bool isEnd, string name = "", string text = "", string voice = "")
 	{
-		private IEnumerator coroutine;
+	}
 
-		private bool isEnd;
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		private string name;
+	private IEnumerator _Update()
+	{
+		return null;
+	}
 
-		private string text;
+	private void UpdateLipSynch()
+	{
+	}
 
-		private string voice;
+	public string[] GetResourceNames(bool isEnd, string name = "", string text = "", string voice = "")
+	{
+		return null;
+	}
 
-		private bool isVisiblePageIcon;
+	private IEnumerator _UpdateWindowFadein()
+	{
+		return null;
+	}
 
-		private bool isEndLipSynch;
+	public static bool IsExistVoice(string voice)
+	{
+		return default(bool);
+	}
 
-		private string overLineText;
-
-		private const string hideTrigger = "#";
-
-		private const string hideSecondTrigger = "$";
-
-		public const int waitFrameCountForDummyVoiceCheck = 5;
-
-		public void Start(bool isEnd, string name = "", string text = "", string voice = "")
-		{
-		}
-
-		public override bool Update()
-		{
-			return default(bool);
-		}
-
-		private IEnumerator _Update()
-		{
-			return null;
-		}
-
-		private void UpdateLipSynch()
-		{
-		}
-
-		public string[] GetResourceNames(bool isEnd, string name = "", string text = "", string voice = "")
-		{
-			return null;
-		}
-
-		private IEnumerator _UpdateWindowFadein()
-		{
-			return null;
-		}
-
-		public static bool IsExistVoice(string voice)
-		{
-			return default(bool);
-		}
-
-		private static CuttDriverInGame GetCuttDriver()
-		{
-			return null;
-		}
+	public static CuttDriverInGame GetCuttDriver()
+	{
+		return null;
 	}
 }

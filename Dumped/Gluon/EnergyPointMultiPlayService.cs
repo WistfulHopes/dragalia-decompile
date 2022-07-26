@@ -1,31 +1,30 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnergyPointMultiPlayService
 {
-	public class EnergyPointMultiPlayService
+	private bool _isDirty;
+
+	private float _nextSendEventTimer;
+
+	private static readonly float SendEventInterval;
+
+	private EnergyPoint _tempSendEvent;
+
+	public void SetDirty()
 	{
-		private bool _isDirty;
+	}
 
-		private float _nextSendEventTimer;
+	public void UpdateSendEvent(CharacterBase owner)
+	{
+	}
 
-		private static readonly float SendEventInterval;
+	public void OnRecieveCurrentEp(CharacterBase owner, EnergyPoint recvEvent)
+	{
+	}
 
-		private EnergyPoint _tempSendEvent;
-
-		public void SetDirty()
-		{
-		}
-
-		public void UpdateSendEvent(CharacterBase owner)
-		{
-		}
-
-		public void OnRecieveCurrentEp(CharacterBase owner, EnergyPoint recvEvent)
-		{
-		}
-
-		private void SendCurrentEp(CharacterBase owner)
-		{
-		}
+	private void SendCurrentEp(CharacterBase owner)
+	{
 	}
 }

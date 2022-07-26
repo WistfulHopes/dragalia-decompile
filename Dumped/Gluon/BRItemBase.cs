@@ -6,135 +6,134 @@ using Gluon.Event;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BRItemBase : MonoBehaviour
 {
-	public class BRItemBase : MonoBehaviour
+	[HideInInspector]
+	public float activateIntervalSec;
+
+	private float elapsedSec;
+
+	public Vector3 position;
+
+	private int itemShaderPropertyId;
+
+	private Renderer targetRenderer;
+
+	private Material targetMaterial;
+
+	private bool caughtFlag;
+
+	public static readonly float rotationScaleDefault;
+
+	public float rotationScale;
+
+	private static readonly float checkRadItemToBush;
+
+	private static readonly float checkRadItemToPlayer;
+
+	private List<BushClip> bushClipList;
+
+	private float updateShaderParamTimer;
+
+	public BRItemId Id => default(BRItemId);
+
+	public BRItemParam itemParam
 	{
-		[HideInInspector]
-		public float activateIntervalSec;
-
-		private float elapsedSec;
-
-		public Vector3 position;
-
-		private int itemShaderPropertyId;
-
-		private Renderer targetRenderer;
-
-		private Material targetMaterial;
-
-		private bool caughtFlag;
-
-		public static readonly float rotationScaleDefault;
-
-		public float rotationScale;
-
-		private static readonly float checkRadItemToBush;
-
-		private static readonly float checkRadItemToPlayer;
-
-		private List<BushClip> bushClipList;
-
-		private float updateShaderParamTimer;
-
-		public BRItemId Id => default(BRItemId);
-
-		public BRItemParam itemParam
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(BRItemParam);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(BRItemParam);
 		}
-
-		public virtual void SetItemParam(BRItemParam param)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		protected virtual void OnEnable()
-		{
-		}
+	public virtual void SetItemParam(BRItemParam param)
+	{
+	}
 
-		protected void Awake()
-		{
-		}
+	protected virtual void OnEnable()
+	{
+	}
 
-		protected virtual void Update()
-		{
-		}
+	protected void Awake()
+	{
+	}
 
-		protected void UpdateShaderParam()
-		{
-		}
+	protected virtual void Update()
+	{
+	}
 
-		private bool IsInside(Vector3 pos1, Vector3 pos2, float rad)
-		{
-			return default(bool);
-		}
+	protected void UpdateShaderParam()
+	{
+	}
 
-		public void SetInBush(BushClip bushScr, bool enterFlag)
-		{
-		}
+	private bool IsInside(Vector3 pos1, Vector3 pos2, float rad)
+	{
+		return default(bool);
+	}
 
-		public void SetInHouse(bool insideWithPlayer)
-		{
-		}
+	public void SetInBush(BushClip bushScr, bool enterFlag)
+	{
+	}
 
-		private void OnTriggerEnter(Collider other)
-		{
-		}
+	public void SetInHouse(bool insideWithPlayer)
+	{
+	}
 
-		private void OnTriggerStay(Collider other)
-		{
-		}
+	private void OnTriggerEnter(Collider other)
+	{
+	}
 
-		private void TriggerCore(Collider other, bool enterFlag)
-		{
-		}
+	private void OnTriggerStay(Collider other)
+	{
+	}
 
-		public bool CanGetItem()
-		{
-			return default(bool);
-		}
+	private void TriggerCore(Collider other, bool enterFlag)
+	{
+	}
 
-		public virtual void OnGotItem(CharacterBase chara)
-		{
-		}
+	public bool CanGetItem()
+	{
+		return default(bool);
+	}
 
-		private IEnumerator CoGotItemDirection(CharacterBase chara)
-		{
-			return null;
-		}
+	public virtual void OnGotItem(CharacterBase chara)
+	{
+	}
 
-		private void SetCantGetItemDirection()
-		{
-		}
+	private IEnumerator CoGotItemDirection(CharacterBase chara)
+	{
+		return null;
+	}
 
-		protected virtual void Apply(CharacterBase chara)
-		{
-		}
+	private void SetCantGetItemDirection()
+	{
+	}
 
-		public virtual bool IsEffectiveFor(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	protected virtual void Apply(CharacterBase chara)
+	{
+	}
 
-		public void OnDelete()
-		{
-		}
+	public virtual bool IsEffectiveFor(CharacterBase chara)
+	{
+		return default(bool);
+	}
 
-		private void SendRequestGetItem(CharacterBase chara)
-		{
-		}
+	public void OnDelete()
+	{
+	}
 
-		public BattleRoyalDungeonItemElement GetItemElem()
-		{
-			return null;
-		}
+	private void SendRequestGetItem(CharacterBase chara)
+	{
+	}
+
+	public BattleRoyalDungeonItemElement GetItemElem()
+	{
+		return null;
 	}
 }

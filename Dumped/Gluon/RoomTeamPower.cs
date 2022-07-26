@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class RoomTeamPower : MonoBehaviour
 {
-	public class RoomTeamPower : MonoBehaviour
-	{
-	}
 }

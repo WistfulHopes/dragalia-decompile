@@ -1,12 +1,11 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public static class RunActionExtensions
 {
-	public static class RunActionExtensions
+	public static RunActionRandomParameter Reset(this RunActionRandomParameter param)
 	{
-		public static RunActionRandomParameter Reset(this RunActionRandomParameter param)
-		{
-			return null;
-		}
+		return null;
 	}
 }

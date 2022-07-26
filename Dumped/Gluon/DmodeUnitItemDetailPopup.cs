@@ -1,64 +1,60 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeUnitItemDetailPopup : PopupBase
 {
-	public class DmodeUnitItemDetailPopup : PopupBase
+	private static readonly string prefabPath;
+
+	[SerializeField]
+	private GameObject equipButtonGO;
+
+	[SerializeField]
+	private GameObject switchButtonGO;
+
+	[SerializeField]
+	private GameObject sellButtonGO;
+
+	[SerializeField]
+	private GameObject[] weaponGOs;
+
+	[SerializeField]
+	private GameObject[] abilityCrestGOs;
+
+	[SerializeField]
+	private DmodeUnitItemDetailInfoCell cell;
+
+	private DmodeDungeonItemManager.ContainerType containerType;
+
+	private DmodeDungeonItemType type;
+
+	private int id;
+
+	private int equipIndex;
+
+	public static DmodeUnitItemDetailPopup Create(DmodeDungeonItemManager.ContainerType containerType, int id, bool canChangeEquip, bool canSell, bool canSwitch, int equipIndex = 0, ElementalType elementalType = ElementalType.NOELEMENT)
 	{
-		private static readonly string prefabPath;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Control")]
-		private GameObject equipButtonGO;
+	public static DmodeUnitItemDetailPopup CreateWithTypeAndItemId(DmodeDungeonItemType type, int itemId, int equipIndex = 0, bool canChangeEquip = true, ElementalType elementalType = ElementalType.NOELEMENT)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private GameObject switchButtonGO;
+	private void Initialize(DmodeDungeonItemManager.ContainerType containerType, DmodeDungeonItemType type, int id, int itemId, bool canChangeEquip, int equipIndex, bool canSell, bool canSwitch, ElementalType elementalType)
+	{
+	}
 
-		[SerializeField]
-		private GameObject sellButtonGO;
+	public void OnEquipButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		[Header("OnOffs")]
-		private GameObject[] weaponGOs;
+	public void OnSwitchButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private GameObject[] abilityCrestGOs;
-
-		[SerializeField]
-		[Header("Content")]
-		private DmodeUnitItemDetailInfoCell cell;
-
-		private DmodeDungeonItemManager.ContainerType containerType;
-
-		private DmodeDungeonItemType type;
-
-		private int id;
-
-		private int equipIndex;
-
-		public static DmodeUnitItemDetailPopup Create(DmodeDungeonItemManager.ContainerType containerType, int id, bool canChangeEquip, bool canSell, bool canSwitch, int equipIndex = 0, ElementalType elementalType = ElementalType.NOELEMENT)
-		{
-			return null;
-		}
-
-		public static DmodeUnitItemDetailPopup CreateWithTypeAndItemId(DmodeDungeonItemType type, int itemId, int equipIndex = 0, bool canChangeEquip = true, ElementalType elementalType = ElementalType.NOELEMENT)
-		{
-			return null;
-		}
-
-		private void Initialize(DmodeDungeonItemManager.ContainerType containerType, DmodeDungeonItemType type, int id, int itemId, bool canChangeEquip, int equipIndex, bool canSell, bool canSwitch, ElementalType elementalType)
-		{
-		}
-
-		public void OnEquipButtonPressed()
-		{
-		}
-
-		public void OnSwitchButtonPressed()
-		{
-		}
-
-		public void OnSellButtonPressed()
-		{
-		}
+	public void OnSellButtonPressed()
+	{
 	}
 }

@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class TanatosManaSpotUniqueCtrl : EnemyUniqueCtrl
 {
-	public class TanatosManaSpotUniqueCtrl : EnemyUniqueCtrl
+	private bool _isDead;
+
+	public override void Initialize()
 	{
-		private bool _isDead;
+	}
 
-		public override void Initialize()
-		{
-		}
-
-		public override void FastUpdate()
-		{
-		}
+	public override void FastUpdate()
+	{
 	}
 }

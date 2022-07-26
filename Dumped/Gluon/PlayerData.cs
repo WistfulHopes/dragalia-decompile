@@ -4,178 +4,177 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class PlayerData
 {
-	public class PlayerData
+	private static int skillNumForDmode;
+
+	public AbilityDataElement[] abilityData;
+
+	public int[] abilityLv;
+
+	public ExAbilityDataElement exAbilityData;
+
+	public AbilityDataElement[] eventAbilityData;
+
+	public List<AbilityDataElement> weaponPassiveAbilities;
+
+	public int comboLv;
+
+	public int burstAttackLv;
+
+	public int exAbilityLv;
+
+	public CharacterSkillData[] skillData;
+
+	public List<PlayerActionElement> nextActions;
+
+	public static int skillNum => default(int);
+
+	public int enhancedBurstAttackId
 	{
-		private static int skillNumForDmode;
-
-		public AbilityDataElement[] abilityData;
-
-		public int[] abilityLv;
-
-		public ExAbilityDataElement exAbilityData;
-
-		public AbilityDataElement[] eventAbilityData;
-
-		public List<AbilityDataElement> weaponPassiveAbilities;
-
-		public int comboLv;
-
-		public int burstAttackLv;
-
-		public int exAbilityLv;
-
-		public CharacterSkillData[] skillData;
-
-		public List<PlayerActionElement> nextActions;
-
-		public static int skillNum => default(int);
-
-		public int enhancedBurstAttackId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public int enhancedAbilityBurstAttackId
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public event Action<int, int> onSkillChange
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public void SetupSkill(HeroParam param, CharacterData chara, WeaponData weapon, bool isSupporter)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SetupSkillForBR(BRCharaCtrl brCharaCtrl, int brSpecialSkillId)
+	public int enhancedAbilityBurstAttackId
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SetupSkillForDmode(CharacterData.CharaDataWrapper charaData)
+	public event Action<int, int> onSkillChange
+	{
+		[CompilerGenerated]
+		add
 		{
 		}
-
-		public void ClearSkillForDmode()
+		[CompilerGenerated]
+		remove
 		{
 		}
+	}
 
-		private void SetupShareSkill(int srcShareCharaId, int skillIndex, int relationId, int dstBaseId)
-		{
-		}
+	public void SetupSkill(HeroParam param, CharacterData chara, WeaponData weapon, bool isSupporter)
+	{
+	}
 
-		private void SetOriginalModeSkill(int skillId)
-		{
-		}
+	public void SetupSkillForBR(BRCharaCtrl brCharaCtrl, int brSpecialSkillId)
+	{
+	}
 
-		public void SetupAbility(HeroParam param, CharacterData chara)
-		{
-		}
+	public void SetupSkillForDmode(CharacterData.CharaDataWrapper charaData)
+	{
+	}
 
-		private void AddSkillAction(CharacterSkillData data, int skillIndex)
-		{
-		}
+	public void ClearSkillForDmode()
+	{
+	}
 
-		private void AddSkillAction(CharacterSkillData data, int actionId, int skillIndex)
-		{
-		}
+	private void SetupShareSkill(int srcShareCharaId, int skillIndex, int relationId, int dstBaseId)
+	{
+	}
 
-		private void AddNextAction(CharacterSkillData data, PlayerActionElement pae)
-		{
-		}
+	private void SetOriginalModeSkill(int skillId)
+	{
+	}
 
-		public void SetupEnhancedSkill(int skillIndex, int skillId)
-		{
-		}
+	public void SetupAbility(HeroParam param, CharacterData chara)
+	{
+	}
 
-		public void ResetEnhancedSkill(int skillIndex)
-		{
-		}
+	private void AddSkillAction(CharacterSkillData data, int skillIndex)
+	{
+	}
 
-		public bool CheckTransSkill(CharacterBase owner, CollisionHitAttribute attr, int idx)
-		{
-			return default(bool);
-		}
+	private void AddSkillAction(CharacterSkillData data, int actionId, int skillIndex)
+	{
+	}
 
-		public void TransformSkill(int idx)
-		{
-		}
+	private void AddNextAction(CharacterSkillData data, PlayerActionElement pae)
+	{
+	}
 
-		public void ReleaseTransSkill(CharacterBase owner, int idx)
-		{
-		}
+	public void SetupEnhancedSkill(int skillIndex, int skillId)
+	{
+	}
 
-		public void DisableTrans(int idx)
-		{
-		}
+	public void ResetEnhancedSkill(int skillIndex)
+	{
+	}
 
-		public bool IsPauseTransBuff(int idx)
-		{
-			return default(bool);
-		}
+	public bool CheckTransSkill(CharacterBase owner, CollisionHitAttribute attr, int idx)
+	{
+		return default(bool);
+	}
 
-		public void PauseTransBuff(int idx, bool pause)
-		{
-		}
+	public void TransformSkill(int idx)
+	{
+	}
 
-		public void ChangeMode(int idx)
-		{
-		}
+	public void ReleaseTransSkill(CharacterBase owner, int idx)
+	{
+	}
 
-		public void ResetMode(int idx)
-		{
-		}
+	public void DisableTrans(int idx)
+	{
+	}
 
-		public void ChangeModeForButton(int idx, int modeId)
-		{
-		}
+	public bool IsPauseTransBuff(int idx)
+	{
+		return default(bool);
+	}
 
-		private void SetupSkillChainData(CharacterSkillData data)
-		{
-		}
+	public void PauseTransBuff(int idx, bool pause)
+	{
+	}
 
-		public bool SetChainSkill(int idx, int skillId)
-		{
-			return default(bool);
-		}
+	public void ChangeMode(int idx)
+	{
+	}
 
-		public bool ResetChainSkill(int idx, CharacterSkillData.SkillChainResetReason reason)
-		{
-			return default(bool);
-		}
+	public void ResetMode(int idx)
+	{
+	}
 
-		public void OnReceiveTransSkill(CharacterBase owner, TransSkill recvEvent)
-		{
-		}
+	public void ChangeModeForButton(int idx, int modeId)
+	{
+	}
 
-		public void SetRequireSp(int idx)
-		{
-		}
+	private void SetupSkillChainData(CharacterSkillData data)
+	{
+	}
+
+	public bool SetChainSkill(int idx, int skillId)
+	{
+		return default(bool);
+	}
+
+	public bool ResetChainSkill(int idx, CharacterSkillData.SkillChainResetReason reason)
+	{
+		return default(bool);
+	}
+
+	public void OnReceiveTransSkill(CharacterBase owner, TransSkill recvEvent)
+	{
+	}
+
+	public void SetRequireSp(int idx)
+	{
 	}
 }

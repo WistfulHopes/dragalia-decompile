@@ -2,32 +2,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ItemSentPresentBoxPopup : PopupBase
 {
-	public class ItemSentPresentBoxPopup : PopupBase
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Text descriptionText;
+
+	[SerializeField]
+	private ItemSentPresentBoxCtrl cellController;
+
+	private static string puPrefabPath;
+
+	public static ItemSentPresentBoxPopup Create()
 	{
-		[SerializeField]
-		private Text titleText;
+		return null;
+	}
 
-		[SerializeField]
-		private Text descriptionText;
+	public void SetText(string title, string description)
+	{
+	}
 
-		[SerializeField]
-		private ItemSentPresentBoxCtrl cellController;
-
-		private static string puPrefabPath;
-
-		public static ItemSentPresentBoxPopup Create()
-		{
-			return null;
-		}
-
-		public void SetText(string title, string description)
-		{
-		}
-
-		public void SetContent(List<ItemSentPresentBoxCellData> itemDataList)
-		{
-		}
+	public void SetContent(List<ItemSentPresentBoxCellData> itemDataList)
+	{
 	}
 }

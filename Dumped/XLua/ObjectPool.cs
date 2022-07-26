@@ -1,69 +1,68 @@
 using System;
 using System.Collections.Generic;
 
-namespace XLua
+namespace XLua;
+
+public class ObjectPool
 {
-	public class ObjectPool
+	private struct Slot
 	{
-		private struct Slot
-		{
-			public int next;
+		public int next;
 
-			public object obj;
+		public object obj;
 
-			public Slot(int next, object obj)
-			{
-			}
-		}
-
-		private const int LIST_END = -1;
-
-		private const int ALLOCED = -2;
-
-		private Slot[] list;
-
-		private int freelist;
-
-		private int count;
-
-		public object this[int i] => null;
-
-		public void Clear()
+		public Slot(int next, object obj)
 		{
 		}
+	}
 
-		private void extend_capacity()
-		{
-		}
+	private const int LIST_END = -1;
 
-		public int Add(object obj)
-		{
-			return default(int);
-		}
+	private const int ALLOCED = -2;
 
-		public bool TryGetValue(int index, out object obj)
-		{
-			return default(bool);
-		}
+	private Slot[] list;
 
-		public object Get(int index)
-		{
-			return null;
-		}
+	private int freelist;
 
-		public object Remove(int index)
-		{
-			return null;
-		}
+	private int count;
 
-		public object Replace(int index, object o)
-		{
-			return null;
-		}
+	public object this[int i] => null;
 
-		public int Check(int check_pos, int max_check, Func<object, bool> checker, Dictionary<object, int> reverse_map)
-		{
-			return default(int);
-		}
+	public void Clear()
+	{
+	}
+
+	private void extend_capacity()
+	{
+	}
+
+	public int Add(object obj)
+	{
+		return default(int);
+	}
+
+	public bool TryGetValue(int index, out object obj)
+	{
+		return default(bool);
+	}
+
+	public object Get(int index)
+	{
+		return null;
+	}
+
+	public object Remove(int index)
+	{
+		return null;
+	}
+
+	public object Replace(int index, object o)
+	{
+		return null;
+	}
+
+	public int Check(int check_pos, int max_check, Func<object, bool> checker, Dictionary<object, int> reverse_map)
+	{
+		return default(int);
 	}
 }

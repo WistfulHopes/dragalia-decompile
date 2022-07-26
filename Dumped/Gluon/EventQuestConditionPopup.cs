@@ -4,24 +4,23 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventQuestConditionPopup : CommonPopup
 {
-	public class EventQuestConditionPopup : CommonPopup
+	[SerializeField]
+	public Text uiTitle;
+
+	public Text uiConditionTitle;
+
+	public Text uiConditionText;
+
+	public static EventQuestConditionPopup Create(int questId, StringBuilder requiredConditionText, UnityAction onCloseCallback, bool showBlackLayer = true)
 	{
-		[SerializeField]
-		public Text uiTitle;
+		return null;
+	}
 
-		public Text uiConditionTitle;
-
-		public Text uiConditionText;
-
-		public static EventQuestConditionPopup Create(int questId, StringBuilder requiredConditionText, UnityAction onCloseCallback, bool showBlackLayer = true)
-		{
-			return null;
-		}
-
-		private void ReflectParam(QuestDataElement qde, StringBuilder requiredConditionText)
-		{
-		}
+	private void ReflectParam(QuestDataElement qde, StringBuilder requiredConditionText)
+	{
 	}
 }

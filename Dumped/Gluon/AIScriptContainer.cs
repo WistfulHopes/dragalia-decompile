@@ -1,17 +1,16 @@
 using System;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class AIScriptContainer
 {
-	[Serializable]
-	public class AIScriptContainer
-	{
-		public AIScriptDef.Command _command;
+	public AIScriptDef.Command _command;
 
-		public AIScriptParam[] _params;
+	public AIScriptParam[] _params;
 
-		public int _jumpStep;
+	public int _jumpStep;
 
-		[NonSerialized]
-		public const int _outStep = 1;
-	}
+	[NonSerialized]
+	public const int _outStep = 1;
 }

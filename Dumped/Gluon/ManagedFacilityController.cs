@@ -3,87 +3,85 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ManagedFacilityController : FacilityContentBase
 {
-	public class ManagedFacilityController : FacilityContentBase
+	[SerializeField]
+	private FortMenuGroupType facilityGroup;
+
+	[SerializeField]
+	private RectTransform originalCellPrefab;
+
+	[SerializeField]
+	private ManagedFacilityDialogController dialogController;
+
+	[SerializeField]
+	private Text noItemText;
+
+	private bool finishInitialize;
+
+	public List<ManagedFacilityModel.ManagedFacility> managedFacilityList
 	{
-		[SerializeField]
-		[Header("æ\u0096½è\u00a8­Group")]
-		private FortMenuGroupType facilityGroup;
-
-		[SerializeField]
-		private RectTransform originalCellPrefab;
-
-		[SerializeField]
-		private ManagedFacilityDialogController dialogController;
-
-		[SerializeField]
-		private Text noItemText;
-
-		private bool finishInitialize;
-
-		public List<ManagedFacilityModel.ManagedFacility> managedFacilityList
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public List<ManagedFacilityModel.ManagedFacility> sortedManagedFacilityList
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool existUpgradeableFacility
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		private void Start()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		protected new void OnEnable()
+	public List<ManagedFacilityModel.ManagedFacility> sortedManagedFacilityList
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public override void SetNewFlagToFalse()
+	public bool existUpgradeableFacility
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void UpdateContents()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void UpdateData(List<ManagedFacilityModel.ManagedFacility> cellDataList)
-		{
-		}
+	protected new void OnEnable()
+	{
+	}
 
-		public FacilitySortModel.Preset GetPreset()
-		{
-			return default(FacilitySortModel.Preset);
-		}
+	public override void SetNewFlagToFalse()
+	{
+	}
+
+	public void UpdateContents()
+	{
+	}
+
+	public void UpdateData(List<ManagedFacilityModel.ManagedFacility> cellDataList)
+	{
+	}
+
+	public FacilitySortModel.Preset GetPreset()
+	{
+		return default(FacilitySortModel.Preset);
 	}
 }

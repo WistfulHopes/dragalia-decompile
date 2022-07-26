@@ -1,12 +1,11 @@
-namespace Gluon
+namespace Gluon;
+
+public enum PrizeType
 {
-	public enum PrizeType
-	{
-		platinum = 1,
-		gold,
-		silver,
-		bonze,
-		fifthPrize,
-		sixthPrize
-	}
+	platinum = 1,
+	gold,
+	silver,
+	bonze,
+	fifthPrize,
+	sixthPrize
 }

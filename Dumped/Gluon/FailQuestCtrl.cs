@@ -1,64 +1,63 @@
-namespace Gluon
+namespace Gluon;
+
+public class FailQuestCtrl
 {
-	public class FailQuestCtrl
+	private bool needsFailResult;
+
+	private bool needsRetry;
+
+	public void Timeup()
 	{
-		private bool needsFailResult;
+	}
 
-		private bool needsRetry;
+	public void AllDead()
+	{
+	}
 
-		public void Timeup()
-		{
-		}
+	public void ContinueImpossible()
+	{
+	}
 
-		public void AllDead()
-		{
-		}
+	public void ObjectiveFailed()
+	{
+	}
 
-		public void ContinueImpossible()
-		{
-		}
+	public void Retry(int questId)
+	{
+	}
 
-		public void ObjectiveFailed()
-		{
-		}
+	public void Update()
+	{
+	}
 
-		public void Retry(int questId)
-		{
-		}
+	public bool NeedsRetry()
+	{
+		return default(bool);
+	}
 
-		public void Update()
-		{
-		}
+	public bool NeedsFailResult()
+	{
+		return default(bool);
+	}
 
-		public bool NeedsRetry()
-		{
-			return default(bool);
-		}
+	private bool IsPlayingWithOtherPlayer()
+	{
+		return default(bool);
+	}
 
-		public bool NeedsFailResult()
-		{
-			return default(bool);
-		}
+	private void CheckNeedsFailResult()
+	{
+	}
 
-		private bool IsPlayingWithOtherPlayer()
-		{
-			return default(bool);
-		}
+	private void CheckNeedsRetry(int questId)
+	{
+	}
 
-		private void CheckNeedsFailResult()
-		{
-		}
+	private void CheckRebattleTimeout()
+	{
+	}
 
-		private void CheckNeedsRetry(int questId)
-		{
-		}
-
-		private void CheckRebattleTimeout()
-		{
-		}
-
-		private void SendFail()
-		{
-		}
+	private void SendFail()
+	{
 	}
 }

@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateLeave : CharacterStateBase
 {
-	public class CharacterStateLeave : CharacterStateBase
+	protected override void OnStateEnter_Internal()
 	{
-		protected override void OnStateEnter_Internal()
-		{
-		}
 	}
 }

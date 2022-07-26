@@ -2,58 +2,57 @@ using System;
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FacilityPerspectiveController : FastUpdateMonoBehaviour
 {
-	public class FacilityPerspectiveController : FastUpdateMonoBehaviour
+	private enum moveIndexType
 	{
-		private enum moveIndexType
-		{
-			Left,
-			Right,
-			Center
-		}
+		Left,
+		Right,
+		Center
+	}
 
-		[Serializable]
-		public struct PerspectiveTraceUnit
-		{
-			public int baseIndex;
+	[Serializable]
+	public struct PerspectiveTraceUnit
+	{
+		public int baseIndex;
 
-			public int[] moveIndices;
-		}
+		public int[] moveIndices;
+	}
 
-		[SerializeField]
-		private PerspectiveTraceUnit topUnit;
+	[SerializeField]
+	private PerspectiveTraceUnit topUnit;
 
-		[SerializeField]
-		private PerspectiveTraceUnit bottomUnit;
+	[SerializeField]
+	private PerspectiveTraceUnit bottomUnit;
 
-		[SerializeField]
-		private float lookAtAngleEasingParam;
+	[SerializeField]
+	private float lookAtAngleEasingParam;
 
-		private MeshFilter myMeshfilter;
+	private MeshFilter myMeshfilter;
 
-		private Mesh myMesh;
+	private Mesh myMesh;
 
-		private Vector3 moveMaxVec;
+	private Vector3 moveMaxVec;
 
-		private Vector3 basicEuler;
+	private Vector3 basicEuler;
 
-		private Transform myTrans;
+	private Transform myTrans;
 
-		private Transform cameraTrans;
+	private Transform cameraTrans;
 
-		private Vector3[] morphingVertices;
+	private Vector3[] morphingVertices;
 
-		private Mesh morphingMesh;
+	private Mesh morphingMesh;
 
-		private int topCenterIndex;
+	private int topCenterIndex;
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	public override void FastUpdate()
+	{
 	}
 }

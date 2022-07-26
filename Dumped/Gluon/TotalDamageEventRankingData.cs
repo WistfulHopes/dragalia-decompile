@@ -1,34 +1,33 @@
-namespace Gluon
+namespace Gluon;
+
+public class TotalDamageEventRankingData
 {
-	public class TotalDamageEventRankingData
+	public class RankingInfo
 	{
-		public class RankingInfo
-		{
-			public int rank;
+		public int rank;
 
-			public bool isNew;
+		public bool isNew;
 
-			public long damageValue;
+		public long damageValue;
 
-			public int charaId;
+		public int charaId;
 
-			public int charaRarity;
+		public int charaRarity;
 
-			public int charaLevel;
+		public int charaLevel;
 
-			public int charaMaxLevel;
-		}
+		public int charaMaxLevel;
+	}
 
-		public bool isRanking;
+	public bool isRanking;
 
-		public int eventId;
+	public int eventId;
 
-		public RankingInfo[] rankingInfoList;
+	public RankingInfo[] rankingInfoList;
 
-		private static readonly int rankingTopShowCount;
+	private static readonly int rankingTopShowCount;
 
-		public void Load()
-		{
-		}
+	public void Load()
+	{
 	}
 }

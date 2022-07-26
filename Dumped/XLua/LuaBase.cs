@@ -1,43 +1,42 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+public abstract class LuaBase : IDisposable
 {
-	public abstract class LuaBase : IDisposable
+	protected bool disposed;
+
+	protected int luaReference;
+
+	protected LuaEnv luaEnv;
+
+	public LuaBase(int reference, LuaEnv luaenv)
 	{
-		protected bool disposed;
+	}
 
-		protected int luaReference;
+	~LuaBase()
+	{
+	}
 
-		protected LuaEnv luaEnv;
+	public void Dispose()
+	{
+	}
 
-		public LuaBase(int reference, LuaEnv luaenv)
-		{
-		}
+	public virtual void Dispose(bool disposeManagedResources)
+	{
+	}
 
-		~LuaBase()
-		{
-		}
+	public override bool Equals(object o)
+	{
+		return default(bool);
+	}
 
-		public void Dispose()
-		{
-		}
+	public override int GetHashCode()
+	{
+		return default(int);
+	}
 
-		public virtual void Dispose(bool disposeManagedResources)
-		{
-		}
-
-		public override bool Equals(object o)
-		{
-			return default(bool);
-		}
-
-		public override int GetHashCode()
-		{
-			return default(int);
-		}
-
-		internal virtual void push(IntPtr L)
-		{
-		}
+	internal virtual void push(IntPtr L)
+	{
 	}
 }

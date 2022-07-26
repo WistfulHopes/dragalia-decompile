@@ -1,27 +1,26 @@
 using System;
 using System.Collections.Generic;
 
-namespace MsgPack
+namespace MsgPack;
+
+public static class ReflectionCache
 {
-	public static class ReflectionCache
+	private static Dictionary<Type, ReflectionCacheEntry> _cache;
+
+	static ReflectionCache()
 	{
-		private static Dictionary<Type, ReflectionCacheEntry> _cache;
+	}
 
-		static ReflectionCache()
-		{
-		}
+	public static ReflectionCacheEntry Lookup(Type type)
+	{
+		return null;
+	}
 
-		public static ReflectionCacheEntry Lookup(Type type)
-		{
-			return null;
-		}
+	public static void RemoveCache(Type type)
+	{
+	}
 
-		public static void RemoveCache(Type type)
-		{
-		}
-
-		public static void Clear()
-		{
-		}
+	public static void Clear()
+	{
 	}
 }

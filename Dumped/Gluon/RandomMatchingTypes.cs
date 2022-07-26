@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum RandomMatchingTypes
 {
-	public enum RandomMatchingTypes
-	{
-		None,
-		RandomMatching4,
-		RandomMatching16
-	}
+	None,
+	RandomMatching4,
+	RandomMatching16
 }

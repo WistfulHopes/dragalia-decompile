@@ -1,35 +1,34 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcVirus : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcVirus : EnemyAbilityProcBase
+	public EnemyAbilityProcVirus(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
 	{
-		public EnemyAbilityProcVirus(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
+	}
 
-		public override void Setup()
-		{
-		}
+	public override void Setup()
+	{
+	}
 
-		public override void OnEntry()
-		{
-		}
+	public override void OnEntry()
+	{
+	}
 
-		public override void OnRevive()
-		{
-		}
+	public override void OnRevive()
+	{
+	}
 
-		private void SetVirusToOwner()
-		{
-		}
+	private void SetVirusToOwner()
+	{
+	}
 
-		public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr)
-		{
-		}
+	public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr)
+	{
+	}
 
-		public override void CreateCharacterMarkRelationUI()
-		{
-		}
+	public override void CreateCharacterMarkRelationUI()
+	{
 	}
 }

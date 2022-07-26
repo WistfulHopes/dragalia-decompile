@@ -1,66 +1,65 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SimpleCharacterFacialControl : SimpleCharacterFacialControlBase
 {
-	public class SimpleCharacterFacialControl : SimpleCharacterFacialControlBase
+	protected enum Type
 	{
-		protected enum Type
-		{
-			Blink,
-			Once
-		}
+		Blink,
+		Once
+	}
 
-		protected class AnimationTableData
-		{
-			public int intervalMin;
+	protected class AnimationTableData
+	{
+		public int intervalMin;
 
-			public int intervalMax;
+		public int intervalMax;
 
-			public int intervalRatio;
+		public int intervalRatio;
 
-			public int[] textureIndex;
+		public int[] textureIndex;
 
-			public Vector2[] offset;
-		}
+		public Vector2[] offset;
+	}
 
-		protected Type animationType;
+	protected Type animationType;
 
-		protected float currentTime;
+	protected float currentTime;
 
-		protected const int keepFrame = 4;
+	protected const int keepFrame = 4;
 
-		protected const float targetFps = 30f;
+	protected const float targetFps = 30f;
 
-		protected float blinkIntervalTime;
+	protected float blinkIntervalTime;
 
-		protected bool isBlinkContinue;
+	protected bool isBlinkContinue;
 
-		protected AnimationTableData tableData;
+	protected AnimationTableData tableData;
 
-		protected void UpdateOnce()
-		{
-		}
+	protected void UpdateOnce()
+	{
+	}
 
-		protected void UpdateBlink()
-		{
-		}
+	protected void UpdateBlink()
+	{
+	}
 
-		protected void SetFaceAnimation(Type animationType)
-		{
-		}
+	protected void SetFaceAnimation(Type animationType)
+	{
+	}
 
-		protected static Vector2 FaceIndexToOffsetCharacter(int index)
-		{
-			return default(Vector2);
-		}
+	protected static Vector2 FaceIndexToOffsetCharacter(int index)
+	{
+		return default(Vector2);
+	}
 
-		protected override void OnSetup(out Vector2 defaultTextureOffset)
-		{
-		}
+	protected override void OnSetup(out Vector2 defaultTextureOffset)
+	{
+	}
 
-		protected override bool OnLateUpdate(out Vector2 outTextureOffset)
-		{
-			return default(bool);
-		}
+	protected override bool OnLateUpdate(out Vector2 outTextureOffset)
+	{
+		return default(bool);
 	}
 }

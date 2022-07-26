@@ -1,52 +1,51 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Gluon
+namespace Gluon;
+
+public class DeltaCompressionEncoder
 {
-	public class DeltaCompressionEncoder
+	private MemoryStream _stream;
+
+	private BinaryWriter _writer;
+
+	private List<bool> _diffFlagList;
+
+	public bool WriteInteger(int? prev, int next)
 	{
-		private MemoryStream _stream;
+		return default(bool);
+	}
 
-		private BinaryWriter _writer;
+	public bool WriteByte(byte? prev, byte next)
+	{
+		return default(bool);
+	}
 
-		private List<bool> _diffFlagList;
+	public bool WriteFloat(float? prev, float next)
+	{
+		return default(bool);
+	}
 
-		public bool WriteInteger(int? prev, int next)
-		{
-			return default(bool);
-		}
+	public bool WriteBool(bool? prev, bool next)
+	{
+		return default(bool);
+	}
 
-		public bool WriteByte(byte? prev, byte next)
-		{
-			return default(bool);
-		}
+	public bool WriteString(string prev, string next)
+	{
+		return default(bool);
+	}
 
-		public bool WriteFloat(float? prev, float next)
-		{
-			return default(bool);
-		}
+	public byte[] GetBinary()
+	{
+		return null;
+	}
 
-		public bool WriteBool(bool? prev, bool next)
-		{
-			return default(bool);
-		}
+	public void Clear()
+	{
+	}
 
-		public bool WriteString(string prev, string next)
-		{
-			return default(bool);
-		}
-
-		public byte[] GetBinary()
-		{
-			return null;
-		}
-
-		public void Clear()
-		{
-		}
-
-		private void WriteDiffFlag(bool b)
-		{
-		}
+	private void WriteDiffFlag(bool b)
+	{
 	}
 }

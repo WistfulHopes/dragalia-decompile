@@ -1,80 +1,79 @@
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class MenuSummonHistoryCellData
 {
-	public class MenuSummonHistoryCellData
+	public enum SummonType
 	{
-		public enum SummonType
-		{
-			SummonMulti,
-			SummonSingle,
-			SummonOnceaDay,
-			SummonFreeSingle,
-			SummonFreeMulti,
-			SummonBeginnerCampaign,
-			SummonScratchCampaign
-		}
+		SummonMulti,
+		SummonSingle,
+		SummonOnceaDay,
+		SummonFreeSingle,
+		SummonFreeMulti,
+		SummonBeginnerCampaign,
+		SummonScratchCampaign
+	}
 
-		public enum SummonPaymentType
-		{
-			None,
-			Diamond,
-			Crystal,
-			SummonTicket,
-			SummonTicketTen,
-			CharaSsrTicket,
-			DragonSsrTicket,
-			CharaSsrUpdateTicket,
-			DragonSsrUpdateTicket
-		}
+	public enum SummonPaymentType
+	{
+		None,
+		Diamond,
+		Crystal,
+		SummonTicket,
+		SummonTicketTen,
+		CharaSsrTicket,
+		DragonSsrTicket,
+		CharaSsrUpdateTicket,
+		DragonSsrUpdateTicket
+	}
 
-		public string unitName;
+	public string unitName;
 
-		public string summonDateTime;
+	public string summonDateTime;
 
-		public string summonName;
+	public string summonName;
 
-		public SummonType summonType;
+	public SummonType summonType;
 
-		public SummonPaymentType summonPaymentType;
+	public SummonPaymentType summonPaymentType;
 
-		public Rarity summonRarity;
+	public Rarity summonRarity;
 
-		public int summonDewPoint;
+	public int summonDewPoint;
 
-		public int summonPrizePoint;
+	public int summonPrizePoint;
 
-		public GiftType summonGiftType;
+	public GiftType summonGiftType;
 
-		public int summonPoint;
+	public int summonPoint;
 
-		public void Load(SummonHistoryList data)
-		{
-		}
+	public void Load(SummonHistoryList data)
+	{
+	}
 
-		private string GetSummonUnitName(SummonHistoryList data)
-		{
-			return null;
-		}
+	private string GetSummonUnitName(SummonHistoryList data)
+	{
+		return null;
+	}
 
-		private string GetSummonTitle(SummonHistoryList data)
-		{
-			return null;
-		}
+	private string GetSummonTitle(SummonHistoryList data)
+	{
+		return null;
+	}
 
-		private SummonType GetSummonType(SummonHistoryList data)
-		{
-			return default(SummonType);
-		}
+	private SummonType GetSummonType(SummonHistoryList data)
+	{
+		return default(SummonType);
+	}
 
-		private SummonPaymentType GetSummonPaymentType(SummonHistoryList data)
-		{
-			return default(SummonPaymentType);
-		}
+	private SummonPaymentType GetSummonPaymentType(SummonHistoryList data)
+	{
+		return default(SummonPaymentType);
+	}
 
-		private string UnixTimeToStringLongSpace(double unixtime)
-		{
-			return null;
-		}
+	private string UnixTimeToStringLongSpace(double unixtime)
+	{
+		return null;
 	}
 }

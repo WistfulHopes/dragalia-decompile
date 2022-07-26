@@ -1,28 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QRRewardTableViewIcon : MonoBehaviour
 {
-	public class QRRewardTableViewIcon : MonoBehaviour
+	[SerializeField]
+	public bool hasNumber;
+
+	[SerializeField]
+	public int number;
+
+	[SerializeField]
+	private Image numberBaseImage;
+
+	[SerializeField]
+	private Text numberText;
+
+	private void Start()
 	{
-		[SerializeField]
-		public bool hasNumber;
+	}
 
-		[SerializeField]
-		public int number;
-
-		[SerializeField]
-		private Image numberBaseImage;
-
-		[SerializeField]
-		private Text numberText;
-
-		private void Start()
-		{
-		}
-
-		public void Reset()
-		{
-		}
+	public void Reset()
+	{
 	}
 }

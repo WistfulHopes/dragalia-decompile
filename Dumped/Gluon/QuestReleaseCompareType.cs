@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum QuestReleaseCompareType
 {
-	public enum QuestReleaseCompareType
-	{
-		NONE,
-		ALL,
-		PARTIAL
-	}
+	NONE,
+	ALL,
+	PARTIAL
 }

@@ -4,116 +4,110 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventTopPageBase : EventQuestPageBase
 {
-	public class EventTopPageBase : EventQuestPageBase
+	[SerializeField]
+	protected Image titleImage;
+
+	[SerializeField]
+	protected Text durationText;
+
+	[SerializeField]
+	protected GameObject eventEndDescription;
+
+	[SerializeField]
+	protected Button questListButton;
+
+	[SerializeField]
+	protected Button multiButton;
+
+	[SerializeField]
+	protected GameObject buttonsParent;
+
+	[SerializeField]
+	protected GameObject buttonsParent4;
+
+	[SerializeField]
+	protected EventCommonButtonCtrl commonButtonCtrl;
+
+	[SerializeField]
+	protected EventCommonButtonCtrl commonButtonCtrl4;
+
+	[SerializeField]
+	protected bool workaroundRefs271047;
+
+	protected string voiceData;
+
+	protected void OnMissionButtonTouched()
 	{
-		[SerializeField]
-		[Header("LeftTop Parts")]
-		protected Image titleImage;
+	}
 
-		[SerializeField]
-		protected Text durationText;
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		[SerializeField]
-		protected GameObject eventEndDescription;
+	protected virtual void Start()
+	{
+	}
 
-		[SerializeField]
-		[Header("General QuestButtons")]
-		protected Button questListButton;
+	protected virtual void SetDurationText()
+	{
+	}
 
-		[SerializeField]
-		protected Button multiButton;
+	public virtual void OnQuestButtonTouched()
+	{
+	}
 
-		[SerializeField]
-		[Header("Button Parent")]
-		protected GameObject buttonsParent;
+	public void OnBackButtonTouched()
+	{
+	}
 
-		[SerializeField]
-		protected GameObject buttonsParent4;
+	public void OnMultiButtonTouched()
+	{
+	}
 
-		[SerializeField]
-		[Header("ButtonCtrl")]
-		protected EventCommonButtonCtrl commonButtonCtrl;
+	private void ShowMultiJoinPopup()
+	{
+	}
 
-		[SerializeField]
-		protected EventCommonButtonCtrl commonButtonCtrl4;
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		[SerializeField]
-		[Header("work around")]
-		protected bool workaroundRefs271047;
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		protected string voiceData;
+	protected virtual void OnBeginningPopupShown()
+	{
+	}
 
-		protected void OnMissionButtonTouched()
-		{
-		}
+	public string UpdateVoiceData()
+	{
+		return null;
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	protected virtual IEnumerator WaitForStatusInfoInitilizing(AnimationPattern pattern)
+	{
+		return null;
+	}
 
-		protected virtual void Start()
-		{
-		}
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		protected virtual void SetDurationText()
-		{
-		}
+	public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
+	{
+		return default(bool);
+	}
 
-		public virtual void OnQuestButtonTouched()
-		{
-		}
+	private void GoPrepareScene(int questId, QuestAutoTransitionUtil.GuestEnterRoomFromType enterFromType)
+	{
+	}
 
-		public void OnBackButtonTouched()
-		{
-		}
-
-		public void OnMultiButtonTouched()
-		{
-		}
-
-		private void ShowMultiJoinPopup()
-		{
-		}
-
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
-
-		protected virtual void OnBeginningPopupShown()
-		{
-		}
-
-		public string UpdateVoiceData()
-		{
-			return null;
-		}
-
-		protected virtual IEnumerator WaitForStatusInfoInitilizing(AnimationPattern pattern)
-		{
-			return null;
-		}
-
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
-		{
-			return default(bool);
-		}
-
-		private void GoPrepareScene(int questId, QuestAutoTransitionUtil.GuestEnterRoomFromType enterFromType)
-		{
-		}
-
-		private void SetParentUiQuestPrepareMode()
-		{
-		}
+	private void SetParentUiQuestPrepareMode()
+	{
 	}
 }

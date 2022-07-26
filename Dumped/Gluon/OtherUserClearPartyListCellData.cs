@@ -1,9 +1,8 @@
-namespace Gluon
-{
-	public class OtherUserClearPartyListCellData
-	{
-		public int[] charaIds;
+namespace Gluon;
 
-		public int[] secondCharaIds;
-	}
+public class OtherUserClearPartyListCellData
+{
+	public int[] charaIds;
+
+	public int[] secondCharaIds;
 }

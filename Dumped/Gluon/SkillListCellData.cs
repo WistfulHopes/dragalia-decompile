@@ -1,19 +1,18 @@
-namespace Gluon
+namespace Gluon;
+
+public class SkillListCellData : CommonDualListCellData
 {
-	public class SkillListCellData : CommonDualListCellData
-	{
-		public int skillNumber;
+	public int skillNumber;
 
-		public int skillCost;
+	public int skillCost;
 
-		public bool isUnlockSkill;
+	public bool isUnlockSkill;
 
-		public bool isWeaponSkill;
+	public bool isWeaponSkill;
 
-		public bool isShowOwnerIcon;
+	public bool isShowOwnerIcon;
 
-		public bool isOverCost;
+	public bool isOverCost;
 
-		public bool IsUnuseDmodeEditSkill;
-	}
+	public bool IsUnuseDmodeEditSkill;
 }

@@ -1,40 +1,35 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharaCircleGaugeScapegoatUI : CharaCircleGaugeUI
 {
-	public class CharaCircleGaugeScapegoatUI : CharaCircleGaugeUI
+	[SerializeField]
+	protected RectTransform _oneDigitRt;
+
+	[SerializeField]
+	protected SpriteRenderer[] _countImage;
+
+	[SerializeField]
+	protected Sprite[] _countSprites;
+
+	[SerializeField]
+	private float _oneDigitAdjustPosX;
+
+	public static CharaCircleGaugeScapegoatUI Create(GameObject parent, CharacterBase owner, CharacterMarkUI markUI, float adjustPosY, int siblingIndex = -1)
 	{
-		[SerializeField]
-		[Header("component")]
-		protected RectTransform _oneDigitRt;
+		return null;
+	}
 
-		[SerializeField]
-		protected SpriteRenderer[] _countImage;
+	public override void SetCount(int count)
+	{
+	}
 
-		[SerializeField]
-		[Header("resource")]
-		protected Sprite[] _countSprites;
+	private void SetCountSprite(ref SpriteRenderer image, int count, int targetDigit)
+	{
+	}
 
-		[SerializeField]
-		[Header("parameter")]
-		[Tooltip("1æ¡\u0081è¡\u00a8ç¤ºæ\u0099\u0082ã\u0081®Xè»\u00b8èª¿æ\u0095\u00b4å\u0080¤")]
-		private float _oneDigitAdjustPosX;
-
-		public static CharaCircleGaugeScapegoatUI Create(GameObject parent, CharacterBase owner, CharacterMarkUI markUI, float adjustPosY, int siblingIndex = -1)
-		{
-			return null;
-		}
-
-		public override void SetCount(int count)
-		{
-		}
-
-		private void SetCountSprite(ref SpriteRenderer image, int count, int targetDigit)
-		{
-		}
-
-		private void SetCountSprite(ref SpriteRenderer image, int index, bool enabled)
-		{
-		}
+	private void SetCountSprite(ref SpriteRenderer image, int index, bool enabled)
+	{
 	}
 }

@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum GrowthBaseLimitBreakType
 {
-	public enum GrowthBaseLimitBreakType
-	{
-		None,
-		Target,
-		NeedMaterial,
-		Max,
-		NotReleaseRank5
-	}
+	None,
+	Target,
+	NeedMaterial,
+	Max,
+	NotReleaseRank5
 }

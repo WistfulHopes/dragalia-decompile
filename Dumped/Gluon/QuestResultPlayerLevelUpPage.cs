@@ -4,169 +4,164 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultPlayerLevelUpPage : MonoBehaviour
 {
-	public class QuestResultPlayerLevelUpPage : MonoBehaviour
+	private enum RankUpType
 	{
-		private enum RankUpType
-		{
-			RankUpOnly,
-			Upper,
-			Fort
-		}
+		RankUpOnly,
+		Upper,
+		Fort
+	}
 
-		[SerializeField]
-		[Header("Level")]
-		public Text uiBeforeLevelText;
+	[SerializeField]
+	public Text uiBeforeLevelText;
 
-		public Text uiAfterLevelText;
+	public Text uiAfterLevelText;
 
-		[SerializeField]
-		private GameObject textPanel;
+	[SerializeField]
+	private GameObject textPanel;
 
-		[SerializeField]
-		[Header("Button")]
-		public Button nextButton;
+	[SerializeField]
+	public Button nextButton;
 
-		public Text nextButtonText;
+	public Text nextButtonText;
 
-		[SerializeField]
-		[Header("Animation")]
-		public Transform lowerPanel;
+	[SerializeField]
+	public Transform lowerPanel;
 
-		public Transform nextButtonPanel;
+	public Transform nextButtonPanel;
 
-		[SerializeField]
-		[Header("ViewSizeAdjust")]
-		private RectTransform wholeFrameRectTrans;
+	[SerializeField]
+	private RectTransform wholeFrameRectTrans;
 
-		[SerializeField]
-		private float wholeFrameVerticalSpacing;
+	[SerializeField]
+	private float wholeFrameVerticalSpacing;
 
-		[SerializeField]
-		private float wholeFrameHeightMax;
+	[SerializeField]
+	private float wholeFrameHeightMax;
 
-		[SerializeField]
-		private RectTransform viewFrameRectTrans;
+	[SerializeField]
+	private RectTransform viewFrameRectTrans;
 
-		[SerializeField]
-		private float viewFrameHeightMax;
+	[SerializeField]
+	private float viewFrameHeightMax;
 
-		[SerializeField]
-		private int maxRowCount;
+	[SerializeField]
+	private int maxRowCount;
 
-		[SerializeField]
-		private GameObject[] validViewObjs;
+	[SerializeField]
+	private GameObject[] validViewObjs;
 
-		[HideInInspector]
-		public Action onCloseDone;
+	[HideInInspector]
+	public Action onCloseDone;
 
-		[SerializeField]
-		private Canvas levelUpCanvasObj;
+	[SerializeField]
+	private Canvas levelUpCanvasObj;
 
-		[SerializeField]
-		private GameObject flashCanvasObj;
+	[SerializeField]
+	private GameObject flashCanvasObj;
 
-		private GridLayoutGroup gridLayoutGroup;
+	private GridLayoutGroup gridLayoutGroup;
 
-		[SerializeField]
-		private Canvas questResultPlayerLevelUpTopCanvas;
+	[SerializeField]
+	private Canvas questResultPlayerLevelUpTopCanvas;
 
-		[SerializeField]
-		private GameObject fortObject;
+	[SerializeField]
+	private GameObject fortObject;
 
-		[SerializeField]
-		private QuestResultRankUpRewardController fortTableViewCrl;
+	[SerializeField]
+	private QuestResultRankUpRewardController fortTableViewCrl;
 
-		[SerializeField]
-		private GameObject friendObject;
+	[SerializeField]
+	private GameObject friendObject;
 
-		[SerializeField]
-		private Text beforeFriendText;
+	[SerializeField]
+	private Text beforeFriendText;
 
-		[SerializeField]
-		private Text afterFriendText;
+	[SerializeField]
+	private Text afterFriendText;
 
-		[SerializeField]
-		private GameObject staminaObject;
+	[SerializeField]
+	private GameObject staminaObject;
 
-		[SerializeField]
-		private Text beforeStaminaText;
+	[SerializeField]
+	private Text beforeStaminaText;
 
-		[SerializeField]
-		private Text afterStaminaText;
+	[SerializeField]
+	private Text afterStaminaText;
 
-		[SerializeField]
-		private GameObject upperBonusObject;
+	[SerializeField]
+	private GameObject upperBonusObject;
 
-		[SerializeField]
-		private Transform commonIconTrans;
+	[SerializeField]
+	private Transform commonIconTrans;
 
-		[SerializeField]
-		private RectTransform popupBackGroundTrans;
+	[SerializeField]
+	private RectTransform popupBackGroundTrans;
 
-		private UnityEvent backKeyEvent;
+	private UnityEvent backKeyEvent;
 
-		private const int popupHeightL = 808;
+	private const int popupHeightL = 808;
 
-		private const int popupHeightM = 400;
+	private const int popupHeightM = 400;
 
-		private const int popupHeightS = 270;
+	private const int popupHeightS = 270;
 
-		private const string seLvUpSlideOut = "SE_OUT_COMMON_0035";
+	private const string seLvUpSlideOut = "SE_OUT_COMMON_0035";
 
-		private RankUpType rankUpType;
+	private RankUpType rankUpType;
 
-		private FlashPlayer flashPlayer;
+	private FlashPlayer flashPlayer;
 
-		public QuestResultScene sceneObj
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public static QuestResultPlayerLevelUpPage Create(Transform parent, Action onCloseDone)
+	public QuestResultScene sceneObj
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public void InitByData(int toLevel)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void Awake()
-		{
-		}
+	public static QuestResultPlayerLevelUpPage Create(Transform parent, Action onCloseDone)
+	{
+		return null;
+	}
 
-		public void OnCloseButtonClicked()
-		{
-		}
+	public void InitByData(int toLevel)
+	{
+	}
 
-		private void DoRankupPanelAnimation()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void PlayLevelUpPanelAnimation(int toLevel)
-		{
-		}
+	public void OnCloseButtonClicked()
+	{
+	}
 
-		private void OnFadeInAnimation()
-		{
-		}
+	private void DoRankupPanelAnimation()
+	{
+	}
 
-		private void OnFadeOutAnimation()
-		{
-		}
+	public void PlayLevelUpPanelAnimation(int toLevel)
+	{
+	}
 
-		private void ViewSizeAdjust()
-		{
-		}
+	private void OnFadeInAnimation()
+	{
+	}
+
+	private void OnFadeOutAnimation()
+	{
+	}
+
+	private void ViewSizeAdjust()
+	{
 	}
 }

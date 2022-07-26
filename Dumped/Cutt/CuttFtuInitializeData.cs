@@ -1,34 +1,33 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttFtuInitializeData
 {
-	[Serializable]
-	public class CuttFtuInitializeData
+	public enum ObjectType
 	{
-		public enum ObjectType
-		{
-			Text,
-			Texture
-		}
+		Text,
+		Texture
+	}
 
-		public enum Conditions
-		{
-			Fixed,
-			Difficulty
-		}
+	public enum Conditions
+	{
+		Fixed,
+		Difficulty
+	}
 
-		public int characterIndex;
+	public int characterIndex;
 
-		public ObjectType type;
+	public ObjectType type;
 
-		public string targetObjectName;
+	public string targetObjectName;
 
-		public Conditions conditions;
+	public Conditions conditions;
 
-		public string[] dataString;
+	public string[] dataString;
 
-		public CuttFtuInitializeData(ObjectType type, string targetObjectName, Conditions conditions, string[] array)
-		{
-		}
+	public CuttFtuInitializeData(ObjectType type, string targetObjectName, Conditions conditions, string[] array)
+	{
 	}
 }

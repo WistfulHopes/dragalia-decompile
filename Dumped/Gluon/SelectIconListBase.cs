@@ -2,36 +2,35 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SelectIconListBase : CommonIconListBase
 {
-	public class SelectIconListBase : CommonIconListBase
+	public UnityAction tabButtonCallBack;
+
+	public Button decideButton;
+
+	public TabBase tab;
+
+	public RectTransform lockButtonBase;
+
+	private void Start()
 	{
-		public UnityAction tabButtonCallBack;
+	}
 
-		public Button decideButton;
+	public void ListTabPressedZeroToOne(int index)
+	{
+	}
 
-		public TabBase tab;
+	public void ListTabPressed(int tabTag)
+	{
+	}
 
-		public RectTransform lockButtonBase;
+	public void LockCharacterTab(bool interactable)
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		public void ListTabPressedZeroToOne(int index)
-		{
-		}
-
-		public void ListTabPressed(int tabTag)
-		{
-		}
-
-		public void LockCharacterTab(bool interactable)
-		{
-		}
-
-		private void CheckTutorial()
-		{
-		}
+	private void CheckTutorial()
+	{
 	}
 }

@@ -2,63 +2,62 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SamplingCPU : MonoBehaviour
 {
-	public class SamplingCPU : MonoBehaviour
+	private class CpuInfo
 	{
-		private class CpuInfo
-		{
-			public int cpuMaxFreq;
+		public int cpuMaxFreq;
 
-			public int cpuMinFreq;
+		public int cpuMinFreq;
 
-			public int scalingCurFreq;
+		public int scalingCurFreq;
 
-			public string coreNoList;
-		}
+		public string coreNoList;
+	}
 
-		[SerializeField]
-		private float _samplingMargin;
+	[SerializeField]
+	private float _samplingMargin;
 
-		[SerializeField]
-		private Text outputText;
+	[SerializeField]
+	private Text outputText;
 
-		private List<CpuInfo> _cpuInfo;
+	private List<CpuInfo> _cpuInfo;
 
-		private float _nowCount;
+	private float _nowCount;
 
-		private void CheckActive()
-		{
-		}
+	private void CheckActive()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void SamplingAllData()
-		{
-		}
+	private void SamplingAllData()
+	{
+	}
 
-		private bool ReadAllLines(string path, out string[] arrText, int retrycount = 10)
-		{
-			return default(bool);
-		}
+	private bool ReadAllLines(string path, out string[] arrText, int retrycount = 10)
+	{
+		return default(bool);
+	}
 
-		private void SamplingCurrentData()
-		{
-		}
+	private void SamplingCurrentData()
+	{
+	}
 
-		private string Freq2Text(int freq)
-		{
-			return null;
-		}
+	private string Freq2Text(int freq)
+	{
+		return null;
+	}
 
-		private void CreateText()
-		{
-		}
+	private void CreateText()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
 	}
 }

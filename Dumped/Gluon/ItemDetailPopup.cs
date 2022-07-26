@@ -1,97 +1,94 @@
 using Cute.Http;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ItemDetailPopup : CommonPopup
 {
-	public class ItemDetailPopup : CommonPopup
+	public enum ShowType
 	{
-		public enum ShowType
-		{
-			MenuItemList,
-			Other
-		}
+		MenuItemList,
+		Other
+	}
 
-		public ItemListPopup itemListPopup;
+	public ItemListPopup itemListPopup;
 
-		[SerializeField]
-		private CommonIcon itemIcon;
+	[SerializeField]
+	private CommonIcon itemIcon;
 
-		[SerializeField]
-		private Text itemNameText;
+	[SerializeField]
+	private Text itemNameText;
 
-		[SerializeField]
-		[FormerlySerializedAs("discriptionText")]
-		private Text descriptionText;
+	[SerializeField]
+	private Text descriptionText;
 
-		[SerializeField]
-		private Text dateText;
+	[SerializeField]
+	private Text dateText;
 
-		[SerializeField]
-		private Text overLimitWarningText;
+	[SerializeField]
+	private Text overLimitWarningText;
 
-		[SerializeField]
-		private GameObject normalObj;
+	[SerializeField]
+	private GameObject normalObj;
 
-		[SerializeField]
-		private GameObject tradeObj;
+	[SerializeField]
+	private GameObject tradeObj;
 
-		[SerializeField]
-		private Button questButton;
+	[SerializeField]
+	private Button questButton;
 
-		private const string prefabPath = "Prefabs/OutGame/Item/ItemDetailPopup";
+	private const string prefabPath = "Prefabs/OutGame/Item/ItemDetailPopup";
 
-		private int useLimit;
+	private int useLimit;
 
-		private int itemId;
+	private int itemId;
 
-		public static ItemDetailPopup Create()
-		{
-			return null;
-		}
+	public static ItemDetailPopup Create()
+	{
+		return null;
+	}
 
-		public void InitSetting(GiftType giftType, int itemId, bool isBackList = true, bool isInInventory = true, bool isShowNumberOwned = false, bool canTrade = false, bool enableChangeScene = true, ShowType showType = ShowType.Other)
-		{
-		}
+	public void InitSetting(GiftType giftType, int itemId, bool isBackList = true, bool isInInventory = true, bool isShowNumberOwned = false, bool canTrade = false, bool enableChangeScene = true, ShowType showType = ShowType.Other)
+	{
+	}
 
-		public void InitWithShopSpecialIconSetting(ShopCommonIcon.SpecialIconSetting specialIcon)
-		{
-		}
+	public void InitWithShopSpecialIconSetting(ShopCommonIcon.SpecialIconSetting specialIcon)
+	{
+	}
 
-		private UnityAction SetupMaterialPopup(GiftType giftType, int itemId, string itemName, string detail, string description, DetailLinkType detailLinkType, int[] moveQuests, bool isInInventory = true)
-		{
-			return null;
-		}
+	private UnityAction SetupMaterialPopup(GiftType giftType, int itemId, string itemName, string detail, string description, DetailLinkType detailLinkType, int[] moveQuests, bool isInInventory = true)
+	{
+		return null;
+	}
 
-		public void SetUseLimitText(int useLimit)
-		{
-		}
+	public void SetUseLimitText(int useLimit)
+	{
+	}
 
-		public override void OnOkButtonPressed()
-		{
-		}
+	public override void OnOkButtonPressed()
+	{
+	}
 
-		public void OnFetchFromTradeButtonPressed()
-		{
-		}
+	public void OnFetchFromTradeButtonPressed()
+	{
+	}
 
-		private void OnError(ErrorType errorType, int resultCode)
-		{
-		}
+	private void OnError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		private void LoadSceneShopTrade(ShopTradeModel.PanelType nextPanel)
-		{
-		}
+	private void LoadSceneShopTrade(ShopTradeModel.PanelType nextPanel)
+	{
+	}
 
-		private bool IsUseLimitOver()
-		{
-			return default(bool);
-		}
+	private bool IsUseLimitOver()
+	{
+		return default(bool);
+	}
 
-		public void SetItemCount(int count)
-		{
-		}
+	public void SetItemCount(int count)
+	{
 	}
 }

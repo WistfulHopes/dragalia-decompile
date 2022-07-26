@@ -3,53 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TradeMaterialItemRaidWeaponConfirmPopup : TradeMaterialItemConfirmPopup
 {
-	public class TradeMaterialItemRaidWeaponConfirmPopup : TradeMaterialItemConfirmPopup
+	public enum LimitBreakSpriteIndex
 	{
-		public enum LimitBreakSpriteIndex
-		{
-			Off,
-			On,
-			Max
-		}
+		Off,
+		On,
+		Max
+	}
 
-		[SerializeField]
-		[Header("RaidWeapon")]
-		public Text hpText;
+	[SerializeField]
+	public Text hpText;
 
-		public Text atkText;
+	public Text atkText;
 
-		[SerializeField]
-		[Header("LimitBreak")]
-		public Sprite[] limitBreakStateSprites;
+	[SerializeField]
+	public Sprite[] limitBreakStateSprites;
 
-		public Image[] limitBreakImages;
+	public Image[] limitBreakImages;
 
-		[SerializeField]
-		[Header("SkillAbilities")]
-		public Image[] skillAbilityIcons;
+	[SerializeField]
+	public Image[] skillAbilityIcons;
 
-		public Text[] skillAbilityNames;
+	public Text[] skillAbilityNames;
 
-		public GameObject[] skillAbilitySingleLines;
+	public GameObject[] skillAbilitySingleLines;
 
-		private List<Action> onIconTouchedCallbacks;
+	private List<Action> onIconTouchedCallbacks;
 
-		public void OnSkillAbilityPressed(int i)
-		{
-		}
+	public void OnSkillAbilityPressed(int i)
+	{
+	}
 
-		public void OnTradeButtonPressed()
-		{
-		}
+	public void OnTradeButtonPressed()
+	{
+	}
 
-		protected override void OnTradeDone()
-		{
-		}
+	protected override void OnTradeDone()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
 	}
 }

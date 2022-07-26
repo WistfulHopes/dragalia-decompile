@@ -1,41 +1,40 @@
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineMotionSequence
 {
-	public class CuttTimelineMotionSequence
+	private ICuttTimelineMSQTarget _target;
+
+	private Animation _animation;
+
+	private CuttTimelineKeyCharaMotionSeqDataList _keys;
+
+	private int _indexOfPlayingKeyA;
+
+	private int _indexOfPlayingKeyB;
+
+	private CuttTimelineControl _timelineControl;
+
+	public void Initialize(ICuttTimelineMSQTarget target, CuttTimelineKeyCharaMotionSeqDataList keys, CuttTimelineControl timelineControl)
 	{
-		private ICuttTimelineMSQTarget _target;
+	}
 
-		private Animation _animation;
+	private bool SetupAnimationClip(CuttTimelineKeyCharaMotionData key)
+	{
+		return default(bool);
+	}
 
-		private CuttTimelineKeyCharaMotionSeqDataList _keys;
+	private void FindPlayingMot(out CuttTimelineKeyCharaMotionData a, out CuttTimelineKeyCharaMotionData b, out CuttTimelineKeyCharaMotionData lastKey, out int indexA, out int indexB, float t, float spf)
+	{
+	}
 
-		private int _indexOfPlayingKeyA;
+	public void AlterUpdate(float currentTime, float targetFps)
+	{
+	}
 
-		private int _indexOfPlayingKeyB;
-
-		private CuttTimelineControl _timelineControl;
-
-		public void Initialize(ICuttTimelineMSQTarget target, CuttTimelineKeyCharaMotionSeqDataList keys, CuttTimelineControl timelineControl)
-		{
-		}
-
-		private bool SetupAnimationClip(CuttTimelineKeyCharaMotionData key)
-		{
-			return default(bool);
-		}
-
-		private void FindPlayingMot(out CuttTimelineKeyCharaMotionData a, out CuttTimelineKeyCharaMotionData b, out CuttTimelineKeyCharaMotionData lastKey, out int indexA, out int indexB, float t, float spf)
-		{
-		}
-
-		public void AlterUpdate(float currentTime, float targetFps)
-		{
-		}
-
-		private AnimationState GetAnimationState(CuttTimelineKeyCharaMotionData key)
-		{
-			return null;
-		}
+	private AnimationState GetAnimationState(CuttTimelineKeyCharaMotionData key)
+	{
+		return null;
 	}
 }

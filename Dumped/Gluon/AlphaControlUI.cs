@@ -4,46 +4,44 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlphaControlUI : MonoBehaviour
 {
-	public class AlphaControlUI : MonoBehaviour
+	public enum Mode
 	{
-		public enum Mode
-		{
-			UpdateCanvasGroup,
-			UpdateGraphicColor
-		}
+		UpdateCanvasGroup,
+		UpdateGraphicColor
+	}
 
-		[SerializeField]
-		[Header("parameter")]
-		private Mode mode;
+	[SerializeField]
+	private Mode mode;
 
-		private CanvasGroup canvasGroupCompo;
+	private CanvasGroup canvasGroupCompo;
 
-		private Graphic graphicCompo;
+	private Graphic graphicCompo;
 
-		private Tweener tweener;
+	private Tweener tweener;
 
-		private Action<AlphaControlUI> func;
+	private Action<AlphaControlUI> func;
 
-		public void Initialize()
-		{
-		}
+	public void Initialize()
+	{
+	}
 
-		public void Alpha(float startAlpha, float endAlpha, Ease ease, float t, float delay, [Optional] Action<AlphaControlUI> func)
-		{
-		}
+	public void Alpha(float startAlpha, float endAlpha, Ease ease, float t, float delay, [Optional] Action<AlphaControlUI> func)
+	{
+	}
 
-		public void SetAction(Action<AlphaControlUI> func)
-		{
-		}
+	public void SetAction(Action<AlphaControlUI> func)
+	{
+	}
 
-		private void OnUpdateAlpha(float value)
-		{
-		}
+	private void OnUpdateAlpha(float value)
+	{
+	}
 
-		private void OnCompleteAlpha()
-		{
-		}
+	private void OnCompleteAlpha()
+	{
 	}
 }

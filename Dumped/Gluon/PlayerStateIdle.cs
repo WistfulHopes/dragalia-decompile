@@ -1,18 +1,17 @@
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateIdle : PlayerStateBase
 {
-	public class PlayerStateIdle : PlayerStateBase
+	public override void OnStateEnter()
 	{
-		public override void OnStateEnter()
-		{
-		}
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateUpdate()
+	{
+	}
 
-		protected override bool CheckMove()
-		{
-			return default(bool);
-		}
+	protected override bool CheckMove()
+	{
+		return default(bool);
 	}
 }

@@ -7,219 +7,217 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildChatView : MonoBehaviour
 {
-	public class GuildChatView : MonoBehaviour
+	[SerializeField]
+	private GuildChatTableViewController tableView;
+
+	[SerializeField]
+	private DragEventScrollRect scrolRect;
+
+	[SerializeField]
+	public CustomInputField textField;
+
+	[SerializeField]
+	private Button sendButton;
+
+	[SerializeField]
+	private GameObject pageDownButton;
+
+	[SerializeField]
+	private float pageDownTimeMinimum;
+
+	[SerializeField]
+	private float pageDownTimeMagnification;
+
+	[SerializeField]
+	private Ease pageDownEaseType;
+
+	[SerializeField]
+	private float newChatAppearTime;
+
+	[SerializeField]
+	private Ease newChatAppearEaseType;
+
+	[SerializeField]
+	private float scrollBottomSpace;
+
+	[SerializeField]
+	private float pageDownButtonSpace;
+
+	[SerializeField]
+	private GameObject loadingObject;
+
+	[SerializeField]
+	private GameObject newMessageObject;
+
+	private float pollChatInterval;
+
+	private MatchingStampPopup stampPopup;
+
+	private GuildChatModel guildChatModel;
+
+	private float pollingIntervalCount;
+
+	private bool isPollingEnable;
+
+	private bool isViewingLatestChat;
+
+	private Tweener scrollTweener;
+
+	private readonly string stampVoice;
+
+	private bool isOpenStampPopup;
+
+	private bool isLoading;
+
+	private Canvas _canvas;
+
+	[SerializeField]
+	private List<GuildChatModel.ContentType> enableContentType
 	{
-		[SerializeField]
-		[Header("TableView")]
-		private GuildChatTableViewController tableView;
-
-		[SerializeField]
-		private DragEventScrollRect scrolRect;
-
-		[SerializeField]
-		public CustomInputField textField;
-
-		[SerializeField]
-		private Button sendButton;
-
-		[SerializeField]
-		private GameObject pageDownButton;
-
-		[SerializeField]
-		private float pageDownTimeMinimum;
-
-		[SerializeField]
-		private float pageDownTimeMagnification;
-
-		[SerializeField]
-		private Ease pageDownEaseType;
-
-		[SerializeField]
-		private float newChatAppearTime;
-
-		[SerializeField]
-		private Ease newChatAppearEaseType;
-
-		[SerializeField]
-		private float scrollBottomSpace;
-
-		[SerializeField]
-		private float pageDownButtonSpace;
-
-		[SerializeField]
-		private GameObject loadingObject;
-
-		[SerializeField]
-		private GameObject newMessageObject;
-
-		private float pollChatInterval;
-
-		private MatchingStampPopup stampPopup;
-
-		private GuildChatModel guildChatModel;
-
-		private float pollingIntervalCount;
-
-		private bool isPollingEnable;
-
-		private bool isViewingLatestChat;
-
-		private Tweener scrollTweener;
-
-		private readonly string stampVoice;
-
-		private bool isOpenStampPopup;
-
-		private bool isLoading;
-
-		private Canvas _canvas;
-
-		[SerializeField]
-		private List<GuildChatModel.ContentType> enableContentType
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		private Canvas canvas => null;
-
-		public static GuildChatView Create(Transform parent, List<GuildChatModel.ContentType> filter)
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void Update()
-		{
-		}
+	private Canvas canvas => null;
 
-		private void ResetPollingIntervalCount()
-		{
-		}
+	public static GuildChatView Create(Transform parent, List<GuildChatModel.ContentType> filter)
+	{
+		return null;
+	}
 
-		private bool IsExistPopup()
-		{
-			return default(bool);
-		}
+	private void Start()
+	{
+	}
 
-		private void PollChat()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void GetPastLog()
-		{
-		}
+	private void ResetPollingIntervalCount()
+	{
+	}
 
-		public void StartPoling()
-		{
-		}
+	private bool IsExistPopup()
+	{
+		return default(bool);
+	}
 
-		public void StopPoling()
-		{
-		}
+	private void PollChat()
+	{
+	}
 
-		public void PostChat(string text, [Optional] Action onSucsess)
-		{
-		}
+	private void GetPastLog()
+	{
+	}
 
-		public void PostStamp(int stampId)
-		{
-		}
+	public void StartPoling()
+	{
+	}
 
-		private void LoadChat(bool isNew, bool isFirst = false, bool isDisplayNewMessage = true)
-		{
-		}
+	public void StopPoling()
+	{
+	}
 
-		private void RefreshChat(bool isNew, bool isFirst = false)
-		{
-		}
+	public void PostChat(string text, [Optional] Action onSucsess)
+	{
+	}
 
-		private void UpdateTableView(bool isNew, bool isFirst)
-		{
-		}
+	public void PostStamp(int stampId)
+	{
+	}
 
-		private IEnumerator UpdateTableViewAfterAnimation(bool isNew, bool isFirst)
-		{
-			return null;
-		}
+	private void LoadChat(bool isNew, bool isFirst = false, bool isDisplayNewMessage = true)
+	{
+	}
 
-		public void OnStampButtonPressed()
-		{
-		}
+	private void RefreshChat(bool isNew, bool isFirst = false)
+	{
+	}
 
-		private void OnClickStamp(int stampId)
-		{
-		}
+	private void UpdateTableView(bool isNew, bool isFirst)
+	{
+	}
 
-		public void OnSendButtonPressed()
-		{
-		}
+	private IEnumerator UpdateTableViewAfterAnimation(bool isNew, bool isFirst)
+	{
+		return null;
+	}
 
-		private void UpdateSendButton()
-		{
-		}
+	public void OnStampButtonPressed()
+	{
+	}
 
-		private void CheckViewingLatestChatFlag()
-		{
-		}
+	private void OnClickStamp(int stampId)
+	{
+	}
 
-		private void CheckPageDownButtonActive()
-		{
-		}
+	public void OnSendButtonPressed()
+	{
+	}
 
-		private void SetPageDownButtonActive(bool isActive)
-		{
-		}
+	private void UpdateSendButton()
+	{
+	}
 
-		public IEnumerator StartScrollDown()
-		{
-			return null;
-		}
+	private void CheckViewingLatestChatFlag()
+	{
+	}
 
-		public void OnPageDownPressed()
-		{
-		}
+	private void CheckPageDownButtonActive()
+	{
+	}
 
-		private Tweener GetScrollTweener(Ease ease, float time)
-		{
-			return null;
-		}
+	private void SetPageDownButtonActive(bool isActive)
+	{
+	}
 
-		private void KillScrollTweener()
-		{
-		}
+	public IEnumerator StartScrollDown()
+	{
+		return null;
+	}
 
-		private bool IsTween()
-		{
-			return default(bool);
-		}
+	public void OnPageDownPressed()
+	{
+	}
 
-		private void SetLoadingObject(bool isActive)
-		{
-		}
+	private Tweener GetScrollTweener(Ease ease, float time)
+	{
+		return null;
+	}
 
-		private void SetNewMessageObject(bool isActive)
-		{
-		}
+	private void KillScrollTweener()
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private bool IsTween()
+	{
+		return default(bool);
+	}
 
-		public void OnValueChangedChatMessage(string text)
-		{
-		}
+	private void SetLoadingObject(bool isActive)
+	{
+	}
+
+	private void SetNewMessageObject(bool isActive)
+	{
+	}
+
+	private void OnDestroy()
+	{
+	}
+
+	public void OnValueChangedChatMessage(string text)
+	{
 	}
 }

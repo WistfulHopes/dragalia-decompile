@@ -1,27 +1,26 @@
-namespace Gluon
+namespace Gluon;
+
+public class DmodeDungeonDropItemParam
 {
-	public class DmodeDungeonDropItemParam
+	public int instanceId;
+
+	public int dataId;
+
+	private DmodeDungeonDropItemParam()
 	{
-		public int instanceId;
+	}
 
-		public int dataId;
+	public DmodeDungeonDropItemParam(int instanceId, int dataId)
+	{
+	}
 
-		private DmodeDungeonDropItemParam()
-		{
-		}
+	public DmodeDungeonItemType GetItemType()
+	{
+		return default(DmodeDungeonItemType);
+	}
 
-		public DmodeDungeonDropItemParam(int instanceId, int dataId)
-		{
-		}
-
-		public DmodeDungeonItemType GetItemType()
-		{
-			return default(DmodeDungeonItemType);
-		}
-
-		public int GetRarity()
-		{
-			return default(int);
-		}
+	public int GetRarity()
+	{
+		return default(int);
 	}
 }

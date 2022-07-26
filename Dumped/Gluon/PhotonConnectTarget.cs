@@ -1,29 +1,28 @@
-namespace Gluon
+namespace Gluon;
+
+public static class PhotonConnectTarget
 {
-	public static class PhotonConnectTarget
+	public enum ServiceTypes
 	{
-		public enum ServiceTypes
-		{
-			PhotonServer,
-			PhotonEnterpriseClound
-		}
+		PhotonServer,
+		PhotonEnterpriseClound
+	}
 
-		private struct ConnectTargetData
-		{
-			public ServiceTypes Type;
+	private struct ConnectTargetData
+	{
+		public ServiceTypes Type;
 
-			public string Target;
-		}
+		public string Target;
+	}
 
-		public static ServiceTypes ServiceType => default(ServiceTypes);
+	public static ServiceTypes ServiceType => default(ServiceTypes);
 
-		public static string PhotonServerAddress => null;
+	public static string PhotonServerAddress => null;
 
-		public static string PhotonCloudAppId => null;
+	public static string PhotonCloudAppId => null;
 
-		private static ConnectTargetData GetConnectTargetData()
-		{
-			return default(ConnectTargetData);
-		}
+	private static ConnectTargetData GetConnectTargetData()
+	{
+		return default(ConnectTargetData);
 	}
 }

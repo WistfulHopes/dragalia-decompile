@@ -1,27 +1,26 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonButton : MonoBehaviour
 {
-	public class SummonButton : MonoBehaviour
+	public SummonTopItemData.ButtonType buttonType;
+
+	[HideInInspector]
+	public SummonTopItemView itemView;
+
+	[SerializeField]
+	private GameObject priceText;
+
+	private void Start()
 	{
-		public SummonTopItemData.ButtonType buttonType;
+	}
 
-		[HideInInspector]
-		public SummonTopItemView itemView;
+	public void OnPress()
+	{
+	}
 
-		[SerializeField]
-		private GameObject priceText;
-
-		private void Start()
-		{
-		}
-
-		public void OnPress()
-		{
-		}
-
-		public void SetInteractable(bool value)
-		{
-		}
+	public void SetInteractable(bool value)
+	{
 	}
 }

@@ -1,78 +1,76 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ODCounterMarkUI : CharacterMarkUI
 {
-	public class ODCounterMarkUI : CharacterMarkUI
+	[SerializeField]
+	private RectTransform _rootRt;
+
+	[SerializeField]
+	private RectTransform _animRt;
+
+	[SerializeField]
+	private SpriteRenderer _iconImage;
+
+	[SerializeField]
+	private SpriteRenderer _arrowImage;
+
+	private VisibleUIObject _rootVisible;
+
+	private RectTransform _iconRt;
+
+	private RectTransform _arrowRt;
+
+	private Vector3 _targetPos;
+
+	private Vector2 _adjustPos2D;
+
+	private Sequence _animSeq;
+
+	private Sequence _iconLoopAnimSeq;
+
+	private Sequence _arrowLoopAnimSeq;
+
+	public void Initialize()
 	{
-		[SerializeField]
-		[Header("component")]
-		private RectTransform _rootRt;
+	}
 
-		[SerializeField]
-		private RectTransform _animRt;
+	private void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		private SpriteRenderer _iconImage;
+	public void Show(Vector3 pos, Vector2 adjustPos2D)
+	{
+	}
 
-		[SerializeField]
-		private SpriteRenderer _arrowImage;
+	public void Hide()
+	{
+	}
 
-		private VisibleUIObject _rootVisible;
+	public override bool IsVisible()
+	{
+		return default(bool);
+	}
 
-		private RectTransform _iconRt;
+	private void LateUpdate()
+	{
+	}
 
-		private RectTransform _arrowRt;
+	public void SetPosition(Vector3 pos, Vector2 adjustPos2D)
+	{
+	}
 
-		private Vector3 _targetPos;
+	public override void UpdatePosition(bool interpolation = true)
+	{
+	}
 
-		private Vector2 _adjustPos2D;
+	private void PlayShowAnim()
+	{
+	}
 
-		private Sequence _animSeq;
-
-		private Sequence _iconLoopAnimSeq;
-
-		private Sequence _arrowLoopAnimSeq;
-
-		public void Initialize()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public void Show(Vector3 pos, Vector2 adjustPos2D)
-		{
-		}
-
-		public void Hide()
-		{
-		}
-
-		public override bool IsVisible()
-		{
-			return default(bool);
-		}
-
-		private void LateUpdate()
-		{
-		}
-
-		public void SetPosition(Vector3 pos, Vector2 adjustPos2D)
-		{
-		}
-
-		public override void UpdatePosition(bool interpolation = true)
-		{
-		}
-
-		private void PlayShowAnim()
-		{
-		}
-
-		private void PlayLoopAnim()
-		{
-		}
+	private void PlayLoopAnim()
+	{
 	}
 }

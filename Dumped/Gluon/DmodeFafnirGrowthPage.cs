@@ -1,34 +1,33 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeFafnirGrowthPage : DmodePageBase, ICustomMessage
 {
-	public class DmodeFafnirGrowthPage : DmodePageBase, ICustomMessage
+	[SerializeField]
+	private DmodeServitorPassiveListController abilityListCtrl;
+
+	public override void OnPageBecomeActive(object data)
 	{
-		[SerializeField]
-		private DmodeServitorPassiveListController abilityListCtrl;
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
+	private void OnBackButtonTouched()
+	{
+	}
 
-		private void OnBackButtonTouched()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		private void OnEnable()
-		{
-		}
+	private void OnDisable()
+	{
+	}
 
-		private void OnDisable()
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

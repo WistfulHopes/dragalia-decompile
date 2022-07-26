@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsTanatosHit : ActionPartsHit
 {
-	public class ActionPartsTanatosHit : ActionPartsHit
+	private readonly TanatosHitData _partsData;
+
+	private bool _hitFlag;
+
+	private int _difficultyIndex;
+
+	public ActionPartsTanatosHit(Gluon.ActionData.ActionParts resource, long resourceId)
 	{
-		private readonly TanatosHitData _partsData;
+	}
 
-		private bool _hitFlag;
+	protected override void OnStart()
+	{
+	}
 
-		private int _difficultyIndex;
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public ActionPartsTanatosHit(Gluon.ActionData.ActionParts resource, long resourceId)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		public override void OnCollided(GameObject target, bool isPropagation)
-		{
-		}
+	public override void OnCollided(GameObject target, bool isPropagation)
+	{
 	}
 }

@@ -1,57 +1,56 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ManaCircle2DCirclePieceObject : ManaCircle2DCirclePieceBase
 {
-	public class ManaCircle2DCirclePieceObject : ManaCircle2DCirclePieceBase
+	public enum PieceIconType
 	{
-		public enum PieceIconType
-		{
-			None,
-			StatusUp_Hp,
-			StatusUp_Atk,
-			Burstattack_Get,
-			Burstattack_Upgrade,
-			StatusUp_HpAtk,
-			CharaStory,
-			Advanced_Training,
-			Unbind_Level,
-			Material_Get
-		}
+		None,
+		StatusUp_Hp,
+		StatusUp_Atk,
+		Burstattack_Get,
+		Burstattack_Upgrade,
+		StatusUp_HpAtk,
+		CharaStory,
+		Advanced_Training,
+		Unbind_Level,
+		Material_Get
+	}
 
-		public Action<GrowthManaCircleManaPieceData, PieceState> onIconPressedCallBack;
+	public Action<GrowthManaCircleManaPieceData, PieceState> onIconPressedCallBack;
 
-		public GrowthManaCircleManaPieceData pieceData;
+	public GrowthManaCircleManaPieceData pieceData;
 
-		public virtual void SetupNormalPiece(int pieceIndex)
-		{
-		}
+	public virtual void SetupNormalPiece(int pieceIndex)
+	{
+	}
 
-		public override void UpdatePieceState()
-		{
-		}
+	public override void UpdatePieceState()
+	{
+	}
 
-		protected override void PieceIconPressedCallBack()
-		{
-		}
+	protected override void PieceIconPressedCallBack()
+	{
+	}
 
-		protected void SetupPieceImage()
-		{
-		}
+	protected void SetupPieceImage()
+	{
+	}
 
-		private PieceIconType GetPieceIconType(ManaPieceType pieceType)
-		{
-			return default(PieceIconType);
-		}
+	private PieceIconType GetPieceIconType(ManaPieceType pieceType)
+	{
+		return default(PieceIconType);
+	}
 
-		protected Material GetIconMaterial(GrowthManaCircleManaPieceData data)
-		{
-			return null;
-		}
+	protected Material GetIconMaterial(GrowthManaCircleManaPieceData data)
+	{
+		return null;
+	}
 
-		protected int GetExAbilityDewPoint(GrowthManaCircleManaPieceData pieceData)
-		{
-			return default(int);
-		}
+	protected int GetExAbilityDewPoint(GrowthManaCircleManaPieceData pieceData)
+	{
+		return default(int);
 	}
 }

@@ -1,13 +1,12 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BlankQuitScene : MonoBehaviour
 {
-	public class BlankQuitScene : MonoBehaviour
+	private IEnumerator Start()
 	{
-		private IEnumerator Start()
-		{
-			return null;
-		}
+		return null;
 	}
 }

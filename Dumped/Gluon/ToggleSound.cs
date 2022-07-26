@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class ToggleSound : ButtonSound
 {
-	public class ToggleSound : ButtonSound
+	public SEType offSEType;
+
+	private void Awake()
 	{
-		public SEType offSEType;
+	}
 
-		private void Awake()
-		{
-		}
-
-		private void PlaySEByStatus(bool bOn)
-		{
-		}
+	private void PlaySEByStatus(bool bOn)
+	{
 	}
 }

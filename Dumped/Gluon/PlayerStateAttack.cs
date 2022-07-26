@@ -1,45 +1,44 @@
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateAttack : PlayerStateBase
 {
-	public class PlayerStateAttack : PlayerStateBase
+	private bool isReserveBurst;
+
+	private bool voicePlayed;
+
+	private bool checkAutoBurst;
+
+	private int additionalInputCount;
+
+	protected override bool NeedsUpdateLastWakeOnCollidedTime()
 	{
-		private bool isReserveBurst;
+		return default(bool);
+	}
 
-		private bool voicePlayed;
+	public override void OnStateEnter()
+	{
+	}
 
-		private bool checkAutoBurst;
+	public override void OnStateUpdate()
+	{
+	}
 
-		private int additionalInputCount;
+	private bool CheckBurstAttack()
+	{
+		return default(bool);
+	}
 
-		protected override bool NeedsUpdateLastWakeOnCollidedTime()
-		{
-			return default(bool);
-		}
+	protected override bool IsOperateState()
+	{
+		return default(bool);
+	}
 
-		public override void OnStateEnter()
-		{
-		}
+	private bool CheckAdditionalInput()
+	{
+		return default(bool);
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
-
-		private bool CheckBurstAttack()
-		{
-			return default(bool);
-		}
-
-		protected override bool IsOperateState()
-		{
-			return default(bool);
-		}
-
-		private bool CheckAdditionalInput()
-		{
-			return default(bool);
-		}
-
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateExit()
+	{
 	}
 }

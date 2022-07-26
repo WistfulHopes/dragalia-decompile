@@ -4,108 +4,107 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactUseItemPopup : PopupBase
 {
-	public class ContactUseItemPopup : PopupBase
+	[SerializeField]
+	private CommonIcon beforeIcon;
+
+	[SerializeField]
+	private CommonIcon afterIcon;
+
+	[SerializeField]
+	private CommonIcon itemIcon;
+
+	[SerializeField]
+	private Text itemName;
+
+	[SerializeField]
+	private Text ItemDescription;
+
+	[SerializeField]
+	private CommonSliderSelection slider;
+
+	[SerializeField]
+	private Text overText;
+
+	[SerializeField]
+	private float delayTimeIcon;
+
+	[SerializeField]
+	private float delayTimeShopPanel;
+
+	private DragonStrokeMain dragonStrokeMain;
+
+	private ContactGiftIcon targetIcon;
+
+	private int currentLevel;
+
+	private int afterLevel;
+
+	private int maxLevel;
+
+	private int currentValue;
+
+	private int overValue;
+
+	private int reliability;
+
+	private int presentItemNum;
+
+	private int dragonId;
+
+	private const int presentItemMaxValue = 30;
+
+	private bool isEalkerEventItem;
+
+	public static ContactUseItemPopup Create(UnityAction onClose, bool isEalkerEventItem)
 	{
-		[SerializeField]
-		private CommonIcon beforeIcon;
+		return null;
+	}
 
-		[SerializeField]
-		private CommonIcon afterIcon;
+	public void Setup(DragonStrokeMain dragonStroke, DragonGiftList dragonGift, ContactGiftIcon icon, bool isWalkEventItem)
+	{
+	}
 
-		[SerializeField]
-		private CommonIcon itemIcon;
+	private void OnSlideValueChanged(float value)
+	{
+	}
 
-		[SerializeField]
-		private Text itemName;
+	public void OnPressOk()
+	{
+	}
 
-		[SerializeField]
-		private Text ItemDescription;
+	private void SendPresent()
+	{
+	}
 
-		[SerializeField]
-		private CommonSliderSelection slider;
+	public void ApiSendGiftMultiple()
+	{
+	}
 
-		[SerializeField]
-		private Text overText;
+	public void ApiOnSendGiftMultipleError(ErrorType errorType, int errorCode)
+	{
+	}
 
-		[SerializeField]
-		private float delayTimeIcon;
+	private void ApiOnSendGiftMultipleSuccess(DragonSendGiftMultipleResponse res)
+	{
+	}
 
-		[SerializeField]
-		private float delayTimeShopPanel;
+	public void ApiSendWalkerGiftMultiple()
+	{
+	}
 
-		private DragonStrokeMain dragonStrokeMain;
+	public void ApiOnSendWalkerGiftMultipleError(ErrorType errorType, int errorCode)
+	{
+	}
 
-		private ContactGiftIcon targetIcon;
+	private void ApiOnSendWalkerGiftMultipleSuccess(WalkerSendGiftMultipleResponse res)
+	{
+	}
 
-		private int currentLevel;
-
-		private int afterLevel;
-
-		private int maxLevel;
-
-		private int currentValue;
-
-		private int overValue;
-
-		private int reliability;
-
-		private int presentItemNum;
-
-		private int dragonId;
-
-		private const int presentItemMaxValue = 30;
-
-		private bool isEalkerEventItem;
-
-		public static ContactUseItemPopup Create(UnityAction onClose, bool isEalkerEventItem)
-		{
-			return null;
-		}
-
-		public void Setup(DragonStrokeMain dragonStroke, DragonGiftList dragonGift, ContactGiftIcon icon, bool isWalkEventItem)
-		{
-		}
-
-		private void OnSlideValueChanged(float value)
-		{
-		}
-
-		public void OnPressOk()
-		{
-		}
-
-		private void SendPresent()
-		{
-		}
-
-		public void ApiSendGiftMultiple()
-		{
-		}
-
-		public void ApiOnSendGiftMultipleError(ErrorType errorType, int errorCode)
-		{
-		}
-
-		private void ApiOnSendGiftMultipleSuccess(DragonSendGiftMultipleResponse res)
-		{
-		}
-
-		public void ApiSendWalkerGiftMultiple()
-		{
-		}
-
-		public void ApiOnSendWalkerGiftMultipleError(ErrorType errorType, int errorCode)
-		{
-		}
-
-		private void ApiOnSendWalkerGiftMultipleSuccess(WalkerSendGiftMultipleResponse res)
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
+	protected override void OnDestroy()
+	{
 	}
 }

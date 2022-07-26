@@ -1,27 +1,26 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAppearMultiPlayService
 {
-	public class EnemyAppearMultiPlayService
+	private bool _isDirty;
+
+	private EnemyAppear _tempSendEvent;
+
+	public void NotifyEnemyAppear(EnemyCharacter enemy)
 	{
-		private bool _isDirty;
+	}
 
-		private EnemyAppear _tempSendEvent;
+	public void Flush()
+	{
+	}
 
-		public void NotifyEnemyAppear(EnemyCharacter enemy)
-		{
-		}
+	private void SendEnemyAppear()
+	{
+	}
 
-		public void Flush()
-		{
-		}
-
-		private void SendEnemyAppear()
-		{
-		}
-
-		private void SetDirty()
-		{
-		}
+	private void SetDirty()
+	{
 	}
 }

@@ -1,10 +1,9 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineSoundSettings
 {
-	[Serializable]
-	public class CuttTimelineSoundSettings
-	{
-		public int[] indices;
-	}
+	public int[] indices;
 }

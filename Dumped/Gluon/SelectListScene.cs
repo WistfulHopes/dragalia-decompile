@@ -1,37 +1,35 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class SelectListScene : ShopTradeScene
 {
-	public class SelectListScene : ShopTradeScene
+	[SerializeField]
+	private Transform selectViewParent;
+
+	[SerializeField]
+	public Canvas bgCanvas;
+
+	public static UnityAction<UnityAction> decideButtonCallBack;
+
+	private ShopTreasureTradeMaterialSelectView selectView;
+
+	private BaseCanvasContents baseCanvasContents;
+
+	private void Awake()
 	{
-		[SerializeField]
-		private Transform selectViewParent;
+	}
 
-		[SerializeField]
-		[Header("BG")]
-		public Canvas bgCanvas;
+	private void Start()
+	{
+	}
 
-		public static UnityAction<UnityAction> decideButtonCallBack;
+	private void OnDecideButtonPressed()
+	{
+	}
 
-		private ShopTreasureTradeMaterialSelectView selectView;
-
-		private BaseCanvasContents baseCanvasContents;
-
-		private void Awake()
-		{
-		}
-
-		private void Start()
-		{
-		}
-
-		private void OnDecideButtonPressed()
-		{
-		}
-
-		public void BackButtonPressed()
-		{
-		}
+	public void BackButtonPressed()
+	{
 	}
 }

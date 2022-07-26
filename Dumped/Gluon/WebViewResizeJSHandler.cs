@@ -2,41 +2,40 @@ using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class WebViewResizeJSHandler : MonoBehaviour
 {
-	public class WebViewResizeJSHandler : MonoBehaviour
+	private const string SET_ZOOM_JS_FUNC = "setZoom()";
+
+	private const float setZoomTime = 1f;
+
+	private bool setZoom;
+
+	private float timer;
+
+	public Action SetMarginAction
 	{
-		private const string SET_ZOOM_JS_FUNC = "setZoom()";
-
-		private const float setZoomTime = 1f;
-
-		private bool setZoom;
-
-		private float timer;
-
-		public Action SetMarginAction
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		private void Awake()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
+
+	private void Update()
+	{
 	}
 }

@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandWindowEnable : IStoryCommand
 {
-	[CommandName("window_enable")]
-	public class StoryCommandWindowEnable : IStoryCommand
+	public void Start(bool enable)
 	{
-		public void Start(bool enable)
-		{
-		}
 	}
 }

@@ -3,109 +3,107 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DropCoinGlitter : MonoBehaviour
 {
-	public class DropCoinGlitter : MonoBehaviour
+	[Serializable]
+	public class GlitterData
 	{
-		[Serializable]
-		public class GlitterData
-		{
-			public Image image;
+		public Image image;
 
-			public RectTransform rectTrans;
+		public RectTransform rectTrans;
 
-			private float originPos;
+		private float originPos;
 
-			private float targetPos;
+		private float targetPos;
 
-			private float originRot;
+		private float originRot;
 
-			private float targetRot;
+		private float targetRot;
 
-			private float originScale;
+		private float originScale;
 
-			private float targetScale;
+		private float targetScale;
 
-			private const float movePosY = 32f;
+		private const float movePosY = 32f;
 
-			private Vector3 _vec;
+		private Vector3 _vec;
 
-			public void Initalize()
-			{
-			}
-
-			public void SetParam()
-			{
-			}
-
-			public void OnUpdate(float v)
-			{
-			}
-		}
-
-		public class Parameter
-		{
-			public Vector3 position;
-
-			public float scale;
-
-			public float time;
-
-			public void SetValue(Vector3 p, float s, float t)
-			{
-			}
-		}
-
-		[SerializeField]
-		[Header("component")]
-		private GlitterData[] glitterData;
-
-		private RectTransform rectTransform;
-
-		private Tweener tweener;
-
-		private bool isActive;
-
-		private void Visible(bool b, bool force = false)
+		public void Initalize()
 		{
 		}
 
-		public static DropCoinGlitter Create(GameObject parent, GameObject prefab)
-		{
-			return null;
-		}
-
-		private void Initialize()
+		public void SetParam()
 		{
 		}
 
-		public void UpdateParam()
+		public void OnUpdate(float v)
 		{
 		}
+	}
 
-		public void Release()
-		{
-		}
+	public class Parameter
+	{
+		public Vector3 position;
 
-		public bool IsVisible()
-		{
-			return default(bool);
-		}
+		public float scale;
 
-		public void Display(Parameter param)
-		{
-		}
+		public float time;
 
-		public void Stop()
+		public void SetValue(Vector3 p, float s, float t)
 		{
 		}
+	}
 
-		private void OnUpdateAnim(float v)
-		{
-		}
+	[SerializeField]
+	private GlitterData[] glitterData;
 
-		private void OnCompleteAnim()
-		{
-		}
+	private RectTransform rectTransform;
+
+	private Tweener tweener;
+
+	private bool isActive;
+
+	private void Visible(bool b, bool force = false)
+	{
+	}
+
+	public static DropCoinGlitter Create(GameObject parent, GameObject prefab)
+	{
+		return null;
+	}
+
+	private void Initialize()
+	{
+	}
+
+	public void UpdateParam()
+	{
+	}
+
+	public void Release()
+	{
+	}
+
+	public bool IsVisible()
+	{
+		return default(bool);
+	}
+
+	public void Display(Parameter param)
+	{
+	}
+
+	public void Stop()
+	{
+	}
+
+	private void OnUpdateAnim(float v)
+	{
+	}
+
+	private void OnCompleteAnim()
+	{
 	}
 }

@@ -1,18 +1,17 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonStageAttachEffect : MonoBehaviour
 {
-	public class SummonStageAttachEffect : MonoBehaviour
+	[SerializeField]
+	public string effectName;
+
+	public int kickTrigger;
+
+	private EffectObject eff;
+
+	private void OnEnable()
 	{
-		[SerializeField]
-		public string effectName;
-
-		public int kickTrigger;
-
-		private EffectObject eff;
-
-		private void OnEnable()
-		{
-		}
 	}
 }

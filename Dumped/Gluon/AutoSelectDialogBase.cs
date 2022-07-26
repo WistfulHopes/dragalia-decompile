@@ -2,124 +2,122 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AutoSelectDialogBase : CommonPopup
 {
-	public class AutoSelectDialogBase : CommonPopup
+	protected enum ConfigTragetType
 	{
-		protected enum ConfigTragetType
-		{
-			None,
-			Weapon,
-			Dragon,
-			Amulet
-		}
+		None,
+		Weapon,
+		Dragon,
+		Amulet
+	}
 
-		public enum ConfigLevelType
-		{
-			None,
-			OneOnly,
-			All
-		}
+	public enum ConfigLevelType
+	{
+		None,
+		OneOnly,
+		All
+	}
 
-		public enum ConfigPlusType
-		{
-			None,
-			ZeroOnly,
-			PlusOnly,
-			NoSelect
-		}
+	public enum ConfigPlusType
+	{
+		None,
+		ZeroOnly,
+		PlusOnly,
+		NoSelect
+	}
 
-		public enum ConfigType
-		{
-			Rarity,
-			Level,
-			Plus
-		}
+	public enum ConfigType
+	{
+		Rarity,
+		Level,
+		Plus
+	}
 
-		public GameObject selectRarity;
+	public GameObject selectRarity;
 
-		public GameObject selectLevel;
+	public GameObject selectLevel;
 
-		public GameObject selectPlus;
+	public GameObject selectPlus;
 
-		public const int defaultConfigDragonRarity = 3;
+	public const int defaultConfigDragonRarity = 3;
 
-		public const int defaultConfigWeaponRarity = 2;
+	public const int defaultConfigWeaponRarity = 2;
 
-		public const int defaultConfigAmuletRarity = 2;
+	public const int defaultConfigAmuletRarity = 2;
 
-		public const int defaultConfigLevel = 1;
+	public const int defaultConfigLevel = 1;
 
-		public const int defaultConfigPlus = 1;
+	public const int defaultConfigPlus = 1;
 
-		private int configRarity;
+	private int configRarity;
 
-		private int configLevel;
+	private int configLevel;
 
-		private int configPlus;
+	private int configPlus;
 
-		protected string rarityKey;
+	protected string rarityKey;
 
-		protected string levelKey;
+	protected string levelKey;
 
-		protected string plusKey;
+	protected string plusKey;
 
-		protected ConfigTragetType targetType;
+	protected ConfigTragetType targetType;
 
-		[SerializeField]
-		protected Text dialogMessageText;
+	[SerializeField]
+	protected Text dialogMessageText;
 
-		[SerializeField]
-		private Text[] subTitleText;
+	[SerializeField]
+	private Text[] subTitleText;
 
-		[SerializeField]
-		private Text[] rarityText;
+	[SerializeField]
+	private Text[] rarityText;
 
-		[SerializeField]
-		private Text[] levelText;
+	[SerializeField]
+	private Text[] levelText;
 
-		[SerializeField]
-		private Text[] plusText;
+	[SerializeField]
+	private Text[] plusText;
 
-		[SerializeField]
-		[Header("Count")]
-		protected Text countText;
+	[SerializeField]
+	protected Text countText;
 
-		[SerializeField]
-		protected Text preCountText;
+	[SerializeField]
+	protected Text preCountText;
 
-		private Func<int> getAutoSelectCount;
+	private Func<int> getAutoSelectCount;
 
-		private int countMax;
+	private int countMax;
 
-		public static T Create<T>(bool showBlackLayer = true) where T : AutoSelectDialogBase
-		{
-			return null;
-		}
+	public static T Create<T>(bool showBlackLayer = true) where T : AutoSelectDialogBase
+	{
+		return null;
+	}
 
-		protected void SetupConfigDialog(int countMax, Func<int> getAutoSelectCount)
-		{
-		}
+	protected void SetupConfigDialog(int countMax, Func<int> getAutoSelectCount)
+	{
+	}
 
-		private void SetPlayerPrefs()
-		{
-		}
+	private void SetPlayerPrefs()
+	{
+	}
 
-		public void SetCountText(int countNow)
-		{
-		}
+	public void SetCountText(int countNow)
+	{
+	}
 
-		protected virtual void OkButtonPressed()
-		{
-		}
+	protected virtual void OkButtonPressed()
+	{
+	}
 
-		public void OnToggleChanged(bool isOn)
-		{
-		}
+	public void OnToggleChanged(bool isOn)
+	{
+	}
 
-		public static int[] GetAutoSelectConfigParam(string rarityKey, string levelKey, string plusKey, int defaultConfig)
-		{
-			return null;
-		}
+	public static int[] GetAutoSelectConfigParam(string rarityKey, string levelKey, string plusKey, int defaultConfig)
+	{
+		return null;
 	}
 }

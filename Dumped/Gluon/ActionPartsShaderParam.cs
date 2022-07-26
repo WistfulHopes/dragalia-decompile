@@ -1,48 +1,47 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsShaderParam : ActionParts
 {
-	public class ActionPartsShaderParam : ActionParts
+	private readonly ShaderParamData _partsData;
+
+	private ShaderParamData.ResetFlags _resetFlags;
+
+	public ActionPartsShaderParam(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly ShaderParamData _partsData;
+	}
 
-		private ShaderParamData.ResetFlags _resetFlags;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public ActionPartsShaderParam(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	private void UpdateShaderParameter()
+	{
+	}
 
-		protected override void OnFinish()
-		{
-		}
+	private void SetResetShaderParameter()
+	{
+	}
 
-		private void UpdateShaderParameter()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void SetResetShaderParameter()
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		public override void Stop()
-		{
-		}
+	public override void Stop()
+	{
 	}
 }

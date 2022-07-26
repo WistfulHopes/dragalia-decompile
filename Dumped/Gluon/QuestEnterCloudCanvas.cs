@@ -5,58 +5,57 @@ using System.Runtime.InteropServices;
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestEnterCloudCanvas : SingletonInBaseMonoBehaviour<QuestEnterCloudCanvas>
 {
-	public class QuestEnterCloudCanvas : SingletonInBaseMonoBehaviour<QuestEnterCloudCanvas>
+	public static bool skipCreateOnStart;
+
+	public CanvasGroup canvasGroup;
+
+	public CanvasGroup whiteCanvasGroup;
+
+	private FlashPlayer flashPlayer;
+
+	private bool isLoaded;
+
+	private Tweener tweener;
+
+	public bool isOnAnimation
 	{
-		public static bool skipCreateOnStart;
-
-		public CanvasGroup canvasGroup;
-
-		public CanvasGroup whiteCanvasGroup;
-
-		private FlashPlayer flashPlayer;
-
-		private bool isLoaded;
-
-		private Tweener tweener;
-
-		public bool isOnAnimation
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		public void Init()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void Start()
-		{
-		}
+	public void Init()
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void StartAnimation(Action nextAction, [Optional] Action hideAfterAction)
-		{
-		}
+	protected override void OnDestroy()
+	{
+	}
 
-		private IEnumerator StartAnimationCoroutine(Action nextAction, [Optional] Action hideAfterAction)
-		{
-			return null;
-		}
+	public void StartAnimation(Action nextAction, [Optional] Action hideAfterAction)
+	{
+	}
 
-		public void EndAnimation([Optional] Action outEndAnimationAction)
-		{
-		}
+	private IEnumerator StartAnimationCoroutine(Action nextAction, [Optional] Action hideAfterAction)
+	{
+		return null;
+	}
+
+	public void EndAnimation([Optional] Action outEndAnimationAction)
+	{
 	}
 }

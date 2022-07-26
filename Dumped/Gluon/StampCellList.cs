@@ -1,21 +1,20 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class StampCellList : PageScrollCell<StampPageData>
 {
-	public class StampCellList : PageScrollCell<StampPageData>
+	[SerializeField]
+	private StampCell[] stamps;
+
+	public UnityAction<int> onIconPressed;
+
+	public override void UpdateContent(StampPageData data)
 	{
-		[SerializeField]
-		private StampCell[] stamps;
+	}
 
-		public UnityAction<int> onIconPressed;
-
-		public override void UpdateContent(StampPageData data)
-		{
-		}
-
-		public void OnIconPressed(int iconIndex)
-		{
-		}
+	public void OnIconPressed(int iconIndex)
+	{
 	}
 }

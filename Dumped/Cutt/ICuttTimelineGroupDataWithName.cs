@@ -1,11 +1,10 @@
-namespace Cutt
+namespace Cutt;
+
+public interface ICuttTimelineGroupDataWithName
 {
-	public interface ICuttTimelineGroupDataWithName
-	{
-		ICuttTimelineKeyDataList GetKeyList();
+	ICuttTimelineKeyDataList GetKeyList();
 
-		int GetNameHash();
+	int GetNameHash();
 
-		void MakeNameHash();
-	}
+	void MakeNameHash();
 }

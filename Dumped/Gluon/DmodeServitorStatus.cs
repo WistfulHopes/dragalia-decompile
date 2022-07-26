@@ -3,64 +3,63 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeServitorStatus : MonoBehaviour
 {
-	public class DmodeServitorStatus : MonoBehaviour
+	[SerializeField]
+	private RawImage dragonIcon;
+
+	[SerializeField]
+	private Text dragonNameText;
+
+	[SerializeField]
+	private RawImage skillIcon;
+
+	[SerializeField]
+	private Text skillNameText;
+
+	private static readonly int skillMaxLevel;
+
+	public DmodeServitorType selectedServitorType
 	{
-		[SerializeField]
-		private RawImage dragonIcon;
-
-		[SerializeField]
-		private Text dragonNameText;
-
-		[SerializeField]
-		private RawImage skillIcon;
-
-		[SerializeField]
-		private Text skillNameText;
-
-		private static readonly int skillMaxLevel;
-
-		public DmodeServitorType selectedServitorType
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(DmodeServitorType);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(DmodeServitorType);
 		}
-
-		public void InitializeSelectedDmodeServitorType(int charaId)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Reload()
-		{
-		}
+	public void InitializeSelectedDmodeServitorType(int charaId)
+	{
+	}
 
-		public void ShowChangeEquipedServitorSkillPopup()
-		{
-		}
+	public void Reload()
+	{
+	}
 
-		private void UpdateEquipedServitorSkill()
-		{
-		}
+	public void ShowChangeEquipedServitorSkillPopup()
+	{
+	}
 
-		private DmodeServitorElement SearchDmodeServitorDataFromServitorType(DmodeServitorType servitorType)
-		{
-			return null;
-		}
+	private void UpdateEquipedServitorSkill()
+	{
+	}
 
-		public void ShowSkillDetailPopup()
-		{
-		}
+	private DmodeServitorElement SearchDmodeServitorDataFromServitorType(DmodeServitorType servitorType)
+	{
+		return null;
+	}
 
-		public void ShowPassiveAbilityListPopup()
-		{
-		}
+	public void ShowSkillDetailPopup()
+	{
+	}
+
+	public void ShowPassiveAbilityListPopup()
+	{
 	}
 }

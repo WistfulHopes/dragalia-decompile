@@ -2,55 +2,54 @@ using System;
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GyroControl : FastUpdateMonoBehaviour
 {
-	public class GyroControl : FastUpdateMonoBehaviour
+	[Serializable]
+	public class OverrunInfo
 	{
-		[Serializable]
-		public class OverrunInfo
-		{
-			public Transform targetTransform;
+		public Transform targetTransform;
 
-			public float mulValVertical;
+		public float mulValVertical;
 
-			public float mulValHorizontal;
-		}
+		public float mulValHorizontal;
+	}
 
-		[SerializeField]
-		public float rotateVertical;
+	[SerializeField]
+	public float rotateVertical;
 
-		public float rotateHorizontal;
+	public float rotateHorizontal;
 
-		public float gyroAngleOffsetMaxVertical;
+	public float gyroAngleOffsetMaxVertical;
 
-		public float gyroAngleOffsetMaxHorizontal;
+	public float gyroAngleOffsetMaxHorizontal;
 
-		public float chaseSpeed;
+	public float chaseSpeed;
 
-		public OverrunInfo[] overruns;
+	public OverrunInfo[] overruns;
 
-		private Quaternion initAttitude;
+	private Quaternion initAttitude;
 
-		private bool forceStable;
+	private bool forceStable;
 
-		private float lastX;
+	private float lastX;
 
-		private float lastY;
+	private float lastY;
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void ResetInitAttitude()
-		{
-		}
+	public void ResetInitAttitude()
+	{
+	}
 
-		public void SetForceState(bool forceStable)
-		{
-		}
+	public void SetForceState(bool forceStable)
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	public override void FastUpdate()
+	{
 	}
 }

@@ -1,61 +1,59 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopRealMonyTableViewBottomPart : MonoBehaviour
 {
-	public class ShopRealMonyTableViewBottomPart : MonoBehaviour
+	[SerializeField]
+	public Text bottomText;
+
+	public Text specifiedCommercialTransactionActText;
+
+	public const string prefabPath = "Prefabs/OutGame/ShopTrade/Parts/ShopRealMonyTableViewBottomPart";
+
+	[SerializeField]
+	private GameObject paymentServicesActObj;
+
+	[SerializeField]
+	private GameObject specifiedCommercialActObj;
+
+	public static ShopRealMonyTableViewBottomPart Create(Transform parent)
 	{
-		[SerializeField]
-		[Header("BottomText")]
-		public Text bottomText;
+		return null;
+	}
 
-		public Text specifiedCommercialTransactionActText;
+	public static bool ShouldPaymentServiceActButtonOn()
+	{
+		return default(bool);
+	}
 
-		public const string prefabPath = "Prefabs/OutGame/ShopTrade/Parts/ShopRealMonyTableViewBottomPart";
+	public static bool ShouldSpecifiedCommercialActButtonOn()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private GameObject paymentServicesActObj;
+	private void Start()
+	{
+	}
 
-		[SerializeField]
-		private GameObject specifiedCommercialActObj;
+	public void OnRecoverFailedPaymentButtonPressed()
+	{
+	}
 
-		public static ShopRealMonyTableViewBottomPart Create(Transform parent)
-		{
-			return null;
-		}
+	public void OnPaymentServicesActPressed()
+	{
+	}
 
-		public static bool ShouldPaymentServiceActButtonOn()
-		{
-			return default(bool);
-		}
+	public static void OpenPaymentServicesAct()
+	{
+	}
 
-		public static bool ShouldSpecifiedCommercialActButtonOn()
-		{
-			return default(bool);
-		}
+	public void OnSpecifiedCommercialTransactionActPressed()
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		public void OnRecoverFailedPaymentButtonPressed()
-		{
-		}
-
-		public void OnPaymentServicesActPressed()
-		{
-		}
-
-		public static void OpenPaymentServicesAct()
-		{
-		}
-
-		public void OnSpecifiedCommercialTransactionActPressed()
-		{
-		}
-
-		public static void OpenSpecifiedCommercialTransactionAct()
-		{
-		}
+	public static void OpenSpecifiedCommercialTransactionAct()
+	{
 	}
 }

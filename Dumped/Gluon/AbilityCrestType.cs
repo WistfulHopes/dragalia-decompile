@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum AbilityCrestType
 {
-	public enum AbilityCrestType
-	{
-		NONE,
-		NORMAL,
-		DRAGON
-	}
+	NONE,
+	NORMAL,
+	DRAGON
 }

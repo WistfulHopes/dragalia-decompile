@@ -5,155 +5,154 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FooterIcon : MonoBehaviour
 {
-	public class FooterIcon : MonoBehaviour
+	public Image normalBg;
+
+	public Image normalIcon;
+
+	public Image normalTextImage;
+
+	public Image[] selectedImages;
+
+	public Image selectedTextImage;
+
+	public Image disabledBg;
+
+	public Image disabledIcon;
+
+	public Image disabledTextImage;
+
+	public Image maintenanceObject;
+
+	public Image[] banner;
+
+	public PointerEventHandler transparentButton;
+
+	public Image[] newMarks;
+
+	[HideInInspector]
+	public GameObject badge;
+
+	private bool isSelected;
+
+	private bool isEnabled;
+
+	private int currentBannerId;
+
+	private List<int> currentBannerIdList;
+
+	private bool isAlreadyInitialized;
+
+	private bool isOnTempoaryDisabled;
+
+	private Sequence sequence;
+
+	private float disableValue;
+
+	private static float disableAnimationDuration;
+
+	private static float disableWaitDuration;
+
+	private static float disableSaturation;
+
+	private static float disableBrightness;
+
+	private Sequence summonIconSeq;
+
+	private int currentMaterialIndex;
+
+	private Material[] materials;
+
+	private bool isMultipleSummon;
+
+	private const float multipleSummonIconChangeTime = 2.5f;
+
+	private bool isNewMarkMaterialsCreated;
+
+	private void Awake()
 	{
-		public Image normalBg;
+	}
 
-		public Image normalIcon;
+	private void OnDestroy()
+	{
+	}
 
-		public Image normalTextImage;
+	public void SetAdjustMaterial(Material changeableMaterial, Material disabledMaterial, Material selectedMaterial, Material selectedTextMaterial)
+	{
+	}
 
-		public Image[] selectedImages;
+	public void SetBadgeMaterial()
+	{
+	}
 
-		public Image selectedTextImage;
+	public void SetSelected(bool isSelected, bool forceReset = false)
+	{
+	}
 
-		public Image disabledBg;
+	public bool GetSelected()
+	{
+		return default(bool);
+	}
 
-		public Image disabledIcon;
+	public bool ShowSummonBanner(SummonDataElement data)
+	{
+		return default(bool);
+	}
 
-		public Image disabledTextImage;
+	public bool ShowSummonBanners(List<SummonDataElement> bannerData)
+	{
+		return default(bool);
+	}
 
-		public Image maintenanceObject;
+	private void SetBanner(int index)
+	{
+	}
 
-		public Image[] banner;
+	public void HideSummonBanner()
+	{
+	}
 
-		public PointerEventHandler transparentButton;
+	public void DisableTemporary()
+	{
+	}
 
-		public Image[] newMarks;
+	public void SetTouched(bool isTouched)
+	{
+	}
 
-		[HideInInspector]
-		public GameObject badge;
+	public void SetEnabled(bool isEnabled)
+	{
+	}
 
-		private bool isSelected;
+	private IEnumerator SetEnabledCoroutine(bool isEnabled)
+	{
+		return null;
+	}
 
-		private bool isEnabled;
+	private void SetEnabledImpl(bool isEnabled)
+	{
+	}
 
-		private int currentBannerId;
+	private void CreateNewMarkMaterial()
+	{
+	}
 
-		private List<int> currentBannerIdList;
+	private void SetNewMarksEnabled(bool isEnabled)
+	{
+	}
 
-		private bool isAlreadyInitialized;
+	private void SetBannerEnabled(bool isEnabled)
+	{
+	}
 
-		private bool isOnTempoaryDisabled;
+	private void SetBadgeEnabled(bool isEnabled)
+	{
+	}
 
-		private Sequence sequence;
-
-		private float disableValue;
-
-		private static float disableAnimationDuration;
-
-		private static float disableWaitDuration;
-
-		private static float disableSaturation;
-
-		private static float disableBrightness;
-
-		private Sequence summonIconSeq;
-
-		private int currentMaterialIndex;
-
-		private Material[] materials;
-
-		private bool isMultipleSummon;
-
-		private const float multipleSummonIconChangeTime = 2.5f;
-
-		private bool isNewMarkMaterialsCreated;
-
-		private void Awake()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public void SetAdjustMaterial(Material changeableMaterial, Material disabledMaterial, Material selectedMaterial, Material selectedTextMaterial)
-		{
-		}
-
-		public void SetBadgeMaterial()
-		{
-		}
-
-		public void SetSelected(bool isSelected, bool forceReset = false)
-		{
-		}
-
-		public bool GetSelected()
-		{
-			return default(bool);
-		}
-
-		public bool ShowSummonBanner(SummonDataElement data)
-		{
-			return default(bool);
-		}
-
-		public bool ShowSummonBanners(List<SummonDataElement> bannerData)
-		{
-			return default(bool);
-		}
-
-		private void SetBanner(int index)
-		{
-		}
-
-		public void HideSummonBanner()
-		{
-		}
-
-		public void DisableTemporary()
-		{
-		}
-
-		public void SetTouched(bool isTouched)
-		{
-		}
-
-		public void SetEnabled(bool isEnabled)
-		{
-		}
-
-		private IEnumerator SetEnabledCoroutine(bool isEnabled)
-		{
-			return null;
-		}
-
-		private void SetEnabledImpl(bool isEnabled)
-		{
-		}
-
-		private void CreateNewMarkMaterial()
-		{
-		}
-
-		private void SetNewMarksEnabled(bool isEnabled)
-		{
-		}
-
-		private void SetBannerEnabled(bool isEnabled)
-		{
-		}
-
-		private void SetBadgeEnabled(bool isEnabled)
-		{
-		}
-
-		public void KickAnimation()
-		{
-		}
+	public void KickAnimation()
+	{
 	}
 }

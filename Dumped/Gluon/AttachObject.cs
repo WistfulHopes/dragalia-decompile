@@ -1,85 +1,84 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AttachObject
 {
-	public class AttachObject
+	private Animator animator;
+
+	private RuntimeAnimatorController savedRuntimeAnimatorController;
+
+	public GameObject go
 	{
-		private Animator animator;
-
-		private RuntimeAnimatorController savedRuntimeAnimatorController;
-
-		public GameObject go
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public AttachObject(GameObject obj)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetAnimation(string motionPath)
-		{
-		}
+	public AttachObject(GameObject obj)
+	{
+	}
 
-		private bool GetAnimatorComponent()
-		{
-			return default(bool);
-		}
+	public void SetAnimation(string motionPath)
+	{
+	}
 
-		public void SaveCurrentAnimation()
-		{
-		}
+	private bool GetAnimatorComponent()
+	{
+		return default(bool);
+	}
 
-		public void LoadSavedAnimation()
-		{
-		}
+	public void SaveCurrentAnimation()
+	{
+	}
 
-		public void Attach(Transform attachNode)
-		{
-		}
+	public void LoadSavedAnimation()
+	{
+	}
 
-		public void SetOffset(Vector3 pos, Vector3 rot, Vector3 scl)
-		{
-		}
+	public void Attach(Transform attachNode)
+	{
+	}
 
-		public void PlayAnimation(string stateName)
-		{
-		}
+	public void SetOffset(Vector3 pos, Vector3 rot, Vector3 scl)
+	{
+	}
 
-		public void PlayBlendAnimation(string stateName, float blendDuration, bool checkSame)
-		{
-		}
+	public void PlayAnimation(string stateName)
+	{
+	}
 
-		public bool IsAnimationState(string stateName)
-		{
-			return default(bool);
-		}
+	public void PlayBlendAnimation(string stateName, float blendDuration, bool checkSame)
+	{
+	}
 
-		public bool IsNextAnimationState(string stateName)
-		{
-			return default(bool);
-		}
+	public bool IsAnimationState(string stateName)
+	{
+		return default(bool);
+	}
 
-		public void SetVisible(bool visible, bool forcibly = false)
-		{
-		}
+	public bool IsNextAnimationState(string stateName)
+	{
+		return default(bool);
+	}
 
-		public bool IsVisible()
-		{
-			return default(bool);
-		}
+	public void SetVisible(bool visible, bool forcibly = false)
+	{
+	}
 
-		public void SetLightProbeAnchor(Transform lightProbeAnchorNode)
-		{
-		}
+	public bool IsVisible()
+	{
+		return default(bool);
+	}
+
+	public void SetLightProbeAnchor(Transform lightProbeAnchorNode)
+	{
 	}
 }

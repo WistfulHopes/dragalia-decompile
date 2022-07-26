@@ -1,22 +1,21 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public static class MatchingAttributeMask
 {
-	public static class MatchingAttributeMask
+	public static uint FromRoomEntryCondition(RoomEntryCondition condition)
 	{
-		public static uint FromRoomEntryCondition(RoomEntryCondition condition)
-		{
-			return default(uint);
-		}
+		return default(uint);
+	}
 
-		public static uint FromElemental(ElementalType elemental)
-		{
-			return default(uint);
-		}
+	public static uint FromElemental(ElementalType elemental)
+	{
+		return default(uint);
+	}
 
-		public static uint FromWeaponType(WeaponType weaponType)
-		{
-			return default(uint);
-		}
+	public static uint FromWeaponType(WeaponType weaponType)
+	{
+		return default(uint);
 	}
 }

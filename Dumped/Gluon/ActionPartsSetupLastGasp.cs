@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsSetupLastGasp : ActionParts
 {
-	public class ActionPartsSetupLastGasp : ActionParts
+	private readonly SetupLastGaspData _partsData;
+
+	private bool _isDone;
+
+	public ActionPartsSetupLastGasp(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly SetupLastGaspData _partsData;
+	}
 
-		private bool _isDone;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public ActionPartsSetupLastGasp(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
 	}
 }

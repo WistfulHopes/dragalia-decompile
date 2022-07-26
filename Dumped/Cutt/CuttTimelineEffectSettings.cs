@@ -1,10 +1,9 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineEffectSettings
 {
-	[Serializable]
-	public class CuttTimelineEffectSettings
-	{
-		public int[] indices;
-	}
+	public int[] indices;
 }

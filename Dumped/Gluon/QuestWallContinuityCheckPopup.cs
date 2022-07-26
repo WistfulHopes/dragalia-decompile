@@ -3,40 +3,38 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestWallContinuityCheckPopup : CommonPopup
 {
-	public class QuestWallContinuityCheckPopup : CommonPopup
+	[SerializeField]
+	private Image questPreviewImage;
+
+	[SerializeField]
+	private Image questPreviewElement;
+
+	[SerializeField]
+	private Text questPreviewText;
+
+	[SerializeField]
+	private Text recommendText;
+
+	[SerializeField]
+	private Graphic limitedTypeBaseIcon;
+
+	[SerializeField]
+	private GameObject limitedTypeIconPanel;
+
+	public static QuestWallContinuityCheckPopup Create(int wallId, [Optional] UnityAction OnOkCallback, [Optional] UnityAction OnCancelCallback)
 	{
-		[SerializeField]
-		private Image questPreviewImage;
+		return null;
+	}
 
-		[SerializeField]
-		private Image questPreviewElement;
+	public void SetContents(int wallId)
+	{
+	}
 
-		[SerializeField]
-		private Text questPreviewText;
-
-		[SerializeField]
-		private Text recommendText;
-
-		[SerializeField]
-		[Header("Limited Quest")]
-		private Graphic limitedTypeBaseIcon;
-
-		[SerializeField]
-		private GameObject limitedTypeIconPanel;
-
-		public static QuestWallContinuityCheckPopup Create(int wallId, [Optional] UnityAction OnOkCallback, [Optional] UnityAction OnCancelCallback)
-		{
-			return null;
-		}
-
-		public void SetContents(int wallId)
-		{
-		}
-
-		private void SetLimitedType(int wallId)
-		{
-		}
+	private void SetLimitedType(int wallId)
+	{
 	}
 }

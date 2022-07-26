@@ -1,43 +1,42 @@
 using System.Collections.Generic;
 
-namespace Cutt
+namespace Cutt;
+
+public interface ICuttTimelineKeyDataList
 {
-	public interface ICuttTimelineKeyDataList
-	{
-		CuttTimelineKey this[int index] { get; set; }
+	CuttTimelineKey this[int index] { get; set; }
 
-		int Count { get; }
+	int Count { get; }
 
-		CuttTimelineKeyDataListAttr attribute { get; set; }
+	CuttTimelineKeyDataListAttr attribute { get; set; }
 
-		int depthCounter { get; }
+	int depthCounter { get; }
 
-		void Insert(int index, CuttTimelineKey item);
+	void Insert(int index, CuttTimelineKey item);
 
-		IEnumerator<CuttTimelineKey> GetEnumerator();
+	IEnumerator<CuttTimelineKey> GetEnumerator();
 
-		void Add(CuttTimelineKey item);
+	void Add(CuttTimelineKey item);
 
-		void Clear();
+	void Clear();
 
-		bool Remove(CuttTimelineKey item);
+	bool Remove(CuttTimelineKey item);
 
-		void RemoveAt(int index);
+	void RemoveAt(int index);
 
-		IEnumerable<CuttTimelineKey> ToEnumerable();
+	IEnumerable<CuttTimelineKey> ToEnumerable();
 
-		CuttTimelineKey At(int index);
+	CuttTimelineKey At(int index);
 
-		CuttTimelineKey[] ToArray();
+	CuttTimelineKey[] ToArray();
 
-		List<CuttTimelineKey> ToList();
+	List<CuttTimelineKey> ToList();
 
-		bool HasAttribute(CuttTimelineKeyDataListAttr attr);
+	bool HasAttribute(CuttTimelineKeyDataListAttr attr);
 
-		FindKeyResult FindKeyCached(int frame, bool ignoreCache);
+	FindKeyResult FindKeyCached(int frame, bool ignoreCache);
 
-		FindKeyResult FindCurrentKey(int frame);
+	FindKeyResult FindCurrentKey(int frame);
 
-		FindKeyResult FindCurrentKeyNeighbor(int frame, int baseIndex);
-	}
+	FindKeyResult FindCurrentKeyNeighbor(int frame, int baseIndex);
 }

@@ -1,23 +1,22 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcMirage : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcMirage : EnemyAbilityProcBase
+	public EnemyAbilityProcMirage(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
 	{
-		public EnemyAbilityProcMirage(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
+	}
 
-		public override void Stop()
-		{
-		}
+	public override void Stop()
+	{
+	}
 
-		public override void OnUpdate()
-		{
-		}
+	public override void OnUpdate()
+	{
+	}
 
-		public override void OnCalcDefCoefForMirage(CharacterBase attacker, ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnCalcDefCoefForMirage(CharacterBase attacker, ref EnemyAbility.Argument arg)
+	{
 	}
 }

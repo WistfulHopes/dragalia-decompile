@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum IconRarity
 {
-	public enum IconRarity
-	{
-		None,
-		Bronze,
-		Silber,
-		Gold,
-		Platinum
-	}
+	None,
+	Bronze,
+	Silber,
+	Gold,
+	Platinum
 }

@@ -1,65 +1,64 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleMotifObject : GrowthManaCircleDraggable, IPointerClickHandler, IEventSystemHandler
 {
-	public class GrowthManaCircleMotifObject : GrowthManaCircleDraggable, IPointerClickHandler, IEventSystemHandler
+	public enum MotifType
 	{
-		public enum MotifType
-		{
-			ReleaseLimit,
-			Symbol,
-			Max
-		}
+		ReleaseLimit,
+		Symbol,
+		Max
+	}
 
-		public MotifType type;
+	public MotifType type;
 
-		public EffectObject effect;
+	public EffectObject effect;
 
-		public int circleIndex;
+	public int circleIndex;
 
-		public bool isEffectPlaying;
+	public bool isEffectPlaying;
 
-		public bool isReleased;
+	public bool isReleased;
 
-		private const float doubleTouchThreshold = 0.25f;
+	private const float doubleTouchThreshold = 0.25f;
 
-		public void Start()
-		{
-		}
+	public void Start()
+	{
+	}
 
-		public void SetTouchEnabled(bool arg)
-		{
-		}
+	public void SetTouchEnabled(bool arg)
+	{
+	}
 
-		public void PlayReleaseLimitWaitingEffect(float delay = 0f)
-		{
-		}
+	public void PlayReleaseLimitWaitingEffect(float delay = 0f)
+	{
+	}
 
-		private IEnumerator PlayReleaseLimitWaitingEffectCoroutine(float delay)
-		{
-			return null;
-		}
+	private IEnumerator PlayReleaseLimitWaitingEffectCoroutine(float delay)
+	{
+		return null;
+	}
 
-		public void StopEffect(float delay)
-		{
-		}
+	public void StopEffect(float delay)
+	{
+	}
 
-		private IEnumerator StopEffectCoroutine(float delay)
-		{
-			return null;
-		}
+	private IEnumerator StopEffectCoroutine(float delay)
+	{
+		return null;
+	}
 
-		public void OnPointerClick(PointerEventData eventData)
-		{
-		}
+	public void OnPointerClick(PointerEventData eventData)
+	{
+	}
 
-		protected override void NotifyDraggingToScene(bool arg)
-		{
-		}
+	protected override void NotifyDraggingToScene(bool arg)
+	{
+	}
 
-		public void PlayPlusValueChangeAnimation(int state)
-		{
-		}
+	public void PlayPlusValueChangeAnimation(int state)
+	{
 	}
 }

@@ -1,17 +1,16 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class CaftNeedMaterialData
 {
-	public class CaftNeedMaterialData
-	{
-		public Dictionary<int, int> weaponSetDict;
+	public Dictionary<int, int> weaponSetDict;
 
-		public Dictionary<int, int> materialDict;
+	public Dictionary<int, int> materialDict;
 
-		public int totalCoin;
+	public int totalCoin;
 
-		public int craftLevel;
+	public int craftLevel;
 
-		public ulong totalExp;
-	}
+	public ulong totalExp;
 }

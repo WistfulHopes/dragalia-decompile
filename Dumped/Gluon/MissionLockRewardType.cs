@@ -1,8 +1,7 @@
-namespace Gluon
+namespace Gluon;
+
+public enum MissionLockRewardType
 {
-	public enum MissionLockRewardType
-	{
-		NONE,
-		CHARA_FRIENDSHIP_POINT
-	}
+	NONE,
+	CHARA_FRIENDSHIP_POINT
 }

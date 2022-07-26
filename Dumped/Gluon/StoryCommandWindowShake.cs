@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandWindowShake : IStoryCommand
 {
-	[CommandName("window_shake")]
-	public class StoryCommandWindowShake : IStoryCommand
+	public void Start()
 	{
-		public void Start()
-		{
-		}
 	}
 }

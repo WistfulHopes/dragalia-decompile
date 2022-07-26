@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum ShaderSwitchingType
 {
-	public enum ShaderSwitchingType
-	{
-		None,
-		Change,
-		Hidden
-	}
+	None,
+	Change,
+	Hidden
 }

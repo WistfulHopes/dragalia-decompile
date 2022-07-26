@@ -1,16 +1,15 @@
-namespace Gluon
+namespace Gluon;
+
+public class GuildLocalizeTextBinder : AutoLocalizeTextBinderBase
 {
-	public class GuildLocalizeTextBinder : AutoLocalizeTextBinderBase
+	protected override string prefixType
 	{
-		protected override string prefixType
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return null;
+		}
+		set
+		{
 		}
 	}
 }

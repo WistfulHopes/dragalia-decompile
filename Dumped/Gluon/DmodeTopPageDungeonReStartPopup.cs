@@ -1,20 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeTopPageDungeonReStartPopup : CommonIconPopup
 {
-	public class DmodeTopPageDungeonReStartPopup : CommonIconPopup
+	[SerializeField]
+	private Text overText;
+
+	public static DmodeTopPageDungeonReStartPopup Create(Size size = Size.S, BottomButtons bottomButtons = BottomButtons.Close, bool showBlackLayer = true, bool showStartAnimation = true)
 	{
-		[SerializeField]
-		private Text overText;
+		return null;
+	}
 
-		public static DmodeTopPageDungeonReStartPopup Create(Size size = Size.S, BottomButtons bottomButtons = BottomButtons.Close, bool showBlackLayer = true, bool showStartAnimation = true)
-		{
-			return null;
-		}
-
-		public void SetOverText(string str)
-		{
-		}
+	public void SetOverText(string str)
+	{
 	}
 }

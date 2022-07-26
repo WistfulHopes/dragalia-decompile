@@ -1,178 +1,194 @@
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class UtpCtrl
 {
-	public class UtpCtrl
+	private float _point;
+
+	private int _requirePoint;
+
+	private UtpMultiPlayService _multiPlayService;
+
+	public static readonly int flashingPoint;
+
+	public float point
 	{
-		private float _point;
-
-		private int _requirePoint;
-
-		private UtpMultiPlayService _multiPlayService;
-
-		public static readonly int flashingPoint;
-
-		public float point
+		get
 		{
-			get
-			{
-				return default(float);
-			}
-			private set
-			{
-			}
+			return default(float);
 		}
-
-		public int maxPoint
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float ratio => default(float);
-
-		public float consumePoint
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public int requirePoint
-		{
-			get
-			{
-				return default(int);
-			}
-			private set
-			{
-			}
-		}
-
-		public float maxRecastTime
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float currRecastTime
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float selfDamageRatio
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public bool isPauseConsume
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool isServantTransform
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void Initialize(AbilityDataElement ade, int idx, bool isServantTransform, UtpMultiPlayService multiPlayService)
+		private set
 		{
 		}
+	}
 
-		public void Update(PlayerCharacter owner)
+	public int maxPoint
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void AddPoint(int value, CharacterBase owner)
+	public float ratio => default(float);
+
+	public float consumePoint
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void AddPointForSelfDamageAbility(float rate, CharacterBase owner)
+	public float recoveryPoint
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetPoint(float value, bool isSielent = false)
+	public int requirePoint
+	{
+		get
+		{
+			return default(int);
+		}
+		private set
 		{
 		}
+	}
 
-		public void SetIsPauseConsume(bool isPause)
+	public float maxRecastTime
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool IsEnableTransform()
+	public float currRecastTime
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public float selfDamageRatio
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public bool isPauseConsume
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public bool IsFull()
+	public bool isServantTransform
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public void Continue()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetRecastTime()
-		{
-		}
+	public void Initialize(AbilityDataElement ade, int idx, bool isServantTransform, UtpMultiPlayService multiPlayService)
+	{
+	}
 
-		public static bool IsInstantUniqueTransform(PlayerCharacter owner)
-		{
-			return default(bool);
-		}
+	public void Update(PlayerCharacter owner)
+	{
+	}
+
+	public void AddAbsolutePoint(float value, CharacterBase owner, bool withEffectAndSE = true)
+	{
+	}
+
+	public void AddPoint(int value, CharacterBase owner)
+	{
+	}
+
+	public void AddPointForSelfDamageAbility(float rate, CharacterBase owner)
+	{
+	}
+
+	public void SetPoint(float value, bool isSielent = false)
+	{
+	}
+
+	public void SetIsPauseConsume(bool isPause)
+	{
+	}
+
+	public bool IsEnableTransform()
+	{
+		return default(bool);
+	}
+
+	public bool IsFull()
+	{
+		return default(bool);
+	}
+
+	public void Continue()
+	{
+	}
+
+	public void SetRecastTime()
+	{
+	}
+
+	public static bool IsInstantUniqueTransform(CharacterBase owner)
+	{
+		return default(bool);
 	}
 }

@@ -1,9 +1,8 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleLockObject : MonoBehaviour
 {
-	public class GrowthManaCircleLockObject : MonoBehaviour
-	{
-		public bool isBroken;
-	}
+	public bool isBroken;
 }

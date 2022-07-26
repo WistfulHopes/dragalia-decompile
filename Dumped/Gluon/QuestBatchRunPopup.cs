@@ -4,71 +4,73 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestBatchRunPopup : PopupBase
 {
-	public class QuestBatchRunPopup : PopupBase
+	[SerializeField]
+	private Transform cellParent;
+
+	[SerializeField]
+	private Text emptyQuestText;
+
+	[SerializeField]
+	private Button okButton;
+
+	[SerializeField]
+	protected GameObject bonusButton;
+
+	private List<QuestBatchRunSettingCell> cells;
+
+	private UnityEvent okButtonPressedCallback;
+
+	private UnityEvent closePopupCallback;
+
+	private static readonly string cellPrefabPath;
+
+	private static readonly string popupPrefabPath;
+
+	public static QuestBatchRunPopup Create(List<int> targetEventIdList)
 	{
-		[SerializeField]
-		private Transform cellParent;
+		return null;
+	}
 
-		[SerializeField]
-		private Text emptyQuestText;
+	private void Initialize(List<int> targetEventIdList)
+	{
+	}
 
-		[SerializeField]
-		private Button okButton;
+	public List<int> TakeTargetQuestIdList()
+	{
+		return null;
+	}
 
-		private List<QuestBatchRunSettingCell> cells;
+	public void AddClosePopupCallback(UnityAction callback)
+	{
+	}
 
-		private UnityEvent okButtonPressedCallback;
+	public void OnCloseButtonPressed()
+	{
+	}
 
-		private UnityEvent closePopupCallback;
+	public void AddOkButtonPressedCallback(UnityAction callback)
+	{
+	}
 
-		private static readonly string cellPrefabPath;
+	public void OnOkButtonPressed()
+	{
+	}
 
-		private static readonly string popupPrefabPath;
+	private bool CalculateIsRecievedDailyBonus(int eventId)
+	{
+		return default(bool);
+	}
 
-		public static QuestBatchRunPopup Create(List<int> targetEventIdList)
-		{
-			return null;
-		}
+	private List<QuestMultipleSkipElement> CreateSkipableQuestDataList(int eventId)
+	{
+		return null;
+	}
 
-		private void Initialize(List<int> targetEventIdList)
-		{
-		}
-
-		public List<int> TakeTargetQuestIdList()
-		{
-			return null;
-		}
-
-		public void AddClosePopupCallback(UnityAction callback)
-		{
-		}
-
-		public void OnCloseButtonPressed()
-		{
-		}
-
-		public void AddOkButtonPressedCallback(UnityAction callback)
-		{
-		}
-
-		public void OnOkButtonPressed()
-		{
-		}
-
-		private bool CalculateIsRecievedDailyBonus(int eventId)
-		{
-			return default(bool);
-		}
-
-		private List<QuestMultipleSkipElement> CreateSkipableQuestDataList(int eventId)
-		{
-			return null;
-		}
-
-		public void UpdateOkButtonState()
-		{
-		}
+	public void UpdateOkButtonState()
+	{
 	}
 }

@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnumFlagsAttribute : PropertyAttribute
 {
-	public class EnumFlagsAttribute : PropertyAttribute
-	{
-	}
 }

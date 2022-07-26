@@ -2,90 +2,89 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumPlayRecordCanvas : MonoBehaviour
 {
-	public class AlbumPlayRecordCanvas : MonoBehaviour
+	[SerializeField]
+	private OutGameBgChara chara;
+
+	[SerializeField]
+	private RectTransform charaRectTransform;
+
+	[SerializeField]
+	private AnimationUITalkWindow balloon;
+
+	[SerializeField]
+	private AlbumCharaTalkSelector charaTalkSelector;
+
+	[SerializeField]
+	private Text talkName;
+
+	[SerializeField]
+	private Text talkText;
+
+	public TabBase categoryTab;
+
+	public Transform listParentTransform;
+
+	public GameObject originCell;
+
+	public RectTransform listFrameTransform;
+
+	public DragEventScrollRect scrollRect;
+
+	public DragEventScrollRect dummyContentsScrollRect;
+
+	private AlbumPlayRecordListCategory listCategory;
+
+	private List<AlbumPlayerRecordListCellData> recordDataList;
+
+	private string charaVoiceGroupName;
+
+	private bool isChangeScrollLayout;
+
+	private void Start()
 	{
-		[SerializeField]
-		private OutGameBgChara chara;
+	}
 
-		[SerializeField]
-		private RectTransform charaRectTransform;
+	private void LoadRecordData()
+	{
+	}
 
-		[SerializeField]
-		private AnimationUITalkWindow balloon;
+	private void ReloadList()
+	{
+	}
 
-		[SerializeField]
-		private AlbumCharaTalkSelector charaTalkSelector;
+	public void OnCategoryTabPressed(int index)
+	{
+	}
 
-		[SerializeField]
-		private Text talkName;
+	public void Talk(string charaVoiceGroupName, string voiceName)
+	{
+	}
 
-		[SerializeField]
-		private Text talkText;
+	public void StartBalloonAnimation(OutGameTopCharaTalkSelector.TalkData talkData, bool dontRunCloseAnimation = false, bool ignoreDelay = false)
+	{
+	}
 
-		public TabBase categoryTab;
+	public void SetTalkTextString(string text)
+	{
+	}
 
-		public Transform listParentTransform;
+	public void SetTalkNameString(string text)
+	{
+	}
 
-		public GameObject originCell;
+	public void SetChara()
+	{
+	}
 
-		public RectTransform listFrameTransform;
+	public void SetcharaVoiceGroupName(string charaVoiceGroupName)
+	{
+	}
 
-		public DragEventScrollRect scrollRect;
-
-		public DragEventScrollRect dummyContentsScrollRect;
-
-		private AlbumPlayRecordListCategory listCategory;
-
-		private List<AlbumPlayerRecordListCellData> recordDataList;
-
-		private string charaVoiceGroupName;
-
-		private bool isChangeScrollLayout;
-
-		private void Start()
-		{
-		}
-
-		private void LoadRecordData()
-		{
-		}
-
-		private void ReloadList()
-		{
-		}
-
-		public void OnCategoryTabPressed(int index)
-		{
-		}
-
-		public void Talk(string charaVoiceGroupName, string voiceName)
-		{
-		}
-
-		public void StartBalloonAnimation(OutGameTopCharaTalkSelector.TalkData talkData, bool dontRunCloseAnimation = false, bool ignoreDelay = false)
-		{
-		}
-
-		public void SetTalkTextString(string text)
-		{
-		}
-
-		public void SetTalkNameString(string text)
-		{
-		}
-
-		public void SetChara()
-		{
-		}
-
-		public void SetcharaVoiceGroupName(string charaVoiceGroupName)
-		{
-		}
-
-		public void FirstVoiceStart()
-		{
-		}
+	public void FirstVoiceStart()
+	{
 	}
 }

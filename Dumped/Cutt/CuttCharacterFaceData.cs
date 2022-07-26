@@ -1,15 +1,14 @@
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttCharacterFaceData : MonoBehaviour
 {
-	public class CuttCharacterFaceData : MonoBehaviour
-	{
-		public static int maxTextureSize;
+	public static int maxTextureSize;
 
-		public Texture[] textureY;
+	public Texture[] textureY;
 
-		public Texture[] textureCr;
+	public Texture[] textureCr;
 
-		public Texture[] textureCb;
-	}
+	public Texture[] textureCb;
 }

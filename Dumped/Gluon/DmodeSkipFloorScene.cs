@@ -2,73 +2,70 @@ using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeSkipFloorScene : SceneBase
 {
-	public class DmodeSkipFloorScene : SceneBase
+	[SerializeField]
+	private Canvas bgCanvas;
+
+	[SerializeField]
+	private Camera uiCamera;
+
+	[SerializeField]
+	private Camera flashCamera;
+
+	private int selectedCharaId;
+
+	private int selectedEditSkill1CharaId;
+
+	private int selectedEditSkill2CharaId;
+
+	private DmodeServitorType selectedServitorType;
+
+	private int destinationFloorNum;
+
+	private DmodeSkipFloorAnimationPlayer skipFloorAnimationPlayer;
+
+	private BaseCanvasContents baseCanvasContents;
+
+	private Task requestDungeonStartTask;
+
+	private static readonly string skipFloorAnimationPlayerPath;
+
+	private static readonly string bgContentsPath;
+
+	private void Start()
 	{
-		[SerializeField]
-		[Header("BackGround")]
-		private Canvas bgCanvas;
+	}
 
-		[SerializeField]
-		private Camera uiCamera;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		[SerializeField]
-		[Header("Flash")]
-		private Camera flashCamera;
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		private int selectedCharaId;
+	public void RequestApi()
+	{
+	}
 
-		private int selectedEditSkill1CharaId;
+	private void OnEnterAnimation()
+	{
+	}
 
-		private int selectedEditSkill2CharaId;
+	private void SetupFlashCamera()
+	{
+	}
 
-		private DmodeServitorType selectedServitorType;
+	private Task RequestDungeonFloorSkip()
+	{
+		return null;
+	}
 
-		private int destinationFloorNum;
-
-		private DmodeSkipFloorAnimationPlayer skipFloorAnimationPlayer;
-
-		private BaseCanvasContents baseCanvasContents;
-
-		private Task requestDungeonStartTask;
-
-		private static readonly string skipFloorAnimationPlayerPath;
-
-		private static readonly string bgContentsPath;
-
-		private void Start()
-		{
-		}
-
-		private void OnPrevSceneExitDone()
-		{
-		}
-
-		public override void OnBeforeLeaving()
-		{
-		}
-
-		public void RequestApi()
-		{
-		}
-
-		private void OnEnterAnimation()
-		{
-		}
-
-		private void SetupFlashCamera()
-		{
-		}
-
-		private Task RequestDungeonFloorSkip()
-		{
-			return null;
-		}
-
-		private IEnumerator GoToIngame()
-		{
-			return null;
-		}
+	private IEnumerator GoToIngame()
+	{
+		return null;
 	}
 }

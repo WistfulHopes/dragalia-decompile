@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public abstract class MessageDataBase
 {
-	public abstract class MessageDataBase
-	{
-		public string title;
+	public string title;
 
-		public string desc;
+	public string desc;
 
-		public abstract void ReloadText();
-	}
+	public abstract void ReloadText();
 }

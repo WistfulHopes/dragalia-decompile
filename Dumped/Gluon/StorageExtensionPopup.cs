@@ -2,65 +2,64 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class StorageExtensionPopup : CommonPopup
 {
-	public class StorageExtensionPopup : CommonPopup
+	public enum StorageType
 	{
-		public enum StorageType
-		{
-			Weapon,
-			Dragon,
-			Amulet
-		}
+		Weapon,
+		Dragon,
+		Amulet
+	}
 
-		[SerializeField]
-		[Header("Texts")]
-		private Text ownedStoneCountText;
+	[SerializeField]
+	private Text ownedStoneCountText;
 
-		[SerializeField]
-		private Text ownedPaidStoneCountText;
+	[SerializeField]
+	private Text ownedPaidStoneCountText;
 
-		[SerializeField]
-		private Text commentText;
+	[SerializeField]
+	private Text commentText;
 
-		[SerializeField]
-		private Text[] onButtonPriceTexts;
+	[SerializeField]
+	private Text[] onButtonPriceTexts;
 
-		[SerializeField]
-		[Header("OnOffs")]
-		private GameObject insufficientGO;
+	[SerializeField]
+	private GameObject insufficientGO;
 
-		[SerializeField]
-		private GameObject purchaseStoneImage;
+	[SerializeField]
+	private GameObject purchaseStoneImage;
 
-		[SerializeField]
-		private GameObject usePaidStoneImage;
+	[SerializeField]
+	private GameObject usePaidStoneImage;
 
-		public GameObject insufficientStonePriceGO;
+	public GameObject insufficientStonePriceGO;
 
-		public GameObject insufficientPaidStonePriceGO;
+	public GameObject insufficientPaidStonePriceGO;
 
-		public GameObject normalStonePriceGO;
+	public GameObject normalStonePriceGO;
 
-		public GameObject normalPaidStonePriceGO;
+	public GameObject normalPaidStonePriceGO;
 
-		[SerializeField]
-		[Header("Button")]
-		private Button stoneButton;
+	[SerializeField]
+	private Button stoneButton;
 
-		private Action<bool> onOk;
+	[SerializeField]
+	private Button diaButton;
 
-		public static StorageExtensionPopup Create(StorageType type, Action<bool> onOk)
-		{
-			return null;
-		}
+	private Action<bool> onOk;
 
-		private void InitByType(StorageType type, Action<bool> onOk)
-		{
-		}
+	public static StorageExtensionPopup Create(StorageType type, Action<bool> onOk)
+	{
+		return null;
+	}
 
-		public void OnStoneButtonPressed(bool isPaidStone)
-		{
-		}
+	private void InitByType(StorageType type, Action<bool> onOk)
+	{
+	}
+
+	public void OnStoneButtonPressed(bool isPaidStone)
+	{
 	}
 }

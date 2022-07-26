@@ -2,60 +2,59 @@ using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public abstract class AnimationUIPartBase : MonoBehaviour
 {
-	public abstract class AnimationUIPartBase : MonoBehaviour
+	protected bool _isReverseAnimation;
+
+	private RectTransform _rectTransform;
+
+	private bool isInited;
+
+	public bool isAnimating
 	{
-		protected bool _isReverseAnimation;
-
-		private RectTransform _rectTransform;
-
-		private bool isInited;
-
-		public bool isAnimating
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public Action<bool> onAnimationFinished
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public bool isReverseAnimation => default(bool);
-
-		public RectTransform rectTransform => null;
-
-		public virtual void Init()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public virtual void Execute(bool isReverse = false)
+	public Action<bool> onAnimationFinished
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		protected virtual void OnAnimationFinished()
-		{
-		}
+	public bool isReverseAnimation => default(bool);
 
-		public virtual void Kill()
-		{
-		}
+	public RectTransform rectTransform => null;
+
+	public virtual void Init()
+	{
+	}
+
+	public virtual void Execute(bool isReverse = false)
+	{
+	}
+
+	protected virtual void OnAnimationFinished()
+	{
+	}
+
+	public virtual void Kill()
+	{
 	}
 }

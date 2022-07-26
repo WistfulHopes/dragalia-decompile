@@ -3,52 +3,51 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ItemGetQuestListPopup : CommonPopup
 {
-	public class ItemGetQuestListPopup : CommonPopup
+	private const string prefabPath = "Prefabs/OutGame/Item/ItemGetQuestListPopup";
+
+	[SerializeField]
+	private QuestDetailList questDetailList;
+
+	[SerializeField]
+	private Text helpText;
+
+	private List<QuestCellData> cellDataList;
+
+	public PopupCanvas parentPopupCanvas
 	{
-		private const string prefabPath = "Prefabs/OutGame/Item/ItemGetQuestListPopup";
-
-		[SerializeField]
-		private QuestDetailList questDetailList;
-
-		[SerializeField]
-		private Text helpText;
-
-		private List<QuestCellData> cellDataList;
-
-		public PopupCanvas parentPopupCanvas
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public static ItemGetQuestListPopup Create()
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public void InitSetting(int[] moveQuests, GiftType giftType, int itemId)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void LoadSceneQuestMenu(QuestCellData data)
-		{
-		}
+	public static ItemGetQuestListPopup Create()
+	{
+		return null;
+	}
 
-		private void CreateNoOpenPopup(QuestCellData data)
-		{
-		}
+	public void InitSetting(int[] moveQuests, GiftType giftType, int itemId)
+	{
+	}
 
-		private void CreateNoReleasePopup(QuestCellData data)
-		{
-		}
+	private void LoadSceneQuestMenu(QuestCellData data)
+	{
+	}
+
+	private void CreateNoOpenPopup(QuestCellData data)
+	{
+	}
+
+	private void CreateNoReleasePopup(QuestCellData data)
+	{
 	}
 }

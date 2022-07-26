@@ -1,24 +1,23 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BlinkCharacter : RenderObjectBase
 {
-	public class BlinkCharacter : RenderObjectBase
+	private Animator animator;
+
+	public Action onStartAction;
+
+	private void Start()
 	{
-		private Animator animator;
+	}
 
-		public Action onStartAction;
+	public void StartFace(CharaFaceEyeMotion eye, CharaFaceMouthMotion mouth)
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		public void StartFace(CharaFaceEyeMotion eye, CharaFaceMouthMotion mouth)
-		{
-		}
-
-		public override void FastUpdate()
-		{
-		}
+	public override void FastUpdate()
+	{
 	}
 }

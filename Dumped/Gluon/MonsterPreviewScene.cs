@@ -1,61 +1,60 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MonsterPreviewScene : SceneBase
 {
-	public class MonsterPreviewScene : SceneBase
+	public GameObject bgPanel;
+
+	public Canvas mainCanvas;
+
+	public GameObject monsterNode;
+
+	public GameObject mainCamera;
+
+	private int showMonsterId;
+
+	[SerializeField]
+	private MonsterLibraryCamera previewCameras;
+
+	private Vector3 cameraPositionOffset;
+
+	private Animator monsterAnimator;
+
+	private bool playAnimationFlg;
+
+	private int actionLoopIndex;
+
+	private string[] animationStateNames;
+
+	private void Start()
 	{
-		public GameObject bgPanel;
+	}
 
-		public Canvas mainCanvas;
+	private void BackButtonPressed()
+	{
+	}
 
-		public GameObject monsterNode;
+	private void SetMonsterModel()
+	{
+	}
 
-		public GameObject mainCamera;
+	private void SetCameraProperty()
+	{
+	}
 
-		private int showMonsterId;
+	private bool SetupMonsterMasterData()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private MonsterLibraryCamera previewCameras;
+	public void ActionButtonPressed()
+	{
+	}
 
-		private Vector3 cameraPositionOffset;
-
-		private Animator monsterAnimator;
-
-		private bool playAnimationFlg;
-
-		private int actionLoopIndex;
-
-		private string[] animationStateNames;
-
-		private void Start()
-		{
-		}
-
-		private void BackButtonPressed()
-		{
-		}
-
-		private void SetMonsterModel()
-		{
-		}
-
-		private void SetCameraProperty()
-		{
-		}
-
-		private bool SetupMonsterMasterData()
-		{
-			return default(bool);
-		}
-
-		public void ActionButtonPressed()
-		{
-		}
-
-		private IEnumerator playAnimationDelay()
-		{
-			return null;
-		}
+	private IEnumerator playAnimationDelay()
+	{
+		return null;
 	}
 }

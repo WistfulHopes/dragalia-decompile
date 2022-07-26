@@ -2,71 +2,70 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SellIconListBase : CommonIconListBase
 {
-	public class SellIconListBase : CommonIconListBase
+	public UnityAction tabButtonCallBack;
+
+	public UnityAction sellModeButtonCallBack;
+
+	public UnityAction listChangeButtonCallBack;
+
+	public Button sellModeButton;
+
+	public TabBase tab;
+
+	public RectTransform lockButtonBase;
+
+	public GameObject searchSpaceObject;
+
+	public GameObject talismanButtonObject;
+
+	public GameObject backCrestButtonObject;
+
+	public GameObject dummySellButtonObject;
+
+	[SerializeField]
+	private GameObject listButtonObj;
+
+	private void Start()
 	{
-		public UnityAction tabButtonCallBack;
+	}
 
-		public UnityAction sellModeButtonCallBack;
+	private void SetModeText()
+	{
+	}
 
-		public UnityAction listChangeButtonCallBack;
+	public void ListTabPressedZeroToOne(int index)
+	{
+	}
 
-		public Button sellModeButton;
+	public void ListTabPressed(int tabTag)
+	{
+	}
 
-		public TabBase tab;
+	public void LockCharacterTab(bool interactable)
+	{
+	}
 
-		public RectTransform lockButtonBase;
+	public void SellChangeButtonPressed()
+	{
+	}
 
-		public GameObject searchSpaceObject;
+	private void CheckTutorial()
+	{
+	}
 
-		public GameObject talismanButtonObject;
+	public void OnListChangeButtonPressed()
+	{
+	}
 
-		public GameObject backCrestButtonObject;
+	public void OnTalismanButtonPressed()
+	{
+	}
 
-		public GameObject dummySellButtonObject;
-
-		[SerializeField]
-		private GameObject listButtonObj;
-
-		private void Start()
-		{
-		}
-
-		private void SetModeText()
-		{
-		}
-
-		public void ListTabPressedZeroToOne(int index)
-		{
-		}
-
-		public void ListTabPressed(int tabTag)
-		{
-		}
-
-		public void LockCharacterTab(bool interactable)
-		{
-		}
-
-		public void SellChangeButtonPressed()
-		{
-		}
-
-		private void CheckTutorial()
-		{
-		}
-
-		public void OnListChangeButtonPressed()
-		{
-		}
-
-		public void OnTalismanButtonPressed()
-		{
-		}
-
-		public void OnBackCrestButtonPressed()
-		{
-		}
+	public void OnBackCrestButtonPressed()
+	{
 	}
 }

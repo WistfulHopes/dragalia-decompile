@@ -1,34 +1,33 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateCarried : CharacterStateBase
 {
-	public class CharacterStateCarried : CharacterStateBase
+	public CharacterBase carryChara;
+
+	public bool isFalling
 	{
-		public CharacterBase carryChara;
-
-		public bool isFalling
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		protected override void OnStateEnter_Internal()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
+	protected override void OnStateEnter_Internal()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateUpdate()
+	{
+	}
+
+	public override void OnStateExit()
+	{
 	}
 }

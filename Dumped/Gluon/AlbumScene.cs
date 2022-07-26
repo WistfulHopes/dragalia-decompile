@@ -1,63 +1,62 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumScene : SceneBase
 {
-	public class AlbumScene : SceneBase
+	[SerializeField]
+	private Camera mainCamera;
+
+	private string charaVoiceGroupName;
+
+	private TouchGuardObject albumSceneTouchGuard;
+
+	private TouchGuardObject albumSceneTutorialTouchGuard;
+
+	private bool isTutorial;
+
+	private bool isConnecting;
+
+	private void Awake()
 	{
-		[SerializeField]
-		private Camera mainCamera;
+	}
 
-		private string charaVoiceGroupName;
+	private void Start()
+	{
+	}
 
-		private TouchGuardObject albumSceneTouchGuard;
+	private void OnEnterScene()
+	{
+	}
 
-		private TouchGuardObject albumSceneTutorialTouchGuard;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private bool isTutorial;
+	private void OnInitReadyRequestHttp()
+	{
+	}
 
-		private bool isConnecting;
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		private void Awake()
-		{
-		}
+	private void TutorialStart()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private IEnumerator TutorialAlbumCoroutine()
+	{
+		return null;
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void CreateGetAlbumBonusPopup()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
-
-		private void OnInitReadyRequestHttp()
-		{
-		}
-
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
-
-		private void TutorialStart()
-		{
-		}
-
-		private IEnumerator TutorialAlbumCoroutine()
-		{
-			return null;
-		}
-
-		private void CreateGetAlbumBonusPopup()
-		{
-		}
-
-		public override void OnBeforeLeaving()
-		{
-		}
+	public override void OnBeforeLeaving()
+	{
 	}
 }

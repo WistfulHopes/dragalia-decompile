@@ -1,13 +1,12 @@
 using UnityEngine;
 
-namespace Gluon
-{
-	public class UnitDetailDragonModel : MonoBehaviour
-	{
-		public Transform modelCenter;
+namespace Gluon;
 
-		private void Awake()
-		{
-		}
+public class UnitDetailDragonModel : MonoBehaviour
+{
+	public Transform modelCenter;
+
+	private void Awake()
+	{
 	}
 }

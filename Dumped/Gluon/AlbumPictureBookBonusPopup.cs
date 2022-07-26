@@ -1,15 +1,14 @@
 using UnityEngine;
 
-namespace Gluon
-{
-	public class AlbumPictureBookBonusPopup : PopupBase
-	{
-		[SerializeField]
-		private TabBase tabView;
+namespace Gluon;
 
-		public static AlbumPictureBookBonusPopup Create()
-		{
-			return null;
-		}
+public class AlbumPictureBookBonusPopup : PopupBase
+{
+	[SerializeField]
+	private TabBase tabView;
+
+	public static AlbumPictureBookBonusPopup Create()
+	{
+		return null;
 	}
 }

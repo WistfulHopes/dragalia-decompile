@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandFrameVisible : IStoryCommand
 {
-	[CommandName("frame_visible")]
-	public class StoryCommandFrameVisible : IStoryCommand
+	public void Start(bool visible, float fadeTime = 0f)
 	{
-		public void Start(bool visible, float fadeTime = 0f)
-		{
-		}
 	}
 }

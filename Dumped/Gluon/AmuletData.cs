@@ -1,77 +1,76 @@
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class AmuletData
 {
-	public class AmuletData
+	public AbilityDataElement[] abilityData;
+
+	public int[] abilityLv;
+
+	public AbilityCrestElement masterData
 	{
-		public AbilityDataElement[] abilityData;
-
-		public int[] abilityLv;
-
-		public AbilityCrestElement masterData
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public int level
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public int hp
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public int attack
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public AmuletData(int amuletId)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool Setup(int amuletLv, int plusHp, int plusAttack)
+	public int level
+	{
+		[CompilerGenerated]
+		get
 		{
-			return default(bool);
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public void SetupAbility(int ability1Lv, int ability2Lv)
+	public int hp
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
+
+	public int attack
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public AmuletData(int amuletId)
+	{
+	}
+
+	public bool Setup(int amuletLv, int plusHp, int plusAttack)
+	{
+		return default(bool);
+	}
+
+	public void SetupAbility(int ability1Lv, int ability2Lv)
+	{
 	}
 }

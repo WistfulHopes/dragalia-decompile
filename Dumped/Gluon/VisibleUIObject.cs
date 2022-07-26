@@ -1,31 +1,30 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class VisibleUIObject : MonoBehaviour
 {
-	public class VisibleUIObject : MonoBehaviour
+	private Transform trs;
+
+	private Vector3 scale;
+
+	private bool isActive;
+
+	public void Initialize(bool visible = false, [Optional] GameObject obj)
 	{
-		private Transform trs;
+	}
 
-		private Vector3 scale;
+	public bool IsVisible(bool inHierarchy = true)
+	{
+		return default(bool);
+	}
 
-		private bool isActive;
+	public void Visible(bool value)
+	{
+	}
 
-		public void Initialize(bool visible = false, [Optional] GameObject obj)
-		{
-		}
-
-		public bool IsVisible(bool inHierarchy = true)
-		{
-			return default(bool);
-		}
-
-		public void Visible(bool value)
-		{
-		}
-
-		public void SetScale(Vector3 scl)
-		{
-		}
+	public void SetScale(Vector3 scl)
+	{
 	}
 }

@@ -1,12 +1,11 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public static class ExtendBitArray
 {
-	public static class ExtendBitArray
+	public static bool Any(this BitArray array)
 	{
-		public static bool Any(this BitArray array)
-		{
-			return default(bool);
-		}
+		return default(bool);
 	}
 }

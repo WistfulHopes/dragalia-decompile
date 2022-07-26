@@ -1,179 +1,180 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class MainGameRebornCtrl
 {
-	public class MainGameRebornCtrl
+	private class SystemRebornParam
 	{
-		private class SystemRebornParam
-		{
-			public float rebornTimer;
+		public float rebornTimer;
 
-			public int consumeRebornCount;
+		public int consumeRebornCount;
 
-			public bool isRebornCountDown;
-		}
+		public bool isRebornCountDown;
+	}
 
-		private class AbilityRebornParam
-		{
-			public float rebornTimer;
+	private class AbilityRebornParam
+	{
+		public float rebornTimer;
 
-			public int usedRebornCount;
+		public int usedRebornCount;
 
-			public int rebornCountLimit;
+		public int rebornCountLimit;
 
-			public bool isReserved;
+		public bool isReserved;
 
-			public bool isRebornCountDown;
+		public bool isRebornCountDown;
 
-			public float hpRate;
+		public float hpRate;
 
-			public float consumeDpRate;
-		}
+		public float consumeDpRate;
+	}
 
-		private class ActionRebornParam
-		{
-			public bool isReserved;
+	private class ActionRebornParam
+	{
+		public bool isReserved;
 
-			public float hpRate;
+		public float hpRate;
 
-			public bool withSpCharge;
-		}
+		public bool withSpCharge;
 
-		private SystemRebornParam _systemRebornParam;
+		public float spChargeRate;
+	}
 
-		private Dictionary<CharacterSelector, AbilityRebornParam> _abilityRebornParamDic;
+	private SystemRebornParam _systemRebornParam;
 
-		private Dictionary<CharacterSelector, ActionRebornParam> _actionRebornParamDic;
+	private Dictionary<CharacterSelector, AbilityRebornParam> _abilityRebornParamDic;
 
-		private InGameUICtrl uiCtrl;
+	private Dictionary<CharacterSelector, ActionRebornParam> _actionRebornParamDic;
 
-		private CharacterManager charaManager;
+	private InGameUICtrl uiCtrl;
 
-		private GameDataManager gameDataManager;
+	private CharacterManager charaManager;
 
-		private InGameSettings settings;
+	private GameDataManager gameDataManager;
 
-		public MainGameRebornCtrl(GameDataManager gameDataManager, InGameSettings settings, CharacterManager charaManager, InGameUICtrl uiCtrl)
-		{
-		}
+	private InGameSettings settings;
 
-		public void OnContinue()
-		{
-		}
+	public MainGameRebornCtrl(GameDataManager gameDataManager, InGameSettings settings, CharacterManager charaManager, InGameUICtrl uiCtrl)
+	{
+	}
 
-		public bool IsRebornableQuest()
-		{
-			return default(bool);
-		}
+	public void OnContinue()
+	{
+	}
 
-		public void RegisterAbilityRebornParam(CharacterSelector owner, int rebornCount, float hpRate, float consumeDpRate)
-		{
-		}
+	public bool IsRebornableQuest()
+	{
+		return default(bool);
+	}
 
-		public void ReserveActionReborn(CharacterSelector owner, float hpRate, bool withSpCharge)
-		{
-		}
+	public void RegisterAbilityRebornParam(CharacterSelector owner, int rebornCount, float hpRate, float consumeDpRate)
+	{
+	}
 
-		public void Update()
-		{
-		}
+	public void ReserveActionReborn(CharacterSelector owner, float hpRate, bool withSpCharge, float spChargeRate)
+	{
+	}
 
-		public bool UpdateAllDead()
-		{
-			return default(bool);
-		}
+	public void Update()
+	{
+	}
 
-		private bool UpdateSystemReborn()
-		{
-			return default(bool);
-		}
+	public bool UpdateAllDead()
+	{
+		return default(bool);
+	}
 
-		private void UpdateActionRebornAll()
-		{
-		}
+	private bool UpdateSystemReborn()
+	{
+		return default(bool);
+	}
 
-		private void UpdateAbilityRebornAll()
-		{
-		}
+	private void UpdateActionRebornAll()
+	{
+	}
 
-		private void UpdateAbilityReborn(CharacterSelector selector, AbilityRebornParam param)
-		{
-		}
+	private void UpdateAbilityRebornAll()
+	{
+	}
 
-		private void UpdateActionReborn(CharacterSelector selector, ActionRebornParam param)
-		{
-		}
+	private void UpdateAbilityReborn(CharacterSelector selector, AbilityRebornParam param)
+	{
+	}
 
-		public bool IsRemainAnyRebornCount()
-		{
-			return default(bool);
-		}
+	private void UpdateActionReborn(CharacterSelector selector, ActionRebornParam param)
+	{
+	}
 
-		public bool IsAbilityRebornCountingDown()
-		{
-			return default(bool);
-		}
+	public bool IsRemainAnyRebornCount()
+	{
+		return default(bool);
+	}
 
-		public bool IsActionRebornReserved()
-		{
-			return default(bool);
-		}
+	public bool IsAbilityRebornCountingDown()
+	{
+		return default(bool);
+	}
 
-		public bool IsActionRebornReserved(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	public bool IsActionRebornReserved()
+	{
+		return default(bool);
+	}
 
-		private List<CharacterBase> GetSystemRebornTargetCharas()
-		{
-			return null;
-		}
+	public bool IsActionRebornReserved(CharacterBase chara)
+	{
+		return default(bool);
+	}
 
-		public bool WillReborn(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	private List<CharacterBase> GetSystemRebornTargetCharas()
+	{
+		return null;
+	}
 
-		public bool CanSystemReborn(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	public bool WillReborn(CharacterBase chara)
+	{
+		return default(bool);
+	}
 
-		public bool CanAbilityReborn(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	public bool CanSystemReborn(CharacterBase chara)
+	{
+		return default(bool);
+	}
 
-		public int GetAnyRebornCount(CharacterBase chara)
-		{
-			return default(int);
-		}
+	public bool CanAbilityReborn(CharacterBase chara)
+	{
+		return default(bool);
+	}
 
-		public int GetSystemRebornCount(CharacterBase chara)
-		{
-			return default(int);
-		}
+	public int GetAnyRebornCount(CharacterBase chara)
+	{
+		return default(int);
+	}
 
-		public int GetAbilityRebornCount(CharacterBase chara)
-		{
-			return default(int);
-		}
+	public int GetSystemRebornCount(CharacterBase chara)
+	{
+		return default(int);
+	}
 
-		public void StartAbilityReborn(CharacterBase chara)
-		{
-		}
+	public int GetAbilityRebornCount(CharacterBase chara)
+	{
+		return default(int);
+	}
 
-		private float GetCurrentDpRate()
-		{
-			return default(float);
-		}
+	public void StartAbilityReborn(CharacterBase chara)
+	{
+	}
 
-		private void CancelReborn()
-		{
-		}
+	private float GetCurrentDpRate()
+	{
+		return default(float);
+	}
 
-		private void CancelReborn(CharacterSelector owner)
-		{
-		}
+	private void CancelReborn()
+	{
+	}
+
+	private void CancelReborn(CharacterSelector owner)
+	{
 	}
 }

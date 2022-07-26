@@ -2,64 +2,63 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsMove : ActionParts
 {
-	public class ActionPartsMove : ActionParts
+	private readonly MoveData _partsData;
+
+	private ActionMove _move;
+
+	private RandomXorshift _random;
+
+	private RunActionRandomParameter _runActionParam;
+
+	public ActionPartsMove(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly MoveData _partsData;
+	}
 
-		private ActionMove _move;
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		private RandomXorshift _random;
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		private RunActionRandomParameter _runActionParam;
+	public override void Clear()
+	{
+	}
 
-		public ActionPartsMove(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override RunActionParameterBase CreateRunActionParameter()
-		{
-			return null;
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public override void SetRunActionParameter(RunActionParameterBase param)
-		{
-		}
+	protected override bool OnFixedUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public override void Clear()
-		{
-		}
+	private Vector3 CalculateStartPosition()
+	{
+		return default(Vector3);
+	}
 
-		protected override void OnStart()
-		{
-		}
+	public override void Stop()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	private void SetupTeleport(out Vector3 position, out Vector3 direction)
+	{
+	}
 
-		protected override bool OnFixedUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		private Vector3 CalculateStartPosition()
-		{
-			return default(Vector3);
-		}
-
-		public override void Stop()
-		{
-		}
-
-		private void SetupTeleport(out Vector3 position, out Vector3 direction)
-		{
-		}
-
-		private void CalcMovePosition(Vector3 start, ref Vector3 end, ref float duration)
-		{
-		}
+	private void CalcMovePosition(Vector3 start, ref Vector3 end, ref float duration)
+	{
 	}
 }

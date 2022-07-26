@@ -1,13 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public class GrowthWeaponSkinConfirmData
 {
-	public class GrowthWeaponSkinConfirmData
-	{
-		public int weaponSkinId;
+	public int weaponSkinId;
 
-		public UnitEnhanceListCellType cellType;
+	public UnitEnhanceListCellType cellType;
 
-		public bool isRelease;
+	public bool isRelease;
 
-		public int conditionParam;
-	}
+	public int conditionParam;
 }

@@ -1,23 +1,22 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CraftMaterialWeaponDetailPopup : CommonPopup
 {
-	public class CraftMaterialWeaponDetailPopup : CommonPopup
+	[SerializeField]
+	private CraftEvolutionBaseFrame materialWeaponDetail;
+
+	public static CraftMaterialWeaponDetailPopup Create(bool showBlackLayer = true)
 	{
-		[SerializeField]
-		private CraftEvolutionBaseFrame materialWeaponDetail;
+		return null;
+	}
 
-		public static CraftMaterialWeaponDetailPopup Create(bool showBlackLayer = true)
-		{
-			return null;
-		}
+	public void InitPop(int weaponId)
+	{
+	}
 
-		public void InitPop(int weaponId)
-		{
-		}
-
-		public override void OnOkButtonPressed()
-		{
-		}
+	public override void OnOkButtonPressed()
+	{
 	}
 }

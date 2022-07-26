@@ -1,33 +1,32 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsCtrlLightSatellite : ActionParts
 {
-	public class ActionPartsCtrlLightSatellite : ActionParts
+	private readonly CtrlLightSatelliteData _partsData;
+
+	public ActionPartsCtrlLightSatellite(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly CtrlLightSatelliteData _partsData;
+	}
 
-		public ActionPartsCtrlLightSatellite(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void OnPostCreated(CharacterBase chara)
+	{
+	}
 
-		public override void OnPostCreated(CharacterBase chara)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	private void Proc()
+	{
+	}
 
-		private void Proc()
-		{
-		}
-
-		private void CreateCtrlYinYang(CharacterBase target)
-		{
-		}
+	private void CreateCtrlYinYang(CharacterBase target)
+	{
 	}
 }

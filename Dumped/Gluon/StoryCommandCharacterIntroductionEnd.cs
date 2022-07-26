@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandCharacterIntroductionEnd : IStoryCommand
 {
-	[CommandName("chara_intro_end")]
-	public class StoryCommandCharacterIntroductionEnd : IStoryCommand
+	public void Start()
 	{
-		public void Start()
-		{
-		}
 	}
 }

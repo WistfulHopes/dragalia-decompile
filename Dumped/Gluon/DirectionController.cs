@@ -1,117 +1,116 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+internal class DirectionController
 {
-	internal class DirectionController
+	private struct DirectionData
 	{
-		private struct DirectionData
+		public Vector3 direction;
+
+		public float nowPower;
+
+		public float nowPowerRate;
+
+		public bool isStart;
+	}
+
+	private DirectionData[] _dataArray;
+
+	public float maxPower
+	{
+		[CompilerGenerated]
+		get
 		{
-			public Vector3 direction;
-
-			public float nowPower;
-
-			public float nowPowerRate;
-
-			public bool isStart;
+			return default(float);
 		}
-
-		private DirectionData[] _dataArray;
-
-		public float maxPower
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
 		}
+	}
 
-		public float attenuationRate
+	public float attenuationRate
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(float);
 		}
-
-		public Vector3 outDirection
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(Vector3);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public float outPower
+	public Vector3 outDirection
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(Vector3);
 		}
-
-		public Vector4 startTimeParam
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(Vector4);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		private bool IsEmptyDirection()
+	public float outPower
+	{
+		[CompilerGenerated]
+		get
 		{
-			return default(bool);
+			return default(float);
 		}
-
-		private int GetUseID()
+		[CompilerGenerated]
+		private set
 		{
-			return default(int);
 		}
+	}
 
-		public static Vector4 GetNowTimeParam()
+	public Vector4 startTimeParam
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(Vector4);
 		}
-
-		public void Init(int count, float maxpower, float attenuationrate)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Update()
-		{
-		}
+	private bool IsEmptyDirection()
+	{
+		return default(bool);
+	}
 
-		public void SetDirection(Vector3 dirction, float power)
-		{
-		}
+	private int GetUseID()
+	{
+		return default(int);
+	}
 
-		public void CalcDirection()
-		{
-		}
+	public static Vector4 GetNowTimeParam()
+	{
+		return default(Vector4);
+	}
+
+	public void Init(int count, float maxpower, float attenuationrate)
+	{
+	}
+
+	public void Update()
+	{
+	}
+
+	public void SetDirection(Vector3 dirction, float power)
+	{
+	}
+
+	public void CalcDirection()
+	{
 	}
 }

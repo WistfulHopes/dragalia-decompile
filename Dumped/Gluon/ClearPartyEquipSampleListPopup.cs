@@ -2,87 +2,85 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ClearPartyEquipSampleListPopup : CommonPopup
 {
-	public class ClearPartyEquipSampleListPopup : CommonPopup
+	public Text questName;
+
+	public ClearPartyEquipSampleListController equipSampleListController;
+
+	[SerializeField]
+	private Text descriptionText;
+
+	[HideInInspector]
+	public SceneBase scene;
+
+	private int targetQuestId;
+
+	private int[] targetCharaIds;
+
+	private int questGroupId;
+
+	private int[] questIds;
+
+	private int pageIndex;
+
+	private float scrollPos;
+
+	private int partySwitchNo;
+
+	private bool isSoloQuest;
+
+	public static ClearPartyEquipSampleListPopup Create(SceneBase scene)
 	{
-		public Text questName;
+		return null;
+	}
 
-		public ClearPartyEquipSampleListController equipSampleListController;
+	public void InitPopup(int questId, int[] charaIds, int partySwitchNo = 1)
+	{
+	}
 
-		[SerializeField]
-		[Header("UI")]
-		private Text descriptionText;
+	private void LoadPartyEquipSampleDatas()
+	{
+	}
 
-		[HideInInspector]
-		public SceneBase scene;
+	public void SetPrevPopupData(int questGroupId, int[] questIds, int pageIndex, float scrollPos)
+	{
+	}
 
-		private int targetQuestId;
+	public void OnBackButtonPressed()
+	{
+	}
 
-		private int[] targetCharaIds;
+	public void OnReloadButtonPressed()
+	{
+	}
 
-		private int questGroupId;
+	private void OnSetButtonPressed(ClearPartyEquipSampleListCellData cellData, int indexInParty)
+	{
+	}
 
-		private int[] questIds;
+	private void ShowPartyChangePopup(int sampleDataIndex, int indexInParty)
+	{
+	}
 
-		private int pageIndex;
+	private void UpdatePartyData(int partyIndex, PartyList partyList)
+	{
+	}
 
-		private float scrollPos;
+	private bool CheckDuplicateCharacter(ClearPartyEquipSampleListCellData cellData, int indexInParty)
+	{
+		return default(bool);
+	}
 
-		private int partySwitchNo;
+	private bool IsShowUnitEmptyPopup(ClearPartyEquipSampleListCellData cellData, int indexInParty)
+	{
+		return default(bool);
+	}
 
-		private bool isSoloQuest;
-
-		public static ClearPartyEquipSampleListPopup Create(SceneBase scene)
-		{
-			return null;
-		}
-
-		public void InitPopup(int questId, int[] charaIds, int partySwitchNo = 1)
-		{
-		}
-
-		private void LoadPartyEquipSampleDatas()
-		{
-		}
-
-		public void SetPrevPopupData(int questGroupId, int[] questIds, int pageIndex, float scrollPos)
-		{
-		}
-
-		public void OnBackButtonPressed()
-		{
-		}
-
-		public void OnReloadButtonPressed()
-		{
-		}
-
-		private void OnSetButtonPressed(ClearPartyEquipSampleListCellData cellData, int indexInParty)
-		{
-		}
-
-		private void ShowPartyChangePopup(int sampleDataIndex, int indexInParty)
-		{
-		}
-
-		private void UpdatePartyData(int partyIndex, PartyList partyList)
-		{
-		}
-
-		private bool CheckDuplicateCharacter(ClearPartyEquipSampleListCellData cellData, int indexInParty)
-		{
-			return default(bool);
-		}
-
-		private bool IsShowUnitEmptyPopup(ClearPartyEquipSampleListCellData cellData, int indexInParty)
-		{
-			return default(bool);
-		}
-
-		private bool IsShowUnitEmptyPopup(ClearPartyEquipSampleListCellData cellData)
-		{
-			return default(bool);
-		}
+	private bool IsShowUnitEmptyPopup(ClearPartyEquipSampleListCellData cellData)
+	{
+		return default(bool);
 	}
 }

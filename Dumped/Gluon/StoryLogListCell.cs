@@ -2,42 +2,41 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryLogListCell : TableViewCell<StoryLogListCellData>
 {
-	public class StoryLogListCell : TableViewCell<StoryLogListCellData>
+	public enum VoiceIcon
 	{
-		public enum VoiceIcon
-		{
-			Speaker,
-			SoundWave1,
-			SoundWave2
-		}
+		Speaker,
+		SoundWave1,
+		SoundWave2
+	}
 
-		public Text nameText;
+	public Text nameText;
 
-		public Text messageText;
+	public Text messageText;
 
-		private string voiceId;
+	private string voiceId;
 
-		[SerializeField]
-		private Button voiceButton;
+	[SerializeField]
+	private Button voiceButton;
 
-		[SerializeField]
-		private GameObject[] voiceButtonIcons;
+	[SerializeField]
+	private GameObject[] voiceButtonIcons;
 
-		private const float loopSec = 1f;
+	private const float loopSec = 1f;
 
-		public override void UpdateContent(StoryLogListCellData data)
-		{
-		}
+	public override void UpdateContent(StoryLogListCellData data)
+	{
+	}
 
-		public void OnButtonPressed()
-		{
-		}
+	public void OnButtonPressed()
+	{
+	}
 
-		private Tweener SetVoiceButtonAnimation()
-		{
-			return null;
-		}
+	private Tweener SetVoiceButtonAnimation()
+	{
+		return null;
 	}
 }

@@ -5,79 +5,78 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DreamSelectTicketPopup : PopupBase
 {
-	public class DreamSelectTicketPopup : PopupBase
+	public const string path = "Prefabs/OutGame/ShopTrade/Popup/DreamSelectTicketPopup";
+
+	[SerializeField]
+	private DreamSelectTicketCtrl[] tabCtrls;
+
+	[SerializeField]
+	private TabBase tabView;
+
+	[SerializeField]
+	private float sortButtonPosY;
+
+	[SerializeField]
+	private Text titleText;
+
+	[HideInInspector]
+	public ItemListPopup itemListPopup;
+
+	private CommonSortButton sortButton;
+
+	private int ticketId;
+
+	private GiftTextLoader.NameAndDescription unitData;
+
+	private CommonSortModel.Condition prevSortModelCondition;
+
+	private Func<CommonListCustomSortData, CommonListCustomSortData> prevCustomSortAction;
+
+	public static DreamSelectTicketPopup Create(int ticketId)
 	{
-		public const string path = "Prefabs/OutGame/ShopTrade/Popup/DreamSelectTicketPopup";
+		return null;
+	}
 
-		[SerializeField]
-		private DreamSelectTicketCtrl[] tabCtrls;
+	private void Awake()
+	{
+	}
 
-		[SerializeField]
-		private TabBase tabView;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		private float sortButtonPosY;
+	private List<ulong> CreateDataIdList(GiftType giftType)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Text titleText;
+	private void OnSortButtonClicked()
+	{
+	}
 
-		[HideInInspector]
-		public ItemListPopup itemListPopup;
+	private void UpdateSortAndFilter(int tabViewIndex)
+	{
+	}
 
-		private CommonSortButton sortButton;
+	public void OnClickButton(GiftType giftType, int unitId)
+	{
+	}
 
-		private int ticketId;
+	private void OnSummonRequest(GiftType giftType, int unitId)
+	{
+	}
 
-		private GiftTextLoader.NameAndDescription unitData;
+	private Task<ExchangeGetUnitListResponse> ExchangeGetUnitListRequest(int ticketId)
+	{
+		return null;
+	}
 
-		private CommonSortModel.Condition prevSortModelCondition;
-
-		private Func<CommonListCustomSortData, CommonListCustomSortData> prevCustomSortAction;
-
-		public static DreamSelectTicketPopup Create(int ticketId)
-		{
-			return null;
-		}
-
-		private void Awake()
-		{
-		}
-
-		protected override void Start()
-		{
-		}
-
-		private List<ulong> CreateDataIdList(GiftType giftType)
-		{
-			return null;
-		}
-
-		private void OnSortButtonClicked()
-		{
-		}
-
-		private void UpdateSortAndFilter(int tabViewIndex)
-		{
-		}
-
-		public void OnClickButton(GiftType giftType, int unitId)
-		{
-		}
-
-		private void OnSummonRequest(GiftType giftType, int unitId)
-		{
-		}
-
-		private Task<ExchangeGetUnitListResponse> ExchangeGetUnitListRequest(int ticketId)
-		{
-			return null;
-		}
-
-		private Task<ExchangeSelectUnitResponse> ExchangeSelectUnitRequest(int ticketId, GiftType giftType, int id)
-		{
-			return null;
-		}
+	private Task<ExchangeSelectUnitResponse> ExchangeSelectUnitRequest(int ticketId, GiftType giftType, int id)
+	{
+		return null;
 	}
 }

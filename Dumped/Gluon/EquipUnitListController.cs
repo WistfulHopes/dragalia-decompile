@@ -1,184 +1,183 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EquipUnitListController : CommonDualListTableViewController
 {
-	public class EquipUnitListController : CommonDualListTableViewController
+	[SerializeField]
+	private Vector2 weaponListCellSize;
+
+	private WeaponListCellData outButtonData;
+
+	private SkillListCellData skillOutButtonData;
+
+	private AmuletInfoListCellData amuletOutButtonData;
+
+	private int targetCrestId;
+
+	private int targetCrestSlotIndex;
+
+	private int equippedCrestId;
+
+	private int[,] equippedCrestIds;
+
+	private ulong targetTalismanKeyId;
+
+	private ulong equippedTalismanKeyId;
+
+	private bool isSupportFriend;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		private Vector2 weaponListCellSize;
+	}
 
-		private WeaponListCellData outButtonData;
+	private int GetEquippedCrestId(int charaIndex, int slotIndex)
+	{
+		return default(int);
+	}
 
-		private SkillListCellData skillOutButtonData;
+	public void SetTargetCrest(int slotIndex, int crestId)
+	{
+	}
 
-		private AmuletInfoListCellData amuletOutButtonData;
+	public void SetTargetTalisman(ulong talismanKeyId)
+	{
+	}
 
-		private int targetCrestId;
+	public void SetEquippedCrestId(int crestId)
+	{
+	}
 
-		private int targetCrestSlotIndex;
+	public void SetEquippedTalismanKeyId(ulong talismanKeyId)
+	{
+	}
 
-		private int equippedCrestId;
+	public void SetSupportFriend(bool isSupportFriend)
+	{
+	}
 
-		private int[,] equippedCrestIds;
+	protected override CommonIconListCellData CreateDragonCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		private ulong targetTalismanKeyId;
+	protected override CommonIconListCellData CreateWeaponCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		private ulong equippedTalismanKeyId;
+	protected override CommonIconListCellData CreateAmuletCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		private bool isSupportFriend;
+	protected override CommonIconListCellData CreateTalismanCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override CommonIconListCellData CreateSkillCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		private int GetEquippedCrestId(int charaIndex, int slotIndex)
-		{
-			return default(int);
-		}
+	protected override void SetupOutButton(CommonIconListType listType)
+	{
+	}
 
-		public void SetTargetCrest(int slotIndex, int crestId)
-		{
-		}
+	protected override TableViewCell<CommonIconListCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		public void SetTargetTalisman(ulong talismanKeyId)
-		{
-		}
+	public CommonEquipIconCellData GetCellDataByKeyId(ulong keyId)
+	{
+		return null;
+	}
 
-		public void SetEquippedCrestId(int crestId)
-		{
-		}
+	public void SetupWeaponOutButtonData(WeaponType defaultWeaponType)
+	{
+	}
 
-		public void SetEquippedTalismanKeyId(ulong talismanKeyId)
-		{
-		}
+	public void SetOutButtonState(bool isSelected)
+	{
+	}
 
-		public void SetSupportFriend(bool isSupportFriend)
-		{
-		}
+	public void SetupSkillOutButtonData()
+	{
+	}
 
-		protected override CommonIconListCellData CreateDragonCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	public void SetupAmuletOutButtonData()
+	{
+	}
 
-		protected override CommonIconListCellData CreateWeaponCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	public void ClearAmuletOutButtonData()
+	{
+	}
 
-		protected override CommonIconListCellData CreateAmuletCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	private bool CheckCurrentPartyEquip(CommonIconListType type, ulong keyId)
+	{
+		return default(bool);
+	}
 
-		protected override CommonIconListCellData CreateTalismanCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	public void UpdateIconState()
+	{
+	}
 
-		protected override CommonIconListCellData CreateSkillCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	private static CommonIconListType GetCommonIconListType()
+	{
+		return default(CommonIconListType);
+	}
 
-		protected override void SetupOutButton(CommonIconListType listType)
-		{
-		}
+	public void SetEquip(CommonEquipIconCellData data, bool isEquip)
+	{
+	}
 
-		protected override TableViewCell<CommonIconListCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
+	public void SetLock(CommonEquipIconCellData data, bool isLock, bool setUpdateFlag)
+	{
+	}
 
-		public CommonEquipIconCellData GetCellDataByKeyId(ulong keyId)
-		{
-			return null;
-		}
+	public void SetSkin(bool isSkin)
+	{
+	}
 
-		public void SetupWeaponOutButtonData(WeaponType defaultWeaponType)
-		{
-		}
+	public void SetListCellButtonEnable(int index, bool isEnable)
+	{
+	}
 
-		public void SetOutButtonState(bool isSelected)
-		{
-		}
+	public static int GetWeaponEquippedCount(int weaponId)
+	{
+		return default(int);
+	}
 
-		public void SetupSkillOutButtonData()
-		{
-		}
+	public int GetDefaultWeaponEquippedCount(WeaponType weaponType)
+	{
+		return default(int);
+	}
 
-		public void SetupAmuletOutButtonData()
-		{
-		}
+	public void UpdateWeaponOutButtonRemainingCount()
+	{
+	}
 
-		public void ClearAmuletOutButtonData()
-		{
-		}
+	public int GetCrestEquippedCount(int crestId)
+	{
+		return default(int);
+	}
 
-		private bool CheckCurrentPartyEquip(CommonIconListType type, ulong keyId)
-		{
-			return default(bool);
-		}
+	protected override void CustomSort()
+	{
+	}
 
-		public void UpdateIconState()
-		{
-		}
+	private bool IsEquippedData(CommonIconListCellData data)
+	{
+		return default(bool);
+	}
 
-		private static CommonIconListType GetCommonIconListType()
-		{
-			return default(CommonIconListType);
-		}
+	public void UpdateEquippedCount(int crestId)
+	{
+	}
 
-		public void SetEquip(CommonEquipIconCellData data, bool isEquip)
-		{
-		}
-
-		public void SetLock(CommonEquipIconCellData data, bool isLock, bool setUpdateFlag)
-		{
-		}
-
-		public void SetSkin(bool isSkin)
-		{
-		}
-
-		public void SetListCellButtonEnable(int index, bool isEnable)
-		{
-		}
-
-		public static int GetWeaponEquippedCount(int weaponId)
-		{
-			return default(int);
-		}
-
-		public int GetDefaultWeaponEquippedCount(WeaponType weaponType)
-		{
-			return default(int);
-		}
-
-		public void UpdateWeaponOutButtonRemainingCount()
-		{
-		}
-
-		public int GetCrestEquippedCount(int crestId)
-		{
-			return default(int);
-		}
-
-		protected override void CustomSort()
-		{
-		}
-
-		private bool IsEquippedData(CommonIconListCellData data)
-		{
-			return default(bool);
-		}
-
-		public void UpdateEquippedCount(int crestId)
-		{
-		}
-
-		public void OnOutButtonPressed()
-		{
-		}
+	public void OnOutButtonPressed()
+	{
 	}
 }

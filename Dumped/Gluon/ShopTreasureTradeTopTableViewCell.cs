@@ -1,44 +1,42 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTreasureTradeTopTableViewCell : TableViewCell<ShopTradeModel.TreasureTradeTopData>
 {
-	public class ShopTreasureTradeTopTableViewCell : TableViewCell<ShopTradeModel.TreasureTradeTopData>
+	[SerializeField]
+	public Text beginTimeText;
+
+	public Text endTimeText;
+
+	public Text beginEndText;
+
+	public Image banner;
+
+	private ShopTreasureTradeShopTopView panel;
+
+	private ShopTradeExchangeTopView exchangePanel;
+
+	private ShopTradeModel.TreasureTradeTopData data;
+
+	[SerializeField]
+	private Button cellButton;
+
+	private void Start()
 	{
-		[SerializeField]
-		[Header("Data")]
-		public Text beginTimeText;
+	}
 
-		public Text endTimeText;
+	public override void UpdateContent(ShopTradeModel.TreasureTradeTopData data)
+	{
+	}
 
-		public Text beginEndText;
+	private string CreateBannerSpritePath()
+	{
+		return null;
+	}
 
-		public Image banner;
-
-		private ShopTreasureTradeShopTopView panel;
-
-		private ShopTradeExchangeTopView exchangePanel;
-
-		private ShopTradeModel.TreasureTradeTopData data;
-
-		[SerializeField]
-		private Button cellButton;
-
-		private void Start()
-		{
-		}
-
-		public override void UpdateContent(ShopTradeModel.TreasureTradeTopData data)
-		{
-		}
-
-		private string CreateBannerSpritePath()
-		{
-			return null;
-		}
-
-		public void OnBannerPressed()
-		{
-		}
+	public void OnBannerPressed()
+	{
 	}
 }

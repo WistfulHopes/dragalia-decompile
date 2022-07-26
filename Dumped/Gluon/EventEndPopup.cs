@@ -3,35 +3,34 @@ using System.Collections;
 using Gluon.Master;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventEndPopup : CommonPopup
 {
-	public class EventEndPopup : CommonPopup
+	public enum EventPeriod
 	{
-		public enum EventPeriod
-		{
-			NoChecked,
-			In,
-			Out
-		}
+		NoChecked,
+		In,
+		Out
+	}
 
-		public static string playerPrefsKey;
+	public static string playerPrefsKey;
 
-		public static string playerPrefsKeyForPeriod;
+	public static string playerPrefsKeyForPeriod;
 
-		public Image logoImage;
+	public Image logoImage;
 
-		[NonSerialized]
-		public EventDataElement data;
+	[NonSerialized]
+	public EventDataElement data;
 
-		private const int useMasterTextEventId = 20802;
+	private const int useMasterTextEventId = 20802;
 
-		public static IEnumerator CreateIfNeededAsync(Action<bool> onProcessEnd)
-		{
-			return null;
-		}
+	public static IEnumerator CreateIfNeededAsync(Action<bool> onProcessEnd)
+	{
+		return null;
+	}
 
-		private static void CreatePopup(EventDataElement data, Action<bool> onProcessEnd)
-		{
-		}
+	private static void CreatePopup(EventDataElement data, Action<bool> onProcessEnd)
+	{
 	}
 }

@@ -1,33 +1,32 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AnimationUIMove : AnimationUIPart
 {
-	public class AnimationUIMove : AnimationUIPart
+	public Vector2 relativeDistance;
+
+	public Vector2 startPos;
+
+	public Vector2 endPos;
+
+	public bool useRelativeDistance;
+
+	[SerializeField]
+	private Ease easeTypeReverse;
+
+	private bool isResetMovePos;
+
+	public override void Init()
 	{
-		public Vector2 relativeDistance;
+	}
 
-		public Vector2 startPos;
+	public void OnEnable()
+	{
+	}
 
-		public Vector2 endPos;
-
-		public bool useRelativeDistance;
-
-		[SerializeField]
-		private Ease easeTypeReverse;
-
-		private bool isResetMovePos;
-
-		public override void Init()
-		{
-		}
-
-		public void OnEnable()
-		{
-		}
-
-		public override void Execute(bool isReverse = false)
-		{
-		}
+	public override void Execute(bool isReverse = false)
+	{
 	}
 }

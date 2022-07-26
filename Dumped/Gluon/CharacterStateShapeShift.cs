@@ -1,24 +1,23 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateShapeShift : CharacterStateBase
 {
-	public class CharacterStateShapeShift : CharacterStateBase
+	public int actionId
 	{
-		public int actionId
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
 		}
+		set
+		{
+		}
+	}
 
-		protected override void OnStateEnter_Internal()
-		{
-		}
+	protected override void OnStateEnter_Internal()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateExit()
+	{
 	}
 }

@@ -1,30 +1,29 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class SameScenePortal : SceneBase
 {
-	public class SameScenePortal : SceneBase
+	public static string nextSceneName;
+
+	private IEnumerator Start()
 	{
-		public static string nextSceneName;
+		return null;
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void OnInitReady()
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void OnEnterScene()
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
+	private void OnDestroy()
+	{
 	}
 }

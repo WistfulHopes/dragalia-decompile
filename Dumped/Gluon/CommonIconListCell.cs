@@ -2,82 +2,81 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class CommonIconListCell : TableViewCell<CommonIconListCellData>
 {
-	public class CommonIconListCell : TableViewCell<CommonIconListCellData>
+	[SerializeField]
+	protected GameObject frame;
+
+	public CommonIconListCellData data;
+
+	protected CommonUnitIcon icon;
+
+	protected CommonIcon commonIcon;
+
+	protected CommonSkillIcon skillIcon;
+
+	protected WeaponPassiveAbilityIcon weaponPassiveAbilityIcon;
+
+	protected DmodeServitorPassiveIcon dmodeServitorPassiveAbilityIcon;
+
+	[SerializeField]
+	public CommonIconButtonEvent buttonPressed;
+
+	[SerializeField]
+	public CommonIconButtonEvent buttonLongPressed;
+
+	protected CommonIconListCaption caption;
+
+	private int captionAbilityId;
+
+	private string captionTitle;
+
+	protected bool isMoveFirstColmnIcon;
+
+	protected virtual void Start()
 	{
-		[SerializeField]
-		protected GameObject frame;
+	}
 
-		public CommonIconListCellData data;
+	private void LateUpdate()
+	{
+	}
 
-		protected CommonUnitIcon icon;
+	public override void UpdateContent(CommonIconListCellData data)
+	{
+	}
 
-		protected CommonIcon commonIcon;
+	public virtual void LoadUnitIcon()
+	{
+	}
 
-		protected CommonSkillIcon skillIcon;
+	public void OnButtonPressed()
+	{
+	}
 
-		protected WeaponPassiveAbilityIcon weaponPassiveAbilityIcon;
+	public void OnButtonLongPressed()
+	{
+	}
 
-		protected DmodeServitorPassiveIcon dmodeServitorPassiveAbilityIcon;
+	private IEnumerator WaitMoment(UnityAction callback)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		public CommonIconButtonEvent buttonPressed;
+	private void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		public CommonIconButtonEvent buttonLongPressed;
+	public virtual void UpdateSkillContent(SkillListCellData data)
+	{
+	}
 
-		protected CommonIconListCaption caption;
+	public virtual void UpdateWeaponPassiveAbilityContent(WeaponPassiveAbilityListCellData data)
+	{
+	}
 
-		private int captionAbilityId;
-
-		private string captionTitle;
-
-		protected bool isMoveFirstColmnIcon;
-
-		protected virtual void Start()
-		{
-		}
-
-		private void LateUpdate()
-		{
-		}
-
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
-
-		public virtual void LoadUnitIcon()
-		{
-		}
-
-		public void OnButtonPressed()
-		{
-		}
-
-		public void OnButtonLongPressed()
-		{
-		}
-
-		private IEnumerator WaitMoment(UnityAction callback)
-		{
-			return null;
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public virtual void UpdateSkillContent(SkillListCellData data)
-		{
-		}
-
-		public virtual void UpdateWeaponPassiveAbilityContent(WeaponPassiveAbilityListCellData data)
-		{
-		}
-
-		public virtual void UpdateDmodeServitorPassiveContent(DmodeServitorPassiveIconListCellData data)
-		{
-		}
+	public virtual void UpdateDmodeServitorPassiveContent(DmodeServitorPassiveIconListCellData data)
+	{
 	}
 }

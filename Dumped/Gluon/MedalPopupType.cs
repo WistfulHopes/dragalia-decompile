@@ -1,8 +1,7 @@
-namespace Gluon
+namespace Gluon;
+
+public enum MedalPopupType
 {
-	public enum MedalPopupType
-	{
-		personal,
-		allUnit
-	}
+	personal,
+	allUnit
 }

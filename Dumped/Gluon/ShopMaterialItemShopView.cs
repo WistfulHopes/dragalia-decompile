@@ -2,121 +2,134 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopMaterialItemShopView : ShopTradePanelBase
 {
-	public class ShopMaterialItemShopView : ShopTradePanelBase
+	private enum TabType
 	{
-		private enum TabType
-		{
-			None,
-			Daily,
-			Weekly,
-			Monthly
-		}
+		None,
+		Daily,
+		Weekly,
+		Monthly
+	}
 
-		[SerializeField]
-		[Header("Tab")]
-		public TabBase tabController;
+	[SerializeField]
+	public TabBase tabController;
 
-		[SerializeField]
-		[Header("TableView")]
-		public ShopCommonTableViewController[] tableviews;
+	public TabBase tab2Controller;
 
-		[SerializeField]
-		[Header("Summon")]
-		public GameObject freeSummonGO;
+	[SerializeField]
+	public RectTransform tableParentRect;
 
-		public GameObject allFreeSummonGO;
+	public ShopCommonTableViewController[] tableviews;
 
-		public GameObject campaignMarkGO;
+	[SerializeField]
+	public RectTransform tableParentRect2;
 
-		public GameObject normalSummonGO;
+	public RectTransform tableContent2;
 
-		public GameObject unavailableSummonGO;
+	[SerializeField]
+	public GameObject freeSummonGO;
 
-		[SerializeField]
-		[Header("Campaign")]
-		public Text campaignRemainTimeText;
+	public GameObject allFreeSummonGO;
 
-		[SerializeField]
-		[Header("UpdateDateText")]
-		public Text updateDateText;
+	public GameObject campaignMarkGO;
 
-		public Text updatePeriodText;
+	public GameObject normalSummonGO;
 
-		public Text summonPriceText;
+	public GameObject unavailableSummonGO;
 
-		public Button summonButton;
+	[SerializeField]
+	public Text campaignRemainTimeText;
 
-		public GameObject[] summonBadges;
+	[SerializeField]
+	public Text updateDateText;
 
-		private TabType currentTabType;
+	public Text updatePeriodText;
 
-		public static ShopMaterialItemShopView Create(Transform parent, ShopTradeScene scene)
-		{
-			return null;
-		}
+	public Text summonPriceText;
 
-		private void Awake()
-		{
-		}
+	public Button summonButton;
 
-		private void Start()
-		{
-		}
+	public GameObject[] summonBadges;
 
-		public void RaiseTalk(bool isTouched)
-		{
-		}
+	private TabType currentTabType;
 
-		public void OnSwitchTab(int tabIndex, bool calledFromUI)
-		{
-		}
+	public static ShopMaterialItemShopView Create(Transform parent, ShopTradeScene scene)
+	{
+		return null;
+	}
 
-		private void Update()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private string GetTimeLeftString(DateTime from, DateTime to, string templateDays, string templateHours, string templateMinutes)
-		{
-			return null;
-		}
+	private void Start()
+	{
+	}
 
-		private void LoadTabs()
-		{
-		}
+	public void RaiseTalk(bool isTouched)
+	{
+	}
 
-		private static void ReloadData()
-		{
-		}
+	public void OnSwitchTab(int tabIndex, bool calledFromUI)
+	{
+	}
 
-		public void ReloadPage()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		public override void RefreshCurrentPage()
-		{
-		}
+	private string GetTimeLeftString(DateTime from, DateTime to, string templateDays, string templateHours, string templateMinutes)
+	{
+		return null;
+	}
 
-		public override void ScrollToItem(int tradeId)
-		{
-		}
+	private void LoadTabs()
+	{
+	}
 
-		public static int GetCurrentSummonPrice()
-		{
-			return default(int);
-		}
+	private static void ReloadData()
+	{
+	}
 
-		private void RefreshSummon()
-		{
-		}
+	public void ReloadPage()
+	{
+	}
 
-		public void OnDrawMaterialSummonButtonPressed()
-		{
-		}
+	private bool DoesShowTab3()
+	{
+		return default(bool);
+	}
 
-		public void OnDrawMaterialSummonOddsButtonPressed()
-		{
-		}
+	private bool DoesShowTab2()
+	{
+		return default(bool);
+	}
+
+	public override void RefreshCurrentPage()
+	{
+	}
+
+	public override void ScrollToItem(int tradeId)
+	{
+	}
+
+	public static int GetCurrentSummonPrice()
+	{
+		return default(int);
+	}
+
+	private void RefreshSummon()
+	{
+	}
+
+	public void OnDrawMaterialSummonButtonPressed()
+	{
+	}
+
+	public void OnDrawMaterialSummonOddsButtonPressed()
+	{
 	}
 }

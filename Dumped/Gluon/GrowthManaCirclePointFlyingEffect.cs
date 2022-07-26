@@ -1,21 +1,20 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCirclePointFlyingEffect : MonoBehaviour
 {
-	public class GrowthManaCirclePointFlyingEffect : MonoBehaviour
-	{
-		public Vector3 targetPosition;
+	public Vector3 targetPosition;
 
-		public Vector3 upVec;
+	public Vector3 upVec;
 
-		public float releaseLimitFlyingRotationSpeed;
+	public float releaseLimitFlyingRotationSpeed;
 
-		public float releaseLimitFlyingShrinkSpeed;
+	public float releaseLimitFlyingShrinkSpeed;
 
-		public float releaseLimitFlyingUpSpeed;
+	public float releaseLimitFlyingUpSpeed;
 
-		private float startTime;
+	private float startTime;
 
-		private bool isStopping;
-	}
+	private bool isStopping;
 }

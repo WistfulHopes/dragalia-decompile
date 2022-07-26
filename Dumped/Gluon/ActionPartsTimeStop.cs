@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsTimeStop : ActionParts
 {
-	public class ActionPartsTimeStop : ActionParts
+	public enum SwitchingType
 	{
-		public enum SwitchingType
-		{
-			OFF,
-			ON
-		}
+		OFF,
+		ON
+	}
 
-		private readonly TimeStopData _partsData;
+	private readonly TimeStopData _partsData;
 
-		public ActionPartsTimeStop(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsTimeStop(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void Procedure()
-		{
-		}
+	private void Procedure()
+	{
 	}
 }

@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public class FriendSupportListCellData : AmuletInfoListCellData
 {
-	public class FriendSupportListCellData : AmuletInfoListCellData
-	{
-		public bool isSelectLock;
-	}
+	public bool isSelectLock;
 }

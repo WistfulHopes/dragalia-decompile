@@ -1,12 +1,11 @@
-namespace Gluon
+namespace Gluon;
+
+public static class AuraConst
 {
-	public static class AuraConst
+	public enum TargetType
 	{
-		public enum TargetType
-		{
-			None,
-			Self,
-			Party
-		}
+		None,
+		Self,
+		Party
 	}
 }

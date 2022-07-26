@@ -4,53 +4,52 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QRFirstClearCharaDragonPopup : PopupBase
 {
-	public class QRFirstClearCharaDragonPopup : PopupBase
+	[SerializeField]
+	public CommonIcon icon;
+
+	public Text bottomText;
+
+	public Text itemName;
+
+	public Text itemRuby;
+
+	[SerializeField]
+	private Text title;
+
+	private QuestResultModel.FirstClearModel.FirstClearItemInfo info;
+
+	public bool isFromLoginBonus
 	{
-		[SerializeField]
-		public CommonIcon icon;
-
-		public Text bottomText;
-
-		public Text itemName;
-
-		public Text itemRuby;
-
-		[SerializeField]
-		private Text title;
-
-		private QuestResultModel.FirstClearModel.FirstClearItemInfo info;
-
-		public bool isFromLoginBonus
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public static QRFirstClearCharaDragonPopup Create(QuestResultModel.FirstClearModel.FirstClearItemInfo info, Action onOKOrClose, [Optional] Transform parentTransform)
-		{
-			return null;
-		}
-
-		protected override void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public QuestResultModel.FirstClearModel.FirstClearItemInfo GetFirstClearItemInfo()
-		{
-			return null;
-		}
+	public static QRFirstClearCharaDragonPopup Create(QuestResultModel.FirstClearModel.FirstClearItemInfo info, Action onOKOrClose, [Optional] Transform parentTransform)
+	{
+		return null;
+	}
 
-		public void SetTitleText(string str)
-		{
-		}
+	protected override void Start()
+	{
+	}
+
+	public QuestResultModel.FirstClearModel.FirstClearItemInfo GetFirstClearItemInfo()
+	{
+		return null;
+	}
+
+	public void SetTitleText(string str)
+	{
 	}
 }

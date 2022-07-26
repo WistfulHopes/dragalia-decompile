@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleSideCurrentCircleMark : MonoBehaviour
 {
-	public class GrowthManaCircleSideCurrentCircleMark : MonoBehaviour
-	{
-	}
 }

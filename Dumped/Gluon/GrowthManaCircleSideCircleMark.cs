@@ -1,33 +1,32 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleSideCircleMark : MonoBehaviour
 {
-	public class GrowthManaCircleSideCircleMark : MonoBehaviour
+	public enum State
 	{
-		public enum State
-		{
-			AllReleased,
-			Releasable,
-			LimitReleaseRequired,
-			NotReleased
-		}
+		AllReleased,
+		Releasable,
+		LimitReleaseRequired,
+		NotReleased
+	}
 
-		public State state;
+	public State state;
 
-		public GameObject allReleased;
+	public GameObject allReleased;
 
-		public GameObject releasable;
+	public GameObject releasable;
 
-		public GameObject limitReleaseRequired;
+	public GameObject limitReleaseRequired;
 
-		public GameObject notReleased;
+	public GameObject notReleased;
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void SetState(State state)
-		{
-		}
+	public void SetState(State state)
+	{
 	}
 }

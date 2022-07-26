@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandOutlineCentering : IStoryCommand
 {
-	[CommandName("outline_centering")]
-	public class StoryCommandOutlineCentering : IStoryCommand
+	public void Start(bool isCentering)
 	{
-		public void Start(bool isCentering)
-		{
-		}
 	}
 }

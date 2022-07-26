@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public class AlbumPlayerRecordListCellData
 {
-	public class AlbumPlayerRecordListCellData
-	{
-		public AlbumPlayRecordListCategory recordCategory;
+	public AlbumPlayRecordListCategory recordCategory;
 
-		public int recordInfoValue;
+	public int recordInfoValue;
 
-		public int recordValue;
-	}
+	public int recordValue;
 }

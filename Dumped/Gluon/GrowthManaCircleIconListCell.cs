@@ -1,17 +1,16 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleIconListCell : CommonIconListCell
 {
-	public class GrowthManaCircleIconListCell : CommonIconListCell
+	private Button cellButton;
+
+	protected override void Start()
 	{
-		private Button cellButton;
+	}
 
-		protected override void Start()
-		{
-		}
-
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
+	public override void UpdateContent(CommonIconListCellData data)
+	{
 	}
 }

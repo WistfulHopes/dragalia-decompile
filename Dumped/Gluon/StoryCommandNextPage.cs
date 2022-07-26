@@ -1,28 +1,26 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandNextPage : IStoryCommand
 {
-	[CommandName("next_page")]
-	public class StoryCommandNextPage : IStoryCommand
+	private IEnumerator coroutine;
+
+	private float waitTime;
+
+	private bool isNoNeedTouch;
+
+	public void Start(float waitTime = 0.3f)
 	{
-		private IEnumerator coroutine;
+	}
 
-		private float waitTime;
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		private bool isNoNeedTouch;
-
-		public void Start(float waitTime = 0.3f)
-		{
-		}
-
-		public override bool Update()
-		{
-			return default(bool);
-		}
-
-		private IEnumerator _Update()
-		{
-			return null;
-		}
+	private IEnumerator _Update()
+	{
+		return null;
 	}
 }

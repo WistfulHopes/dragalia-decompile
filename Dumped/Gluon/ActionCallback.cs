@@ -1,18 +1,17 @@
 using System;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionCallback : ActionBase
 {
-	public class ActionCallback : ActionBase
+	protected Action _callback;
+
+	public ActionCallback(Action callback)
 	{
-		protected Action _callback;
+	}
 
-		public ActionCallback(Action callback)
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

@@ -3,85 +3,84 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class LinkNintendoAccountMenu : CommonPopup
 {
-	public class LinkNintendoAccountMenu : CommonPopup
+	private const string path = "Prefabs/OutGame/DataTransition/LinkNintendoAccountMenu";
+
+	private const string titleScene = "Title";
+
+	private const string loadIndexScene = "LoadIndex";
+
+	private UnityAction onCompleted;
+
+	[SerializeField]
+	private Text DataTransitionText;
+
+	[SerializeField]
+	private Text NotNow;
+
+	[SerializeField]
+	private Text TransitionByNA;
+
+	[SerializeField]
+	private Text Title;
+
+	public static void Create(UnityAction onCompleted, string transactionText)
 	{
-		private const string path = "Prefabs/OutGame/DataTransition/LinkNintendoAccountMenu";
+	}
 
-		private const string titleScene = "Title";
+	private static LinkNintendoAccountMenu CreateWithPrefabPath(string prefabPath, UnityAction onCompleted)
+	{
+		return null;
+	}
 
-		private const string loadIndexScene = "LoadIndex";
+	public void OnCloseButton()
+	{
+	}
 
-		private UnityAction onCompleted;
+	public void OnFAQButton()
+	{
+	}
 
-		[SerializeField]
-		private Text DataTransitionText;
+	public void OnAccountButton()
+	{
+	}
 
-		[SerializeField]
-		private Text NotNow;
+	private void CreateSwitchNintendoAccountSucceedPopup()
+	{
+	}
 
-		[SerializeField]
-		private Text TransitionByNA;
+	private void CreateAlreadyLinkToNAPopup()
+	{
+	}
 
-		[SerializeField]
-		private Text Title;
+	private void OnError(ErrorType type, int code)
+	{
+	}
 
-		public static void Create(UnityAction onCompleted, string transactionText)
-		{
-		}
+	public void CreateTransitionAlreadyDonePopup()
+	{
+	}
 
-		private static LinkNintendoAccountMenu CreateWithPrefabPath(string prefabPath, UnityAction onCompleted)
-		{
-			return null;
-		}
+	private void CreateLinkNintendoAccountSucceedPopup()
+	{
+	}
 
-		public void OnCloseButton()
-		{
-		}
+	private void CreateLinkNintendoAccountInGameSucceedPopup()
+	{
+	}
 
-		public void OnFAQButton()
-		{
-		}
+	private static void GetEulaVersion(UnityAction onCompleted)
+	{
+	}
 
-		public void OnAccountButton()
-		{
-		}
+	private void OpenLoadingPopup()
+	{
+	}
 
-		private void CreateSwitchNintendoAccountSucceedPopup()
-		{
-		}
-
-		private void CreateAlreadyLinkToNAPopup()
-		{
-		}
-
-		private void OnError(ErrorType type, int code)
-		{
-		}
-
-		public void CreateTransitionAlreadyDonePopup()
-		{
-		}
-
-		private void CreateLinkNintendoAccountSucceedPopup()
-		{
-		}
-
-		private void CreateLinkNintendoAccountInGameSucceedPopup()
-		{
-		}
-
-		private static void GetEulaVersion(UnityAction onCompleted)
-		{
-		}
-
-		private void OpenLoadingPopup()
-		{
-		}
-
-		private void CloseLoadingPopup()
-		{
-		}
+	private void CloseLoadingPopup()
+	{
 	}
 }

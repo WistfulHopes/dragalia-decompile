@@ -2,17 +2,16 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class CallWithDelay : MonoBehaviour
 {
-	public class CallWithDelay : MonoBehaviour
+	public UnityEvent targetEvent;
+
+	public int frame;
+
+	private IEnumerator Start()
 	{
-		public UnityEvent targetEvent;
-
-		public int frame;
-
-		private IEnumerator Start()
-		{
-			return null;
-		}
+		return null;
 	}
 }

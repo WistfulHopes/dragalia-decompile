@@ -6,324 +6,323 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Gluon
+namespace Gluon;
+
+public class SceneController : SingletonMonoBehaviour<SceneController>
 {
-	public class SceneController : SingletonMonoBehaviour<SceneController>
+	public enum FadeInType
 	{
-		public enum FadeInType
-		{
-			ShowFadeIn,
-			InstantFadeIn,
-			WaitStartFadeIn
-		}
+		ShowFadeIn,
+		InstantFadeIn,
+		WaitStartFadeIn
+	}
 
-		public class AddSceneStack
-		{
-			public string prevSceneName;
+	public class AddSceneStack
+	{
+		public string prevSceneName;
 
-			public Action loadSceneCallback;
+		public Action loadSceneCallback;
 
-			public SceneBase prevSceneBase;
+		public SceneBase prevSceneBase;
 
-			public bool entity;
+		public bool entity;
 
-			public AddSceneStack(string name, Action callback)
-			{
-			}
-		}
-
-		private List<string> currentOptionalSceneNames;
-
-		private List<string> nextOptionalSceneNames;
-
-		private List<string> currentDuplicatedOptionalSceneNames;
-
-		private List<string> nextDuplicatedOptionalSceneNames;
-
-		public bool isOnAnimation;
-
-		public bool isOnAsyncLoad;
-
-		private string beforeLeavingNextSceneName;
-
-		public string preservedNextSceneName;
-
-		public SceneBase currentSceneBase;
-
-		public List<SceneBase> additionalSceneBases;
-
-		private List<AddSceneStack> addSceneList;
-
-		public static string currentSceneName
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public static string prevSceneName
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public bool isOnTransition
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public string BeforeLeavingNextSceneName => null;
-
-		public string PreservedNextSceneName => null;
-
-		public Coroutine loadSceneAsyncCoroutine
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public SceneModelBase model
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		protected override void Awake()
+		public AddSceneStack(string name, Action callback)
 		{
 		}
+	}
 
-		public bool LoadScene(string nextSceneName, bool isAdditive = true, bool gotoSameScene = false, bool needRequestEventQuest = true, bool isForce = false)
+	private List<string> currentOptionalSceneNames;
+
+	private List<string> nextOptionalSceneNames;
+
+	private List<string> currentDuplicatedOptionalSceneNames;
+
+	private List<string> nextDuplicatedOptionalSceneNames;
+
+	public bool isOnAnimation;
+
+	public bool isOnAsyncLoad;
+
+	private string beforeLeavingNextSceneName;
+
+	public string preservedNextSceneName;
+
+	public SceneBase currentSceneBase;
+
+	public List<SceneBase> additionalSceneBases;
+
+	private List<AddSceneStack> addSceneList;
+
+	public static string currentSceneName
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public static string prevSceneName
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public bool isOnTransition
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		private string GetThroughSceneName(string nextSceneName)
+	public string BeforeLeavingNextSceneName => null;
+
+	public string PreservedNextSceneName => null;
+
+	public Coroutine loadSceneAsyncCoroutine
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public bool LoadSceneAndReleaseResources(string nextSceneName)
+		[CompilerGenerated]
+		private set
 		{
-			return default(bool);
 		}
+	}
 
-		public bool LoadSceneAsync(string nextSceneName, [Optional] Action onLoadedCallback, bool needRequestEventQuest = true, bool isAddSceneClearInstantly = true, bool forceLoadSameScene = false, [Optional] SceneModelBase model)
-		{
-			return default(bool);
-		}
-
-		private IEnumerator LoadSceneAsyncCoroutine(string nextSceneName, Action onLoadedCallback, [Optional] SceneModelBase model)
+	public SceneModelBase model
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private void ClearOldScenes(bool isAddSceneClearInstantly = true, bool showExitAnimation = true)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public AsyncOperation UnloadPrevScene()
-		{
-			return null;
-		}
+	protected override void Awake()
+	{
+	}
 
-		private static Scene GetSceneByName(string sceneName)
-		{
-			return default(Scene);
-		}
+	public bool LoadScene(string nextSceneName, bool isAdditive = true, bool gotoSameScene = false, bool needRequestEventQuest = true, bool isForce = false)
+	{
+		return default(bool);
+	}
 
-		private void DoLoadScene(string nextSceneName, bool isAdditive)
-		{
-		}
+	private string GetThroughSceneName(string nextSceneName)
+	{
+		return null;
+	}
 
-		private IEnumerator UnloadSceneFunction(string sceneName)
-		{
-			return null;
-		}
+	public bool LoadSceneAndReleaseResources(string nextSceneName)
+	{
+		return default(bool);
+	}
 
-		public void ResetActiveScene()
-		{
-		}
+	public bool LoadSceneAsync(string nextSceneName, [Optional] Action onLoadedCallback, bool needRequestEventQuest = true, bool isAddSceneClearInstantly = true, bool forceLoadSameScene = false, [Optional] SceneModelBase model)
+	{
+		return default(bool);
+	}
 
-		public void LoadOptionalScene(string sceneName, [Optional] Action onOptionSceneLoaded, bool autoBlockTouchWhileLoading = false)
-		{
-		}
+	private IEnumerator LoadSceneAsyncCoroutine(string nextSceneName, Action onLoadedCallback, [Optional] SceneModelBase model)
+	{
+		return null;
+	}
 
-		public Coroutine StartLoadOptionalSceneAsyncCoroutine(string sceneName, [Optional] Action onOptionSceneLoaded, bool autoBlockTouchWhileLoading = false)
-		{
-			return null;
-		}
+	private void ClearOldScenes(bool isAddSceneClearInstantly = true, bool showExitAnimation = true)
+	{
+	}
 
-		public IEnumerator LoadOptionalSceneAsyncCoroutine(string sceneName, [Optional] Action onOptionSceneLoaded, bool autoBlockTouchWhileLoading = false)
-		{
-			return null;
-		}
+	public AsyncOperation UnloadPrevScene()
+	{
+		return null;
+	}
 
-		private IEnumerator WaitForOptionSceneLoaded(string sceneName, Action onOnptionSceneLoaded, bool autoBlockTouchWhileLoading)
-		{
-			return null;
-		}
+	private static Scene GetSceneByName(string sceneName)
+	{
+		return default(Scene);
+	}
 
-		private IEnumerator CorrectActiveScene()
-		{
-			return null;
-		}
+	private void DoLoadScene(string nextSceneName, bool isAdditive)
+	{
+	}
 
-		public bool HasOptionalScene(string sceneName)
-		{
-			return default(bool);
-		}
+	private IEnumerator UnloadSceneFunction(string sceneName)
+	{
+		return null;
+	}
 
-		public AsyncOperation UnloadOptionalScene(string sceneName)
-		{
-			return null;
-		}
+	public void ResetActiveScene()
+	{
+	}
 
-		public AsyncOperation UnloadOptionalScene(Scene scene)
-		{
-			return null;
-		}
+	public void LoadOptionalScene(string sceneName, [Optional] Action onOptionSceneLoaded, bool autoBlockTouchWhileLoading = false)
+	{
+	}
 
-		public IEnumerator UnloadAllOptionalScenesWaitCoroutine()
-		{
-			return null;
-		}
+	public Coroutine StartLoadOptionalSceneAsyncCoroutine(string sceneName, [Optional] Action onOptionSceneLoaded, bool autoBlockTouchWhileLoading = false)
+	{
+		return null;
+	}
 
-		public void UnloadDuplicatedOptionalScene(string sceneName)
-		{
-		}
+	public IEnumerator LoadOptionalSceneAsyncCoroutine(string sceneName, [Optional] Action onOptionSceneLoaded, bool autoBlockTouchWhileLoading = false)
+	{
+		return null;
+	}
 
-		public void AddLoadScene(string addSceneName, [Optional] Action callback, bool lastSceneChange = false)
-		{
-		}
+	private IEnumerator WaitForOptionSceneLoaded(string sceneName, Action onOnptionSceneLoaded, bool autoBlockTouchWhileLoading)
+	{
+		return null;
+	}
 
-		private IEnumerator AddLoadSceneCoroutine(string addSceneName, Action callback, bool lastSceneChange)
-		{
-			return null;
-		}
+	private IEnumerator CorrectActiveScene()
+	{
+		return null;
+	}
 
-		public void UnloadAddLoadScene()
-		{
-		}
+	public bool HasOptionalScene(string sceneName)
+	{
+		return default(bool);
+	}
 
-		private IEnumerator UnloadAddLoadSceneCoroutine()
-		{
-			return null;
-		}
+	public AsyncOperation UnloadOptionalScene(string sceneName)
+	{
+		return null;
+	}
 
-		public void AddloadSceneClear()
-		{
-		}
+	public AsyncOperation UnloadOptionalScene(Scene scene)
+	{
+		return null;
+	}
 
-		public string PrevAddScene()
-		{
-			return null;
-		}
+	public IEnumerator UnloadAllOptionalScenesWaitCoroutine()
+	{
+		return null;
+	}
 
-		public bool IsAddScene(string sceneName)
-		{
-			return default(bool);
-		}
+	public void UnloadDuplicatedOptionalScene(string sceneName)
+	{
+	}
 
-		public bool IsOptionalScene(string sceneName)
-		{
-			return default(bool);
-		}
+	public void AddLoadScene(string addSceneName, [Optional] Action callback, bool lastSceneChange = false)
+	{
+	}
 
-		public void SetActiveBg(Footer.MenuTab menuTab)
-		{
-		}
+	private IEnumerator AddLoadSceneCoroutine(string addSceneName, Action callback, bool lastSceneChange)
+	{
+		return null;
+	}
 
-		public bool IsTransitionReady()
-		{
-			return default(bool);
-		}
+	public void UnloadAddLoadScene()
+	{
+	}
 
-		public static void LoadBase()
-		{
-		}
+	private IEnumerator UnloadAddLoadSceneCoroutine()
+	{
+		return null;
+	}
 
-		public static void UnloadBase()
-		{
-		}
+	public void AddloadSceneClear()
+	{
+	}
 
-		public static void LoadOutGameBase()
-		{
-		}
+	public string PrevAddScene()
+	{
+		return null;
+	}
 
-		private static AsyncOperation UnloadOutGameBase()
-		{
-			return null;
-		}
+	public bool IsAddScene(string sceneName)
+	{
+		return default(bool);
+	}
 
-		public static void LoadHeader()
-		{
-		}
+	public bool IsOptionalScene(string sceneName)
+	{
+		return default(bool);
+	}
 
-		private static AsyncOperation UnloadHeader()
-		{
-			return null;
-		}
+	public void SetActiveBg(Footer.MenuTab menuTab)
+	{
+	}
 
-		public static void LoadFooter()
-		{
-		}
+	public bool IsTransitionReady()
+	{
+		return default(bool);
+	}
 
-		private static AsyncOperation UnloadFooter()
-		{
-			return null;
-		}
+	public static void LoadBase()
+	{
+	}
 
-		public static AsyncOperation UnloadScene(string scene)
-		{
-			return null;
-		}
+	public static void UnloadBase()
+	{
+	}
 
-		public bool CheckDateChangeOnCurrentScene(bool withCallEvent = false)
-		{
-			return default(bool);
-		}
+	public static void LoadOutGameBase()
+	{
+	}
 
-		public void ClearAllSceneInfo()
-		{
-		}
+	private static AsyncOperation UnloadOutGameBase()
+	{
+		return null;
+	}
 
-		public static void CallOnPresentReceived()
-		{
-		}
+	public static void LoadHeader()
+	{
+	}
+
+	private static AsyncOperation UnloadHeader()
+	{
+		return null;
+	}
+
+	public static void LoadFooter()
+	{
+	}
+
+	private static AsyncOperation UnloadFooter()
+	{
+		return null;
+	}
+
+	public static AsyncOperation UnloadScene(string scene)
+	{
+		return null;
+	}
+
+	public bool CheckDateChangeOnCurrentScene(bool withCallEvent = false)
+	{
+		return default(bool);
+	}
+
+	public void ClearAllSceneInfo()
+	{
+	}
+
+	public static void CallOnPresentReceived()
+	{
 	}
 }

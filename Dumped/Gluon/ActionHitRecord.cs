@@ -1,63 +1,67 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionHitRecord
 {
-	public class ActionHitRecord
+	private bool _isHitTargetRecording;
+
+	private int _targetActionId;
+
+	private List<CharacterBase> _actionHitOrGuardedTargetRecordList;
+
+	private List<CharacterBase> _actionHitTargetRecordList;
+
+	private int _hitOrGuardedTargetHitCounter;
+
+	private CharacterBuffType _hitRecordTargetBuffType;
+
+	public void BeginRecordTarget(int actionId, CharacterBuffType hitRecordTargetBuffType)
 	{
-		private bool _isHitTargetRecording;
+	}
 
-		private int _targetActionId;
+	public void EndRecordTarget()
+	{
+	}
 
-		private List<CharacterBase> _actionHitOrGuardedTargetRecordList;
+	public void Clear()
+	{
+	}
 
-		private List<CharacterBase> _actionHitTargetRecordList;
+	public bool IsContainsInTargetRecord(CharacterBase target, CollisionHitAttribute hitAttr)
+	{
+		return default(bool);
+	}
 
-		private int _hitOrGuardedTargetHitCounter;
+	public void OnGuarded(CharacterBase target, CollisionHitAttribute hitAttr)
+	{
+	}
 
-		private CharacterBuffType _hitRecordTargetBuffType;
+	public void OnHit(CharacterBase target, CollisionHitAttribute hitAttr)
+	{
+	}
 
-		public void BeginRecordTarget(int actionId, CharacterBuffType hitRecordTargetBuffType)
-		{
-		}
+	public static bool IsRecordTargetGroup(ActionTargetGroup targetGroup)
+	{
+		return default(bool);
+	}
 
-		public void EndRecordTarget()
-		{
-		}
+	public int GetHitOrGuardedTargetNum()
+	{
+		return default(int);
+	}
 
-		public void Clear()
-		{
-		}
+	public int GetHitOrGuardedAllyTargetNum()
+	{
+		return default(int);
+	}
 
-		public bool IsContainsInTargetRecord(CharacterBase target, CollisionHitAttribute hitAttr)
-		{
-			return default(bool);
-		}
+	public int GetHitOrGuardedHitCounterNum()
+	{
+		return default(int);
+	}
 
-		public void OnGuarded(CharacterBase target, CollisionHitAttribute hitAttr)
-		{
-		}
-
-		public void OnHit(CharacterBase target, CollisionHitAttribute hitAttr)
-		{
-		}
-
-		public static bool IsRecordTargetGroup(ActionTargetGroup targetGroup)
-		{
-			return default(bool);
-		}
-
-		public int GetHitOrGuardedTargetNum()
-		{
-			return default(int);
-		}
-
-		public int GetHitOrGuardedHitCounterNum()
-		{
-			return default(int);
-		}
-
-		public void AddHitOrGuardedTargetNumCounter(int addCount, CollisionHitAttribute httr)
-		{
-		}
+	public void AddHitOrGuardedTargetNumCounter(int addCount, CollisionHitAttribute httr)
+	{
 	}
 }

@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandBackgroundVisible : IStoryCommand
 {
-	[CommandName("bg_visible")]
-	public class StoryCommandBackgroundVisible : IStoryCommand
+	public void Start(bool visible)
 	{
-		public void Start(bool visible)
-		{
-		}
 	}
 }

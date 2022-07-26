@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandNextArea : IStoryCommand
 {
-	[CommandName("next_area")]
-	public class StoryCommandNextArea : IStoryCommand
+	public void Start()
 	{
-		public void Start()
-		{
-		}
 	}
 }

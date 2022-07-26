@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsOperateShader : ActionParts
 {
-	public class ActionPartsOperateShader : ActionParts
+	public enum OperateType
 	{
-		public enum OperateType
-		{
-			SwitchingMaterial,
-			ImageEffectProduction
-		}
+		SwitchingMaterial,
+		ImageEffectProduction
+	}
 
-		private readonly OperateShaderData _partsData;
+	private readonly OperateShaderData _partsData;
 
-		public ActionPartsOperateShader(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsOperateShader(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
 	}
 }

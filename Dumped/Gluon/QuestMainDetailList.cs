@@ -4,91 +4,90 @@ using System.Runtime.CompilerServices;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestMainDetailList : QuestListBase
 {
-	public class QuestMainDetailList : QuestListBase
+	[SerializeField]
+	private Transform contentTransfrom;
+
+	public AnimationListOneCol listAnimation;
+
+	[SerializeField]
+	private GameObject scrollBarObj;
+
+	[SerializeField]
+	private UIAnimationPublisher scrollBarAnimation;
+
+	private List<QuestMainMenuElement> mainDataList;
+
+	private int locationId;
+
+	private QuestSelectScene.Difficulty difficulty;
+
+	public QuestCell mainStoryMissionTargetCell;
+
+	public bool isOpenCompleted
 	{
-		[SerializeField]
-		private Transform contentTransfrom;
-
-		public AnimationListOneCol listAnimation;
-
-		[SerializeField]
-		private GameObject scrollBarObj;
-
-		[SerializeField]
-		private UIAnimationPublisher scrollBarAnimation;
-
-		private List<QuestMainMenuElement> mainDataList;
-
-		private int locationId;
-
-		private QuestSelectScene.Difficulty difficulty;
-
-		public QuestCell mainStoryMissionTargetCell;
-
-		public bool isOpenCompleted
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			protected set
-			{
-			}
+			return default(bool);
 		}
-
-		public bool isCloseCompleted
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			protected set
-			{
-			}
-		}
-
-		private void OnEnable()
+		[CompilerGenerated]
+		protected set
 		{
 		}
+	}
 
-		public void SetContent(int locationId, QuestSelectScene.Difficulty difficulty)
+	public bool isCloseCompleted
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		protected set
 		{
 		}
+	}
 
-		public void LoadData()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		private void CreateList()
-		{
-		}
+	public void SetContent(int locationId, QuestSelectScene.Difficulty difficulty)
+	{
+	}
 
-		public void StartEnterAnimation()
-		{
-		}
+	public void LoadData()
+	{
+	}
 
-		private IEnumerator WaitOpenCompletedCoroutine()
-		{
-			return null;
-		}
+	private void CreateList()
+	{
+	}
 
-		public void StartExitAnimation()
-		{
-		}
+	public void StartEnterAnimation()
+	{
+	}
 
-		private IEnumerator WaitCloseCompletedCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator WaitOpenCompletedCoroutine()
+	{
+		return null;
+	}
 
-		public void ClickCell(int questId)
-		{
-		}
+	public void StartExitAnimation()
+	{
+	}
+
+	private IEnumerator WaitCloseCompletedCoroutine()
+	{
+		return null;
+	}
+
+	public void ClickCell(int questId)
+	{
 	}
 }

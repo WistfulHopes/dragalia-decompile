@@ -5,147 +5,146 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class StampScene : SceneBase
 {
-	public class StampScene : SceneBase
+	private Canvas mainCanvas;
+
+	private Canvas popupBaseCanvas;
+
+	private StampPageBase stampPageBase;
+
+	private StampListFrame stampListFrame;
+
+	private int pageselectStampId;
+
+	private int listselectStampId;
+
+	private bool goBackFlg;
+
+	private StampSetData stampSetData;
+
+	private int maxStampData;
+
+	private string tab;
+
+	private Footer.MenuTab menuTab;
+
+	private Button saveButton;
+
+	private readonly string mainCanvasPath;
+
+	private readonly string stampVoice;
+
+	private IEnumerator Start()
 	{
-		private Canvas mainCanvas;
+		return null;
+	}
 
-		private Canvas popupBaseCanvas;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private StampPageBase stampPageBase;
+	private void OnInitReady()
+	{
+	}
 
-		private StampListFrame stampListFrame;
+	private void OnEnterScene()
+	{
+	}
 
-		private int pageselectStampId;
+	private void StampPageChange()
+	{
+	}
 
-		private int listselectStampId;
+	private void SaveButtonPressed()
+	{
+	}
 
-		private bool goBackFlg;
+	private void ShowConfirmDialog()
+	{
+	}
 
-		private StampSetData stampSetData;
+	private void ShowInfoDialog(int selectStampId)
+	{
+	}
 
-		private int maxStampData;
+	private void SaveStampData()
+	{
+	}
 
-		private string tab;
+	private void StampListButtonPressed(int selectStampId)
+	{
+	}
 
-		private Footer.MenuTab menuTab;
+	private void StampPageButtonPressed(int selectStampId)
+	{
+	}
 
-		private Button saveButton;
+	private bool CheckChangeStampSet()
+	{
+		return default(bool);
+	}
 
-		private readonly string mainCanvasPath;
+	private void SendStampData()
+	{
+	}
 
-		private readonly string stampVoice;
+	private void SendDataOnSuccess(StampSetEquipStampResponse res)
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private void GetStampData()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void GetDataOnSuccess(StampGetStampResponse res)
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	public void RequestUpdateResetNewFlag(StampList[] stampList)
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void UpdateResetNewRequestOnSuccess(UpdateResetNewResponse res)
+	{
+	}
 
-		private void StampPageChange()
-		{
-		}
+	private void EdgeToEdgeComplete()
+	{
+	}
 
-		private void SaveButtonPressed()
-		{
-		}
+	private IEnumerator waitEdgeToEdgeComplete(StampList[] allStampList)
+	{
+		return null;
+	}
 
-		private void ShowConfirmDialog()
-		{
-		}
+	public void OnError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		private void ShowInfoDialog(int selectStampId)
-		{
-		}
+	private void OnFooterPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
 
-		private void SaveStampData()
-		{
-		}
+	private void OnHeaderPressed(UnityAction action)
+	{
+	}
 
-		private void StampListButtonPressed(int selectStampId)
-		{
-		}
+	private void SaveButtonEnable(bool isEnable)
+	{
+	}
 
-		private void StampPageButtonPressed(int selectStampId)
-		{
-		}
+	public override void StartExitAnimation()
+	{
+	}
 
-		private bool CheckChangeStampSet()
-		{
-			return default(bool);
-		}
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		private void SendStampData()
-		{
-		}
-
-		private void SendDataOnSuccess(StampSetEquipStampResponse res)
-		{
-		}
-
-		private void GetStampData()
-		{
-		}
-
-		private void GetDataOnSuccess(StampGetStampResponse res)
-		{
-		}
-
-		public void RequestUpdateResetNewFlag(StampList[] stampList)
-		{
-		}
-
-		private void UpdateResetNewRequestOnSuccess(UpdateResetNewResponse res)
-		{
-		}
-
-		private void EdgeToEdgeComplete()
-		{
-		}
-
-		private IEnumerator waitEdgeToEdgeComplete(StampList[] allStampList)
-		{
-			return null;
-		}
-
-		public void OnError(ErrorType errorType, int resultCode)
-		{
-		}
-
-		private void OnFooterPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
-
-		private void OnHeaderPressed(UnityAction action)
-		{
-		}
-
-		private void SaveButtonEnable(bool isEnable)
-		{
-		}
-
-		public override void StartExitAnimation()
-		{
-		}
-
-		public override void OnBeforeLeaving()
-		{
-		}
-
-		public void OnDisable()
-		{
-		}
+	public void OnDisable()
+	{
 	}
 }

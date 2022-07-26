@@ -1,22 +1,21 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryLogPopup : CommonPopup
 {
-	public class StoryLogPopup : CommonPopup
+	private const string prefabPath = "Prefabs/Outgame/Story/StoryLogPopup";
+
+	private const float blackLayerAlpha = 0.8f;
+
+	public static StoryLogPopup Create()
 	{
-		private const string prefabPath = "Prefabs/Outgame/Story/StoryLogPopup";
+		return null;
+	}
 
-		private const float blackLayerAlpha = 0.8f;
+	protected override void InitFrameSizeAndPosition()
+	{
+	}
 
-		public static StoryLogPopup Create()
-		{
-			return null;
-		}
-
-		protected override void InitFrameSizeAndPosition()
-		{
-		}
-
-		protected override void InitContentSize()
-		{
-		}
+	protected override void InitContentSize()
+	{
 	}
 }

@@ -1,23 +1,22 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MayaCameraConverter : MonoBehaviour
 {
-	public class MayaCameraConverter : MonoBehaviour
+	private Camera changeCamera;
+
+	private Transform myTransform;
+
+	public void SetCamera(Camera cam)
 	{
-		private Camera changeCamera;
+	}
 
-		private Transform myTransform;
+	public void ReleaseCameraControl()
+	{
+	}
 
-		public void SetCamera(Camera cam)
-		{
-		}
-
-		public void ReleaseCameraControl()
-		{
-		}
-
-		private void LateUpdate()
-		{
-		}
+	private void LateUpdate()
+	{
 	}
 }

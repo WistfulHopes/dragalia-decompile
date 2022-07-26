@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ReadOnlyAttribute : PropertyAttribute
 {
-	public class ReadOnlyAttribute : PropertyAttribute
-	{
-	}
 }

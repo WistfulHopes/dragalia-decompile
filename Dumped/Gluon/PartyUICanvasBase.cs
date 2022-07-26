@@ -2,133 +2,132 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyUICanvasBase : AnimationUICanvas
 {
-	public class PartyUICanvasBase : AnimationUICanvas
+	public Text powerText;
+
+	public Text totalPowerText;
+
+	public GameObject recommendedPowerLabel;
+
+	public GameObject requiredPowerLabel;
+
+	[SerializeField]
+	protected GameObject recommendedRaidPowerLabel;
+
+	[SerializeField]
+	protected GameObject myPowerBack;
+
+	[SerializeField]
+	protected GameObject myRaidPowerBack;
+
+	private bool isPowerInitialized;
+
+	protected float currentReferencePowerNum;
+
+	private float displayReferencePowerNum;
+
+	private float deltaReferencePowerNum;
+
+	private int changeReferencePowerFrame;
+
+	protected float currentTotalPowerNum;
+
+	private float displayTotalPowerNum;
+
+	private float deltaTotalPowerNum;
+
+	private int changeTotalPowerFrame;
+
+	private const float changeNumFrame = 8f;
+
+	public Image eventBonusIcon;
+
+	public Image[] exAbilityIcons;
+
+	public Image[] exAbilityEmptyIcons;
+
+	protected List<EventBonusPopup.EventBonusCharaInfo> eventAbilityInfo;
+
+	[SerializeField]
+	protected GameObject unionBonusButton;
+
+	[SerializeField]
+	protected Text switchButtonText;
+
+	protected List<UnionBonusPopup.UnionBonusInfo> unionBonusCharaInfoList;
+
+	[SerializeField]
+	protected GameObject switchButtonObject;
+
+	[SerializeField]
+	protected Text switchButtonPageText;
+
+	protected void SetBattlePointType(int questId, bool required)
 	{
-		public Text powerText;
+	}
 
-		public Text totalPowerText;
+	protected int GetBattlePoint(int questId)
+	{
+		return default(int);
+	}
 
-		public GameObject recommendedPowerLabel;
+	protected virtual void Update()
+	{
+	}
 
-		public GameObject requiredPowerLabel;
+	protected void ReflectPowerNum(int totalPowerNum, int referencePowerNum)
+	{
+	}
 
-		[SerializeField]
-		protected GameObject recommendedRaidPowerLabel;
+	protected void ReloadExAbilityIcon(CommonCharaExAbilityData[] exAbilityData)
+	{
+	}
 
-		[SerializeField]
-		protected GameObject myPowerBack;
+	protected virtual void ReloadExAbilityIcon()
+	{
+	}
 
-		[SerializeField]
-		protected GameObject myRaidPowerBack;
+	protected virtual void RefreshEventBonusIcon()
+	{
+	}
 
-		private bool isPowerInitialized;
+	protected virtual bool IsRaidBoostOn(int questId)
+	{
+		return default(bool);
+	}
 
-		protected float currentReferencePowerNum;
+	public virtual void OnEventBonusIconPressed()
+	{
+	}
 
-		private float displayReferencePowerNum;
+	protected virtual void RefreshUnionBonus()
+	{
+	}
 
-		private float deltaReferencePowerNum;
+	public void OnUnionBonusButtonPressed()
+	{
+	}
 
-		private int changeReferencePowerFrame;
+	public void OnModeSwitchButtonPressed()
+	{
+	}
 
-		protected float currentTotalPowerNum;
+	protected virtual void SetStatusMode(PartyModel.PartySceneUnitStatusMode statusMode)
+	{
+	}
 
-		private float displayTotalPowerNum;
+	public void UpdateSwitchButtonText(PartyModel.PartySceneUnitStatusMode statusMode)
+	{
+	}
 
-		private float deltaTotalPowerNum;
+	public void UpdateSwitchButtonPageCount()
+	{
+	}
 
-		private int changeTotalPowerFrame;
-
-		private const float changeNumFrame = 8f;
-
-		public Image eventBonusIcon;
-
-		public Image[] exAbilityIcons;
-
-		public Image[] exAbilityEmptyIcons;
-
-		protected List<EventBonusPopup.EventBonusCharaInfo> eventAbilityInfo;
-
-		[SerializeField]
-		protected GameObject unionBonusButton;
-
-		[SerializeField]
-		protected Text switchButtonText;
-
-		protected List<UnionBonusPopup.UnionBonusInfo> unionBonusCharaInfoList;
-
-		[SerializeField]
-		protected GameObject switchButtonObject;
-
-		[SerializeField]
-		protected Text switchButtonPageText;
-
-		protected void SetBattlePointType(int questId, bool required)
-		{
-		}
-
-		protected int GetBattlePoint(int questId)
-		{
-			return default(int);
-		}
-
-		protected virtual void Update()
-		{
-		}
-
-		protected void ReflectPowerNum(int totalPowerNum, int referencePowerNum)
-		{
-		}
-
-		protected void ReloadExAbilityIcon(CommonCharaExAbilityData[] exAbilityData)
-		{
-		}
-
-		protected virtual void ReloadExAbilityIcon()
-		{
-		}
-
-		protected virtual void RefreshEventBonusIcon()
-		{
-		}
-
-		protected virtual bool IsRaidBoostOn(int questId)
-		{
-			return default(bool);
-		}
-
-		public virtual void OnEventBonusIconPressed()
-		{
-		}
-
-		protected virtual void RefreshUnionBonus()
-		{
-		}
-
-		public void OnUnionBonusButtonPressed()
-		{
-		}
-
-		public void OnModeSwitchButtonPressed()
-		{
-		}
-
-		protected virtual void SetStatusMode(PartyModel.PartySceneUnitStatusMode statusMode)
-		{
-		}
-
-		public void UpdateSwitchButtonText(PartyModel.PartySceneUnitStatusMode statusMode)
-		{
-		}
-
-		public void UpdateSwitchButtonPageCount()
-		{
-		}
-
-		public void ReloadStatusMode()
-		{
-		}
+	public void ReloadStatusMode()
+	{
 	}
 }

@@ -1,34 +1,33 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsPartySwitch : ActionParts
 {
-	public class ActionPartsPartySwitch : ActionParts
+	private readonly PartySwitchData _partsData;
+
+	public ActionPartsPartySwitch(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly PartySwitchData _partsData;
+	}
 
-		public ActionPartsPartySwitch(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		protected override void OnFinish()
-		{
-		}
+	private void Procedure()
+	{
+	}
 
-		private void Procedure()
-		{
-		}
-
-		public bool IsJustTimeAction()
-		{
-			return default(bool);
-		}
+	public bool IsJustTimeAction()
+	{
+		return default(bool);
 	}
 }

@@ -7,145 +7,144 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CraftGradeupCanvas : MonoBehaviour, ICustomMessage
 {
-	public class CraftGradeupCanvas : MonoBehaviour, ICustomMessage
+	private enum GradeupConditionError
 	{
-		private enum GradeupConditionError
-		{
-			None = -1,
-			LowCraftLevel,
-			NoMaxLimitBreak,
-			NoMaxLevel,
-			ShortageCoin,
-			ShortageMaterial,
-			NotBaseWeapon
-		}
+		None = -1,
+		LowCraftLevel,
+		NoMaxLimitBreak,
+		NoMaxLevel,
+		ShortageCoin,
+		ShortageMaterial,
+		NotBaseWeapon
+	}
 
-		public CraftEvolutionBaseFrame gradeupTargetInfoFrame;
+	public CraftEvolutionBaseFrame gradeupTargetInfoFrame;
 
-		public Transform craftMaterialCellParent;
+	public Transform craftMaterialCellParent;
 
-		public Text totalCoin;
+	public Text totalCoin;
 
-		public Text breforeCoin;
+	public Text breforeCoin;
 
-		public Text afterCoin;
+	public Text afterCoin;
 
-		public UnityAction craftButtonPressCallBack;
+	public UnityAction craftButtonPressCallBack;
 
-		public GameObject effectBaseObject;
+	public GameObject effectBaseObject;
 
-		public Button craftButton;
+	public Button craftButton;
 
-		public Text fortErrorMessage;
+	public Text fortErrorMessage;
 
-		public List<CraftMaterialCellData> materialCellDataList;
+	public List<CraftMaterialCellData> materialCellDataList;
 
-		public Sprite craftNormalSprite;
+	public Sprite craftNormalSprite;
 
-		public Sprite craftBlueSprite;
+	public Sprite craftBlueSprite;
 
-		public RectTransform gradeupResultButtonsRect;
+	public RectTransform gradeupResultButtonsRect;
 
-		public Button toPowerUpButtonForGradeupResult;
+	public Button toPowerUpButtonForGradeupResult;
 
-		public Text toPowerTextForGradeupResult;
+	public Text toPowerTextForGradeupResult;
 
-		public Button closeButtonForGradeupResult;
+	public Button closeButtonForGradeupResult;
 
-		public Text closeTextForGradeupResult;
+	public Text closeTextForGradeupResult;
 
-		private Vector2 gradeupResultButtonsTargetPos;
+	private Vector2 gradeupResultButtonsTargetPos;
 
-		private Tweener gradeupResultButtonsTween;
+	private Tweener gradeupResultButtonsTween;
 
-		private List<CraftMaterialCell> materialCellList;
+	private List<CraftMaterialCell> materialCellList;
 
-		private bool isWeaponGradeup;
+	private bool isWeaponGradeup;
 
-		private bool isClearPreconditionForGradeup;
+	private bool isClearPreconditionForGradeup;
 
-		private BitArray gradeupConditionArray;
+	private BitArray gradeupConditionArray;
 
-		private long shortageCoin;
+	private long shortageCoin;
 
-		private int needCraftLevel;
+	private int needCraftLevel;
 
-		[SerializeField]
-		private Text needCoinText;
+	[SerializeField]
+	private Text needCoinText;
 
-		[SerializeField]
-		private Text needMaterialText;
+	[SerializeField]
+	private Text needMaterialText;
 
-		private WeaponCraftDataElement craftData;
+	private WeaponCraftDataElement craftData;
 
-		private void OnEnable()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		private void OnDisable()
-		{
-		}
+	private void OnDisable()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void SetupMaterialCellList(WeaponCraftDataElement craftData)
-		{
-		}
+	public void SetupMaterialCellList(WeaponCraftDataElement craftData)
+	{
+	}
 
-		private void UpdateMaterialCellList()
-		{
-		}
+	private void UpdateMaterialCellList()
+	{
+	}
 
-		public void OnCraftButtonPressed()
-		{
-		}
+	public void OnCraftButtonPressed()
+	{
+	}
 
-		private void ShowConditionPop()
-		{
-		}
+	private void ShowConditionPop()
+	{
+	}
 
-		private void OnMaterialIconPressed(CraftMaterialCellData cellData)
-		{
-		}
+	private void OnMaterialIconPressed(CraftMaterialCellData cellData)
+	{
+	}
 
-		private void SelectListCallBack(UnityAction listCloseAction)
-		{
-		}
+	private void SelectListCallBack(UnityAction listCloseAction)
+	{
+	}
 
-		public void UpdateView([Optional] WeaponCraftDataElement craftData)
-		{
-		}
+	public void UpdateView([Optional] WeaponCraftDataElement craftData)
+	{
+	}
 
-		public void UpdateCellData()
-		{
-		}
+	public void UpdateCellData()
+	{
+	}
 
-		private void UpdateCraftButton()
-		{
-		}
+	private void UpdateCraftButton()
+	{
+	}
 
-		public void ShowGradeupResultButtons()
-		{
-		}
+	public void ShowGradeupResultButtons()
+	{
+	}
 
-		public void HideGradeupResultButtons()
-		{
-		}
+	public void HideGradeupResultButtons()
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private void UpdateInfo(WeaponCraftDataElement craftData)
-		{
-		}
+	private void UpdateInfo(WeaponCraftDataElement craftData)
+	{
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

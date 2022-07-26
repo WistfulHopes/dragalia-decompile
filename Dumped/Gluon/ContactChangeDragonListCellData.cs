@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class ContactChangeDragonListCellData : CommonIconListCellData
 {
-	public class ContactChangeDragonListCellData : CommonIconListCellData
-	{
-	}
 }

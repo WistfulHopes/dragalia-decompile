@@ -3,119 +3,118 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircle2DScene : SceneBase
 {
-	public class GrowthManaCircle2DScene : SceneBase
+	public Camera uiCamera;
+
+	public Camera flashCamera;
+
+	public GrowthManaCircleModel manaCircleModel;
+
+	public Canvas bgCanvas;
+
+	public GameObject releaseEffectBase;
+
+	public GrowthManaCircleSoundController soundController;
+
+	[HideInInspector]
+	public GrowthManaCircle2DUICanvas mainCanvas;
+
+	[HideInInspector]
+	public string voiceGroupName;
+
+	private GrowthManaCircleStatusCanvas statusCanvas;
+
+	private BackButton backButton;
+
+	private BaseCanvasContents baseCanvasContents;
+
+	private TouchGuardObject releasePieceEffectTouchGuard;
+
+	public int targetCharaId
 	{
-		public Camera uiCamera;
-
-		public Camera flashCamera;
-
-		public GrowthManaCircleModel manaCircleModel;
-
-		public Canvas bgCanvas;
-
-		public GameObject releaseEffectBase;
-
-		public GrowthManaCircleSoundController soundController;
-
-		[HideInInspector]
-		public GrowthManaCircle2DUICanvas mainCanvas;
-
-		[HideInInspector]
-		public string voiceGroupName;
-
-		private GrowthManaCircleStatusCanvas statusCanvas;
-
-		private BackButton backButton;
-
-		private BaseCanvasContents baseCanvasContents;
-
-		private TouchGuardObject releasePieceEffectTouchGuard;
-
-		public int targetCharaId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
-
-		private void Awake()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void Start()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void OnInitReady()
+	{
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	private void OnEnterScene()
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		public void BackButtonPressed()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public void OnGrowthButtonPressed()
-		{
-		}
+	public void BackButtonPressed()
+	{
+	}
 
-		public void OnAwakeningButtonPressed()
-		{
-		}
+	public void OnGrowthButtonPressed()
+	{
+	}
 
-		public void SendReleasePieceData(int[] pieceIds, bool isGrowRelease, [Optional] Action callback)
-		{
-		}
+	public void OnAwakeningButtonPressed()
+	{
+	}
 
-		public void SendLimitBreakData([Optional] Action callback)
-		{
-		}
+	public void SendReleasePieceData(int[] pieceIds, bool isGrowRelease, [Optional] Action callback)
+	{
+	}
 
-		public void SendReleasePieceAndLimitBreakData(AutoReleasableAllCirclePointData autoReleasableData, bool isGrowRelease, [Optional] Action<AutoReleasableAllCirclePointData> callback)
-		{
-		}
+	public void SendLimitBreakData([Optional] Action callback)
+	{
+	}
 
-		public void ReloadSceneUI()
-		{
-		}
+	public void SendReleasePieceAndLimitBreakData(AutoReleasableAllCirclePointData autoReleasableData, bool isGrowRelease, [Optional] Action<AutoReleasableAllCirclePointData> callback)
+	{
+	}
 
-		public void SetupReleasePieceEffect()
-		{
-		}
+	public void ReloadSceneUI()
+	{
+	}
 
-		public void CloseReleasePieceEffect()
-		{
-		}
+	public void SetupReleasePieceEffect()
+	{
+	}
 
-		public void StartTutorial()
-		{
-		}
+	public void CloseReleasePieceEffect()
+	{
+	}
 
-		public void ShowTutorialFinishWindow()
-		{
-		}
+	public void StartTutorial()
+	{
+	}
+
+	public void ShowTutorialFinishWindow()
+	{
 	}
 }

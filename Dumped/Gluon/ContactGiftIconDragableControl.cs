@@ -2,29 +2,28 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactGiftIconDragableControl : MonoBehaviour, IDragHandler, IEventSystemHandler, IBeginDragHandler, IEndDragHandler
 {
-	public class ContactGiftIconDragableControl : MonoBehaviour, IDragHandler, IEventSystemHandler, IBeginDragHandler, IEndDragHandler
+	[NonSerialized]
+	public ContactShopPanel shopPanel;
+
+	private ContactGiftIcon icon;
+
+	private void Awake()
 	{
-		[NonSerialized]
-		public ContactShopPanel shopPanel;
+	}
 
-		private ContactGiftIcon icon;
+	public void OnBeginDrag(PointerEventData eventData)
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public void OnDrag(PointerEventData eventData)
+	{
+	}
 
-		public void OnBeginDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnEndDrag(PointerEventData eventData)
-		{
-		}
+	public void OnEndDrag(PointerEventData eventData)
+	{
 	}
 }

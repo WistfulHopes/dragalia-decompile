@@ -1,54 +1,53 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FollowerStateIdle : IState<FollowerController>
 {
-	public class FollowerStateIdle : IState<FollowerController>
+	private enum MoveState
 	{
-		private enum MoveState
-		{
-			Stop,
-			Walk,
-			Run,
-			GiveUpRun,
-			PathPending
-		}
+		Stop,
+		Walk,
+		Run,
+		GiveUpRun,
+		PathPending
+	}
 
-		private MoveState moveState;
+	private MoveState moveState;
 
-		private float moveStateTimer;
+	private float moveStateTimer;
 
-		private float moveMargin;
+	private float moveMargin;
 
-		protected Vector3 targetPos;
+	protected Vector3 targetPos;
 
-		private Vector3 prevPos;
+	private Vector3 prevPos;
 
-		private float stayTimer;
+	private float stayTimer;
 
-		protected bool updateTargetPos;
+	protected bool updateTargetPos;
 
-		public override void OnStateEnter()
-		{
-		}
+	public override void OnStateEnter()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateExit()
+	{
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateUpdate()
+	{
+	}
 
-		protected void UpdateMove(bool updateTargetPos, bool ignoreMoveMargin)
-		{
-		}
+	protected void UpdateMove(bool updateTargetPos, bool ignoreMoveMargin)
+	{
+	}
 
-		protected void Stop()
-		{
-		}
+	protected void Stop()
+	{
+	}
 
-		public void UpdateTargetPos()
-		{
-		}
+	public void UpdateTargetPos()
+	{
 	}
 }

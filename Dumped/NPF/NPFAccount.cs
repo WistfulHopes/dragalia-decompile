@@ -4,96 +4,103 @@ using NPF.NPFWrapper;
 using NPF.User;
 using UnityEngine.Events;
 
-namespace NPF
+namespace NPF;
+
+public class NPFAccount
 {
-	public class NPFAccount
+	public const string accountQAURL = "https://www.nintendo.co.jp/support/my_nintendo/account-restart.html";
+
+	private const string lang_jp = "jp-JP";
+
+	private const string lang_en = "en-US";
+
+	private const string lang_zh_traditional = "zh-TW";
+
+	private NPFErrorParam lastError;
+
+	private const int NPF_ERROR_NA_LINKED_CODE = 409;
+
+	public void SwitchNintendoAccount(BaaSUser user, Action NintendoAccountLinkSucceed, Action NintendoAccountSwitchSucceed)
 	{
-		public const string accountQAURL = "https://www.nintendo.co.jp/support/my_nintendo/account-restart.html";
+	}
 
-		private const string lang_jp = "jp-JP";
+	public void SwitchNintendoAccountLinkedUserOnly(BaaSUser user, Action NintendoAccountSwitchSucceed)
+	{
+	}
 
-		private const string lang_en = "en-US";
+	public void LinkByNintendoAccount(BaaSUser user, Action NintendoAccountLinkSucceed)
+	{
+	}
 
-		private const string lang_zh_traditional = "zh-TW";
+	public void AuthorizeByNintentoAccount()
+	{
+	}
 
-		private NPFErrorParam lastError;
+	private void RetryNAAuth(NintendoAccount nintendoAccount)
+	{
+	}
 
-		private const int NPF_ERROR_NA_LINKED_CODE = 409;
+	public void NintendoAccountAuthErrorHandler(NPFError error)
+	{
+	}
 
-		public void SwitchNintendoAccount(BaaSUser user, Action NintendoAccountLinkSucceed, Action NintendoAccountSwitchSucceed)
-		{
-		}
+	private void OnSwitchNintendoAccountLinkedUserOnlyError(NPFError error)
+	{
+	}
 
-		public void LinkByNintendoAccount(BaaSUser user, Action NintendoAccountLinkSucceed)
-		{
-		}
+	private void NintendoAccountAuthErrorTypeHandler(NPFErrorParam error)
+	{
+	}
 
-		public void AuthorizeByNintentoAccount()
-		{
-		}
+	public void SetLanguage(Localize.Language language)
+	{
+	}
 
-		private void RetryNAAuth(NintendoAccount nintendoAccount)
-		{
-		}
+	private void OpenLoadingPopup()
+	{
+	}
 
-		public void NintendoAccountAuthErrorHandler(NPFError error)
-		{
-		}
+	private void CloseLoadingPopup()
+	{
+	}
 
-		private void NintendoAccountAuthErrorTypeHandler(NPFErrorParam error)
-		{
-		}
+	private void ErrorPopup(int errorCode)
+	{
+	}
 
-		public void SetLanguage(Localize.Language language)
-		{
-		}
+	private void ErrorPopup(string errorTitle, string errorMessage)
+	{
+	}
 
-		private void OpenLoadingPopup()
-		{
-		}
+	private void GetRegion(UnityAction<string> next)
+	{
+	}
 
-		private void CloseLoadingPopup()
-		{
-		}
+	private void CancelPopup(NPFErrorParam lastError)
+	{
+	}
 
-		private void ErrorPopup(int errorCode)
-		{
-		}
+	public void NintendoAccountCountryCodeNotAvalible()
+	{
+	}
 
-		private void ErrorPopup(string errorTitle, string errorMessage)
-		{
-		}
+	private void NintendoAccountAuthErrorPopup()
+	{
+	}
 
-		private void GetRegion(UnityAction<string> next)
-		{
-		}
+	private void NintendoAccountStatusErrorPopup(string url)
+	{
+	}
 
-		private void CancelPopup(NPFErrorParam lastError)
-		{
-		}
+	private void AuthSucceedPopup()
+	{
+	}
 
-		public void NintendoAccountCountryCodeNotAvalible()
-		{
-		}
+	public void EULAUpdatePopup()
+	{
+	}
 
-		private void NintendoAccountAuthErrorPopup()
-		{
-		}
-
-		private void NintendoAccountStatusErrorPopup(string url)
-		{
-		}
-
-		private void AuthSucceedPopup()
-		{
-		}
-
-		public void EULAUpdatePopup()
-		{
-		}
-
-		private void CreateWarningPopup(string region)
-		{
-		}
+	private void CreateWarningPopup(string region)
+	{
 	}
 }

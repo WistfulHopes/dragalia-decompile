@@ -2,49 +2,48 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsAppearEnemy : ActionParts
 {
-	public class ActionPartsAppearEnemy : ActionParts
+	private readonly AppearEnemyData _partsData;
+
+	private EnemyAppearEnemyMultiPlayService.AppearEnemyInfo applyEnemyInfo;
+
+	private int taskId;
+
+	private RunActionIntParameter taskIdParam;
+
+	public ActionPartsAppearEnemy(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly AppearEnemyData _partsData;
+	}
 
-		private EnemyAppearEnemyMultiPlayService.AppearEnemyInfo applyEnemyInfo;
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		private int taskId;
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		private RunActionIntParameter taskIdParam;
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsAppearEnemy(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected void PopEnemy(EnemyCharacter enemyOwner, EnemyCtrl popEnemyCtrl)
+	{
+	}
 
-		public override RunActionParameterBase CreateRunActionParameter()
-		{
-			return null;
-		}
+	private void PopEnemyHostSync(EnemyCharacter enemyOwner, EnemyCtrl popEnemyCtrl, Vector3 popPos, Quaternion popRot)
+	{
+	}
 
-		public override void SetRunActionParameter(RunActionParameterBase param)
-		{
-		}
+	private void PopEnemyNoSync(EnemyCharacter enemyOwner, EnemyCtrl popEnemyCtrl, Vector3 popPos, Quaternion popRot)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		protected void PopEnemy(EnemyCharacter enemyOwner, EnemyCtrl popEnemyCtrl)
-		{
-		}
-
-		private void PopEnemyHostSync(EnemyCharacter enemyOwner, EnemyCtrl popEnemyCtrl, Vector3 popPos, Quaternion popRot)
-		{
-		}
-
-		private void PopEnemyNoSync(EnemyCharacter enemyOwner, EnemyCtrl popEnemyCtrl, Vector3 popPos, Quaternion popRot)
-		{
-		}
-
-		private void TargetCorrection(ref CommonObjectStatus target)
-		{
-		}
+	private void TargetCorrection(ref CommonObjectStatus target)
+	{
 	}
 }

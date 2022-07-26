@@ -1,76 +1,75 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterDamageRecord
 {
-	public class CharacterDamageRecord
+	public int totalDamage
 	{
-		public int totalDamage
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public int skillDamage
+	public int skillDamage
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public int dotDamage
+	public int dotDamage
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public int ciriticalDamage
+	public int ciriticalDamage
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public int enchantDamage
+	public int enchantDamage
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public void Record(int damage, bool isSkill, bool isDot, bool isCritical, bool isEnchant, bool isQuestSkill)
-		{
-		}
+	public void Record(int damage, bool isSkill, bool isDot, bool isCritical, bool isEnchant, bool isQuestSkill)
+	{
 	}
 }

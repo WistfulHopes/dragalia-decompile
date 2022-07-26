@@ -1,82 +1,81 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class GiftTextLoader
 {
-	public class GiftTextLoader
+	public class NameAndDescription
 	{
-		public class NameAndDescription
+		public string name
 		{
-			public string name
+			[CompilerGenerated]
+			get
 			{
-				[CompilerGenerated]
-				get
-				{
-					return null;
-				}
-				[CompilerGenerated]
-				set
-				{
-				}
+				return null;
 			}
-
-			public string secondName
-			{
-				[CompilerGenerated]
-				get
-				{
-					return null;
-				}
-				[CompilerGenerated]
-				set
-				{
-				}
-			}
-
-			public string description
-			{
-				[CompilerGenerated]
-				get
-				{
-					return null;
-				}
-				[CompilerGenerated]
-				set
-				{
-				}
-			}
-
-			public NameAndDescription()
-			{
-			}
-
-			public NameAndDescription(string a_name, string a_description, string a_secondName = "")
+			[CompilerGenerated]
+			set
 			{
 			}
 		}
 
-		public static NameAndDescription GetNameAndDescription(GiftType giftType, int itemID, long itemNum)
+		public string secondName
 		{
-			return null;
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
 		}
 
-		public static NameAndDescription GetPieceNameAndDescription(int enemyID, int enemyNum = 0)
+		public string description
 		{
-			return null;
+			[CompilerGenerated]
+			get
+			{
+				return null;
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
 		}
 
-		public static string GetName(GiftType giftType, int itemID, int itemNum = 0)
+		public NameAndDescription()
 		{
-			return null;
 		}
 
-		public static string GetDescription(GiftType giftType, int itemID, int itemNum = 0)
+		public NameAndDescription(string a_name, string a_description, string a_secondName = "")
 		{
-			return null;
 		}
+	}
 
-		public static string GetSecondName(GiftType giftType, int itemID, int itemNum = 0)
-		{
-			return null;
-		}
+	public static NameAndDescription GetNameAndDescription(GiftType giftType, int itemID, long itemNum)
+	{
+		return null;
+	}
+
+	public static NameAndDescription GetPieceNameAndDescription(int enemyID, int enemyNum = 0)
+	{
+		return null;
+	}
+
+	public static string GetName(GiftType giftType, int itemID, int itemNum = 0)
+	{
+		return null;
+	}
+
+	public static string GetDescription(GiftType giftType, int itemID, int itemNum = 0)
+	{
+		return null;
+	}
+
+	public static string GetSecondName(GiftType giftType, int itemID, int itemNum = 0)
+	{
+		return null;
 	}
 }

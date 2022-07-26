@@ -1,17 +1,16 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortHitReactor : MonoBehaviour
 {
-	public class FortHitReactor : MonoBehaviour
+	private Animator animator;
+
+	private void Start()
 	{
-		private Animator animator;
+	}
 
-		private void Start()
-		{
-		}
-
-		private void OnTriggerEnter(Collider col)
-		{
-		}
+	private void OnTriggerEnter(Collider col)
+	{
 	}
 }

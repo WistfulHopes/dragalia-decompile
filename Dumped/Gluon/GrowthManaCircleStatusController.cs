@@ -2,115 +2,114 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleStatusController : MonoBehaviour, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
 {
-	public class GrowthManaCircleStatusController : MonoBehaviour, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
+	public CommonUnitIcon unitIcon;
+
+	public GrowthManaCircleStatusObject[] statusObjects;
+
+	public GameObject[] pagerOn;
+
+	public GameObject[] pagerOff;
+
+	public Button leftArrow;
+
+	public Button rightArrow;
+
+	[HideInInspector]
+	public GrowthManaCircleModel model;
+
+	private int currentIndex;
+
+	private Vector2 beginDragPosition;
+
+	private bool isAnimating;
+
+	private const float resolutionFixRate = 100f;
+
+	private void Start()
 	{
-		public CommonUnitIcon unitIcon;
+	}
 
-		public GrowthManaCircleStatusObject[] statusObjects;
+	public void Reload()
+	{
+	}
 
-		public GameObject[] pagerOn;
+	private void SetCharaIcon()
+	{
+	}
 
-		public GameObject[] pagerOff;
+	private void SetPageOn(int index)
+	{
+	}
 
-		public Button leftArrow;
+	public void SetArrowEnable(bool enable)
+	{
+	}
 
-		public Button rightArrow;
+	private void ShowSkillDetailDialog(int skillId, int level, int maxLevel)
+	{
+	}
 
-		[HideInInspector]
-		public GrowthManaCircleModel model;
+	public void OnSkill1ButtonPressed()
+	{
+	}
 
-		private int currentIndex;
+	public void OnSkill2ButtonPressed()
+	{
+	}
 
-		private Vector2 beginDragPosition;
+	private void ShowAbilityDetailDialog(int abilityId, int abilityLv, ElementalType type)
+	{
+	}
 
-		private bool isAnimating;
+	public void Ability1ButtonPressed()
+	{
+	}
 
-		private const float resolutionFixRate = 100f;
+	public void Ability2ButtonPressed()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	public void Ability3ButtonPressed()
+	{
+	}
 
-		public void Reload()
-		{
-		}
+	private void ShowExAbilityDetailDialog(int abilityId, int index)
+	{
+	}
 
-		private void SetCharaIcon()
-		{
-		}
+	public void ExAbilityButtonPressed()
+	{
+	}
 
-		private void SetPageOn(int index)
-		{
-		}
+	public void ExAbility2ButtonPressed()
+	{
+	}
 
-		public void SetArrowEnable(bool enable)
-		{
-		}
+	public void OnBeginDrag(PointerEventData eventData)
+	{
+	}
 
-		private void ShowSkillDetailDialog(int skillId, int level, int maxLevel)
-		{
-		}
+	public void OnDrag(PointerEventData eventData)
+	{
+	}
 
-		public void OnSkill1ButtonPressed()
-		{
-		}
+	public void OnEndDrag(PointerEventData eventData)
+	{
+	}
 
-		public void OnSkill2ButtonPressed()
-		{
-		}
+	public void ShowNextStatusObject()
+	{
+	}
 
-		private void ShowAbilityDetailDialog(int abilityId, int abilityLv, ElementalType type)
-		{
-		}
+	public void ShowPrevStatusObject()
+	{
+	}
 
-		public void Ability1ButtonPressed()
-		{
-		}
-
-		public void Ability2ButtonPressed()
-		{
-		}
-
-		public void Ability3ButtonPressed()
-		{
-		}
-
-		private void ShowExAbilityDetailDialog(int abilityId, int index)
-		{
-		}
-
-		public void ExAbilityButtonPressed()
-		{
-		}
-
-		public void ExAbility2ButtonPressed()
-		{
-		}
-
-		public void OnBeginDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnEndDrag(PointerEventData eventData)
-		{
-		}
-
-		public void ShowNextStatusObject()
-		{
-		}
-
-		public void ShowPrevStatusObject()
-		{
-		}
-
-		public void OnAnimationCompleted()
-		{
-		}
+	public void OnAnimationCompleted()
+	{
 	}
 }

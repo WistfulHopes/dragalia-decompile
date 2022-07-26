@@ -1,20 +1,19 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BattleRoyalReleaseCharaSkinResultPopup : CommonPopup
 {
-	public class BattleRoyalReleaseCharaSkinResultPopup : CommonPopup
+	public Image skinIcon;
+
+	public Text centerText;
+
+	public static BattleRoyalReleaseCharaSkinResultPopup Create()
 	{
-		public Image skinIcon;
+		return null;
+	}
 
-		public Text centerText;
-
-		public static BattleRoyalReleaseCharaSkinResultPopup Create()
-		{
-			return null;
-		}
-
-		public void InitPopup(int charaSkinId)
-		{
-		}
+	public void InitPopup(int charaSkinId)
+	{
 	}
 }

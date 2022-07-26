@@ -10,506 +10,501 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class NormalEventSelectScene : SceneBase, ICustomMessage
 {
-	public class NormalEventSelectScene : SceneBase, ICustomMessage
+	private enum FadeMode
 	{
-		private enum FadeMode
-		{
-			None,
-			In,
-			Out,
-			First
-		}
+		None,
+		In,
+		Out,
+		First
+	}
 
-		public enum QuestSelectSceneType
-		{
-			eventQuestTop,
-			eventQuestSub,
-			eventQuestDetail,
-			supportSelect,
-			none
-		}
+	public enum QuestSelectSceneType
+	{
+		eventQuestTop,
+		eventQuestSub,
+		eventQuestDetail,
+		supportSelect,
+		none
+	}
 
-		private enum QuestSelectUiType
-		{
-			Canvas,
-			Num
-		}
+	private enum QuestSelectUiType
+	{
+		Canvas,
+		Num
+	}
 
-		public enum TouchGuardType
-		{
-			touchGuardTutorial
-		}
+	public enum TouchGuardType
+	{
+		touchGuardTutorial
+	}
 
-		private enum StateType
-		{
-			Initialized,
-			CreatingRoom,
-			Matching
-		}
+	private enum StateType
+	{
+		Initialized,
+		CreatingRoom,
+		Matching
+	}
 
-		[SerializeField]
-		public Camera mainCamera;
+	[SerializeField]
+	public Camera mainCamera;
 
-		[SerializeField]
-		public Camera uiCamera;
+	[SerializeField]
+	public Camera uiCamera;
 
-		[SerializeField]
-		public Camera flashCamera;
+	[SerializeField]
+	public Camera flashCamera;
 
-		[SerializeField]
-		private FlashPlayerManager _flashMgr;
+	[SerializeField]
+	private FlashPlayerManager _flashMgr;
 
-		[SerializeField]
-		[Header("QuestSceneã\u0083\u0095ã\u0082§ã\u0083¼ã\u0083\u0089ã\u0082¤ã\u0083³æ\u0099\u0082ã\u0081®inã\u0082¢ã\u0083\u008bã\u0083¡ã\u0083¼ã\u0082·ã\u0083§ã\u0083³ã\u0083\u0087ã\u0082£ã\u0083¬ã\u0082¤ã\u0083\u0095ã\u0083¬ã\u0083¼ã\u0083\u00a0")]
-		public int FadeInDragonDelay;
+	[SerializeField]
+	public int FadeInDragonDelay;
 
-		[SerializeField]
-		[Header("ã\u0082«ã\u0083«ã\u0083¼ã\u0082»ã\u0083«UIã\u0081®ã\u0083\u0088ã\u0083\u0083ã\u0083\u0097ã\u0081\u008cå¤\u0089æ\u009b\u00b4ã\u0081\u0095ã\u0082\u008cã\u0081\u009fæ\u0099\u0082ã\u0081®s1ã\u0082¢ã\u0083\u008bã\u0083¡ã\u0083¼ã\u0082·ã\u0083§ã\u0083³ã\u0083\u0087ã\u0082£ã\u0083¬ã\u0082¤ã\u0083\u0095ã\u0083¬ã\u0083¼ã\u0083\u00a0")]
-		public int CarouselChangeDragonDeley;
+	[SerializeField]
+	public int CarouselChangeDragonDeley;
 
-		[SerializeField]
-		[Header("ã\u0082\u00a8ã\u0083ªã\u0082¢ã\u0083\u009eã\u0083\u0083ã\u0083\u0097ã\u0081«é\u0081·ç§»ã\u0081\u0099ã\u0082\u008bé\u009a\u009bã\u0081®s2ã\u0083©ã\u0083\u0099ã\u0083«ã\u0082¢ã\u0083\u008bã\u0083¡ã\u0083¼ã\u0082·ã\u0083§ã\u0083³ã\u0083\u0087ã\u0082£ã\u0083¬ã\u0082¤ã\u0083\u0095ã\u0083¬ã\u0083¼ã\u0083\u00a0")]
-		public int AreaMapOutDragonDelay;
+	[SerializeField]
+	public int AreaMapOutDragonDelay;
 
-		[SerializeField]
-		[Header("ã\u0082\u00a8ã\u0083ªã\u0082¢ã\u0083\u009eã\u0083\u0083ã\u0083\u0097ã\u0081\u008bã\u0082\u0089ã\u0083\u0081ã\u0083£ã\u0083\u0097ã\u0082¿ã\u0083¼ã\u0082»ã\u0083¬ã\u0082\u00afã\u0083\u0088ç\u0094»é\u009d¢ã\u0081«é\u0081·ç§»ã\u0081\u0097ã\u0081\u009fé\u009a\u009bã\u0081®inã\u0082¢ã\u0083\u008bã\u0083¡ã\u0083¼ã\u0082·ã\u0083§ã\u0083³ã\u0083\u0087ã\u0082£ã\u0083¬ã\u0082¤ã\u0083\u0095ã\u0083¬ã\u0083¼ã\u0083\u00a0")]
-		public int ChapterModeInDragonDeley;
+	[SerializeField]
+	public int ChapterModeInDragonDeley;
 
-		[SerializeField]
-		private AnimationCurve fullScreenBlurPowerCurve;
+	[SerializeField]
+	private AnimationCurve fullScreenBlurPowerCurve;
 
-		[SerializeField]
-		private AnimationCurve fullScreenDiffusionBlurSizeCurve;
+	[SerializeField]
+	private AnimationCurve fullScreenDiffusionBlurSizeCurve;
 
-		[HideInInspector]
-		public NormalEventSelectUiCanvas uiCanvas;
+	[HideInInspector]
+	public NormalEventSelectUiCanvas uiCanvas;
 
-		public Dictionary<string, GameObject> questSelectResourceDic;
+	public Dictionary<string, GameObject> questSelectResourceDic;
 
-		private FadeMode fadeMode;
+	private FadeMode fadeMode;
 
-		private GameObject guardCanvasPrefab;
+	private GameObject guardCanvasPrefab;
 
-		private GameObject guardCanvas;
+	private GameObject guardCanvas;
 
-		private Sequence fullScreenBlurPowerSequence;
+	private Sequence fullScreenBlurPowerSequence;
 
-		private Sequence fullScreenDiffusionBlurSizeSequence;
+	private Sequence fullScreenDiffusionBlurSizeSequence;
 
-		public PostEffect camPostEffect;
+	public PostEffect camPostEffect;
 
-		private PostFilmMode camPostEffectFilmMode;
+	private PostFilmMode camPostEffectFilmMode;
 
-		private bool camPostEffectIsEnableBloom;
+	private bool camPostEffectIsEnableBloom;
 
-		private QuestSelectEventTopPage _eventTopPage;
+	private QuestSelectEventTopPage _eventTopPage;
 
-		private TouchGuardObject startTouchGuardObject;
+	private TouchGuardObject startTouchGuardObject;
 
-		private bool _hardEnable;
+	private bool _hardEnable;
 
-		private List<QSChapterElement> nchlist;
+	private List<QSChapterElement> nchlist;
 
-		public bool isStartQuestSelect;
+	public bool isStartQuestSelect;
 
-		public bool isStartQuestSelect2;
+	public bool isStartQuestSelect2;
 
-		public bool isCanvasBgFadingOut;
+	public bool isCanvasBgFadingOut;
 
-		private TouchGuardObject matchingTouchGuard;
+	private TouchGuardObject matchingTouchGuard;
 
-		private Dictionary<int, GameObject> loadedCommonObjects;
+	private Dictionary<int, GameObject> loadedCommonObjects;
 
-		private readonly SceneNameDefine.PageName[] LoadPageList;
+	private readonly SceneNameDefine.PageName[] LoadPageList;
 
-		[SerializeField]
-		private RectTransform canvasBg;
+	[SerializeField]
+	private RectTransform canvasBg;
 
-		[SerializeField]
-		private Image questBg;
+	[SerializeField]
+	private Image questBg;
 
-		[SerializeField]
-		private Image screenShotBlackPanel;
+	[SerializeField]
+	private Image screenShotBlackPanel;
 
-		[SerializeField]
-		private CanvasGroup screenShotCanvasGroup;
+	[SerializeField]
+	private CanvasGroup screenShotCanvasGroup;
 
-		public AudioPlayback bgm;
+	public AudioPlayback bgm;
 
-		private SceneNameDefine.PageName firstPageName;
+	private SceneNameDefine.PageName firstPageName;
 
-		public Dictionary<TouchGuardType, TouchGuardObject> touchGuardObjDic;
+	public Dictionary<TouchGuardType, TouchGuardObject> touchGuardObjDic;
 
-		private StateType state;
+	private StateType state;
 
-		public bool hardEnable => default(bool);
+	public bool hardEnable => default(bool);
 
-		public List<QSChapterElement> qSChapterElementList => null;
+	public List<QSChapterElement> qSChapterElementList => null;
 
-		public QuestSelectEventTopPage eventTopPage
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		public FlashPlayerManager flashPlayerManager
-		{
-			get
-			{
-				return null;
-			}
-			private set
-			{
-			}
-		}
-
-		public bool isTutorialRequired
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public bool isTutorialRequiredAfterNewChapterEffect
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public bool isOnEnterScene
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public Image QuestBg => null;
-
-		public CanvasGroup ScreenShotCanvasGroup => null;
-
-		public static QuestSelectInstance questSelectInstance => null;
-
-		public bool isCloudAnimationEnded
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public static void ResetQuestSelectInstance()
-		{
-		}
-
-		public void SetDifficulty(QuestSelectScene.Difficulty a_difficulty)
-		{
-		}
-
-		private void Awake()
-		{
-		}
-
-		private IEnumerator Start()
+	public QuestSelectEventTopPage eventTopPage
+	{
+		get
 		{
 			return null;
 		}
-
-		public void ShowMultiJoinPopupOnBegin()
+		set
 		{
 		}
+	}
 
-		private static SceneNameDefine.PageName SetFirstPageName(bool isFirst, QuestSelectInstance.QuestFirstOpenType questFirstOpenType, bool isShortCuttingQuestSelect)
+	public FlashPlayerManager flashPlayerManager
+	{
+		get
 		{
-			return default(SceneNameDefine.PageName);
+			return null;
 		}
+		private set
+		{
+		}
+	}
 
-		private bool IsReward()
+	public bool isTutorialRequired
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public void PlayBgm()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SetScreenShotBlackPanelEnable(bool value)
-		{
-		}
-
-		private bool IsEventEnable()
-		{
-			return default(bool);
-		}
-
-		private void OnEnterScene()
-		{
-		}
-
-		public override void StartExitAnimation()
-		{
-		}
-
-		private bool IsAreaMapExitAnimationNeeded()
+	public bool isTutorialRequiredAfterNewChapterEffect
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		private IEnumerator LoadCommonObjects()
-		{
-			return null;
-		}
-
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
-
-		private void OnCompleteScreenShotFadeOut()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void AfterQuestEnterCloud()
+	public bool isOnEnterScene
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SetAllButtonsEnabled(bool enable)
+	public Image QuestBg => null;
+
+	public CanvasGroup ScreenShotCanvasGroup => null;
+
+	public static QuestSelectInstance questSelectInstance => null;
+
+	public bool isCloudAnimationEnded
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void OnSupportPageActive()
-		{
-		}
+	public static void ResetQuestSelectInstance()
+	{
+	}
 
-		private void OnSupportPageStartAnimation(bool isFromQuestPrepare)
-		{
-		}
+	public void SetDifficulty(QuestSelectScene.Difficulty a_difficulty)
+	{
+	}
 
-		private void OnSupportPageExitAnimation()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void OnPageEnterAnimationEnded()
-		{
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		public void OnSupportPageBackButtonPressed()
-		{
-		}
+	public void ShowMultiJoinPopupOnBegin()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private static SceneNameDefine.PageName SetFirstPageName(bool isFirst, QuestSelectInstance.QuestFirstOpenType questFirstOpenType, bool isShortCuttingQuestSelect)
+	{
+		return default(SceneNameDefine.PageName);
+	}
 
-		public IEnumerator CaptureMapImage()
-		{
-			return null;
-		}
+	private bool IsReward()
+	{
+		return default(bool);
+	}
 
-		public void BackToMyPage()
-		{
-		}
+	public void PlayBgm()
+	{
+	}
 
-		public void SetGuardCanvasForScreenSpaceCamera(bool value, bool isOverHeader = false, float canvasAlpha = 1f)
-		{
-		}
+	public void SetScreenShotBlackPanelEnable(bool value)
+	{
+	}
 
-		private void SetupTutorialState()
-		{
-		}
+	private bool IsEventEnable()
+	{
+		return default(bool);
+	}
 
-		public string GetCaptionText()
-		{
-			return null;
-		}
+	private void OnEnterScene()
+	{
+	}
 
-		public CaptionCanvas.IconType GetCaptionIconType()
-		{
-			return default(CaptionCanvas.IconType);
-		}
+	public override void StartExitAnimation()
+	{
+	}
 
-		public override void OnBeforeLeaving()
-		{
-		}
+	private bool IsAreaMapExitAnimationNeeded()
+	{
+		return default(bool);
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private IEnumerator LoadCommonObjects()
+	{
+		return null;
+	}
 
-		public void StartTutorial()
-		{
-		}
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		private void Tutorial_1_1()
-		{
-		}
+	private void OnCompleteScreenShotFadeOut()
+	{
+	}
 
-		private void TutorialBaseLock()
-		{
-		}
+	private void AfterQuestEnterCloud()
+	{
+	}
 
-		private void Tutorial_ReleaseTruthDragonBattle()
-		{
-		}
+	public void SetAllButtonsEnabled(bool enable)
+	{
+	}
 
-		private IEnumerator Tutorial_ReleaseTruthDragonBattle_Coroutine()
-		{
-			return null;
-		}
+	private void OnSupportPageActive()
+	{
+	}
 
-		private void Tutorial_ReleaseAgito()
-		{
-		}
+	private void OnSupportPageStartAnimation(bool isFromQuestPrepare)
+	{
+	}
 
-		private IEnumerator Tutorial_ReleaseAgito_Coroutine()
-		{
-			return null;
-		}
+	private void OnSupportPageExitAnimation()
+	{
+	}
 
-		private void Tutorial_ReleaseInstructor()
-		{
-		}
+	private void OnPageEnterAnimationEnded()
+	{
+	}
 
-		private IEnumerator Tutorial_ReleaseInstructor_Coroutine()
-		{
-			return null;
-		}
+	public void OnSupportPageBackButtonPressed()
+	{
+	}
 
-		private IEnumerator Tutorial_ReleaseInstructor_CoroutineGuide()
-		{
-			return null;
-		}
+	private void Update()
+	{
+	}
 
-		public void Tutorial_7_1()
-		{
-		}
+	public IEnumerator CaptureMapImage()
+	{
+		return null;
+	}
 
-		private IEnumerator Tutorial_7_1_Coroutine()
-		{
-			return null;
-		}
+	public void BackToMyPage()
+	{
+	}
 
-		private IEnumerator Tutorial_7_1_ShowDualWindow_Coroutine()
-		{
-			return null;
-		}
+	public void SetGuardCanvasForScreenSpaceCamera(bool value, bool isOverHeader = false, float canvasAlpha = 1f)
+	{
+	}
 
-		private void Tutorial_9_1()
-		{
-		}
+	private void SetupTutorialState()
+	{
+	}
 
-		private IEnumerator Tutorial_9_1_Coroutine()
-		{
-			return null;
-		}
+	public string GetCaptionText()
+	{
+		return null;
+	}
 
-		private IEnumerator Tutorial_9_1_ShowDualWindow_Coroutine()
-		{
-			return null;
-		}
+	public CaptionCanvas.IconType GetCaptionIconType()
+	{
+		return default(CaptionCanvas.IconType);
+	}
 
-		public void TutorialAstralRaid()
-		{
-		}
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		private IEnumerator TutorialAstralRaidCoroutine()
-		{
-			return null;
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private void Tutorial_10_1()
-		{
-		}
+	public void StartTutorial()
+	{
+	}
 
-		private IEnumerator Tutorial_10_1_Coroutine()
-		{
-			return null;
-		}
+	private void Tutorial_1_1()
+	{
+	}
 
-		private IEnumerator PlayGuideWindowTutorialCoroutine(int tutorialStep, TutorialFlagData flagNumber, float delay = 1f, [Optional] UnityAction successCallback)
-		{
-			return null;
-		}
+	private void TutorialBaseLock()
+	{
+	}
 
-		private void TutorialReleaseDiabolos()
-		{
-		}
+	private void Tutorial_ReleaseTruthDragonBattle()
+	{
+	}
 
-		private IEnumerator TutorialReleaseDiabolosCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator Tutorial_ReleaseTruthDragonBattle_Coroutine()
+	{
+		return null;
+	}
 
-		private void TutorialReleaseSaga()
-		{
-		}
+	private void Tutorial_ReleaseAgito()
+	{
+	}
 
-		private IEnumerator TutorialReleaseSagaCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator Tutorial_ReleaseAgito_Coroutine()
+	{
+		return null;
+	}
 
-		public void SetQuestSelectUiData(QuestSelectSceneType type, [Optional] UnityAction backButtonAction)
-		{
-		}
+	private void Tutorial_ReleaseInstructor()
+	{
+	}
 
-		public void StartUiExitAnimation()
-		{
-		}
+	private IEnumerator Tutorial_ReleaseInstructor_Coroutine()
+	{
+		return null;
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	private IEnumerator Tutorial_ReleaseInstructor_CoroutineGuide()
+	{
+		return null;
+	}
 
-		public override void ChangePage(SceneNameDefine.PageName pageName, Transform parentTransform, AnimationUICanvas.AnimationPattern exitPattern = AnimationUICanvas.AnimationPattern.Pattern_1, AnimationUICanvas.AnimationPattern enterPattern = AnimationUICanvas.AnimationPattern.Pattern_1, [Optional] Action<PageBase> onLoaded, [Optional] object data, bool allowSamePageReload = true, bool delayEnterAnimation = true, bool deactivateLastPage = true)
-		{
-		}
+	public void Tutorial_7_1()
+	{
+	}
 
-		public TouchGuardObject QuestSelectCreateTouchGuard(TouchGuardType type)
-		{
-			return null;
-		}
+	private IEnumerator Tutorial_7_1_Coroutine()
+	{
+		return null;
+	}
 
-		public void QuestSelectRemoveTouchGuard(TouchGuardType type)
-		{
-		}
+	private IEnumerator Tutorial_7_1_ShowDualWindow_Coroutine()
+	{
+		return null;
+	}
 
-		private void SetScrollPosition(QuestSelectInstance.QuestEventData targetEvent)
-		{
-		}
+	private void Tutorial_9_1()
+	{
+	}
 
-		private void QuestListReload()
-		{
-		}
+	private IEnumerator Tutorial_9_1_Coroutine()
+	{
+		return null;
+	}
+
+	private IEnumerator Tutorial_9_1_ShowDualWindow_Coroutine()
+	{
+		return null;
+	}
+
+	public void TutorialAstralRaid()
+	{
+	}
+
+	private IEnumerator TutorialAstralRaidCoroutine()
+	{
+		return null;
+	}
+
+	private void Tutorial_10_1()
+	{
+	}
+
+	private IEnumerator Tutorial_10_1_Coroutine()
+	{
+		return null;
+	}
+
+	private IEnumerator PlayGuideWindowTutorialCoroutine(int tutorialStep, TutorialFlagData flagNumber, float delay = 1f, [Optional] UnityAction successCallback)
+	{
+		return null;
+	}
+
+	private void TutorialReleaseDiabolos()
+	{
+	}
+
+	private IEnumerator TutorialReleaseDiabolosCoroutine()
+	{
+		return null;
+	}
+
+	private void TutorialReleaseSaga()
+	{
+	}
+
+	private IEnumerator TutorialReleaseSagaCoroutine()
+	{
+		return null;
+	}
+
+	public void SetQuestSelectUiData(QuestSelectSceneType type, [Optional] UnityAction backButtonAction)
+	{
+	}
+
+	public void StartUiExitAnimation()
+	{
+	}
+
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
+
+	public override void ChangePage(SceneNameDefine.PageName pageName, Transform parentTransform, AnimationUICanvas.AnimationPattern exitPattern = AnimationUICanvas.AnimationPattern.Pattern_1, AnimationUICanvas.AnimationPattern enterPattern = AnimationUICanvas.AnimationPattern.Pattern_1, [Optional] Action<PageBase> onLoaded, [Optional] object data, bool allowSamePageReload = true, bool delayEnterAnimation = true, bool deactivateLastPage = true)
+	{
+	}
+
+	public TouchGuardObject QuestSelectCreateTouchGuard(TouchGuardType type)
+	{
+		return null;
+	}
+
+	public void QuestSelectRemoveTouchGuard(TouchGuardType type)
+	{
+	}
+
+	private void SetScrollPosition(QuestSelectInstance.QuestEventData targetEvent)
+	{
+	}
+
+	private void QuestListReload()
+	{
 	}
 }

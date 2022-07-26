@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class EnemyStateDamaged : CharacterStateDamaged
 {
-	public class EnemyStateDamaged : CharacterStateDamaged
+	private ActionDelay actionDelay;
+
+	protected override void OnStateEnter_Internal()
 	{
-		private ActionDelay actionDelay;
+	}
 
-		protected override void OnStateEnter_Internal()
-		{
-		}
-
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateExit()
+	{
 	}
 }

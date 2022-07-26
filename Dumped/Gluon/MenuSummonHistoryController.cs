@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class MenuSummonHistoryController : TableViewController<MenuSummonHistoryCellData>
 {
-	public class MenuSummonHistoryController : TableViewController<MenuSummonHistoryCellData>
+	public void LoadData()
 	{
-		public void LoadData()
-		{
-		}
 	}
 }

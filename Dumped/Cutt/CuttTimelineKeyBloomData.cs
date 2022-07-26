@@ -1,18 +1,17 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyBloomData : CuttTimelineKeyWithInterpolate
 {
-	[Serializable]
-	public class CuttTimelineKeyBloomData : CuttTimelineKeyWithInterpolate
-	{
-		public bool isEnableBloom;
+	public bool isEnableBloom;
 
-		public float bloomWeight;
+	public float bloomWeight;
 
-		public float bloomThreshold;
+	public float bloomThreshold;
 
-		public float bloomIntensity;
+	public float bloomIntensity;
 
-		public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
-	}
+	public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
 }

@@ -1,31 +1,29 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumPictureBookBonusController : TabContentBase
 {
-	public class AlbumPictureBookBonusController : TabContentBase
+	[SerializeField]
+	public FortMenuGroupType facilityGroup;
+
+	[SerializeField]
+	protected RectTransform prefab;
+
+	[SerializeField]
+	protected Transform contentParent;
+
+	private void Start()
 	{
-		[SerializeField]
-		[Header("Group")]
-		public FortMenuGroupType facilityGroup;
+	}
 
-		[SerializeField]
-		protected RectTransform prefab;
+	private bool IsFortPlantTypeExist(FortPlantType type)
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		protected Transform contentParent;
-
-		private void Start()
-		{
-		}
-
-		private bool IsFortPlantTypeExist(FortPlantType type)
-		{
-			return default(bool);
-		}
-
-		private AlbumPictureBookBonusCell CreateFortDetailCell()
-		{
-			return null;
-		}
+	private AlbumPictureBookBonusCell CreateFortDetailCell()
+	{
+		return null;
 	}
 }

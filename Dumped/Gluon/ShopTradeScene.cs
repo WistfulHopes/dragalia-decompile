@@ -4,147 +4,148 @@ using System.Runtime.InteropServices;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeScene : SceneBase
 {
-	public class ShopTradeScene : SceneBase
+	[SerializeField]
+	private Transform currentPanelNode;
+
+	[SerializeField]
+	private Transform nextPanelNode;
+
+	[SerializeField]
+	private Transform commonPanelNode;
+
+	[SerializeField]
+	private Transform tempPanelNode;
+
+	[SerializeField]
+	private GameObject httpGreenLight;
+
+	public Camera mainUICamera;
+
+	public Camera flashCamera;
+
+	[HideInInspector]
+	public Canvas canvas;
+
+	private bool bPrevPanelExitDone;
+
+	private bool bNextHttpReady;
+
+	private ShopTradePanelBase activePanel;
+
+	private Coroutine waitReadyStateCoroutine;
+
+	private ShopCommonPage commonPage;
+
+	public bool isTutorialRequired;
+
+	private bool stopNextTopHttpRequestForInit;
+
+	public ShopTradePanelBase GetActivePanel()
 	{
-		[SerializeField]
-		[Header("SwitchablePanels")]
-		private Transform currentPanelNode;
+		return null;
+	}
 
-		[SerializeField]
-		private Transform nextPanelNode;
+	public ShopCommonPage GetCommonPage()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Transform commonPanelNode;
+	private void Awake()
+	{
+	}
 
-		[SerializeField]
-		private Transform tempPanelNode;
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		[Header("HttpGreenLight")]
-		private GameObject httpGreenLight;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		public Camera mainUICamera;
+	private void OnInitReady()
+	{
+	}
 
-		public Camera flashCamera;
+	private void LoadBG()
+	{
+	}
 
-		[HideInInspector]
-		public Canvas canvas;
+	private void LoadCommonPage()
+	{
+	}
 
-		private bool bPrevPanelExitDone;
+	private void OnEnterScene()
+	{
+	}
 
-		private bool bNextHttpReady;
+	public override void StartExitAnimation()
+	{
+	}
 
-		private ShopTradePanelBase activePanel;
+	public void SwitchToPanel(ShopTradeModel.PanelType type, int scrollToItem = 0, [Optional] Action<ShopTradePanelBase> onNewPanelLoaded)
+	{
+	}
 
-		private Coroutine waitReadyStateCoroutine;
+	private IEnumerator WaitForReadyState(ShopTradeModel.PanelType type, int scrollToItem = 0, [Optional] Action<ShopTradePanelBase> onNewPanelLoaded)
+	{
+		return null;
+	}
 
-		private ShopCommonPage commonPage;
+	private void ReleasePanel(ShopTradeModel.PanelType type)
+	{
+	}
 
-		public bool isTutorialRequired;
+	private void RequestHttpForPanel(ShopTradeModel.PanelType type)
+	{
+	}
 
-		private bool stopNextTopHttpRequestForInit;
+	private void OnDmodeGetDataSuccess(DmodeGetDataResponse res)
+	{
+	}
 
-		public ShopTradePanelBase GetActivePanel()
-		{
-			return null;
-		}
+	public void LoadPanel(ShopTradeModel.PanelType type)
+	{
+	}
 
-		public ShopCommonPage GetCommonPage()
-		{
-			return null;
-		}
+	public void SetNextHttpReady()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	public override void OnItemUsed()
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void ShopTutorial()
+	{
+	}
 
-		private void LoadBG()
-		{
-		}
+	private IEnumerator ShopTutorialCoroutine()
+	{
+		return null;
+	}
 
-		private void LoadCommonPage()
-		{
-		}
+	public void RefreshCommonPage()
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	public static void GoToShopScene(ShopTradeModel.PanelType panel, ShopTradeProductData.CommonShopItemData.PackContentType scrollToItemType = ShopTradeProductData.CommonShopItemData.PackContentType.None, int scrollToItem = 0, ShopTradeProductData.CommonShopItemData.SpecialShopCategory specialShopCategory = ShopTradeProductData.CommonShopItemData.SpecialShopCategory.None)
+	{
+	}
 
-		public override void StartExitAnimation()
-		{
-		}
-
-		public void SwitchToPanel(ShopTradeModel.PanelType type, int scrollToItem = 0, [Optional] Action<ShopTradePanelBase> onNewPanelLoaded)
-		{
-		}
-
-		private IEnumerator WaitForReadyState(ShopTradeModel.PanelType type, int scrollToItem = 0, [Optional] Action<ShopTradePanelBase> onNewPanelLoaded)
-		{
-			return null;
-		}
-
-		private void ReleasePanel(ShopTradeModel.PanelType type)
-		{
-		}
-
-		private void RequestHttpForPanel(ShopTradeModel.PanelType type)
-		{
-		}
-
-		private void OnDmodeGetDataSuccess(DmodeGetDataResponse res)
-		{
-		}
-
-		public void LoadPanel(ShopTradeModel.PanelType type)
-		{
-		}
-
-		public void SetNextHttpReady()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public override void OnPresentReceived()
-		{
-		}
-
-		public override void OnItemUsed()
-		{
-		}
-
-		private void ShopTutorial()
-		{
-		}
-
-		private IEnumerator ShopTutorialCoroutine()
-		{
-			return null;
-		}
-
-		public void RefreshCommonPage()
-		{
-		}
-
-		public static void GoToShopScene(ShopTradeModel.PanelType panel, ShopTradeProductData.CommonShopItemData.PackContentType scrollToItemType = ShopTradeProductData.CommonShopItemData.PackContentType.None, int scrollToItem = 0, ShopTradeProductData.CommonShopItemData.SpecialShopCategory specialShopCategory = ShopTradeProductData.CommonShopItemData.SpecialShopCategory.None)
-		{
-		}
+	public void OnGetDailyCrystal()
+	{
 	}
 }

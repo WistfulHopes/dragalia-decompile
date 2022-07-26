@@ -1,26 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonBannerPage : MonoBehaviour
 {
-	public class SummonBannerPage : MonoBehaviour
+	[SerializeField]
+	private Image banner;
+
+	[SerializeField]
+	private Image badge;
+
+	public void SetBannerImage(Material mat)
 	{
-		[SerializeField]
-		private Image banner;
+	}
 
-		[SerializeField]
-		private Image badge;
+	public void SetBadgeImage(int summonId)
+	{
+	}
 
-		public void SetBannerImage(Material mat)
-		{
-		}
-
-		public void SetBadgeImage(int summonId)
-		{
-		}
-
-		public void SetGrayOut(bool isGray)
-		{
-		}
+	public void SetGrayOut(bool isGray)
+	{
 	}
 }

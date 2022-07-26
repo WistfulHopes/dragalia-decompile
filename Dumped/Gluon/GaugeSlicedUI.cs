@@ -1,51 +1,50 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GaugeSlicedUI : MonoBehaviour
 {
-	public class GaugeSlicedUI : MonoBehaviour
+	private float widthPixel;
+
+	public float initWidthPixel;
+
+	public float initWidth;
+
+	public float ofsx;
+
+	[SerializeField]
+	private Transform trLeft;
+
+	[SerializeField]
+	private Transform trMid;
+
+	[SerializeField]
+	private Transform trRight;
+
+	private float wLeft;
+
+	private float wMid;
+
+	private float wRight;
+
+	private float ppu;
+
+	public float Width
 	{
-		private float widthPixel;
-
-		public float initWidthPixel;
-
-		public float initWidth;
-
-		public float ofsx;
-
-		[SerializeField]
-		private Transform trLeft;
-
-		[SerializeField]
-		private Transform trMid;
-
-		[SerializeField]
-		private Transform trRight;
-
-		private float wLeft;
-
-		private float wMid;
-
-		private float wRight;
-
-		private float ppu;
-
-		public float Width
+		get
 		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
+			return default(float);
 		}
-
-		public void Initialize()
+		set
 		{
 		}
+	}
 
-		private void SetWidth(float value)
-		{
-		}
+	public void Initialize()
+	{
+	}
+
+	private void SetWidth(float value)
+	{
 	}
 }

@@ -1,50 +1,47 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[DisallowMultipleComponent]
+public class ThemePanelColorSwitcher : MonoBehaviour
 {
-	[DisallowMultipleComponent]
-	public class ThemePanelColorSwitcher : MonoBehaviour
+	public enum ColorSetType
 	{
-		public enum ColorSetType
-		{
-			None,
-			MainPanel,
-			White,
-			Black,
-			Base,
-			Custom
-		}
+		None,
+		MainPanel,
+		White,
+		Black,
+		Base,
+		Custom
+	}
 
-		[Serializable]
-		public class CustomColor
-		{
-			public Footer.MenuTab menuTab;
+	[Serializable]
+	public class CustomColor
+	{
+		public Footer.MenuTab menuTab;
 
-			public Color color;
-		}
+		public Color color;
+	}
 
-		[SerializeField]
-		[Header("Settings")]
-		public ColorSetType colorSet;
+	[SerializeField]
+	public ColorSetType colorSet;
 
-		public float alpha;
+	public float alpha;
 
-		[SerializeField]
-		[Header("CustomColors")]
-		public CustomColor[] customColors;
+	[SerializeField]
+	public CustomColor[] customColors;
 
-		private void Reset()
-		{
-		}
+	private void Reset()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private Color SetColorByTheme(Footer.MenuTab menuTab, ColorSetType type, Color defaultColor)
-		{
-			return default(Color);
-		}
+	private Color SetColorByTheme(Footer.MenuTab menuTab, ColorSetType type, Color defaultColor)
+	{
+		return default(Color);
 	}
 }

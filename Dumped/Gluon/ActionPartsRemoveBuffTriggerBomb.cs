@@ -1,28 +1,27 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsRemoveBuffTriggerBomb : ActionParts
 {
-	public class ActionPartsRemoveBuffTriggerBomb : ActionParts
+	private readonly RemoveBuffTriggerBombData _partsData;
+
+	private CharacterBuffTriggerReactionBomb _reaction;
+
+	public ActionPartsRemoveBuffTriggerBomb(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly RemoveBuffTriggerBombData _partsData;
+	}
 
-		private CharacterBuffTriggerReactionBomb _reaction;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public ActionPartsRemoveBuffTriggerBomb(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		private string ConvertHitAttributeForPlayer(string label)
-		{
-			return null;
-		}
+	private string ConvertHitAttributeForPlayer(string label)
+	{
+		return null;
 	}
 }

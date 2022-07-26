@@ -1,13 +1,12 @@
 using UnityEngine;
 
-namespace SPFX
-{
-	public class SPFXCameraPost : MonoBehaviour
-	{
-		public RenderTexture MainRenderTexture;
+namespace SPFX;
 
-		private void OnRenderImage(RenderTexture source, RenderTexture destination)
-		{
-		}
+public class SPFXCameraPost : MonoBehaviour
+{
+	public RenderTexture MainRenderTexture;
+
+	private void OnRenderImage(RenderTexture source, RenderTexture destination)
+	{
 	}
 }

@@ -2,32 +2,31 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class StoryFunction
 {
-	[Serializable]
-	public class StoryFunction
+	public string name;
+
+	public string[] args;
+
+	public string[] defaultValues;
+
+	public List<StoryCommand> commandList;
+
+	public StoryVariables variables;
+
+	public string filename
 	{
-		public string name;
-
-		public string[] args;
-
-		public string[] defaultValues;
-
-		public List<StoryCommand> commandList;
-
-		public StoryVariables variables;
-
-		public string filename
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
 		}
 	}
 }

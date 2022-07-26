@@ -1,37 +1,36 @@
 using System.Collections.Generic;
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsD00562 : ActionParts
 {
-	public class ActionPartsD00562 : ActionParts
+	private readonly D00562Data _partsData;
+
+	private List<int> _taskIds;
+
+	private int _actionId;
+
+	private int _actionPartsIndex;
+
+	public ActionPartsD00562(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly D00562Data _partsData;
+	}
 
-		private List<int> _taskIds;
+	public void SetActionPartsAddress(int actionId, int index)
+	{
+	}
 
-		private int _actionId;
+	protected override void OnStart()
+	{
+	}
 
-		private int _actionPartsIndex;
+	protected override void OnFinish()
+	{
+	}
 
-		public ActionPartsD00562(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		public void SetActionPartsAddress(int actionId, int index)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		protected override void OnFinish()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

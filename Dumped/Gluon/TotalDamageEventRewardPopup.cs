@@ -2,42 +2,41 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TotalDamageEventRewardPopup : PopupBase
 {
-	public class TotalDamageEventRewardPopup : PopupBase
+	[SerializeField]
+	private Image logoImage;
+
+	[SerializeField]
+	private TotalDamageEventRewardInfoCtrl eventInfo;
+
+	[SerializeField]
+	private EventRewardCtrl rewardCtrl;
+
+	[SerializeField]
+	private Text sentPresentBoxText;
+
+	[SerializeField]
+	private GameObject eventEndDescription;
+
+	public static readonly TimeSpan receiveRewardTimeSpan;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		private Image logoImage;
+	}
 
-		[SerializeField]
-		private TotalDamageEventRewardInfoCtrl eventInfo;
+	private DateTime CalcReceiveRewardTime()
+	{
+		return default(DateTime);
+	}
 
-		[SerializeField]
-		private EventRewardCtrl rewardCtrl;
+	public void ShowTotalDamageHistoryPopup()
+	{
+	}
 
-		[SerializeField]
-		private Text sentPresentBoxText;
-
-		[SerializeField]
-		private GameObject eventEndDescription;
-
-		public static readonly TimeSpan receiveRewardTimeSpan;
-
-		protected override void Start()
-		{
-		}
-
-		private DateTime CalcReceiveRewardTime()
-		{
-			return default(DateTime);
-		}
-
-		public void ShowTotalDamageHistoryPopup()
-		{
-		}
-
-		public void SetContent()
-		{
-		}
+	public void SetContent()
+	{
 	}
 }

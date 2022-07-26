@@ -1,13 +1,12 @@
-namespace Gluon
-{
-	public class ContactChangeDragonListCell : CommonIconListCell
-	{
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
+namespace Gluon;
 
-		private void SetFavorIcon()
-		{
-		}
+public class ContactChangeDragonListCell : CommonIconListCell
+{
+	public override void UpdateContent(CommonIconListCellData data)
+	{
+	}
+
+	private void SetFavorIcon()
+	{
 	}
 }

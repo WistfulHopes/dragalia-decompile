@@ -1,11 +1,10 @@
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineCamPosLocator : MonoBehaviour
 {
-	public class CuttTimelineCamPosLocator : MonoBehaviour
+	private void Awake()
 	{
-		private void Awake()
-		{
-		}
 	}
 }

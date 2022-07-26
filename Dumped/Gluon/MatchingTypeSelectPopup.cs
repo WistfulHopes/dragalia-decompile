@@ -2,51 +2,49 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingTypeSelectPopup : PopupBase
 {
-	public class MatchingTypeSelectPopup : PopupBase
+	[SerializeField]
+	public UnityEvent publicButtonPressed;
+
+	[SerializeField]
+	public UnityEvent privateButtonPressed;
+
+	[SerializeField]
+	public UnityEvent bgButtonPressed;
+
+	[SerializeField]
+	private RectTransform rectTransTouchLayer;
+
+	public UnityEvent gpsSearchButtonPressed;
+
+	[SerializeField]
+	private GpsLocationUseAgreementToggle useLocationInfoAgreementToggle;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		[Header("Callbacks")]
-		public UnityEvent publicButtonPressed;
+	}
 
-		[SerializeField]
-		public UnityEvent privateButtonPressed;
+	private IEnumerator FitSize()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		public UnityEvent bgButtonPressed;
+	public void OnPublicButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private RectTransform rectTransTouchLayer;
+	public void OnPrivateButtonPressed()
+	{
+	}
 
-		public UnityEvent gpsSearchButtonPressed;
+	public void OnGpsMatchingButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private GpsLocationUseAgreementToggle useLocationInfoAgreementToggle;
-
-		protected override void Start()
-		{
-		}
-
-		private IEnumerator FitSize()
-		{
-			return null;
-		}
-
-		public void OnPublicButtonPressed()
-		{
-		}
-
-		public void OnPrivateButtonPressed()
-		{
-		}
-
-		public void OnGpsMatchingButtonPressed()
-		{
-		}
-
-		public void OnBgButtonPressed()
-		{
-		}
+	public void OnBgButtonPressed()
+	{
 	}
 }

@@ -1,27 +1,26 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateReserverIn : CharacterStateBase
 {
-	public class CharacterStateReserverIn : CharacterStateBase
+	private enum State
 	{
-		private enum State
-		{
-			Fall,
-			Landing
-		}
+		Fall,
+		Landing
+	}
 
-		private State state;
+	private State state;
 
-		private ActionMoveGravity fallAction;
+	private ActionMoveGravity fallAction;
 
-		protected override void OnStateEnter_Internal()
-		{
-		}
+	protected override void OnStateEnter_Internal()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateExit()
+	{
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateUpdate()
+	{
 	}
 }

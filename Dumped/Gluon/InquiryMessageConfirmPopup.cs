@@ -5,81 +5,79 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class InquiryMessageConfirmPopup : PopupBase
 {
-	public class InquiryMessageConfirmPopup : PopupBase
+	public enum MessageType
 	{
-		public enum MessageType
-		{
-			Create,
-			Response
-		}
+		Create,
+		Response
+	}
 
-		private const string prefabPath = "Prefabs/OutGame/Inquiry/InquiryMessageConfirmPopup";
+	private const string prefabPath = "Prefabs/OutGame/Inquiry/InquiryMessageConfirmPopup";
 
-		[SerializeField]
-		private GameObject createHead;
+	[SerializeField]
+	private GameObject createHead;
 
-		[SerializeField]
-		private Text inquiryTypeText;
+	[SerializeField]
+	private Text inquiryTypeText;
 
-		[SerializeField]
-		private Text occurDatetime;
+	[SerializeField]
+	private Text occurDatetime;
 
-		[SerializeField]
-		private Text detailTitle;
+	[SerializeField]
+	private Text detailTitle;
 
-		[SerializeField]
-		private Text sendText;
+	[SerializeField]
+	private Text sendText;
 
-		private int inquiryIndex;
+	private int inquiryIndex;
 
-		private DateTime occurTime;
+	private DateTime occurTime;
 
-		private string detailText;
+	private string detailText;
 
-		private InquiryDetailResponse inquiryDetail;
+	private InquiryDetailResponse inquiryDetail;
 
-		[SerializeField]
-		[Header("Callbacks")]
-		public UnityEvent okButtonPressed;
+	[SerializeField]
+	public UnityEvent okButtonPressed;
 
-		private MessageType messageType;
+	private MessageType messageType;
 
-		public string DetailText
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		public static InquiryMessageConfirmPopup Create()
+	public string DetailText
+	{
+		get
 		{
 			return null;
 		}
-
-		public void InitSetting(int InquiryIndex, DateTime occurTime, string detailText, MessageType messageType, [Optional] InquiryDetailResponse inquiryDetail)
+		set
 		{
 		}
+	}
 
-		public void OnOKButtonPressed()
-		{
-		}
+	public static InquiryMessageConfirmPopup Create()
+	{
+		return null;
+	}
 
-		private void SendInquiry()
-		{
-		}
+	public void InitSetting(int InquiryIndex, DateTime occurTime, string detailText, MessageType messageType, [Optional] InquiryDetailResponse inquiryDetail)
+	{
+	}
 
-		private void ReplyInquiry()
-		{
-		}
+	public void OnOKButtonPressed()
+	{
+	}
 
-		public void OnCloseButtonPressed()
-		{
-		}
+	private void SendInquiry()
+	{
+	}
+
+	private void ReplyInquiry()
+	{
+	}
+
+	public void OnCloseButtonPressed()
+	{
 	}
 }

@@ -2,60 +2,59 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ReleaseEquipSkillPopup : CommonPopup
 {
-	public class ReleaseEquipSkillPopup : CommonPopup
+	[SerializeField]
+	private Text charaLevelCountText;
+
+	[SerializeField]
+	private Text manaCircleCountText;
+
+	[SerializeField]
+	private GameObject materialBaseObject;
+
+	[SerializeField]
+	private Image materialIcon;
+
+	[SerializeField]
+	private Text materialNameText;
+
+	[SerializeField]
+	private Text materialCountText;
+
+	[SerializeField]
+	private GameObject errorTextObject;
+
+	private int targetCharaId;
+
+	public static ReleaseEquipSkillPopup Create()
 	{
-		[SerializeField]
-		private Text charaLevelCountText;
+		return null;
+	}
 
-		[SerializeField]
-		private Text manaCircleCountText;
+	public void SetupPopup(int targetCharaId)
+	{
+	}
 
-		[SerializeField]
-		private GameObject materialBaseObject;
+	public void OnCharaLevelPressed()
+	{
+	}
 
-		[SerializeField]
-		private Image materialIcon;
+	public void OnManaCirclePressed()
+	{
+	}
 
-		[SerializeField]
-		private Text materialNameText;
+	public void OnMaterialIconPressed()
+	{
+	}
 
-		[SerializeField]
-		private Text materialCountText;
+	public void OnMaterialIconLongPressed()
+	{
+	}
 
-		[SerializeField]
-		private GameObject errorTextObject;
-
-		private int targetCharaId;
-
-		public static ReleaseEquipSkillPopup Create()
-		{
-			return null;
-		}
-
-		public void SetupPopup(int targetCharaId)
-		{
-		}
-
-		public void OnCharaLevelPressed()
-		{
-		}
-
-		public void OnManaCirclePressed()
-		{
-		}
-
-		public void OnMaterialIconPressed()
-		{
-		}
-
-		public void OnMaterialIconLongPressed()
-		{
-		}
-
-		public void ShowGoOtherSceneComfirmPopup(string showTextStr, Action okCallBack)
-		{
-		}
+	public void ShowGoOtherSceneComfirmPopup(string showTextStr, Action okCallBack)
+	{
 	}
 }

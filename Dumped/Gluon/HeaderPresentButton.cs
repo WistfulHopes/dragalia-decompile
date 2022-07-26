@@ -1,11 +1,10 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class HeaderPresentButton : MonoBehaviour
 {
-	public class HeaderPresentButton : MonoBehaviour
+	public void OnButtonPressed()
 	{
-		public void OnButtonPressed()
-		{
-		}
 	}
 }

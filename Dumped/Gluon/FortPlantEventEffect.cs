@@ -1,8 +1,7 @@
-namespace Gluon
+namespace Gluon;
+
+public enum FortPlantEventEffect
 {
-	public enum FortPlantEventEffect
-	{
-		NULL,
-		BOOST_EVENT_DAMAGE
-	}
+	NULL,
+	BOOST_EVENT_DAMAGE
 }

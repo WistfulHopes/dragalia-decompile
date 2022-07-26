@@ -1,26 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumCommonUnitIcon : CommonUnitIcon
 {
-	public class AlbumCommonUnitIcon : CommonUnitIcon
+	public enum IconStatus
 	{
-		public enum IconStatus
-		{
-			None,
-			Possession,
-			bonusClear,
-			bonusComplete
-		}
+		None,
+		Possession,
+		bonusClear,
+		bonusComplete
+	}
 
-		[SerializeField]
-		private Image bonusClearIcon;
+	[SerializeField]
+	private Image bonusClearIcon;
 
-		[SerializeField]
-		private Image bonusCompleteIcon;
+	[SerializeField]
+	private Image bonusCompleteIcon;
 
-		public void SetIconStatus(IconStatus status)
-		{
-		}
+	public void SetIconStatus(IconStatus status)
+	{
 	}
 }

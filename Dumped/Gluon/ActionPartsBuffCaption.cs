@@ -1,21 +1,20 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsBuffCaption : ActionParts
 {
-	public class ActionPartsBuffCaption : ActionParts
+	private readonly BuffCaptionData _partsData;
+
+	public ActionPartsBuffCaption(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly BuffCaptionData _partsData;
+	}
 
-		public ActionPartsBuffCaption(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		private void ProcCommand()
-		{
-		}
+	private void ProcCommand()
+	{
 	}
 }

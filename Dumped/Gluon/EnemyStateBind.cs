@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class EnemyStateBind : IState<EnemyCtrl>
 {
-	public class EnemyStateBind : IState<EnemyCtrl>
+	public override void OnStateEnter()
 	{
-		public override void OnStateEnter()
-		{
-		}
 	}
 }

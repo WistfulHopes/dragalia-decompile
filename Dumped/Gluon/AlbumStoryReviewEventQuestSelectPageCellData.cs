@@ -1,12 +1,11 @@
 using Gluon.Master;
 using UnityEngine.Events;
 
-namespace Gluon
-{
-	public class AlbumStoryReviewEventQuestSelectPageCellData
-	{
-		public AlbumStoryGroupElement albumStoryGroup;
+namespace Gluon;
 
-		public UnityAction<int> onCellPressed;
-	}
+public class AlbumStoryReviewEventQuestSelectPageCellData
+{
+	public AlbumStoryGroupElement albumStoryGroup;
+
+	public UnityAction<int> onCellPressed;
 }

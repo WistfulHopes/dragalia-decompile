@@ -1,24 +1,23 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class EmptyLoginBonusScene : SceneBase
 {
-	public class EmptyLoginBonusScene : SceneBase
+	private IEnumerator Start()
 	{
-		private IEnumerator Start()
-		{
-			return null;
-		}
+		return null;
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void OnEnterScene()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void OnInitReady()
+	{
 	}
 }

@@ -1,11 +1,10 @@
-namespace Gluon
-{
-	public class PushNoticeData : MessageDataBase
-	{
-		public int id;
+namespace Gluon;
 
-		public override void ReloadText()
-		{
-		}
+public class PushNoticeData : MessageDataBase
+{
+	public int id;
+
+	public override void ReloadText()
+	{
 	}
 }

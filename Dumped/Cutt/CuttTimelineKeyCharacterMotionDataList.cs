@@ -1,9 +1,8 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyCharacterMotionDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyCharacterMotionData>
 {
-	[Serializable]
-	public class CuttTimelineKeyCharacterMotionDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyCharacterMotionData>
-	{
-	}
 }

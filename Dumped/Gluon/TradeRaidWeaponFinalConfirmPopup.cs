@@ -1,29 +1,27 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class TradeRaidWeaponFinalConfirmPopup : PopupBase
 {
-	public class TradeRaidWeaponFinalConfirmPopup : PopupBase
+	[SerializeField]
+	public CommonIcon icon;
+
+	private ShopTradeProductData.TradeShopItemData data;
+
+	private Action onTrade;
+
+	public static TradeRaidWeaponFinalConfirmPopup Create(ShopTradeProductData.TradeShopItemData data, Action onTrade)
 	{
-		[SerializeField]
-		[Header("Contents")]
-		public CommonIcon icon;
+		return null;
+	}
 
-		private ShopTradeProductData.TradeShopItemData data;
+	protected override void Start()
+	{
+	}
 
-		private Action onTrade;
-
-		public static TradeRaidWeaponFinalConfirmPopup Create(ShopTradeProductData.TradeShopItemData data, Action onTrade)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnTradeButtonPressed()
-		{
-		}
+	public void OnTradeButtonPressed()
+	{
 	}
 }

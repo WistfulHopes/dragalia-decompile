@@ -1,9 +1,8 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactOwnedGiftPage : MonoBehaviour
 {
-	public class ContactOwnedGiftPage : MonoBehaviour
-	{
-		public Transform[] iconParents;
-	}
+	public Transform[] iconParents;
 }

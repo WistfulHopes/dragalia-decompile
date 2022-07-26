@@ -5,52 +5,51 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BackButton : Button
 {
-	public class BackButton : Button
+	private static readonly Vector3 initPosition;
+
+	private static readonly Vector3 initPositionWithoutFooter;
+
+	private const int imageGraphicGroupIndex = 0;
+
+	private const int textGraphicGroupIndex = 1;
+
+	private SimpleAnimationButton simpleAnimationButton;
+
+	public static BackButton Create(Canvas canvas, UnityAction prevAction, SceneBase scene, bool isFromEventPage = false)
 	{
-		private static readonly Vector3 initPosition;
+		return null;
+	}
 
-		private static readonly Vector3 initPositionWithoutFooter;
+	protected override void Awake()
+	{
+	}
 
-		private const int imageGraphicGroupIndex = 0;
+	public void SetAutoExitAnimationEnabled(bool enable)
+	{
+	}
 
-		private const int textGraphicGroupIndex = 1;
+	public void ForceStartEnterAnimation([Optional] Action onAnimationDone)
+	{
+	}
 
-		private SimpleAnimationButton simpleAnimationButton;
+	public void ForceStartExitAnimation([Optional] Action onAnimationDone)
+	{
+	}
 
-		public static BackButton Create(Canvas canvas, UnityAction prevAction, SceneBase scene, bool isFromEventPage = false)
-		{
-			return null;
-		}
+	public void ExchangeBackButtonImageToText(string text, bool isCrossfading)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	private IEnumerator DelayExchangeBackButtonImageToText(string text, bool isCrossfading)
+	{
+		return null;
+	}
 
-		public void SetAutoExitAnimationEnabled(bool enable)
-		{
-		}
-
-		public void ForceStartEnterAnimation([Optional] Action onAnimationDone)
-		{
-		}
-
-		public void ForceStartExitAnimation([Optional] Action onAnimationDone)
-		{
-		}
-
-		public void ExchangeBackButtonImageToText(string text, bool isCrossfading)
-		{
-		}
-
-		private IEnumerator DelayExchangeBackButtonImageToText(string text, bool isCrossfading)
-		{
-			return null;
-		}
-
-		public void ExchangeBackButtonTextToImage(bool isCrossfading)
-		{
-		}
+	public void ExchangeBackButtonTextToImage(bool isCrossfading)
+	{
 	}
 }

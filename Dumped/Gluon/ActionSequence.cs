@@ -1,28 +1,27 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionSequence : ActionBase
 {
-	public class ActionSequence : ActionBase
+	protected List<ActionBase> _actions;
+
+	private int _index;
+
+	public ActionSequence(ActionBase[] actions)
 	{
-		protected List<ActionBase> _actions;
+	}
 
-		private int _index;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public ActionSequence(ActionBase[] actions)
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		public override void RemoveSelf()
-		{
-		}
+	public override void RemoveSelf()
+	{
 	}
 }

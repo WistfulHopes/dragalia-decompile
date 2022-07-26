@@ -5,157 +5,156 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SelectIconListController : SelectIconListControllerBase
 {
-	public class SelectIconListController : SelectIconListControllerBase
+	public class SelectedItemData
 	{
-		public class SelectedItemData
-		{
-			public List<int> candidateIdList;
+		public List<int> candidateIdList;
 
-			public int selectedId;
+		public int selectedId;
 
-			public int limitBreakCount;
+		public int limitBreakCount;
 
-			public int maxCount;
+		public int maxCount;
 
-			public List<ulong> tempKeyIds;
+		public List<ulong> tempKeyIds;
 
-			private ulong keyId;
+		private ulong keyId;
 
-			public void Clear()
-			{
-			}
-
-			public void AddCandidateId(int id)
-			{
-			}
-
-			public bool IsEnable(int id)
-			{
-				return default(bool);
-			}
-
-			public bool IsValid(ShopTradeProductData.TradeShopItemData.NeedMaterialInfo info)
-			{
-				return default(bool);
-			}
-		}
-
-		public static SelectListType listType;
-
-		public static SelectedItemData selectedItem;
-
-		public Action<List<ulong>> onSelectionChanged;
-
-		public SelectListCanvas mainCanvas;
-
-		[SerializeField]
-		private SelectIconListBase selectIconListBase;
-
-		[SerializeField]
-		private Button decideButton;
-
-		private SelectIconListController listController;
-
-		public const string prefabDir = "Prefabs/OutGame/SelectList/";
-
-		private IEnumerator loadUnitDetailCoroutine;
-
-		public int dataListCount
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		protected override void Start()
+		public void Clear()
 		{
 		}
 
-		private int SelectTargetListSort(ConfigDialogSortData currCell, ConfigDialogSortData nextCell)
+		public void AddCandidateId(int id)
+		{
+		}
+
+		public bool IsEnable(int id)
+		{
+			return default(bool);
+		}
+
+		public bool IsValid(ShopTradeProductData.TradeShopItemData.NeedMaterialInfo info)
+		{
+			return default(bool);
+		}
+	}
+
+	public static SelectListType listType;
+
+	public static SelectedItemData selectedItem;
+
+	public Action<List<ulong>> onSelectionChanged;
+
+	public SelectListCanvas mainCanvas;
+
+	[SerializeField]
+	private SelectIconListBase selectIconListBase;
+
+	[SerializeField]
+	private Button decideButton;
+
+	private SelectIconListController listController;
+
+	public const string prefabDir = "Prefabs/OutGame/SelectList/";
+
+	private IEnumerator loadUnitDetailCoroutine;
+
+	public int dataListCount
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(int);
 		}
-
-		protected override void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void UpdateSelectFrameInfo()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private void SelectFrameResetPresed()
-		{
-		}
+	private int SelectTargetListSort(ConfigDialogSortData currCell, ConfigDialogSortData nextCell)
+	{
+		return default(int);
+	}
 
-		private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	protected override void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private IEnumerator UnloadScene()
-		{
-			return null;
-		}
+	private void UpdateSelectFrameInfo()
+	{
+	}
 
-		private void ListTabButtonPressed()
-		{
-		}
+	private void SelectFrameResetPresed()
+	{
+	}
 
-		private void LoadListData()
-		{
-		}
+	private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private ulong[] CreateDataIdList(out GiftType giftType, int id, int limitBreakCount)
-		{
-			return null;
-		}
+	private IEnumerator UnloadScene()
+	{
+		return null;
+	}
 
-		protected override CommonIconListCellData CreateDragonCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	private void ListTabButtonPressed()
+	{
+	}
 
-		protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	private void LoadListData()
+	{
+	}
 
-		protected override CommonIconListCellData CreateAmuletCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	private ulong[] CreateDataIdList(out GiftType giftType, int id, int limitBreakCount)
+	{
+		return null;
+	}
 
-		protected override void UpdateContents()
-		{
-		}
+	protected override CommonIconListCellData CreateDragonCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		public ulong[] GetAutoSelectKeys(int maxSelect)
-		{
-			return null;
-		}
+	protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		private void ResetSelectInfo()
-		{
-		}
+	protected override CommonIconListCellData CreateAmuletCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		protected override void UnSelectIcon(ulong targetKey)
-		{
-		}
+	protected override void UpdateContents()
+	{
+	}
 
-		public void OnSortApplied()
-		{
-		}
+	public ulong[] GetAutoSelectKeys(int maxSelect)
+	{
+		return null;
+	}
 
-		public void OnSortButtonClicked()
-		{
-		}
+	private void ResetSelectInfo()
+	{
+	}
+
+	protected override void UnSelectIcon(ulong targetKey)
+	{
+	}
+
+	public void OnSortApplied()
+	{
+	}
+
+	public void OnSortButtonClicked()
+	{
 	}
 }

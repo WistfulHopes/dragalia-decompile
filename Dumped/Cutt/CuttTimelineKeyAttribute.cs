@@ -1,13 +1,12 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Flags]
+public enum CuttTimelineKeyAttribute
 {
-	[Flags]
-	public enum CuttTimelineKeyAttribute
-	{
-		Disable = 0x1,
-		CameraDelayEnable = 0x2,
-		CameraDelayInherit = 0x4,
-		KeyCommonBitMask = 0xFFFF
-	}
+	Disable = 1,
+	CameraDelayEnable = 2,
+	CameraDelayInherit = 4,
+	KeyCommonBitMask = 0xFFFF
 }

@@ -1,23 +1,22 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class StoryBgToCharaColorTableElement
 {
-	[Serializable]
-	public class StoryBgToCharaColorTableElement
+	[SerializeField]
+	private string fileName;
+
+	[SerializeField]
+	private DifferenceImageController.MaterialParameter materialParameter;
+
+	public string FileName => null;
+
+	public DifferenceImageController.MaterialParameter MaterialParameter => null;
+
+	public StoryBgToCharaColorTableElement(string fileName, DifferenceImageController.MaterialParameter materialParameter)
 	{
-		[SerializeField]
-		private string fileName;
-
-		[SerializeField]
-		private DifferenceImageController.MaterialParameter materialParameter;
-
-		public string FileName => null;
-
-		public DifferenceImageController.MaterialParameter MaterialParameter => null;
-
-		public StoryBgToCharaColorTableElement(string fileName, DifferenceImageController.MaterialParameter materialParameter)
-		{
-		}
 	}
 }

@@ -1,291 +1,289 @@
-using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCharacter
 {
-	public class StoryCharacter
+	public enum PartsIdCategory
 	{
-		public enum PartsIdCategory
-		{
-			EyeBlink,
-			LipSynch
-		}
+		EyeBlink,
+		LipSynch
+	}
 
-		public enum PartsFrameCategory
-		{
-			Standard,
-			Changed,
-			DefaultMax
-		}
+	public enum PartsFrameCategory
+	{
+		Standard,
+		Changed,
+		DefaultMax
+	}
 
-		public enum ColorType
-		{
-			Color,
-			ScreenTopColor,
-			ScreenBottomColor,
-			LastMulColor,
-			Max
-		}
+	public enum ColorType
+	{
+		Color,
+		ScreenTopColor,
+		ScreenBottomColor,
+		LastMulColor,
+		Max
+	}
 
-		public struct CompleteData
-		{
-			public Vector2 position;
+	public struct CompleteData
+	{
+		public Vector2 position;
 
-			public Vector3 scale;
+		public Vector3 scale;
 
-			public float alpha;
+		public float alpha;
 
-			public float rotate;
+		public float rotate;
 
-			public DifferenceImageController.MaterialParameter matParam;
+		public DifferenceImageController.MaterialParameter matParam;
 
-			public float depth;
-
-			public void SetDefault()
-			{
-			}
-		}
-
-		public DifferenceImageController imageCtrl;
-
-		public RectTransform rootRect;
-
-		public CanvasGroup group;
-
-		public CompleteData completeData;
-
-		public List<Tweener> currentTweenList;
-
-		public PartsFrameCategory currentEyeBlinkFrame;
-
-		public PartsFrameCategory currentLipSynchFrame;
-
-		public PartsFrameCategory maxEyeBlinkFrame;
-
-		public PartsFrameCategory maxLipSynchFrame;
-
-		public string characterId;
-
-		public GameObject[] emotion;
-
-		public Tweener shakeTween;
-
-		public StoryImageManager.ShakePhase shakePhase;
-
-		public Tweener blinkTween;
-
-		public float subAlpha;
-
-		public List<Tweener> actMoveTween;
-
-		public List<Tweener> actScaleTween;
-
-		public List<Tweener> actRotateTween;
-
-		public List<Tweener> actFadeTween;
-
-		public Tweener eyeBlinkTween;
-
-		public Tweener lipSynchTween;
-
-		public float eyeBlinkIntervalMin;
-
-		public float eyeBlinkIntervalMax;
-
-		public float eyeBlinkingTime;
-
-		public float lipSynchIntervalMin;
-
-		public float lipSynchIntervalMax;
-
-		public float lipSynchingTime;
-
-		public const char firstDigitCharOfResourceIdForChara = '1';
-
-		public const char firstDigitCharOfResourceIdForDragon = '2';
-
-		public const float slideMoveValue = 100f;
-
-		public const int faceMax = 2;
-
-		public const float defaultEyeBlinkIntervalMin = 2f;
-
-		public const float defaultEyeBlinkIntervalMax = 5f;
-
-		public const float defaultEyeBlinkingTime = 0.05f;
-
-		public const float defaultLipSynchIntervalMin = 71f / (339f * (float)Math.PI);
-
-		public const float defaultLipSynchIntervalMax = 71f / (339f * (float)Math.PI);
-
-		public const float defaultLipSynchingTime = 0.1f;
-
-		private const float shakeSecondsWeak = 0.01f;
-
-		private const float shakeSecondsStrong = 0.05f;
-
-		private readonly Vector2 emotionBasePos;
-
-		private const float emotionBaseWidth = 200f;
+		public float depth;
 
 		public void SetDefault()
 		{
 		}
+	}
 
-		public void SetImageData(string charaId)
-		{
-		}
+	public DifferenceImageController imageCtrl;
 
-		public static string CharaIdToResourceId(string charaId)
-		{
-			return null;
-		}
+	public RectTransform rootRect;
 
-		public static string GetImagePath(string resId)
-		{
-			return null;
-		}
+	public CanvasGroup group;
 
-		public void SetFace(int faceId, int faceNum)
-		{
-		}
+	public CompleteData completeData;
 
-		public void KillTweenList(bool complete = false)
-		{
-		}
+	public List<Tweener> currentTweenList;
 
-		public void SetCompleteData()
-		{
-		}
+	public PartsFrameCategory currentEyeBlinkFrame;
 
-		public void SetColorFromMainBackground()
-		{
-		}
+	public PartsFrameCategory currentLipSynchFrame;
 
-		public void SetPosition(Vector2 position)
-		{
-		}
+	public PartsFrameCategory maxEyeBlinkFrame;
 
-		public void SetScale(Vector3 scale)
-		{
-		}
+	public PartsFrameCategory maxLipSynchFrame;
 
-		public void SetAlpha(float alpha)
-		{
-		}
+	public string characterId;
 
-		public void SetDepth(float depth)
-		{
-		}
+	public GameObject[] emotion;
 
-		public void SetRotate(float rotate)
-		{
-		}
+	public Tweener shakeTween;
 
-		public void SetMatParam(DifferenceImageController.MaterialParameter matParam)
-		{
-		}
+	public StoryImageManager.ShakePhase shakePhase;
 
-		public static DifferenceImageController.MaterialParameter CloneMatParam(DifferenceImageController.MaterialParameter matParam)
-		{
-			return null;
-		}
+	public Tweener blinkTween;
 
-		public void SetEyeBlink()
-		{
-		}
+	public float subAlpha;
 
-		public void SetLipSynch()
-		{
-		}
+	public List<Tweener> actMoveTween;
 
-		public void SetCompleteVisible(bool visible)
-		{
-		}
+	public List<Tweener> actScaleTween;
 
-		public Tweener SetFadeColor(Color color, float fadeSec, ColorType type, float smoothMin, float smoothMax)
-		{
-			return null;
-		}
+	public List<Tweener> actRotateTween;
 
-		public Tweener SetFadeContrast(float value, float fadeSec)
-		{
-			return null;
-		}
+	public List<Tweener> actFadeTween;
 
-		public Tweener SetFadeSaturation(float value, float fadeSec)
-		{
-			return null;
-		}
+	public Tweener eyeBlinkTween;
 
-		public Tweener SetFadeBrightness(float value, float fadeSec)
-		{
-			return null;
-		}
+	public Tweener lipSynchTween;
 
-		public Tweener SetFadeVisible(bool visible, float sec)
-		{
-			return null;
-		}
+	public float eyeBlinkIntervalMin;
 
-		public static Color GetColorForMaterialParam(DifferenceImageController.MaterialParameter matParam, ColorType type)
-		{
-			return default(Color);
-		}
+	public float eyeBlinkIntervalMax;
 
-		public static void SetColorForMaterialParam(DifferenceImageController.MaterialParameter matParam, ColorType type, Color color)
-		{
-		}
+	public float eyeBlinkingTime;
 
-		public Tweener SetSlideVisible(bool visible, float sec, StoryImageManager.SlideDirection direction, bool isFade, float moveValue)
-		{
-			return null;
-		}
+	public float lipSynchIntervalMin;
 
-		public void SetShake(bool isStart, bool isVertical, StoryImageManager.StrongType type)
-		{
-		}
+	public float lipSynchIntervalMax;
 
-		public void PlayShake(Vector2 shakeBasePos, Vector2 shakeAddMove, float shakeSeconds)
-		{
-		}
+	public float lipSynchingTime;
 
-		public void PlayShakeFixed(Vector2 shakeBasePos, Vector2 shakeAddMove, float shakeSeconds)
-		{
-		}
+	public const char firstDigitCharOfResourceIdForChara = '1';
 
-		public void SetBlink(float seconds, float minAlpha = 0f, float maxAlpha = 1f)
-		{
-		}
+	public const char firstDigitCharOfResourceIdForDragon = '2';
 
-		public void SetActionMoveManual(float sec, Vector2 moveValue, Ease ease)
-		{
-		}
+	public const float slideMoveValue = 100f;
 
-		public void SetActionScaleManual(float sec, Vector3 scaleValue, Ease ease)
-		{
-		}
+	public const int faceMax = 2;
 
-		public void SetActionRotateManual(float sec, float rotateValue, Ease ease)
-		{
-		}
+	public const float defaultEyeBlinkIntervalMin = 2f;
 
-		public void SetActionFadeManual(float sec, float fadeValue, Ease ease)
-		{
-		}
+	public const float defaultEyeBlinkIntervalMax = 5f;
 
-		public void ResetActTween()
-		{
-		}
+	public const float defaultEyeBlinkingTime = 0.05f;
 
-		private void ClearTweenList(List<Tweener> tweenList)
-		{
-		}
+	public const float defaultLipSynchIntervalMin = 1f / 15f;
 
-		public void SetEmotion(int emotionId, int faceNum, Vector2 offset)
-		{
-		}
+	public const float defaultLipSynchIntervalMax = 1f / 15f;
+
+	public const float defaultLipSynchingTime = 0.1f;
+
+	private const float shakeSecondsWeak = 0.01f;
+
+	private const float shakeSecondsStrong = 0.05f;
+
+	private readonly Vector2 emotionBasePos;
+
+	private const float emotionBaseWidth = 200f;
+
+	public void SetDefault()
+	{
+	}
+
+	public void SetImageData(string charaId)
+	{
+	}
+
+	public static string CharaIdToResourceId(string charaId)
+	{
+		return null;
+	}
+
+	public static string GetImagePath(string resId)
+	{
+		return null;
+	}
+
+	public void SetFace(int faceId, int faceNum)
+	{
+	}
+
+	public void KillTweenList(bool complete = false)
+	{
+	}
+
+	public void SetCompleteData()
+	{
+	}
+
+	public void SetColorFromMainBackground()
+	{
+	}
+
+	public void SetPosition(Vector2 position)
+	{
+	}
+
+	public void SetScale(Vector3 scale)
+	{
+	}
+
+	public void SetAlpha(float alpha)
+	{
+	}
+
+	public void SetDepth(float depth)
+	{
+	}
+
+	public void SetRotate(float rotate)
+	{
+	}
+
+	public void SetMatParam(DifferenceImageController.MaterialParameter matParam)
+	{
+	}
+
+	public static DifferenceImageController.MaterialParameter CloneMatParam(DifferenceImageController.MaterialParameter matParam)
+	{
+		return null;
+	}
+
+	public void SetEyeBlink()
+	{
+	}
+
+	public void SetLipSynch()
+	{
+	}
+
+	public void SetCompleteVisible(bool visible)
+	{
+	}
+
+	public Tweener SetFadeColor(Color color, float fadeSec, ColorType type, float smoothMin, float smoothMax)
+	{
+		return null;
+	}
+
+	public Tweener SetFadeContrast(float value, float fadeSec)
+	{
+		return null;
+	}
+
+	public Tweener SetFadeSaturation(float value, float fadeSec)
+	{
+		return null;
+	}
+
+	public Tweener SetFadeBrightness(float value, float fadeSec)
+	{
+		return null;
+	}
+
+	public Tweener SetFadeVisible(bool visible, float sec)
+	{
+		return null;
+	}
+
+	public static Color GetColorForMaterialParam(DifferenceImageController.MaterialParameter matParam, ColorType type)
+	{
+		return default(Color);
+	}
+
+	public static void SetColorForMaterialParam(DifferenceImageController.MaterialParameter matParam, ColorType type, Color color)
+	{
+	}
+
+	public Tweener SetSlideVisible(bool visible, float sec, StoryImageManager.SlideDirection direction, bool isFade, float moveValue)
+	{
+		return null;
+	}
+
+	public void SetShake(bool isStart, bool isVertical, StoryImageManager.StrongType type)
+	{
+	}
+
+	public void PlayShake(Vector2 shakeBasePos, Vector2 shakeAddMove, float shakeSeconds)
+	{
+	}
+
+	public void PlayShakeFixed(Vector2 shakeBasePos, Vector2 shakeAddMove, float shakeSeconds)
+	{
+	}
+
+	public void SetBlink(float seconds, float minAlpha = 0f, float maxAlpha = 1f)
+	{
+	}
+
+	public void SetActionMoveManual(float sec, Vector2 moveValue, Ease ease)
+	{
+	}
+
+	public void SetActionScaleManual(float sec, Vector3 scaleValue, Ease ease)
+	{
+	}
+
+	public void SetActionRotateManual(float sec, float rotateValue, Ease ease)
+	{
+	}
+
+	public void SetActionFadeManual(float sec, float fadeValue, Ease ease)
+	{
+	}
+
+	public void ResetActTween()
+	{
+	}
+
+	private void ClearTweenList(List<Tweener> tweenList)
+	{
+	}
+
+	public void SetEmotion(int emotionId, int faceNum, Vector2 offset)
+	{
 	}
 }

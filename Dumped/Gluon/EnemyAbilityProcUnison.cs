@@ -2,181 +2,180 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcUnison : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcUnison : EnemyAbilityProcBase
+	public class ApplyAbnormal
 	{
-		public class ApplyAbnormal
-		{
-			public CharacterBase attacker;
+		public CharacterBase attacker;
 
-			public int actionId;
+		public int actionId;
 
-			public int productId;
+		public int productId;
 
-			public AbnormalStatusType type;
+		public AbnormalStatusType type;
 
-			public bool valid;
+		public bool valid;
 
-			public void Reset()
-			{
-			}
-		}
-
-		private ApplyAbnormal[] _arrayApplyAbnormal;
-
-		private List<ApplyAbnormal> _listApplyAbnormal;
-
-		public EnemyCharacter primary
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public EnemyCharacter secondary
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool isPrimary => default(bool);
-
-		public EnemyAbilityProcUnison(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+		public void Reset()
 		{
 		}
+	}
 
-		public override void Play()
+	private ApplyAbnormal[] _arrayApplyAbnormal;
+
+	private List<ApplyAbnormal> _listApplyAbnormal;
+
+	public EnemyCharacter primary
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public override void Stop()
+	public EnemyCharacter secondary
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public override void OnEntry()
-		{
-		}
+	public bool isPrimary => default(bool);
 
-		public override void OnUpdate()
-		{
-		}
+	public EnemyAbilityProcUnison(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+	{
+	}
 
-		public override void OnApplyDamage(CharacterDamageIntermediate damageData, bool alive)
-		{
-		}
+	public override void Play()
+	{
+	}
 
-		public override void OnApplySlipDamage(ref EnemyAbility.Argument arg, int damage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType)
-		{
-		}
+	public override void Stop()
+	{
+	}
 
-		public override void OnApplyDebuffExtraDamage(ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnEntry()
+	{
+	}
 
-		public override void OnApplyReduceHp(ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnUpdate()
+	{
+	}
 
-		public override void OnFatalAttack(ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnApplyDamage(CharacterDamageIntermediate damageData, bool alive)
+	{
+	}
 
-		public override void OnOverdrive(ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnApplySlipDamage(ref EnemyAbility.Argument arg, ref int damage, AbnormalStatusType abnormalStatusType, CharacterBuffType buffType)
+	{
+	}
 
-		public override void OnOverdriveDamage(CollisionHitAttribute hitAttr, float od_rate, ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnApplyBuffExtraDamage(ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnBreak()
-		{
-		}
+	public override void OnApplyReduceHp(ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnStateEnter_ShapeShift()
-		{
-		}
+	public override void OnFatalAttack(ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnShiftIntoForm2nd()
-		{
-		}
+	public override void OnOverdrive(ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnShiftIntoOriginal()
-		{
-		}
+	public override void OnOverdriveDamage(CollisionHitAttribute hitAttr, float od_rate, ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnApplyBuffDebuff(ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnBreak()
+	{
+	}
 
-		public override void OnPlayEffectBuff(ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnStateEnter_ShapeShift()
+	{
+	}
 
-		public override void OnStopEffectBuff(CharacterBuff buff)
-		{
-		}
+	public override void OnShiftIntoForm2nd()
+	{
+	}
 
-		public override void OnDispTextBuff(ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnShiftIntoOriginal()
+	{
+	}
 
-		public override void OnStopBuffField(List<CharacterBase> outCharaList, ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnApplyBuffDebuff(ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnPlayEffectBuff(ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability)
-		{
-		}
+	public override void OnStopEffectBuff(CharacterBuff buff)
+	{
+	}
 
-		public override void OnAbnormalClearType(AbnormalStatusType type, ref EnemyAbility.Argument arg)
-		{
-		}
+	public override void OnDispTextBuff(ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnWeakPointDestroy(bool isPlayAction)
-		{
-		}
+	public override void OnStopBuffField(List<CharacterBase> outCharaList, ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnWeakPointDefeated(bool isPlayAction)
-		{
-		}
+	public override void OnBeforeSetAbnormal(CollisionHitAttribute attr, int conditionId, ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnActionParts(bool onoff)
-		{
-		}
+	public override void OnSetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability)
+	{
+	}
 
-		private void SetupPrimary()
-		{
-		}
+	public override void OnAbnormalClearType(AbnormalStatusType type, ref EnemyAbility.Argument arg)
+	{
+	}
 
-		private void SetupSecondary()
-		{
-		}
+	public override void OnWeakPointDestroy(bool isPlayAction)
+	{
+	}
 
-		private void ApplyDamageSecondary(CharacterDamageIntermediate damageData, bool alive)
-		{
-		}
+	public override void OnWeakPointDefeated(bool isPlayAction)
+	{
+	}
 
-		private void CheckAbnormal()
-		{
-		}
+	public override void OnActionParts(bool onoff)
+	{
+	}
+
+	private void SetupPrimary()
+	{
+	}
+
+	private void SetupSecondary()
+	{
+	}
+
+	private void ApplyDamageSecondary(CharacterDamageIntermediate damageData, bool alive)
+	{
+	}
+
+	private void CheckAbnormal()
+	{
 	}
 }

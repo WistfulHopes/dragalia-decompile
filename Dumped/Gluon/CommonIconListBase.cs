@@ -2,83 +2,80 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CommonIconListBase : MonoBehaviour
 {
-	public class CommonIconListBase : MonoBehaviour
+	public UnityAction<CommonIconListCellData, TableViewCell<CommonIconListCellData>> listButtonCallBack;
+
+	public UnityAction<CommonIconListCellData, TableViewCell<CommonIconListCellData>> listButtonLongPressCallBack;
+
+	public UnityAction outButtonCallBack;
+
+	public UnityAction outButtonLongPressCallBack;
+
+	[SerializeField]
+	public Text countText;
+
+	public bool isShowListCount;
+
+	[HideInInspector]
+	public CommonSortButton sortButton;
+
+	[SerializeField]
+	public Transform sortButtonPlaceHolder;
+
+	public UnityAction onSortButtonClicked;
+
+	public bool isShowSortButton;
+
+	public bool isDisableAutoLoadSortButton;
+
+	[SerializeField]
+	private GameObject countTextGameObject;
+
+	public virtual void Awake()
 	{
-		public UnityAction<CommonIconListCellData, TableViewCell<CommonIconListCellData>> listButtonCallBack;
+	}
 
-		public UnityAction<CommonIconListCellData, TableViewCell<CommonIconListCellData>> listButtonLongPressCallBack;
+	public void SetCountTextActive(bool active)
+	{
+	}
 
-		public UnityAction outButtonCallBack;
+	public virtual void SetupCountText(int nowCount, int maxCount)
+	{
+	}
 
-		public UnityAction outButtonLongPressCallBack;
+	public virtual void SetupCountText(int nowCount)
+	{
+	}
 
-		[SerializeField]
-		[Header("Count")]
-		public Text countText;
+	public virtual void SetupCharaCountText(int nowCount)
+	{
+	}
 
-		public bool isShowListCount;
+	public void SetupSkillCountText(int nowCount)
+	{
+	}
 
-		[HideInInspector]
-		public CommonSortButton sortButton;
+	public void SetupAmuletCountText(int nowCount)
+	{
+	}
 
-		[SerializeField]
-		[Header("Sort (leave blank for common use)")]
-		public Transform sortButtonPlaceHolder;
+	public void OnSortButtonClicked()
+	{
+	}
 
-		public UnityAction onSortButtonClicked;
+	public void SetSortButtonActive(bool isActive)
+	{
+	}
 
-		public bool isShowSortButton;
+	public void LoadSortButton()
+	{
+	}
 
-		public bool isDisableAutoLoadSortButton;
-
-		[SerializeField]
-		private GameObject countTextGameObject;
-
-		public virtual void Awake()
-		{
-		}
-
-		public void SetCountTextActive(bool active)
-		{
-		}
-
-		public virtual void SetupCountText(int nowCount, int maxCount)
-		{
-		}
-
-		public virtual void SetupCountText(int nowCount)
-		{
-		}
-
-		public virtual void SetupCharaCountText(int nowCount)
-		{
-		}
-
-		public void SetupSkillCountText(int nowCount)
-		{
-		}
-
-		public void SetupAmuletCountText(int nowCount)
-		{
-		}
-
-		public void OnSortButtonClicked()
-		{
-		}
-
-		public void SetSortButtonActive(bool isActive)
-		{
-		}
-
-		public void LoadSortButton()
-		{
-		}
-
-		public bool IsLoadedSortButton()
-		{
-			return default(bool);
-		}
+	public bool IsLoadedSortButton()
+	{
+		return default(bool);
 	}
 }

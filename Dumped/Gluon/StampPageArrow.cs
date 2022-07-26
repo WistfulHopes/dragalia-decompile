@@ -1,8 +1,7 @@
-namespace Gluon
+namespace Gluon;
+
+public enum StampPageArrow
 {
-	public enum StampPageArrow
-	{
-		Left,
-		Right
-	}
+	Left,
+	Right
 }

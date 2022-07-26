@@ -3,116 +3,115 @@ using Cute.AssetBundle;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SelectableDownloadPopup : CommonPopup
 {
-	public class SelectableDownloadPopup : CommonPopup
+	public enum DownloadMode
 	{
-		public enum DownloadMode
-		{
-			Full,
-			WithoutVoice,
-			Minimum
-		}
+		Full,
+		WithoutVoice,
+		Minimum
+	}
 
-		public Text mainText;
+	public Text mainText;
 
-		public Text warnText;
+	public Text warnText;
 
-		public Text labelText;
+	public Text labelText;
 
-		public Text allDataText;
+	public Text allDataText;
 
-		public Text noVoiceDataText;
+	public Text noVoiceDataText;
 
-		public Text allDataNum;
+	public Text allDataNum;
 
-		public Text voiceDataNum;
+	public Text voiceDataNum;
 
-		public Text minimumDataNum;
+	public Text minimumDataNum;
 
-		public Text descText;
+	public Text descText;
 
-		public ToggleGroup toggleGroup;
+	public ToggleGroup toggleGroup;
 
-		public Toggle voiceOnToggle;
+	public Toggle voiceOnToggle;
 
-		public Toggle voiceOffToggle;
+	public Toggle voiceOffToggle;
 
-		public Toggle minimumToggle;
+	public Toggle minimumToggle;
 
-		public GameObject deleteSizeRoot;
+	public GameObject deleteSizeRoot;
 
-		public Text deleteDataNum;
+	public Text deleteDataNum;
 
-		private bool isPreIn;
+	private bool isPreIn;
 
-		private DownloadOperation downloadOperation;
+	private DownloadOperation downloadOperation;
 
-		private DownloadOperation downloadOperationWithoutVoice;
+	private DownloadOperation downloadOperationWithoutVoice;
 
-		private DownloadOperation downloadOperationMinimum;
+	private DownloadOperation downloadOperationMinimum;
 
-		private bool updateSaveVoiceAsset;
+	private bool updateSaveVoiceAsset;
 
-		private bool changeOptionSetting;
+	private bool changeOptionSetting;
 
-		private const string prefsKeyToggleSelect = "SelectableDownloadPopup/ToggleSelect";
+	private const string prefsKeyToggleSelect = "SelectableDownloadPopup/ToggleSelect";
 
-		public bool isWithoutVoice => default(bool);
+	public bool isWithoutVoice => default(bool);
 
-		private DownloadMode downloadMode
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(DownloadMode);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public static SelectableDownloadPopup CreateSelectableDownloadPopup(bool isPreIn, DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, DownloadOperation downloadOperationMinimum, bool updateSaveVoiceAsset, bool changeOptionSetting, long deletedSize = 0L)
-		{
-			return null;
-		}
-
-		protected override void Awake()
-		{
-		}
-
-		protected override void Start()
-		{
-		}
-
-		private void SetDownloadSize()
-		{
-		}
-
-		public void ChangeMainTextForVoiceDownload()
-		{
-		}
-
-		public void OnDownloadButtonPressed()
-		{
-		}
-
-		public void OnFullDownloadToggled(bool arg)
-		{
-		}
-
-		public void OnNoVoiceDownloadToggled(bool arg)
-		{
-		}
-
-		public void OnMinimunDownloadToggled(bool arg)
-		{
-		}
-
-		public static DownloadMode GetDefaultSelectedMode(bool isMinimunEnable)
+	private DownloadMode downloadMode
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(DownloadMode);
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public static SelectableDownloadPopup CreateSelectableDownloadPopup(bool isPreIn, DownloadOperation downloadOperation, DownloadOperation downloadOperationWithoutVoice, DownloadOperation downloadOperationMinimum, bool updateSaveVoiceAsset, bool changeOptionSetting, long deletedSize = 0L)
+	{
+		return null;
+	}
+
+	protected override void Awake()
+	{
+	}
+
+	protected override void Start()
+	{
+	}
+
+	private void SetDownloadSize()
+	{
+	}
+
+	public void ChangeMainTextForVoiceDownload()
+	{
+	}
+
+	public void OnDownloadButtonPressed()
+	{
+	}
+
+	public void OnFullDownloadToggled(bool arg)
+	{
+	}
+
+	public void OnNoVoiceDownloadToggled(bool arg)
+	{
+	}
+
+	public void OnMinimunDownloadToggled(bool arg)
+	{
+	}
+
+	public static DownloadMode GetDefaultSelectedMode(bool isMinimunEnable)
+	{
+		return default(DownloadMode);
 	}
 }

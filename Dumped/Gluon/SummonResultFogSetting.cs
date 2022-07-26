@@ -1,24 +1,23 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonResultFogSetting : MonoBehaviour
 {
-	public class SummonResultFogSetting : MonoBehaviour
+	[Serializable]
+	public class Setting
 	{
-		[Serializable]
-		public class Setting
-		{
-			public Color fogColor;
+		public Color fogColor;
 
-			public float fogStartDistance;
+		public float fogStartDistance;
 
-			public float fogEndDistance;
-		}
+		public float fogEndDistance;
+	}
 
-		public Setting resultSetting;
+	public Setting resultSetting;
 
-		private void OnEnable()
-		{
-		}
+	private void OnEnable()
+	{
 	}
 }

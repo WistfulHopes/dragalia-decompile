@@ -2,29 +2,28 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeExpeditionCancelPopup : CommonPopup
 {
-	public class DmodeExpeditionCancelPopup : CommonPopup
+	[SerializeField]
+	private Text floorNum;
+
+	[SerializeField]
+	private Text remainTime;
+
+	private const string prefabPath = "Prefabs/OutGame/Dmode/DmodeExpeditionCancelPopup";
+
+	public static DmodeExpeditionCancelPopup Create(Action onOK, Action onCancel)
 	{
-		[SerializeField]
-		private Text floorNum;
+		return null;
+	}
 
-		[SerializeField]
-		private Text remainTime;
+	private void SetText()
+	{
+	}
 
-		private const string prefabPath = "Prefabs/OutGame/Dmode/DmodeExpeditionCancelPopup";
-
-		public static DmodeExpeditionCancelPopup Create(Action onOK, Action onCancel)
-		{
-			return null;
-		}
-
-		private void SetText()
-		{
-		}
-
-		public void OnUpdatePressed()
-		{
-		}
+	public void OnUpdatePressed()
+	{
 	}
 }

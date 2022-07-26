@@ -1,48 +1,47 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class AbilityMultiPlayService
 {
-	public class AbilityMultiPlayService
+	private bool _isDirty;
+
+	private CharacterBase _owner;
+
+	private float _nextSendEventTimer;
+
+	private static readonly float SendEventInterval;
+
+	private ChangeAbility _tempSendEvent;
+
+	private Ability OwnerAblity => null;
+
+	public AbilityMultiPlayService(CharacterBase owner)
 	{
-		private bool _isDirty;
+	}
 
-		private CharacterBase _owner;
+	public void SetDirty()
+	{
+	}
 
-		private float _nextSendEventTimer;
+	public void UpdateSendEvent()
+	{
+	}
 
-		private static readonly float SendEventInterval;
+	public void OnRecieveCurrentAbility(ChangeAbility recvEvent)
+	{
+	}
 
-		private ChangeAbility _tempSendEvent;
+	public void SendImmediately()
+	{
+	}
 
-		private Ability OwnerAblity => null;
+	private void SendCurrentAbility()
+	{
+	}
 
-		public AbilityMultiPlayService(CharacterBase owner)
-		{
-		}
-
-		public void SetDirty()
-		{
-		}
-
-		public void UpdateSendEvent()
-		{
-		}
-
-		public void OnRecieveCurrentAbility(ChangeAbility recvEvent)
-		{
-		}
-
-		public void SendImmediately()
-		{
-		}
-
-		private void SendCurrentAbility()
-		{
-		}
-
-		private bool CanSendAbility()
-		{
-			return default(bool);
-		}
+	private bool CanSendAbility()
+	{
+		return default(bool);
 	}
 }

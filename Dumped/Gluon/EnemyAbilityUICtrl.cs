@@ -1,87 +1,85 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityUICtrl : MonoBehaviour
 {
-	public class EnemyAbilityUICtrl : MonoBehaviour
+	[SerializeField]
+	private RectTransform _rootRt;
+
+	[SerializeField]
+	private RectTransform _iconRt;
+
+	private Dictionary<string, Material> _iconList;
+
+	private List<EnemyAbilityUI> _abilityList;
+
+	private InGameFollowLayout _followLayout;
+
+	private const int DefaultIconNum = 4;
+
+	public static EnemyAbilityUICtrl Create(GameObject parent, int siblingIndex = -1)
 	{
-		[SerializeField]
-		[Header("component")]
-		private RectTransform _rootRt;
+		return null;
+	}
 
-		[SerializeField]
-		private RectTransform _iconRt;
+	private void Initialize(GameObject prefab)
+	{
+	}
 
-		private Dictionary<string, Material> _iconList;
+	private void OnDestroy()
+	{
+	}
 
-		private List<EnemyAbilityUI> _abilityList;
+	public void Update()
+	{
+	}
 
-		private InGameFollowLayout _followLayout;
+	public void EntryEnemyAbility(List<EnemyAbilityProcBase> abilities)
+	{
+	}
 
-		private const int DefaultIconNum = 4;
+	public void Open()
+	{
+	}
 
-		public static EnemyAbilityUICtrl Create(GameObject parent, int siblingIndex = -1)
-		{
-			return null;
-		}
+	public void Close()
+	{
+	}
 
-		private void Initialize(GameObject prefab)
-		{
-		}
+	private void Visible(bool b, bool force = false)
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	public void SetEnemyAbility(List<EnemyAbilityProcBase> abilities)
+	{
+	}
 
-		public void Update()
-		{
-		}
+	private bool GetCount(EnemyAbilityProcBase ability, out int count)
+	{
+		return default(bool);
+	}
 
-		public void EntryEnemyAbility(List<EnemyAbilityProcBase> abilities)
-		{
-		}
+	public void EnableEnmeyAbility(int id)
+	{
+	}
 
-		public void Open()
-		{
-		}
+	public void DisableEnmeyAbility(int id)
+	{
+	}
 
-		public void Close()
-		{
-		}
+	public EnemyAbilityUI GetEnmeyAbility(int id)
+	{
+		return null;
+	}
 
-		private void Visible(bool b, bool force = false)
-		{
-		}
+	private void ApplyIconPosition()
+	{
+	}
 
-		public void SetEnemyAbility(List<EnemyAbilityProcBase> abilities)
-		{
-		}
-
-		private bool GetCount(EnemyAbilityProcBase ability, out int count)
-		{
-			return default(bool);
-		}
-
-		public void EnableEnmeyAbility(int id)
-		{
-		}
-
-		public void DisableEnmeyAbility(int id)
-		{
-		}
-
-		public EnemyAbilityUI GetEnmeyAbility(int id)
-		{
-			return null;
-		}
-
-		private void ApplyIconPosition()
-		{
-		}
-
-		public Material GetEnemyAbilityIcon(string iconId)
-		{
-			return null;
-		}
+	public Material GetEnemyAbilityIcon(string iconId)
+	{
+		return null;
 	}
 }

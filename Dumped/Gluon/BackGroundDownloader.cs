@@ -1,34 +1,33 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class BackGroundDownloader : SingletonMonoBehaviour<BackGroundDownloader>
 {
-	public class BackGroundDownloader : SingletonMonoBehaviour<BackGroundDownloader>
+	private int prevDownloadProcessCount;
+
+	public bool isDownloading
 	{
-		private int prevDownloadProcessCount;
-
-		public bool isDownloading
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		private void Start()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void DoBackgroundDownload()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void StopDownload()
-		{
-		}
+	public void DoBackgroundDownload()
+	{
+	}
+
+	public void StopDownload()
+	{
 	}
 }

@@ -8,205 +8,204 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyEquipScene : SceneBase
 {
-	public class PartyEquipScene : SceneBase
+	public PartyEquipUICanvas mainCanvas;
+
+	public const string prefabDir = "Prefabs/OutGame/Party/PartyEquip/";
+
+	public EquipUnitListController equipUnitListController;
+
+	public Camera mainCamera;
+
+	private AudioPlayback bgmPlayback;
+
+	private Button backButton;
+
+	private int backButtonSortingOrder;
+
+	private GameObject attributeMatch;
+
+	private Coroutine attributeMatchUpdateParentGroupAlphaCoroutine;
+
+	private const string attributeMatchPathBase = "Prefabs/OutGame/Party/Flash/pf_AttributeMatch";
+
+	private const string attributeMatchReplaceTextMaterialPathBase = "Images/OutGame/Party/AttributeMatch/AttributeMatch";
+
+	private TableViewCell<CommonIconListCellData> unlockEffectTargetCell;
+
+	private void OnEnable()
 	{
-		public PartyEquipUICanvas mainCanvas;
+	}
 
-		public const string prefabDir = "Prefabs/OutGame/Party/PartyEquip/";
+	private void Start()
+	{
+	}
 
-		public EquipUnitListController equipUnitListController;
+	private void OnDestroy()
+	{
+	}
 
-		public Camera mainCamera;
+	public override void OnPresentReceived()
+	{
+	}
 
-		private AudioPlayback bgmPlayback;
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		private Button backButton;
+	private void SetupTutorial()
+	{
+	}
 
-		private int backButtonSortingOrder;
+	private void GoPartyScene(PartySceneState state)
+	{
+	}
 
-		private GameObject attributeMatch;
+	public void OnBackButtonPressed()
+	{
+	}
 
-		private Coroutine attributeMatchUpdateParentGroupAlphaCoroutine;
+	public void SavePartyData(UnityAction saveEndCallBack)
+	{
+	}
 
-		private const string attributeMatchPathBase = "Prefabs/OutGame/Party/Flash/pf_AttributeMatch";
+	private void InitIconList()
+	{
+	}
 
-		private const string attributeMatchReplaceTextMaterialPathBase = "Images/OutGame/Party/AttributeMatch/AttributeMatch";
+	public void LoadEquipListData()
+	{
+	}
 
-		private TableViewCell<CommonIconListCellData> unlockEffectTargetCell;
+	private List<ulong> InsertActiveEquipmentToFilteredList(List<ulong> filteredList)
+	{
+		return null;
+	}
 
-		private void OnEnable()
-		{
-		}
+	private GiftType GetEquipGiftType()
+	{
+		return default(GiftType);
+	}
 
-		private void Start()
-		{
-		}
+	public void OnSortButtonClicked()
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private ulong[] CreateDataIdList()
+	{
+		return null;
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	private string GetEquipChangeAlertTitleString()
+	{
+		return null;
+	}
 
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
+	private string GetEquipAlreadyEquipMessage()
+	{
+		return null;
+	}
 
-		private void SetupTutorial()
-		{
-		}
+	private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private void GoPartyScene(PartySceneState state)
-		{
-		}
+	private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		public void OnBackButtonPressed()
-		{
-		}
+	private void outButtonPressed()
+	{
+	}
 
-		public void SavePartyData(UnityAction saveEndCallBack)
-		{
-		}
+	public void OnSkillCellPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private void InitIconList()
-		{
-		}
+	private void FooterButtonPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
 
-		public void LoadEquipListData()
-		{
-		}
+	private void FooterButtonLongPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
 
-		private List<ulong> InsertActiveEquipmentToFilteredList(List<ulong> filteredList)
-		{
-			return null;
-		}
+	private void PartyEditPopup(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed)
+	{
+	}
 
-		private GiftType GetEquipGiftType()
-		{
-			return default(GiftType);
-		}
+	private void IncludingDuplicateAbilityCrestAction(Action callBack)
+	{
+	}
 
-		public void OnSortButtonClicked()
-		{
-		}
+	private void SendMainPartyAndGoAnotherScene(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed)
+	{
+	}
 
-		private ulong[] CreateDataIdList()
-		{
-			return null;
-		}
+	private void GoAnotherScene(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed)
+	{
+	}
 
-		private string GetEquipChangeAlertTitleString()
-		{
-			return null;
-		}
+	private void SelectEquipIconCellData(ulong keyId, CommonEquipIconCellData equipData, bool hasOutButtonSelectState)
+	{
+	}
 
-		private string GetEquipAlreadyEquipMessage()
-		{
-			return null;
-		}
+	private void SelectEquipUnit(CommonEquipIconCellData equipData)
+	{
+	}
 
-		private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private void RefreshCrestState(PartySettingList userCharaData)
+	{
+	}
 
-		private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private void RemoveEquipUnitByCharaId(int charaId, ulong keyId)
+	{
+	}
 
-		private void outButtonPressed()
-		{
-		}
+	public void ReloadWeaponModel()
+	{
+	}
 
-		public void OnSkillCellPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private void DetachFooterCallback()
+	{
+	}
 
-		private void FooterButtonPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
+	private void CreateAttributeMatch(ElementalType type)
+	{
+	}
 
-		private void FooterButtonLongPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
+	private IEnumerator UpdateAttributeMatchParentGroupAlpha(FlPlane flPlane)
+	{
+		return null;
+	}
 
-		private void PartyEditPopup(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed)
-		{
-		}
+	public static string GetAttributePathAdderForText(ElementalType element)
+	{
+		return null;
+	}
 
-		private void IncludingDuplicateAbilityCrestAction(Action callBack)
-		{
-		}
+	public void SetAttributeMatch(AutoPartyConfigData selectData)
+	{
+	}
 
-		private void SendMainPartyAndGoAnotherScene(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed)
-		{
-		}
+	private void SetAttributeMatch(CommonEquipIconCellData equipData)
+	{
+	}
 
-		private void GoAnotherScene(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed)
-		{
-		}
+	public CommonListCustomSortData SkillListSort(CommonListCustomSortData data)
+	{
+		return null;
+	}
 
-		private void SelectEquipIconCellData(ulong keyId, CommonEquipIconCellData equipData, bool hasOutButtonSelectState)
-		{
-		}
+	private void SendEditSkillUnlockData(int unlockCharaId)
+	{
+	}
 
-		private void SelectEquipUnit(CommonEquipIconCellData equipData)
-		{
-		}
-
-		private void RefreshCrestState(PartySettingList userCharaData)
-		{
-		}
-
-		private void RemoveEquipUnitByCharaId(int charaId, ulong keyId)
-		{
-		}
-
-		public void ReloadWeaponModel()
-		{
-		}
-
-		private void DetachFooterCallback()
-		{
-		}
-
-		private void CreateAttributeMatch(ElementalType type)
-		{
-		}
-
-		private IEnumerator UpdateAttributeMatchParentGroupAlpha(FlPlane flPlane)
-		{
-			return null;
-		}
-
-		public static string GetAttributePathAdderForText(ElementalType element)
-		{
-			return null;
-		}
-
-		public void SetAttributeMatch(AutoPartyConfigData selectData)
-		{
-		}
-
-		private void SetAttributeMatch(CommonEquipIconCellData equipData)
-		{
-		}
-
-		public CommonListCustomSortData SkillListSort(CommonListCustomSortData data)
-		{
-			return null;
-		}
-
-		private void SendEditSkillUnlockData(int unlockCharaId)
-		{
-		}
-
-		private void PlayReleaseEditSkillUnlockEffect()
-		{
-		}
+	private void PlayReleaseEditSkillUnlockEffect()
+	{
 	}
 }

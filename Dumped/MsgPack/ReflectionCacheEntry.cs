@@ -3,27 +3,26 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace MsgPack
+namespace MsgPack;
+
+public class ReflectionCacheEntry
 {
-	public class ReflectionCacheEntry
+	private const BindingFlags FieldBindingFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.GetField | BindingFlags.SetField;
+
+	public IDictionary<string, FieldInfo> FieldMap
 	{
-		private const BindingFlags FieldBindingFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.GetField | BindingFlags.SetField;
-
-		public IDictionary<string, FieldInfo> FieldMap
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public ReflectionCacheEntry(Type t)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
+
+	public ReflectionCacheEntry(Type t)
+	{
 	}
 }

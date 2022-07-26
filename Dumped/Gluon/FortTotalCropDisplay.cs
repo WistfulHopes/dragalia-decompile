@@ -1,57 +1,56 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortTotalCropDisplay : MonoBehaviour
 {
-	public class FortTotalCropDisplay : MonoBehaviour
+	[SerializeField]
+	private Text text;
+
+	[SerializeField]
+	private float moveDistanceY;
+
+	[SerializeField]
+	private float duration;
+
+	private int _totalCropNum;
+
+	private Vector3 initialLocalPos;
+
+	public int totalCropNum
 	{
-		[SerializeField]
-		private Text text;
-
-		[SerializeField]
-		private float moveDistanceY;
-
-		[SerializeField]
-		private float duration;
-
-		private int _totalCropNum;
-
-		private Vector3 initialLocalPos;
-
-		public int totalCropNum
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			private set
-			{
-			}
+			return default(int);
 		}
-
-		public void Reset()
+		private set
 		{
 		}
+	}
 
-		public void AddTotalCropNum(int num, long currentNum, bool isItem)
-		{
-		}
+	public void Reset()
+	{
+	}
 
-		public void DispFortStoredTotalCrop()
-		{
-		}
+	public void AddTotalCropNum(int num, long currentNum, bool isItem)
+	{
+	}
 
-		public void DispFortTotalCrop(int additionalNum)
-		{
-		}
+	public void DispFortStoredTotalCrop()
+	{
+	}
 
-		public float GetPopupAnimTotalDuration()
-		{
-			return default(float);
-		}
+	public void DispFortTotalCrop(int additionalNum)
+	{
+	}
 
-		public void PlayPopupAnim()
-		{
-		}
+	public float GetPopupAnimTotalDuration()
+	{
+		return default(float);
+	}
+
+	public void PlayPopupAnim()
+	{
 	}
 }

@@ -1,48 +1,47 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSelectList : QuestMenuList<QSTableViewData>
 {
-	public class QuestSelectList : QuestMenuList<QSTableViewData>
+	[SerializeField]
+	private QuestMainDetailList questMainDetailList;
+
+	private DragEventScrollRect dragEventScrollRect;
+
+	private void Awake()
 	{
-		[SerializeField]
-		private QuestMainDetailList questMainDetailList;
+	}
 
-		private DragEventScrollRect dragEventScrollRect;
+	public override void OnOpen()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	protected override void Open()
+	{
+	}
 
-		public override void OnOpen()
-		{
-		}
+	private IEnumerator WaitOpenCompletedCoroutine()
+	{
+		return null;
+	}
 
-		protected override void Open()
-		{
-		}
+	public override void OnClose()
+	{
+	}
 
-		private IEnumerator WaitOpenCompletedCoroutine()
-		{
-			return null;
-		}
+	protected override void Close()
+	{
+	}
 
-		public override void OnClose()
-		{
-		}
+	private IEnumerator WaitCloseCompletedCoroutine()
+	{
+		return null;
+	}
 
-		protected override void Close()
-		{
-		}
-
-		private IEnumerator WaitCloseCompletedCoroutine()
-		{
-			return null;
-		}
-
-		public override bool IsOnAnimation()
-		{
-			return default(bool);
-		}
+	public override bool IsOnAnimation()
+	{
+		return default(bool);
 	}
 }

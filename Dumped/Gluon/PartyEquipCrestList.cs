@@ -4,50 +4,49 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyEquipCrestList : MonoBehaviour
 {
-	public class PartyEquipCrestList : MonoBehaviour
+	private enum SlotState
 	{
-		private enum SlotState
-		{
-			None,
-			Enable,
-			Locked
-		}
+		None,
+		Enable,
+		Locked
+	}
 
-		[SerializeField]
-		private PartyEquipCrest[] crestList;
+	[SerializeField]
+	private PartyEquipCrest[] crestList;
 
-		[SerializeField]
-		private PartyEquipTalisman talismanCell;
+	[SerializeField]
+	private PartyEquipTalisman talismanCell;
 
-		[SerializeField]
-		private GameObject emptyMessageObject;
+	[SerializeField]
+	private GameObject emptyMessageObject;
 
-		[SerializeField]
-		private VerticalLayoutGroup layout;
+	[SerializeField]
+	private VerticalLayoutGroup layout;
 
-		[SerializeField]
-		private RectTransform frameRectTransform;
+	[SerializeField]
+	private RectTransform frameRectTransform;
 
-		private WeaponBodyList userWeaponData;
+	private WeaponBodyList userWeaponData;
 
-		private WeaponBodyElement weaponData;
+	private WeaponBodyElement weaponData;
 
-		public Action onCrestChangeCallback;
+	public Action onCrestChangeCallback;
 
-		public void Reload(bool isSupportFriend = false)
-		{
-		}
+	public void Reload(bool isSupportFriend = false)
+	{
+	}
 
-		private SlotState GetSlotState(int index)
-		{
-			return default(SlotState);
-		}
+	private SlotState GetSlotState(int index)
+	{
+		return default(SlotState);
+	}
 
-		private int GetSlotType(int index)
-		{
-			return default(int);
-		}
+	private int GetSlotType(int index)
+	{
+		return default(int);
 	}
 }

@@ -1,74 +1,73 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class LightSatelliteUniqueCtrl : EnemyUniqueCtrl
 {
-	public class LightSatelliteUniqueCtrl : EnemyUniqueCtrl
+	private Vector3 _position;
+
+	public float angularSpeed
 	{
-		private Vector3 _position;
-
-		public float angularSpeed
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(float);
 		}
-
-		public AnimationCurve timeCurveToAngle
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public float elapsed
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public bool isFollowCenter
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public override void Initialize()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public override void FastUpdate()
+	public AnimationCurve timeCurveToAngle
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void OnInitState()
+	public float elapsed
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
+
+	public bool isFollowCenter
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public override void Initialize()
+	{
+	}
+
+	public override void FastUpdate()
+	{
+	}
+
+	private void OnInitState()
+	{
 	}
 }

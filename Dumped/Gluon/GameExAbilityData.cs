@@ -4,73 +4,72 @@ using Gluon.Event;
 using Gluon.Http;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class GameExAbilityData
 {
-	public class GameExAbilityData
+	private class ExAbilityBuildData
 	{
-		private class ExAbilityBuildData
+		public class UnitData
 		{
-			public class UnitData
+			public int charaId;
+
+			public int exAbility1Level;
+
+			public int exAbility2Level;
+		}
+
+		public List<UnitData> partyUnitList
+		{
+			[CompilerGenerated]
+			get
 			{
-				public int charaId;
-
-				public int exAbility1Level;
-
-				public int exAbility2Level;
+				return null;
 			}
-
-			public List<UnitData> partyUnitList
-			{
-				[CompilerGenerated]
-				get
-				{
-					return null;
-				}
-				[CompilerGenerated]
-				private set
-				{
-				}
-			}
-
-			public void AddUnit(UnitData unit)
-			{
-			}
-
-			public void AppendFromPartyUnitList(PartyUnitList[] partyUnitList)
-			{
-			}
-
-			public void Append(int charaId, int exAbilityLevel, int exAbility2Level)
-			{
-			}
-
-			public void AppendFromHeroParamList(HeroParam[] heroParams)
+			[CompilerGenerated]
+			private set
 			{
 			}
 		}
 
-		private int _partySwitchIndex;
-
-		private List<ExAbilityDataElement>[] exAbility1List;
-
-		private List<AbilityDataElement>[] exAbility2List;
-
-		public GameExAbilityData(int partySwitchIndex)
+		public void AddUnit(UnitData unit)
 		{
 		}
 
-		public void SetupExAbility()
+		public void AppendFromPartyUnitList(PartyUnitList[] partyUnitList)
 		{
 		}
 
-		public List<ExAbilityDataElement> GetExAbility1List(int actorIndex)
+		public void Append(int charaId, int exAbilityLevel, int exAbility2Level)
 		{
-			return null;
 		}
 
-		public List<AbilityDataElement> GetExAbility2List(int actorIndex)
+		public void AppendFromHeroParamList(HeroParam[] heroParams)
 		{
-			return null;
 		}
+	}
+
+	private int _partySwitchIndex;
+
+	private List<ExAbilityDataElement>[] exAbility1List;
+
+	private List<AbilityDataElement>[] exAbility2List;
+
+	public GameExAbilityData(int partySwitchIndex)
+	{
+	}
+
+	public void SetupExAbility()
+	{
+	}
+
+	public List<ExAbilityDataElement> GetExAbility1List(int actorIndex)
+	{
+		return null;
+	}
+
+	public List<AbilityDataElement> GetExAbility2List(int actorIndex)
+	{
+		return null;
 	}
 }

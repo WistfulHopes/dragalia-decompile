@@ -1,26 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestDifficultyIcon : MonoBehaviour
 {
-	public class QuestDifficultyIcon : MonoBehaviour
+	[SerializeField]
+	private Image frameImage;
+
+	[SerializeField]
+	private Sprite[] difficultySprites;
+
+	[SerializeField]
+	private Material[] difficultyMaterials;
+
+	[SerializeField]
+	private float[] difficultySpriteScales;
+
+	private Vector3 tempScale;
+
+	public void SetupDifficultyIcon(QuestSelectScene.Difficulty difficulty)
 	{
-		[SerializeField]
-		private Image frameImage;
-
-		[SerializeField]
-		private Sprite[] difficultySprites;
-
-		[SerializeField]
-		private Material[] difficultyMaterials;
-
-		[SerializeField]
-		private float[] difficultySpriteScales;
-
-		private Vector3 tempScale;
-
-		public void SetupDifficultyIcon(QuestSelectScene.Difficulty difficulty)
-		{
-		}
 	}
 }

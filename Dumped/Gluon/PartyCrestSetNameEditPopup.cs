@@ -1,21 +1,20 @@
-namespace Gluon
+namespace Gluon;
+
+public class PartyCrestSetNameEditPopup : NameEditPopupBase
 {
-	public class PartyCrestSetNameEditPopup : NameEditPopupBase
+	private int setIndex;
+
+	public static PartyCrestSetNameEditPopup Create()
 	{
-		private int setIndex;
+		return null;
+	}
 
-		public static PartyCrestSetNameEditPopup Create()
-		{
-			return null;
-		}
+	public void InitPopup(int setIndex)
+	{
+	}
 
-		public void InitPopup(int setIndex)
-		{
-		}
-
-		protected override string GetInputFieldDefaultText()
-		{
-			return null;
-		}
+	protected override string GetInputFieldDefaultText()
+	{
+		return null;
 	}
 }

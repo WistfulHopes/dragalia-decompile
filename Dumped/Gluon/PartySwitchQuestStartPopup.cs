@@ -2,55 +2,54 @@ using System.Text;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartySwitchQuestStartPopup : CommonPopup
 {
-	public class PartySwitchQuestStartPopup : CommonPopup
+	private int questId;
+
+	[SerializeField]
+	private GameObject baseCell;
+
+	[SerializeField]
+	private Transform cellParent;
+
+	private PartySettingList[] questClearParty;
+
+	private PartySwitchPopupCell[] cellList;
+
+	private const int partySwitchPartyCount = 2;
+
+	public static PartySwitchQuestStartPopup Create(int questId)
 	{
-		private int questId;
+		return null;
+	}
 
-		[SerializeField]
-		private GameObject baseCell;
+	private void SetupCells()
+	{
+	}
 
-		[SerializeField]
-		private Transform cellParent;
+	private void CheckMask()
+	{
+	}
 
-		private PartySettingList[] questClearParty;
+	public void OnPressStartQuest()
+	{
+	}
 
-		private PartySwitchPopupCell[] cellList;
+	private void GoToIngame()
+	{
+	}
 
-		private const int partySwitchPartyCount = 2;
+	private void OnJoinConditionsFailed(StringBuilder failedDescription)
+	{
+	}
 
-		public static PartySwitchQuestStartPopup Create(int questId)
-		{
-			return null;
-		}
+	private void OnTemporaryCharaInParty()
+	{
+	}
 
-		private void SetupCells()
-		{
-		}
-
-		private void CheckMask()
-		{
-		}
-
-		public void OnPressStartQuest()
-		{
-		}
-
-		private void GoToIngame()
-		{
-		}
-
-		private void OnJoinConditionsFailed(StringBuilder failedDescription)
-		{
-		}
-
-		private void OnTemporaryCharaInParty()
-		{
-		}
-
-		public override void OnCloseButtonPressed()
-		{
-		}
+	public override void OnCloseButtonPressed()
+	{
 	}
 }

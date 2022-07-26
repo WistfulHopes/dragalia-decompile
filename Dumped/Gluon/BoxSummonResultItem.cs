@@ -1,28 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BoxSummonResultItem : MonoBehaviour
 {
-	public class BoxSummonResultItem : MonoBehaviour
+	[SerializeField]
+	private CommonIcon icon;
+
+	[SerializeField]
+	private Text nameText;
+
+	[SerializeField]
+	private Image lineImage;
+
+	[SerializeField]
+	private Text quantityText;
+
+	public void SetContent(BoxSummonResultPopup.BoxSummonResultData itemData)
 	{
-		[SerializeField]
-		private CommonIcon icon;
+	}
 
-		[SerializeField]
-		private Text nameText;
-
-		[SerializeField]
-		private Image lineImage;
-
-		[SerializeField]
-		private Text quantityText;
-
-		public void SetContent(BoxSummonResultPopup.BoxSummonResultData itemData)
-		{
-		}
-
-		public void SetDispBorderline(bool f)
-		{
-		}
+	public void SetDispBorderline(bool f)
+	{
 	}
 }

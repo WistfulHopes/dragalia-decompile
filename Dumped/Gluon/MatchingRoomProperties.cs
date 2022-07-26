@@ -2,140 +2,139 @@ using System.Runtime.CompilerServices;
 using ExitGames.Client.Photon;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingRoomProperties
 {
-	public class MatchingRoomProperties
+	private string _region;
+
+	private string _clusterName;
+
+	private string _language;
+
+	private RoomEntryCondition _condition;
+
+	private Location _location;
+
+	public int QuestId
 	{
-		private string _region;
-
-		private string _clusterName;
-
-		private string _language;
-
-		private RoomEntryCondition _condition;
-
-		private Location _location;
-
-		public int QuestId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public MatchingType MatchingType
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(MatchingType);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
 		}
+	}
 
-		public RoomType RoomType
+	public MatchingType MatchingType
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(RoomType);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(MatchingType);
 		}
-
-		public MatchingContext MatchingContext
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(MatchingContext);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
 		}
+	}
 
-		public string Region
+	public RoomType RoomType
+	{
+		[CompilerGenerated]
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return default(RoomType);
 		}
-
-		public string ClusterName
+		[CompilerGenerated]
+		set
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
 		}
+	}
 
-		public string Language
+	public MatchingContext MatchingContext
+	{
+		[CompilerGenerated]
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return default(MatchingContext);
 		}
-
-		public RoomEntryCondition RoomEntryCondition
+		[CompilerGenerated]
+		set
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
 		}
+	}
 
-		public Location Location
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		public Hashtable GetCustomRoomProperties()
+	public string Region
+	{
+		get
 		{
 			return null;
 		}
+		set
+		{
+		}
+	}
 
-		public string[] GetCustomRoomPropertiesForLobby()
+	public string ClusterName
+	{
+		get
 		{
 			return null;
 		}
-
-		public static bool IsAutoJoinEnabled(MatchingType matchingType, RoomEntryCondition condition, RandomMatchingTypes randomMatchingType)
+		set
 		{
-			return default(bool);
 		}
+	}
+
+	public string Language
+	{
+		get
+		{
+			return null;
+		}
+		set
+		{
+		}
+	}
+
+	public RoomEntryCondition RoomEntryCondition
+	{
+		get
+		{
+			return null;
+		}
+		set
+		{
+		}
+	}
+
+	public Location Location
+	{
+		get
+		{
+			return null;
+		}
+		set
+		{
+		}
+	}
+
+	public Hashtable GetCustomRoomProperties()
+	{
+		return null;
+	}
+
+	public string[] GetCustomRoomPropertiesForLobby()
+	{
+		return null;
+	}
+
+	public static bool IsAutoJoinEnabled(MatchingType matchingType, RoomEntryCondition condition, RandomMatchingTypes randomMatchingType)
+	{
+		return default(bool);
 	}
 }

@@ -1,20 +1,19 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTreasureTradeShopTopView : ShopTradePanelBase
 {
-	public class ShopTreasureTradeShopTopView : ShopTradePanelBase
+	public static ShopTreasureTradeShopTopView Create(Transform parent, ShopTradeScene scene)
 	{
-		public static ShopTreasureTradeShopTopView Create(Transform parent, ShopTradeScene scene)
-		{
-			return null;
-		}
+		return null;
+	}
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void OnCellButtonPressed(int groupId)
-		{
-		}
+	public void OnCellButtonPressed(int groupId)
+	{
 	}
 }

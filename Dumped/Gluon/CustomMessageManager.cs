@@ -1,57 +1,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CustomMessageManager
 {
-	public class CustomMessageManager
+	private class CustomMessageInfo
 	{
-		private class CustomMessageInfo
-		{
-			public ICustomMessage messageReceiver;
+		public ICustomMessage messageReceiver;
 
-			public GameObject target;
+		public GameObject target;
 
-			public CustomMessageInfo(ICustomMessage messageReceiver, GameObject target)
-			{
-			}
-		}
-
-		private static CustomMessageManager _instance;
-
-		private Dictionary<int, List<CustomMessageInfo>> messageListeners;
-
-		public static CustomMessageManager instance => null;
-
-		private CustomMessageManager()
+		public CustomMessageInfo(ICustomMessage messageReceiver, GameObject target)
 		{
 		}
+	}
 
-		public void RegisterListener(CustomMessageType messageType, ICustomMessage messageReceiver, GameObject target)
-		{
-		}
+	private static CustomMessageManager _instance;
 
-		public void RemoveListener(CustomMessageType messageType, ICustomMessage messageReceiver)
-		{
-		}
+	private Dictionary<int, List<CustomMessageInfo>> messageListeners;
 
-		public void RemoveListener(GameObject targetObj)
-		{
-		}
+	public static CustomMessageManager instance => null;
 
-		public void RemoveAllListeners(CustomMessageType messageType)
-		{
-		}
+	private CustomMessageManager()
+	{
+	}
 
-		public void Clear()
-		{
-		}
+	public void RegisterListener(CustomMessageType messageType, ICustomMessage messageReceiver, GameObject target)
+	{
+	}
 
-		public void PostMessage(CustomMessageType messageType, object data)
-		{
-		}
+	public void RemoveListener(CustomMessageType messageType, ICustomMessage messageReceiver)
+	{
+	}
 
-		public void CheckTargets()
-		{
-		}
+	public void RemoveListener(GameObject targetObj)
+	{
+	}
+
+	public void RemoveAllListeners(CustomMessageType messageType)
+	{
+	}
+
+	public void Clear()
+	{
+	}
+
+	public void PostMessage(CustomMessageType messageType, object data)
+	{
+	}
+
+	public void CheckTargets()
+	{
 	}
 }

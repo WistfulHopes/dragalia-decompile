@@ -1,18 +1,17 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopDrawMaterialSummonOddsTableViewController : TableViewController<ShopDrawMaterialSummonOddsTableViewData>
 {
-	public class ShopDrawMaterialSummonOddsTableViewController : TableViewController<ShopDrawMaterialSummonOddsTableViewData>
+	private float cellHeight;
+
+	protected override float GetCellHeightAtIndex(int index)
 	{
-		private float cellHeight;
+		return default(float);
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public void ReloadByData(List<ShopDrawMaterialSummonOddsTableViewData> data)
-		{
-		}
+	public void ReloadByData(List<ShopDrawMaterialSummonOddsTableViewData> data)
+	{
 	}
 }

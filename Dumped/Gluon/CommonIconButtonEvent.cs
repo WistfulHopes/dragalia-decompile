@@ -1,10 +1,9 @@
 using System;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class CommonIconButtonEvent : UnityEvent<int>
 {
-	[Serializable]
-	public class CommonIconButtonEvent : UnityEvent<int>
-	{
-	}
 }

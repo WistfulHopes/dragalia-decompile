@@ -1,24 +1,23 @@
 using UnityEngine.EventSystems;
 
-namespace Gluon
+namespace Gluon;
+
+public class StandaloneInputModuleCustom : StandaloneInputModule
 {
-	public class StandaloneInputModuleCustom : StandaloneInputModule
+	public const int LAYER_UI = 5;
+
+	public PointerEventData GetLastPointerEventDataPublic(int pinterId)
 	{
-		public const int LAYER_UI = 5;
+		return null;
+	}
 
-		public PointerEventData GetLastPointerEventDataPublic(int pinterId)
-		{
-			return null;
-		}
+	public bool IsUITouched(int pointerId)
+	{
+		return default(bool);
+	}
 
-		public bool IsUITouched(int pointerId)
-		{
-			return default(bool);
-		}
-
-		public int GetActivePointerId()
-		{
-			return default(int);
-		}
+	public int GetActivePointerId()
+	{
+		return default(int);
 	}
 }

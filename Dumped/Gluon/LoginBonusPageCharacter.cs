@@ -2,37 +2,36 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class LoginBonusPageCharacter : LoginBonusPageBase
 {
-	public class LoginBonusPageCharacter : LoginBonusPageBase
+	private int rewardIndex;
+
+	protected override void Start()
 	{
-		private int rewardIndex;
+	}
 
-		protected override void Start()
-		{
-		}
+	public override void OnNextLoginBonus()
+	{
+	}
 
-		public override void OnNextLoginBonus()
-		{
-		}
+	protected override Vector2[] GetIconPositionArray(int total)
+	{
+		return null;
+	}
 
-		protected override Vector2[] GetIconPositionArray(int total)
-		{
-			return null;
-		}
+	private IEnumerator EnableTapCoroutine()
+	{
+		return null;
+	}
 
-		private IEnumerator EnableTapCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator ExecDemoCoroutine(Action endCallback)
+	{
+		return null;
+	}
 
-		private IEnumerator ExecDemoCoroutine(Action endCallback)
-		{
-			return null;
-		}
-
-		public override void OnScreenTapped()
-		{
-		}
+	public override void OnScreenTapped()
+	{
 	}
 }

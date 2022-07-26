@@ -1,21 +1,20 @@
-namespace Gluon
+namespace Gluon;
+
+public class FortMenuCharaCanvas : AnimationUICanvas
 {
-	public class FortMenuCharaCanvas : AnimationUICanvas
+	public FortMenuScene scene;
+
+	public OutGameBgChara bgCharacter;
+
+	private void Start()
 	{
-		public FortMenuScene scene;
+	}
 
-		public OutGameBgChara bgCharacter;
+	public void OnCharaPressed()
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		public void OnCharaPressed()
-		{
-		}
-
-		public void Talk(string voiceGroupName, string voiceName)
-		{
-		}
+	public void Talk(string voiceGroupName, string voiceName)
+	{
 	}
 }

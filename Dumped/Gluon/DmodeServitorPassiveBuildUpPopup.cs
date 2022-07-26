@@ -3,142 +3,141 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeServitorPassiveBuildUpPopup : PopupBase, ICustomMessage
 {
-	public class DmodeServitorPassiveBuildUpPopup : PopupBase, ICustomMessage
+	[SerializeField]
+	private DmodeServitorPassiveAbilityCell abilitycell;
+
+	[SerializeField]
+	private Text insufficientMaterialText;
+
+	[SerializeField]
+	private CraftMaterialCell[] materialCell;
+
+	[SerializeField]
+	private CommonSlider slider;
+
+	[SerializeField]
+	private Button plusButton;
+
+	[SerializeField]
+	private Button minusButton;
+
+	[SerializeField]
+	private Button okButton;
+
+	[SerializeField]
+	private Text useCountText;
+
+	[SerializeField]
+	private Text totalCountText;
+
+	[SerializeField]
+	private PointerEventHandler plusButtonEventHandler;
+
+	[SerializeField]
+	private PointerEventHandler minusButtonEventHandler;
+
+	[SerializeField]
+	private PointerEventHandler okButtonHandler;
+
+	public const string prefabPath = "Prefabs/OutGame/Dmode/DmodeServitor/DmodeServitorPassiveBuildUpPopup";
+
+	private DmodeServitorPassiveLevelElement dmodeServitorPassiveLevelElement;
+
+	private int passiveTypeNum;
+
+	private bool isEndInitTask;
+
+	private bool isSkipChangeValueTask;
+
+	private int _nowValue;
+
+	private int minValue;
+
+	private int maxValue;
+
+	private Coroutine updateUICoroutine;
+
+	private Coroutine countCoroutine;
+
+	public int nowValue
 	{
-		[SerializeField]
-		private DmodeServitorPassiveAbilityCell abilitycell;
-
-		[SerializeField]
-		private Text insufficientMaterialText;
-
-		[SerializeField]
-		private CraftMaterialCell[] materialCell;
-
-		[SerializeField]
-		private CommonSlider slider;
-
-		[SerializeField]
-		private Button plusButton;
-
-		[SerializeField]
-		private Button minusButton;
-
-		[SerializeField]
-		private Button okButton;
-
-		[SerializeField]
-		private Text useCountText;
-
-		[SerializeField]
-		private Text totalCountText;
-
-		[SerializeField]
-		private PointerEventHandler plusButtonEventHandler;
-
-		[SerializeField]
-		private PointerEventHandler minusButtonEventHandler;
-
-		[SerializeField]
-		private PointerEventHandler okButtonHandler;
-
-		public const string prefabPath = "Prefabs/OutGame/Dmode/DmodeServitor/DmodeServitorPassiveBuildUpPopup";
-
-		private DmodeServitorPassiveLevelElement dmodeServitorPassiveLevelElement;
-
-		private int passiveTypeNum;
-
-		private bool isEndInitTask;
-
-		private bool isSkipChangeValueTask;
-
-		private int _nowValue;
-
-		private int minValue;
-
-		private int maxValue;
-
-		private Coroutine updateUICoroutine;
-
-		private Coroutine countCoroutine;
-
-		public int nowValue
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			private set
-			{
-			}
+			return default(int);
 		}
-
-		public static DmodeServitorPassiveBuildUpPopup Create(int passiveNum)
-		{
-			return null;
-		}
-
-		public void SetContent(int passiveNum)
+		private set
 		{
 		}
+	}
 
-		public void ChangedSliderValue(float newValue)
-		{
-		}
+	public static DmodeServitorPassiveBuildUpPopup Create(int passiveNum)
+	{
+		return null;
+	}
 
-		private IEnumerator UpdatePopupUIDelay()
-		{
-			return null;
-		}
+	public void SetContent(int passiveNum)
+	{
+	}
 
-		private void UpdatePopupUI()
-		{
-		}
+	public void ChangedSliderValue(float newValue)
+	{
+	}
 
-		public void OnPlusButtonPressed()
-		{
-		}
+	private IEnumerator UpdatePopupUIDelay()
+	{
+		return null;
+	}
 
-		public void OnMinusButtonPressed()
-		{
-		}
+	private void UpdatePopupUI()
+	{
+	}
 
-		public void OnValueChangeButtonLongPressed(int countInc)
-		{
-		}
+	public void OnPlusButtonPressed()
+	{
+	}
 
-		private IEnumerator CountSpeedCoroutine(bool isPlus)
-		{
-			return null;
-		}
+	public void OnMinusButtonPressed()
+	{
+	}
 
-		public void OnReleasePassiveLevel()
-		{
-		}
+	public void OnValueChangeButtonLongPressed(int countInc)
+	{
+	}
 
-		public void OnPassiveAbilityLevelRelease(DmodeServitorPassiveLevelElement beforePassiveElement)
-		{
-		}
+	private IEnumerator CountSpeedCoroutine(bool isPlus)
+	{
+		return null;
+	}
 
-		private void UpdateMaterialCell()
-		{
-		}
+	public void OnReleasePassiveLevel()
+	{
+	}
 
-		private void OnIconPressed(CraftMaterialCellData data)
-		{
-		}
+	public void OnPassiveAbilityLevelRelease(DmodeServitorPassiveLevelElement beforePassiveElement)
+	{
+	}
 
-		private void OnEnable()
-		{
-		}
+	private void UpdateMaterialCell()
+	{
+	}
 
-		private void OnDisable()
-		{
-		}
+	private void OnIconPressed(CraftMaterialCellData data)
+	{
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	private void OnEnable()
+	{
+	}
+
+	private void OnDisable()
+	{
+	}
+
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

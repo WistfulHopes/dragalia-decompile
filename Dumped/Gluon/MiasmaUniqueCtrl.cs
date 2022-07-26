@@ -2,159 +2,158 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MiasmaUniqueCtrl : EnemyUniqueCtrl
 {
-	public class MiasmaUniqueCtrl : EnemyUniqueCtrl
+	public enum State
 	{
-		public enum State
+		Idle,
+		Start,
+		Run,
+		BoostBegin,
+		Boosting,
+		BoostEnd,
+		Wait,
+		Abort
+	}
+
+	private float _timer;
+
+	public const float POINT_MAX = 10000f;
+
+	[SerializeField]
+	private float _point;
+
+	private float _addPointSpeed;
+
+	private float _waitTimeForAuto;
+
+	private int _actionId;
+
+	private string _effName;
+
+	private const string effKey = "aura_miasma";
+
+	private string _beginSe;
+
+	private string _endSe;
+
+	public State state
+	{
+		[CompilerGenerated]
+		get
 		{
-			Idle,
-			Start,
-			Run,
-			BoostBegin,
-			Boosting,
-			BoostEnd,
-			Wait,
-			Abort
+			return default(State);
 		}
-
-		private float _timer;
-
-		public const float POINT_MAX = 10000f;
-
-		[SerializeField]
-		private float _point;
-
-		private float _addPointSpeed;
-
-		private float _waitTimeForAuto;
-
-		private int _actionId;
-
-		private string _effName;
-
-		private const string effKey = "aura_miasma";
-
-		private string _beginSe;
-
-		private string _endSe;
-
-		public State state
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(State);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float point
-		{
-			get
-			{
-				return default(float);
-			}
-			private set
-			{
-			}
-		}
-
-		private bool IsPointSync
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		private float PointSyncDelayTime
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		private void Reset()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public override void Initialize()
+	public float point
+	{
+		get
+		{
+			return default(float);
+		}
+		private set
 		{
 		}
+	}
 
-		private void Update()
+	private bool IsPointSync
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void ProcStart()
+	private float PointSyncDelayTime
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void ProcRun()
-		{
-		}
+	private void Reset()
+	{
+	}
 
-		private void ProcBoostBegin()
-		{
-		}
+	public override void Initialize()
+	{
+	}
 
-		private void ProcBoosting()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void ProcBoostEnd()
-		{
-		}
+	private void ProcStart()
+	{
+	}
 
-		private void ProcAbort()
-		{
-		}
+	private void ProcRun()
+	{
+	}
 
-		public void OnAbort()
-		{
-		}
+	private void ProcBoostBegin()
+	{
+	}
 
-		public void Setup(int actionId, float addPointSpeed, float waitTimeForAuto)
-		{
-		}
+	private void ProcBoosting()
+	{
+	}
 
-		public void SetupEffect(string effName, string beginSe, string endSe)
-		{
-		}
+	private void ProcBoostEnd()
+	{
+	}
 
-		public void SetPoint(float value)
-		{
-		}
+	private void ProcAbort()
+	{
+	}
 
-		public void AddPoint(float value, bool fromEventSkill = false)
-		{
-		}
+	public void OnAbort()
+	{
+	}
 
-		public void OnReceiveMiasmaEvent(CharacterSpecialState state)
-		{
-		}
+	public void Setup(int actionId, float addPointSpeed, float waitTimeForAuto)
+	{
+	}
 
-		public void SendMiasmaGaugeChangeEvent(float value)
-		{
-		}
+	public void SetupEffect(string effName, string beginSe, string endSe)
+	{
+	}
 
-		public void SendMiasmaGaugeChangeRequestEvent(float addValue)
-		{
-		}
+	public void SetPoint(float value)
+	{
+	}
+
+	public void AddPoint(float value, bool fromEventSkill = false)
+	{
+	}
+
+	public void OnReceiveMiasmaEvent(CharacterSpecialState state)
+	{
+	}
+
+	public void SendMiasmaGaugeChangeEvent(float value)
+	{
+	}
+
+	public void SendMiasmaGaugeChangeRequestEvent(float addValue)
+	{
 	}
 }

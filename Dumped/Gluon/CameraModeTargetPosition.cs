@@ -1,17 +1,16 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CameraModeTargetPosition : CameraModeBase
 {
-	public class CameraModeTargetPosition : CameraModeBase
+	public Vector3 targetPosition;
+
+	public CameraModeTargetPosition(CameraController controller)
 	{
-		public Vector3 targetPosition;
+	}
 
-		public CameraModeTargetPosition(CameraController controller)
-		{
-		}
-
-		public override void Update()
-		{
-		}
+	public override void Update()
+	{
 	}
 }

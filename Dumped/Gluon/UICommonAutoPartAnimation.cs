@@ -1,30 +1,29 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class UICommonAutoPartAnimation : MonoBehaviour
 {
-	public class UICommonAutoPartAnimation : MonoBehaviour
+	public enum Type
 	{
-		public enum Type
-		{
-			None,
-			NewIcon
-		}
+		None,
+		NewIcon
+	}
 
-		[SerializeField]
-		public Type type;
+	[SerializeField]
+	public Type type;
 
-		public bool executeOnAwake;
+	public bool executeOnAwake;
 
-		public void Awake()
-		{
-		}
+	public void Awake()
+	{
+	}
 
-		public void DoAnimation()
-		{
-		}
+	public void DoAnimation()
+	{
+	}
 
-		public void DoNewIconFlashingAnimation()
-		{
-		}
+	public void DoNewIconFlashingAnimation()
+	{
 	}
 }

@@ -1,16 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class StartDashImageSetting : MonoBehaviour
 {
-	public class StartDashImageSetting : MonoBehaviour
-	{
-		public Image singleImageViewImage;
+	public Image singleImageViewImage;
 
-		public GameObject startDashComment;
+	public GameObject startDashComment;
 
-		public SummonButton startDashButton;
+	public SummonButton startDashButton;
 
-		public Image topBannerImage;
-	}
+	public Image topBannerImage;
 }

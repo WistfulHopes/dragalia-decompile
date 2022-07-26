@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class ContactChangeDragonListController : CommonIconListController
 {
-	public class ContactChangeDragonListController : CommonIconListController
-	{
-	}
 }

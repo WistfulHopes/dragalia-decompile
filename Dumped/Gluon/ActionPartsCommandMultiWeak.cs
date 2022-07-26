@@ -1,33 +1,32 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsCommandMultiWeak : ActionParts
 {
-	public class ActionPartsCommandMultiWeak : ActionParts
+	public enum CommandType
 	{
-		public enum CommandType
-		{
-			SelectAction,
-			Cancel,
-			AdjustIcon,
-			TurnAllWeak
-		}
+		SelectAction,
+		Cancel,
+		AdjustIcon,
+		TurnAllWeak
+	}
 
-		private readonly CommandMultiWeakData _partsData;
+	private readonly CommandMultiWeakData _partsData;
 
-		public ActionPartsCommandMultiWeak(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsCommandMultiWeak(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
 	}
 }

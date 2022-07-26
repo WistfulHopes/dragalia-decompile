@@ -1,13 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public enum DungeonItemEffect
 {
-	public enum DungeonItemEffect
-	{
-		NULL,
-		HP,
-		HP_DMG,
-		SP,
-		SP_DMG,
-		DP,
-		DP_DMG
-	}
+	NULL,
+	HP,
+	HP_DMG,
+	SP,
+	SP_DMG,
+	DP,
+	DP_DMG
 }

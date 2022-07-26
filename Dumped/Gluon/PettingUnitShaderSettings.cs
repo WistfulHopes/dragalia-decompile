@@ -1,9 +1,8 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class PettingUnitShaderSettings : SceneShaderSettings
 {
-	[ExecuteAlways]
-	public class PettingUnitShaderSettings : SceneShaderSettings
-	{
-	}
 }

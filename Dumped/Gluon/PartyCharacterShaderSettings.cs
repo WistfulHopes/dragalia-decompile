@@ -1,10 +1,9 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class PartyCharacterShaderSettings : SceneShaderSettings
 {
-	[ExecuteAlways]
-	public class PartyCharacterShaderSettings : SceneShaderSettings
-	{
-		public string bgFileName;
-	}
+	public string bgFileName;
 }

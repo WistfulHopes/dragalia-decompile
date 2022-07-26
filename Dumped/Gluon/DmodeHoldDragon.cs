@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public class DmodeHoldDragon
 {
-	public class DmodeHoldDragon
-	{
-		public int dragonId;
+	public int dragonId;
 
-		public int usableCount;
+	public int usableCount;
 
-		public int passiveAbilityId;
-	}
+	public int passiveAbilityId;
 }

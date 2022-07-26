@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public class AlbumCommonIconCellData : CommonIconListCellData
 {
-	public class AlbumCommonIconCellData : CommonIconListCellData
-	{
-		public bool isPartyIn;
-	}
+	public bool isPartyIn;
 }

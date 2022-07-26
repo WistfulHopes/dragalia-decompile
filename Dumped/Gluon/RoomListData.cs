@@ -1,15 +1,14 @@
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class RoomListData : RoomList
 {
-	public class RoomListData : RoomList
+	public bool isFriend;
+
+	public bool isSameGuild;
+
+	public RoomListData(RoomList list, bool friend = false)
 	{
-		public bool isFriend;
-
-		public bool isSameGuild;
-
-		public RoomListData(RoomList list, bool friend = false)
-		{
-		}
 	}
 }

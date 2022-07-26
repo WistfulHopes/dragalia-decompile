@@ -1,34 +1,33 @@
 using DG.Tweening;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultRankUpRewardController : TableViewController<QuestResultModel.PlayerLevelupModel.PlantEnhanceInfo>
 {
-	public class QuestResultRankUpRewardController : TableViewController<QuestResultModel.PlayerLevelupModel.PlantEnhanceInfo>
+	private float cellHeight;
+
+	private float cellWidth;
+
+	protected override void Awake()
 	{
-		private float cellHeight;
+	}
 
-		private float cellWidth;
+	public void LoadData()
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public void LoadData()
-		{
-		}
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public Sequence FadeIn()
-		{
-			return null;
-		}
+	public Sequence FadeIn()
+	{
+		return null;
 	}
 }

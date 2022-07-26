@@ -1,18 +1,17 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class EventQuestCharacterShaderSettings : SceneShaderSettings
 {
-	[ExecuteAlways]
-	public class EventQuestCharacterShaderSettings : SceneShaderSettings
+	private EventQuestCharacterShaderSettings asset;
+
+	public void Load(EventQuestCharacterShaderSettings asset)
 	{
-		private EventQuestCharacterShaderSettings asset;
+	}
 
-		public void Load(EventQuestCharacterShaderSettings asset)
-		{
-		}
-
-		public void Save()
-		{
-		}
+	public void Save()
+	{
 	}
 }

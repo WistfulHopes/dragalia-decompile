@@ -4,54 +4,53 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestRoomListController : TableViewController<RoomListData>
 {
-	public class QuestRoomListController : TableViewController<RoomListData>
+	private float cellWidth;
+
+	private float cellHeightShort;
+
+	private float cellHeightLong;
+
+	public UnityAction<RoomList> listButtonCallBack;
+
+	public string originalCellPrefabPath;
+
+	[SerializeField]
+	private Text nothingText;
+
+	private const int paddingBottomLayoutHeight = 80;
+
+	protected override void Awake()
 	{
-		private float cellWidth;
+	}
 
-		private float cellHeightShort;
+	public void LoadData(List<RoomListData> data)
+	{
+	}
 
-		private float cellHeightLong;
+	protected override TableViewCell<RoomListData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		public UnityAction<RoomList> listButtonCallBack;
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public string originalCellPrefabPath;
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		[SerializeField]
-		private Text nothingText;
+	public void SetText(bool enable)
+	{
+	}
 
-		private const int paddingBottomLayoutHeight = 80;
-
-		protected override void Awake()
-		{
-		}
-
-		public void LoadData(List<RoomListData> data)
-		{
-		}
-
-		protected override TableViewCell<RoomListData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public void SetText(bool enable)
-		{
-		}
-
-		public void ClearCells()
-		{
-		}
+	public void ClearCells()
+	{
 	}
 }

@@ -2,50 +2,49 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class RetryMain : SceneBase
 {
-	public class RetryMain : SceneBase
+	private bool isHost;
+
+	private int questId;
+
+	private int lastQuestStartPlayerCount;
+
+	private IEnumerator Start()
 	{
-		private bool isHost;
+		return null;
+	}
 
-		private int questId;
+	private void OnEnterScene()
+	{
+	}
 
-		private int lastQuestStartPlayerCount;
+	private IEnumerator LoadSceneMulti()
+	{
+		return null;
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private void Disconnect()
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private bool CheckError()
+	{
+		return default(bool);
+	}
 
-		private IEnumerator LoadSceneMulti()
-		{
-			return null;
-		}
+	private void PopupHostExitConfirmCreate([Optional] UnityAction close)
+	{
+	}
 
-		private void Disconnect()
-		{
-		}
+	public void LoadBeforeQuestScene()
+	{
+	}
 
-		private bool CheckError()
-		{
-			return default(bool);
-		}
-
-		private void PopupHostExitConfirmCreate([Optional] UnityAction close)
-		{
-		}
-
-		public void LoadBeforeQuestScene()
-		{
-		}
-
-		private string GetNextSceneName()
-		{
-			return null;
-		}
+	private string GetNextSceneName()
+	{
+		return null;
 	}
 }

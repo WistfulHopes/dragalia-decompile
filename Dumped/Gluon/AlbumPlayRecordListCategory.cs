@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum AlbumPlayRecordListCategory
 {
-	public enum AlbumPlayRecordListCategory
-	{
-		Element,
-		WeaponType,
-		CharaType
-	}
+	Element,
+	WeaponType,
+	CharaType
 }

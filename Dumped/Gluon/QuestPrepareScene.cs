@@ -7,262 +7,261 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestPrepareScene : SceneBase, ICustomMessage
 {
-	public class QuestPrepareScene : SceneBase, ICustomMessage
+	public static int selectQuestId;
+
+	public Camera mainCamera;
+
+	public Camera renderChangeMemberCamera;
+
+	public QuestCharacterCtrl[] characterCtrls;
+
+	private QuestPrepareData[] questPartyDatas;
+
+	public QuestPrepareData subPartyMemberData;
+
+	private QuestPrepareData[] clearPartyDatas;
+
+	public static Action<Action> onFinishMapInstance;
+
+	public bool isChagingSubMember;
+
+	public QuestPrepareCanvas questPrepareCanvas;
+
+	private PopupCanvas changeMemberPopupCanvas;
+
+	private Vector3 localButtonBasePos;
+
+	private AudioPlayback bgmPlayback;
+
+	private PartyScene partyScene;
+
+	private Button backButton;
+
+	private EmptyQuestClearUnitData[] emptyUnitData;
+
+	private bool isConnecting;
+
+	public static QuestSupportListCellData supportUserData
 	{
-		public static int selectQuestId;
-
-		public Camera mainCamera;
-
-		public Camera renderChangeMemberCamera;
-
-		public QuestCharacterCtrl[] characterCtrls;
-
-		private QuestPrepareData[] questPartyDatas;
-
-		public QuestPrepareData subPartyMemberData;
-
-		private QuestPrepareData[] clearPartyDatas;
-
-		public static Action<Action> onFinishMapInstance;
-
-		public bool isChagingSubMember;
-
-		public QuestPrepareCanvas questPrepareCanvas;
-
-		private PopupCanvas changeMemberPopupCanvas;
-
-		private Vector3 localButtonBasePos;
-
-		private AudioPlayback bgmPlayback;
-
-		private PartyScene partyScene;
-
-		private Button backButton;
-
-		private EmptyQuestClearUnitData[] emptyUnitData;
-
-		private bool isConnecting;
-
-		public static QuestSupportListCellData supportUserData
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		public QuestPrepareData[] activePartyPrepareData => null;
-
-		public bool isCurrentClearParty
+		[CompilerGenerated]
+		set
 		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
 		}
+	}
 
-		private bool IsValidPlayFlow()
+	public QuestPrepareData[] activePartyPrepareData => null;
+
+	public bool isCurrentClearParty
+	{
+		get
 		{
 			return default(bool);
 		}
-
-		private void Awake()
+		set
 		{
 		}
+	}
 
-		public static void PreLoad()
-		{
-		}
+	private bool IsValidPlayFlow()
+	{
+		return default(bool);
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private void Awake()
+	{
+	}
 
-		public void ResetPartySwichClearPartyData()
-		{
-		}
+	public static void PreLoad()
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private IEnumerator SetupRenderBg()
-		{
-			return null;
-		}
+	public void ResetPartySwichClearPartyData()
+	{
+	}
 
-		public void ReloadAllCharacterModels(bool isAutoSelect = false)
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public void ChangeMemberSelected(int index)
-		{
-		}
+	private IEnumerator SetupRenderBg()
+	{
+		return null;
+	}
 
-		public void ReloadClearPartyData(bool isShowEmptyPop = true)
-		{
-		}
+	public void ReloadAllCharacterModels(bool isAutoSelect = false)
+	{
+	}
 
-		public void ReloadQuestPartyData()
-		{
-		}
+	public void ChangeMemberSelected(int index)
+	{
+	}
 
-		public void ChangeQuestPartyData(int index)
-		{
-		}
+	public void ReloadClearPartyData(bool isShowEmptyPop = true)
+	{
+	}
 
-		private void QuestStartButtonPressed()
-		{
-		}
+	public void ReloadQuestPartyData()
+	{
+	}
 
-		private void PartyEditButtonPressed()
-		{
-		}
+	public void ChangeQuestPartyData(int index)
+	{
+	}
 
-		private void BackButtonPressed()
-		{
-		}
+	private void QuestStartButtonPressed()
+	{
+	}
 
-		private void ReturnToPrevScene()
-		{
-		}
+	private void PartyEditButtonPressed()
+	{
+	}
 
-		private static void GoGuildScene()
-		{
-		}
+	private void BackButtonPressed()
+	{
+	}
 
-		private bool IsMainQuest()
-		{
-			return default(bool);
-		}
+	private void ReturnToPrevScene()
+	{
+	}
 
-		private void BindBackButtonForQuestSupportPage()
-		{
-		}
+	private static void GoGuildScene()
+	{
+	}
 
-		private IEnumerator DelayClearPrepareScene(float waitTime)
-		{
-			return null;
-		}
+	private bool IsMainQuest()
+	{
+		return default(bool);
+	}
 
-		private void BackButtonPressedCallback()
-		{
-		}
+	private void BindBackButtonForQuestSupportPage()
+	{
+	}
 
-		private void EventBackButtonPressedCallback()
-		{
-		}
+	private IEnumerator DelayClearPrepareScene(float waitTime)
+	{
+		return null;
+	}
 
-		private void EventTopBackButtonPressedCallback()
-		{
-		}
+	private void BackButtonPressedCallback()
+	{
+	}
 
-		public void OnFooterPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
+	private void EventBackButtonPressedCallback()
+	{
+	}
 
-		public void OnFooterLongPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
+	private void EventTopBackButtonPressedCallback()
+	{
+	}
 
-		private IEnumerator WaitExitAnim(string tabName, Footer.MenuTab tabType)
-		{
-			return null;
-		}
+	public void OnFooterPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
 
-		public void CreateSubPartyMemberData()
-		{
-		}
+	public void OnFooterLongPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
 
-		public static QuestPrepareData[] CreateClearPartyData(PartySettingList[] partyData)
-		{
-			return null;
-		}
+	private IEnumerator WaitExitAnim(string tabName, Footer.MenuTab tabType)
+	{
+		return null;
+	}
 
-		private void SetLayerRecursively(Transform t, int layerId)
-		{
-		}
+	public void CreateSubPartyMemberData()
+	{
+	}
 
-		public void GetClearPartyData()
-		{
-		}
+	public static QuestPrepareData[] CreateClearPartyData(PartySettingList[] partyData)
+	{
+		return null;
+	}
 
-		public void RequestSaveClearPartyMulti(int questId)
-		{
-		}
+	private void SetLayerRecursively(Transform t, int layerId)
+	{
+	}
 
-		private void OnQuestGetQuestClearPartySuccess(QuestGetQuestClearPartyResponse res)
-		{
-		}
+	public void GetClearPartyData()
+	{
+	}
 
-		private void OnWallGetWallClearPartySuccess(WallGetWallClearPartyResponse res)
-		{
-		}
+	public void RequestSaveClearPartyMulti(int questId)
+	{
+	}
 
-		public void OnError(ErrorType errorType, int resultCode)
-		{
-		}
+	private void OnQuestGetQuestClearPartySuccess(QuestGetQuestClearPartyResponse res)
+	{
+	}
 
-		private void GoToIngame()
-		{
-		}
+	private void OnWallGetWallClearPartySuccess(WallGetWallClearPartyResponse res)
+	{
+	}
 
-		public bool HasClearPartyData()
-		{
-			return default(bool);
-		}
+	public void OnError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		private new Coroutine StartCoroutine(IEnumerator coroutine)
-		{
-			return null;
-		}
+	private void GoToIngame()
+	{
+	}
 
-		public override void OnBeforeLeaving()
-		{
-		}
+	public bool HasClearPartyData()
+	{
+		return default(bool);
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	private new Coroutine StartCoroutine(IEnumerator coroutine)
+	{
+		return null;
+	}
 
-		private void DestroyPartyBgManager(bool isImmediately = false)
-		{
-		}
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		private void ShowEmptyQuestClearUnitPopup()
-		{
-		}
+	private void DestroyPartyBgManager(bool isImmediately = false)
+	{
+	}
 
-		private void Tutorial_2_1_2()
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
 
-		private IEnumerator Tutorial_2_1_2_Coroutine()
-		{
-			return null;
-		}
+	private void ShowEmptyQuestClearUnitPopup()
+	{
+	}
 
-		public void GoPartyEquipScene()
-		{
-		}
+	private void Tutorial_2_1_2()
+	{
+	}
 
-		private void DetachFooterCallback()
-		{
-		}
+	private IEnumerator Tutorial_2_1_2_Coroutine()
+	{
+		return null;
+	}
+
+	public void GoPartyEquipScene()
+	{
+	}
+
+	private void DetachFooterCallback()
+	{
 	}
 }

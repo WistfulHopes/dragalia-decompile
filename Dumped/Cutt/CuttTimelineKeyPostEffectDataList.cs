@@ -1,9 +1,8 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyPostEffectDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyPostEffectData>
 {
-	[Serializable]
-	public class CuttTimelineKeyPostEffectDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyPostEffectData>
-	{
-	}
 }

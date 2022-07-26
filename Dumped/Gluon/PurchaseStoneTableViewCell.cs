@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class PurchaseStoneTableViewCell : ShopCommonItemTableViewCell
 {
-	public class PurchaseStoneTableViewCell : ShopCommonItemTableViewCell
-	{
-	}
 }

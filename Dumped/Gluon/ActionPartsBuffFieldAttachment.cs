@@ -1,50 +1,49 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsBuffFieldAttachment : ActionParts
 {
-	public class ActionPartsBuffFieldAttachment : ActionParts
+	private readonly BuffFieldAttachmentData _partsData;
+
+	private ActionPartsBulletHitAttribute hitAttr;
+
+	private string hitAttrLabel;
+
+	private CollisionHitAttribute[] _hitAttributes;
+
+	public ActionPartsBuffFieldAttachment(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly BuffFieldAttachmentData _partsData;
+	}
 
-		private ActionPartsBulletHitAttribute hitAttr;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		private string hitAttrLabel;
+	protected string GetHitAttributeLabel()
+	{
+		return null;
+	}
 
-		private CollisionHitAttribute[] _hitAttributes;
+	protected string ConvertHitAttributeLabel(InGameDef.CharacterType charaType, string label)
+	{
+		return null;
+	}
 
-		public ActionPartsBuffFieldAttachment(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected void RegisterHitAttribute(ActionPartsBulletHitAttribute attr, InGameDef.CharacterType charaType, string label)
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		protected string GetHitAttributeLabel()
-		{
-			return null;
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected string ConvertHitAttributeLabel(InGameDef.CharacterType charaType, string label)
-		{
-			return null;
-		}
-
-		protected void RegisterHitAttribute(ActionPartsBulletHitAttribute attr, InGameDef.CharacterType charaType, string label)
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		protected void CopyHitAttrGeometry(CollisionHitAttribute other, int i)
-		{
-		}
+	protected void CopyHitAttrGeometry(CollisionHitAttribute other, int i)
+	{
 	}
 }

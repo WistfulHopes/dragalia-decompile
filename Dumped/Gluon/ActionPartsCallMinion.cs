@@ -2,38 +2,37 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsCallMinion : ActionParts
 {
-	public class ActionPartsCallMinion : ActionParts
+	private readonly CallMinionData _partsData;
+
+	private EnemyCharacter.CallMinionInfo callMinionInfo;
+
+	private int taskId;
+
+	private RunActionIntParameter taskIdParam;
+
+	public ActionPartsCallMinion(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly CallMinionData _partsData;
+	}
 
-		private EnemyCharacter.CallMinionInfo callMinionInfo;
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		private int taskId;
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		private RunActionIntParameter taskIdParam;
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsCallMinion(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		public override RunActionParameterBase CreateRunActionParameter()
-		{
-			return null;
-		}
-
-		public override void SetRunActionParameter(RunActionParameterBase param)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		private Vector3 CalcPopPos(ref Transform transBase)
-		{
-			return default(Vector3);
-		}
+	private Vector3 CalcPopPos(ref Transform transBase)
+	{
+		return default(Vector3);
 	}
 }

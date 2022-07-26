@@ -1,32 +1,31 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventRewardPopup : PopupBase
 {
-	public class EventRewardPopup : PopupBase
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Image logoImage;
+
+	[SerializeField]
+	private EventRewardInfoCtrl eventInfo;
+
+	[SerializeField]
+	private EventRewardCtrl rewardCtrl;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		private Text titleText;
+	}
 
-		[SerializeField]
-		private Image logoImage;
+	public void UpdateReceiveButtonInformation()
+	{
+	}
 
-		[SerializeField]
-		private EventRewardInfoCtrl eventInfo;
-
-		[SerializeField]
-		private EventRewardCtrl rewardCtrl;
-
-		protected override void Start()
-		{
-		}
-
-		public void UpdateReceiveButtonInformation()
-		{
-		}
-
-		public void SetContent()
-		{
-		}
+	public void SetContent()
+	{
 	}
 }

@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public class DismantleWeaponListCellData : CommonEquipIconCellData
 {
-	public class DismantleWeaponListCellData : CommonEquipIconCellData
-	{
-		public bool isNotDismantle;
-	}
+	public bool isNotDismantle;
 }

@@ -3,79 +3,73 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventTalkWindowModule : MonoBehaviour
 {
-	public class EventTalkWindowModule : MonoBehaviour
+	public enum Type
 	{
-		public enum Type
-		{
-			Balloon,
-			TextWindow
-		}
+		Balloon,
+		TextWindow
+	}
 
-		[SerializeField]
-		[Header("Talk")]
-		private Text charaNameText;
+	[SerializeField]
+	private Text charaNameText;
 
-		[SerializeField]
-		private Text contentText;
+	[SerializeField]
+	private Text contentText;
 
-		[SerializeField]
-		[Header("GO")]
-		public RectTransform rt;
+	[SerializeField]
+	public RectTransform rt;
 
-		[SerializeField]
-		[Header("Animations")]
-		public AnimationUITalkWindow balloonAnimation;
+	[SerializeField]
+	public AnimationUITalkWindow balloonAnimation;
 
-		public UIAnimationPublisher commonBalloonAnimaiton;
+	public UIAnimationPublisher commonBalloonAnimaiton;
 
-		[SerializeField]
-		[Header("Type")]
-		public Type type;
+	[SerializeField]
+	public Type type;
 
-		[SerializeField]
-		[Header("StatusCtrl")]
-		public EventStatusInfoCtrl infoCtrl;
+	[SerializeField]
+	public EventStatusInfoCtrl infoCtrl;
 
-		private float contentAnimationSpeed;
+	private float contentAnimationSpeed;
 
-		public void SetCharaName(string charaName)
-		{
-		}
+	public void SetCharaName(string charaName)
+	{
+	}
 
-		public void SetContent(string content)
-		{
-		}
+	public void SetContent(string content)
+	{
+	}
 
-		public void SetShowHide(bool show)
-		{
-		}
+	public void SetShowHide(bool show)
+	{
+	}
 
-		public bool IsActiveInHierarchy()
-		{
-			return default(bool);
-		}
+	public bool IsActiveInHierarchy()
+	{
+		return default(bool);
+	}
 
-		public void SetShowHideWithScale(bool show)
-		{
-		}
+	public void SetShowHideWithScale(bool show)
+	{
+	}
 
-		public bool IsHidingWithScale()
-		{
-			return default(bool);
-		}
+	public bool IsHidingWithScale()
+	{
+		return default(bool);
+	}
 
-		public void StartEnterAnimation()
-		{
-		}
+	public void StartEnterAnimation()
+	{
+	}
 
-		public void StartExitAnimation()
-		{
-		}
+	public void StartExitAnimation()
+	{
+	}
 
-		public void StartCloseAndOpenAnimation(string voiceData, [Optional] Action onCloseAndReopen)
-		{
-		}
+	public void StartCloseAndOpenAnimation(string voiceData, [Optional] Action onCloseAndReopen)
+	{
 	}
 }

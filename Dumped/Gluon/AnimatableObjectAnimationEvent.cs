@@ -1,21 +1,20 @@
 using Cute.Core;
 
-namespace Gluon
+namespace Gluon;
+
+public class AnimatableObjectAnimationEvent : FastUpdateMonoBehaviour
 {
-	public class AnimatableObjectAnimationEvent : FastUpdateMonoBehaviour
+	public AnimatableObject owner;
+
+	public void SetWeaponVisibility(int visible)
 	{
-		public AnimatableObject owner;
+	}
 
-		public void SetWeaponVisibility(int visible)
-		{
-		}
+	public void ChangePartsAMeshForAO(int partsNo)
+	{
+	}
 
-		public void ChangePartsAMeshForAO(int partsNo)
-		{
-		}
-
-		public void SwitchingTextureForAO(string index)
-		{
-		}
+	public void SwitchingTextureForAO(string index)
+	{
 	}
 }

@@ -3,76 +3,70 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildInfoTableViewCell : TableViewCell<GuildInfoCellData>
 {
-	public class GuildInfoTableViewCell : TableViewCell<GuildInfoCellData>
+	[SerializeField]
+	public RawImage emblemImage;
+
+	[SerializeField]
+	public Image ribbonImage;
+
+	public Sprite[] approvalRibbons;
+
+	public Text[] approvalTexts;
+
+	[SerializeField]
+	public Text[] activityTexts;
+
+	[SerializeField]
+	public Text populationText;
+
+	public Text nameText;
+
+	public Text mottoText;
+
+	[SerializeField]
+	public Button button;
+
+	public const string prefabPath = "Prefabs/OutGame/Guild/GuildInfoTableViewCell";
+
+	public Action<GuildInfoCellData> onCellPressed
 	{
-		[SerializeField]
-		[Header("Emblem")]
-		public RawImage emblemImage;
-
-		[SerializeField]
-		[Header("Approval")]
-		public Image ribbonImage;
-
-		public Sprite[] approvalRibbons;
-
-		public Text[] approvalTexts;
-
-		[SerializeField]
-		[Header("Activity")]
-		public Text[] activityTexts;
-
-		[SerializeField]
-		[Header("InfoTexts")]
-		public Text populationText;
-
-		public Text nameText;
-
-		public Text mottoText;
-
-		[SerializeField]
-		[Header("Button")]
-		public Button button;
-
-		public const string prefabPath = "Prefabs/OutGame/Guild/GuildInfoTableViewCell";
-
-		public Action<GuildInfoCellData> onCellPressed
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		public Action<GuildInfoCellData> rejectAction
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public override void UpdateContent(GuildInfoCellData data)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void OnCellPressed()
+	public Action<GuildInfoCellData> rejectAction
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void OnRejectButtonPressed()
-		{
-		}
+	public override void UpdateContent(GuildInfoCellData data)
+	{
+	}
+
+	public void OnCellPressed()
+	{
+	}
+
+	public void OnRejectButtonPressed()
+	{
 	}
 }

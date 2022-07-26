@@ -2,21 +2,20 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactWalkerSkilCell : MonoBehaviour
 {
-	public class ContactWalkerSkilCell : MonoBehaviour
+	[SerializeField]
+	private CommonIcon skillIcon;
+
+	[SerializeField]
+	private Text skillName;
+
+	[SerializeField]
+	private Text skillDiscription;
+
+	public void Setup(SkillDataElement skillData)
 	{
-		[SerializeField]
-		private CommonIcon skillIcon;
-
-		[SerializeField]
-		private Text skillName;
-
-		[SerializeField]
-		private Text skillDiscription;
-
-		public void Setup(SkillDataElement skillData)
-		{
-		}
 	}
 }

@@ -1,20 +1,19 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleReleaseDonePopup : CommonPopup
 {
-	public class GrowthManaCircleReleaseDonePopup : CommonPopup
+	public Text abilityText;
+
+	public CommonExAbilityCell[] exAbilityCells;
+
+	public static GrowthManaCircleReleaseDonePopup Create(ManaPieceType pieceType)
 	{
-		public Text abilityText;
+		return null;
+	}
 
-		public CommonExAbilityCell[] exAbilityCells;
-
-		public static GrowthManaCircleReleaseDonePopup Create(ManaPieceType pieceType)
-		{
-			return null;
-		}
-
-		public void SetParameters(GrowthManaCircleManaPieceData pieceData, GrowthManaCircleModel model)
-		{
-		}
+	public void SetParameters(GrowthManaCircleManaPieceData pieceData, GrowthManaCircleModel model)
+	{
 	}
 }

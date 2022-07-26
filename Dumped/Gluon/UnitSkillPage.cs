@@ -1,24 +1,22 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class UnitSkillPage : MonoBehaviour
 {
-	public class UnitSkillPage : MonoBehaviour
+	[SerializeField]
+	public UnitDetailSkillInfoCell[] skillCellList;
+
+	[HideInInspector]
+	public UnitDetailCanvas parentCanvas;
+
+	private UnitDetailModel.UnitDetailType unitType;
+
+	public void SetupSkillPage(UnitDetailModel.UnitDetailType type)
 	{
-		[SerializeField]
-		[Header("Cells")]
-		public UnitDetailSkillInfoCell[] skillCellList;
+	}
 
-		[HideInInspector]
-		public UnitDetailCanvas parentCanvas;
-
-		private UnitDetailModel.UnitDetailType unitType;
-
-		public void SetupSkillPage(UnitDetailModel.UnitDetailType type)
-		{
-		}
-
-		private void SetSkillInfo()
-		{
-		}
+	private void SetSkillInfo()
+	{
 	}
 }

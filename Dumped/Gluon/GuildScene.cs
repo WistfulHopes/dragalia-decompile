@@ -2,73 +2,70 @@ using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildScene : SceneBase
 {
-	public class GuildScene : SceneBase
+	[SerializeField]
+	private Transform mainPageNode;
+
+	[SerializeField]
+	private GameObject httpGreenLight;
+
+	public Camera mainUICamera;
+
+	[HideInInspector]
+	public Canvas canvas;
+
+	private TouchGuardObject awakeTouchGuard;
+
+	public GuildTopPage topPage
 	{
-		[SerializeField]
-		[Header("PanelParent")]
-		private Transform mainPageNode;
-
-		[SerializeField]
-		[Header("HttpGreenLight")]
-		private GameObject httpGreenLight;
-
-		public Camera mainUICamera;
-
-		[HideInInspector]
-		public Canvas canvas;
-
-		private TouchGuardObject awakeTouchGuard;
-
-		public GuildTopPage topPage
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		private void Awake()
-		{
-		}
-
-		private IEnumerator Start()
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private void OnPrevSceneExitDone()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void LoadTopPage()
-		{
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	private void OnInitReady()
+	{
+	}
 
-		public override void OnItemUsed()
-		{
-		}
+	private void LoadTopPage()
+	{
+	}
 
-		public override void OnBeforeLeaving()
-		{
-		}
+	private void OnEnterScene()
+	{
+	}
+
+	public override void OnPresentReceived()
+	{
+	}
+
+	public override void OnItemUsed()
+	{
+	}
+
+	public override void OnBeforeLeaving()
+	{
 	}
 }

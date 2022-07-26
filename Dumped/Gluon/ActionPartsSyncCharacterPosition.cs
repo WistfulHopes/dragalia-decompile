@@ -1,21 +1,20 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsSyncCharacterPosition : ActionParts
 {
-	public class ActionPartsSyncCharacterPosition : ActionParts
+	private readonly SyncCharacterPositionData _partsData;
+
+	public ActionPartsSyncCharacterPosition(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly SyncCharacterPositionData _partsData;
+	}
 
-		public ActionPartsSyncCharacterPosition(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		private void SyncPlayerPosition()
-		{
-		}
+	private void SyncPlayerPosition()
+	{
 	}
 }

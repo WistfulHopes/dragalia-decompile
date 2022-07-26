@@ -1,20 +1,19 @@
-namespace Gluon
+namespace Gluon;
+
+public class BattleRoyalCharaSkinIconListCellData : CommonIconListCellData
 {
-	public class BattleRoyalCharaSkinIconListCellData : CommonIconListCellData
+	public enum SkinType
 	{
-		public enum SkinType
-		{
-			None,
-			Equipable,
-			Relesable,
-			ShopOnly,
-			NoRelease
-		}
-
-		public SkinType skinType;
-
-		public int specialSkillId;
-
-		public bool isOnSale;
+		None,
+		Equipable,
+		Relesable,
+		ShopOnly,
+		NoRelease
 	}
+
+	public SkinType skinType;
+
+	public int specialSkillId;
+
+	public bool isOnSale;
 }

@@ -2,80 +2,76 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class RecoverStaminaMethodSelectPopup : PopupBase
 {
-	public class RecoverStaminaMethodSelectPopup : PopupBase
+	[SerializeField]
+	public Text titleText;
+
+	public Text commentText;
+
+	public Text ownedStoneText;
+
+	public Text ownedPaidStoneText;
+
+	public Text itemRecoverCommentText;
+
+	public Text insufficientStaminaCommentText;
+
+	[SerializeField]
+	public Button itemButton;
+
+	public Button freeStoneButton;
+
+	public Button paidStoneButton;
+
+	[SerializeField]
+	public Text paidStoneText;
+
+	public Text freeStoneText;
+
+	public GameObject multiStaminaIconGO;
+
+	private bool insufficientOfStone;
+
+	private bool isCreateByQuest;
+
+	public static bool IsInShopMaintenance()
 	{
-		[SerializeField]
-		[Header("Contents")]
-		public Text titleText;
+		return default(bool);
+	}
 
-		public Text commentText;
+	public static void CreateModule(GameObject destroyWatcherAttach, bool isMulti, int requiredStamina, Action onDoneWithAnyAction, Action onCancelled, bool isQuest = false)
+	{
+	}
 
-		public Text ownedStoneText;
+	private static RecoverStaminaMethodSelectPopup Create()
+	{
+		return null;
+	}
 
-		public Text ownedPaidStoneText;
+	protected override void Start()
+	{
+	}
 
-		public Text itemRecoverCommentText;
+	public void OnUseFreeStoneButtonPressed()
+	{
+	}
 
-		public Text insufficientStaminaCommentText;
+	public void OnUseOrPurchaseStoneButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		[Header("Button")]
-		public Button itemButton;
+	public void ReCreatePopup()
+	{
+	}
 
-		public Button freeStoneButton;
+	public void OnUIseItemButtonPressed()
+	{
+	}
 
-		public Button paidStoneButton;
-
-		[SerializeField]
-		[Header("Texts")]
-		public Text paidStoneText;
-
-		public Text freeStoneText;
-
-		public GameObject multiStaminaIconGO;
-
-		private bool insufficientOfStone;
-
-		private bool isCreateByQuest;
-
-		public static bool IsInShopMaintenance()
-		{
-			return default(bool);
-		}
-
-		public static void CreateModule(GameObject destroyWatcherAttach, bool isMulti, int requiredStamina, Action onDoneWithAnyAction, Action onCancelled, bool isQuest = false)
-		{
-		}
-
-		private static RecoverStaminaMethodSelectPopup Create()
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnUseFreeStoneButtonPressed()
-		{
-		}
-
-		public void OnUseOrPurchaseStoneButtonPressed()
-		{
-		}
-
-		public void ReCreatePopup()
-		{
-		}
-
-		public void OnUIseItemButtonPressed()
-		{
-		}
-
-		public void OnCloseButtonPressed()
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
 	}
 }

@@ -2,309 +2,308 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class FriendSortModel
 {
-	public class FriendSortModel
+	[Serializable]
+	public class Condition
 	{
 		[Serializable]
-		public class Condition
+		public class FilterCondition
 		{
 			[Serializable]
-			public class FilterCondition
+			public class ElementalFilter
 			{
-				[Serializable]
-				public class ElementalFilter
-				{
-					public bool fire;
+				public bool fire;
 
-					public bool water;
+				public bool water;
 
-					public bool wind;
+				public bool wind;
 
-					public bool light;
+				public bool light;
 
-					public bool dark;
+				public bool dark;
 
-					public bool noElement;
+				public bool noElement;
 
-					public ElementalFilter MakeClone()
-					{
-						return null;
-					}
-
-					public void ChangeAllState(bool value, bool shouldIgnoreNoElement = false)
-					{
-					}
-
-					public bool IsAllOn(bool shouldIgnoreNoElement = false)
-					{
-						return default(bool);
-					}
-
-					public bool IsAllOff(bool shouldIgnoreNoElement = false)
-					{
-						return default(bool);
-					}
-
-					public bool ShouldRawValuePass(ElementalType type)
-					{
-						return default(bool);
-					}
-
-					public bool ShouldCharacterPass(int masterId)
-					{
-						return default(bool);
-					}
-
-					public bool ShouldDragonPass(int masterId)
-					{
-						return default(bool);
-					}
-
-					public bool ShouldWeaponPass(int masterId)
-					{
-						return default(bool);
-					}
-				}
-
-				[Serializable]
-				public class WeaponTypeFilter
-				{
-					public bool swd;
-
-					public bool kat;
-
-					public bool dag;
-
-					public bool axe;
-
-					public bool lan;
-
-					public bool bow;
-
-					public bool rod;
-
-					public bool can;
-
-					public bool gun;
-
-					public WeaponTypeFilter MakeClone()
-					{
-						return null;
-					}
-
-					public void ChangeAllState(bool value)
-					{
-					}
-
-					public bool IsAllOn()
-					{
-						return default(bool);
-					}
-
-					public bool IsAllOff()
-					{
-						return default(bool);
-					}
-
-					public bool ShouldRawValuePass(WeaponType type)
-					{
-						return default(bool);
-					}
-
-					public bool ShouldCharacterPass(int masterId)
-					{
-						return default(bool);
-					}
-
-					public bool ShouldWeaponPass(int masterId)
-					{
-						return default(bool);
-					}
-				}
-
-				public ElementalFilter elementalFilter;
-
-				public WeaponTypeFilter weaponTypeFilter;
-
-				public FilterCondition MakeClone()
+				public ElementalFilter MakeClone()
 				{
 					return null;
 				}
 
-				public void ClearAllFilters()
+				public void ChangeAllState(bool value, bool shouldIgnoreNoElement = false)
 				{
 				}
 
-				public List<FriendListCellData> ApplyFilter(List<FriendListCellData> idList)
+				public bool IsAllOn(bool shouldIgnoreNoElement = false)
 				{
-					return null;
+					return default(bool);
+				}
+
+				public bool IsAllOff(bool shouldIgnoreNoElement = false)
+				{
+					return default(bool);
+				}
+
+				public bool ShouldRawValuePass(ElementalType type)
+				{
+					return default(bool);
+				}
+
+				public bool ShouldCharacterPass(int masterId)
+				{
+					return default(bool);
+				}
+
+				public bool ShouldDragonPass(int masterId)
+				{
+					return default(bool);
+				}
+
+				public bool ShouldWeaponPass(int masterId)
+				{
+					return default(bool);
 				}
 			}
 
 			[Serializable]
-			public class SortCondition
+			public class WeaponTypeFilter
 			{
-				public enum SortType
-				{
-					None,
-					Elemental,
-					WeaponType,
-					Rarity,
-					Level,
-					Atk,
-					PlayerLevel,
-					LastLoginDate
-				}
+				public bool swd;
 
-				public enum SortOrder
-				{
-					None,
-					Ascending,
-					Descending
-				}
+				public bool kat;
 
-				public class SectionInfo
-				{
-					public int abilityId;
+				public bool dag;
 
-					public string title;
+				public bool axe;
 
-					public List<FriendListCellData> itemList;
-				}
+				public bool lan;
 
-				public class SortRawData
-				{
-					public ElementalType elemental;
+				public bool bow;
 
-					public WeaponType weaponType;
+				public bool rod;
 
-					public Rarity rarity;
+				public bool can;
 
-					public UnitType charaType;
+				public bool gun;
 
-					public int level;
-
-					public int plusVal;
-
-					public int hp;
-
-					public int atk;
-
-					public int def;
-
-					public int playerLevel;
-
-					public int lastLoginDate;
-
-					public int masterId;
-
-					public ulong cellId;
-
-					public FriendListCellData cellData;
-				}
-
-				public SortType sortType;
-
-				public SortOrder sortOrder;
-
-				public SortCondition MakeClone()
+				public WeaponTypeFilter MakeClone()
 				{
 					return null;
 				}
 
-				public List<SectionInfo> ApplySortSelfChara(List<FriendListCellData> idList)
+				public void ChangeAllState(bool value)
 				{
-					return null;
 				}
 
-				private int GetReliability(int masterId)
+				public bool IsAllOn()
 				{
-					return default(int);
+					return default(bool);
 				}
 
-				public List<SectionInfo> ApplySort(List<FriendListCellData> idList)
+				public bool IsAllOff()
 				{
-					return null;
+					return default(bool);
 				}
 
-				public List<SectionInfo> ApplySortRawData(List<SortRawData> rawDataList)
+				public bool ShouldRawValuePass(WeaponType type)
 				{
-					return null;
+					return default(bool);
+				}
+
+				public bool ShouldCharacterPass(int masterId)
+				{
+					return default(bool);
+				}
+
+				public bool ShouldWeaponPass(int masterId)
+				{
+					return default(bool);
 				}
 			}
 
-			public FilterCondition filterCondition;
+			public ElementalFilter elementalFilter;
 
-			public SortCondition sortCondition;
+			public WeaponTypeFilter weaponTypeFilter;
 
-			public Condition MakeClone()
+			public FilterCondition MakeClone()
+			{
+				return null;
+			}
+
+			public void ClearAllFilters()
+			{
+			}
+
+			public List<FriendListCellData> ApplyFilter(List<FriendListCellData> idList)
 			{
 				return null;
 			}
 		}
 
-		private static FriendSortModel instance;
-
-		private const int SortTargetCount = 4;
-
-		private Condition[] _conditions;
-
-		private const string defaultCaptionPrefabPath = "Prefabs/OutGame/Common/CommonIconListCaption";
-
-		public const ulong emptySpaceIconId = ulong.MaxValue;
-
-		public static FriendSortModel Instance => null;
-
-		public Condition condition
+		[Serializable]
+		public class SortCondition
 		{
-			get
+			public enum SortType
+			{
+				None,
+				Elemental,
+				WeaponType,
+				Rarity,
+				Level,
+				Atk,
+				PlayerLevel,
+				LastLoginDate
+			}
+
+			public enum SortOrder
+			{
+				None,
+				Ascending,
+				Descending
+			}
+
+			public class SectionInfo
+			{
+				public int abilityId;
+
+				public string title;
+
+				public List<FriendListCellData> itemList;
+			}
+
+			public class SortRawData
+			{
+				public ElementalType elemental;
+
+				public WeaponType weaponType;
+
+				public Rarity rarity;
+
+				public UnitType charaType;
+
+				public int level;
+
+				public int plusVal;
+
+				public int hp;
+
+				public int atk;
+
+				public int def;
+
+				public int playerLevel;
+
+				public int lastLoginDate;
+
+				public int masterId;
+
+				public ulong cellId;
+
+				public FriendListCellData cellData;
+			}
+
+			public SortType sortType;
+
+			public SortOrder sortOrder;
+
+			public SortCondition MakeClone()
 			{
 				return null;
 			}
-			set
+
+			public List<SectionInfo> ApplySortSelfChara(List<FriendListCellData> idList)
 			{
+				return null;
+			}
+
+			private int GetReliability(int masterId)
+			{
+				return default(int);
+			}
+
+			public List<SectionInfo> ApplySort(List<FriendListCellData> idList)
+			{
+				return null;
+			}
+
+			public List<SectionInfo> ApplySortRawData(List<SortRawData> rawDataList)
+			{
+				return null;
 			}
 		}
 
-		public static void DeleteInstance()
-		{
-		}
+		public FilterCondition filterCondition;
 
-		private FriendSortModel()
-		{
-		}
+		public SortCondition sortCondition;
 
-		static FriendSortModel()
-		{
-		}
-
-		public bool IsAnyFilterOn()
-		{
-			return default(bool);
-		}
-
-		public bool IsAscending()
-		{
-			return default(bool);
-		}
-
-		public string GetSortButtonDisplayText()
+		public Condition MakeClone()
 		{
 			return null;
 		}
+	}
 
-		public void ClearAllFilters()
+	private static FriendSortModel instance;
+
+	private const int SortTargetCount = 4;
+
+	private Condition[] _conditions;
+
+	private const string defaultCaptionPrefabPath = "Prefabs/OutGame/Common/CommonIconListCaption";
+
+	public const ulong emptySpaceIconId = ulong.MaxValue;
+
+	public static FriendSortModel Instance => null;
+
+	public Condition condition
+	{
+		get
+		{
+			return null;
+		}
+		set
 		{
 		}
+	}
 
-		public int PreviewFilterResultCount(List<FriendListCellData> idList, [Optional] Condition.FilterCondition filterCondition)
-		{
-			return default(int);
-		}
+	public static void DeleteInstance()
+	{
+	}
 
-		public void ApplySortAndFilter(FriendListController controller, List<FriendListCellData> cellDataList, [Optional] string captionPrefabPath)
-		{
-		}
+	private FriendSortModel()
+	{
+	}
+
+	static FriendSortModel()
+	{
+	}
+
+	public bool IsAnyFilterOn()
+	{
+		return default(bool);
+	}
+
+	public bool IsAscending()
+	{
+		return default(bool);
+	}
+
+	public string GetSortButtonDisplayText()
+	{
+		return null;
+	}
+
+	public void ClearAllFilters()
+	{
+	}
+
+	public int PreviewFilterResultCount(List<FriendListCellData> idList, [Optional] Condition.FilterCondition filterCondition)
+	{
+		return default(int);
+	}
+
+	public void ApplySortAndFilter(FriendListController controller, List<FriendListCellData> cellDataList, [Optional] string captionPrefabPath)
+	{
 	}
 }

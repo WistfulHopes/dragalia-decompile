@@ -3,171 +3,170 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SellListScene : SceneBase
 {
-	public class SellListScene : SceneBase
+	public static SellListType listType;
+
+	public static SellListActionType listActionType;
+
+	public const string prefabDir = "Prefabs/OutGame/SellList/";
+
+	public const int maxSellCount = 50;
+
+	public SellListCanvas mainCanvas;
+
+	private SellIconListBase sellIconListBase;
+
+	private SellModeFrame sellModeFrame;
+
+	private SellIconListController listController;
+
+	private List<ulong> selectKeys;
+
+	private bool isAllListIconLock;
+
+	private Canvas gardCanvas;
+
+	private List<ConfigDialogSortData> selectUserData;
+
+	private long totalSellGold;
+
+	private int totalSellMoon;
+
+	private long beforeGold;
+
+	private int beforeMoon;
+
+	private Button sceneBackButton;
+
+	private void Start()
 	{
-		public static SellListType listType;
+	}
 
-		public static SellListActionType listActionType;
+	private void OnDestroy()
+	{
+	}
 
-		public const string prefabDir = "Prefabs/OutGame/SellList/";
+	private IEnumerator UnloadScene()
+	{
+		return null;
+	}
 
-		public const int maxSellCount = 50;
+	public override void OnPresentReceived()
+	{
+	}
 
-		public SellListCanvas mainCanvas;
+	public void BackButtonPressed()
+	{
+	}
 
-		private SellIconListBase sellIconListBase;
+	public void SetNoSelectableIconLayout(bool noSelectable)
+	{
+	}
 
-		private SellModeFrame sellModeFrame;
+	private bool IsEnableTotalMoon()
+	{
+		return default(bool);
+	}
 
-		private SellIconListController listController;
+	private void SetCaption()
+	{
+	}
 
-		private List<ulong> selectKeys;
+	private void LoadListData()
+	{
+	}
 
-		private bool isAllListIconLock;
+	public void OnSortButtonClicked()
+	{
+	}
 
-		private Canvas gardCanvas;
+	public void OnSortApplied()
+	{
+	}
 
-		private List<ConfigDialogSortData> selectUserData;
+	private ulong[] CreateDataIdList(out GiftType giftType)
+	{
+		return null;
+	}
 
-		private long totalSellGold;
+	private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private int totalSellMoon;
+	private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private long beforeGold;
+	private void UpdateEquipIconLock(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private int beforeMoon;
+	private void UnSelectIcon(ulong targetKey)
+	{
+	}
 
-		private Button sceneBackButton;
+	private void ListTabButtonPressed()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void SellModeButtonPressed()
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void ResetSellInfo()
+	{
+	}
 
-		private IEnumerator UnloadScene()
-		{
-			return null;
-		}
+	private void UpdateSelectIconNumber()
+	{
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	public int CheckSelectIcon(ulong keyId)
+	{
+		return default(int);
+	}
 
-		public void BackButtonPressed()
-		{
-		}
+	private void UpdateSellFrameInfo()
+	{
+	}
 
-		public void SetNoSelectableIconLayout(bool noSelectable)
-		{
-		}
+	private void SellFrameResetPresed()
+	{
+	}
 
-		private bool IsEnableTotalMoon()
-		{
-			return default(bool);
-		}
+	private void SellFrameBackPresed(bool skipListReload)
+	{
+	}
 
-		private void SetCaption()
-		{
-		}
+	private void SellFrameAutoPressed()
+	{
+	}
 
-		private void LoadListData()
-		{
-		}
+	private void SellFrameSellPressed()
+	{
+	}
 
-		public void OnSortButtonClicked()
-		{
-		}
+	private int SellTargetListSort(ConfigDialogSortData currCell, ConfigDialogSortData nextCell)
+	{
+		return default(int);
+	}
 
-		public void OnSortApplied()
-		{
-		}
+	private void DoAutoSelect()
+	{
+	}
 
-		private ulong[] CreateDataIdList(out GiftType giftType)
-		{
-			return null;
-		}
+	private void SendSellData()
+	{
+	}
 
-		private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private void ShowSellCompleteDialog()
+	{
+	}
 
-		private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private void UpdateEquipIconLock(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private void UnSelectIcon(ulong targetKey)
-		{
-		}
-
-		private void ListTabButtonPressed()
-		{
-		}
-
-		private void SellModeButtonPressed()
-		{
-		}
-
-		private void ResetSellInfo()
-		{
-		}
-
-		private void UpdateSelectIconNumber()
-		{
-		}
-
-		public int CheckSelectIcon(ulong keyId)
-		{
-			return default(int);
-		}
-
-		private void UpdateSellFrameInfo()
-		{
-		}
-
-		private void SellFrameResetPresed()
-		{
-		}
-
-		private void SellFrameBackPresed(bool skipListReload)
-		{
-		}
-
-		private void SellFrameAutoPressed()
-		{
-		}
-
-		private void SellFrameSellPressed()
-		{
-		}
-
-		private int SellTargetListSort(ConfigDialogSortData currCell, ConfigDialogSortData nextCell)
-		{
-			return default(int);
-		}
-
-		private void DoAutoSelect()
-		{
-		}
-
-		private void SendSellData()
-		{
-		}
-
-		private void ShowSellCompleteDialog()
-		{
-		}
-
-		public void OnListChangeButtonPressed()
-		{
-		}
+	public void OnListChangeButtonPressed()
+	{
 	}
 }

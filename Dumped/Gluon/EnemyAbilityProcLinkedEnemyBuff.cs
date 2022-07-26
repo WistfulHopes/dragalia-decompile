@@ -2,44 +2,47 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcLinkedEnemyBuff : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcLinkedEnemyBuff : EnemyAbilityProcBase
+	public List<int> listLinkedId
 	{
-		public List<int> listLinkedId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
+			return null;
 		}
+	}
 
-		public EnemyAbilityProcLinkedEnemyBuff(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
+	public EnemyAbilityProcLinkedEnemyBuff(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+	{
+	}
 
-		public override void Stop()
-		{
-		}
+	public override void Play()
+	{
+	}
 
-		public override void OnUpdate()
-		{
-		}
+	public override void Stop()
+	{
+	}
 
-		private bool ApplyBuffDebuff()
-		{
-			return default(bool);
-		}
+	public override void OnUpdate()
+	{
+	}
 
-		private bool ResetBuffDebuff()
-		{
-			return default(bool);
-		}
+	private bool ApplyBuffDebuff()
+	{
+		return default(bool);
+	}
 
-		private int CountLinkedEnemy()
-		{
-			return default(int);
-		}
+	private bool ResetBuffDebuff()
+	{
+		return default(bool);
+	}
+
+	private int CountLinkedEnemy()
+	{
+		return default(int);
 	}
 }

@@ -3,229 +3,228 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterAbnormalStatus
 {
-	public class CharacterAbnormalStatus
+	protected CharacterBase owner;
+
+	private Dictionary<int, AbnormalStatusBase> statusDic;
+
+	protected List<int> removeList;
+
+	private bool _isPause;
+
+	protected string[] abnormalLabelTbl;
+
+	private static readonly int hitDataMax;
+
+	public List<CharacterHitData> hitDataList;
+
+	private CharacterHitData[] hitData;
+
+	private AbnormalStatusMultiPlayService _multiPlayService;
+
+	private List<KeyValuePair<int, AbnormalStatusBase>> _tmpStatusList;
+
+	public bool isStatusColorSet
 	{
-		protected CharacterBase owner;
-
-		private Dictionary<int, AbnormalStatusBase> statusDic;
-
-		protected List<int> removeList;
-
-		private bool _isPause;
-
-		protected string[] abnormalLabelTbl;
-
-		private static readonly int hitDataMax;
-
-		public List<CharacterHitData> hitDataList;
-
-		private CharacterHitData[] hitData;
-
-		private AbnormalStatusMultiPlayService _multiPlayService;
-
-		private List<KeyValuePair<int, AbnormalStatusBase>> _tmpStatusList;
-
-		public bool isStatusColorSet
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			protected set
-			{
-			}
-		}
-
-		public Dictionary<int, AbnormalStatusBase> StatusDic => null;
-
-		public bool isPause
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		public void Initialize(CharacterBase owner)
-		{
-		}
-
-		public void SetMultiPlayService(AbnormalStatusMultiPlayService multiPlayService)
-		{
-		}
-
-		public virtual bool HasType(AbnormalStatusType type = AbnormalStatusType.NONE)
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public virtual void ClearType(AbnormalStatusType type)
+		[CompilerGenerated]
+		protected set
 		{
 		}
+	}
 
-		public void ReleaseKillerState(DamageCalculation.KillerState state)
-		{
-		}
+	public Dictionary<int, AbnormalStatusBase> StatusDic => null;
 
-		public virtual void Reset(bool isRestoreEffect = true)
-		{
-		}
-
-		public void ResetStopAbnormal()
-		{
-		}
-
-		private void ResetGroup(int group)
-		{
-		}
-
-		public void SetHitData(ActionConditionElement elem, CollisionHitAttribute attr)
-		{
-		}
-
-		public bool CheckHitData(ActionConditionElement elem, CollisionHitAttribute attr)
+	public bool isPause
+	{
+		get
 		{
 			return default(bool);
 		}
-
-		public virtual bool AddDurationTime(CollisionHitAttribute attr)
-		{
-			return default(bool);
-		}
-
-		public virtual bool SetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability, bool ignoreEA = false)
-		{
-			return default(bool);
-		}
-
-		public virtual void ReadSyncData(ChangeAbnormalStatus changeAbnormalStatusEvent)
+		set
 		{
 		}
+	}
 
-		private AbnormalStatusBase AddNewAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, int newTypeGroup, AbnormalStatusType newType)
-		{
-			return null;
-		}
+	public void Initialize(CharacterBase owner)
+	{
+	}
 
-		protected void DispText(int type, string text, int groupNo)
-		{
-		}
+	public void SetMultiPlayService(AbnormalStatusMultiPlayService multiPlayService)
+	{
+	}
 
-		public virtual void Update()
-		{
-		}
+	public virtual bool HasType(AbnormalStatusType type = AbnormalStatusType.NONE)
+	{
+		return default(bool);
+	}
 
-		public virtual CharacterBase GetAttacker(AbnormalStatusType type)
-		{
-			return null;
-		}
+	public virtual void ClearType(AbnormalStatusType type)
+	{
+	}
 
-		public virtual int GetProbability(AbnormalStatusType type)
-		{
-			return default(int);
-		}
+	public void ReleaseKillerState(DamageCalculation.KillerState state)
+	{
+	}
 
-		public bool IsMinDurationSec(AbnormalStatusType type)
-		{
-			return default(bool);
-		}
+	public virtual void Reset(bool isRestoreEffect = true)
+	{
+	}
 
-		public virtual float GetMinDurationTime(AbnormalStatusType type)
-		{
-			return default(float);
-		}
+	public void ResetStopAbnormal()
+	{
+	}
 
-		public virtual float GetDurationTime(AbnormalStatusType type)
-		{
-			return default(float);
-		}
+	private void ResetGroup(int group)
+	{
+	}
 
-		public virtual void ReduceDurationTime(float time)
-		{
-		}
+	public void SetHitData(ActionConditionElement elem, CollisionHitAttribute attr)
+	{
+	}
 
-		public virtual void ApplyParalysisReaction()
-		{
-		}
+	public bool CheckHitData(ActionConditionElement elem, CollisionHitAttribute attr)
+	{
+		return default(bool);
+	}
 
-		public virtual int GetEventProbability(AbnormalStatusType type)
-		{
-			return default(int);
-		}
+	public virtual bool AddDurationTime(CollisionHitAttribute attr)
+	{
+		return default(bool);
+	}
 
-		public virtual float GetDamageCoefficient(AbnormalStatusType type)
-		{
-			return default(float);
-		}
+	public virtual bool SetAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, CharacterBase.AbnormalStatusProbabilityResult probability, bool ignoreEA = false)
+	{
+		return default(bool);
+	}
 
-		public virtual int GetOverlapNum(AbnormalStatusType type)
-		{
-			return default(int);
-		}
+	public virtual void ReadSyncData(ChangeAbnormalStatus changeAbnormalStatusEvent)
+	{
+	}
 
-		public virtual void SetActiveInterval()
-		{
-		}
+	private AbnormalStatusBase AddNewAbnormalStatus(CollisionHitAttribute attr, ActionConditionElement elem, int newTypeGroup, AbnormalStatusType newType)
+	{
+		return null;
+	}
 
-		public virtual void PlayEffect()
-		{
-		}
+	protected void DispText(int type, string text, int groupNo)
+	{
+	}
 
-		public virtual void StopEffect()
-		{
-		}
+	public virtual void Update()
+	{
+	}
 
-		private int GetTypeGroup(AbnormalStatusType type)
-		{
-			return default(int);
-		}
+	public virtual CharacterBase GetAttacker(AbnormalStatusType type)
+	{
+		return null;
+	}
 
-		private int GetTypePriority(AbnormalStatusType type)
-		{
-			return default(int);
-		}
+	public virtual int GetProbability(AbnormalStatusType type)
+	{
+		return default(int);
+	}
 
-		public int GetTypeResistGain(AbnormalStatusType type)
-		{
-			return default(int);
-		}
+	public bool IsMinDurationSec(AbnormalStatusType type)
+	{
+		return default(bool);
+	}
 
-		protected int GetTypeDisplayPriority(AbnormalStatusType type)
-		{
-			return default(int);
-		}
+	public virtual float GetMinDurationTime(AbnormalStatusType type)
+	{
+		return default(float);
+	}
 
-		public virtual void WriteSyncData(ref List<AbnormalStatusSyncData> outResult, ref short[] outResists)
-		{
-		}
+	public virtual float GetDurationTime(AbnormalStatusType type)
+	{
+		return default(float);
+	}
 
-		private bool NeedsChangeMaterial(AbnormalStatusType type)
-		{
-			return default(bool);
-		}
+	public virtual void ReduceDurationTime(float time)
+	{
+	}
 
-		protected void SetAbnormalStatusDirty()
-		{
-		}
+	public virtual void ApplyParalysisReaction()
+	{
+	}
 
-		public void CopySupportStatus(AbnormalStatusBase abs)
-		{
-		}
+	public virtual int GetEventProbability(AbnormalStatusType type)
+	{
+		return default(int);
+	}
 
-		public virtual bool ReleaseFreezeOnCollided()
-		{
-			return default(bool);
-		}
+	public virtual float GetDamageCoefficient(AbnormalStatusType type)
+	{
+		return default(float);
+	}
 
-		public virtual void OnDisconnectOwner()
-		{
-		}
+	public virtual int GetOverlapNum(AbnormalStatusType type)
+	{
+		return default(int);
+	}
+
+	public virtual void SetActiveInterval()
+	{
+	}
+
+	public virtual void PlayEffect()
+	{
+	}
+
+	public virtual void StopEffect()
+	{
+	}
+
+	private int GetTypeGroup(AbnormalStatusType type)
+	{
+		return default(int);
+	}
+
+	private int GetTypePriority(AbnormalStatusType type)
+	{
+		return default(int);
+	}
+
+	public int GetTypeResistGain(AbnormalStatusType type)
+	{
+		return default(int);
+	}
+
+	protected int GetTypeDisplayPriority(AbnormalStatusType type)
+	{
+		return default(int);
+	}
+
+	public virtual void WriteSyncData(ref List<AbnormalStatusSyncData> outResult, ref short[] outResists)
+	{
+	}
+
+	private bool NeedsChangeMaterial(AbnormalStatusType type)
+	{
+		return default(bool);
+	}
+
+	protected void SetAbnormalStatusDirty()
+	{
+	}
+
+	public void CopySupportStatus(AbnormalStatusBase abs)
+	{
+	}
+
+	public virtual bool ReleaseFreezeOnCollided()
+	{
+		return default(bool);
+	}
+
+	public virtual void OnDisconnectOwner()
+	{
 	}
 }

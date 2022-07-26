@@ -1,36 +1,39 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class NPFInitializer : SingletonMonoBehaviour<NPFInitializer>
 {
-	public class NPFInitializer : SingletonMonoBehaviour<NPFInitializer>
+	private NPFEventHandlerImpl pNPFEventhandler;
+
+	public bool IsInitializing;
+
+	public bool IsNetworkErrorOnInitializing;
+
+	public bool isInitialized
 	{
-		private NPFEventHandlerImpl pNPFEventhandler;
-
-		public bool isInitialized
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		protected override void Awake()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Init()
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		public IEnumerator WaitInitCoroutine()
-		{
-			return null;
-		}
+	public void Init()
+	{
+	}
+
+	public IEnumerator WaitInitCoroutine()
+	{
+		return null;
 	}
 }

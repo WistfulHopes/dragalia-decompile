@@ -2,54 +2,53 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BoxSummonContentListDialog : PopupBase
 {
-	public class BoxSummonContentListDialog : PopupBase
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Text summonRemainText;
+
+	[SerializeField]
+	private GameObject rewardListContent;
+
+	[SerializeField]
+	private GameObject mainRewardBase;
+
+	[SerializeField]
+	private GameObject mainRewardItemTemplate;
+
+	[SerializeField]
+	private GameObject rewardLineTemplate;
+
+	private List<GameObject> rewardIconInstances;
+
+	private EventQuestPageBase currentPage;
+
+	private void OnEnable()
 	{
-		[SerializeField]
-		private Text titleText;
+	}
 
-		[SerializeField]
-		private Text summonRemainText;
+	protected override void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		private GameObject rewardListContent;
+	public void SetCurrentPage(EventQuestPageBase page, bool bOpenFromResultPage)
+	{
+	}
 
-		[SerializeField]
-		private GameObject mainRewardBase;
+	private void SetupContents(bool bOpenFromResultPage)
+	{
+	}
 
-		[SerializeField]
-		private GameObject mainRewardItemTemplate;
+	private void TeardownContents()
+	{
+	}
 
-		[SerializeField]
-		private GameObject rewardLineTemplate;
-
-		private List<GameObject> rewardIconInstances;
-
-		private EventQuestPageBase currentPage;
-
-		private void OnEnable()
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
-
-		public void SetCurrentPage(EventQuestPageBase page, bool bOpenFromResultPage)
-		{
-		}
-
-		private void SetupContents(bool bOpenFromResultPage)
-		{
-		}
-
-		private void TeardownContents()
-		{
-		}
-
-		public void OnCloseButton()
-		{
-		}
+	public void OnCloseButton()
+	{
 	}
 }

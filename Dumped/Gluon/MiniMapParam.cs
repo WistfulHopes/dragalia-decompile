@@ -1,86 +1,85 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MiniMapParam : MonoBehaviour
 {
-	public class MiniMapParam : MonoBehaviour
+	public enum ProgressSearch
 	{
-		public enum ProgressSearch
+		Unexplored,
+		Discoverry,
+		Intrusion
+	}
+
+	public const float MapPartsScale = 4f;
+
+	private Rect _mapRect;
+
+	private SpriteRenderer _image;
+
+	private MiniMapParam[] _params;
+
+	private float _disruptAlpha;
+
+	private static float DiscoverryAlpha;
+
+	private static float AnimationTime;
+
+	private ProgressSearch _searchState;
+
+	private static Vector3 DefaultScale;
+
+	public Rect MapRect => default(Rect);
+
+	public SpriteRenderer Image => null;
+
+	public bool IsIntrusion => default(bool);
+
+	public ProgressSearch SearchState
+	{
+		get
 		{
-			Unexplored,
-			Discoverry,
-			Intrusion
+			return default(ProgressSearch);
 		}
-
-		public const float MapPartsScale = 4f;
-
-		private Rect _mapRect;
-
-		private SpriteRenderer _image;
-
-		private MiniMapParam[] _params;
-
-		private float _disruptAlpha;
-
-		private static float DiscoverryAlpha;
-
-		private static float AnimationTime;
-
-		private ProgressSearch _searchState;
-
-		private static Vector3 DefaultScale;
-
-		public Rect MapRect => default(Rect);
-
-		public SpriteRenderer Image => null;
-
-		public bool IsIntrusion => default(bool);
-
-		public ProgressSearch SearchState
-		{
-			get
-			{
-				return default(ProgressSearch);
-			}
-			set
-			{
-			}
-		}
-
-		private void Awake()
+		set
 		{
 		}
+	}
 
-		public void Initialize(Vector2 pos, Rect viewRect)
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void SetColorAlpha(float alpha, bool isAnim = true)
-		{
-		}
+	public void Initialize(Vector2 pos, Rect viewRect)
+	{
+	}
 
-		private void SetIntrusion()
-		{
-		}
+	private void SetColorAlpha(float alpha, bool isAnim = true)
+	{
+	}
 
-		public bool IsIntrusionArea(Vector2 pos)
-		{
-			return default(bool);
-		}
+	private void SetIntrusion()
+	{
+	}
 
-		public void UpdateState(Vector2 pos)
-		{
-		}
+	public bool IsIntrusionArea(Vector2 pos)
+	{
+		return default(bool);
+	}
 
-		private void OnUpdateAlpha(float value)
-		{
-		}
+	public void UpdateState(Vector2 pos)
+	{
+	}
 
-		public void SetDrawFlag(bool drawFlag)
-		{
-		}
+	private void OnUpdateAlpha(float value)
+	{
+	}
 
-		public void SetAlwaysDraw()
-		{
-		}
+	public void SetDrawFlag(bool drawFlag)
+	{
+	}
+
+	public void SetAlwaysDraw()
+	{
 	}
 }

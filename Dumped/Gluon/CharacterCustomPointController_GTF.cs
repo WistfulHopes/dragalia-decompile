@@ -1,52 +1,51 @@
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterCustomPointController_GTF : CharacterCustomPointController
 {
-	public class CharacterCustomPointController_GTF : CharacterCustomPointController
+	private float fCp;
+
+	private const int EnhanceSkill1BuffId = 2021;
+
+	private const int EnhanceSkill2BuffId = 2023;
+
+	protected override void Initialize(CharacterBase owner, AbilityDataElement[] elems)
 	{
-		private float fCp;
+	}
 
-		private const int EnhanceSkill1BuffId = 2021;
+	public override void Update()
+	{
+	}
 
-		private const int EnhanceSkill2BuffId = 2023;
+	public override void SetCP(int index, int value)
+	{
+	}
 
-		protected override void Initialize(CharacterBase owner, AbilityDataElement[] elems)
-		{
-		}
+	private void OnGaugeAnimComplete(int index, int prevCP, int currCP)
+	{
+	}
 
-		public override void Update()
-		{
-		}
+	private void OnCPMatched(AbilityDataElement ade, int skillId, int skillIndex)
+	{
+	}
 
-		public override void SetCP(int index, int value)
-		{
-		}
+	public override IconType GetIconType()
+	{
+		return default(IconType);
+	}
 
-		private void OnGaugeAnimComplete(int index, int prevCP, int currCP)
-		{
-		}
+	public override bool ClearCPOnContinue()
+	{
+		return default(bool);
+	}
 
-		private void OnCPMatched(AbilityDataElement ade, int skillId, int skillIndex)
-		{
-		}
+	public override void OnReceiveCharacterCustomPointEvent(CharacterCustomPointEvent recvEvent)
+	{
+	}
 
-		public override IconType GetIconType()
-		{
-			return default(IconType);
-		}
-
-		public override bool ClearCPOnContinue()
-		{
-			return default(bool);
-		}
-
-		public override void OnReceiveCharacterCustomPointEvent(CharacterCustomPointEvent recvEvent)
-		{
-		}
-
-		private void SetToAxeMode(PlayerCharacter player, bool fromRecvEvent)
-		{
-		}
+	private void SetToAxeMode(PlayerCharacter player, bool fromRecvEvent)
+	{
 	}
 }

@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class OverChargeUniqueCtrl : EnemyUniqueCtrl
 {
-	public class OverChargeUniqueCtrl : EnemyUniqueCtrl
+	private void Update()
 	{
-		private void Update()
-		{
-		}
 	}
 }

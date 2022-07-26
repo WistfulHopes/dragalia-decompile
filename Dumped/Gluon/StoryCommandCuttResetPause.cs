@@ -1,26 +1,24 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandCuttResetPause : IStoryCommand
 {
-	[CommandName("cutt_resetpause")]
-	public class StoryCommandCuttResetPause : IStoryCommand
+	private IEnumerator coroutine;
+
+	private bool isReset;
+
+	public void Start()
 	{
-		private IEnumerator coroutine;
+	}
 
-		private bool isReset;
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		public void Start()
-		{
-		}
-
-		public override bool Update()
-		{
-			return default(bool);
-		}
-
-		private IEnumerator _Update()
-		{
-			return null;
-		}
+	private IEnumerator _Update()
+	{
+		return null;
 	}
 }

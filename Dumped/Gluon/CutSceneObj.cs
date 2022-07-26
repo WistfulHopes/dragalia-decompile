@@ -1,35 +1,34 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CutSceneObj : MonoBehaviour
 {
-	public class CutSceneObj : MonoBehaviour
+	private EffectObject effect;
+
+	private IEnumerator Start()
 	{
-		private EffectObject effect;
+		return null;
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	public void PlaySound(string cueName)
+	{
+	}
 
-		public void PlaySound(string cueName)
-		{
-		}
+	public void PlayEffect(string name)
+	{
+	}
 
-		public void PlayEffect(string name)
-		{
-		}
+	public void PlayEffectAttachPosition(string command)
+	{
+	}
 
-		public void PlayEffectAttachPosition(string command)
-		{
-		}
+	public void StopEffect(float life)
+	{
+	}
 
-		public void StopEffect(float life)
-		{
-		}
-
-		public void DummyCall()
-		{
-		}
+	public void DummyCall()
+	{
 	}
 }

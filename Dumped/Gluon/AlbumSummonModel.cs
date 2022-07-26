@@ -1,36 +1,35 @@
-namespace Gluon
+namespace Gluon;
+
+public class AlbumSummonModel
 {
-	public class AlbumSummonModel
+	private static AlbumSummonModel instance;
+
+	public GiftType giftType;
+
+	public int masterId;
+
+	public Rarity rarity;
+
+	public static AlbumSummonModel Instance => null;
+
+	public static void DeleteInstance()
 	{
-		private static AlbumSummonModel instance;
+	}
 
-		public GiftType giftType;
+	public static bool IsInstanceEmpty()
+	{
+		return default(bool);
+	}
 
-		public int masterId;
+	private AlbumSummonModel()
+	{
+	}
 
-		public Rarity rarity;
+	static AlbumSummonModel()
+	{
+	}
 
-		public static AlbumSummonModel Instance => null;
-
-		public static void DeleteInstance()
-		{
-		}
-
-		public static bool IsInstanceEmpty()
-		{
-			return default(bool);
-		}
-
-		private AlbumSummonModel()
-		{
-		}
-
-		static AlbumSummonModel()
-		{
-		}
-
-		public void Create(GiftType type, int id, Rarity rarity)
-		{
-		}
+	public void Create(GiftType type, int id, Rarity rarity)
+	{
 	}
 }

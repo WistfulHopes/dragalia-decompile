@@ -1,12 +1,11 @@
-namespace Gluon
+namespace Gluon;
+
+public enum AlbumPassiveType
 {
-	public enum AlbumPassiveType
-	{
-		CHARA_TAKE = 101,
-		CHARA_LEVEL = 102,
-		CHARA_MANA_CIRCLE = 103,
-		DRAGON_TAKE = 201,
-		DRAGON_LIMIT_BREAK = 202,
-		DRAGON_RELIABILITY_LEVEL = 203
-	}
+	CHARA_TAKE = 101,
+	CHARA_LEVEL = 102,
+	CHARA_MANA_CIRCLE = 103,
+	DRAGON_TAKE = 201,
+	DRAGON_LIMIT_BREAK = 202,
+	DRAGON_RELIABILITY_LEVEL = 203
 }

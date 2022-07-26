@@ -1,20 +1,19 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPageMoveMapBuilding : MonoBehaviour
 {
-	public class MyPageMoveMapBuilding : MonoBehaviour
+	public enum Type
 	{
-		public enum Type
-		{
-			Tavern,
-			Inn,
-			Shop
-		}
+		Tavern,
+		Inn,
+		Shop
+	}
 
-		public Type type;
+	public Type type;
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
 	}
 }

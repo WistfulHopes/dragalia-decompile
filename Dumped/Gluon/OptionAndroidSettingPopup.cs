@@ -1,57 +1,55 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class OptionAndroidSettingPopup : PopupBase
 {
-	public class OptionAndroidSettingPopup : PopupBase
+	[SerializeField]
+	public TabBase statusBarTab;
+
+	public TabBase navigationBarTab;
+
+	private bool statusBarOn;
+
+	private bool navigationBarOn;
+
+	private Action onClosed;
+
+	public static OptionAndroidSettingPopup Create(Action onClosed)
 	{
-		[SerializeField]
-		[Header("Tabs")]
-		public TabBase statusBarTab;
+		return null;
+	}
 
-		public TabBase navigationBarTab;
+	protected override void Start()
+	{
+	}
 
-		private bool statusBarOn;
+	public void OnAppliedAnyAction()
+	{
+	}
 
-		private bool navigationBarOn;
+	private void BindEvent()
+	{
+	}
 
-		private Action onClosed;
+	private void TabCallbackToToggle(TabBase tab, Action<bool> toggleCallback)
+	{
+	}
 
-		public static OptionAndroidSettingPopup Create(Action onClosed)
-		{
-			return null;
-		}
+	private void ApplyUIByOptionSetting()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	public void OnOKButtonPressed()
+	{
+	}
 
-		public void OnAppliedAnyAction()
-		{
-		}
+	public void OnStatusBarToggled(bool value)
+	{
+	}
 
-		private void BindEvent()
-		{
-		}
-
-		private void TabCallbackToToggle(TabBase tab, Action<bool> toggleCallback)
-		{
-		}
-
-		private void ApplyUIByOptionSetting()
-		{
-		}
-
-		public void OnOKButtonPressed()
-		{
-		}
-
-		public void OnStatusBarToggled(bool value)
-		{
-		}
-
-		public void OnNavigationBarToggled(bool value)
-		{
-		}
+	public void OnNavigationBarToggled(bool value)
+	{
 	}
 }

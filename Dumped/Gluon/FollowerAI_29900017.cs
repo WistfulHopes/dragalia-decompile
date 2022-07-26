@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public class FollowerAI_29900017 : FollowerAIBase
 {
-	public class FollowerAI_29900017 : FollowerAIBase
+	public override bool IsEnableReleaseTransform(PlayerCharacter owner)
 	{
-		public override bool IsEnableReleaseTransform(PlayerCharacter owner)
-		{
-			return default(bool);
-		}
+		return default(bool);
 	}
 }

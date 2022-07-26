@@ -4,76 +4,75 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PageBase : AnimationUIObject
 {
-	public class PageBase : AnimationUIObject
+	[SerializeField]
+	private Button backButton;
+
+	public bool removeTouchGuardOnActive;
+
+	public SceneBase parentScene
 	{
-		[SerializeField]
-		private Button backButton;
-
-		public bool removeTouchGuardOnActive;
-
-		public SceneBase parentScene
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		public SceneNameDefine.PageName pageName
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(SceneNameDefine.PageName);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		protected override void OnDestroy()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public virtual void OnPageBecomeActive(object data)
+	public SceneNameDefine.PageName pageName
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(SceneNameDefine.PageName);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public virtual bool IsLoading()
-		{
-			return default(bool);
-		}
+	protected override void OnDestroy()
+	{
+	}
 
-		public virtual void OnPageEnterAnimationEnded()
-		{
-		}
+	public virtual void OnPageBecomeActive(object data)
+	{
+	}
 
-		public virtual void OnPageBecomeInActive()
-		{
-		}
+	public virtual bool IsLoading()
+	{
+		return default(bool);
+	}
 
-		public virtual void ChangePage(SceneNameDefine.PageName pageName, [Optional] Transform parentTransform, AnimationPattern exitPattern = AnimationPattern.Pattern_1, AnimationPattern enterPattern = AnimationPattern.Pattern_1, [Optional] Action<PageBase> onLoaded, [Optional] object data, bool delayEnterAnimation = true, bool deactivateLastPage = true)
-		{
-		}
+	public virtual void OnPageEnterAnimationEnded()
+	{
+	}
 
-		public virtual void ShowPage(bool toShow)
-		{
-		}
+	public virtual void OnPageBecomeInActive()
+	{
+	}
 
-		public void RegisterBackKey(Canvas canvas, Button backButton)
-		{
-		}
+	public virtual void ChangePage(SceneNameDefine.PageName pageName, [Optional] Transform parentTransform, AnimationPattern exitPattern = AnimationPattern.Pattern_1, AnimationPattern enterPattern = AnimationPattern.Pattern_1, [Optional] Action<PageBase> onLoaded, [Optional] object data, bool delayEnterAnimation = true, bool deactivateLastPage = true)
+	{
+	}
 
-		public void RemoveBackKey(Canvas canvas, Button backButton)
-		{
-		}
+	public virtual void ShowPage(bool toShow)
+	{
+	}
+
+	public void RegisterBackKey(Canvas canvas, Button backButton)
+	{
+	}
+
+	public void RemoveBackKey(Canvas canvas, Button backButton)
+	{
 	}
 }

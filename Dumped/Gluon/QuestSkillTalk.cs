@@ -1,67 +1,66 @@
 using System.Collections.Generic;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSkillTalk
 {
-	public class QuestSkillTalk
+	private delegate void deleWatchTrigger(float paramFloat_1 = 0f, float paraFloat_2 = 0f);
+
+	private NotifyCharacter.CharaDialogueNPCParam _dialogueParam;
+
+	private List<QuestSkillTalkElement> _datas;
+
+	private List<int> _candidates;
+
+	private List<int> _finished;
+
+	private static int TriggerNum;
+
+	private deleWatchTrigger[] _watchTrigger;
+
+	private QuestSkillEnum questSkillType;
+
+	public bool NoTalk => default(bool);
+
+	public QuestSkillTalk(QuestSkillEnum type)
 	{
-		private delegate void deleWatchTrigger(float paramFloat_1 = 0f, float paraFloat_2 = 0f);
+	}
 
-		private NotifyCharacter.CharaDialogueNPCParam _dialogueParam;
+	public void Initialize()
+	{
+	}
 
-		private List<QuestSkillTalkElement> _datas;
+	public void Reset()
+	{
+	}
 
-		private List<int> _candidates;
+	private void RegistryDelegate()
+	{
+	}
 
-		private List<int> _finished;
+	public bool WatchTrigger(QuestSkillTalkTrigger trig, float paramFloat_1 = 0f, float paramFloat_2 = 0f)
+	{
+		return default(bool);
+	}
 
-		private static int TriggerNum;
+	private void Talk(int id)
+	{
+	}
 
-		private deleWatchTrigger[] _watchTrigger;
+	private void FuncTrigger_QuestSkill(float paramFloat_1 = 0f, float paramFloat_2 = 0f)
+	{
+	}
 
-		private QuestSkillEnum questSkillType;
+	private void FuncTrigger_RecastRateHiger(float paramFloat_1 = 0f, float paramFloat_2 = 0f)
+	{
+	}
 
-		public bool NoTalk => default(bool);
+	private void FuncTrigger_PrayObjectDestory(float paramFloat_1 = 0f, float paramFloat_2 = 0f)
+	{
+	}
 
-		public QuestSkillTalk(QuestSkillEnum type)
-		{
-		}
-
-		public void Initialize()
-		{
-		}
-
-		public void Reset()
-		{
-		}
-
-		private void RegistryDelegate()
-		{
-		}
-
-		public bool WatchTrigger(QuestSkillTalkTrigger trig, float paramFloat_1 = 0f, float paramFloat_2 = 0f)
-		{
-			return default(bool);
-		}
-
-		private void Talk(int id)
-		{
-		}
-
-		private void FuncTrigger_QuestSkill(float paramFloat_1 = 0f, float paramFloat_2 = 0f)
-		{
-		}
-
-		private void FuncTrigger_RecastRateHiger(float paramFloat_1 = 0f, float paramFloat_2 = 0f)
-		{
-		}
-
-		private void FuncTrigger_PrayObjectDestory(float paramFloat_1 = 0f, float paramFloat_2 = 0f)
-		{
-		}
-
-		private void FuncTrigger_MiasmaBegin(float paramFloat_1 = 0f, float paramFloat_2 = 0f)
-		{
-		}
+	private void FuncTrigger_MiasmaBegin(float paramFloat_1 = 0f, float paramFloat_2 = 0f)
+	{
 	}
 }

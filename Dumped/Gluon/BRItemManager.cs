@@ -4,99 +4,98 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BRItemManager : MonoBehaviour
 {
-	public class BRItemManager : MonoBehaviour
+	private class TypeComparer : IEqualityComparer<BattleRoyalDungeonItem>
 	{
-		private class TypeComparer : IEqualityComparer<BattleRoyalDungeonItem>
+		public bool Equals(BattleRoyalDungeonItem x, BattleRoyalDungeonItem y)
 		{
-			public bool Equals(BattleRoyalDungeonItem x, BattleRoyalDungeonItem y)
-			{
-				return default(bool);
-			}
-
-			public int GetHashCode(BattleRoyalDungeonItem obj)
-			{
-				return default(int);
-			}
+			return default(bool);
 		}
 
-		private Dictionary<BattleRoyalDungeonItem, GameObject> prefabDict;
-
-		public List<BRItemBase> AliveItems
+		public int GetHashCode(BattleRoyalDungeonItem obj)
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+	}
 
-		private void Start()
-		{
-		}
+	private Dictionary<BattleRoyalDungeonItem, GameObject> prefabDict;
 
-		public void CreateItem(BRItemParam param, Vector3 pos, bool isSync)
-		{
-		}
-
-		public void CreateItems(List<BRItemParam> createItemParams, Vector3 pos)
-		{
-		}
-
-		private IEnumerator CreateItemsCoroutine(List<BRItemParam> createItemParams, Vector3 pos, float radius, uint seed)
+	public List<BRItemBase> AliveItems
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private void CreateItemCore(GameObject go, BRItemParam param, Vector3 startPos, Vector3 endPos, bool ignoreSeFx)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void DeleteItem(BRItemBase item)
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void DeleteAllItems()
-		{
-		}
+	public void CreateItem(BRItemParam param, Vector3 pos, bool isSync)
+	{
+	}
 
-		private void LoadPrefabs()
-		{
-		}
+	public void CreateItems(List<BRItemParam> createItemParams, Vector3 pos)
+	{
+	}
 
-		private void AddPool(BattleRoyalDungeonItem type, int ct)
-		{
-		}
+	private IEnumerator CreateItemsCoroutine(List<BRItemParam> createItemParams, Vector3 pos, float radius, uint seed)
+	{
+		return null;
+	}
 
-		private void ReleaseItemInstance(GameObject obj)
-		{
-		}
+	private void CreateItemCore(GameObject go, BRItemParam param, Vector3 startPos, Vector3 endPos, bool ignoreSeFx)
+	{
+	}
 
-		private void SendCreateRandomPopItemEvent(List<BRItemParam> createItemParams, Vector3 pos, float radius, uint seed)
-		{
-		}
+	public void DeleteItem(BRItemBase item)
+	{
+	}
 
-		private void SendCreateSilentPopItemEvent(BRItemParam param, Vector3 pos)
-		{
-		}
+	public void DeleteAllItems()
+	{
+	}
 
-		public void OnReceiveEvent(BRCreateItemEvent recvEvent)
-		{
-		}
+	private void LoadPrefabs()
+	{
+	}
 
-		public BRItemBase FindBRItem(BRItemId id)
-		{
-			return null;
-		}
+	private void AddPool(BattleRoyalDungeonItem type, int ct)
+	{
+	}
 
-		public static BattleRoyalDungeonItem GetLotteryItem(int groupId)
-		{
-			return default(BattleRoyalDungeonItem);
-		}
+	private void ReleaseItemInstance(GameObject obj)
+	{
+	}
+
+	private void SendCreateRandomPopItemEvent(List<BRItemParam> createItemParams, Vector3 pos, float radius, uint seed)
+	{
+	}
+
+	private void SendCreateSilentPopItemEvent(BRItemParam param, Vector3 pos)
+	{
+	}
+
+	public void OnReceiveEvent(BRCreateItemEvent recvEvent)
+	{
+	}
+
+	public BRItemBase FindBRItem(BRItemId id)
+	{
+		return null;
+	}
+
+	public static BattleRoyalDungeonItem GetLotteryItem(int groupId)
+	{
+		return default(BattleRoyalDungeonItem);
 	}
 }

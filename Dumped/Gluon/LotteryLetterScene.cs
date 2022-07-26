@@ -4,96 +4,95 @@ using FLATOUT.Main;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class LotteryLetterScene : SceneBase
 {
-	public class LotteryLetterScene : SceneBase
+	[SerializeField]
+	private Camera mainCamera;
+
+	[SerializeField]
+	private Transform overlayParent;
+
+	private AtgenLotteryResultList[] lotteryOddsRateList;
+
+	[SerializeField]
+	private int letterGrade;
+
+	private bool isCommunicationFinished;
+
+	private LotteryLetterMain mainCanvas;
+
+	private FlMotion letterAnimeMotion;
+
+	public static string prefabDir;
+
+	private void Awake()
 	{
-		[SerializeField]
-		private Camera mainCamera;
+	}
 
-		[SerializeField]
-		private Transform overlayParent;
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private AtgenLotteryResultList[] lotteryOddsRateList;
+	private void OnEnterScene()
+	{
+	}
 
-		[SerializeField]
-		private int letterGrade;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private bool isCommunicationFinished;
+	private void OnInitReady()
+	{
+	}
 
-		private LotteryLetterMain mainCanvas;
+	private IEnumerator LoadScene()
+	{
+		return null;
+	}
 
-		private FlMotion letterAnimeMotion;
+	private void PlayOpningFlash(GameObject craftAnimation)
+	{
+	}
 
-		public static string prefabDir;
+	private void PlayResultFlash()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	private IEnumerator WaiteTap(Action onTap)
+	{
+		return null;
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private void SendLotteryExec(int lotteryId)
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void GetLetterGrade()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void CreatePopup()
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void GoToNextPage()
+	{
+	}
 
-		private IEnumerator LoadScene()
-		{
-			return null;
-		}
+	public void GotoMyPage()
+	{
+	}
 
-		private void PlayOpningFlash(GameObject craftAnimation)
-		{
-		}
+	public static bool IsExistLotteryTickets()
+	{
+		return default(bool);
+	}
 
-		private void PlayResultFlash()
-		{
-		}
-
-		private IEnumerator WaiteTap(Action onTap)
-		{
-			return null;
-		}
-
-		private void SendLotteryExec(int lotteryId)
-		{
-		}
-
-		private void GetLetterGrade()
-		{
-		}
-
-		private void CreatePopup()
-		{
-		}
-
-		private void GoToNextPage()
-		{
-		}
-
-		public void GotoMyPage()
-		{
-		}
-
-		public static bool IsExistLotteryTickets()
-		{
-			return default(bool);
-		}
-
-		private static bool IsWithinPeriod(int ticketId)
-		{
-			return default(bool);
-		}
+	private static bool IsWithinPeriod(int ticketId)
+	{
+		return default(bool);
 	}
 }

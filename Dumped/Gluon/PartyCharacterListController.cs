@@ -1,22 +1,21 @@
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyCharacterListController : CommonIconListController
 {
-	public class PartyCharacterListController : CommonIconListController
+	public bool isOutButtonSelect;
+
+	protected override CommonIconListCellData CreateCharacterCellData(int keyIdOrInvalidId, int decoNum)
 	{
-		public bool isOutButtonSelect;
+		return null;
+	}
 
-		protected override CommonIconListCellData CreateCharacterCellData(int keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	public void SelectPartyInfoUpdate(PartySettingList[] partyList)
+	{
+	}
 
-		public void SelectPartyInfoUpdate(PartySettingList[] partyList)
-		{
-		}
-
-		public void SetSelectIconToOutButton(bool isShowSelect)
-		{
-		}
+	public void SetSelectIconToOutButton(bool isShowSelect)
+	{
 	}
 }

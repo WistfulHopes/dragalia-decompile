@@ -1,37 +1,36 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterLoadBalancer
 {
-	public class CharacterLoadBalancer
+	private List<CharacterSelector> _alwaysCharacterSelectors;
+
+	private List<CharacterSelector> _sparseCharacterSelectors;
+
+	public void AddCharacter(CharacterSelector selector, bool isOtherPlayerCharacter)
 	{
-		private List<CharacterSelector> _alwaysCharacterSelectors;
+	}
 
-		private List<CharacterSelector> _sparseCharacterSelectors;
+	public void RemoveCharacter(CharacterSelector selector)
+	{
+	}
 
-		public void AddCharacter(CharacterSelector selector, bool isOtherPlayerCharacter)
-		{
-		}
+	public void InactivateOtherPlayer(CharacterSelector c)
+	{
+	}
 
-		public void RemoveCharacter(CharacterSelector selector)
-		{
-		}
+	public void Update()
+	{
+	}
 
-		public void InactivateOtherPlayer(CharacterSelector c)
-		{
-		}
+	public bool CanExecTask(CharacterBase character)
+	{
+		return default(bool);
+	}
 
-		public void Update()
-		{
-		}
-
-		public bool CanExecTask(CharacterBase character)
-		{
-			return default(bool);
-		}
-
-		private bool IsSameCharacter(CharacterSelector selector, CharacterBase chara)
-		{
-			return default(bool);
-		}
+	private bool IsSameCharacter(CharacterSelector selector, CharacterBase chara)
+	{
+		return default(bool);
 	}
 }

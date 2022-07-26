@@ -1,18 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestPowerIcon : MonoBehaviour
 {
-	public class QuestPowerIcon : MonoBehaviour
+	private Text powerText;
+
+	public void SetupQuestPowerIcon(int questId)
 	{
-		private Text powerText;
+	}
 
-		public void SetupQuestPowerIcon(int questId)
-		{
-		}
-
-		public void SetupQuestPowerIconByValue(int value)
-		{
-		}
+	public void SetupQuestPowerIconByValue(int value)
+	{
 	}
 }

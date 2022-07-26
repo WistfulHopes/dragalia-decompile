@@ -1,20 +1,19 @@
 using Gluon.Master;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeStoryListCellData
 {
-	public class DmodeStoryListCellData
-	{
-		public DmodeStoryElement dmodeStoryElement;
+	public DmodeStoryElement dmodeStoryElement;
 
-		public UnityAction<DmodeStoryListCellData> onCellPressed;
+	public UnityAction<DmodeStoryListCellData> onCellPressed;
 
-		public bool isNew;
+	public bool isNew;
 
-		public bool isReleased;
+	public bool isReleased;
 
-		public int storyReleasedCharaCount;
+	public int storyReleasedCharaCount;
 
-		public int storyReleasedMaxFloorNum;
-	}
+	public int storyReleasedMaxFloorNum;
 }

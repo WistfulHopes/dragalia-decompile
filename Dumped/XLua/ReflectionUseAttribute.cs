@@ -1,8 +1,7 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+public class ReflectionUseAttribute : Attribute
 {
-	public class ReflectionUseAttribute : Attribute
-	{
-	}
 }

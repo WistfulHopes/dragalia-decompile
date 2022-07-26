@@ -3,55 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeSkipResultPopup : PopupBase
 {
-	public class DmodeSkipResultPopup : PopupBase
+	[SerializeField]
+	public Text titleText;
+
+	[SerializeField]
+	public Text hpText;
+
+	public Text attackText;
+
+	[SerializeField]
+	public DmodeCommonInGameIcon weaponIcon;
+
+	public DmodeCommonInGameIcon[] abilityCrestIcons;
+
+	[SerializeField]
+	public DmodeCommonInGameIcon dragonIconTemplate;
+
+	[SerializeField]
+	public DmodeCommonInGameIcon skillIconTemplate;
+
+	public static readonly string prefabPath;
+
+	private List<DmodeCommonInGameIcon> dragonIcons;
+
+	private List<DmodeCommonInGameIcon> skillIcons;
+
+	public static DmodeSkipResultPopup Create(Action onClose)
 	{
-		[SerializeField]
-		[Header("Title")]
-		public Text titleText;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("TopPart")]
-		public Text hpText;
+	protected override void Start()
+	{
+	}
 
-		public Text attackText;
+	private void OnEquippedDefaultWeaponButtonPressed(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		[SerializeField]
-		[Header("Equip")]
-		public DmodeCommonInGameIcon weaponIcon;
-
-		public DmodeCommonInGameIcon[] abilityCrestIcons;
-
-		[SerializeField]
-		[Header("Dragon")]
-		public DmodeCommonInGameIcon dragonIconTemplate;
-
-		[SerializeField]
-		[Header("Skill")]
-		public DmodeCommonInGameIcon skillIconTemplate;
-
-		public static readonly string prefabPath;
-
-		private List<DmodeCommonInGameIcon> dragonIcons;
-
-		private List<DmodeCommonInGameIcon> skillIcons;
-
-		public static DmodeSkipResultPopup Create(Action onClose)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		private void OnEquippedDefaultWeaponButtonPressed(DmodeDungeonItemType type, int id)
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
+	protected override void OnDestroy()
+	{
 	}
 }

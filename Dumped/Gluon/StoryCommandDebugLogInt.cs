@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandDebugLogInt : IStoryCommand
 {
-	[CommandName("debug_log_int")]
-	public class StoryCommandDebugLogInt : IStoryCommand
+	public void Start(int text)
 	{
-		public void Start(int text)
-		{
-		}
 	}
 }

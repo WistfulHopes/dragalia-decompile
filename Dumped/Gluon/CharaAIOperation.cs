@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum CharaAIOperation
 {
-	public enum CharaAIOperation
-	{
-		NONE,
-		ATTACK,
-		DEFENCE,
-		NOSKILL,
-		BASIC
-	}
+	NONE,
+	ATTACK,
+	DEFENCE,
+	NOSKILL,
+	BASIC
 }

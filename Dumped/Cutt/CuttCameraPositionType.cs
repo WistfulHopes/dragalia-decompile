@@ -1,9 +1,8 @@
-namespace Cutt
+namespace Cutt;
+
+public enum CuttCameraPositionType
 {
-	public enum CuttCameraPositionType
-	{
-		Locator,
-		Direct,
-		Character
-	}
+	Locator,
+	Direct,
+	Character
 }

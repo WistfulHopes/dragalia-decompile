@@ -1,32 +1,31 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FootprintsCtrl : MonoBehaviour
 {
-	public class FootprintsCtrl : MonoBehaviour
+	public CharacterBase owner;
+
+	private void OnDisable()
 	{
-		public CharacterBase owner;
+	}
 
-		private void OnDisable()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private string GetEffectName()
+	{
+		return null;
+	}
 
-		private string GetEffectName()
-		{
-			return null;
-		}
+	private bool NeedsPlay()
+	{
+		return default(bool);
+	}
 
-		private bool NeedsPlay()
-		{
-			return default(bool);
-		}
-
-		public static bool NeedsFootsteps(int decoType)
-		{
-			return default(bool);
-		}
+	public static bool NeedsFootsteps(int decoType)
+	{
+		return default(bool);
 	}
 }

@@ -1,30 +1,29 @@
-namespace Gluon
+namespace Gluon;
+
+public class SimpleStateProcessor
 {
-	public class SimpleStateProcessor
+	private SimpleState state;
+
+	private SimpleState statePrev;
+
+	private bool bterm;
+
+	public SimpleState State => null;
+
+	private void Init()
 	{
-		private SimpleState state;
+	}
 
-		private SimpleState statePrev;
+	public void Clear()
+	{
+	}
 
-		private bool bterm;
+	public void Execute()
+	{
+	}
 
-		public SimpleState State => null;
-
-		private void Init()
-		{
-		}
-
-		public void Clear()
-		{
-		}
-
-		public void Execute()
-		{
-		}
-
-		public bool SetState(SimpleState st, bool bforce = false)
-		{
-			return default(bool);
-		}
+	public bool SetState(SimpleState st, bool bforce = false)
+	{
+		return default(bool);
 	}
 }

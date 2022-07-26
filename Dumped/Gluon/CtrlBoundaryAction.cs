@@ -2,114 +2,113 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Cute.Core;
 
-namespace Gluon
+namespace Gluon;
+
+public class CtrlBoundaryAction : FastUpdateMonoBehaviour
 {
-	public class CtrlBoundaryAction : FastUpdateMonoBehaviour
+	public class BoundaryData
 	{
-		public class BoundaryData
+		public int _id;
+
+		public int _hp;
+
+		public int _actionId;
+
+		public EnemyBoundaryCondition _condition;
+
+		public bool _noChancelStop1;
+
+		public bool _done;
+	}
+
+	private EnemyCharacter _owner;
+
+	public List<BoundaryData> datas
+	{
+		[CompilerGenerated]
+		get
 		{
-			public int _id;
-
-			public int _hp;
-
-			public int _actionId;
-
-			public EnemyBoundaryCondition _condition;
-
-			public bool _noChancelStop1;
-
-			public bool _done;
+			return null;
 		}
+	}
 
-		private EnemyCharacter _owner;
-
-		public List<BoundaryData> datas
+	public BoundaryData activeData
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
+			return null;
 		}
-
-		public BoundaryData activeData
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool isActiveAction => default(bool);
-
-		public bool isFinished
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void Initialize(EnemyCharacter owner)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Reset()
-		{
-		}
+	public bool isActiveAction => default(bool);
 
-		public static bool IsExistBoundaryAction(EnemyCharacter owner)
+	public bool isFinished
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		private void CreateList()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool Check()
-		{
-			return default(bool);
-		}
+	public void Initialize(EnemyCharacter owner)
+	{
+	}
 
-		public bool OnFatal(bool isQuestSkill, CharacterBase attacker)
-		{
-			return default(bool);
-		}
+	public void Reset()
+	{
+	}
 
-		public void Execute()
-		{
-		}
+	public static bool IsExistBoundaryAction(EnemyCharacter owner)
+	{
+		return default(bool);
+	}
 
-		private bool IsSuperExtraAction()
-		{
-			return default(bool);
-		}
+	private void CreateList()
+	{
+	}
 
-		public void OnFinishAction()
-		{
-		}
+	public bool Check()
+	{
+		return default(bool);
+	}
 
-		public void SetCondition(bool onoff)
-		{
-		}
+	public bool OnFatal(bool isQuestSkill, CharacterBase attacker)
+	{
+		return default(bool);
+	}
 
-		public void ActivateBoundaryData(int boundaryDataId)
-		{
-		}
+	public void Execute()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	private bool IsSuperExtraAction()
+	{
+		return default(bool);
+	}
+
+	public void OnFinishAction()
+	{
+	}
+
+	public void SetCondition(bool onoff)
+	{
+	}
+
+	public void ActivateBoundaryData(int boundaryDataId)
+	{
+	}
+
+	public override void FastUpdate()
+	{
 	}
 }

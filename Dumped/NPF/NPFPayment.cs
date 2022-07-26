@@ -5,165 +5,164 @@ using Gluon;
 using NPF.NPFWrapper;
 using NPF.VCM;
 
-namespace NPF
+namespace NPF;
+
+public class NPFPayment
 {
-	public class NPFPayment
+	public enum PaymentErrorCode
 	{
-		public enum PaymentErrorCode
-		{
-			BAASID_NOT_RECOGNIZED = 401,
-			IAB_REQUEST_ITEM_ERROR = 402,
-			PENALTY_ERROR = 403,
-			CANT_FINISH_ERROR = 404,
-			NOT_SIGIN_ERROR = 405,
-			IN_APP_PURCHASE_ERROR = 406,
-			CHILD_ACCOUT_NOT_PARENT_AUTH = 407,
-			UNFINISH_TRANSACTION = 409,
-			CANCEL = -1
-		}
+		BAASID_NOT_RECOGNIZED = 401,
+		IAB_REQUEST_ITEM_ERROR = 402,
+		PENALTY_ERROR = 403,
+		CANT_FINISH_ERROR = 404,
+		NOT_SIGIN_ERROR = 405,
+		IN_APP_PURCHASE_ERROR = 406,
+		CHILD_ACCOUT_NOT_PARENT_AUTH = 407,
+		UNFINISH_TRANSACTION = 409,
+		CANCEL = -1
+	}
 
-		public enum CurrencyCode
-		{
-			JPY,
-			TWD,
-			HKD
-		}
+	public enum CurrencyCode
+	{
+		JPY,
+		TWD,
+		HKD
+	}
 
-		public class ProductInfo
-		{
-			public double price;
+	public class ProductInfo
+	{
+		public double price;
 
-			public string displayPrice;
+		public string displayPrice;
 
-			public string sku;
+		public string sku;
 
-			public string title;
+		public string title;
 
-			public int amount;
+		public int amount;
 
-			public int extraAmount;
+		public int extraAmount;
 
-			public ProductInfo()
-			{
-			}
-
-			public ProductInfo(double price, string displayPrice, string sku, string title, int amount, int extraAmount)
-			{
-			}
-		}
-
-		public const string VCName = "diamond";
-
-		private static string currencyCode;
-
-		private static int dragonDiamondCount;
-
-		private static PaymentTimer timer;
-
-		private static string promotedBundleSKU;
-
-		private static bool isLogin;
-
-		private static int dragonPaidDiamondCount;
-
-		private static int dragonFreeDiamondCount;
-
-		private static List<VirtualCurrencyBundle> vcBundles;
-
-		private const int timezoneOffsetInMinutes = 540;
-
-		public static bool HasPendingPurchase
-		{
-			set
-			{
-			}
-		}
-
-		public static string PromotedBundleSKU
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		public static bool IsLogin => default(bool);
-
-		public static int DragonDiamondCount => default(int);
-
-		public static int DragonPaidDiamondCount => default(int);
-
-		public static int DragonFreeDiamondCount => default(int);
-
-		public static string GetCurrencyCode => null;
-
-		public static void Purchase(string productId, Action onPurchaseSuccessed, [Optional] Action<NPFErrorParam> onPurchaseFailed)
+		public ProductInfo()
 		{
 		}
 
-		private static void Purchase(string productId, Action<VirtualCurrencyWallet> onPurchaseSuccessed, [Optional] Action<NPFErrorParam> onPurchaseFailed)
+		public ProductInfo(double price, string displayPrice, string sku, string title, int amount, int extraAmount)
 		{
 		}
+	}
 
-		public static void GetAllItemList(Action<List<ProductInfo>> onGetListSuccessed, Action<NPFErrorParam> onGetListFailed)
-		{
-		}
+	public const string VCName = "diamond";
 
-		public static void RecieveCurrencyCodeFromPlatform(Action<string> onSuccessed, Action<NPFErrorParam> onFailed)
-		{
-		}
+	private static string currencyCode;
 
-		public static void CallRecoverPurchased(Action onRecoverSuccessed, [Optional] Action<NPFErrorParam> onRecoverFailed)
-		{
-		}
+	private static int dragonDiamondCount;
 
-		public static void CheckUnfinishedProcess(Action<int> onSuccess, Action<NPFErrorParam> onFailed)
-		{
-		}
+	private static PaymentTimer timer;
 
-		private static void CheckUnfinishedProcess(Action<IList<VirtualCurrencyTransaction>> onSuccessed, Action<NPFErrorParam> onFailed)
-		{
-		}
+	private static string promotedBundleSKU;
 
-		public static ShopTradeAgeSelectPopup.AgeGroup GetAgeGroup()
-		{
-			return default(ShopTradeAgeSelectPopup.AgeGroup);
-		}
+	private static bool isLogin;
 
-		private static int CalculateAgeCorrect(int year, int month, int day)
-		{
-			return default(int);
-		}
+	private static int dragonPaidDiamondCount;
 
-		public static void CheckVirtualSummary(string productId, Action onSuccess, Action<NPFErrorParam> onFailed, Action onOverLimit)
-		{
-		}
+	private static int dragonFreeDiamondCount;
 
-		public static void UpdateDragonDiamond(Action<int> onSuccess, Action<NPFErrorParam> onFailed)
-		{
-		}
+	private static List<VirtualCurrencyBundle> vcBundles;
 
-		private static void CheckVirtualSummary(string productId, Action<VirtualCurrencyPurchasedSummary> onSucceessed, Action<NPFErrorParam> onFailed, Action onOverLimit)
-		{
-		}
+	private const int timezoneOffsetInMinutes = 540;
 
-		private static void NetworkErrorPopup(Action onRetry)
+	public static bool HasPendingPurchase
+	{
+		set
 		{
 		}
+	}
 
-		private static void GoogleAccountNotSigninErrorPopup()
+	public static string PromotedBundleSKU
+	{
+		get
+		{
+			return null;
+		}
+		set
 		{
 		}
+	}
 
-		public static void OpenLoadingPopup()
-		{
-		}
+	public static bool IsLogin => default(bool);
 
-		public static void CloseLoadingPopup()
-		{
-		}
+	public static int DragonDiamondCount => default(int);
+
+	public static int DragonPaidDiamondCount => default(int);
+
+	public static int DragonFreeDiamondCount => default(int);
+
+	public static string GetCurrencyCode => null;
+
+	public static void Purchase(string productId, Action onPurchaseSuccessed, [Optional] Action<NPFErrorParam> onPurchaseFailed)
+	{
+	}
+
+	private static void Purchase(string productId, Action<VirtualCurrencyWallet> onPurchaseSuccessed, [Optional] Action<NPFErrorParam> onPurchaseFailed)
+	{
+	}
+
+	public static void GetAllItemList(Action<List<ProductInfo>> onGetListSuccessed, Action<NPFErrorParam> onGetListFailed)
+	{
+	}
+
+	public static void RecieveCurrencyCodeFromPlatform(Action<string> onSuccessed, Action<NPFErrorParam> onFailed)
+	{
+	}
+
+	public static void CallRecoverPurchased(Action onRecoverSuccessed, [Optional] Action<NPFErrorParam> onRecoverFailed)
+	{
+	}
+
+	public static void CheckUnfinishedProcess(Action<int> onSuccess, Action<NPFErrorParam> onFailed)
+	{
+	}
+
+	private static void CheckUnfinishedProcess(Action<IList<VirtualCurrencyTransaction>> onSuccessed, Action<NPFErrorParam> onFailed)
+	{
+	}
+
+	public static ShopTradeAgeSelectPopup.AgeGroup GetAgeGroup()
+	{
+		return default(ShopTradeAgeSelectPopup.AgeGroup);
+	}
+
+	private static int CalculateAgeCorrect(int year, int month, int day)
+	{
+		return default(int);
+	}
+
+	public static void CheckVirtualSummary(string productId, Action onSuccess, Action<NPFErrorParam> onFailed, Action onOverLimit)
+	{
+	}
+
+	public static void UpdateDragonDiamond(Action<int> onSuccess, Action<NPFErrorParam> onFailed)
+	{
+	}
+
+	private static void CheckVirtualSummary(string productId, Action<VirtualCurrencyPurchasedSummary> onSucceessed, Action<NPFErrorParam> onFailed, Action onOverLimit)
+	{
+	}
+
+	private static void NetworkErrorPopup(Action onRetry)
+	{
+	}
+
+	private static void GoogleAccountNotSigninErrorPopup()
+	{
+	}
+
+	public static void OpenLoadingPopup()
+	{
+	}
+
+	public static void CloseLoadingPopup()
+	{
 	}
 }

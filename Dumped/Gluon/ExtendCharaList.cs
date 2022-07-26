@@ -1,12 +1,16 @@
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public static class ExtendCharaList
 {
-	public static class ExtendCharaList
+	public static int GetAbilityLevel(this CharaList self, int abilityNo)
 	{
-		public static int GetAbilityLevel(this CharaList self, int abilityNo)
-		{
-			return default(int);
-		}
+		return default(int);
+	}
+
+	public static int GetSupportSkillLevel(this CharaList self)
+	{
+		return default(int);
 	}
 }

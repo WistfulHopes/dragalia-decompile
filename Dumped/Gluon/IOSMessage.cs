@@ -1,27 +1,26 @@
 using System;
 
-namespace Gluon
+namespace Gluon;
+
+public class IOSMessage
 {
-	public class IOSMessage
+	public string title;
+
+	public string message;
+
+	public string ok;
+
+	public static IOSMessage Create(string title, string message, Action okAction)
 	{
-		public string title;
+		return null;
+	}
 
-		public string message;
+	public static IOSMessage Create(string title, string message, string ok, Action okAction)
+	{
+		return null;
+	}
 
-		public string ok;
-
-		public static IOSMessage Create(string title, string message, Action okAction)
-		{
-			return null;
-		}
-
-		public static IOSMessage Create(string title, string message, string ok, Action okAction)
-		{
-			return null;
-		}
-
-		public void init(Action okAction)
-		{
-		}
+	public void init(Action okAction)
+	{
 	}
 }

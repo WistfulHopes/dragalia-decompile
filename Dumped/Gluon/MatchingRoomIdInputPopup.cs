@@ -6,92 +6,91 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingRoomIdInputPopup : PopupBase
 {
-	public class MatchingRoomIdInputPopup : PopupBase
+	[SerializeField]
+	private InputFrame inputFrame;
+
+	[SerializeField]
+	private Text searchButtonText;
+
+	[SerializeField]
+	private Button searchButton;
+
+	private QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation;
+
+	private const int MaxRommInputCount = 7;
+
+	private Action<int, QuestAutoTransitionUtil.GuestEnterRoomFromType> goPrepareScene;
+
+	private bool searchPrevRoom;
+
+	private static int prevRoomId;
+
+	private static RoomList prevRoomData;
+
+	private static int prevRoomIsFriend;
+
+	public static void ClearPrevRoomData()
 	{
-		[SerializeField]
-		private InputFrame inputFrame;
+	}
 
-		[SerializeField]
-		private Text searchButtonText;
+	public void Initialize(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, Action<int, QuestAutoTransitionUtil.GuestEnterRoomFromType> goPrepareScene, bool searchPrevRoom)
+	{
+	}
 
-		[SerializeField]
-		private Button searchButton;
+	protected override void Start()
+	{
+	}
 
-		private QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation;
+	private IEnumerator ShowPrevRoomPopup()
+	{
+		return null;
+	}
 
-		private const int MaxRommInputCount = 7;
+	public void OnClearButtonPressed()
+	{
+	}
 
-		private Action<int, QuestAutoTransitionUtil.GuestEnterRoomFromType> goPrepareScene;
+	public void OnDeleteButtonPressed()
+	{
+	}
 
-		private bool searchPrevRoom;
+	public void OnSearchButtonPressed()
+	{
+	}
 
-		private static int prevRoomId;
+	public void OnCancelButtonPressed()
+	{
+	}
 
-		private static RoomList prevRoomData;
+	private void OnNumberButtonPressed(List<string> num)
+	{
+	}
 
-		private static int prevRoomIsFriend;
+	private void ServerRoomNameGat(int roomId)
+	{
+	}
 
-		public static void ClearPrevRoomData()
-		{
-		}
+	private void OnMatchingGetRoomNameRequestError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		public void Initialize(QuestAutoTransitionUtil.MultiJoinBaseLocation multiJoinBaseLocation, Action<int, QuestAutoTransitionUtil.GuestEnterRoomFromType> goPrepareScene, bool searchPrevRoom)
-		{
-		}
+	public static void PopupNothingRoom()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	private void OnMatchingGetRoomNameRequestSuccess(MatchingGetRoomNameResponse res)
+	{
+	}
 
-		private IEnumerator ShowPrevRoomPopup()
-		{
-			return null;
-		}
+	private void GoQuestPrepareScene(int roomQuestId)
+	{
+	}
 
-		public void OnClearButtonPressed()
-		{
-		}
-
-		public void OnDeleteButtonPressed()
-		{
-		}
-
-		public void OnSearchButtonPressed()
-		{
-		}
-
-		public void OnCancelButtonPressed()
-		{
-		}
-
-		private void OnNumberButtonPressed(List<string> num)
-		{
-		}
-
-		private void ServerRoomNameGat(int roomId)
-		{
-		}
-
-		private void OnMatchingGetRoomNameRequestError(ErrorType errorType, int resultCode)
-		{
-		}
-
-		public static void PopupNothingRoom()
-		{
-		}
-
-		private void OnMatchingGetRoomNameRequestSuccess(MatchingGetRoomNameResponse res)
-		{
-		}
-
-		private void GoQuestPrepareScene(int roomQuestId)
-		{
-		}
-
-		public static void CheckJoinConditions(GameObject gameObject, int questId, Action<bool> onSuccess)
-		{
-		}
+	public static void CheckJoinConditions(GameObject gameObject, int questId, Action<bool> onSuccess)
+	{
 	}
 }

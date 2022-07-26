@@ -3,349 +3,361 @@ using Cute.Core;
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DropItemElement : FastUpdateMonoBehaviour
 {
-	public class DropItemElement : FastUpdateMonoBehaviour
+	public enum Type
 	{
-		public enum Type
-		{
-			Coin,
-			Mana,
-			Sack,
-			Weapon,
-			DragonPoint,
-			PicturePiece,
-			HP,
-			SP,
-			Medal,
-			Amulet,
-			QuestSkillPoint,
-			Num
-		}
+		Coin,
+		Mana,
+		Sack,
+		Weapon,
+		DragonPoint,
+		PicturePiece,
+		HP,
+		SP,
+		Medal,
+		Amulet,
+		QuestSkillPoint,
+		Num
+	}
 
-		public enum RarityType
-		{
-			None,
-			Rare,
-			Rare2
-		}
+	public enum RarityType
+	{
+		None,
+		Rare,
+		Rare2
+	}
 
-		[SerializeField]
-		[Header("component")]
-		private SpriteRenderer itemImage;
+	[SerializeField]
+	private SpriteRenderer itemImage;
 
-		[SerializeField]
-		private SpriteRenderer lineEffect;
+	[SerializeField]
+	private SpriteRenderer lineEffect;
 
-		[SerializeField]
-		private SpriteRenderer circleEffect;
+	[SerializeField]
+	private SpriteRenderer circleEffect;
 
-		[SerializeField]
-		private Transform animationRoot;
+	[SerializeField]
+	private Transform animationRoot;
 
-		[SerializeField]
-		private Vector2 rareEffectOffset;
+	[SerializeField]
+	private Vector2 rareEffectOffset;
 
-		[SerializeField]
-		private float circleEffectOutTIme;
+	[SerializeField]
+	private float circleEffectOutTIme;
 
-		private DropItemUI dropItemUI;
+	private DropItemUI dropItemUI;
 
-		private Transform trs;
+	private Transform trs;
 
-		private Transform itemRect;
+	private Transform itemRect;
 
-		private Transform flashEffectRoot;
+	private Transform flashEffectRoot;
 
-		private Type type;
+	private Type type;
 
-		private int value;
+	private int value;
 
-		private bool valid;
+	private bool valid;
 
-		private Vector3 position;
+	private Vector3 position;
 
-		private Vector2 direction;
+	private Vector2 direction;
 
-		private float hspeed;
+	private float hspeed;
 
-		private float vspeed;
+	private float vspeed;
 
-		private float lapse;
+	private float lapse;
 
-		private int count;
+	private int count;
 
-		private Vector3 targetPosition;
+	private Vector3 targetPosition;
 
-		private Vector3 startPosition;
+	private Vector3 startPosition;
 
-		private ItemGlitter glitter;
+	private ItemGlitter glitter;
 
-		private ItemGlitter.Parameter glitterParam;
+	private ItemGlitter.Parameter glitterParam;
 
-		private DropCoinGlitter coinGlitter;
+	private DropCoinGlitter coinGlitter;
 
-		private DropCoinGlitter.Parameter coinGlitterParam;
+	private DropCoinGlitter.Parameter coinGlitterParam;
 
-		private float scale1;
+	private float scale1;
 
-		private float scale2;
+	private float scale2;
 
-		private float scale3;
+	private float scale3;
 
-		private float rotationSpeedZ;
+	private float rotationSpeedZ;
 
-		private float rotationZ;
+	private float rotationZ;
 
-		private Sprite[] sprites;
+	private Sprite[] sprites;
 
-		private int numSprite;
+	private int numSprite;
 
-		private int animIndex;
+	private int animIndex;
 
-		private float animTime;
+	private int animDropItemLineIndex;
 
-		private float baseScale;
+	private int animDropItemCircleIndex;
 
-		private bool stretch;
+	private float animTime;
 
-		private Material originMaterial;
+	private float animDropItemLineTime;
 
-		private Tweener twGlitter;
+	private float animDropItemCircleTime;
 
-		private Tweener twOnCompleteWait;
+	private float intervalTime;
 
-		private Sequence seqDropItem;
+	private float baseScale;
 
-		private Sequence seqDropItemLine;
+	private bool stretch;
 
-		private Sequence seqDropItemCircle;
+	private Material originMaterial;
 
-		private SimpleStateProcessor stateProcessor;
+	private Tweener twGlitter;
 
-		private SimpleState stateDropCoin;
+	private Tweener twOnCompleteWait;
 
-		private SimpleState stateTakeInCoin;
+	private SimpleStateProcessor stateProcessor;
 
-		private SimpleState stateDropItem;
+	private SimpleState stateDropCoin;
 
-		private SimpleState stateTakeInItem;
+	private SimpleState stateTakeInCoin;
 
-		private SimpleState stateDropDP;
+	private SimpleState stateDropItem;
 
-		private SimpleState stateTakeInDP;
+	private SimpleState stateTakeInItem;
 
-		private const float gravity = 19.6f;
+	private SimpleState stateDropDP;
 
-		private const int bound = 2;
+	private SimpleState stateTakeInDP;
 
-		private RarityType rarityType;
+	private const float gravity = 19.6f;
 
-		private const float takeHeight = 100f;
+	private const int bound = 2;
 
-		private DropItemBright bright;
+	private RarityType rarityType;
 
-		private TweenUtil.ColorModulusArgs colorModulusArgs;
+	private const float takeHeight = 100f;
 
-		public static DropItemElement Create(GameObject parent, GameObject prefab, GameObject prefabGlitter, GameObject prefabCoinGlitter)
-		{
-			return null;
-		}
+	private DropItemBright bright;
 
-		private void Initialize(GameObject parent, GameObject prefabGlitter, GameObject prefabCoinGlitter)
-		{
-		}
+	private TweenUtil.ColorModulusArgs colorModulusArgs;
 
-		private void OnDestroy()
-		{
-		}
+	public static DropItemElement Create(GameObject parent, GameObject prefab, GameObject prefabGlitter, GameObject prefabCoinGlitter, GameObject prefabBright)
+	{
+		return null;
+	}
 
-		private void Visible(bool b, bool force = false)
-		{
-		}
+	private void Initialize(GameObject parent, GameObject prefabGlitter, GameObject prefabCoinGlitter, GameObject prefabBright)
+	{
+	}
 
-		public bool IsValid()
-		{
-			return default(bool);
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public void SetBright(DropItemBright bright)
-		{
-		}
+	private void ResetAnim()
+	{
+	}
 
-		public void CancelDrop()
-		{
-		}
+	private void Visible(bool b, bool force = false)
+	{
+	}
 
-		private void StopTweener()
-		{
-		}
+	public bool IsValid()
+	{
+		return default(bool);
+	}
 
-		private float GetRaidScale()
-		{
-			return default(float);
-		}
+	public void CancelDrop()
+	{
+	}
 
-		public void DropCoin(Sprite[] sprite, int value, Vector3 position, Vector2 direction, float hspeed, float vspeed, Vector3 target)
-		{
-		}
+	private void StopTweener()
+	{
+	}
 
-		public void DropSack(Sprite sprite, int value, Vector3 position, float vspeed, Vector3 target, RarityType rarityType)
-		{
-		}
+	private float GetRaidScale()
+	{
+		return default(float);
+	}
 
-		public void SetEventIcon(Material material)
-		{
-		}
+	public void DropCoin(Sprite[] sprite, int value, Vector3 position, Vector2 direction, float hspeed, float vspeed, Vector3 target)
+	{
+	}
 
-		private void SpriteOverride(SpriteRenderer image)
-		{
-		}
+	public void DropSack(Sprite sprite, int value, Vector3 position, float vspeed, Vector3 target, RarityType rarityType)
+	{
+	}
 
-		public void DropWeapon(Sprite sprite, int value, Vector3 position, float vspeed, Vector3 target, RarityType rarityType)
-		{
-		}
+	public void SetEventIcon(Material material)
+	{
+	}
 
-		public void DropPiece(Sprite sprite, Vector3 position, float vspeed, Vector3 target)
-		{
-		}
+	private void SpriteOverride(SpriteRenderer image)
+	{
+	}
 
-		public void DropHP(Sprite sprite, int value, Vector3 position, float vspeed)
-		{
-		}
+	public void DropWeapon(Sprite sprite, int value, Vector3 position, float vspeed, Vector3 target, RarityType rarityType)
+	{
+	}
 
-		public void DropSP(Sprite sprite, int value, Vector3 position, float vspeed)
-		{
-		}
+	public void DropPiece(Sprite sprite, Vector3 position, float vspeed, Vector3 target)
+	{
+	}
 
-		public void DropDP(Sprite sprite, int value, Vector3 position, Vector2 direction, float hspeed, float vspeed, Vector3 target)
-		{
-		}
+	public void DropHP(Sprite sprite, int value, Vector3 position, float vspeed)
+	{
+	}
 
-		public void DropQSP(Sprite sprite, int value, Vector3 position, Vector2 direction, float hspeed, float vspeed, Vector3 target)
-		{
-		}
+	public void DropSP(Sprite sprite, int value, Vector3 position, float vspeed)
+	{
+	}
 
-		public void DropMana(Sprite sprite, int value, Vector3 position, Vector2 direction, float hspeed, float vspeed, Vector3 target)
-		{
-		}
+	public void DropDP(Sprite sprite, int value, Vector3 position, Vector2 direction, float hspeed, float vspeed, Vector3 target)
+	{
+	}
 
-		public void DropMedal(Sprite sprite, int value, Vector3 position, Vector2 direction, float hspeed, float vspeed, Vector3 target)
-		{
-		}
+	public void DropQSP(Sprite sprite, int value, Vector3 position, Vector2 direction, float hspeed, float vspeed, Vector3 target)
+	{
+	}
 
-		public void DropAmulet(Sprite sprite, int value, Vector3 position, float vspeed, Vector3 target, RarityType rarityType)
-		{
-		}
+	public void DropMana(Sprite sprite, int value, Vector3 position, Vector2 direction, float hspeed, float vspeed, Vector3 target)
+	{
+	}
 
-		private void InitialDrop()
-		{
-		}
+	public void DropMedal(Sprite sprite, int value, Vector3 position, Vector2 direction, float hspeed, float vspeed, Vector3 target)
+	{
+	}
 
-		public RarityType GetRarityType()
-		{
-			return default(RarityType);
-		}
+	public void DropAmulet(Sprite sprite, int value, Vector3 position, float vspeed, Vector3 target, RarityType rarityType)
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	private void InitialDrop()
+	{
+	}
 
-		private void LateUpdate()
-		{
-		}
+	public RarityType GetRarityType()
+	{
+		return default(RarityType);
+	}
 
-		private void AnimCoin(float deltaTime)
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		private void TickDropCoin()
-		{
-		}
+	private void LateUpdate()
+	{
+	}
 
-		private void BeginTakeInCoin(SimpleState prev)
-		{
-		}
+	private void AnimCoin(float deltaTime)
+	{
+	}
 
-		private void TickTakeInCoin()
-		{
-		}
+	private void TickDropCoin()
+	{
+	}
 
-		private void OnWaitGlitterCoin()
-		{
-		}
+	private void BeginTakeInCoin(SimpleState prev)
+	{
+	}
 
-		private void OnUpdateTakeInCoin(float v)
-		{
-		}
+	private void TickTakeInCoin()
+	{
+	}
 
-		private void OnCompleteCoin()
-		{
-		}
+	private void OnWaitGlitterCoin()
+	{
+	}
 
-		private void TickDropItem()
-		{
-		}
+	private void OnUpdateTakeInCoin(float v)
+	{
+	}
 
-		private void BeginDropItem(SimpleState prev)
-		{
-		}
+	private void OnCompleteCoin()
+	{
+	}
 
-		private IEnumerator DropHpPotionCoroutine()
-		{
-			return null;
-		}
+	private void AnimItem()
+	{
+	}
 
-		private void BeginTakeInItem(SimpleState prev)
-		{
-		}
+	private void InitDropItemStretch()
+	{
+	}
 
-		private void OnWaitGlitterItem()
-		{
-		}
+	private float UpdateDropItemStretch(bool isApply = true)
+	{
+		return default(float);
+	}
 
-		private void OnCompleteItem()
-		{
-		}
+	private void InitDropItem()
+	{
+	}
 
-		private void TickDropDP()
-		{
-		}
+	private float UpdateDropItem(bool isApply = true)
+	{
+		return default(float);
+	}
 
-		private void BeginTakeInDP(SimpleState prev)
-		{
-		}
+	private void UpdateDropItemLineEffect()
+	{
+	}
 
-		private void OnUpdateTakeInDP(float v)
-		{
-		}
+	private void UpdateDropItemCircleEffect()
+	{
+	}
 
-		private void OnCompleteDP()
-		{
-		}
+	private void TickDropItem()
+	{
+	}
 
-		private void SetAlpha(float alpha)
-		{
-		}
+	private void BeginDropItem(SimpleState prev)
+	{
+	}
 
-		private void PlayDoTweenDropItemStretch(Sequence seq, float interval)
-		{
-		}
+	private IEnumerator DropHpPotionCoroutine()
+	{
+		return null;
+	}
 
-		private void PlayDoTweenDropItem(Sequence seq, float interval)
-		{
-		}
+	private void BeginTakeInItem(SimpleState prev)
+	{
+	}
 
-		private void DropItemTakeInCallback()
-		{
-		}
+	private void OnWaitGlitterItem()
+	{
+	}
 
-		private void PlayDoTweenDropItemLineEffect()
-		{
-		}
+	private void OnCompleteItem()
+	{
+	}
 
-		private void PlayDoTweenDropItemCircleEffect()
-		{
-		}
+	private void TickDropDP()
+	{
+	}
+
+	private void BeginTakeInDP(SimpleState prev)
+	{
+	}
+
+	private void OnUpdateTakeInDP(float v)
+	{
+	}
+
+	private void OnCompleteDP()
+	{
+	}
+
+	private void SetAlpha(float alpha)
+	{
 	}
 }

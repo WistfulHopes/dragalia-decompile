@@ -1,57 +1,56 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsBind : ActionParts
 {
-	public class ActionPartsBind : ActionParts
+	public enum BindType
 	{
-		public enum BindType
-		{
-			There,
-			Owner,
-			OwnerNode,
-			ThereGround
-		}
+		There,
+		Owner,
+		OwnerNode,
+		ThereGround
+	}
 
-		private readonly BindData _partsData;
+	private readonly BindData _partsData;
 
-		private CharacterBase _target;
+	private CharacterBase _target;
 
-		private CharacterBase _targetOriginal;
+	private CharacterBase _targetOriginal;
 
-		private Transform _attachNode;
+	private Transform _attachNode;
 
-		private Quaternion _preRotation;
+	private Quaternion _preRotation;
 
-		private bool _success;
+	private bool _success;
 
-		public ActionPartsBind(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsBind(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnFinish()
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		private void Bind(bool on)
-		{
-		}
+	private void Bind(bool on)
+	{
+	}
 
-		private void SetTargetPosition()
-		{
-		}
+	private void SetTargetPosition()
+	{
 	}
 }

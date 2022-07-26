@@ -1,44 +1,43 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleAutoReleaseSkillAbilityCell : MonoBehaviour
 {
-	public class GrowthManaCircleAutoReleaseSkillAbilityCell : MonoBehaviour
+	public Image icon;
+
+	private int charaId;
+
+	private GrowthManaCircleManaPieceData pieceData;
+
+	private int dataIndex;
+
+	public void InitCell(GrowthManaCircleModel model, GrowthManaCircleManaPieceData pieceData, int dataIndex = 0)
 	{
-		public Image icon;
+	}
 
-		private int charaId;
+	public void InitCell(int charaId, GrowthManaCircleManaPieceData pieceData, int dataIndex = 0)
+	{
+	}
 
-		private GrowthManaCircleManaPieceData pieceData;
+	public void OnIconPressed()
+	{
+	}
 
-		private int dataIndex;
+	public void ShowAbilityDetail()
+	{
+	}
 
-		public void InitCell(GrowthManaCircleModel model, GrowthManaCircleManaPieceData pieceData, int dataIndex = 0)
-		{
-		}
+	public void ShowSkillDetail()
+	{
+	}
 
-		public void InitCell(int charaId, GrowthManaCircleManaPieceData pieceData, int dataIndex = 0)
-		{
-		}
+	public void ShowItemDetail()
+	{
+	}
 
-		public void OnIconPressed()
-		{
-		}
-
-		public void ShowAbilityDetail()
-		{
-		}
-
-		public void ShowSkillDetail()
-		{
-		}
-
-		public void ShowItemDetail()
-		{
-		}
-
-		public void ShowBurstAttack()
-		{
-		}
+	public void ShowBurstAttack()
+	{
 	}
 }

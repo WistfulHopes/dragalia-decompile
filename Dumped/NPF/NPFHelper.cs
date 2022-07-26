@@ -1,11 +1,10 @@
 using System;
 
-namespace NPF
+namespace NPF;
+
+public class NPFHelper
 {
-	public class NPFHelper
+	public static void CheckInquiryStatus(Action<bool, bool> callback)
 	{
-		public static void CheckInquiryStatus(Action<bool, bool> callback)
-		{
-		}
 	}
 }

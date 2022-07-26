@@ -2,58 +2,57 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CraftMaterialWeaponSelectListController : SelectIconListControllerBase
 {
-	public class CraftMaterialWeaponSelectListController : SelectIconListControllerBase
+	[HideInInspector]
+	public int[] targetIds;
+
+	[HideInInspector]
+	public int[] targetLimitbreak;
+
+	[HideInInspector]
+	public List<ulong> usedKeyIdList;
+
+	public Action iconLockCallBack;
+
+	protected override void Start()
 	{
-		[HideInInspector]
-		public int[] targetIds;
+	}
 
-		[HideInInspector]
-		public int[] targetLimitbreak;
+	private void LoadListData()
+	{
+	}
 
-		[HideInInspector]
-		public List<ulong> usedKeyIdList;
+	protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		public Action iconLockCallBack;
+	public void InitListParam(int[] ids, int[] limitbreak, int needCount, ulong[] usedKeyIds)
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	protected override bool IsSelectableData(CommonIconListCellData data)
+	{
+		return default(bool);
+	}
 
-		private void LoadListData()
-		{
-		}
+	private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	private ulong[] CreateDataIdList(int[] ids, int[] limitBreakCount)
+	{
+		return null;
+	}
 
-		public void InitListParam(int[] ids, int[] limitbreak, int needCount, ulong[] usedKeyIds)
-		{
-		}
+	public void OnSortButtonClicked()
+	{
+	}
 
-		protected override bool IsSelectableData(CommonIconListCellData data)
-		{
-			return default(bool);
-		}
-
-		private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private ulong[] CreateDataIdList(int[] ids, int[] limitBreakCount)
-		{
-			return null;
-		}
-
-		public void OnSortButtonClicked()
-		{
-		}
-
-		public void MaterialAutoSelect(int maxSelectCount)
-		{
-		}
+	public void MaterialAutoSelect(int maxSelectCount)
+	{
 	}
 }

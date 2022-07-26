@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class WeaponSkinSelectListCell : CommonIconListCell
 {
-	public class WeaponSkinSelectListCell : CommonIconListCell
+	public override void UpdateContent(CommonIconListCellData data)
 	{
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
 	}
 }

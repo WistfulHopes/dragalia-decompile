@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AfterPrologueDownloadTutorialPage : MonoBehaviour
 {
-	public class AfterPrologueDownloadTutorialPage : MonoBehaviour
-	{
-	}
 }

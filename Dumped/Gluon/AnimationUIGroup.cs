@@ -1,39 +1,38 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AnimationUIGroup : AnimationUIPartBase
 {
-	public class AnimationUIGroup : AnimationUIPartBase
+	public GameObject[] targets;
+
+	[SerializeField]
+	public float delayInterval;
+
+	[SerializeField]
+	private bool shouldReverseDelayInterval;
+
+	private IEnumerator coroutine;
+
+	public override void Init()
 	{
-		public GameObject[] targets;
+	}
 
-		[SerializeField]
-		public float delayInterval;
+	public void UpdateDelayTime()
+	{
+	}
 
-		[SerializeField]
-		private bool shouldReverseDelayInterval;
+	public override void Execute(bool isReverse = false)
+	{
+	}
 
-		private IEnumerator coroutine;
+	private IEnumerator WaitForFinished(float time)
+	{
+		return null;
+	}
 
-		public override void Init()
-		{
-		}
-
-		public void UpdateDelayTime()
-		{
-		}
-
-		public override void Execute(bool isReverse = false)
-		{
-		}
-
-		private IEnumerator WaitForFinished(float time)
-		{
-			return null;
-		}
-
-		public override void Kill()
-		{
-		}
+	public override void Kill()
+	{
 	}
 }

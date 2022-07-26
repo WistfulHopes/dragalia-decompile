@@ -1,21 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharaTypeUI : MonoBehaviour
 {
-	public class CharaTypeUI : MonoBehaviour
+	public Image typeImage;
+
+	public Sprite[] typeSprites;
+
+	private static int GetTypeCount()
 	{
-		public Image typeImage;
+		return default(int);
+	}
 
-		public Sprite[] typeSprites;
-
-		private static int GetTypeCount()
-		{
-			return default(int);
-		}
-
-		public void SetImage(UnitType type)
-		{
-		}
+	public void SetImage(UnitType type)
+	{
 	}
 }

@@ -1,56 +1,55 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class ResistAllAbnormal
 {
-	public class ResistAllAbnormal
+	public enum SourceType
 	{
-		public enum SourceType
+		All,
+		ActionParts,
+		BoundaryAction,
+		BerserkAbirity,
+		IronWall,
+		Buff,
+		Init
+	}
+
+	private BitArray flags;
+
+	public CharacterBase owner
+	{
+		[CompilerGenerated]
+		get
 		{
-			All,
-			ActionParts,
-			BoundaryAction,
-			BerserkAbirity,
-			IronWall,
-			Buff,
-			Init
+			return null;
 		}
-
-		private BitArray flags;
-
-		public CharacterBase owner
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public ResistAllAbnormal(CharacterBase chara)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Clear()
-		{
-		}
+	public ResistAllAbnormal(CharacterBase chara)
+	{
+	}
 
-		public void Set(bool flag, SourceType type = SourceType.All)
-		{
-		}
+	public void Clear()
+	{
+	}
 
-		public bool Get(SourceType type)
-		{
-			return default(bool);
-		}
+	public void Set(bool flag, SourceType type = SourceType.All)
+	{
+	}
 
-		public bool Any()
-		{
-			return default(bool);
-		}
+	public bool Get(SourceType type)
+	{
+		return default(bool);
+	}
+
+	public bool Any()
+	{
+		return default(bool);
 	}
 }

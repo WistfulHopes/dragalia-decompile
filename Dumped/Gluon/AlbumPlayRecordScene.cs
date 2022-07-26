@@ -1,34 +1,33 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumPlayRecordScene : SceneBase
 {
-	public class AlbumPlayRecordScene : SceneBase
+	[SerializeField]
+	private Camera mainCamera;
+
+	private AlbumPlayRecordCanvas playRecordCanvas;
+
+	private string charaVoiceGroupName;
+
+	private void Start()
 	{
-		[SerializeField]
-		private Camera mainCamera;
+	}
 
-		private AlbumPlayRecordCanvas playRecordCanvas;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private string charaVoiceGroupName;
+	private void OnInitReady()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void OnEnterScene()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
-
-		private void OnInitReady()
-		{
-		}
-
-		private void OnEnterScene()
-		{
-		}
-
-		private void BackButtonPressed()
-		{
-		}
+	private void BackButtonPressed()
+	{
 	}
 }

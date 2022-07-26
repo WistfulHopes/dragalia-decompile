@@ -2,52 +2,51 @@ using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradePanelBase : MonoBehaviour
 {
-	public class ShopTradePanelBase : MonoBehaviour
+	protected ShopTradeScene scene;
+
+	public ShopTradeProductData.CommonShopType initShopType
 	{
-		protected ShopTradeScene scene;
-
-		public ShopTradeProductData.CommonShopType initShopType
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(ShopTradeProductData.CommonShopType);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(ShopTradeProductData.CommonShopType);
 		}
-
-		public virtual void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public virtual void OnCellButtonPressedForCommonItem(ShopTradeProductData.CommonShopItemData data)
-		{
-		}
+	public virtual void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data)
+	{
+	}
 
-		public void PlayExitAnimation(Action onFinished, AnimationUICanvas.AnimationPattern pattern = AnimationUICanvas.AnimationPattern.Pattern_1)
-		{
-		}
+	public virtual void OnCellButtonPressedForCommonItem(ShopTradeProductData.CommonShopItemData data)
+	{
+	}
 
-		public void OnMenuButtonPressed(ShopTradeMenuButton button)
-		{
-		}
+	public void PlayExitAnimation(Action onFinished, AnimationUICanvas.AnimationPattern pattern = AnimationUICanvas.AnimationPattern.Pattern_1)
+	{
+	}
 
-		[HideInInspector]
-		public void OnMenuButtonPressed(ShopTradeModel.PanelType type)
-		{
-		}
+	public void OnMenuButtonPressed(ShopTradeMenuButton button)
+	{
+	}
 
-		public virtual void RefreshCurrentPage()
-		{
-		}
+	[HideInInspector]
+	public void OnMenuButtonPressed(ShopTradeModel.PanelType type)
+	{
+	}
 
-		public virtual void ScrollToItem(int tradeId)
-		{
-		}
+	public virtual void RefreshCurrentPage()
+	{
+	}
+
+	public virtual void ScrollToItem(int tradeId)
+	{
 	}
 }

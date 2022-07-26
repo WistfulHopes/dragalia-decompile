@@ -1,61 +1,60 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MainGameSkillFadeoutCtrl
 {
-	public class MainGameSkillFadeoutCtrl
+	private enum State
 	{
-		private enum State
-		{
-			None,
-			FadeOut,
-			Faded,
-			FadeIn
-		}
+		None,
+		FadeOut,
+		Faded,
+		FadeIn
+	}
 
-		private State state;
+	private State state;
 
-		private Color DEFAULT_COLOR;
+	private Color DEFAULT_COLOR;
 
-		private float elapsedTime;
+	private float elapsedTime;
 
-		private float duration;
+	private float duration;
 
-		private Color currentColor;
+	private Color currentColor;
 
-		private Color startColor;
+	private Color startColor;
 
-		private Color targetColor;
+	private Color targetColor;
 
-		private bool isAutoFadeIn;
+	private bool isAutoFadeIn;
 
-		public void Clear()
-		{
-		}
+	public void Clear()
+	{
+	}
 
-		public void FadeOut(bool isAutoFadeIn = true)
-		{
-		}
+	public void FadeOut(bool isAutoFadeIn = true)
+	{
+	}
 
-		public void FadeIn()
-		{
-		}
+	public void FadeIn()
+	{
+	}
 
-		public void Update(float delta)
-		{
-		}
+	public void Update(float delta)
+	{
+	}
 
-		public bool IsActive()
-		{
-			return default(bool);
-		}
+	public bool IsActive()
+	{
+		return default(bool);
+	}
 
-		public bool IsFadeOut()
-		{
-			return default(bool);
-		}
+	public bool IsFadeOut()
+	{
+		return default(bool);
+	}
 
-		public void SetColorDefault()
-		{
-		}
+	public void SetColorDefault()
+	{
 	}
 }

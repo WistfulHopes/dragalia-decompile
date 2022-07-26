@@ -6,265 +6,264 @@ using FLATOUT.Main;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QRTreasureIcon : MonoBehaviour
 {
-	public class QRTreasureIcon : MonoBehaviour
+	public enum TreasureIconType
 	{
-		public enum TreasureIconType
+		Normal = 0,
+		Rare = 1,
+		SuperRare = 2,
+		Raid = 3,
+		TreasureTime = 4,
+		RaidNormal = 5,
+		Bonus = 9
+	}
+
+	[SerializeField]
+	public CommonIcon icon;
+
+	public Image[] sackIcons;
+
+	public Image[] weaponIcons;
+
+	public Image[] pieceIcons;
+
+	public Image[] amuletIcons;
+
+	public Image updatedImage;
+
+	public Image completedImage;
+
+	public GameObject bonusImage;
+
+	[SerializeField]
+	private RectTransform _animRoot;
+
+	public GameObject glowFlashParent;
+
+	public GameObject convertFlashParent;
+
+	private const string seItemSwitch = "SE_OUT_COMMON_0026";
+
+	private QuestResultModel.TopPageModel.RewardItemInfo info;
+
+	private QuestResultTopPage topPage;
+
+	private QuestWallResultTopPage topPageWall;
+
+	private float animationDelay;
+
+	private TreasureIconType _treasureIconType;
+
+	private FlashPlayer openFlashPlayer;
+
+	private FlashPlayer rareGlowFlashPlayer;
+
+	private FlashPlayer convertToDewFlashPlayer;
+
+	private Sequence openAnimSequence;
+
+	[SerializeField]
+	private GameObject newIcon;
+
+	public Action<QuestResultModel.TopPageModel.RewardItemInfo> onOpen;
+
+	private Color bonusCountTextColor;
+
+	private const string kRareBubbleFlashObjectName = "MOT_result_rare_get";
+
+	private const string kOverLimitBubbleFlashObjectName = "MOT_result_item_max";
+
+	private const string kSRareBubbleFlashObjectName = "MOT_result_ultra_rare_get";
+
+	private const string kRareGlowFlashObjectName = "MOT_icon_rare_effect_front";
+
+	private const string kSRareGlowFlashObjectName = "MOT_icon_ultra_rare_effect_front";
+
+	private const string iconShaderPath = "FlashToUnity/uGUI/GraphicNormalEx";
+
+	public RectTransform animRoot => null;
+
+	public bool isAnimCompleted
+	{
+		[CompilerGenerated]
+		get
 		{
-			Normal = 0,
-			Rare = 1,
-			SuperRare = 2,
-			Raid = 3,
-			TreasureTime = 4,
-			RaidNormal = 5,
-			Bonus = 9
+			return default(bool);
 		}
-
-		[SerializeField]
-		public CommonIcon icon;
-
-		public Image[] sackIcons;
-
-		public Image[] weaponIcons;
-
-		public Image[] pieceIcons;
-
-		public Image[] amuletIcons;
-
-		public Image updatedImage;
-
-		public Image completedImage;
-
-		public GameObject bonusImage;
-
-		[SerializeField]
-		private RectTransform _animRoot;
-
-		public GameObject glowFlashParent;
-
-		public GameObject convertFlashParent;
-
-		private const string seItemSwitch = "SE_OUT_COMMON_0026";
-
-		private QuestResultModel.TopPageModel.RewardItemInfo info;
-
-		private QuestResultTopPage topPage;
-
-		private QuestWallResultTopPage topPageWall;
-
-		private float animationDelay;
-
-		private TreasureIconType _treasureIconType;
-
-		private FlashPlayer openFlashPlayer;
-
-		private FlashPlayer rareGlowFlashPlayer;
-
-		private FlashPlayer convertToDewFlashPlayer;
-
-		private Sequence openAnimSequence;
-
-		[SerializeField]
-		private GameObject newIcon;
-
-		public Action<QuestResultModel.TopPageModel.RewardItemInfo> onOpen;
-
-		private Color bonusCountTextColor;
-
-		private const string kRareBubbleFlashObjectName = "MOT_result_rare_get";
-
-		private const string kOverLimitBubbleFlashObjectName = "MOT_result_item_max";
-
-		private const string kSRareBubbleFlashObjectName = "MOT_result_ultra_rare_get";
-
-		private const string kRareGlowFlashObjectName = "MOT_icon_rare_effect_front";
-
-		private const string kSRareGlowFlashObjectName = "MOT_icon_ultra_rare_effect_front";
-
-		private const string iconShaderPath = "FlashToUnity/uGUI/GraphicNormalEx";
-
-		public RectTransform animRoot => null;
-
-		public bool isAnimCompleted
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public TreasureIconType treasureIconType
-		{
-			get
-			{
-				return default(TreasureIconType);
-			}
-			private set
-			{
-			}
-		}
-
-		public int rowCount
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public static QRTreasureIcon Create(QuestResultModel.TopPageModel.RewardItemInfo info, Transform parent, float animationDelay, QuestResultTopPage topPage)
-		{
-			return null;
-		}
-
-		public static QRTreasureIcon Create(QuestResultModel.TopPageModel.RewardItemInfo info, Transform parent, float animationDelay, QuestWallResultTopPage topPage)
-		{
-			return null;
-		}
-
-		public static QRTreasureIcon Create(QuestResultModel.TopPageModel.RewardItemInfo info, Transform parent, float animationDelay)
-		{
-			return null;
-		}
-
-		private void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SetActiveForImages()
+	public TreasureIconType treasureIconType
+	{
+		get
+		{
+			return default(TreasureIconType);
+		}
+		private set
 		{
 		}
+	}
 
-		private int GetIconImageIndex()
+	public int rowCount
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(int);
 		}
-
-		public void StartAnimation()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private IEnumerator WaitForAnimationDelay()
-		{
-			return null;
-		}
+	public static QRTreasureIcon Create(QuestResultModel.TopPageModel.RewardItemInfo info, Transform parent, float animationDelay, QuestResultTopPage topPage)
+	{
+		return null;
+	}
 
-		private void OnOpenCallback()
-		{
-		}
+	public static QRTreasureIcon Create(QuestResultModel.TopPageModel.RewardItemInfo info, Transform parent, float animationDelay, QuestWallResultTopPage topPage)
+	{
+		return null;
+	}
 
-		public void SetAnimCompleted()
-		{
-		}
+	public static QRTreasureIcon Create(QuestResultModel.TopPageModel.RewardItemInfo info, Transform parent, float animationDelay)
+	{
+		return null;
+	}
 
-		public void SwitchBagToTreasureIcon()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void SwitchToNormalView()
-		{
-		}
+	public void SetActiveForImages()
+	{
+	}
 
-		public void SkipAnimation()
-		{
-		}
+	private int GetIconImageIndex()
+	{
+		return default(int);
+	}
 
-		public void SetFlashPlayer(FlashPlayer open, FlashPlayer rareGlow, FlashPlayer convertToDew)
-		{
-		}
+	public void StartAnimation()
+	{
+	}
 
-		private void SetupConvertDewFlash(FlashPlayer flashPlayer, QuestResultModel.TopPageModel.RewardItemInfo info)
-		{
-		}
+	private IEnumerator WaitForAnimationDelay()
+	{
+		return null;
+	}
 
-		private void ChangeItemCount(int count)
-		{
-		}
+	private void OnOpenCallback()
+	{
+	}
 
-		private static void ReplacePlane(FlPlane plane, Material srcMat, string name, string str)
-		{
-		}
+	public void SetAnimCompleted()
+	{
+	}
 
-		public void PlayOpenFlash()
-		{
-		}
+	public void SwitchBagToTreasureIcon()
+	{
+	}
 
-		public void SetPlayOpenFlashCallback(Action action, FlMotionActionTypes type)
-		{
-		}
+	private void SwitchToNormalView()
+	{
+	}
 
-		public void PlayRareGlowFlash()
-		{
-		}
+	public void SkipAnimation()
+	{
+	}
 
-		public void PlayConvertToDewFlash()
-		{
-		}
+	public void SetFlashPlayer(FlashPlayer open, FlashPlayer rareGlow, FlashPlayer convertToDew)
+	{
+	}
 
-		public void PlayBubbleFlash()
-		{
-		}
+	private void SetupConvertDewFlash(FlashPlayer flashPlayer, QuestResultModel.TopPageModel.RewardItemInfo info)
+	{
+	}
 
-		private string GetBubbleFlashObjectName()
-		{
-			return null;
-		}
+	private void ChangeItemCount(int count)
+	{
+	}
 
-		private string GetRareGlowObjectName()
-		{
-			return null;
-		}
+	private static void ReplacePlane(FlPlane plane, Material srcMat, string name, string str)
+	{
+	}
 
-		public void SetBubbleFlashCallBack(Action action, FlMotionActionTypes type)
-		{
-		}
+	public void PlayOpenFlash()
+	{
+	}
 
-		public void PlayRarePopupFlashSkip()
-		{
-		}
+	public void SetPlayOpenFlashCallback(Action action, FlMotionActionTypes type)
+	{
+	}
 
-		public void PlayConvertToDewFlashSkip()
-		{
-		}
+	public void PlayRareGlowFlash()
+	{
+	}
 
-		private void SetRarityIndex(QuestResultModel.TopPageModel.RewardItemInfo info)
-		{
-		}
+	public void PlayConvertToDewFlash()
+	{
+	}
 
-		public QuestResultModel.TopPageModel.RewardItemInfo GetRewardItemInfo()
-		{
-			return null;
-		}
+	public void PlayBubbleFlash()
+	{
+	}
 
-		public bool IsPlayBalloonFlash()
-		{
-			return default(bool);
-		}
+	private string GetBubbleFlashObjectName()
+	{
+		return null;
+	}
 
-		private bool IsPlayRareGrow()
-		{
-			return default(bool);
-		}
+	private string GetRareGlowObjectName()
+	{
+		return null;
+	}
 
-		private bool IsPlayOverLimitFlash()
-		{
-			return default(bool);
-		}
+	public void SetBubbleFlashCallBack(Action action, FlMotionActionTypes type)
+	{
+	}
 
-		public bool IsPlayConvertDewFlash()
-		{
-			return default(bool);
-		}
+	public void PlayRarePopupFlashSkip()
+	{
+	}
+
+	public void PlayConvertToDewFlashSkip()
+	{
+	}
+
+	private void SetRarityIndex(QuestResultModel.TopPageModel.RewardItemInfo info)
+	{
+	}
+
+	public QuestResultModel.TopPageModel.RewardItemInfo GetRewardItemInfo()
+	{
+		return null;
+	}
+
+	public bool IsPlayBalloonFlash()
+	{
+		return default(bool);
+	}
+
+	private bool IsPlayRareGrow()
+	{
+		return default(bool);
+	}
+
+	private bool IsPlayOverLimitFlash()
+	{
+		return default(bool);
+	}
+
+	public bool IsPlayConvertDewFlash()
+	{
+		return default(bool);
 	}
 }

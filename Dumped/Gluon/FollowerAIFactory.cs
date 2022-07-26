@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public static class FollowerAIFactory
 {
-	public static class FollowerAIFactory
+	public static FollowerAIBase CreateAI(int characterId, CommonConstant.CharaUniqueIndex charaUniqueIndex, CommonConstant.DragonUniqueIndex dragonUniqueIndex)
 	{
-		public static FollowerAIBase CreateAI(int characterId)
-		{
-			return null;
-		}
+		return null;
 	}
 }

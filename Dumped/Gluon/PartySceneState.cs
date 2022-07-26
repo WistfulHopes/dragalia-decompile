@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum PartySceneState
 {
-	public enum PartySceneState
-	{
-		None,
-		Top,
-		Character,
-		Equip
-	}
+	None,
+	Top,
+	Character,
+	Equip
 }

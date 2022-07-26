@@ -1,11 +1,10 @@
 using UnityEngine;
 
-namespace Gluon
-{
-	public class DismantleWeaponCanvas : MonoBehaviour
-	{
-		public DismantleWeaponListController weaponListController;
+namespace Gluon;
 
-		public CommonIconListBase iconListBase;
-	}
+public class DismantleWeaponCanvas : MonoBehaviour
+{
+	public DismantleWeaponListController weaponListController;
+
+	public CommonIconListBase iconListBase;
 }

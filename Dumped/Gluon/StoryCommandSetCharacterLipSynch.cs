@@ -1,16 +1,12 @@
-using System;
+namespace Gluon;
 
-namespace Gluon
+public class StoryCommandSetCharacterLipSynch : IStoryCommand
 {
-	[CommandName("chara_lipsynch")]
-	public class StoryCommandSetCharacterLipSynch : IStoryCommand
+	public void Start(string charaId, float intervalMin = 1f / 15f, float intervalMax = 1f / 15f, float lipSynchingTime = 0.1f, int maxLipSynchFrame = 2)
 	{
-		public void Start(string charaId, float intervalMin = 71f / (339f * (float)Math.PI), float intervalMax = 71f / (339f * (float)Math.PI), float lipSynchingTime = 0.1f, int maxLipSynchFrame = 2)
-		{
-		}
+	}
 
-		private void SetCharacterLipSynch(string charaId, float intervalMin, float intervalMax, float lipSynchingTime, int maxLipSynchFrame)
-		{
-		}
+	private void SetCharacterLipSynch(string charaId, float intervalMin, float intervalMax, float lipSynchingTime, int maxLipSynchFrame)
+	{
 	}
 }

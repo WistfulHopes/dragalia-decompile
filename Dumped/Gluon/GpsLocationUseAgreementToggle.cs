@@ -5,72 +5,71 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GpsLocationUseAgreementToggle : MonoBehaviour
 {
-	public class GpsLocationUseAgreementToggle : MonoBehaviour
+	[SerializeField]
+	private Toggle useLocationInfoAgreementToggle;
+
+	[SerializeField]
+	private Button gpsMatchingButton;
+
+	[SerializeField]
+	public string prefsKeyLocationInfoUseGDPRAgreed;
+
+	private Coroutine matchingButtonTask;
+
+	private const int needParentAgreementAge = 15;
+
+	private void Awake()
 	{
-		[SerializeField]
-		private Toggle useLocationInfoAgreementToggle;
+	}
 
-		[SerializeField]
-		private Button gpsMatchingButton;
+	private void ShowUseLocationCautionPopup(UnityAction action)
+	{
+	}
 
-		[SerializeField]
-		public string prefsKeyLocationInfoUseGDPRAgreed;
+	private void ShowUseLocationFailNoNAPopup()
+	{
+	}
 
-		private Coroutine matchingButtonTask;
+	private void ShowUseLocationConfirmPopup(UnityAction agreeAction, UnityAction denyAction)
+	{
+	}
 
-		private const int needParentAgreementAge = 15;
+	private void ShowUseLocationResultPopup(UnityAction action)
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public void OnUseLocationInfoAgreementToggleChanged(bool value)
+	{
+	}
 
-		private void ShowUseLocationCautionPopup(UnityAction action)
-		{
-		}
+	private void OnLocationPermissionDenied()
+	{
+	}
 
-		private void ShowUseLocationFailNoNAPopup()
-		{
-		}
+	private bool IsRequireGDPRAgreementRegion()
+	{
+		return default(bool);
+	}
 
-		private void ShowUseLocationConfirmPopup(UnityAction agreeAction, UnityAction denyAction)
-		{
-		}
+	private bool IsRequireGDPRAgreementAge()
+	{
+		return default(bool);
+	}
 
-		private void ShowUseLocationResultPopup(UnityAction action)
-		{
-		}
+	private void SetGpsLocationUseCheck(bool isChecked)
+	{
+	}
 
-		public void OnUseLocationInfoAgreementToggleChanged(bool value)
-		{
-		}
+	public void OnGpsMatchingButtonPressed(Action action, [Optional] Action failedAction)
+	{
+	}
 
-		private void OnLocationPermissionDenied()
-		{
-		}
-
-		private bool IsRequireGDPRAgreementRegion()
-		{
-			return default(bool);
-		}
-
-		private bool IsRequireGDPRAgreementAge()
-		{
-			return default(bool);
-		}
-
-		private void SetGpsLocationUseCheck(bool isChecked)
-		{
-		}
-
-		public void OnGpsMatchingButtonPressed(Action action, [Optional] Action failedAction)
-		{
-		}
-
-		private IEnumerator DoMatchingButtonAction(Action action, Action failedAction)
-		{
-			return null;
-		}
+	private IEnumerator DoMatchingButtonAction(Action action, Action failedAction)
+	{
+		return null;
 	}
 }

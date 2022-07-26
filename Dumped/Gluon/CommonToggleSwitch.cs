@@ -1,25 +1,24 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CommonToggleSwitch : TransparentButton
 {
-	public class CommonToggleSwitch : TransparentButton
+	public bool isOn;
+
+	public GameObject backgroundOn;
+
+	public GameObject backgroundOff;
+
+	protected override void Awake()
 	{
-		public bool isOn;
+	}
 
-		public GameObject backgroundOn;
+	protected void UpdateStatus()
+	{
+	}
 
-		public GameObject backgroundOff;
-
-		protected override void Awake()
-		{
-		}
-
-		protected void UpdateStatus()
-		{
-		}
-
-		public void OnButtonPressed()
-		{
-		}
+	public void OnButtonPressed()
+	{
 	}
 }

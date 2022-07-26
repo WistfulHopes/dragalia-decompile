@@ -1,14 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
-{
-	public class AnotherNameIcons : MonoBehaviour
-	{
-		public Image[] rarityIcons;
+namespace Gluon;
 
-		public void SetRaritySprite(IconRarity rarity)
-		{
-		}
+public class AnotherNameIcons : MonoBehaviour
+{
+	public Image[] rarityIcons;
+
+	public void SetRaritySprite(IconRarity rarity)
+	{
 	}
 }

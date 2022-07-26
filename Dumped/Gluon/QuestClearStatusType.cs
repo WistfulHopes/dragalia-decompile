@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum QuestClearStatusType
 {
-	public enum QuestClearStatusType
-	{
-		LOCKED,
-		NEW,
-		CLEAR,
-		SECRET,
-		COMPLETE
-	}
+	LOCKED,
+	NEW,
+	CLEAR,
+	SECRET,
+	COMPLETE
 }

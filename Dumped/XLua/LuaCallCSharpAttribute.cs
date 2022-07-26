@@ -1,15 +1,14 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+public class LuaCallCSharpAttribute : Attribute
 {
-	public class LuaCallCSharpAttribute : Attribute
+	private GenFlag flag;
+
+	public GenFlag Flag => default(GenFlag);
+
+	public LuaCallCSharpAttribute(GenFlag flag = GenFlag.No)
 	{
-		private GenFlag flag;
-
-		public GenFlag Flag => default(GenFlag);
-
-		public LuaCallCSharpAttribute(GenFlag flag = GenFlag.No)
-		{
-		}
 	}
 }

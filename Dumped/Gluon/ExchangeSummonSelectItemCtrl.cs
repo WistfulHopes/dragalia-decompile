@@ -2,50 +2,49 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ExchangeSummonSelectItemCtrl : TableViewController<ExchangeSummonSelectItemCellData>
 {
-	public class ExchangeSummonSelectItemCtrl : TableViewController<ExchangeSummonSelectItemCellData>
+	[SerializeField]
+	private AnimationListOneCol listAnimation;
+
+	[SerializeField]
+	private float delayFrame;
+
+	public GiftType giftType;
+
+	private int summonId;
+
+	private const float cellHeight = 148f;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		private AnimationListOneCol listAnimation;
+	}
 
-		[SerializeField]
-		private float delayFrame;
+	public void Init(int summonId, List<ulong> idList, Action<ExchangeSummonSelectItemCellData> onClick)
+	{
+	}
 
-		public GiftType giftType;
+	public void ReloadContents(List<ulong> idList, Action<ExchangeSummonSelectItemCellData> onClick)
+	{
+	}
 
-		private int summonId;
+	protected override TableViewCell<ExchangeSummonSelectItemCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		private const float cellHeight = 148f;
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected override void Awake()
-		{
-		}
+	public void StartEnterAnimation()
+	{
+	}
 
-		public void Init(int summonId, List<ulong> idList, Action<ExchangeSummonSelectItemCellData> onClick)
-		{
-		}
-
-		public void ReloadContents(List<ulong> idList, Action<ExchangeSummonSelectItemCellData> onClick)
-		{
-		}
-
-		protected override TableViewCell<ExchangeSummonSelectItemCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public void StartEnterAnimation()
-		{
-		}
-
-		public void StartExitAnimation()
-		{
-		}
+	public void StartExitAnimation()
+	{
 	}
 }

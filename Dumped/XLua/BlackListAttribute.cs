@@ -1,8 +1,7 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+public class BlackListAttribute : Attribute
 {
-	public class BlackListAttribute : Attribute
-	{
-	}
 }

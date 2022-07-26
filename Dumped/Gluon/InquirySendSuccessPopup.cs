@@ -1,20 +1,19 @@
-namespace Gluon
+namespace Gluon;
+
+public class InquirySendSuccessPopup : PopupBase
 {
-	public class InquirySendSuccessPopup : PopupBase
+	private const string prefabPath = "Prefabs/OutGame/Inquiry/InquirySendSuccessPopup";
+
+	public static InquirySendSuccessPopup Create()
 	{
-		private const string prefabPath = "Prefabs/OutGame/Inquiry/InquirySendSuccessPopup";
+		return null;
+	}
 
-		public static InquirySendSuccessPopup Create()
-		{
-			return null;
-		}
+	public void OnOKButtonPressed()
+	{
+	}
 
-		public void OnOKButtonPressed()
-		{
-		}
-
-		public void OnCloseButtonPressed()
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
 	}
 }

@@ -1,23 +1,22 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class StepChangeParam
 {
-	public class StepChangeParam
+	public int nowParam;
+
+	public int showParam;
+
+	public int countParam;
+
+	private float countTime;
+
+	public void Update(Text numText)
 	{
-		public int nowParam;
+	}
 
-		public int showParam;
-
-		public int countParam;
-
-		private float countTime;
-
-		public void Update(Text numText)
-		{
-		}
-
-		public void SetCountUpDownParam()
-		{
-		}
+	public void SetCountUpDownParam()
+	{
 	}
 }

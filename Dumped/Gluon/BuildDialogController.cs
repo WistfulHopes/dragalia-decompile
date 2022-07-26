@@ -2,46 +2,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BuildDialogController : PopupBase
 {
-	public class BuildDialogController : PopupBase
+	public TabViewBase tabView;
+
+	[SerializeField]
+	private Text dialogTextTitle;
+
+	[SerializeField]
+	private Button closeButton;
+
+	private FortScene fortScene;
+
+	private List<FacilitySelectCtrl> facilitySelectCtrlList;
+
+	private static List<string> buildFacilityTabNameList;
+
+	private void Awake()
 	{
-		public TabViewBase tabView;
+	}
 
-		[SerializeField]
-		private Text dialogTextTitle;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		private Button closeButton;
+	public void OnCloseButtonTouched()
+	{
+	}
 
-		private FortScene fortScene;
+	public void OnFalicitySelectCofirm(Facility facility, FortModel.BuildFacilityResult buildResult)
+	{
+	}
 
-		private List<FacilitySelectCtrl> facilitySelectCtrlList;
+	public static void ResetTabSetting()
+	{
+	}
 
-		private static List<string> buildFacilityTabNameList;
-
-		private void Awake()
-		{
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnCloseButtonTouched()
-		{
-		}
-
-		public void OnFalicitySelectCofirm(Facility facility, FortModel.BuildFacilityResult buildResult)
-		{
-		}
-
-		public static void ResetTabSetting()
-		{
-		}
-
-		private void RegisterTabNameList()
-		{
-		}
+	private void RegisterTabNameList()
+	{
 	}
 }

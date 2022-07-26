@@ -1,18 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestWallGetRewardCell : MonoBehaviour
 {
-	public class QuestWallGetRewardCell : MonoBehaviour
+	[SerializeField]
+	private CommonIcon rewardIcon;
+
+	[SerializeField]
+	private Text rewardText;
+
+	public void SetContents(QuestWallModel.QuestWallRewardData rewardData)
 	{
-		[SerializeField]
-		private CommonIcon rewardIcon;
-
-		[SerializeField]
-		private Text rewardText;
-
-		public void SetContents(QuestWallModel.QuestWallRewardData rewardData)
-		{
-		}
 	}
 }

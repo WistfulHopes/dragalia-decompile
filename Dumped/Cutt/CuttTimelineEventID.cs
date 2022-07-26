@@ -1,7 +1,6 @@
-namespace Cutt
+namespace Cutt;
+
+public enum CuttTimelineEventID
 {
-	public enum CuttTimelineEventID
-	{
-		NOT_AVAILABLE
-	}
+	NOT_AVAILABLE
 }

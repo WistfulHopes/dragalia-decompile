@@ -1,14 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleAbilityListParamLabel : MonoBehaviour
 {
-	public class GrowthManaCircleAbilityListParamLabel : MonoBehaviour
-	{
-		public Text paramText;
+	public Text paramText;
 
-		public Text paramBeforeValue;
+	public Text paramBeforeValue;
 
-		public Text paramAfterValue;
-	}
+	public Text paramAfterValue;
 }

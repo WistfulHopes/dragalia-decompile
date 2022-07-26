@@ -3,103 +3,102 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SuggestionBoxPopup : PopupBase
 {
-	public class SuggestionBoxPopup : PopupBase
+	private const string prefabPath = "Prefabs/OutGame/SuggestionBox/SuggestionBoxPopup";
+
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Button okButton;
+
+	[SerializeField]
+	private Text okText;
+
+	[SerializeField]
+	private Button closeButton;
+
+	[SerializeField]
+	private Text closeText;
+
+	[SerializeField]
+	private InputField suggestionInput;
+
+	[SerializeField]
+	private Text inputPlaceHolder;
+
+	[SerializeField]
+	private Text inputCharText;
+
+	[SerializeField]
+	private Text maxCharText;
+
+	[SerializeField]
+	private Text selectCategoryText;
+
+	private const int maxChar = 200;
+
+	private int selectCategoryListIndex;
+
+	public static SuggestionBoxPopup Create()
 	{
-		private const string prefabPath = "Prefabs/OutGame/SuggestionBox/SuggestionBoxPopup";
+		return null;
+	}
 
-		[SerializeField]
-		private Text titleText;
+	public void InitSetting()
+	{
+	}
 
-		[SerializeField]
-		private Button okButton;
+	public void OnCloseButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Text okText;
+	public void OnOkButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Button closeButton;
+	private bool IsInputTextValid(string inputText)
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private Text closeText;
+	public static string ConvertInvalidText(string inputText)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private InputField suggestionInput;
+	public void OnValueChangedSuggestion(string text)
+	{
+	}
 
-		[SerializeField]
-		private Text inputPlaceHolder;
+	public void OnEndEditSuggestion(string text)
+	{
+	}
 
-		[SerializeField]
-		private Text inputCharText;
+	private void SetInputChar(int count)
+	{
+	}
 
-		[SerializeField]
-		private Text maxCharText;
+	public static void RequestSuggestionGetCategoryList(UnityAction successCallback)
+	{
+	}
 
-		[SerializeField]
-		private Text selectCategoryText;
+	private void RequestSuggestionSet(string message, int cateoryId, UnityAction successCallback)
+	{
+	}
 
-		private const int maxChar = 200;
+	private static void CalledAfterLoginChecked(UnityAction successCallback)
+	{
+	}
 
-		private int selectCategoryListIndex;
+	private static void OnError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		public static SuggestionBoxPopup Create()
-		{
-			return null;
-		}
-
-		public void InitSetting()
-		{
-		}
-
-		public void OnCloseButtonPressed()
-		{
-		}
-
-		public void OnOkButtonPressed()
-		{
-		}
-
-		private bool IsInputTextValid(string inputText)
-		{
-			return default(bool);
-		}
-
-		public static string ConvertInvalidText(string inputText)
-		{
-			return null;
-		}
-
-		public void OnValueChangedSuggestion(string text)
-		{
-		}
-
-		public void OnEndEditSuggestion(string text)
-		{
-		}
-
-		private void SetInputChar(int count)
-		{
-		}
-
-		public static void RequestSuggestionGetCategoryList(UnityAction successCallback)
-		{
-		}
-
-		private void RequestSuggestionSet(string message, int cateoryId, UnityAction successCallback)
-		{
-		}
-
-		private static void CalledAfterLoginChecked(UnityAction successCallback)
-		{
-		}
-
-		private static void OnError(ErrorType errorType, int resultCode)
-		{
-		}
-
-		public void OnCategorySelectButtonPressed()
-		{
-		}
+	public void OnCategorySelectButtonPressed()
+	{
 	}
 }

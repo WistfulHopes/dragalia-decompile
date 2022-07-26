@@ -2,119 +2,118 @@ using System.Collections.Generic;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class OutGameTopCharaTalkSelector : MonoBehaviour
 {
-	public class OutGameTopCharaTalkSelector : MonoBehaviour
+	public enum Priority
 	{
-		public enum Priority
-		{
-			None,
-			High,
-			Low
-		}
+		None,
+		High,
+		Low
+	}
 
-		public enum Category0
-		{
-			Growth = 1,
-			Fort,
-			Shop,
-			Record,
-			Mypage,
-			Album
-		}
+	public enum Category0
+	{
+		Growth = 1,
+		Fort,
+		Shop,
+		Record,
+		Mypage,
+		Album
+	}
 
-		public class TalkData
-		{
-			public int id;
+	public class TalkData
+	{
+		public int id;
 
-			public int category1;
+		public int category1;
 
-			public string text;
+		public string text;
 
-			public Priority priority;
+		public Priority priority;
 
-			public string voiceId;
+		public string voiceId;
 
-			public TalkData(int id, string text, Priority priority, string voiceId)
-			{
-			}
-		}
-
-		protected List<TalkData> specialList;
-
-		protected List<TalkData> highList;
-
-		protected List<TalkData> lowList;
-
-		protected Dictionary<int, TalkData> allList;
-
-		protected int maxLastPlayedHighCount;
-
-		protected int maxLastPlayedLowCount;
-
-		protected Queue<int> lastPlayedQueue;
-
-		public virtual void Awake()
+		public TalkData(int id, string text, Priority priority, string voiceId)
 		{
 		}
+	}
 
-		public TalkData SelectTalk()
-		{
-			return null;
-		}
+	protected List<TalkData> specialList;
 
-		protected void AddTalkData(int id, string text, Priority priority, string voiceId)
-		{
-		}
+	protected List<TalkData> highList;
 
-		protected void ShuffleSpecialList()
-		{
-		}
+	protected List<TalkData> lowList;
 
-		protected void ShuffleLowList()
-		{
-		}
+	protected Dictionary<int, TalkData> allList;
 
-		protected void ShuffleHighList()
-		{
-		}
+	protected int maxLastPlayedHighCount;
 
-		protected void LeftSpecialOne()
-		{
-		}
+	protected int maxLastPlayedLowCount;
 
-		protected void ShuffleList(ref List<TalkData> list)
-		{
-		}
+	protected Queue<int> lastPlayedQueue;
 
-		protected virtual TalkData SelectFromSpecialList()
-		{
-			return null;
-		}
+	public virtual void Awake()
+	{
+	}
 
-		protected virtual TalkData SelectFromHighList()
-		{
-			return null;
-		}
+	public TalkData SelectTalk()
+	{
+		return null;
+	}
 
-		protected virtual TalkData SelectFromLowList()
-		{
-			return null;
-		}
+	protected void AddTalkData(int id, string text, Priority priority, string voiceId)
+	{
+	}
 
-		protected TalkData SelectFromList(List<TalkData> list, int maxLastPlayedCount)
-		{
-			return null;
-		}
+	protected void ShuffleSpecialList()
+	{
+	}
 
-		public static MenuTalkGroupElement GetActiveMenuTalkGroupId(Category0 category)
-		{
-			return null;
-		}
+	protected void ShuffleLowList()
+	{
+	}
 
-		public TalkData GetTalkDataFromLowListById(int id)
-		{
-			return null;
-		}
+	protected void ShuffleHighList()
+	{
+	}
+
+	protected void LeftSpecialOne()
+	{
+	}
+
+	protected void ShuffleList(ref List<TalkData> list)
+	{
+	}
+
+	protected virtual TalkData SelectFromSpecialList()
+	{
+		return null;
+	}
+
+	protected virtual TalkData SelectFromHighList()
+	{
+		return null;
+	}
+
+	protected virtual TalkData SelectFromLowList()
+	{
+		return null;
+	}
+
+	protected TalkData SelectFromList(List<TalkData> list, int maxLastPlayedCount)
+	{
+		return null;
+	}
+
+	public static MenuTalkGroupElement GetActiveMenuTalkGroupId(Category0 category)
+	{
+		return null;
+	}
+
+	public TalkData GetTalkDataFromLowListById(int id)
+	{
+		return null;
 	}
 }

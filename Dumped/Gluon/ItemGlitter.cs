@@ -2,73 +2,71 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ItemGlitter : MonoBehaviour
 {
-	public class ItemGlitter : MonoBehaviour
+	public class Parameter
 	{
-		public class Parameter
-		{
-			public Vector3 position;
+		public Vector3 position;
 
-			public float scale;
+		public float scale;
 
-			public float time;
+		public float time;
 
-			public void SetValue(Vector3 p, float s, float t)
-			{
-			}
-		}
-
-		[SerializeField]
-		[Header("component")]
-		private Image imageGlitter;
-
-		private RectTransform rectTransform;
-
-		private Tweener tweener;
-
-		private bool isActive;
-
-		private void Visible(bool b, bool force = false)
+		public void SetValue(Vector3 p, float s, float t)
 		{
 		}
+	}
 
-		public static ItemGlitter Create(GameObject parent, GameObject prefab)
-		{
-			return null;
-		}
+	[SerializeField]
+	private Image imageGlitter;
 
-		private void Initialize()
-		{
-		}
+	private RectTransform rectTransform;
 
-		public void Release()
-		{
-		}
+	private Tweener tweener;
 
-		public bool IsVisible()
-		{
-			return default(bool);
-		}
+	private bool isActive;
 
-		public void Display(Parameter param)
-		{
-		}
+	private void Visible(bool b, bool force = false)
+	{
+	}
 
-		public void DisplayLocal(Parameter param)
-		{
-		}
+	public static ItemGlitter Create(GameObject parent, GameObject prefab)
+	{
+		return null;
+	}
 
-		public void Stop()
-		{
-		}
+	private void Initialize()
+	{
+	}
 
-		private void OnUpdateAnim(float v)
-		{
-		}
+	public void Release()
+	{
+	}
 
-		private void OnCompleteAnim()
-		{
-		}
+	public bool IsVisible()
+	{
+		return default(bool);
+	}
+
+	public void Display(Parameter param)
+	{
+	}
+
+	public void DisplayLocal(Parameter param)
+	{
+	}
+
+	public void Stop()
+	{
+	}
+
+	private void OnUpdateAnim(float v)
+	{
+	}
+
+	private void OnCompleteAnim()
+	{
 	}
 }

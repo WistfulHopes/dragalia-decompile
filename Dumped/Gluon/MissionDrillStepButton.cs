@@ -1,40 +1,39 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MissionDrillStepButton : MonoBehaviour
 {
-	public class MissionDrillStepButton : MonoBehaviour
+	[SerializeField]
+	private Text stepText;
+
+	[SerializeField]
+	private Button button;
+
+	[SerializeField]
+	private FlashPlayerManager flashPlayerManager;
+
+	[SerializeField]
+	private Transform unlockFlashParent;
+
+	private FlashPlayer unlockFlashPlayer;
+
+	private const string unlockFlashPath = "Prefabs/OutGame/MissionDrill/pf_NhaamDrillStepButtonUnlock";
+
+	public void Setup(int step, bool isLock)
 	{
-		[SerializeField]
-		private Text stepText;
+	}
 
-		[SerializeField]
-		private Button button;
+	public void EnableButton()
+	{
+	}
 
-		[SerializeField]
-		private FlashPlayerManager flashPlayerManager;
+	private void PrepareFlash()
+	{
+	}
 
-		[SerializeField]
-		private Transform unlockFlashParent;
-
-		private FlashPlayer unlockFlashPlayer;
-
-		private const string unlockFlashPath = "Prefabs/OutGame/MissionDrill/pf_NhaamDrillStepButtonUnlock";
-
-		public void Setup(int step, bool isLock)
-		{
-		}
-
-		public void EnableButton()
-		{
-		}
-
-		private void PrepareFlash()
-		{
-		}
-
-		public void PlayEffect()
-		{
-		}
+	public void PlayEffect()
+	{
 	}
 }

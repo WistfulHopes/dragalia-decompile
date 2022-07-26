@@ -2,62 +2,61 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class NintendoAccountLinkAskPopup : PopupBase
 {
-	public class NintendoAccountLinkAskPopup : PopupBase
+	private const string prefabPath = "Prefabs/OutGame/TitleMenu/NintendoAccountLinkAskPopupPreIn";
+
+	private const string prefsKeyNotDisplayTodaySettingKey = "NALinkAskNotDisplayTodaySetting";
+
+	[SerializeField]
+	private Toggle notDisplayTodayToggle;
+
+	[SerializeField]
+	private PointerEventHandler okButtonHandler;
+
+	[SerializeField]
+	private PointerEventHandler cancelButtonHandler;
+
+	private Action onNALinkSucceed;
+
+	public static bool IsAsk()
 	{
-		private const string prefabPath = "Prefabs/OutGame/TitleMenu/NintendoAccountLinkAskPopupPreIn";
+		return default(bool);
+	}
 
-		private const string prefsKeyNotDisplayTodaySettingKey = "NALinkAskNotDisplayTodaySetting";
+	private static int GetCurrentDays()
+	{
+		return default(int);
+	}
 
-		[SerializeField]
-		private Toggle notDisplayTodayToggle;
+	public static NintendoAccountLinkAskPopup Create(Action onNALinkSucceed)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private PointerEventHandler okButtonHandler;
+	private void Setup(Action onNALinkSucceed)
+	{
+	}
 
-		[SerializeField]
-		private PointerEventHandler cancelButtonHandler;
+	public void OnAccountButton()
+	{
+	}
 
-		private Action onNALinkSucceed;
+	public void OnFaqButton()
+	{
+	}
 
-		public static bool IsAsk()
-		{
-			return default(bool);
-		}
+	private void CreateLinkNintendoAccountSucceedPopup()
+	{
+	}
 
-		private static int GetCurrentDays()
-		{
-			return default(int);
-		}
+	private void OpenLoadingPopup()
+	{
+	}
 
-		public static NintendoAccountLinkAskPopup Create(Action onNALinkSucceed)
-		{
-			return null;
-		}
-
-		private void Setup(Action onNALinkSucceed)
-		{
-		}
-
-		public void OnAccountButton()
-		{
-		}
-
-		public void OnFaqButton()
-		{
-		}
-
-		private void CreateLinkNintendoAccountSucceedPopup()
-		{
-		}
-
-		private void OpenLoadingPopup()
-		{
-		}
-
-		private void CloseLoadingPopup()
-		{
-		}
+	private void CloseLoadingPopup()
+	{
 	}
 }

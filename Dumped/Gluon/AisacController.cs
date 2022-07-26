@@ -1,22 +1,21 @@
 using Cute.Cri;
 using DG.Tweening;
 
-namespace Gluon
+namespace Gluon;
+
+public static class AisacController
 {
-	public static class AisacController
+	private static Tweener _tweener;
+
+	public static void FadeAisacControlValue(AudioPlayback playback, string controlName, float fadeFromValue, float fadeToValue, float fadeTime)
 	{
-		private static Tweener _tweener;
+	}
 
-		public static void FadeAisacControlValue(AudioPlayback playback, string controlName, float fadeFromValue, float fadeToValue, float fadeTime)
-		{
-		}
+	private static void OnComplete()
+	{
+	}
 
-		private static void OnComplete()
-		{
-		}
-
-		public static void ResetAisacControlValue(AudioPlayback playback)
-		{
-		}
+	public static void ResetAisacControlValue(AudioPlayback playback)
+	{
 	}
 }

@@ -1,20 +1,19 @@
 using System;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingAutoJoiningPopup : PopupBase
 {
-	public class MatchingAutoJoiningPopup : PopupBase
+	private const string prefabPath = "UI/Popup/Matching/MatchingAutoJoiningPopup";
+
+	private Action onCancel;
+
+	public static MatchingAutoJoiningPopup Create(Action onCancel)
 	{
-		private const string prefabPath = "UI/Popup/Matching/MatchingAutoJoiningPopup";
+		return null;
+	}
 
-		private Action onCancel;
-
-		public static MatchingAutoJoiningPopup Create(Action onCancel)
-		{
-			return null;
-		}
-
-		public void OnCancelButtonPressed()
-		{
-		}
+	public void OnCancelButtonPressed()
+	{
 	}
 }

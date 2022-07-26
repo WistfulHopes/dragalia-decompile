@@ -1,18 +1,17 @@
-namespace Gluon
+namespace Gluon;
+
+public class CampaignPopup : CommonPopup
 {
-	public class CampaignPopup : CommonPopup
+	public static CampaignPopup CreateCampaignPopup(CampaignDataWrapper data)
 	{
-		public static CampaignPopup CreateCampaignPopup(CampaignDataWrapper data)
-		{
-			return null;
-		}
+		return null;
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		private void Init(CampaignDataWrapper data)
-		{
-		}
+	private void Init(CampaignDataWrapper data)
+	{
 	}
 }

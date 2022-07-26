@@ -2,107 +2,104 @@ using DG.Tweening;
 using Gluon.Dungeon;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ChatIconUIIngame : MonoBehaviour
 {
-	public class ChatIconUIIngame : MonoBehaviour
+	[SerializeField]
+	private MoveChatIcon moveChatIcon;
+
+	[SerializeField]
+	private RectTransform offsetRt;
+
+	[SerializeField]
+	private SpriteRenderer iconImage;
+
+	[SerializeField]
+	private SpriteRenderer numberImage;
+
+	[SerializeField]
+	private SpriteRenderer frameImage;
+
+	[SerializeField]
+	private SpriteRenderer arrowImage;
+
+	[SerializeField]
+	private Sprite[] numberSprite;
+
+	private VisibleUIObject _rootVisible;
+
+	private CharacterBase _currentTargetChara;
+
+	private Sequence _seqEffect;
+
+	private int _playerIndex;
+
+	private int _stampId;
+
+	private float _stayTime;
+
+	private float _fadeTime;
+
+	private bool _isDisplaying;
+
+	private static readonly Color[] PlayerColorList;
+
+	public void Initialize(RectTransform[] rects, StampCollisionArea[] collAreas, float stayTime, float fadeTime, int idx)
 	{
-		[SerializeField]
-		[Header("component")]
-		private MoveChatIcon moveChatIcon;
+	}
 
-		[SerializeField]
-		private RectTransform offsetRt;
+	private void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		private SpriteRenderer iconImage;
+	public void Display()
+	{
+	}
 
-		[SerializeField]
-		private SpriteRenderer numberImage;
+	public void Hidden()
+	{
+	}
 
-		[SerializeField]
-		private SpriteRenderer frameImage;
+	private void PlayShowAnim()
+	{
+	}
 
-		[SerializeField]
-		private SpriteRenderer arrowImage;
+	public void PlayHideAnim()
+	{
+	}
 
-		[SerializeField]
-		[Header("resource")]
-		private Sprite[] numberSprite;
+	public void CancelDisplay()
+	{
+	}
 
-		private VisibleUIObject _rootVisible;
+	public void SetStampId(int stampId)
+	{
+	}
 
-		private CharacterBase _currentTargetChara;
+	private void MainSequenceEndCallback()
+	{
+	}
 
-		private Sequence _seqEffect;
+	private void Update()
+	{
+	}
 
-		private int _playerIndex;
+	private void SetDisplayStamp(bool isDisplay)
+	{
+	}
 
-		private int _stampId;
+	public void OnLoadedMaterial(Material mtrl)
+	{
+	}
 
-		private float _stayTime;
+	private CharacterBase GetTargetChara()
+	{
+		return null;
+	}
 
-		private float _fadeTime;
-
-		private bool _isDisplaying;
-
-		private static readonly Color[] PlayerColorList;
-
-		public void Initialize(RectTransform[] rects, StampCollisionArea[] collAreas, float stayTime, float fadeTime, int idx)
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public void Display()
-		{
-		}
-
-		public void Hidden()
-		{
-		}
-
-		private void PlayShowAnim()
-		{
-		}
-
-		public void PlayHideAnim()
-		{
-		}
-
-		public void CancelDisplay()
-		{
-		}
-
-		public void SetStampId(int stampId)
-		{
-		}
-
-		private void MainSequenceEndCallback()
-		{
-		}
-
-		private void Update()
-		{
-		}
-
-		private void SetDisplayStamp(bool isDisplay)
-		{
-		}
-
-		public void OnLoadedMaterial(Material mtrl)
-		{
-		}
-
-		private CharacterBase GetTargetChara()
-		{
-			return null;
-		}
-
-		private int GetActorId()
-		{
-			return default(int);
-		}
+	private int GetActorId()
+	{
+		return default(int);
 	}
 }

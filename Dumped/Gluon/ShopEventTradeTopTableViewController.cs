@@ -2,38 +2,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopEventTradeTopTableViewController : TableViewController<ShopTradeModel.EventTradeTopData>
 {
-	public class ShopEventTradeTopTableViewController : TableViewController<ShopTradeModel.EventTradeTopData>
+	[SerializeField]
+	public Text noEventText;
+
+	private float cellHeight;
+
+	private List<SimpleAnimationCell> animationCellList;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		[Header("WarningText")]
-		public Text noEventText;
+	}
 
-		private float cellHeight;
+	protected override void Start()
+	{
+	}
 
-		private List<SimpleAnimationCell> animationCellList;
+	protected override TableViewCell<ShopTradeModel.EventTradeTopData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected override void Start()
-		{
-		}
-
-		protected override TableViewCell<ShopTradeModel.EventTradeTopData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override void UpdateContents()
-		{
-		}
+	protected override void UpdateContents()
+	{
 	}
 }

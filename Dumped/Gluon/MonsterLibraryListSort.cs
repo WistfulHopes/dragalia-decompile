@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum MonsterLibraryListSort
 {
-	public enum MonsterLibraryListSort
-	{
-		None,
-		PieceCount,
-		Element,
-		MonsterTribe
-	}
+	None,
+	PieceCount,
+	Element,
+	MonsterTribe
 }

@@ -1,43 +1,42 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FriendPanelBase : MonoBehaviour
 {
-	public class FriendPanelBase : MonoBehaviour
+	public AnimationUIAutoPublisher[] enterPublishers;
+
+	public AnimationUIAutoPublisher[] exitPublishers;
+
+	private int animationDoneCount;
+
+	private int animationToPlay;
+
+	protected FriendScene scene;
+
+	public void PlayEnterAnimation(Action onFinished)
 	{
-		public AnimationUIAutoPublisher[] enterPublishers;
+	}
 
-		public AnimationUIAutoPublisher[] exitPublishers;
+	public virtual void PlayExitAnimation(Action onFinished)
+	{
+	}
 
-		private int animationDoneCount;
+	private void OnSingleAnimationDone(Action onAllFinished)
+	{
+	}
 
-		private int animationToPlay;
+	public void OnMenuButtonPressed(FriendMenuButton button)
+	{
+	}
 
-		protected FriendScene scene;
+	[HideInInspector]
+	public void OnMenuButtonPressed(FriendModel.PanelType type)
+	{
+	}
 
-		public void PlayEnterAnimation(Action onFinished)
-		{
-		}
-
-		public virtual void PlayExitAnimation(Action onFinished)
-		{
-		}
-
-		private void OnSingleAnimationDone(Action onAllFinished)
-		{
-		}
-
-		public void OnMenuButtonPressed(FriendMenuButton button)
-		{
-		}
-
-		[HideInInspector]
-		public void OnMenuButtonPressed(FriendModel.PanelType type)
-		{
-		}
-
-		public virtual void RefreshCurrentPage()
-		{
-		}
+	public virtual void RefreshCurrentPage()
+	{
 	}
 }

@@ -1,65 +1,64 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class InquiryPopup : PopupBase
 {
-	public class InquiryPopup : PopupBase
+	private enum CheckInfo
 	{
-		private enum CheckInfo
-		{
-			UserID,
-			AppVersion,
-			DeviceOS,
-			DeviceName,
-			Max
-		}
+		UserID,
+		AppVersion,
+		DeviceOS,
+		DeviceName,
+		Max
+	}
 
-		private const string prefabPath = "Prefabs/OutGame/TitleMenu/InquiryPopup";
+	private const string prefabPath = "Prefabs/OutGame/TitleMenu/InquiryPopup";
 
-		[SerializeField]
-		private Text titleText;
+	[SerializeField]
+	private Text titleText;
 
-		[SerializeField]
-		private Text CancelButtonText;
+	[SerializeField]
+	private Text CancelButtonText;
 
-		[SerializeField]
-		private Text OkButtonText;
+	[SerializeField]
+	private Text OkButtonText;
 
-		private string[] checkInfoStrings;
+	private string[] checkInfoStrings;
 
-		private string urlFormat;
+	private string urlFormat;
 
-		public static InquiryPopup Create()
-		{
-			return null;
-		}
+	public static InquiryPopup Create()
+	{
+		return null;
+	}
 
-		public void InitSetting()
-		{
-		}
+	public void InitSetting()
+	{
+	}
 
-		public void OnCloseButtonPressed()
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
+	}
 
-		public void OnOkButtonPressed()
-		{
-		}
+	public void OnOkButtonPressed()
+	{
+	}
 
-		public void OnToggleClickedUserID(bool bOn)
-		{
-		}
+	public void OnToggleClickedUserID(bool bOn)
+	{
+	}
 
-		public void OnToggleClickedAppVersion(bool bOn)
-		{
-		}
+	public void OnToggleClickedAppVersion(bool bOn)
+	{
+	}
 
-		public void OnToggleClickedDeviceOS(bool bOn)
-		{
-		}
+	public void OnToggleClickedDeviceOS(bool bOn)
+	{
+	}
 
-		public void OnToggleClickedDeviceName(bool bOn)
-		{
-		}
+	public void OnToggleClickedDeviceName(bool bOn)
+	{
 	}
 }

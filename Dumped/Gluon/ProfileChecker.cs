@@ -1,26 +1,18 @@
-using System.Diagnostics;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ProfileChecker
 {
-	public class ProfileChecker
+	public static void BeginSample(string name)
 	{
-		[Conditional("UNITY_EDITOR")]
-		[Conditional("PROFILE")]
-		public static void BeginSample(string name)
-		{
-		}
+	}
 
-		[Conditional("UNITY_EDITOR")]
-		[Conditional("PROFILE")]
-		public static void BeginSample(string name, Object targetObject)
-		{
-		}
+	public static void BeginSample(string name, Object targetObject)
+	{
+	}
 
-		[Conditional("UNITY_EDITOR")]
-		[Conditional("PROFILE")]
-		public static void EndSample()
-		{
-		}
+	public static void EndSample()
+	{
 	}
 }

@@ -1,20 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSelectEventShortCut : MonoBehaviour
 {
-	public class QuestSelectEventShortCut : MonoBehaviour
+	[SerializeField]
+	private Toggle[] shortCutButtonsToggle;
+
+	public bool SetShortCut(int eventId, bool isSub)
 	{
-		[SerializeField]
-		private Toggle[] shortCutButtonsToggle;
+		return default(bool);
+	}
 
-		public bool SetShortCut(int eventId, bool isSub)
-		{
-			return default(bool);
-		}
-
-		public void SetTutorial(bool isEnabled)
-		{
-		}
+	public void SetTutorial(bool isEnabled)
+	{
 	}
 }

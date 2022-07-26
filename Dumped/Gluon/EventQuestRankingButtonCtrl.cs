@@ -1,49 +1,48 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventQuestRankingButtonCtrl : MonoBehaviour
 {
-	public class EventQuestRankingButtonCtrl : MonoBehaviour
+	[SerializeField]
+	private PageBase currentPage;
+
+	[SerializeField]
+	private Button rewardButton;
+
+	[SerializeField]
+	private Badge rewardButtonBadge;
+
+	[SerializeField]
+	private Button rankingButton;
+
+	[SerializeField]
+	private Badge rankingButtonBadge;
+
+	private bool isInited;
+
+	private void OnEnable()
 	{
-		[SerializeField]
-		private PageBase currentPage;
+	}
 
-		[SerializeField]
-		private Button rewardButton;
+	private void Start()
+	{
+	}
 
-		[SerializeField]
-		private Badge rewardButtonBadge;
+	private void OnDestroy()
+	{
+	}
 
-		[SerializeField]
-		private Button rankingButton;
+	private void CheckBadge()
+	{
+	}
 
-		[SerializeField]
-		private Badge rankingButtonBadge;
+	public void OnRewardButtonTouched()
+	{
+	}
 
-		private bool isInited;
-
-		private void OnEnable()
-		{
-		}
-
-		private void Start()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		private void CheckBadge()
-		{
-		}
-
-		public void OnRewardButtonTouched()
-		{
-		}
-
-		public void OnRankingButtonTouched()
-		{
-		}
+	public void OnRankingButtonTouched()
+	{
 	}
 }

@@ -3,123 +3,122 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthUnitEnhanceScene : SceneBase
 {
-	public class GrowthUnitEnhanceScene : SceneBase
+	public static GrowthUnitEnhanceModel.DataType unitDataType;
+
+	public static int targetUnitId;
+
+	public Camera uiCamera;
+
+	public Camera flashCamera;
+
+	public Canvas bgCanvas;
+
+	public Camera frontEffectCamera;
+
+	public Camera backEffectCamera;
+
+	public Transform overlayParent;
+
+	public Camera render3dCamera;
+
+	public GrowthWeaponObjectsSettings objectsSettings;
+
+	public RawImageWithAlphaBlend modelViewImage;
+
+	[HideInInspector]
+	public TouchGuardObject uiLoadTouchGuard;
+
+	[HideInInspector]
+	public BackButton backButton;
+
+	private GrowthUnitEnhanceMainCanvas unitEnhanceMainCanvas;
+
+	private GrowthUnitEnhanceModel unitModel;
+
+	private float prevSceneListScrollPosY;
+
+	private bool isSetPrevSceneData;
+
+	private static readonly string shaderSettingPath;
+
+	public UnitDetailUnitShaderSettings growthWeaponShaderSetting
 	{
-		public static GrowthUnitEnhanceModel.DataType unitDataType;
-
-		public static int targetUnitId;
-
-		public Camera uiCamera;
-
-		public Camera flashCamera;
-
-		public Canvas bgCanvas;
-
-		public Camera frontEffectCamera;
-
-		public Camera backEffectCamera;
-
-		public Transform overlayParent;
-
-		public Camera render3dCamera;
-
-		public GrowthWeaponObjectsSettings objectsSettings;
-
-		public RawImageWithAlphaBlend modelViewImage;
-
-		[HideInInspector]
-		public TouchGuardObject uiLoadTouchGuard;
-
-		[HideInInspector]
-		public BackButton backButton;
-
-		private GrowthUnitEnhanceMainCanvas unitEnhanceMainCanvas;
-
-		private GrowthUnitEnhanceModel unitModel;
-
-		private float prevSceneListScrollPosY;
-
-		private bool isSetPrevSceneData;
-
-		private static readonly string shaderSettingPath;
-
-		public UnitDetailUnitShaderSettings growthWeaponShaderSetting
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		private void Awake()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void Start()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		public override void OnBeforeLeaving()
-		{
-		}
+	private void OnInitReady()
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		public void SetupModelViewImage(bool enableAlphaBlend)
-		{
-		}
+	private void OnEnterScene()
+	{
+	}
 
-		public static void SetupSceneByUnitId(int unitId)
-		{
-		}
+	public void SetupModelViewImage(bool enableAlphaBlend)
+	{
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	public static void SetupSceneByUnitId(int unitId)
+	{
+	}
 
-		public void BackButtonPressed()
-		{
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		public void SendWeaponEnhanceData(GrowthUnitEnhanceSendData[] sendDatas, [Optional] Action completeCallBack)
-		{
-		}
+	public void BackButtonPressed()
+	{
+	}
 
-		public void SendCrestEnhanceData(GrowthUnitEnhanceSendData[] sendDatas, [Optional] Action completeCallBack)
-		{
-		}
+	public void SendWeaponEnhanceData(GrowthUnitEnhanceSendData[] sendDatas, [Optional] Action completeCallBack)
+	{
+	}
 
-		public void SendCrestPlusParamData(int hpPlus, int atkPlus, [Optional] Action completeCallBack)
-		{
-		}
+	public void SendCrestEnhanceData(GrowthUnitEnhanceSendData[] sendDatas, [Optional] Action completeCallBack)
+	{
+	}
 
-		private void SetupFlashCamera()
-		{
-		}
+	public void SendCrestPlusParamData(int hpPlus, int atkPlus, [Optional] Action completeCallBack)
+	{
+	}
 
-		private void SetupRenderCamera()
-		{
-		}
+	private void SetupFlashCamera()
+	{
+	}
 
-		public void UpdateObjectsParameters()
-		{
-		}
+	private void SetupRenderCamera()
+	{
+	}
+
+	public void UpdateObjectsParameters()
+	{
 	}
 }

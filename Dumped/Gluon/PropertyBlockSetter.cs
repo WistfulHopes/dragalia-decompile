@@ -2,25 +2,24 @@ using System;
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PropertyBlockSetter : FastUpdateMonoBehaviour
 {
-	public class PropertyBlockSetter : FastUpdateMonoBehaviour
+	[Serializable]
+	public class PropertyNameAndTexturePair
 	{
-		[Serializable]
-		public class PropertyNameAndTexturePair
-		{
-			public string propertyName;
+		public string propertyName;
 
-			public Texture2D texture;
-		}
+		public Texture2D texture;
+	}
 
-		[SerializeField]
-		private PropertyNameAndTexturePair[] settings;
+	[SerializeField]
+	private PropertyNameAndTexturePair[] settings;
 
-		private MaterialPropertyBlock materialPropertyBlock;
+	private MaterialPropertyBlock materialPropertyBlock;
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
 	}
 }

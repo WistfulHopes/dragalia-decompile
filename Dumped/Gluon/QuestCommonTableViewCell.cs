@@ -5,132 +5,131 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestCommonTableViewCell<T> : TableViewCell<T>
 {
-	public class QuestCommonTableViewCell<T> : TableViewCell<T>
+	private static string returnSceneName;
+
+	[SerializeField]
+	public Button baseButton;
+
+	public Image baseImage;
+
+	public Text title;
+
+	public Text description;
+
+	protected int curQuestId;
+
+	protected QuestStoryPopup storyPopup;
+
+	[SerializeField]
+	private Image _newMarkImage;
+
+	private CanvasGroup _cellCanvasGroup;
+
+	private Sprite baseImageDefaultSprite;
+
+	private Material baseImageDefaultMaterial;
+
+	private Vector2 baseImageDefaultSize;
+
+	public Image newMarkImage => null;
+
+	public T cellData
 	{
-		private static string returnSceneName;
-
-		[SerializeField]
-		public Button baseButton;
-
-		public Image baseImage;
-
-		public Text title;
-
-		public Text description;
-
-		protected int curQuestId;
-
-		protected QuestStoryPopup storyPopup;
-
-		[SerializeField]
-		private Image _newMarkImage;
-
-		private CanvasGroup _cellCanvasGroup;
-
-		private Sprite baseImageDefaultSprite;
-
-		private Material baseImageDefaultMaterial;
-
-		private Vector2 baseImageDefaultSize;
-
-		public Image newMarkImage => null;
-
-		public T cellData
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return (T)null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return (T)null;
 		}
-
-		public CanvasGroup cellCanvasGroup
-		{
-			get
-			{
-				return null;
-			}
-			private set
-			{
-			}
-		}
-
-		protected virtual void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SaveDefaultBaseImageAssets()
+	public CanvasGroup cellCanvasGroup
+	{
+		get
+		{
+			return null;
+		}
+		private set
 		{
 		}
+	}
 
-		protected void SetDefaultBaseImageAssets()
-		{
-		}
+	protected virtual void Start()
+	{
+	}
 
-		public override void UpdateContent(T data)
-		{
-		}
+	public void SaveDefaultBaseImageAssets()
+	{
+	}
 
-		public virtual void OnClick()
-		{
-		}
+	protected void SetDefaultBaseImageAssets()
+	{
+	}
 
-		protected virtual void OnClickDetailPopupCancel()
-		{
-		}
+	public override void UpdateContent(T data)
+	{
+	}
 
-		protected void OnClickDetailPopupOK(int questId)
-		{
-		}
+	public virtual void OnClick()
+	{
+	}
 
-		private void ShowQuestPlayModeSelectDialog(int questID)
-		{
-		}
+	protected virtual void OnClickDetailPopupCancel()
+	{
+	}
 
-		public static void StartStoryQuestApi(int questID, QuestGroupType groupType, [Optional] string backSceneName, [Optional] Action onError)
-		{
-		}
+	protected void OnClickDetailPopupOK(int questId)
+	{
+	}
 
-		public static void StartStoryQuest(int storyID, [Optional] string backSceneName)
-		{
-		}
+	private void ShowQuestPlayModeSelectDialog(int questID)
+	{
+	}
 
-		public static void StartEventStoryQuestApi(int storyID, [Optional] string backSceneName, [Optional] Action onError)
-		{
-		}
+	public static void StartStoryQuestApi(int questID, QuestGroupType groupType, [Optional] string backSceneName, [Optional] Action onError)
+	{
+	}
 
-		private static void OnSuccessReadStoryEvent(EventStoryReadResponse res)
-		{
-		}
+	public static void StartStoryQuest(int storyID, [Optional] string backSceneName)
+	{
+	}
 
-		private static void OnSuccessQuestReadStoryMain(QuestReadStoryResponse res)
-		{
-		}
+	public static void StartEventStoryQuestApi(int storyID, [Optional] string backSceneName, [Optional] Action onError)
+	{
+	}
 
-		private static void OnSuccessQuestReadStoryEvent(QuestReadStoryResponse res)
-		{
-		}
+	private static void OnSuccessReadStoryEvent(EventStoryReadResponse res)
+	{
+	}
 
-		public static void GotoStory(string scriptPath)
-		{
-		}
+	private static void OnSuccessQuestReadStoryMain(QuestReadStoryResponse res)
+	{
+	}
 
-		protected void OnClickStoryPopupOK(int questId, QuestGroupType groupType)
-		{
-		}
+	private static void OnSuccessQuestReadStoryEvent(QuestReadStoryResponse res)
+	{
+	}
 
-		protected void OnClickStoryPopupCancel()
-		{
-		}
+	public static void GotoStory(string scriptPath)
+	{
+	}
 
-		public virtual void OnQuestPlayModeSoloSelected(int questId)
-		{
-		}
+	protected void OnClickStoryPopupOK(int questId, QuestGroupType groupType)
+	{
+	}
+
+	protected void OnClickStoryPopupCancel()
+	{
+	}
+
+	public virtual void OnQuestPlayModeSoloSelected(int questId)
+	{
 	}
 }

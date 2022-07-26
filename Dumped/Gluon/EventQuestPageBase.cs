@@ -4,91 +4,94 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventQuestPageBase : PageBase
 {
-	public class EventQuestPageBase : PageBase
+	public readonly Color resetButtonNormalColor;
+
+	public readonly Color resetButtonDisableColor;
+
+	public readonly Color resetButtonPressedColor;
+
+	public readonly Color resetButtonSelectedColor;
+
+	public EventQuestScene eventQuestScene => null;
+
+	public bool isSummonDataReady => default(bool);
+
+	public override void OnPageBecomeActive(object data)
 	{
-		public readonly Color resetButtonNormalColor;
+	}
 
-		public readonly Color resetButtonDisableColor;
+	public virtual void OnPresentReceived()
+	{
+	}
 
-		public EventQuestScene eventQuestScene => null;
+	public virtual void ResetSummonData()
+	{
+	}
 
-		public bool isSummonDataReady => default(bool);
+	public void OnButtonResetTouched([Optional] Action okCallback, [Optional] Action closeCallback)
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	private int GetSummonSequence()
+	{
+		return default(int);
+	}
 
-		public virtual void OnPresentReceived()
-		{
-		}
+	public void UpdateResetButton(Button resetButton)
+	{
+	}
 
-		public virtual void ResetSummonData()
-		{
-		}
+	private void ShowResetCompleteDialog(Action callback)
+	{
+	}
 
-		public void OnButtonResetTouched([Optional] Action okCallback, [Optional] Action closeCallback)
-		{
-		}
+	public void ShowItemDetail(SummonResultItemData itemData, [Optional] Action onLeaving)
+	{
+	}
 
-		private int GetSummonSequence()
-		{
-			return default(int);
-		}
+	public void SetButtonInteractable(Button button, bool f, Text text)
+	{
+	}
 
-		public void UpdateResetButton(Button resetButton)
-		{
-		}
+	public void ShowSelectCountDialog(Action<bool> onOkCallback, [Optional] Action onCloseCallback)
+	{
+	}
 
-		private void ShowResetCompleteDialog(Action callback)
-		{
-		}
+	public void RequestBoxSummonData(Action onComplete)
+	{
+	}
 
-		public void ShowItemDetail(SummonResultItemData itemData, [Optional] Action onLeaving)
-		{
-		}
+	public void RequestResetSummon(Action callback)
+	{
+	}
 
-		public void SetButtonInteractable(Button button, bool f, Text text)
-		{
-		}
+	protected void UpdateAfterConnection(bool isSummonResult)
+	{
+	}
 
-		public void ShowSelectCountDialog(Action<bool> onOkCallback, [Optional] Action onCloseCallback)
-		{
-		}
+	public override void ShowPage(bool toShow)
+	{
+	}
 
-		public void RequestBoxSummonData(Action onComplete)
-		{
-		}
+	public IEnumerator LoadSummonBgScene()
+	{
+		return null;
+	}
 
-		public void RequestResetSummon(Action callback)
-		{
-		}
+	public void UnloadSummonBgScene()
+	{
+	}
 
-		protected void UpdateAfterConnection(bool isSummonResult)
-		{
-		}
+	public static void RequestEventPointRewardData(Action onComplete)
+	{
+	}
 
-		public override void ShowPage(bool toShow)
-		{
-		}
-
-		public IEnumerator LoadSummonBgScene()
-		{
-			return null;
-		}
-
-		public void UnloadSummonBgScene()
-		{
-		}
-
-		public static void RequestEventPointRewardData(Action onComplete)
-		{
-		}
-
-		protected virtual int GetMaxExecCount()
-		{
-			return default(int);
-		}
+	protected virtual int GetMaxExecCount()
+	{
+		return default(int);
 	}
 }

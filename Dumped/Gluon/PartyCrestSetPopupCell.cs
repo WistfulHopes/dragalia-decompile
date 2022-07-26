@@ -2,68 +2,67 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyCrestSetPopupCell : MonoBehaviour
 {
-	public class PartyCrestSetPopupCell : MonoBehaviour
+	public Text setName;
+
+	public CommonUnitIcon[] commonUnitIcons;
+
+	public GameObject[] emptyIconObjects;
+
+	public Image[] unionIcons;
+
+	public CommonUnitIcon talismanIcon;
+
+	public GameObject emptyTalismanIconObject;
+
+	public Action<int> selectCallBack;
+
+	public Action<int> registCallBack;
+
+	public GameObject detailButtonObject;
+
+	private int setIndex;
+
+	private bool isSelectableCell;
+
+	private bool isEquipData;
+
+	public void InitCellByEquipData(int index)
 	{
-		public Text setName;
+	}
 
-		public CommonUnitIcon[] commonUnitIcons;
+	public void UpdateCell(int index, bool canSelect = true)
+	{
+	}
 
-		public GameObject[] emptyIconObjects;
+	public void OnEditNameButtonPressed()
+	{
+	}
 
-		public Image[] unionIcons;
+	public void OnDetailButtonPressed()
+	{
+	}
 
-		public CommonUnitIcon talismanIcon;
+	public void OnRegistButtonPressed()
+	{
+	}
 
-		public GameObject emptyTalismanIconObject;
+	public void OnSelectButtonPressed()
+	{
+	}
 
-		public Action<int> selectCallBack;
+	private void SendCrestSetName(int index, string name)
+	{
+	}
 
-		public Action<int> registCallBack;
+	public void OnCrestIconPressed(int tag)
+	{
+	}
 
-		public GameObject detailButtonObject;
-
-		private int setIndex;
-
-		private bool isSelectableCell;
-
-		private bool isEquipData;
-
-		public void InitCellByEquipData(int index)
-		{
-		}
-
-		public void UpdateCell(int index, bool canSelect = true)
-		{
-		}
-
-		public void OnEditNameButtonPressed()
-		{
-		}
-
-		public void OnDetailButtonPressed()
-		{
-		}
-
-		public void OnRegistButtonPressed()
-		{
-		}
-
-		public void OnSelectButtonPressed()
-		{
-		}
-
-		private void SendCrestSetName(int index, string name)
-		{
-		}
-
-		public void OnCrestIconPressed(int tag)
-		{
-		}
-
-		public void OnTalismanIconPressed()
-		{
-		}
+	public void OnTalismanIconPressed()
+	{
 	}
 }

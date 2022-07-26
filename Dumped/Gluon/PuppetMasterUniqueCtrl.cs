@@ -1,33 +1,32 @@
-namespace Gluon
+namespace Gluon;
+
+public class PuppetMasterUniqueCtrl : EnemyUniqueCtrl
 {
-	public class PuppetMasterUniqueCtrl : EnemyUniqueCtrl
+	private bool isBooting;
+
+	private int _bootActionId;
+
+	private int _abortActionId;
+
+	private float _timer;
+
+	public void Setup(int bootActionId, int abortActionId)
 	{
-		private bool isBooting;
+	}
 
-		private int _bootActionId;
+	private void Update()
+	{
+	}
 
-		private int _abortActionId;
+	public void Boot(float runningTime)
+	{
+	}
 
-		private float _timer;
+	public void Abort()
+	{
+	}
 
-		public void Setup(int bootActionId, int abortActionId)
-		{
-		}
-
-		private void Update()
-		{
-		}
-
-		public void Boot(float runningTime)
-		{
-		}
-
-		public void Abort()
-		{
-		}
-
-		private void ProcAbort()
-		{
-		}
+	private void ProcAbort()
+	{
 	}
 }

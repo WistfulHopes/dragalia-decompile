@@ -1,17 +1,16 @@
-namespace Gluon
+namespace Gluon;
+
+public enum CommonIconListType
 {
-	public enum CommonIconListType
-	{
-		None,
-		Character,
-		Dragon,
-		Weapon,
-		Amulet,
-		Item,
-		Skill,
-		WeaponPassiveAbility,
-		WeaponSkin,
-		Talisman,
-		ServitorPassiveAbility
-	}
+	None,
+	Character,
+	Dragon,
+	Weapon,
+	Amulet,
+	Item,
+	Skill,
+	WeaponPassiveAbility,
+	WeaponSkin,
+	Talisman,
+	ServitorPassiveAbility
 }

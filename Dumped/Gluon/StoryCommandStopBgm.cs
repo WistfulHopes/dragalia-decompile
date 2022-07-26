@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandStopBgm : IStoryCommand
 {
-	[CommandName("stop_bgm")]
-	public class StoryCommandStopBgm : IStoryCommand
+	public void Start(float sec = 0f)
 	{
-		public void Start(float sec = 0f)
-		{
-		}
 	}
 }

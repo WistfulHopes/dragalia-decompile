@@ -1,64 +1,63 @@
 using System.Collections.Generic;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public static class HitAttributeCrcUtil
 {
-	public static class HitAttributeCrcUtil
+	public enum GroupType
 	{
-		public enum GroupType
-		{
-			Player,
-			Enemy,
-			Common
-		}
+		Player,
+		Enemy,
+		Common
+	}
 
-		private class GroupData
-		{
-			public List<uint> Crc32List;
+	private class GroupData
+	{
+		public List<uint> Crc32List;
 
-			public Dictionary<uint, int> Crc32ToIndexTable;
+		public Dictionary<uint, int> Crc32ToIndexTable;
 
-			public GroupData(int capacity)
-			{
-			}
-		}
-
-		private static Dictionary<GroupType, GroupData> _crcCache;
-
-		public static uint GetCrc32FromHitAttributeIndex(GroupType type, int index)
-		{
-			return default(uint);
-		}
-
-		public static int GetHitAttributeIndexFromCrc32(GroupType type, uint crc32)
-		{
-			return default(int);
-		}
-
-		public static string GetHitAttributeLabelFromCrc32(GroupType type, uint crc32)
-		{
-			return null;
-		}
-
-		public static uint GetCrc32FromHitAttributeLabel(GroupType type, string label)
-		{
-			return default(uint);
-		}
-
-		public static void Reload()
+		public GroupData(int capacity)
 		{
 		}
+	}
 
-		private static void Reload(PlayerActionHitAttribute playerActionHitAttr)
-		{
-		}
+	private static Dictionary<GroupType, GroupData> _crcCache;
 
-		private static void Reload(EnemyActionHitAttribute enemyActionHitAttr)
-		{
-		}
+	public static uint GetCrc32FromHitAttributeIndex(GroupType type, int index)
+	{
+		return default(uint);
+	}
 
-		private static void Reload(CommonActionHitAttribute commonActionHitAttr)
-		{
-		}
+	public static int GetHitAttributeIndexFromCrc32(GroupType type, uint crc32)
+	{
+		return default(int);
+	}
+
+	public static string GetHitAttributeLabelFromCrc32(GroupType type, uint crc32)
+	{
+		return null;
+	}
+
+	public static uint GetCrc32FromHitAttributeLabel(GroupType type, string label)
+	{
+		return default(uint);
+	}
+
+	public static void Reload()
+	{
+	}
+
+	private static void Reload(PlayerActionHitAttribute playerActionHitAttr)
+	{
+	}
+
+	private static void Reload(EnemyActionHitAttribute enemyActionHitAttr)
+	{
+	}
+
+	private static void Reload(CommonActionHitAttribute commonActionHitAttr)
+	{
 	}
 }

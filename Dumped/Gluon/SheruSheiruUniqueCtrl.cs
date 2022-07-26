@@ -1,46 +1,45 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class SheruSheiruUniqueCtrl : EnemyUniqueCtrl
 {
-	public class SheruSheiruUniqueCtrl : EnemyUniqueCtrl
+	public EnemyCharacter owner;
+
+	private bool isChildCollisionOff;
+
+	public List<EnemyCharacter> HitList
 	{
-		public EnemyCharacter owner;
-
-		private bool isChildCollisionOff;
-
-		public List<EnemyCharacter> HitList
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public override void Initialize()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void HitEnemy(EnemyCharacter subEnemy, int actionID)
-		{
-		}
+	public override void Initialize()
+	{
+	}
 
-		public bool AlreadyHit(EnemyCharacter subEnemy)
-		{
-			return default(bool);
-		}
+	public void HitEnemy(EnemyCharacter subEnemy, int actionID)
+	{
+	}
 
-		public void ResetHitList()
-		{
-		}
+	public bool AlreadyHit(EnemyCharacter subEnemy)
+	{
+		return default(bool);
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	public void ResetHitList()
+	{
+	}
+
+	public override void FastUpdate()
+	{
 	}
 }

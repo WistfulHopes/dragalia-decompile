@@ -1,21 +1,20 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsHumanCannon : ActionParts
 {
-	public class ActionPartsHumanCannon : ActionParts
+	private readonly HumanCannonData _partsData;
+
+	public ActionPartsHumanCannon(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly HumanCannonData _partsData;
+	}
 
-		public ActionPartsHumanCannon(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		private void CreateCtrlThrown(CharacterBase target)
-		{
-		}
+	private void CreateCtrlThrown(CharacterBase target)
+	{
 	}
 }

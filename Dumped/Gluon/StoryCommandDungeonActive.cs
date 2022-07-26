@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandDungeonActive : IStoryCommand
 {
-	[CommandName("dungeon_active")]
-	public class StoryCommandDungeonActive : IStoryCommand
+	public void Start(bool active, string name = "", bool isUnloadScene = false)
 	{
-		public void Start(bool active, string name = "", bool isUnloadScene = false)
-		{
-		}
 	}
 }

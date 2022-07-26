@@ -1,12 +1,11 @@
 using System;
 
-namespace Cpp2IlInjected
+namespace Cpp2IlInjected;
+
+internal class AnalysisFailedException : Exception
 {
-	internal class AnalysisFailedException : Exception
+	public AnalysisFailedException(string message)
+		: base(message)
 	{
-		public AnalysisFailedException(string message)
-			: base(message)
-		{
-		}
 	}
 }

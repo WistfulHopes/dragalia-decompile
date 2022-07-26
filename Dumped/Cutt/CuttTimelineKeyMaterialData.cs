@@ -1,96 +1,95 @@
 using System;
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyMaterialData : CuttTimelineKeyTransformData, ICuttTimelineKeyHasColor
 {
-	[Serializable]
-	public class CuttTimelineKeyMaterialData : CuttTimelineKeyTransformData, ICuttTimelineKeyHasColor
+	public enum MaterialKeyType
 	{
-		public enum MaterialKeyType
-		{
-			GetMaterialAndSetParam,
-			SetParamOnly
-		}
+		GetMaterialAndSetParam,
+		SetParamOnly
+	}
 
-		public enum MaterialParamType
-		{
-			FloatValue,
-			ColorValue
-		}
+	public enum MaterialParamType
+	{
+		FloatValue,
+		ColorValue
+	}
 
-		public enum RootNodeKind
-		{
-			Character,
-			BgModel
-		}
+	public enum RootNodeKind
+	{
+		Character,
+		BgModel
+	}
 
-		[Serializable]
-		public class ShaderParamData
-		{
-			public MaterialParamType shaderParamType;
+	[Serializable]
+	public class ShaderParamData
+	{
+		public MaterialParamType shaderParamType;
 
-			public string shaderParamName;
+		public string shaderParamName;
 
-			public float shaderParamValue;
+		public float shaderParamValue;
 
-			public Color shaderParamColor;
+		public Color shaderParamColor;
 
-			public void SetData(ShaderParamData src)
-			{
-			}
-
-			public void SetMaterialAccessData(ShaderParamData src)
-			{
-			}
-		}
-
-		public MaterialKeyType keyType;
-
-		public RootNodeKind rootNodeKind;
-
-		public CuttCharacterInitializer.CharacterId charaObjectId;
-
-		public string charaNodeName;
-
-		public string charaMaterialName;
-
-		public ShaderParamData[] shaderParamDataArray;
-
-		public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
-
-		public override void OnLoad(CuttTimelineControl timelineControl)
+		public void SetData(ShaderParamData src)
 		{
 		}
 
-		public Color GetRepresentativeColor()
+		public void SetMaterialAccessData(ShaderParamData src)
 		{
-			return default(Color);
 		}
+	}
 
-		public bool IsChanged(CuttTimelineKeyMaterialData targetData)
-		{
-			return default(bool);
-		}
+	public MaterialKeyType keyType;
 
-		public void SetData(CuttTimelineKeyMaterialData targetData)
-		{
-		}
+	public RootNodeKind rootNodeKind;
 
-		public void SetMaterialtAccessData(CuttTimelineKeyMaterialData targetData)
-		{
-		}
+	public CuttCharacterInitializer.CharacterId charaObjectId;
 
-		public int GetParamNum()
-		{
-			return default(int);
-		}
+	public string charaNodeName;
 
-		private void AddParam()
-		{
-		}
+	public string charaMaterialName;
 
-		private void RemoveParam(int index)
-		{
-		}
+	public ShaderParamData[] shaderParamDataArray;
+
+	public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
+
+	public override void OnLoad(CuttTimelineControl timelineControl)
+	{
+	}
+
+	public Color GetRepresentativeColor()
+	{
+		return default(Color);
+	}
+
+	public bool IsChanged(CuttTimelineKeyMaterialData targetData)
+	{
+		return default(bool);
+	}
+
+	public void SetData(CuttTimelineKeyMaterialData targetData)
+	{
+	}
+
+	public void SetMaterialtAccessData(CuttTimelineKeyMaterialData targetData)
+	{
+	}
+
+	public int GetParamNum()
+	{
+		return default(int);
+	}
+
+	private void AddParam()
+	{
+	}
+
+	private void RemoveParam(int index)
+	{
 	}
 }

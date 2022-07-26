@@ -1,23 +1,22 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcDissever : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcDissever : EnemyAbilityProcBase
+	private EnemyCharacter.CallMinionInfo callMinionInfo;
+
+	private float _scale;
+
+	public EnemyAbilityProcDissever(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
 	{
-		private EnemyCharacter.CallMinionInfo callMinionInfo;
+	}
 
-		private float _scale;
+	public override void OnEntry()
+	{
+	}
 
-		public EnemyAbilityProcDissever(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
-
-		public override void OnEntry()
-		{
-		}
-
-		public override void OnActionParts(bool onoff)
-		{
-		}
+	public override void OnActionParts(bool onoff)
+	{
 	}
 }

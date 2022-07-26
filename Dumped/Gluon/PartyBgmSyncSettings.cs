@@ -1,32 +1,31 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+[ExecuteAlways]
+public class PartyBgmSyncSettings : MonoBehaviour
 {
 	[Serializable]
-	[ExecuteAlways]
-	public class PartyBgmSyncSettings : MonoBehaviour
+	public class SettingData
 	{
-		[Serializable]
-		public class SettingData
-		{
-			public string bgmName;
+		public string bgmName;
 
-			public float motionPlaySpeed;
-		}
+		public float motionPlaySpeed;
+	}
 
-		public int settingNumber;
+	public int settingNumber;
 
-		public SettingData[] datas;
+	public SettingData[] datas;
 
-		public SettingData[] backupDatas;
+	public SettingData[] backupDatas;
 
-		private void OnValidate()
-		{
-		}
+	private void OnValidate()
+	{
+	}
 
-		public void Reset()
-		{
-		}
+	public void Reset()
+	{
 	}
 }

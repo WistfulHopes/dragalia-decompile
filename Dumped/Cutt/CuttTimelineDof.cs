@@ -1,15 +1,14 @@
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineDof
 {
-	public class CuttTimelineDof
+	private CuttTimelineKeyPostEffectDataList _keys;
+
+	public void Initialize(CuttTimelineKeyPostEffectDataList keys, CuttTimelineControl timelineControl)
 	{
-		private CuttTimelineKeyPostEffectDataList _keys;
+	}
 
-		public void Initialize(CuttTimelineKeyPostEffectDataList keys, CuttTimelineControl timelineControl)
-		{
-		}
-
-		public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
-		{
-		}
+	public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	{
 	}
 }

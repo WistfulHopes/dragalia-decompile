@@ -1,107 +1,106 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AnimatableObject : RenderObjectBase
 {
-	public class AnimatableObject : RenderObjectBase
+	public Animator animator;
+
+	public GameObject weapon;
+
+	private CharacterBase owner;
+
+	private CharacterSwitchingTexture[] characterSwitchingTextures;
+
+	private Vector3 position;
+
+	private Quaternion rotation;
+
+	public GameObject parentGameObject;
+
+	private EffectObject.FollowPosType _followPosType;
+
+	private EffectObject.FollowRotType _followRotType;
+
+	public bool isUsed
 	{
-		public Animator animator;
-
-		public GameObject weapon;
-
-		private CharacterBase owner;
-
-		private CharacterSwitchingTexture[] characterSwitchingTextures;
-
-		private Vector3 position;
-
-		private Quaternion rotation;
-
-		public GameObject parentGameObject;
-
-		private EffectObject.FollowPosType _followPosType;
-
-		private EffectObject.FollowRotType _followRotType;
-
-		public bool isUsed
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		public void SetOwner(CharacterBase value)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		protected override void Awake()
-		{
-		}
+	public void SetOwner(CharacterBase value)
+	{
+	}
 
-		public virtual void Initialize()
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		protected override void OnEnable()
-		{
-		}
+	public virtual void Initialize()
+	{
+	}
 
-		public override void LateUpdate()
-		{
-		}
+	protected override void OnEnable()
+	{
+	}
 
-		public void Generate()
-		{
-		}
+	public override void LateUpdate()
+	{
+	}
 
-		public void Destroy()
-		{
-		}
+	public void Generate()
+	{
+	}
 
-		public void SetWeaponVisibility(bool visible)
-		{
-		}
+	public void Destroy()
+	{
+	}
 
-		public void PlaySwitchingTexture(int in_idx, int out_idx, float duration)
-		{
-		}
+	public void SetWeaponVisibility(bool visible)
+	{
+	}
 
-		public void SetLocalPosition(Vector3 localPosition)
-		{
-		}
+	public void PlaySwitchingTexture(int in_idx, int out_idx, float duration)
+	{
+	}
 
-		public void SetLocalRotation(Quaternion localRotation)
-		{
-		}
+	public void SetLocalPosition(Vector3 localPosition)
+	{
+	}
 
-		public void SetParent(GameObject parent)
-		{
-		}
+	public void SetLocalRotation(Quaternion localRotation)
+	{
+	}
 
-		public void SetDefaultFollowType()
-		{
-		}
+	public void SetParent(GameObject parent)
+	{
+	}
 
-		public void SetFollowType(EffectObject.FollowPosType posType, EffectObject.FollowRotType rotType)
-		{
-		}
+	public void SetDefaultFollowType()
+	{
+	}
 
-		public void SetFollowPositionType(EffectObject.FollowPosType posType)
-		{
-		}
+	public void SetFollowType(EffectObject.FollowPosType posType, EffectObject.FollowRotType rotType)
+	{
+	}
 
-		public void SetFollowRotationType(EffectObject.FollowRotType rotType)
-		{
-		}
+	public void SetFollowPositionType(EffectObject.FollowPosType posType)
+	{
+	}
 
-		public void UpdatePose()
-		{
-		}
+	public void SetFollowRotationType(EffectObject.FollowRotType rotType)
+	{
+	}
+
+	public void UpdatePose()
+	{
 	}
 }

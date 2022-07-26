@@ -1,30 +1,29 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterCustomPointController_SM : CharacterCustomPointController
 {
-	public class CharacterCustomPointController_SM : CharacterCustomPointController
+	private int lastCP;
+
+	private int lastShikigamiBulletNum;
+
+	private bool isDirtyCP;
+
+	protected override void Initialize(CharacterBase owner, AbilityDataElement[] elems)
 	{
-		private int lastCP;
+	}
 
-		private int lastShikigamiBulletNum;
+	public override void Update()
+	{
+	}
 
-		private bool isDirtyCP;
+	public override void SetCP(int index, int value)
+	{
+	}
 
-		protected override void Initialize(CharacterBase owner, AbilityDataElement[] elems)
-		{
-		}
-
-		public override void Update()
-		{
-		}
-
-		public override void SetCP(int index, int value)
-		{
-		}
-
-		public override IconType GetIconType()
-		{
-			return default(IconType);
-		}
+	public override IconType GetIconType()
+	{
+		return default(IconType);
 	}
 }

@@ -1,39 +1,38 @@
-namespace Gluon
+namespace Gluon;
+
+public class CraftTargetSelectCellData
 {
-	public class CraftTargetSelectCellData
-	{
-		public int targetId;
+	public int targetId;
 
-		public int needFacilityLevel;
+	public int needFacilityLevel;
 
-		public int possessionCount;
+	public int possessionCount;
 
-		public bool isPickup;
+	public bool isPickup;
 
-		public int pickupEventId;
+	public int pickupEventId;
 
-		public bool isNew;
+	public bool isNew;
 
-		public bool isNotShortage;
+	public bool isNotShortage;
 
-		public int hpPlus;
+	public int hpPlus;
 
-		public int atkPlus;
+	public int atkPlus;
 
-		public TutorialDataManager.TutorialCellType tutorialCellType;
+	public TutorialDataManager.TutorialCellType tutorialCellType;
 
-		public bool isShowRootInfo;
+	public bool isShowRootInfo;
 
-		public int[] rootIds;
+	public int[] rootIds;
 
-		public int elementIndex;
+	public int elementIndex;
 
-		public bool isLabel;
+	public bool isLabel;
 
-		public string seriesImageName;
+	public string seriesImageName;
 
-		public bool isSpecialCraft;
+	public bool isSpecialCraft;
 
-		public string headerImageName;
-	}
+	public string headerImageName;
 }

@@ -1,9 +1,8 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public interface ICollision
 {
-	public interface ICollision
-	{
-		void OnCollided(GameObject target, CollisionHitAttribute data);
-	}
+	void OnCollided(GameObject target, CollisionHitAttribute data);
 }

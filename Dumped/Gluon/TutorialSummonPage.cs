@@ -3,54 +3,53 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialSummonPage : TutorialSummonPageBase
 {
-	public class TutorialSummonPage : TutorialSummonPageBase
+	[SerializeField]
+	private Transform edgeToEdgeTrans;
+
+	private bool isSetupContents;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		private Transform edgeToEdgeTrans;
+	}
 
-		private bool isSetupContents;
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	private void SetupContents()
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		private void SetupContents()
-		{
-		}
+	private IEnumerator WaitForSetupContents(AnimationPattern animationPattern, Action onAnimationDone, [Optional] Action onCutOff)
+	{
+		return null;
+	}
 
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		private IEnumerator WaitForSetupContents(AnimationPattern animationPattern, Action onAnimationDone, [Optional] Action onCutOff)
-		{
-			return null;
-		}
+	public void OnOddsButtonPressed()
+	{
+	}
 
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	public void OnDetailButtonPressed()
+	{
+	}
 
-		public void OnOddsButtonPressed()
-		{
-		}
+	private void CreateDetailPopup()
+	{
+	}
 
-		public void OnDetailButtonPressed()
-		{
-		}
-
-		private void CreateDetailPopup()
-		{
-		}
-
-		public void OnSummonButtonPressed()
-		{
-		}
+	public void OnSummonButtonPressed()
+	{
 	}
 }

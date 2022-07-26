@@ -1,92 +1,91 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsCommand : ActionParts
 {
-	public class ActionPartsCommand : ActionParts
+	private readonly CommandData _partsData;
+
+	private ChangeTexture[] _chgTex;
+
+	private SkinnedMeshRenderer[] _skinMeshRenderers;
+
+	private bool _isPreventRecursion;
+
+	private int _attachKey;
+
+	public CommandData.CharacterCommand command => default(CommandData.CharacterCommand);
+
+	public bool onoff => default(bool);
+
+	public ActionPartsCommand(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly CommandData _partsData;
+	}
 
-		private ChangeTexture[] _chgTex;
+	public override void OnPostCreated(CharacterBase chara)
+	{
+	}
 
-		private SkinnedMeshRenderer[] _skinMeshRenderers;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		private bool _isPreventRecursion;
+	protected override void OnStart()
+	{
+	}
 
-		private int _attachKey;
+	public override void Clear()
+	{
+	}
 
-		public CommandData.CharacterCommand command => default(CommandData.CharacterCommand);
+	protected override bool CanGuarantee(bool flag)
+	{
+		return default(bool);
+	}
 
-		public bool onoff => default(bool);
+	private void ProcCommand(CharacterBase character, CommandData.CharacterCommand cmd)
+	{
+	}
 
-		public ActionPartsCommand(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	private void ProcChangeMeshTexture()
+	{
+	}
 
-		public override void OnPostCreated(CharacterBase chara)
-		{
-		}
+	private void ProcRegisterPosition()
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	private void ProcRegisterMultiPosition()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	private void AttachObject(CharacterBase chara)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	private void SetVisibleAttachObject()
+	{
+	}
 
-		protected override bool CanGuarantee(bool flag)
-		{
-			return default(bool);
-		}
+	private void SwitchWeaponSkin()
+	{
+	}
 
-		private void ProcCommand(CharacterBase character, CommandData.CharacterCommand cmd)
-		{
-		}
+	public void ProcAllUnitInvincible(bool onoff)
+	{
+	}
 
-		private void ProcChangeMeshTexture()
-		{
-		}
+	private void ProcDisplayMyHpToPartsUI()
+	{
+	}
 
-		private void ProcRegisterPosition()
-		{
-		}
+	public void ProcDropDp(int dp)
+	{
+	}
 
-		private void ProcRegisterMultiPosition()
-		{
-		}
-
-		private void AttachObject(CharacterBase chara)
-		{
-		}
-
-		private void SetVisibleAttachObject()
-		{
-		}
-
-		private void SwitchWeaponSkin()
-		{
-		}
-
-		public void ProcAllUnitInvincible(bool onoff)
-		{
-		}
-
-		private void ProcDisplayMyHpToPartsUI()
-		{
-		}
-
-		public void ProcDropDp(int dp)
-		{
-		}
-
-		public int GetActionConditionId()
-		{
-			return default(int);
-		}
+	public int GetActionConditionId()
+	{
+		return default(int);
 	}
 }

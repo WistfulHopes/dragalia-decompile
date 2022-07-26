@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public class AlbumStoryReviewIllustrationPageCellData
 {
-	public class AlbumStoryReviewIllustrationPageCellData
-	{
-		public int artwarkImageId;
-	}
+	public int artwarkImageId;
 }

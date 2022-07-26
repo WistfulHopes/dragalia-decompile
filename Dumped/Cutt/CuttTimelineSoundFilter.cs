@@ -1,25 +1,24 @@
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineSoundFilter
 {
-	public class CuttTimelineSoundFilter
+	public CuttTimelineKeySoundFilterData.FilterType filterTypeLog;
+
+	private CuttTimelineKeySoundFilterDataList _keys;
+
+	public void Initialize(CuttTimelineKeySoundFilterDataList keys, CuttTimelineControl timelineControl)
 	{
-		public CuttTimelineKeySoundFilterData.FilterType filterTypeLog;
+	}
 
-		private CuttTimelineKeySoundFilterDataList _keys;
+	public void Reset()
+	{
+	}
 
-		public void Initialize(CuttTimelineKeySoundFilterDataList keys, CuttTimelineControl timelineControl)
-		{
-		}
+	public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	{
+	}
 
-		public void Reset()
-		{
-		}
-
-		public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
-		{
-		}
-
-		private void SetFilter(CuttTimelineKeySoundFilterData.FilterType type)
-		{
-		}
+	private void SetFilter(CuttTimelineKeySoundFilterData.FilterType type)
+	{
 	}
 }

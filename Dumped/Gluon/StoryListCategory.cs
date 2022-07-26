@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum StoryListCategory
 {
-	public enum StoryListCategory
-	{
-		None,
-		MainStory,
-		Event
-	}
+	None,
+	MainStory,
+	Event
 }

@@ -1,36 +1,35 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PlaySummonInterface : IPlaySummonInterface
 {
-	public class PlaySummonInterface : IPlaySummonInterface
+	public static IPlaySummonInterface instance;
+
+	public Transform node3d => null;
+
+	public FlashPlayerManager flashPlayerManager => null;
+
+	public CameraClearFlags oldFlashCameraClearFlags
 	{
-		public static IPlaySummonInterface instance;
-
-		public Transform node3d => null;
-
-		public FlashPlayerManager flashPlayerManager => null;
-
-		public CameraClearFlags oldFlashCameraClearFlags
+		get
 		{
-			get
-			{
-				return default(CameraClearFlags);
-			}
-			set
-			{
-			}
+			return default(CameraClearFlags);
 		}
-
-		public RenderTexture charaWeaponRenderTexture => null;
-
-		public bool IsBoxSummon => default(bool);
-
-		public void StartWhiteOutEffect(float inTime, float outTime)
+		set
 		{
 		}
+	}
 
-		public void OnBoxSummonEvent(BoxSummonEventId eid)
-		{
-		}
+	public RenderTexture charaWeaponRenderTexture => null;
+
+	public bool IsBoxSummon => default(bool);
+
+	public void StartWhiteOutEffect(float inTime, float outTime)
+	{
+	}
+
+	public void OnBoxSummonEvent(BoxSummonEventId eid)
+	{
 	}
 }

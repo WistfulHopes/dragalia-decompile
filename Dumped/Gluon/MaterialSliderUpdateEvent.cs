@@ -1,10 +1,9 @@
 using System;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class MaterialSliderUpdateEvent : UnityEvent<int, int>
 {
-	[Serializable]
-	public class MaterialSliderUpdateEvent : UnityEvent<int, int>
-	{
-	}
 }

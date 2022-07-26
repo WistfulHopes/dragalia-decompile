@@ -1,23 +1,22 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class StampPageCellButton : MonoBehaviour
 {
-	public class StampPageCellButton : MonoBehaviour
+	public int buttonTag;
+
+	private StampPageCell pageCell;
+
+	private void Start()
 	{
-		public int buttonTag;
+	}
 
-		private StampPageCell pageCell;
+	public void OnButtonPressed()
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		public void OnButtonPressed()
-		{
-		}
-
-		public void OnButtonLongPressed()
-		{
-		}
+	public void OnButtonLongPressed()
+	{
 	}
 }

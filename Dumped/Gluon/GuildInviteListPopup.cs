@@ -4,66 +4,64 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildInviteListPopup : PopupBase
 {
-	public class GuildInviteListPopup : PopupBase
+	[SerializeField]
+	private GuildInfoTableViewController searchList;
+
+	[SerializeField]
+	private Button ArrDenyButton;
+
+	[SerializeField]
+	private Text noMessageText;
+
+	private List<GuildInfoCellData> cellDataList;
+
+	private AtgenGuildInviteParamsList[] guildInviteParamsList;
+
+	public const string prefabPath = "Prefabs/OutGame/Guild/GuildInviteListPopup";
+
+	public static void Create()
 	{
-		[SerializeField]
-		[Header("Recommended")]
-		private GuildInfoTableViewController searchList;
+	}
 
-		[SerializeField]
-		private Button ArrDenyButton;
+	public static GuildInviteListPopup Create(DataManager.GameData<GuildInviteReceiveList> dataList)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Text noMessageText;
+	protected override void Start()
+	{
+	}
 
-		private List<GuildInfoCellData> cellDataList;
+	public void OnCellPressed(GuildInfoCellData data)
+	{
+	}
 
-		private AtgenGuildInviteParamsList[] guildInviteParamsList;
+	private static void RequestGuildList(Action onFinished)
+	{
+	}
 
-		public const string prefabPath = "Prefabs/OutGame/Guild/GuildInviteListPopup";
+	private static AtgenGuildInviteParamsList[] GetAtgenGuildInviteParamsList(DataManager.GameData<GuildInviteReceiveList> dataList)
+	{
+		return null;
+	}
 
-		public static void Create()
-		{
-		}
+	private void UpdateList()
+	{
+	}
 
-		public static GuildInviteListPopup Create(DataManager.GameData<GuildInviteReceiveList> dataList)
-		{
-			return null;
-		}
+	public void OnPressAllDenyButton()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	private void RejectAction(GuildInfoCellData cellData)
+	{
+	}
 
-		public void OnCellPressed(GuildInfoCellData data)
-		{
-		}
-
-		private static void RequestGuildList(Action onFinished)
-		{
-		}
-
-		private static AtgenGuildInviteParamsList[] GetAtgenGuildInviteParamsList(DataManager.GameData<GuildInviteReceiveList> dataList)
-		{
-			return null;
-		}
-
-		private void UpdateList()
-		{
-		}
-
-		public void OnPressAllDenyButton()
-		{
-		}
-
-		private void RejectAction(GuildInfoCellData cellData)
-		{
-		}
-
-		private void OnRejectRequest(GuildInfoCellData data, Action onFinished)
-		{
-		}
+	private void OnRejectRequest(GuildInfoCellData data, Action onFinished)
+	{
 	}
 }

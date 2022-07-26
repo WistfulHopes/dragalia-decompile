@@ -1,40 +1,39 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class FortRenderQueueSetter : MonoBehaviour
 {
-	[ExecuteAlways]
-	public class FortRenderQueueSetter : MonoBehaviour
+	public enum RenderQueueType
 	{
-		public enum RenderQueueType
-		{
-			Background = 1000,
-			Geometry = 2000,
-			AlphaTest = 2450,
-			Transparent = 3000,
-			Overlay = 4000
-		}
+		Background = 1000,
+		Geometry = 2000,
+		AlphaTest = 2450,
+		Transparent = 3000,
+		Overlay = 4000
+	}
 
-		[SerializeField]
-		private RenderQueueType renderQueue;
+	[SerializeField]
+	private RenderQueueType renderQueue;
 
-		[SerializeField]
-		private int additionalOrder;
+	[SerializeField]
+	private int additionalOrder;
 
-		private Renderer[] myRenderers;
+	private Renderer[] myRenderers;
 
-		[SerializeField]
-		private bool isMaterialShared;
+	[SerializeField]
+	private bool isMaterialShared;
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void OnValidate()
-		{
-		}
+	private void OnValidate()
+	{
+	}
 
-		public void SetRenderQueueToAllMaterials()
-		{
-		}
+	public void SetRenderQueueToAllMaterials()
+	{
 	}
 }

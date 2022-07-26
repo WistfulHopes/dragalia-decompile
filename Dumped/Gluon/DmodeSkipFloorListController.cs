@@ -1,45 +1,44 @@
 using System;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeSkipFloorListController : TableViewController<DmodeSkipFloorListCell.DmodeSkipFloorListCellData>
 {
-	public class DmodeSkipFloorListController : TableViewController<DmodeSkipFloorListCell.DmodeSkipFloorListCellData>
+	private Action<int> onCellPressedCallback;
+
+	private float cellWidth;
+
+	private float cellHeight;
+
+	protected override void Start()
 	{
-		private Action<int> onCellPressedCallback;
+	}
 
-		private float cellWidth;
+	public void AddonCellPressedCallback(Action<int> callback)
+	{
+	}
 
-		private float cellHeight;
+	public void LoadData(int maxFloorNum)
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	protected override TableViewCell<DmodeSkipFloorListCell.DmodeSkipFloorListCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		public void AddonCellPressedCallback(Action<int> callback)
-		{
-		}
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public void LoadData(int maxFloorNum)
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected override TableViewCell<DmodeSkipFloorListCell.DmodeSkipFloorListCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public bool ExistSkipableFloorData()
-		{
-			return default(bool);
-		}
+	public bool ExistSkipableFloorData()
+	{
+		return default(bool);
 	}
 }

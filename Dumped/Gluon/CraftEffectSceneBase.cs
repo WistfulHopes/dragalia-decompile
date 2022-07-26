@@ -4,130 +4,129 @@ using FLATOUT.Main;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public abstract class CraftEffectSceneBase : SceneBase
 {
-	public abstract class CraftEffectSceneBase : SceneBase
+	public enum LimitBreakMotionLabel
 	{
-		public enum LimitBreakMotionLabel
-		{
-			disable,
-			normal,
-			max
-		}
+		disable,
+		normal,
+		max
+	}
 
-		public Camera effectUiCamera;
+	public Camera effectUiCamera;
 
-		public Camera effectFlashCamera;
+	public Camera effectFlashCamera;
 
-		public Camera frontEffectBaseCamera;
+	public Camera frontEffectBaseCamera;
 
-		public Camera backEffectBaseCamera;
+	public Camera backEffectBaseCamera;
 
-		public Camera render3dCamera;
+	public Camera render3dCamera;
 
-		public Canvas effectBgCanvas;
+	public Canvas effectBgCanvas;
 
-		protected GrowthWeaponObjectsSettings objectsSettings;
+	protected GrowthWeaponObjectsSettings objectsSettings;
 
-		protected List<CraftStepupConfirmPopupBackupData> craftPopupBackupDataList;
+	protected List<CraftStepupConfirmPopupBackupData> craftPopupBackupDataList;
 
-		protected Canvas uiCanvas;
+	protected Canvas uiCanvas;
 
-		protected int craftEffectWeaponId;
+	protected int craftEffectWeaponId;
 
-		protected int[] cfartEffectMaterialIds;
+	protected int[] cfartEffectMaterialIds;
 
-		protected ulong[] cfartEffectMaterialWeaponIds;
+	protected ulong[] cfartEffectMaterialWeaponIds;
 
-		protected bool isTargetLimitBreak;
+	protected bool isTargetLimitBreak;
 
-		protected int craftCount;
+	protected int craftCount;
 
-		protected UnityAction resultEndCallBack;
+	protected UnityAction resultEndCallBack;
 
-		protected CraftEffectMainCanvas effectMainCanvas;
+	protected CraftEffectMainCanvas effectMainCanvas;
 
-		protected BackButton backButton;
+	protected BackButton backButton;
 
-		private GameObject craftAnimation;
+	private GameObject craftAnimation;
 
-		private GameObject craftHeaderAnimation;
+	private GameObject craftHeaderAnimation;
 
-		private GameObject weaponModel;
+	private GameObject weaponModel;
 
-		private BaseCanvasContents baseCanvasContents;
+	private BaseCanvasContents baseCanvasContents;
 
-		private EffectObject frontEffectObject;
+	private EffectObject frontEffectObject;
 
-		private EffectObject backEffectObject;
+	private EffectObject backEffectObject;
 
-		private List<FlMotion> outMotionList;
+	private List<FlMotion> outMotionList;
 
-		private int effectSkipSortOderKey;
+	private int effectSkipSortOderKey;
 
-		private bool isTapAndBackKeyLockFlag;
+	private bool isTapAndBackKeyLockFlag;
 
-		private const int columnMax = 2;
+	private const int columnMax = 2;
 
-		[SerializeField]
-		protected RawImageWithAlphaBlend modelViewImage;
+	[SerializeField]
+	protected RawImageWithAlphaBlend modelViewImage;
 
-		protected UnitDetailUnitShaderSettings growthWeaponShaderSetting;
+	protected UnitDetailUnitShaderSettings growthWeaponShaderSetting;
 
-		public void UpdateObjectsParameters()
-		{
-		}
+	public void UpdateObjectsParameters()
+	{
+	}
 
-		protected void SetupFlashCamera()
-		{
-		}
+	protected void SetupFlashCamera()
+	{
+	}
 
-		protected void SetUpRenderCamera()
-		{
-		}
+	protected void SetUpRenderCamera()
+	{
+	}
 
-		protected virtual void SetupCraftEffectData()
-		{
-		}
+	protected virtual void SetupCraftEffectData()
+	{
+	}
 
-		protected void ShowCraftEffect(bool isLimitBreak)
-		{
-		}
+	protected void ShowCraftEffect(bool isLimitBreak)
+	{
+	}
 
-		private void CreateWeaponModel()
-		{
-		}
+	private void CreateWeaponModel()
+	{
+	}
 
-		public void InitWeaponTransform(WeaponType weaponType)
-		{
-		}
+	public void InitWeaponTransform(WeaponType weaponType)
+	{
+	}
 
-		private IEnumerator StartAnimationDelay(FlMotion craftAnimeMotion, int matCount, int rarity)
-		{
-			return null;
-		}
+	private IEnumerator StartAnimationDelay(FlMotion craftAnimeMotion, int matCount, int rarity)
+	{
+		return null;
+	}
 
-		private IEnumerator StartHeaderAnimationDelay()
-		{
-			return null;
-		}
+	private IEnumerator StartHeaderAnimationDelay()
+	{
+		return null;
+	}
 
-		private void SetupAwakeEffect()
-		{
-		}
+	private void SetupAwakeEffect()
+	{
+	}
 
-		protected virtual void CloseCraftEffect()
-		{
-		}
+	protected virtual void CloseCraftEffect()
+	{
+	}
 
-		protected virtual bool PlayNextEffect(bool isBackKey = false)
-		{
-			return default(bool);
-		}
+	protected virtual bool PlayNextEffect(bool isBackKey = false)
+	{
+		return default(bool);
+	}
 
-		public static LimitBreakMotionLabel[] GetLimitBreakMotionLabels(int columnNum, int reminder)
-		{
-			return null;
-		}
+	public static LimitBreakMotionLabel[] GetLimitBreakMotionLabels(int columnNum, int reminder)
+	{
+		return null;
 	}
 }

@@ -1,23 +1,22 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateDashAttack : PlayerStateBase
 {
-	public class PlayerStateDashAttack : PlayerStateBase
+	private int forceCurrentCombo;
+
+	public override void OnStateEnter()
 	{
-		private int forceCurrentCombo;
+	}
 
-		public override void OnStateEnter()
-		{
-		}
+	public override void OnStateUpdate()
+	{
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
-
-		protected override bool CheckAttack(bool ignoreInput = false, [Optional] Action onReservedNextAttackAction)
-		{
-			return default(bool);
-		}
+	protected override bool CheckAttack(bool ignoreInput = false, [Optional] Action onReservedNextAttackAction)
+	{
+		return default(bool);
 	}
 }

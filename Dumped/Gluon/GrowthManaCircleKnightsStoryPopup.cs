@@ -5,35 +5,34 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleKnightsStoryPopup : CommonPopup
 {
-	public class GrowthManaCircleKnightsStoryPopup : CommonPopup
+	public Image icon;
+
+	public Text characterName;
+
+	public Text storyName;
+
+	public GameObject alertText;
+
+	public Action popAnimationEndedCallBack;
+
+	public static GrowthManaCircleKnightsStoryPopup Create()
 	{
-		public Image icon;
+		return null;
+	}
 
-		public Text characterName;
+	public void SetParameters(GrowthManaCircleModel model, UnitStoryElement element)
+	{
+	}
 
-		public Text storyName;
+	public void SetParameters(UnitStoryElement element, int characterId, int rarity, bool isTemporary)
+	{
+	}
 
-		public GameObject alertText;
-
-		public Action popAnimationEndedCallBack;
-
-		public static GrowthManaCircleKnightsStoryPopup Create()
-		{
-			return null;
-		}
-
-		public void SetParameters(GrowthManaCircleModel model, UnitStoryElement element)
-		{
-		}
-
-		public void SetParameters(UnitStoryElement element, int characterId, int rarity, bool isTemporary)
-		{
-		}
-
-		public override void StartShowAnimation([Optional] UnityEvent onCompleted)
-		{
-		}
+	public override void StartShowAnimation([Optional] UnityEvent onCompleted)
+	{
 	}
 }

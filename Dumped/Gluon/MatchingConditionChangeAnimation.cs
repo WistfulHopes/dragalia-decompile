@@ -2,40 +2,39 @@ using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingConditionChangeAnimation : MonoBehaviour
 {
-	public class MatchingConditionChangeAnimation : MonoBehaviour
+	private FlashPlayer flashPlayer;
+
+	private const string requireConditionChangeFlashPath = "Prefabs/OutGame/Matching/MatchingRoom/Flash/pf_MatchingConditionIcon";
+
+	private const string iconShaderPath = "FlashToUnity/uGUI/GraphicNormalEx";
+
+	public bool IsOn
 	{
-		private FlashPlayer flashPlayer;
-
-		private const string requireConditionChangeFlashPath = "Prefabs/OutGame/Matching/MatchingRoom/Flash/pf_MatchingConditionIcon";
-
-		private const string iconShaderPath = "FlashToUnity/uGUI/GraphicNormalEx";
-
-		public bool IsOn
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public void Initialize(FlashPlayer flashPlayer, Material srcMat, Transform parent, bool isOn)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public IEnumerator Play(float delay)
-		{
-			return null;
-		}
+	public void Initialize(FlashPlayer flashPlayer, Material srcMat, Transform parent, bool isOn)
+	{
+	}
 
-		private void Play(string label)
-		{
-		}
+	public IEnumerator Play(float delay)
+	{
+		return null;
+	}
+
+	private void Play(string label)
+	{
 	}
 }

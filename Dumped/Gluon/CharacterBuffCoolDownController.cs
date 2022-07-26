@@ -1,63 +1,62 @@
 using System;
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterBuffCoolDownController
 {
-	public class CharacterBuffCoolDownController
+	public class CoolDownData
 	{
-		public class CoolDownData
-		{
-			public float coolDown;
+		public float coolDown;
 
-			public float maxCoolDown;
+		public float maxCoolDown;
 
-			public CharacterBase owner;
+		public CharacterBase owner;
 
-			public Func<bool> onDelayApply;
+		public Func<bool> onDelayApply;
 
-			public int buffIconId;
+		public int buffIconId;
 
-			public float CoolDownRate => default(float);
-		}
+		public float CoolDownRate => default(float);
+	}
 
-		public Dictionary<CharacterBuffType, CoolDownData> buffCoolDownDictonary;
+	public Dictionary<CharacterBuffType, CoolDownData> buffCoolDownDictonary;
 
-		public void SetDelayApply(CharacterBuffType type, CharacterBase owner, int conditionId, float rate, Func<bool> onDelayApply)
-		{
-		}
+	public void SetDelayApply(CharacterBuffType type, CharacterBase owner, int conditionId, float rate, Func<bool> onDelayApply)
+	{
+	}
 
-		public void RegisterCoolDownForBuff(CharacterBuffType type, float coolDown)
-		{
-		}
+	public void RegisterCoolDownForBuff(CharacterBuffType type, float coolDown)
+	{
+	}
 
-		public void Reset()
-		{
-		}
+	public void Reset()
+	{
+	}
 
-		public bool IsCoolingDown(CharacterBuffType type)
-		{
-			return default(bool);
-		}
+	public bool IsCoolingDown(CharacterBuffType type)
+	{
+		return default(bool);
+	}
 
-		public CoolDownData GetCoolingDown(int buffIconId)
-		{
-			return null;
-		}
+	public CoolDownData GetCoolingDown(int buffIconId)
+	{
+		return null;
+	}
 
-		public void Update()
-		{
-		}
+	public void Update()
+	{
+	}
 
-		private void UpdateBuffCoolDown(float delta)
-		{
-		}
+	private void UpdateBuffCoolDown(float delta)
+	{
+	}
 
-		public void RemoveCoolDownForBuffType(CharacterBuffType type)
-		{
-		}
+	public void RemoveCoolDownForBuffType(CharacterBuffType type)
+	{
+	}
 
-		public void RemoveAllCoolDownBuffs()
-		{
-		}
+	public void RemoveAllCoolDownBuffs()
+	{
 	}
 }

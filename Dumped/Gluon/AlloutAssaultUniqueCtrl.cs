@@ -5,196 +5,197 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlloutAssaultUniqueCtrl : EnemyUniqueCtrl, ICollideCallback
 {
-	public class AlloutAssaultUniqueCtrl : EnemyUniqueCtrl, ICollideCallback
+	public enum EventType
 	{
-		public enum EventType
-		{
-			Eight,
-			Angel
-		}
+		Eight,
+		Angel,
+		X1stRe
+	}
 
-		public enum State
-		{
-			Init,
-			Idle,
-			Running,
-			Down,
-			Standup
-		}
+	public enum State
+	{
+		Init,
+		Idle,
+		Running,
+		Down,
+		Standup
+	}
 
-		private EventType _eventType;
+	private EventType _eventType;
 
-		private State _state;
+	private State _state;
 
-		[SerializeField]
-		private float _limit;
+	[SerializeField]
+	private float _limit;
 
-		[SerializeField]
-		private float _point;
+	[SerializeField]
+	private float _point;
 
-		private float _timer;
+	private float _limitForX;
 
-		private bool _isShowCutt;
+	private float _timer;
 
-		private bool _hasPlayed;
+	private bool _isShowCutt;
 
-		private bool _isCreatedUI;
+	private bool _hasPlayed;
 
-		private CollisionHitAttribute _hitAttribute;
+	private bool _isCreatedUI;
 
-		protected HitException _hitException;
+	private CollisionHitAttribute _hitAttribute;
 
-		private List<int> _listMenberId;
+	protected HitException _hitException;
 
-		private string[] _voiceLabel;
+	private List<int> _listMenberId;
 
-		private AudioPlayback _voice;
+	private string[] _voiceLabel;
 
-		private float _nextSendGaugeValueEventTimer;
+	private AudioPlayback _voice;
 
-		private static readonly float SendGaugeValueEventInterval;
+	private float _nextSendGaugeValueEventTimer;
 
-		public EventType eventType => default(EventType);
+	private static readonly float SendGaugeValueEventInterval;
 
-		public State state => default(State);
+	public EventType eventType => default(EventType);
 
-		public float rate => default(float);
+	public State state => default(State);
 
-		public bool isDisplayedBtn
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
+	public float rate => default(float);
 
-		public override void Initialize()
-		{
-		}
-
-		public void Setup(SetupAlloutAssaultData resource)
-		{
-		}
-
-		public void OnStart(CollisionHitAttribute hitAttr)
-		{
-		}
-
-		public override void FastUpdate()
-		{
-		}
-
-		private void Ready()
-		{
-		}
-
-		private void CreateUI()
-		{
-		}
-
-		public bool CheckDown()
+	public bool isDisplayedBtn
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public bool OnDown()
-		{
-			return default(bool);
-		}
-
-		public bool ProcStandup()
-		{
-			return default(bool);
-		}
-
-		public void OnDamage(CollisionHitAttribute hitAttr, int damage)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private bool CanAssaultCondition()
-		{
-			return default(bool);
-		}
+	public override void Initialize()
+	{
+	}
 
-		private bool CanAssaultCondition_ForEight()
-		{
-			return default(bool);
-		}
+	public void Setup(SetupAlloutAssaultData resource)
+	{
+	}
 
-		private bool CanAssaultCondition_ForAngel()
-		{
-			return default(bool);
-		}
+	public void OnStart(CollisionHitAttribute hitAttr)
+	{
+	}
 
-		public void OnBtnAssault()
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		public void OnEndCutScene()
-		{
-		}
+	private void Ready()
+	{
+	}
 
-		public void OnEndAlloutAssault()
-		{
-		}
+	private void CreateUI()
+	{
+	}
 
-		public override float GetAtkValue()
-		{
-			return default(float);
-		}
+	public bool CheckDown()
+	{
+		return default(bool);
+	}
 
-		public override float GetDefValue()
-		{
-			return default(float);
-		}
+	public bool OnDown()
+	{
+		return default(bool);
+	}
 
-		public void OnCollided(GameObject target, bool isPropagation)
-		{
-		}
+	private void UpdateSkillBtn()
+	{
+	}
 
-		public void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot)
-		{
-		}
+	public bool ProcStandup()
+	{
+		return default(bool);
+	}
 
-		public void OnNotCollided(CharacterBase chara)
-		{
-		}
+	public void OnDamage(CollisionHitAttribute hitAttr, int damage)
+	{
+	}
 
-		public bool IsExcept(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	private bool CanAssaultCondition()
+	{
+		return default(bool);
+	}
 
-		private bool IsEightMember(CharacterBase target)
-		{
-			return default(bool);
-		}
+	private bool CanAssaultCondition_ForEight()
+	{
+		return default(bool);
+	}
 
-		private void PlayReadyVoice()
-		{
-		}
+	public void OnBtnAssault()
+	{
+	}
 
-		private void PlayReadyVoice_Eight()
-		{
-		}
+	public void OnEndCutScene()
+	{
+	}
 
-		public void SendAlloutAssaultDown()
-		{
-		}
+	public void OnEndAlloutAssault()
+	{
+	}
 
-		public void SendAlloutAssaultDownGaugeValue()
-		{
-		}
+	public override float GetAtkValue()
+	{
+		return default(float);
+	}
 
-		public override void OnReceiveCharacterSpecialState(CharacterSpecialState recvEvent)
-		{
-		}
+	public override float GetDefValue()
+	{
+		return default(float);
+	}
+
+	public void OnCollided(GameObject target, bool isPropagation)
+	{
+	}
+
+	public void OnCollidedEffect(CommonObjectStatus from, CommonObjectStatus to, Vector3 pos, Quaternion rot)
+	{
+	}
+
+	public void OnNotCollided(CharacterBase chara)
+	{
+	}
+
+	public bool IsExcept(CharacterBase chara)
+	{
+		return default(bool);
+	}
+
+	private bool IsEightMember(CharacterBase target)
+	{
+		return default(bool);
+	}
+
+	private void PlayReadyVoice()
+	{
+	}
+
+	private void PlayReadyVoice_Eight()
+	{
+	}
+
+	public void SendAlloutAssaultDown()
+	{
+	}
+
+	public void SendAlloutAssaultDownGaugeValue()
+	{
+	}
+
+	public override void OnReceiveCharacterSpecialState(CharacterSpecialState recvEvent)
+	{
 	}
 }

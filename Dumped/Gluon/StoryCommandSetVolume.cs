@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandSetVolume : IStoryCommand
 {
-	[CommandName("set_volume")]
-	public class StoryCommandSetVolume : IStoryCommand
+	public void Start(float vol, float sec, string[] cueNames)
 	{
-		public void Start(float vol, float sec, string[] cueNames)
-		{
-		}
 	}
 }

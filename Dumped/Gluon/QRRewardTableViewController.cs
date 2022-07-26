@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class QRRewardTableViewController : QuestRewardTableViewController
 {
-	public class QRRewardTableViewController : QuestRewardTableViewController
+	protected override void LoadData()
 	{
-		protected override void LoadData()
-		{
-		}
 	}
 }

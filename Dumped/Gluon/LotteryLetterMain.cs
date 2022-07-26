@@ -2,27 +2,26 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class LotteryLetterMain : PageBase
 {
-	public class LotteryLetterMain : PageBase
+	public Button skipButton;
+
+	[SerializeField]
+	private GameObject tapToNextItem;
+
+	private Action onSkipButtonPlessed;
+
+	public void TapToNextItemEnable(bool isActive)
 	{
-		public Button skipButton;
+	}
 
-		[SerializeField]
-		private GameObject tapToNextItem;
+	public void SetSkipButtonAction(Action onSkip)
+	{
+	}
 
-		private Action onSkipButtonPlessed;
-
-		public void TapToNextItemEnable(bool isActive)
-		{
-		}
-
-		public void SetSkipButtonAction(Action onSkip)
-		{
-		}
-
-		public void OnSkipButtonPlessed()
-		{
-		}
+	public void OnSkipButtonPlessed()
+	{
 	}
 }

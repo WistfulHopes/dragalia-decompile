@@ -2,86 +2,85 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthWeaponMainCanvas : CraftEffectMainCanvas
 {
-	public class GrowthWeaponMainCanvas : CraftEffectMainCanvas
+	public TabBase weaponTypeTabBase;
+
+	public Text seriesTitle;
+
+	public Transform cellParentTransform;
+
+	public Button weaponBonusButton;
+
+	public Button weaponAbilityButton;
+
+	public DragEventScrollRect scrollRect;
+
+	public GameObject emptyWeaponTextObject;
+
+	public Badge[] weaponTypeGrowBadges;
+
+	[HideInInspector]
+	public GrowthWeaponScene scene;
+
+	[HideInInspector]
+	public int prevCraftTargetWeaponId;
+
+	private List<int> seriesWeaponIdList;
+
+	private const int totorialTargetWeaponId = 30139901;
+
+	protected override void Start()
 	{
-		public TabBase weaponTypeTabBase;
+	}
 
-		public Text seriesTitle;
+	public void ReloadList()
+	{
+	}
 
-		public Transform cellParentTransform;
+	public void UpdateUICanvas()
+	{
+	}
 
-		public Button weaponBonusButton;
+	public void OnAbilityButtonPressed()
+	{
+	}
 
-		public Button weaponAbilityButton;
+	public void OnBonusButtonPressed()
+	{
+	}
 
-		public DragEventScrollRect scrollRect;
+	public void ShowCraftPopup(int weaponId)
+	{
+	}
 
-		public GameObject emptyWeaponTextObject;
+	public void StartBlacksmithTutorial()
+	{
+	}
 
-		public Badge[] weaponTypeGrowBadges;
+	public void SetLockTutorialUI(bool isLock)
+	{
+	}
 
-		[HideInInspector]
-		public GrowthWeaponScene scene;
+	private void weaponTypeSelected(int index)
+	{
+	}
 
-		[HideInInspector]
-		public int prevCraftTargetWeaponId;
+	private void OnWeaponCellPressed(int weaponId)
+	{
+	}
 
-		private List<int> seriesWeaponIdList;
+	private void ShowConditionPopup(int weaponId)
+	{
+	}
 
-		private const int totorialTargetWeaponId = 30139901;
+	private void ShowTutorialPopup()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
-
-		public void ReloadList()
-		{
-		}
-
-		public void UpdateUICanvas()
-		{
-		}
-
-		public void OnAbilityButtonPressed()
-		{
-		}
-
-		public void OnBonusButtonPressed()
-		{
-		}
-
-		public void ShowCraftPopup(int weaponId)
-		{
-		}
-
-		public void StartBlacksmithTutorial()
-		{
-		}
-
-		public void SetLockTutorialUI(bool isLock)
-		{
-		}
-
-		private void weaponTypeSelected(int index)
-		{
-		}
-
-		private void OnWeaponCellPressed(int weaponId)
-		{
-		}
-
-		private void ShowConditionPopup(int weaponId)
-		{
-		}
-
-		private void ShowTutorialPopup()
-		{
-		}
-
-		public void SetWeaponTypeGrowBadge()
-		{
-		}
+	public void SetWeaponTypeGrowBadge()
+	{
 	}
 }

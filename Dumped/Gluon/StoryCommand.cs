@@ -1,16 +1,15 @@
 using System;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class StoryCommand
 {
-	[Serializable]
-	public class StoryCommand
-	{
-		public int row;
+	public int row;
 
-		public string command;
+	public string command;
 
-		public string[] args;
+	public string[] args;
 
-		public bool end;
-	}
+	public bool end;
 }

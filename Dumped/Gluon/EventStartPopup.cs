@@ -3,27 +3,26 @@ using System.Collections;
 using Gluon.Master;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventStartPopup : CommonPopup
 {
-	public class EventStartPopup : CommonPopup
+	public Image logoImage;
+
+	private EventDataElement data;
+
+	public static string playerPrefsKey;
+
+	public static IEnumerator CreateIfNeededAsync(Action<bool> onProcessEnd)
 	{
-		public Image logoImage;
+		return null;
+	}
 
-		private EventDataElement data;
+	private static void CreatePopup(EventDataElement data, Action<bool> onProcessEnd)
+	{
+	}
 
-		public static string playerPrefsKey;
-
-		public static IEnumerator CreateIfNeededAsync(Action<bool> onProcessEnd)
-		{
-			return null;
-		}
-
-		private static void CreatePopup(EventDataElement data, Action<bool> onProcessEnd)
-		{
-		}
-
-		public static void GoToEventScene(EventDataElement data)
-		{
-		}
+	public static void GoToEventScene(EventDataElement data)
+	{
 	}
 }

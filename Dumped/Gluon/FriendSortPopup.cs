@@ -2,114 +2,107 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FriendSortPopup : PopupBase
 {
-	public class FriendSortPopup : PopupBase
+	[SerializeField]
+	public TabBase tabController;
+
+	[SerializeField]
+	public Image filterAllElementalCheckImage;
+
+	public FriendSortSettingToggle[] filterEachElementToggleList;
+
+	[SerializeField]
+	public GameObject weaponTypeLine;
+
+	public Image filterAllWeaponTypeCheckImage;
+
+	public FriendSortSettingToggle[] filterEachWeaponTypeToggleList;
+
+	[SerializeField]
+	public FriendSortSettingToggle[] sortTypeToggleList;
+
+	public ToggleGroup sortTypeToggleGroup;
+
+	[SerializeField]
+	public FriendSortSettingToggle sortOrderAscendingToggle;
+
+	public FriendSortSettingToggle sortOrderDescendingToggle;
+
+	public ToggleGroup sortOrderToggleGroup;
+
+	[SerializeField]
+	public Text countText;
+
+	public Text preCountText;
+
+	[SerializeField]
+	protected Button closeButton;
+
+	private readonly FriendSortModel.Condition.SortCondition.SortType[] sortTypeListForFriend;
+
+	private FriendSortModel.Condition editingCondition;
+
+	private FriendListController controller;
+
+	private bool shouldIgnoreNoElement;
+
+	private List<FriendListCellData> cellDataList;
+
+	private const string prefabPath = "Prefabs/OutGame/Friend/Popup/FriendSortPopup";
+
+	public static FriendSortPopup Create(FriendListController controller, List<FriendListCellData> cellDataList, bool shouldClearFilter = false)
 	{
-		[SerializeField]
-		[Header("Tabs")]
-		public TabBase tabController;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Filter Elemental")]
-		public Image filterAllElementalCheckImage;
+	protected override void Start()
+	{
+	}
 
-		public FriendSortSettingToggle[] filterEachElementToggleList;
+	public void SetupByControllerAndType(FriendListController controller, List<FriendListCellData> cellDataList, bool shouldClearFilter = false)
+	{
+	}
 
-		[SerializeField]
-		[Header("Filter Weapon Type")]
-		public GameObject weaponTypeLine;
+	private void SetUIByCondition()
+	{
+	}
 
-		public Image filterAllWeaponTypeCheckImage;
+	public void SetCountText(int countNow, int countMax = -1)
+	{
+	}
 
-		public FriendSortSettingToggle[] filterEachWeaponTypeToggleList;
+	public void OnAllElementalFilterButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		[Header("Sort Type")]
-		public FriendSortSettingToggle[] sortTypeToggleList;
+	public void OnElementalFilterToggled(bool isOn, ElementalType elem)
+	{
+	}
 
-		public ToggleGroup sortTypeToggleGroup;
+	public void OnAllWeaponTypeFilterButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		[Header("Sort Order")]
-		public FriendSortSettingToggle sortOrderAscendingToggle;
+	public void OnWeaponTypeFilterToggled(bool isOn, WeaponType weaponType)
+	{
+	}
 
-		public FriendSortSettingToggle sortOrderDescendingToggle;
+	public void OnFilterConditionChanged()
+	{
+	}
 
-		public ToggleGroup sortOrderToggleGroup;
+	public void OnSortTypeToggled(FriendSortModel.Condition.SortCondition.SortType type)
+	{
+	}
 
-		[SerializeField]
-		[Header("Count")]
-		public Text countText;
+	public void OnSortOrderToggled(FriendSortModel.Condition.SortCondition.SortOrder order)
+	{
+	}
 
-		public Text preCountText;
-
-		[SerializeField]
-		protected Button closeButton;
-
-		private readonly FriendSortModel.Condition.SortCondition.SortType[] sortTypeListForFriend;
-
-		private FriendSortModel.Condition editingCondition;
-
-		private FriendListController controller;
-
-		private bool shouldIgnoreNoElement;
-
-		private List<FriendListCellData> cellDataList;
-
-		private const string prefabPath = "Prefabs/OutGame/Friend/Popup/FriendSortPopup";
-
-		public static FriendSortPopup Create(FriendListController controller, List<FriendListCellData> cellDataList, bool shouldClearFilter = false)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void SetupByControllerAndType(FriendListController controller, List<FriendListCellData> cellDataList, bool shouldClearFilter = false)
-		{
-		}
-
-		private void SetUIByCondition()
-		{
-		}
-
-		public void SetCountText(int countNow, int countMax = -1)
-		{
-		}
-
-		public void OnAllElementalFilterButtonPressed()
-		{
-		}
-
-		public void OnElementalFilterToggled(bool isOn, ElementalType elem)
-		{
-		}
-
-		public void OnAllWeaponTypeFilterButtonPressed()
-		{
-		}
-
-		public void OnWeaponTypeFilterToggled(bool isOn, WeaponType weaponType)
-		{
-		}
-
-		public void OnFilterConditionChanged()
-		{
-		}
-
-		public void OnSortTypeToggled(FriendSortModel.Condition.SortCondition.SortType type)
-		{
-		}
-
-		public void OnSortOrderToggled(FriendSortModel.Condition.SortCondition.SortOrder order)
-		{
-		}
-
-		public void OnOkButtonPressed()
-		{
-		}
+	public void OnOkButtonPressed()
+	{
 	}
 }

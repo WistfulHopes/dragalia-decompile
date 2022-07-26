@@ -1,65 +1,64 @@
 using Gluon.ActionData;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsSendSignal : ActionParts
 {
-	public class ActionPartsSendSignal : ActionParts
+	private readonly SendSignalData _partsData;
+
+	private bool _isStarted;
+
+	private bool _isForceEnd;
+
+	private RunActionIntParameter runActionIntParameter;
+
+	public ActionPartsSendSignal(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly SendSignalData _partsData;
+	}
 
-		private bool _isStarted;
+	public override void Clear()
+	{
+	}
 
-		private bool _isForceEnd;
+	public override int[] GetActionIdsForLoad()
+	{
+		return null;
+	}
 
-		private RunActionIntParameter runActionIntParameter;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public ActionPartsSendSignal(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public override int[] GetActionIdsForLoad()
-		{
-			return null;
-		}
+	private void SendSignal(bool on, bool isActionEnd = false)
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	public bool IsOnlyGuardCounter()
+	{
+		return default(bool);
+	}
 
-		protected override void OnStart()
-		{
-		}
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		private void SendSignal(bool on, bool isActionEnd = false)
-		{
-		}
-
-		public bool IsOnlyGuardCounter()
-		{
-			return default(bool);
-		}
-
-		public override RunActionParameterBase CreateRunActionParameter()
-		{
-			return null;
-		}
-
-		public override void SetRunActionParameter(RunActionParameterBase param)
-		{
-		}
-
-		public bool NeedInspirationOnInitialize()
-		{
-			return default(bool);
-		}
+	public bool NeedInspirationOnInitialize()
+	{
+		return default(bool);
 	}
 }

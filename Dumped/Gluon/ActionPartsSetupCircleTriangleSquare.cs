@@ -1,31 +1,30 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsSetupCircleTriangleSquare : ActionParts
 {
-	public class ActionPartsSetupCircleTriangleSquare : ActionParts
+	public enum OwnerType
 	{
-		public enum OwnerType
-		{
-			Center,
-			Sub
-		}
+		Center,
+		Sub
+	}
 
-		private readonly SetupCircleTriangleSquareData _partsData;
+	private readonly SetupCircleTriangleSquareData _partsData;
 
-		public ActionPartsSetupCircleTriangleSquare(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsSetupCircleTriangleSquare(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
 	}
 }

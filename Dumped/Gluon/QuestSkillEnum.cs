@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum QuestSkillEnum
 {
-	public enum QuestSkillEnum
-	{
-		NONE,
-		HOLYLIGHT,
-		DROPPRAYOBJECT,
-		RESERVE_02,
-		RESERVE_03
-	}
+	NONE,
+	HOLYLIGHT,
+	DROPPRAYOBJECT,
+	RESERVE_02,
+	RESERVE_03
 }

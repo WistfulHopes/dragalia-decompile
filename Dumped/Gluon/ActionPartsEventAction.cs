@@ -2,43 +2,42 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsEventAction : ActionParts
 {
-	public class ActionPartsEventAction : ActionParts
+	private readonly EventActionData _partsData;
+
+	private UnityEvent _resEvent;
+
+	private RunActionIntParameter _runActionParam;
+
+	public ActionPartsEventAction(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly EventActionData _partsData;
+	}
 
-		private UnityEvent _resEvent;
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		private RunActionIntParameter _runActionParam;
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		public ActionPartsEventAction(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override RunActionParameterBase CreateRunActionParameter()
-		{
-			return null;
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		public override void SetRunActionParameter(RunActionParameterBase param)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		protected override void OnFinish()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
-
-		private void OnResponceEvent()
-		{
-		}
+	private void OnResponceEvent()
+	{
 	}
 }

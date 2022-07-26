@@ -1,70 +1,69 @@
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PlayerEventSender : EventSenderBase
 {
-	public class PlayerEventSender : EventSenderBase
+	private CharacterSelector selector;
+
+	private bool isSyncChargeRequested;
+
+	private float lastSendChargePullLength;
+
+	private Vector3 lastSendChargeMarkerPos;
+
+	private float lastSendChargeRotation;
+
+	private int lastSendChangeMode;
+
+	private TransformCharacter transformCharacter;
+
+	private Charge charge;
+
+	public override CharacterBase character => null;
+
+	public PlayerCharacter player => null;
+
+	public override void Initialize(CharacterId characterId, bool useMoveBundle)
 	{
-		private CharacterSelector selector;
+	}
 
-		private bool isSyncChargeRequested;
+	private void OnChangeCharacter(CharacterSelector.Type type, bool isFinishDragon)
+	{
+	}
 
-		private float lastSendChargePullLength;
+	protected override void LateUpdate()
+	{
+	}
 
-		private Vector3 lastSendChargeMarkerPos;
+	protected override void UpdateSkillState()
+	{
+	}
 
-		private float lastSendChargeRotation;
+	protected override void UpdateChargeState()
+	{
+	}
 
-		private int lastSendChangeMode;
+	public void RequestChargeEvent()
+	{
+	}
 
-		private TransformCharacter transformCharacter;
+	private Charge CreateChargeEvent()
+	{
+		return null;
+	}
 
-		private Charge charge;
+	private bool CheckSendCharge(Charge charge)
+	{
+		return default(bool);
+	}
 
-		public override CharacterBase character => null;
+	protected void SendChargeEvent(Charge charge)
+	{
+	}
 
-		public PlayerCharacter player => null;
-
-		public override void Initialize(CharacterId characterId, bool useMoveBundle)
-		{
-		}
-
-		private void OnChangeCharacter(CharacterSelector.Type type, bool isFinishDragon)
-		{
-		}
-
-		protected override void LateUpdate()
-		{
-		}
-
-		protected override void UpdateSkillState()
-		{
-		}
-
-		protected override void UpdateChargeState()
-		{
-		}
-
-		public void RequestChargeEvent()
-		{
-		}
-
-		private Charge CreateChargeEvent()
-		{
-			return null;
-		}
-
-		private bool CheckSendCharge(Charge charge)
-		{
-			return default(bool);
-		}
-
-		protected void SendChargeEvent(Charge charge)
-		{
-		}
-
-		private void UpdateSendChangeMode()
-		{
-		}
+	private void UpdateSendChangeMode()
+	{
 	}
 }

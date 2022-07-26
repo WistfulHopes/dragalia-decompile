@@ -1,42 +1,43 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsOperateCutt : ActionParts
 {
-	public class ActionPartsOperateCutt : ActionParts
+	public enum OperateType
 	{
-		public enum OperateType
-		{
-			AbortCutt,
-			PlayCutt
-		}
+		AbortCutt,
+		PlayCutt
+	}
 
-		private readonly OperateCuttData _partsData;
+	private readonly OperateCuttData _partsData;
 
-		private bool _hasFinishProc;
+	private bool _isOnPlayed;
 
-		public ActionPartsOperateCutt(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	private bool _hasFinishProc;
 
-		protected override void OnFinish()
-		{
-		}
+	public ActionPartsOperateCutt(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void ProcFinish()
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
+
+	private void ProcFinish()
+	{
 	}
 }

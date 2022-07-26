@@ -1,10 +1,9 @@
-namespace Cutt
+namespace Cutt;
+
+public enum CuttCameraInterpolateType
 {
-	public enum CuttCameraInterpolateType
-	{
-		None,
-		Linear,
-		Curve,
-		Ease
-	}
+	None,
+	Linear,
+	Curve,
+	Ease
 }

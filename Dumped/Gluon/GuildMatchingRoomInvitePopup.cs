@@ -1,44 +1,43 @@
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildMatchingRoomInvitePopup : PopupBase
 {
-	public class GuildMatchingRoomInvitePopup : PopupBase
+	[SerializeField]
+	private QuestResultMultiFriendList playerInfo;
+
+	private MatchingService.Player player;
+
+	private CommonFriendListCellData commonFriendListCellData;
+
+	public static void Create(ulong viewerId, AtgenSupportUserDataDetail support, bool isGuildPopup = true)
 	{
-		[SerializeField]
-		private QuestResultMultiFriendList playerInfo;
+	}
 
-		private MatchingService.Player player;
+	private void SetPlayerInfo(MatchingService.Player player, AtgenSupportUserDataDetail support)
+	{
+	}
 
-		private CommonFriendListCellData commonFriendListCellData;
+	private void onRequestButton(int index)
+	{
+	}
 
-		public static void Create(ulong viewerId, AtgenSupportUserDataDetail support, bool isGuildPopup = true)
-		{
-		}
+	private CommonFriendListCellData GetCommonFriendListCellData(UserSupportList support, bool isFriend, bool isFriendApplying)
+	{
+		return null;
+	}
 
-		private void SetPlayerInfo(MatchingService.Player player, AtgenSupportUserDataDetail support)
-		{
-		}
+	private void OnClose(bool onClose)
+	{
+	}
 
-		private void onRequestButton(int index)
-		{
-		}
+	private void OnInviteButton(int index)
+	{
+	}
 
-		private CommonFriendListCellData GetCommonFriendListCellData(UserSupportList support, bool isFriend, bool isFriendApplying)
-		{
-			return null;
-		}
-
-		private void OnClose(bool onClose)
-		{
-		}
-
-		private void OnInviteButton(int index)
-		{
-		}
-
-		public static void CreateErrorPopup()
-		{
-		}
+	public static void CreateErrorPopup()
+	{
 	}
 }

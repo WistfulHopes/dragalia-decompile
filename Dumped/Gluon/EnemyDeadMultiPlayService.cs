@@ -1,39 +1,38 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyDeadMultiPlayService
 {
-	public class EnemyDeadMultiPlayService
+	private bool _isDirty;
+
+	private float _nextSendEventTimer;
+
+	private static readonly float SendEventInterval;
+
+	private EnemyDead _tempSendEvent;
+
+	public void PostInitializeEnemy(EnemyCharacter enemy)
 	{
-		private bool _isDirty;
+	}
 
-		private float _nextSendEventTimer;
+	public void UpdateSendEvent()
+	{
+	}
 
-		private static readonly float SendEventInterval;
+	public void OnEnemyDead(EnemyCharacter deadEnemy, DeadReason reason)
+	{
+	}
 
-		private EnemyDead _tempSendEvent;
+	private void NotifyEnemyDead(EnemyCharacter deadEnemy)
+	{
+	}
 
-		public void PostInitializeEnemy(EnemyCharacter enemy)
-		{
-		}
+	private void SendEnemyDead()
+	{
+	}
 
-		public void UpdateSendEvent()
-		{
-		}
-
-		public void OnEnemyDead(EnemyCharacter deadEnemy, DeadReason reason)
-		{
-		}
-
-		private void NotifyEnemyDead(EnemyCharacter deadEnemy)
-		{
-		}
-
-		private void SendEnemyDead()
-		{
-		}
-
-		private void SetDirty()
-		{
-		}
+	private void SetDirty()
+	{
 	}
 }

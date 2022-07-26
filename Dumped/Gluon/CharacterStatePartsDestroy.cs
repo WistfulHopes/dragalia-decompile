@@ -1,22 +1,21 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStatePartsDestroy : CharacterStateBase
 {
-	public class CharacterStatePartsDestroy : CharacterStateBase
+	private int currActionId;
+
+	public int actionId
 	{
-		private int currActionId;
-
-		public int actionId
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
 		}
-
-		protected override void OnStateEnter_Internal()
+		set
 		{
 		}
+	}
+
+	protected override void OnStateEnter_Internal()
+	{
 	}
 }

@@ -3,78 +3,77 @@ using System.Runtime.CompilerServices;
 using Cute.Cri;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CutSceneCtrl : SingletonMonoBehaviour<CutSceneCtrl>
 {
-	public class CutSceneCtrl : SingletonMonoBehaviour<CutSceneCtrl>
+	private GameObject cutSceneObject;
+
+	private CutSceneInitializer initializer;
+
+	private List<AudioPlayback> playbackList;
+
+	public bool playing
 	{
-		private GameObject cutSceneObject;
-
-		private CutSceneInitializer initializer;
-
-		private List<AudioPlayback> playbackList;
-
-		public bool playing
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public string cutSceneName
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		protected override void Awake()
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
-
-		public void LoadCutScene(string cutSceneName)
-		{
-		}
-
-		public bool CutSceneInitialized()
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public void ReleaseCutScene()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void PlayCut(string cutName)
+	public string cutSceneName
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool IsPlaying()
-		{
-			return default(bool);
-		}
+	protected override void Awake()
+	{
+	}
 
-		public void PlaySound(string cueName)
-		{
-		}
+	protected override void OnDestroy()
+	{
+	}
 
-		public void StopSound()
-		{
-		}
+	public void LoadCutScene(string cutSceneName)
+	{
+	}
+
+	public bool CutSceneInitialized()
+	{
+		return default(bool);
+	}
+
+	public void ReleaseCutScene()
+	{
+	}
+
+	public void PlayCut(string cutName)
+	{
+	}
+
+	public bool IsPlaying()
+	{
+		return default(bool);
+	}
+
+	public void PlaySound(string cueName)
+	{
+	}
+
+	public void StopSound()
+	{
 	}
 }

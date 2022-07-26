@@ -1,8 +1,7 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+public class DoNotGenAttribute : Attribute
 {
-	public class DoNotGenAttribute : Attribute
-	{
-	}
 }

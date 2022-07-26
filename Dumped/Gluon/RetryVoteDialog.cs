@@ -1,128 +1,135 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class RetryVoteDialog : InGameDialogBase
 {
-	public class RetryVoteDialog : InGameDialogBase
+	public enum VoteState
 	{
-		public enum VoteState
+		Waiting,
+		Accepted,
+		Denied,
+		Absence,
+		Finish
+	}
+
+	[SerializeField]
+	private RectTransform _adjustRt;
+
+	[SerializeField]
+	private Button _retryButton;
+
+	[SerializeField]
+	private Button _cancelButton;
+
+	[SerializeField]
+	private Image _retryButtonBgImage;
+
+	[SerializeField]
+	private Image _cancelButtonBgImage;
+
+	[SerializeField]
+	private Text _retryButtonText;
+
+	[SerializeField]
+	private Text _cancelButtonText;
+
+	[SerializeField]
+	private InGameGaugeUI _timeGauge;
+
+	[SerializeField]
+	private Image[] _voteImage;
+
+	[SerializeField]
+	private Color32[] _voteStateColor;
+
+	[SerializeField]
+	private Sprite _disableButtonBgImage;
+
+	private VisibleUIObject _rootVisible;
+
+	private int _actorIndex;
+
+	private VoteState _voteState;
+
+	private MultiPlayRetryVoteModel _retryVoteModel;
+
+	private bool _isOpenRequested;
+
+	public bool IsOpenRequested
+	{
+		get
 		{
-			Waiting,
-			Accepted,
-			Denied,
-			Absence,
-			Finish
+			return default(bool);
 		}
-
-		[SerializeField]
-		[Header("components")]
-		private RectTransform _adjustRt;
-
-		[SerializeField]
-		private Button _retryButton;
-
-		[SerializeField]
-		private Button _cancelButton;
-
-		[SerializeField]
-		private Image _retryButtonBgImage;
-
-		[SerializeField]
-		private Image _cancelButtonBgImage;
-
-		[SerializeField]
-		private Text _retryButtonText;
-
-		[SerializeField]
-		private Text _cancelButtonText;
-
-		[SerializeField]
-		private InGameGaugeUI _timeGauge;
-
-		[SerializeField]
-		private Image[] _voteImage;
-
-		[SerializeField]
-		[Header("parameter")]
-		private Color32[] _voteStateColor;
-
-		[SerializeField]
-		[Header("resource")]
-		private Sprite _disableButtonBgImage;
-
-		private VisibleUIObject _rootVisible;
-
-		private int _actorIndex;
-
-		private VoteState _voteState;
-
-		private MultiPlayRetryVoteModel _retryVoteModel;
-
-		private bool _isOpenRequested;
-
-		public static RetryVoteDialog Create(GameObject parent)
-		{
-			return null;
-		}
-
-		public void Initialize()
+		set
 		{
 		}
+	}
 
-		private void Update()
-		{
-		}
+	public static RetryVoteDialog Create(GameObject parent)
+	{
+		return null;
+	}
 
-		private void SetActive(ref RectTransform rt, bool isActive)
-		{
-		}
+	public void Initialize()
+	{
+	}
 
-		private void UpdateVoteIcon()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		public void RequestOpen()
-		{
-		}
+	private void SetActive(ref RectTransform rt, bool isActive)
+	{
+	}
 
-		public void Open()
-		{
-		}
+	private void UpdateVoteIcon()
+	{
+	}
 
-		public void Close(bool isPlayCloseSE = false)
-		{
-		}
+	public void RequestOpen()
+	{
+	}
 
-		protected override void SetEnableButtons(bool b)
-		{
-		}
+	public void Open()
+	{
+	}
 
-		public void OnRetryButtonPressed()
-		{
-		}
+	public void Close(bool isPlayCloseSE = false)
+	{
+	}
 
-		private void ExecRetryButtonPressed(bool force = false)
-		{
-		}
+	protected override void SetEnableButtons(bool b)
+	{
+	}
 
-		public void OnCancelButtonPressed()
-		{
-		}
+	public void OnRetryButtonPressed()
+	{
+	}
 
-		private void ExecCancelButtonPressed()
-		{
-		}
+	private void ExecRetryButtonPressed(bool force = false)
+	{
+	}
 
-		private void DisableButtons()
-		{
-		}
+	public void OnCancelButtonPressed()
+	{
+	}
 
-		public void SetVoteIconColor(int index, VoteState state)
-		{
-		}
+	private void ExecCancelButtonPressed()
+	{
+	}
 
-		public void SetTimeRate(float rate, bool immediate = false)
-		{
-		}
+	private void DisableButtons()
+	{
+	}
+
+	public void SetVoteIconColor(int index, VoteState state)
+	{
+	}
+
+	public void SetTimeRate(float rate, bool immediate = false)
+	{
 	}
 }

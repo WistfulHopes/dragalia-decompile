@@ -1,11 +1,10 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EdgeToEdgeBottomUI : MonoBehaviour
 {
-	public class EdgeToEdgeBottomUI : MonoBehaviour
+	private void Awake()
 	{
-		private void Awake()
-		{
-		}
 	}
 }

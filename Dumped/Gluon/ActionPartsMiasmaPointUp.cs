@@ -1,17 +1,16 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsMiasmaPointUp : ActionParts
 {
-	public class ActionPartsMiasmaPointUp : ActionParts
+	private readonly MiasmaPointUpData _partsData;
+
+	public ActionPartsMiasmaPointUp(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly MiasmaPointUpData _partsData;
+	}
 
-		public ActionPartsMiasmaPointUp(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

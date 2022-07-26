@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class GrowthWeaponAbilitySelectPopupListCell : CommonIconListCell
 {
-	public class GrowthWeaponAbilitySelectPopupListCell : CommonIconListCell
+	public override void UpdateContent(CommonIconListCellData data)
 	{
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
 	}
 }

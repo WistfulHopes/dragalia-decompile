@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum ShowTiming
 {
-	public enum ShowTiming
-	{
-		NONE,
-		ENTRY,
-		ACTION_PARTS
-	}
+	NONE,
+	ENTRY,
+	ACTION_PARTS
 }

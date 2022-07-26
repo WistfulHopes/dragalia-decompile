@@ -2,30 +2,29 @@ using System;
 using System.Collections.Generic;
 using Gluon.Mission.ListView;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopCommonMissionIcon : MissionTableViewCell
 {
-	public class ShopCommonMissionIcon : MissionTableViewCell
+	private MissionTableViewData data;
+
+	private static List<MissionTableViewData> specialMissionDataList;
+
+	public Action<MissionTableViewData> onChallengeButtonCallback;
+
+	public static void LoadAllSpecialMissions(Action onDone)
 	{
-		private MissionTableViewData data;
+	}
 
-		private static List<MissionTableViewData> specialMissionDataList;
+	public void SetupByShopContentData(ShopTradeProductData.CommonShopItemContentData contentData)
+	{
+	}
 
-		public Action<MissionTableViewData> onChallengeButtonCallback;
+	public void OnIconPressed()
+	{
+	}
 
-		public static void LoadAllSpecialMissions(Action onDone)
-		{
-		}
-
-		public void SetupByShopContentData(ShopTradeProductData.CommonShopItemContentData contentData)
-		{
-		}
-
-		public void OnIconPressed()
-		{
-		}
-
-		private void OpenDetailPopup()
-		{
-		}
+	private void OpenDetailPopup()
+	{
 	}
 }

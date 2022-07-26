@@ -3,100 +3,95 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildMemberTableViewCell : TableViewCell<GuildModel.MemberInfo>
 {
-	public class GuildMemberTableViewCell : TableViewCell<GuildModel.MemberInfo>
+	[SerializeField]
+	public CommonIcon icon;
+
+	public Text levelText;
+
+	public Text playerNameText;
+
+	public Text lastLoginText;
+
+	public Text maxPowerText;
+
+	[SerializeField]
+	public GameObject masterGO;
+
+	public GameObject subMasterGO;
+
+	[SerializeField]
+	public GameObject adminButtonGO;
+
+	public GameObject approveButtonGO;
+
+	public GameObject rejectButtonGO;
+
+	public GameObject cancelInviteButtonGO;
+
+	[SerializeField]
+	public GameObject waitingInviteGO;
+
+	private GuildMemberTableViewController _controller;
+
+	public const string prefabPath = "Prefabs/OutGame/Guild/GuildMemberTableViewCell";
+
+	public GuildMemberTableViewController controller
 	{
-		[SerializeField]
-		[Header("Info")]
-		public CommonIcon icon;
-
-		public Text levelText;
-
-		public Text playerNameText;
-
-		public Text lastLoginText;
-
-		public Text maxPowerText;
-
-		[SerializeField]
-		[Header("Occupation")]
-		public GameObject masterGO;
-
-		public GameObject subMasterGO;
-
-		[SerializeField]
-		[Header("Button")]
-		public GameObject adminButtonGO;
-
-		public GameObject approveButtonGO;
-
-		public GameObject rejectButtonGO;
-
-		public GameObject cancelInviteButtonGO;
-
-		[SerializeField]
-		[Header("WaitingInviteMessage")]
-		public GameObject waitingInviteGO;
-
-		private GuildMemberTableViewController _controller;
-
-		public const string prefabPath = "Prefabs/OutGame/Guild/GuildMemberTableViewCell";
-
-		public GuildMemberTableViewController controller
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return null;
 		}
-
-		public Action onRequestLatestData
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public override void UpdateContent(GuildModel.MemberInfo data)
+		set
 		{
 		}
+	}
 
-		private void ApplyOnlineStatus()
+	public Action onRequestLatestData
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void OnControllerAssigned()
-		{
-		}
+	public override void UpdateContent(GuildModel.MemberInfo data)
+	{
+	}
 
-		public void OnAdminButtonPressed()
-		{
-		}
+	private void ApplyOnlineStatus()
+	{
+	}
 
-		public void OnApproveButtonPressed()
-		{
-		}
+	private void OnControllerAssigned()
+	{
+	}
 
-		public void OnRejectButtonPressed()
-		{
-		}
+	public void OnAdminButtonPressed()
+	{
+	}
 
-		public void OnCancelInviteButtonPressed()
-		{
-		}
+	public void OnApproveButtonPressed()
+	{
+	}
 
-		public void OnIconPressed()
-		{
-		}
+	public void OnRejectButtonPressed()
+	{
+	}
+
+	public void OnCancelInviteButtonPressed()
+	{
+	}
+
+	public void OnIconPressed()
+	{
 	}
 }

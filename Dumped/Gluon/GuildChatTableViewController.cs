@@ -3,86 +3,85 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildChatTableViewController : TableViewController<GuildChatModel.ChatTableViewData>
 {
-	public class GuildChatTableViewController : TableViewController<GuildChatModel.ChatTableViewData>
+	public Transform invisibleNode;
+
+	private GuildChatTableViewCell sizingCell;
+
+	private Dictionary<Guid, Vector2> cellHeightTable;
+
+	private Coroutine updateSizeCoroutine;
+
+	private Coroutine updateWaitAnimationCoroutine;
+
+	private int defaultCreateCellCount;
+
+	private readonly Vector2 scrollToBottomOffset;
+
+	private const float cellApperSpace = 10f;
+
+	protected override void Awake()
 	{
-		public Transform invisibleNode;
+	}
 
-		private GuildChatTableViewCell sizingCell;
+	private void CreateDummyCells(int createCount)
+	{
+	}
 
-		private Dictionary<Guid, Vector2> cellHeightTable;
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		private Coroutine updateSizeCoroutine;
+	public void UpdateByData(List<GuildChatModel.ChatTableViewData> data, bool isNew, bool isChatoBottom, bool isFirst, Action onFinshed)
+	{
+	}
 
-		private Coroutine updateWaitAnimationCoroutine;
+	private IEnumerator UpdateByDataCoroutine(List<GuildChatModel.ChatTableViewData> dataList, bool isNew, bool isChatoBottom, bool isFirst, Action onFinshed)
+	{
+		return null;
+	}
 
-		private int defaultCreateCellCount;
+	private void UpdateScroll(bool isNew, bool isChatoBottom, bool isFirst)
+	{
+	}
 
-		private readonly Vector2 scrollToBottomOffset;
+	public float GetHeightFromBottomToHere()
+	{
+		return default(float);
+	}
 
-		private const float cellApperSpace = 10f;
+	public bool IsViewingLatestChat(float space)
+	{
+		return default(bool);
+	}
 
-		protected override void Awake()
-		{
-		}
+	public void HideAnimationWaitCell()
+	{
+	}
 
-		private void CreateDummyCells(int createCount)
-		{
-		}
+	private IEnumerator UpdateBottomChatCell()
+	{
+		return null;
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
+	private bool IsExistHideData()
+	{
+		return default(bool);
+	}
 
-		public void UpdateByData(List<GuildChatModel.ChatTableViewData> data, bool isNew, bool isChatoBottom, bool isFirst, Action onFinshed)
-		{
-		}
+	private void CheckAllCellHideState()
+	{
+	}
 
-		private IEnumerator UpdateByDataCoroutine(List<GuildChatModel.ChatTableViewData> dataList, bool isNew, bool isChatoBottom, bool isFirst, Action onFinshed)
-		{
-			return null;
-		}
+	private void CheckCellHideState(GuildChatTableViewCell cell, float limit)
+	{
+	}
 
-		private void UpdateScroll(bool isNew, bool isChatoBottom, bool isFirst)
-		{
-		}
-
-		public float GetHeightFromBottomToHere()
-		{
-			return default(float);
-		}
-
-		public bool IsViewingLatestChat(float space)
-		{
-			return default(bool);
-		}
-
-		public void HideAnimationWaitCell()
-		{
-		}
-
-		private IEnumerator UpdateBottomChatCell()
-		{
-			return null;
-		}
-
-		private bool IsExistHideData()
-		{
-			return default(bool);
-		}
-
-		private void CheckAllCellHideState()
-		{
-		}
-
-		private void CheckCellHideState(GuildChatTableViewCell cell, float limit)
-		{
-		}
-
-		private void ResetHideCell()
-		{
-		}
+	private void ResetHideCell()
+	{
 	}
 }

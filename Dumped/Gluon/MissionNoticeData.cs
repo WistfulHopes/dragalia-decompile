@@ -1,57 +1,56 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class MissionNoticeData : MessageDataBase
 {
-	public class MissionNoticeData : MessageDataBase
+	public MissionNoticeType type;
+
+	public int id;
+
+	public int sortId;
+
+	public MissionNoticeData(MissionDrillDataElement element, int missionId)
 	{
-		public MissionNoticeType type;
+	}
 
-		public int id;
+	public MissionNoticeData(MissionBeginnerDataElement element, int missionId)
+	{
+	}
 
-		public int sortId;
+	public MissionNoticeData(MissionPeriodDataElement element, int missionId)
+	{
+	}
 
-		public MissionNoticeData(MissionDrillDataElement element, int missionId)
-		{
-		}
+	public MissionNoticeData(MissionDailyDataElement element, int missionId)
+	{
+	}
 
-		public MissionNoticeData(MissionBeginnerDataElement element, int missionId)
-		{
-		}
+	public MissionNoticeData(MissionNormalDataElement element, int missionId)
+	{
+	}
 
-		public MissionNoticeData(MissionPeriodDataElement element, int missionId)
-		{
-		}
+	public MissionNoticeData(MissionMainStoryDataElement element, int missionId)
+	{
+	}
 
-		public MissionNoticeData(MissionDailyDataElement element, int missionId)
-		{
-		}
+	public MissionNoticeData(MissionMemoryEventDataElement element, int missionId)
+	{
+	}
 
-		public MissionNoticeData(MissionNormalDataElement element, int missionId)
-		{
-		}
+	public MissionNoticeData(MissionAlbumDataElement element, int missionId)
+	{
+	}
 
-		public MissionNoticeData(MissionMainStoryDataElement element, int missionId)
-		{
-		}
+	public MissionNoticeData(MissionSpecialDataElement element, int missionId)
+	{
+	}
 
-		public MissionNoticeData(MissionMemoryEventDataElement element, int missionId)
-		{
-		}
+	private void Init(MissionNoticeType type, int id, int sortId)
+	{
+	}
 
-		public MissionNoticeData(MissionAlbumDataElement element, int missionId)
-		{
-		}
-
-		public MissionNoticeData(MissionSpecialDataElement element, int missionId)
-		{
-		}
-
-		private void Init(MissionNoticeType type, int id, int sortId)
-		{
-		}
-
-		public override void ReloadText()
-		{
-		}
+	public override void ReloadText()
+	{
 	}
 }

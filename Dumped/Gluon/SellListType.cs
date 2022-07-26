@@ -1,12 +1,11 @@
-namespace Gluon
+namespace Gluon;
+
+public enum SellListType
 {
-	public enum SellListType
-	{
-		None,
-		Chara,
-		Weapon,
-		Amulet,
-		Dragon,
-		Talisman
-	}
+	None,
+	Chara,
+	Weapon,
+	Amulet,
+	Dragon,
+	Talisman
 }

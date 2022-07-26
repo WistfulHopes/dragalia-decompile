@@ -2,71 +2,68 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestFailedResultScene : SceneBase
 {
-	public class QuestFailedResultScene : SceneBase
+	[SerializeField]
+	private GameObject httpGreenLight;
+
+	[SerializeField]
+	private Transform topNode;
+
+	[SerializeField]
+	private Image questBg;
+
+	[SerializeField]
+	private Image uiBackGround;
+
+	public Canvas sceneCanvas;
+
+	[SerializeField]
+	public Camera mainCamera;
+
+	private QuestFailedResultTopPage topPage;
+
+	private EventKindType eventKindType;
+
+	private int eventViewType;
+
+	private IEnumerator Start()
 	{
-		[SerializeField]
-		[Header("HttpGreenLight")]
-		private GameObject httpGreenLight;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Nodes")]
-		private Transform topNode;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		[SerializeField]
-		private Image questBg;
+	private void OnInitReadyRequestHttp()
+	{
+	}
 
-		[SerializeField]
-		private Image uiBackGround;
+	private void OnEnterScene()
+	{
+	}
 
-		public Canvas sceneCanvas;
+	private IEnumerator OnEnterSceneCoroutine()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		public Camera mainCamera;
+	public void LoadTopView()
+	{
+	}
 
-		private QuestFailedResultTopPage topPage;
+	public void LoadNextScene(string nextSceneName)
+	{
+	}
 
-		private EventKindType eventKindType;
+	private void OnDestroy()
+	{
+	}
 
-		private int eventViewType;
-
-		private IEnumerator Start()
-		{
-			return null;
-		}
-
-		private void OnPrevSceneExitDone()
-		{
-		}
-
-		private void OnInitReadyRequestHttp()
-		{
-		}
-
-		private void OnEnterScene()
-		{
-		}
-
-		private IEnumerator OnEnterSceneCoroutine()
-		{
-			return null;
-		}
-
-		public void LoadTopView()
-		{
-		}
-
-		public void LoadNextScene(string nextSceneName)
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public override void OnBeforeLeaving()
-		{
-		}
+	public override void OnBeforeLeaving()
+	{
 	}
 }

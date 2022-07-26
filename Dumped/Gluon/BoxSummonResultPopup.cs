@@ -2,93 +2,92 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BoxSummonResultPopup : PopupBase
 {
-	public class BoxSummonResultPopup : PopupBase
+	public class BoxSummonResultData
 	{
-		public class BoxSummonResultData
-		{
-			public int entityId;
+		public int entityId;
 
-			public GiftType entityType;
+		public GiftType entityType;
 
-			public int quantity;
+		public int quantity;
 
-			public int count;
+		public int count;
 
-			public BoxSummonResultData(int entity_id, int entity_type, int entity_quantity, int count)
-			{
-			}
-		}
-
-		public class BoxSummonResultPickUpData
-		{
-			public int entityId;
-
-			public GiftType entityType;
-
-			public int quantity;
-
-			public int count;
-
-			public int pickupItemState;
-
-			public int twoStepId;
-
-			public BoxSummonResultPickUpData(int entity_id, int entity_type, int entity_quantity, int count, int pick, int two)
-			{
-			}
-		}
-
-		[SerializeField]
-		private GameObject pickupItemsObj;
-
-		[SerializeField]
-		private Text summonObtainedText;
-
-		[SerializeField]
-		private GameObject rewardListContent;
-
-		[SerializeField]
-		private GameObject mainRewardBase;
-
-		[SerializeField]
-		private GameObject mainRewardItemTemplate;
-
-		[SerializeField]
-		private GameObject rewardLineTemplate;
-
-		private List<GameObject> rewardIconInstances;
-
-		private EventQuestPageBase currentPage;
-
-		public static BoxSummonResultPopup Create()
-		{
-			return null;
-		}
-
-		private void OnEnable()
+		public BoxSummonResultData(int entity_id, int entity_type, int entity_quantity, int count)
 		{
 		}
+	}
 
-		protected override void OnDestroy()
+	public class BoxSummonResultPickUpData
+	{
+		public int entityId;
+
+		public GiftType entityType;
+
+		public int quantity;
+
+		public int count;
+
+		public int pickupItemState;
+
+		public int twoStepId;
+
+		public BoxSummonResultPickUpData(int entity_id, int entity_type, int entity_quantity, int count, int pick, int two)
 		{
 		}
+	}
 
-		public void SetCurrentPage(EventQuestPageBase page)
-		{
-		}
+	[SerializeField]
+	private GameObject pickupItemsObj;
 
-		private void SetupContents()
-		{
-		}
+	[SerializeField]
+	private Text summonObtainedText;
 
-		private void TeardownContents()
-		{
-		}
+	[SerializeField]
+	private GameObject rewardListContent;
 
-		public void OnCloseButton()
-		{
-		}
+	[SerializeField]
+	private GameObject mainRewardBase;
+
+	[SerializeField]
+	private GameObject mainRewardItemTemplate;
+
+	[SerializeField]
+	private GameObject rewardLineTemplate;
+
+	private List<GameObject> rewardIconInstances;
+
+	private EventQuestPageBase currentPage;
+
+	public static BoxSummonResultPopup Create()
+	{
+		return null;
+	}
+
+	private void OnEnable()
+	{
+	}
+
+	protected override void OnDestroy()
+	{
+	}
+
+	public void SetCurrentPage(EventQuestPageBase page)
+	{
+	}
+
+	private void SetupContents()
+	{
+	}
+
+	private void TeardownContents()
+	{
+	}
+
+	public void OnCloseButton()
+	{
 	}
 }

@@ -2,72 +2,71 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortTalkBalloon : MonoBehaviour
 {
-	public class FortTalkBalloon : MonoBehaviour
+	[SerializeField]
+	private GameObject objectLSize;
+
+	[SerializeField]
+	private GameObject objectMSize;
+
+	[SerializeField]
+	private Text characterNameTextM;
+
+	[SerializeField]
+	private Text talkTextM;
+
+	[SerializeField]
+	private Text characterNameTextL;
+
+	[SerializeField]
+	private Text talkTextL;
+
+	[SerializeField]
+	private Transform posNode;
+
+	private readonly Vector3 headPos;
+
+	public GameObject onwer
 	{
-		[SerializeField]
-		private GameObject objectLSize;
-
-		[SerializeField]
-		private GameObject objectMSize;
-
-		[SerializeField]
-		private Text characterNameTextM;
-
-		[SerializeField]
-		private Text talkTextM;
-
-		[SerializeField]
-		private Text characterNameTextL;
-
-		[SerializeField]
-		private Text talkTextL;
-
-		[SerializeField]
-		private Transform posNode;
-
-		private readonly Vector3 headPos;
-
-		public GameObject onwer
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		private void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void LateUpdate()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void OpenText(string name, string text)
-		{
-		}
+	private void LateUpdate()
+	{
+	}
 
-		public void CloseText()
-		{
-		}
+	public void OpenText(string name, string text)
+	{
+	}
 
-		private void SetText(string text, string name)
-		{
-		}
+	public void CloseText()
+	{
+	}
 
-		private void Enable()
-		{
-		}
+	private void SetText(string text, string name)
+	{
+	}
 
-		private void Disable()
-		{
-		}
+	private void Enable()
+	{
+	}
+
+	private void Disable()
+	{
 	}
 }

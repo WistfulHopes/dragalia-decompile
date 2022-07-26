@@ -1,10 +1,9 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[CreateAssetMenu]
+public class SimpleCharacterAttachmentData : ScriptableObject
 {
-	[CreateAssetMenu]
-	public class SimpleCharacterAttachmentData : ScriptableObject
-	{
-		public CharacterAnimatedAttachment.MotionState[] attachMotionStateList;
-	}
+	public CharacterAnimatedAttachment.MotionState[] attachMotionStateList;
 }

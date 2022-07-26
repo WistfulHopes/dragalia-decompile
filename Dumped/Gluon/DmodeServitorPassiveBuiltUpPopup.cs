@@ -1,36 +1,35 @@
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeServitorPassiveBuiltUpPopup : CommonPopup
 {
-	public class DmodeServitorPassiveBuiltUpPopup : CommonPopup
+	[SerializeField]
+	private CommonIcon commonIcon;
+
+	public const string prefabPath = "Prefabs/OutGame/Dmode/DmodeServitor/DmodeServitorPassiveBuiltUpPopup";
+
+	private DmodeServitorPassiveLevelElement passiveLevelElement;
+
+	public static DmodeServitorPassiveBuiltUpPopup Create(DmodeServitorPassiveLevelElement element)
 	{
-		[SerializeField]
-		private CommonIcon commonIcon;
+		return null;
+	}
 
-		public const string prefabPath = "Prefabs/OutGame/Dmode/DmodeServitor/DmodeServitorPassiveBuiltUpPopup";
+	public void SetContent(DmodeServitorPassiveLevelElement element)
+	{
+	}
 
-		private DmodeServitorPassiveLevelElement passiveLevelElement;
+	public void OnPassiveGrowthEnd()
+	{
+	}
 
-		public static DmodeServitorPassiveBuiltUpPopup Create(DmodeServitorPassiveLevelElement element)
-		{
-			return null;
-		}
+	public void OnPassiveGrowthAgain()
+	{
+	}
 
-		public void SetContent(DmodeServitorPassiveLevelElement element)
-		{
-		}
-
-		public void OnPassiveGrowthEnd()
-		{
-		}
-
-		public void OnPassiveGrowthAgain()
-		{
-		}
-
-		public void OnAbilityIcon()
-		{
-		}
+	public void OnAbilityIcon()
+	{
 	}
 }

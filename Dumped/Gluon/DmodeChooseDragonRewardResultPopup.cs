@@ -1,35 +1,32 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeChooseDragonRewardResultPopup : PopupBase
 {
-	public class DmodeChooseDragonRewardResultPopup : PopupBase
+	[SerializeField]
+	public DmodeCommonInGameIcon icon;
+
+	[SerializeField]
+	public GameObject[] rareGOs;
+
+	public Text afterText;
+
+	public Text nameText;
+
+	public static readonly string prefabPath;
+
+	private DmodeDungeonItem item;
+
+	private int rarePrice;
+
+	public static DmodeChooseDragonRewardResultPopup Create(DmodeDungeonItem item, int rarePrice)
 	{
-		[SerializeField]
-		[Header("Item")]
-		public DmodeCommonInGameIcon icon;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Content")]
-		public GameObject[] rareGOs;
-
-		public Text afterText;
-
-		public Text nameText;
-
-		public static readonly string prefabPath;
-
-		private DmodeDungeonItem item;
-
-		private int rarePrice;
-
-		public static DmodeChooseDragonRewardResultPopup Create(DmodeDungeonItem item, int rarePrice)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
 	}
 }

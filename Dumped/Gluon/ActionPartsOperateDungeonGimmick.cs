@@ -1,55 +1,54 @@
 using System.Collections.Generic;
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsOperateDungeonGimmick : ActionParts
 {
-	public class ActionPartsOperateDungeonGimmick : ActionParts
+	public enum GimmickType
 	{
-		public enum GimmickType
-		{
-			Warp
-		}
+		Warp
+	}
 
-		public enum OperateType
-		{
-			Activate,
-			Deactivate,
-			ForcingWarp
-		}
+	public enum OperateType
+	{
+		Activate,
+		Deactivate,
+		ForcingWarp
+	}
 
-		public enum WarpTarget
-		{
-			Self,
-			AllUnit,
-			OnlyPassEntrance
-		}
+	public enum WarpTarget
+	{
+		Self,
+		AllUnit,
+		OnlyPassEntrance
+	}
 
-		private readonly OperateDungeonGimmickData _partsData;
+	private readonly OperateDungeonGimmickData _partsData;
 
-		private List<CharacterBase> _listWarpTarget;
+	private List<CharacterBase> _listWarpTarget;
 
-		public ActionPartsOperateDungeonGimmick(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsOperateDungeonGimmick(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		private void Proc()
-		{
-		}
+	private void Proc()
+	{
+	}
 
-		private void ProcWarp()
-		{
-		}
+	private void ProcWarp()
+	{
+	}
 
-		private void ListWarpTarget()
-		{
-		}
+	private void ListWarpTarget()
+	{
 	}
 }

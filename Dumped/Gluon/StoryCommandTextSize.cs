@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandTextSize : IStoryCommand
 {
-	[CommandName("text_size")]
-	public class StoryCommandTextSize : IStoryCommand
+	public void Start(int size)
 	{
-		public void Start(int size)
-		{
-		}
 	}
 }

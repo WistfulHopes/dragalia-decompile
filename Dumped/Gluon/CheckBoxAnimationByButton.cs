@@ -2,35 +2,34 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CheckBoxAnimationByButton : MonoBehaviour
 {
-	public class CheckBoxAnimationByButton : MonoBehaviour
+	public bool isOn;
+
+	[SerializeField]
+	private Image onImage;
+
+	private Sequence runningSeq;
+
+	private void Awake()
 	{
-		public bool isOn;
+	}
 
-		[SerializeField]
-		private Image onImage;
+	private void CheckOnAnimation()
+	{
+	}
 
-		private Sequence runningSeq;
+	private void CheckOffAnimation()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public void InitCheckBox(bool isCheck)
+	{
+	}
 
-		private void CheckOnAnimation()
-		{
-		}
-
-		private void CheckOffAnimation()
-		{
-		}
-
-		public void InitCheckBox(bool isCheck)
-		{
-		}
-
-		public void SetCheckBox(bool isCheck)
-		{
-		}
+	public void SetCheckBox(bool isCheck)
+	{
 	}
 }

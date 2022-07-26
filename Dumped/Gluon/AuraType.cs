@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum AuraType
 {
-	public enum AuraType
-	{
-		NONE,
-		HP,
-		ATTACK,
-		DEFENSE,
-		CRITICAL
-	}
+	NONE,
+	HP,
+	ATTACK,
+	DEFENSE,
+	CRITICAL
 }

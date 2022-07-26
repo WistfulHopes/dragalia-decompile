@@ -2,113 +2,108 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public abstract class StrategyDialogBase : InGameDialogBase
 {
-	public abstract class StrategyDialogBase : InGameDialogBase
+	public class Param
 	{
-		public class Param
-		{
-			public Action onClickRetryButton;
+		public Action onClickRetryButton;
 
-			public Action onClickRetireButton;
+		public Action onClickRetireButton;
 
-			public Action onClickCloseButton;
-		}
+		public Action onClickCloseButton;
+	}
 
-		[SerializeField]
-		[Header("components")]
-		protected RectTransform headRt;
+	[SerializeField]
+	protected RectTransform headRt;
 
-		[SerializeField]
-		protected RectTransform frameRt;
+	[SerializeField]
+	protected RectTransform frameRt;
 
-		[SerializeField]
-		protected Text titleText;
+	[SerializeField]
+	protected Text titleText;
 
-		[SerializeField]
-		[Tooltip("å\u0086\u008dæ\u008c\u0091æ\u0088¦ã\u0083\u009cã\u0082¿ã\u0083³")]
-		protected Button retryButton;
+	[SerializeField]
+	protected Button retryButton;
 
-		[SerializeField]
-		[Tooltip("ã\u0083ªã\u0082¿ã\u0082¤ã\u0082¢ã\u0083\u009cã\u0082¿ã\u0083³")]
-		protected Button retireButton;
+	[SerializeField]
+	protected Button retireButton;
 
-		[SerializeField]
-		[Tooltip("é\u0096\u0089ã\u0081\u0098ã\u0082\u008bã\u0083\u009cã\u0082¿ã\u0083³")]
-		protected Button closeButton;
+	[SerializeField]
+	protected Button closeButton;
 
-		public Param param;
+	public Param param;
 
-		protected RectTransform rootRt;
+	protected RectTransform rootRt;
 
-		protected Text retryButtonText;
+	protected Text retryButtonText;
 
-		protected Text retireButtonText;
+	protected Text retireButtonText;
 
-		protected Text closeButtonText;
+	protected Text closeButtonText;
 
-		protected CommonDialog performanceModeDialog;
+	protected CommonDialog performanceModeDialog;
 
-		protected CommonDialog.Param performanceModeDialogParam;
+	protected CommonDialog.Param performanceModeDialogParam;
 
-		protected InGameOptionPopup optionPopup;
+	protected InGameOptionPopup optionPopup;
 
-		protected bool isSwap;
+	protected bool isSwap;
 
-		protected virtual void Initialize()
-		{
-		}
+	protected virtual void Initialize()
+	{
+	}
 
-		public virtual void Open()
-		{
-		}
+	public virtual void Open()
+	{
+	}
 
-		public virtual bool Close(bool isPlayCloseSE = false)
-		{
-			return default(bool);
-		}
+	public virtual bool Close(bool isPlayCloseSE = false)
+	{
+		return default(bool);
+	}
 
-		public void OnCloseButtonPressed()
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
+	}
 
-		protected virtual bool ExecCloseButtonPressed()
-		{
-			return default(bool);
-		}
+	protected virtual bool ExecCloseButtonPressed()
+	{
+		return default(bool);
+	}
 
-		public void OnRetryButtonPressed()
-		{
-		}
+	public void OnRetryButtonPressed()
+	{
+	}
 
-		protected virtual bool ExecRetryButtonPressed()
-		{
-			return default(bool);
-		}
+	protected virtual bool ExecRetryButtonPressed()
+	{
+		return default(bool);
+	}
 
-		public void OnRetireButtonPressed()
-		{
-		}
+	public void OnRetireButtonPressed()
+	{
+	}
 
-		protected virtual bool ExecRetireButtonPressed()
-		{
-			return default(bool);
-		}
+	protected virtual bool ExecRetireButtonPressed()
+	{
+		return default(bool);
+	}
 
-		public void OnOptionButtonPressed()
-		{
-		}
+	public void OnOptionButtonPressed()
+	{
+	}
 
-		protected void OnClosedButtonPressedFromOptionDialog()
-		{
-		}
+	protected void OnClosedButtonPressedFromOptionDialog()
+	{
+	}
 
-		protected void OnClosedButtonPressedFromPerformanceModeDialog(CommonDialog dlg)
-		{
-		}
+	protected void OnClosedButtonPressedFromPerformanceModeDialog(CommonDialog dlg)
+	{
+	}
 
-		protected override void SetEnableButtons(bool b)
-		{
-		}
+	protected override void SetEnableButtons(bool b)
+	{
 	}
 }

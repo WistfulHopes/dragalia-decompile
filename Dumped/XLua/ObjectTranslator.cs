@@ -6,530 +6,529 @@ using UnityEngine;
 using XLua.CSObjectWrap;
 using XLua.LuaDLL;
 
-namespace XLua
+namespace XLua;
+
+public class ObjectTranslator
 {
-	public class ObjectTranslator
+	private class IniterAdderUnityEngineVector2
 	{
-		private class IniterAdderUnityEngineVector2
+		static IniterAdderUnityEngineVector2()
 		{
-			static IniterAdderUnityEngineVector2()
-			{
-			}
-
-			private static void Init(LuaEnv luaenv, ObjectTranslator translator)
-			{
-			}
 		}
 
-		internal enum LOGLEVEL
+		private static void Init(LuaEnv luaenv, ObjectTranslator translator)
 		{
-			NO,
-			INFO,
-			WARN,
-			ERROR
 		}
+	}
 
-		public delegate void PushCSObject(IntPtr L, object obj);
+	internal enum LOGLEVEL
+	{
+		NO,
+		INFO,
+		WARN,
+		ERROR
+	}
 
-		public delegate object GetCSObject(IntPtr L, int idx);
+	public delegate void PushCSObject(IntPtr L, object obj);
 
-		public delegate void UpdateCSObject(IntPtr L, int idx, object obj);
+	public delegate object GetCSObject(IntPtr L, int idx);
 
-		public delegate void GetFunc<T>(IntPtr L, int idx, out T val);
+	public delegate void UpdateCSObject(IntPtr L, int idx, object obj);
 
-		private static IniterAdderUnityEngineVector2 s_IniterAdderUnityEngineVector2_dumb_obj;
+	public delegate void GetFunc<T>(IntPtr L, int idx, out T val);
 
-		private int UnityEngineVector2_TypeID;
+	private static IniterAdderUnityEngineVector2 s_IniterAdderUnityEngineVector2_dumb_obj;
 
-		private int UnityEngineVector3_TypeID;
+	private int UnityEngineVector2_TypeID;
 
-		private int UnityEngineVector4_TypeID;
+	private int UnityEngineVector3_TypeID;
 
-		private int UnityEngineColor_TypeID;
+	private int UnityEngineVector4_TypeID;
 
-		private int UnityEngineQuaternion_TypeID;
+	private int UnityEngineColor_TypeID;
 
-		private int UnityEngineRay_TypeID;
+	private int UnityEngineQuaternion_TypeID;
 
-		private int UnityEngineBounds_TypeID;
+	private int UnityEngineRay_TypeID;
 
-		private int UnityEngineRay2D_TypeID;
+	private int UnityEngineBounds_TypeID;
 
-		private int GluonShootingEnemyManagerTemplateType_TypeID;
+	private int UnityEngineRay2D_TypeID;
 
-		private int GluonShootingEnemyManagerTemplateType_EnumRef;
+	private int GluonShootingEnemyManagerTemplateType_TypeID;
 
-		private int GluonShootingItemManagerTemplateType_TypeID;
+	private int GluonShootingEnemyManagerTemplateType_EnumRef;
 
-		private int GluonShootingItemManagerTemplateType_EnumRef;
+	private int GluonShootingItemManagerTemplateType_TypeID;
 
-		private static XLua_Gen_Initer_Register__ s_gen_reg_dumb_obj;
+	private int GluonShootingItemManagerTemplateType_EnumRef;
 
-		internal MethodWrapsCache methodWrapsCache;
+	private static XLua_Gen_Initer_Register__ s_gen_reg_dumb_obj;
 
-		internal ObjectCheckers objectCheckers;
+	internal MethodWrapsCache methodWrapsCache;
 
-		internal ObjectCasters objectCasters;
+	internal ObjectCheckers objectCheckers;
 
-		internal readonly ObjectPool objects;
+	internal ObjectCasters objectCasters;
 
-		internal readonly Dictionary<object, int> reverseMap;
+	internal readonly ObjectPool objects;
 
-		internal LuaEnv luaEnv;
+	internal readonly Dictionary<object, int> reverseMap;
 
-		internal StaticLuaCallbacks metaFunctions;
+	internal LuaEnv luaEnv;
 
-		internal List<Assembly> assemblies;
+	internal StaticLuaCallbacks metaFunctions;
 
-		private lua_CSFunction importTypeFunction;
+	internal List<Assembly> assemblies;
 
-		private lua_CSFunction loadAssemblyFunction;
+	private lua_CSFunction importTypeFunction;
 
-		private lua_CSFunction castFunction;
+	private lua_CSFunction loadAssemblyFunction;
 
-		private readonly Dictionary<Type, Action<IntPtr>> delayWrap;
+	private lua_CSFunction castFunction;
 
-		private readonly Dictionary<Type, Func<int, LuaEnv, LuaBase>> interfaceBridgeCreators;
+	private readonly Dictionary<Type, Action<IntPtr>> delayWrap;
 
-		private readonly Dictionary<Type, Type> aliasCfg;
+	private readonly Dictionary<Type, Func<int, LuaEnv, LuaBase>> interfaceBridgeCreators;
 
-		private Dictionary<Type, bool> loaded_types;
+	private readonly Dictionary<Type, Type> aliasCfg;
 
-		public int cacheRef;
+	private Dictionary<Type, bool> loaded_types;
 
-		private MethodInfo[] genericAction;
+	public int cacheRef;
 
-		private MethodInfo[] genericFunc;
+	private MethodInfo[] genericAction;
 
-		private Dictionary<Type, Func<DelegateBridgeBase, Delegate>> genericDelegateCreatorCache;
+	private MethodInfo[] genericFunc;
 
-		private Dictionary<int, WeakReference> delegate_bridges;
+	private Dictionary<Type, Func<DelegateBridgeBase, Delegate>> genericDelegateCreatorCache;
 
-		private int common_array_meta;
+	private Dictionary<int, WeakReference> delegate_bridges;
 
-		private int common_delegate_meta;
+	private int common_array_meta;
 
-		private int enumerable_pairs_func;
+	private int common_delegate_meta;
 
-		private Dictionary<Type, int> typeIdMap;
+	private int enumerable_pairs_func;
 
-		private Dictionary<int, Type> typeMap;
+	private Dictionary<Type, int> typeIdMap;
 
-		private HashSet<Type> privateAccessibleFlags;
+	private Dictionary<int, Type> typeMap;
 
-		private Dictionary<object, int> enumMap;
+	private HashSet<Type> privateAccessibleFlags;
 
-		private List<lua_CSFunction> fix_cs_functions;
+	private Dictionary<object, int> enumMap;
 
-		private Dictionary<Type, PushCSObject> custom_push_funcs;
+	private List<lua_CSFunction> fix_cs_functions;
 
-		private Dictionary<Type, GetCSObject> custom_get_funcs;
+	private Dictionary<Type, PushCSObject> custom_push_funcs;
 
-		private Dictionary<Type, UpdateCSObject> custom_update_funcs;
+	private Dictionary<Type, GetCSObject> custom_get_funcs;
 
-		private Dictionary<Type, Delegate> push_func_with_type;
+	private Dictionary<Type, UpdateCSObject> custom_update_funcs;
 
-		private Dictionary<Type, Delegate> get_func_with_type;
+	private Dictionary<Type, Delegate> push_func_with_type;
 
-		private int decimal_type_id;
+	private Dictionary<Type, Delegate> get_func_with_type;
 
-		private static IniterAdderUnityEngineVector2 IniterAdderUnityEngineVector2_dumb_obj => null;
+	private int decimal_type_id;
 
-		private static XLua_Gen_Initer_Register__ gen_reg_dumb_obj => null;
+	private static IniterAdderUnityEngineVector2 IniterAdderUnityEngineVector2_dumb_obj => null;
 
-		public void PushUnityEngineVector2(IntPtr L, Vector2 val)
-		{
-		}
-
-		public void Get(IntPtr L, int index, out Vector2 val)
-		{
-		}
-
-		public void UpdateUnityEngineVector2(IntPtr L, int index, Vector2 val)
-		{
-		}
-
-		public void PushUnityEngineVector3(IntPtr L, Vector3 val)
-		{
-		}
-
-		public void Get(IntPtr L, int index, out Vector3 val)
-		{
-		}
-
-		public void UpdateUnityEngineVector3(IntPtr L, int index, Vector3 val)
-		{
-		}
-
-		public void PushUnityEngineVector4(IntPtr L, Vector4 val)
-		{
-		}
-
-		public void Get(IntPtr L, int index, out Vector4 val)
-		{
-		}
-
-		public void UpdateUnityEngineVector4(IntPtr L, int index, Vector4 val)
-		{
-		}
-
-		public void PushUnityEngineColor(IntPtr L, Color val)
-		{
-		}
-
-		public void Get(IntPtr L, int index, out Color val)
-		{
-		}
-
-		public void UpdateUnityEngineColor(IntPtr L, int index, Color val)
-		{
-		}
-
-		public void PushUnityEngineQuaternion(IntPtr L, Quaternion val)
-		{
-		}
-
-		public void Get(IntPtr L, int index, out Quaternion val)
-		{
-		}
-
-		public void UpdateUnityEngineQuaternion(IntPtr L, int index, Quaternion val)
-		{
-		}
-
-		public void PushUnityEngineRay(IntPtr L, Ray val)
-		{
-		}
-
-		public void Get(IntPtr L, int index, out Ray val)
-		{
-		}
-
-		public void UpdateUnityEngineRay(IntPtr L, int index, Ray val)
-		{
-		}
-
-		public void PushUnityEngineBounds(IntPtr L, Bounds val)
-		{
-		}
-
-		public void Get(IntPtr L, int index, out Bounds val)
-		{
-		}
-
-		public void UpdateUnityEngineBounds(IntPtr L, int index, Bounds val)
-		{
-		}
-
-		public void PushUnityEngineRay2D(IntPtr L, Ray2D val)
-		{
-		}
-
-		public void Get(IntPtr L, int index, out Ray2D val)
-		{
-		}
-
-		public void UpdateUnityEngineRay2D(IntPtr L, int index, Ray2D val)
-		{
-		}
-
-		public void PushGluonShootingEnemyManagerTemplateType(IntPtr L, EnemyManager.TemplateType val)
-		{
-		}
-
-		public void Get(IntPtr L, int index, out EnemyManager.TemplateType val)
-		{
-		}
-
-		public void UpdateGluonShootingEnemyManagerTemplateType(IntPtr L, int index, EnemyManager.TemplateType val)
-		{
-		}
-
-		public void PushGluonShootingItemManagerTemplateType(IntPtr L, ItemManager.TemplateType val)
-		{
-		}
-
-		public void Get(IntPtr L, int index, out ItemManager.TemplateType val)
-		{
-		}
-
-		public void UpdateGluonShootingItemManagerTemplateType(IntPtr L, int index, ItemManager.TemplateType val)
-		{
-		}
+	private static XLua_Gen_Initer_Register__ gen_reg_dumb_obj => null;
 
-		public void DelayWrapLoader(Type type, Action<IntPtr> loader)
-		{
-		}
+	public void PushUnityEngineVector2(IntPtr L, Vector2 val)
+	{
+	}
 
-		public void AddInterfaceBridgeCreator(Type type, Func<int, LuaEnv, LuaBase> creator)
-		{
-		}
+	public void Get(IntPtr L, int index, out Vector2 val)
+	{
+	}
 
-		public bool TryDelayWrapLoader(IntPtr L, Type type)
-		{
-			return default(bool);
-		}
+	public void UpdateUnityEngineVector2(IntPtr L, int index, Vector2 val)
+	{
+	}
 
-		public void Alias(Type type, string alias)
-		{
-		}
+	public void PushUnityEngineVector3(IntPtr L, Vector3 val)
+	{
+	}
 
-		private void addAssemblieByName(IEnumerable<Assembly> assemblies_usorted, string name)
-		{
-		}
+	public void Get(IntPtr L, int index, out Vector3 val)
+	{
+	}
 
-		public ObjectTranslator(LuaEnv luaenv, IntPtr L)
-		{
-		}
+	public void UpdateUnityEngineVector3(IntPtr L, int index, Vector3 val)
+	{
+	}
 
-		private void initCSharpCallLua()
-		{
-		}
+	public void PushUnityEngineVector4(IntPtr L, Vector4 val)
+	{
+	}
 
-		private Delegate getDelegateUsingGeneric(DelegateBridgeBase bridge, Type delegateType, MethodInfo delegateMethod)
-		{
-			return null;
-		}
+	public void Get(IntPtr L, int index, out Vector4 val)
+	{
+	}
 
-		private Delegate getDelegate(DelegateBridgeBase bridge, Type delegateType)
-		{
-			return null;
-		}
+	public void UpdateUnityEngineVector4(IntPtr L, int index, Vector4 val)
+	{
+	}
 
-		public object CreateDelegateBridge(IntPtr L, Type delegateType, int idx)
-		{
-			return null;
-		}
+	public void PushUnityEngineColor(IntPtr L, Color val)
+	{
+	}
 
-		public bool AllDelegateBridgeReleased()
-		{
-			return default(bool);
-		}
+	public void Get(IntPtr L, int index, out Color val)
+	{
+	}
 
-		public void ReleaseLuaBase(IntPtr L, int reference, bool is_delegate)
-		{
-		}
+	public void UpdateUnityEngineColor(IntPtr L, int index, Color val)
+	{
+	}
 
-		public object CreateInterfaceBridge(IntPtr L, Type interfaceType, int idx)
-		{
-			return null;
-		}
+	public void PushUnityEngineQuaternion(IntPtr L, Quaternion val)
+	{
+	}
 
-		public void CreateArrayMetatable(IntPtr L)
-		{
-		}
+	public void Get(IntPtr L, int index, out Quaternion val)
+	{
+	}
 
-		public void CreateDelegateMetatable(IntPtr L)
-		{
-		}
+	public void UpdateUnityEngineQuaternion(IntPtr L, int index, Quaternion val)
+	{
+	}
 
-		internal void CreateEnumerablePairs(IntPtr L)
-		{
-		}
+	public void PushUnityEngineRay(IntPtr L, Ray val)
+	{
+	}
 
-		public void OpenLib(IntPtr L)
-		{
-		}
+	public void Get(IntPtr L, int index, out Ray val)
+	{
+	}
 
-		internal void createFunctionMetatable(IntPtr L)
-		{
-		}
+	public void UpdateUnityEngineRay(IntPtr L, int index, Ray val)
+	{
+	}
 
-		internal Type FindType(string className, bool isQualifiedName = false)
-		{
-			return null;
-		}
+	public void PushUnityEngineBounds(IntPtr L, Bounds val)
+	{
+	}
 
-		private bool hasMethod(Type type, string methodName)
-		{
-			return default(bool);
-		}
+	public void Get(IntPtr L, int index, out Bounds val)
+	{
+	}
 
-		internal void collectObject(int obj_index_to_collect)
-		{
-		}
+	public void UpdateUnityEngineBounds(IntPtr L, int index, Bounds val)
+	{
+	}
 
-		private int addObject(object obj, bool is_valuetype, bool is_enum)
-		{
-			return default(int);
-		}
+	public void PushUnityEngineRay2D(IntPtr L, Ray2D val)
+	{
+	}
 
-		internal object GetObject(IntPtr L, int index)
-		{
-			return null;
-		}
+	public void Get(IntPtr L, int index, out Ray2D val)
+	{
+	}
 
-		public Type GetTypeOf(IntPtr L, int idx)
-		{
-			return null;
-		}
+	public void UpdateUnityEngineRay2D(IntPtr L, int index, Ray2D val)
+	{
+	}
 
-		public bool Assignable<T>(IntPtr L, int index)
-		{
-			return default(bool);
-		}
+	public void PushGluonShootingEnemyManagerTemplateType(IntPtr L, EnemyManager.TemplateType val)
+	{
+	}
 
-		public bool Assignable(IntPtr L, int index, Type type)
-		{
-			return default(bool);
-		}
+	public void Get(IntPtr L, int index, out EnemyManager.TemplateType val)
+	{
+	}
 
-		public object GetObject(IntPtr L, int index, Type type)
-		{
-			return null;
-		}
+	public void UpdateGluonShootingEnemyManagerTemplateType(IntPtr L, int index, EnemyManager.TemplateType val)
+	{
+	}
 
-		public void Get<T>(IntPtr L, int index, out T v)
-		{
-		}
+	public void PushGluonShootingItemManagerTemplateType(IntPtr L, ItemManager.TemplateType val)
+	{
+	}
 
-		public void PushByType<T>(IntPtr L, T v)
-		{
-		}
+	public void Get(IntPtr L, int index, out ItemManager.TemplateType val)
+	{
+	}
 
-		public T[] GetParams<T>(IntPtr L, int index)
-		{
-			return null;
-		}
+	public void UpdateGluonShootingItemManagerTemplateType(IntPtr L, int index, ItemManager.TemplateType val)
+	{
+	}
 
-		public Array GetParams(IntPtr L, int index, Type type)
-		{
-			return null;
-		}
+	public void DelayWrapLoader(Type type, Action<IntPtr> loader)
+	{
+	}
 
-		public T GetDelegate<T>(IntPtr L, int index) where T : class
-		{
-			return null;
-		}
+	public void AddInterfaceBridgeCreator(Type type, Func<int, LuaEnv, LuaBase> creator)
+	{
+	}
 
-		public int GetTypeId(IntPtr L, Type type)
-		{
-			return default(int);
-		}
+	public bool TryDelayWrapLoader(IntPtr L, Type type)
+	{
+		return default(bool);
+	}
 
-		public void PrivateAccessible(IntPtr L, Type type)
-		{
-		}
+	public void Alias(Type type, string alias)
+	{
+	}
 
-		internal int getTypeId(IntPtr L, Type type, out bool is_first, LOGLEVEL log_level = LOGLEVEL.WARN)
-		{
-			return default(int);
-		}
+	private void addAssemblieByName(IEnumerable<Assembly> assemblies_usorted, string name)
+	{
+	}
 
-		private void pushPrimitive(IntPtr L, object o)
-		{
-		}
+	public ObjectTranslator(LuaEnv luaenv, IntPtr L)
+	{
+	}
 
-		public void PushAny(IntPtr L, object o)
-		{
-		}
+	private void initCSharpCallLua()
+	{
+	}
 
-		public int TranslateToEnumToTop(IntPtr L, Type type, int idx)
-		{
-			return default(int);
-		}
+	private Delegate getDelegateUsingGeneric(DelegateBridgeBase bridge, Type delegateType, MethodInfo delegateMethod)
+	{
+		return null;
+	}
 
-		public void Push(IntPtr L, lua_CSFunction o)
-		{
-		}
+	private Delegate getDelegate(DelegateBridgeBase bridge, Type delegateType)
+	{
+		return null;
+	}
 
-		public void Push(IntPtr L, LuaBase o)
-		{
-		}
+	public object CreateDelegateBridge(IntPtr L, Type delegateType, int idx)
+	{
+		return null;
+	}
 
-		public void Push(IntPtr L, object o)
-		{
-		}
+	public bool AllDelegateBridgeReleased()
+	{
+		return default(bool);
+	}
 
-		public void PushObject(IntPtr L, object o, int type_id)
-		{
-		}
+	public void ReleaseLuaBase(IntPtr L, int reference, bool is_delegate)
+	{
+	}
 
-		public void Update(IntPtr L, int index, object obj)
-		{
-		}
+	public object CreateInterfaceBridge(IntPtr L, Type interfaceType, int idx)
+	{
+		return null;
+	}
 
-		private object getCsObj(IntPtr L, int index, int udata)
-		{
-			return null;
-		}
+	public void CreateArrayMetatable(IntPtr L)
+	{
+	}
 
-		internal object SafeGetCSObj(IntPtr L, int index)
-		{
-			return null;
-		}
+	public void CreateDelegateMetatable(IntPtr L)
+	{
+	}
 
-		internal object FastGetCSObj(IntPtr L, int index)
-		{
-			return null;
-		}
+	internal void CreateEnumerablePairs(IntPtr L)
+	{
+	}
 
-		internal void ReleaseCSObj(IntPtr L, int index)
-		{
-		}
+	public void OpenLib(IntPtr L)
+	{
+	}
 
-		internal lua_CSFunction GetFixCSFunction(int index)
-		{
-			return null;
-		}
+	internal void createFunctionMetatable(IntPtr L)
+	{
+	}
 
-		internal void PushFixCSFunction(IntPtr L, lua_CSFunction func)
-		{
-		}
+	internal Type FindType(string className, bool isQualifiedName = false)
+	{
+		return null;
+	}
 
-		internal object[] popValues(IntPtr L, int oldTop)
-		{
-			return null;
-		}
+	private bool hasMethod(Type type, string methodName)
+	{
+		return default(bool);
+	}
 
-		internal object[] popValues(IntPtr L, int oldTop, Type[] popTypes)
-		{
-			return null;
-		}
+	internal void collectObject(int obj_index_to_collect)
+	{
+	}
 
-		private void registerCustomOp(Type type, PushCSObject push, GetCSObject get, UpdateCSObject update)
-		{
-		}
+	private int addObject(object obj, bool is_valuetype, bool is_enum)
+	{
+		return default(int);
+	}
 
-		public bool HasCustomOp(Type type)
-		{
-			return default(bool);
-		}
+	internal object GetObject(IntPtr L, int index)
+	{
+		return null;
+	}
 
-		private bool tryGetPushFuncByType<T>(Type type, out T func) where T : class
-		{
-			return default(bool);
-		}
+	public Type GetTypeOf(IntPtr L, int idx)
+	{
+		return null;
+	}
 
-		private bool tryGetGetFuncByType<T>(Type type, out T func) where T : class
-		{
-			return default(bool);
-		}
+	public bool Assignable<T>(IntPtr L, int index)
+	{
+		return default(bool);
+	}
 
-		public void RegisterPushAndGetAndUpdate<T>(Action<IntPtr, T> push, GetFunc<T> get, Action<IntPtr, int, T> update)
-		{
-		}
+	public bool Assignable(IntPtr L, int index, Type type)
+	{
+		return default(bool);
+	}
 
-		public void RegisterCaster<T>(GetFunc<T> get)
-		{
-		}
+	public object GetObject(IntPtr L, int index, Type type)
+	{
+		return null;
+	}
 
-		public void PushDecimal(IntPtr L, decimal val)
-		{
-		}
+	public void Get<T>(IntPtr L, int index, out T v)
+	{
+	}
 
-		public bool IsDecimal(IntPtr L, int index)
-		{
-			return default(bool);
-		}
+	public void PushByType<T>(IntPtr L, T v)
+	{
+	}
+
+	public T[] GetParams<T>(IntPtr L, int index)
+	{
+		return null;
+	}
 
-		public decimal GetDecimal(IntPtr L, int index)
-		{
-			return default(decimal);
-		}
+	public Array GetParams(IntPtr L, int index, Type type)
+	{
+		return null;
+	}
 
-		public void Get(IntPtr L, int index, out decimal val)
-		{
-		}
+	public T GetDelegate<T>(IntPtr L, int index) where T : class
+	{
+		return null;
+	}
+
+	public int GetTypeId(IntPtr L, Type type)
+	{
+		return default(int);
+	}
+
+	public void PrivateAccessible(IntPtr L, Type type)
+	{
+	}
+
+	internal int getTypeId(IntPtr L, Type type, out bool is_first, LOGLEVEL log_level = LOGLEVEL.WARN)
+	{
+		return default(int);
+	}
+
+	private void pushPrimitive(IntPtr L, object o)
+	{
+	}
+
+	public void PushAny(IntPtr L, object o)
+	{
+	}
+
+	public int TranslateToEnumToTop(IntPtr L, Type type, int idx)
+	{
+		return default(int);
+	}
+
+	public void Push(IntPtr L, lua_CSFunction o)
+	{
+	}
+
+	public void Push(IntPtr L, LuaBase o)
+	{
+	}
+
+	public void Push(IntPtr L, object o)
+	{
+	}
+
+	public void PushObject(IntPtr L, object o, int type_id)
+	{
+	}
+
+	public void Update(IntPtr L, int index, object obj)
+	{
+	}
+
+	private object getCsObj(IntPtr L, int index, int udata)
+	{
+		return null;
+	}
+
+	internal object SafeGetCSObj(IntPtr L, int index)
+	{
+		return null;
+	}
+
+	internal object FastGetCSObj(IntPtr L, int index)
+	{
+		return null;
+	}
+
+	internal void ReleaseCSObj(IntPtr L, int index)
+	{
+	}
+
+	internal lua_CSFunction GetFixCSFunction(int index)
+	{
+		return null;
+	}
+
+	internal void PushFixCSFunction(IntPtr L, lua_CSFunction func)
+	{
+	}
+
+	internal object[] popValues(IntPtr L, int oldTop)
+	{
+		return null;
+	}
+
+	internal object[] popValues(IntPtr L, int oldTop, Type[] popTypes)
+	{
+		return null;
+	}
+
+	private void registerCustomOp(Type type, PushCSObject push, GetCSObject get, UpdateCSObject update)
+	{
+	}
+
+	public bool HasCustomOp(Type type)
+	{
+		return default(bool);
+	}
+
+	private bool tryGetPushFuncByType<T>(Type type, out T func) where T : class
+	{
+		return default(bool);
+	}
+
+	private bool tryGetGetFuncByType<T>(Type type, out T func) where T : class
+	{
+		return default(bool);
+	}
+
+	public void RegisterPushAndGetAndUpdate<T>(Action<IntPtr, T> push, GetFunc<T> get, Action<IntPtr, int, T> update)
+	{
+	}
+
+	public void RegisterCaster<T>(GetFunc<T> get)
+	{
+	}
+
+	public void PushDecimal(IntPtr L, decimal val)
+	{
+	}
+
+	public bool IsDecimal(IntPtr L, int index)
+	{
+		return default(bool);
+	}
+
+	public decimal GetDecimal(IntPtr L, int index)
+	{
+		return default(decimal);
+	}
+
+	public void Get(IntPtr L, int index, out decimal val)
+	{
 	}
 }

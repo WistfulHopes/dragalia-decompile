@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandCharacterBlink : IStoryCommand
 {
-	[CommandName("chara_blink")]
-	public class StoryCommandCharacterBlink : IStoryCommand
+	public void Start(string charaId, float sec, float minAlpha = 0f, float maxAlpha = 1f)
 	{
-		public void Start(string charaId, float sec, float minAlpha = 0f, float maxAlpha = 1f)
-		{
-		}
 	}
 }

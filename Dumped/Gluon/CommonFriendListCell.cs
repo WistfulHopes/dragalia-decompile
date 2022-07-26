@@ -3,142 +3,136 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CommonFriendListCell : MonoBehaviour
 {
-	public class CommonFriendListCell : MonoBehaviour
+	[SerializeField]
+	public CommonIcon charaIcon;
+
+	public CommonIcon skillIcon;
+
+	public Text plusText;
+
+	public Transform charaListSortDecoTrans;
+
+	private CommonIconListSortDeco deco;
+
+	[SerializeField]
+	public Image anotherNameIcon;
+
+	public Text anotherNameText;
+
+	[SerializeField]
+	public Text playerLevelText;
+
+	public Text usernameText;
+
+	public Text lastPlayTimeText;
+
+	[SerializeField]
+	public Image frameImage;
+
+	public Text lastPlayTimeTextInDialog;
+
+	[SerializeField]
+	public GameObject guildGO;
+
+	public Text guildNameText;
+
+	public RawImage guildEmblem;
+
+	[SerializeField]
+	private GameObject skillTextRoot;
+
+	[SerializeField]
+	private Text skillText;
+
+	[SerializeField]
+	private GameObject skillTextWithSelectButtonRoot;
+
+	[SerializeField]
+	private Text skillTextWithSelectButton;
+
+	[SerializeField]
+	private bool _isShowSelectButton;
+
+	[SerializeField]
+	private Image friendIcon;
+
+	[SerializeField]
+	private GameObject manaPointRootObj;
+
+	private CommonFriendListCellData data;
+
+	private bool isInDialogStyle;
+
+	private const string prefabPath = "Prefabs/OutGame/CommonFriendListCell";
+
+	private Text manaPointText;
+
+	private const float ShortSkillDescTextWidth = 128f;
+
+	private Button onClickEventButton;
+
+	public bool isShowSelectButton
 	{
-		[SerializeField]
-		[Header("Icons")]
-		public CommonIcon charaIcon;
-
-		public CommonIcon skillIcon;
-
-		public Text plusText;
-
-		public Transform charaListSortDecoTrans;
-
-		private CommonIconListSortDeco deco;
-
-		[SerializeField]
-		[Header("AnotherName")]
-		public Image anotherNameIcon;
-
-		public Text anotherNameText;
-
-		[SerializeField]
-		[Header("PlayerInfo")]
-		public Text playerLevelText;
-
-		public Text usernameText;
-
-		public Text lastPlayTimeText;
-
-		[SerializeField]
-		[Header("Style")]
-		public Image frameImage;
-
-		public Text lastPlayTimeTextInDialog;
-
-		[SerializeField]
-		[Header("Guild")]
-		public GameObject guildGO;
-
-		public Text guildNameText;
-
-		public RawImage guildEmblem;
-
-		[SerializeField]
-		private GameObject skillTextRoot;
-
-		[SerializeField]
-		private Text skillText;
-
-		[SerializeField]
-		private GameObject skillTextWithSelectButtonRoot;
-
-		[SerializeField]
-		private Text skillTextWithSelectButton;
-
-		[SerializeField]
-		private bool _isShowSelectButton;
-
-		[SerializeField]
-		private Image friendIcon;
-
-		[SerializeField]
-		private GameObject manaPointRootObj;
-
-		private CommonFriendListCellData data;
-
-		private bool isInDialogStyle;
-
-		private const string prefabPath = "Prefabs/OutGame/CommonFriendListCell";
-
-		private Text manaPointText;
-
-		private const float ShortSkillDescTextWidth = 128f;
-
-		private Button onClickEventButton;
-
-		public bool isShowSelectButton
+		get
 		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		private static CommonFriendListCell Create(CommonFriendListCellData data, Transform parent, bool isInDialogStyle = false)
-		{
-			return null;
-		}
-
-		public void SetupByData(CommonFriendListCellData data, bool isInDialogStyle = false)
+		set
 		{
 		}
+	}
 
-		private void Start()
-		{
-		}
+	private static CommonFriendListCell Create(CommonFriendListCellData data, Transform parent, bool isInDialogStyle = false)
+	{
+		return null;
+	}
 
-		public void UpdateContent(CommonFriendListCellData data, bool isShortSkillDesc = false)
-		{
-		}
+	public void SetupByData(CommonFriendListCellData data, bool isInDialogStyle = false)
+	{
+	}
 
-		public void SetTouchEventButtonObjectReference(Button button)
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void SetManaPointDisplay(CommonFriendListCellData data)
-		{
-		}
+	public void UpdateContent(CommonFriendListCellData data, bool isShortSkillDesc = false)
+	{
+	}
 
-		public static string LastPlayTimeToString(long lastPlayTime)
-		{
-			return null;
-		}
+	public void SetTouchEventButtonObjectReference(Button button)
+	{
+	}
 
-		public void OnSupportCharacterIconPressed()
-		{
-		}
+	public void SetManaPointDisplay(CommonFriendListCellData data)
+	{
+	}
 
-		public void SetUnitDetailModelOnCreated(UnityAction onCreated)
-		{
-		}
+	public static string LastPlayTimeToString(long lastPlayTime)
+	{
+		return null;
+	}
 
-		public void SetUnitDetailModelBackButtonOnClick(UnityAction onCreated)
-		{
-		}
+	public void OnSupportCharacterIconPressed()
+	{
+	}
 
-		private void FriendGetSupportCharaDetailRequest()
-		{
-		}
+	public void SetUnitDetailModelOnCreated(UnityAction onCreated)
+	{
+	}
 
-		private void OnSuccess(FriendGetSupportCharaDetailResponse res)
-		{
-		}
+	public void SetUnitDetailModelBackButtonOnClick(UnityAction onCreated)
+	{
+	}
+
+	private void FriendGetSupportCharaDetailRequest()
+	{
+	}
+
+	private void OnSuccess(FriendGetSupportCharaDetailResponse res)
+	{
 	}
 }

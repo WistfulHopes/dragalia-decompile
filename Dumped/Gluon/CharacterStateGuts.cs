@@ -1,9 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateGuts : CharacterStateBase
 {
-	public class CharacterStateGuts : CharacterStateBase
+	protected override void OnStateEnter_Internal()
 	{
-		protected override void OnStateEnter_Internal()
-		{
-		}
+	}
+
+	public override void OnStateExit()
+	{
 	}
 }

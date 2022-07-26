@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandCheckHaveCharacter : IStoryCommand
 {
-	[CommandName("check_have_chara")]
-	public class StoryCommandCheckHaveCharacter : IStoryCommand
+	public void Start(string charaId, string functionA, string functionB = "")
 	{
-		public void Start(string charaId, string functionA, string functionB = "")
-		{
-		}
 	}
 }

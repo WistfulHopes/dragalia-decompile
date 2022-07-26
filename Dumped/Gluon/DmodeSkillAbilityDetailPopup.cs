@@ -1,54 +1,51 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeSkillAbilityDetailPopup : SkillAbilityDetailPopup
 {
-	public class DmodeSkillAbilityDetailPopup : SkillAbilityDetailPopup
+	private static readonly string prefabPath;
+
+	[SerializeField]
+	private GameObject sellGO;
+
+	[SerializeField]
+	private GameObject activatorPanel;
+
+	[SerializeField]
+	private DmodeCommonInGameIcon activatorTemplate;
+
+	private DmodeDungeonItemManager.ContainerType containerType;
+
+	private int sellId;
+
+	private DmodePopupUtil.DmodeUnifiedActiveAbilityInfo info;
+
+	public static DmodeSkillAbilityDetailPopup CreateDmodeSkillDetailPopup(int skillId, DmodeDungeonItemManager.ContainerType containerType = DmodeDungeonItemManager.ContainerType.None, int sellId = 0)
 	{
-		private static readonly string prefabPath;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Control")]
-		private GameObject sellGO;
+	public static DmodeSkillAbilityDetailPopup CreateDmodeAbilityDetailPopup(int abilityId, ElementalType elementalType)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Info")]
-		private GameObject activatorPanel;
+	public static DmodeSkillAbilityDetailPopup CreateDmodeExAbilityDetailPopup(int exAbilityId, ElementalType elementalType, bool isFirstExAbility = true)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private DmodeCommonInGameIcon activatorTemplate;
+	public static DmodeSkillAbilityDetailPopup CreateDmodeAbilityDetailPopup(DmodePopupUtil.DmodeUnifiedActiveAbilityInfo info)
+	{
+		return null;
+	}
 
-		private DmodeDungeonItemManager.ContainerType containerType;
+	protected override void Start()
+	{
+	}
 
-		private int sellId;
-
-		private DmodePopupUtil.DmodeUnifiedActiveAbilityInfo info;
-
-		public static DmodeSkillAbilityDetailPopup CreateDmodeSkillDetailPopup(int skillId, DmodeDungeonItemManager.ContainerType containerType = DmodeDungeonItemManager.ContainerType.None, int sellId = 0)
-		{
-			return null;
-		}
-
-		public static DmodeSkillAbilityDetailPopup CreateDmodeAbilityDetailPopup(int abilityId, ElementalType elementalType)
-		{
-			return null;
-		}
-
-		public static DmodeSkillAbilityDetailPopup CreateDmodeExAbilityDetailPopup(int exAbilityId, ElementalType elementalType, bool isFirstExAbility = true)
-		{
-			return null;
-		}
-
-		public static DmodeSkillAbilityDetailPopup CreateDmodeAbilityDetailPopup(DmodePopupUtil.DmodeUnifiedActiveAbilityInfo info)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnSellButtonPressed()
-		{
-		}
+	public void OnSellButtonPressed()
+	{
 	}
 }

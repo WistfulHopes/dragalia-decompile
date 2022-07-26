@@ -1,29 +1,28 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class AbilityGaugeMultiPlayService
 {
-	public class AbilityGaugeMultiPlayService
+	private bool _isDirty;
+
+	private float _nextSendEventTimer;
+
+	private static readonly float SendEventInterval;
+
+	public void SetDirty()
 	{
-		private bool _isDirty;
+	}
 
-		private float _nextSendEventTimer;
+	public void UpdateSendEvent(CharacterBase owner)
+	{
+	}
 
-		private static readonly float SendEventInterval;
+	public void OnRecieveCurrentGauge(CharacterBase owner, AbilityGauge recvEvent)
+	{
+	}
 
-		public void SetDirty()
-		{
-		}
-
-		public void UpdateSendEvent(CharacterBase owner)
-		{
-		}
-
-		public void OnRecieveCurrentGauge(CharacterBase owner, AbilityGauge recvEvent)
-		{
-		}
-
-		private void SendCurrentGauge(CharacterBase owner)
-		{
-		}
+	private void SendCurrentGauge(CharacterBase owner)
+	{
 	}
 }

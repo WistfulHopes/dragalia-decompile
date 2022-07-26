@@ -3,85 +3,84 @@ using Cute.Cri;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class UnitDetailAlbumMemoryPopup : PopupBase
 {
-	public class UnitDetailAlbumMemoryPopup : PopupBase
+	public enum MemoryType
 	{
-		public enum MemoryType
-		{
-			summon,
-			awaking,
-			awakingSecond,
-			win,
-			questFailed,
-			dead
-		}
+		summon,
+		awaking,
+		awakingSecond,
+		win,
+		questFailed,
+		dead
+	}
 
-		public Dictionary<MemoryType, string> memoryData;
+	public Dictionary<MemoryType, string> memoryData;
 
-		[SerializeField]
-		private GameObject memoryButtonPrefab;
+	[SerializeField]
+	private GameObject memoryButtonPrefab;
 
-		[SerializeField]
-		private Transform scrollViewContent;
+	[SerializeField]
+	private Transform scrollViewContent;
 
-		private CharaDataElement masterCharaData;
+	private CharaDataElement masterCharaData;
 
-		private string[] voiceGroupName;
+	private string[] voiceGroupName;
 
-		private AudioPlayback soundPlayBack;
+	private AudioPlayback soundPlayBack;
 
-		private Camera flashCamera;
+	private Camera flashCamera;
 
-		public UnitDetailScene scene;
+	public UnitDetailScene scene;
 
-		public static UnitDetailAlbumMemoryPopup Create(UnitDetailModel.CharaDetailData data, Camera flashCamera, bool showBlackLayer = true)
-		{
-			return null;
-		}
+	public static UnitDetailAlbumMemoryPopup Create(UnitDetailModel.CharaDetailData data, Camera flashCamera, bool showBlackLayer = true)
+	{
+		return null;
+	}
 
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		public void InitContents(UnitDetailModel.CharaDetailData data, Camera camera)
-		{
-		}
+	public void InitContents(UnitDetailModel.CharaDetailData data, Camera camera)
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	protected override void OnDestroy()
+	{
+	}
 
-		public void OnMemoryButtonPressed(MemoryType type)
-		{
-		}
+	public void OnMemoryButtonPressed(MemoryType type)
+	{
+	}
 
-		private void OnSummonButtonpressed()
-		{
-		}
+	private void OnSummonButtonpressed()
+	{
+	}
 
-		private void OnAwakingButtonPressed()
-		{
-		}
+	private void OnAwakingButtonPressed()
+	{
+	}
 
-		private void OnAwakingButtonSecondPressed()
-		{
-		}
+	private void OnAwakingButtonSecondPressed()
+	{
+	}
 
-		private void OnWinButtonpressed()
-		{
-		}
+	private void OnWinButtonpressed()
+	{
+	}
 
-		private void OnQuestFailedButtonpressed()
-		{
-		}
+	private void OnQuestFailedButtonpressed()
+	{
+	}
 
-		private void OnDeadButtonpressed()
-		{
-		}
+	private void OnDeadButtonpressed()
+	{
+	}
 
-		private void StopVoice()
-		{
-		}
+	private void StopVoice()
+	{
 	}
 }

@@ -1,35 +1,33 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandPlayMovie : IStoryCommand
 {
-	[CommandName("play_movie")]
-	public class StoryCommandPlayMovie : IStoryCommand
+	private IEnumerator coroutine;
+
+	private string fileName;
+
+	private bool isPanScan;
+
+	private const string storyMoviePathFormat = "Story/{0}";
+
+	public void Start(string fileName, bool isPanScan = false)
 	{
-		private IEnumerator coroutine;
+	}
 
-		private string fileName;
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		private bool isPanScan;
+	private IEnumerator _Update()
+	{
+		return null;
+	}
 
-		private const string storyMoviePathFormat = "Story/{0}";
-
-		public void Start(string fileName, bool isPanScan = false)
-		{
-		}
-
-		public override bool Update()
-		{
-			return default(bool);
-		}
-
-		private IEnumerator _Update()
-		{
-			return null;
-		}
-
-		public string[] GetResourceNames(string fileName, bool isPanScan = false)
-		{
-			return null;
-		}
+	public string[] GetResourceNames(string fileName, bool isPanScan = false)
+	{
+		return null;
 	}
 }

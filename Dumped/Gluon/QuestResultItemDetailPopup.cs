@@ -1,49 +1,46 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultItemDetailPopup : PopupBase
 {
-	public class QuestResultItemDetailPopup : PopupBase
+	[SerializeField]
+	public CommonIcon icon;
+
+	public Text nameText;
+
+	public Text descriptionText;
+
+	[SerializeField]
+	public GameObject overLimitTextGO;
+
+	public GameObject overLimitTextForPresentGO;
+
+	public Text getCountText;
+
+	public Text beforeText;
+
+	public Text afterText;
+
+	private GiftType giftType;
+
+	private int id;
+
+	private int limitBreak;
+
+	private Rarity rarity;
+
+	public static QuestResultItemDetailPopup Create(GiftType giftType, int id, int limitBreak = 0, Rarity rarity = Rarity.NONE)
 	{
-		[SerializeField]
-		[Header("Component")]
-		public CommonIcon icon;
+		return null;
+	}
 
-		public Text nameText;
+	protected override void Start()
+	{
+	}
 
-		public Text descriptionText;
-
-		[SerializeField]
-		[Header("Counts")]
-		public GameObject overLimitTextGO;
-
-		public GameObject overLimitTextForPresentGO;
-
-		public Text getCountText;
-
-		public Text beforeText;
-
-		public Text afterText;
-
-		private GiftType giftType;
-
-		private int id;
-
-		private int limitBreak;
-
-		private Rarity rarity;
-
-		public static QuestResultItemDetailPopup Create(GiftType giftType, int id, int limitBreak = 0, Rarity rarity = Rarity.NONE)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		internal static void Create(object p)
-		{
-		}
+	internal static void Create(object p)
+	{
 	}
 }

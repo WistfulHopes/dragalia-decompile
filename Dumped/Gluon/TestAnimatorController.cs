@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class TestAnimatorController : MonoBehaviour
 {
-	public class TestAnimatorController : MonoBehaviour
-	{
-	}
 }

@@ -2,28 +2,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CircleOutline : Outline
 {
-	[AddComponentMenu("UI/Effects/CircleOutline")]
-	public class CircleOutline : Outline
+	[SerializeField]
+	private bool useGraphicRedAsAlpha;
+
+	private const int quality = 8;
+
+	private List<UIVertex> list;
+
+	public override void ModifyMesh(VertexHelper vh)
 	{
-		[SerializeField]
-		private bool useGraphicRedAsAlpha;
+	}
 
-		private const int quality = 8;
+	protected void ModifyVertices()
+	{
+	}
 
-		private List<UIVertex> list;
-
-		public override void ModifyMesh(VertexHelper vh)
-		{
-		}
-
-		protected void ModifyVertices()
-		{
-		}
-
-		protected void ApplyShadow(int start, int end, float x, float y)
-		{
-		}
+	protected void ApplyShadow(int start, int end, float x, float y)
+	{
 	}
 }

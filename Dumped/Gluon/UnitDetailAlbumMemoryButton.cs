@@ -3,43 +3,42 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class UnitDetailAlbumMemoryButton : MonoBehaviour
 {
-	public class UnitDetailAlbumMemoryButton : MonoBehaviour
+	[SerializeField]
+	public Button button;
+
+	[SerializeField]
+	private Text title;
+
+	[SerializeField]
+	private UnitDetailAlbumMemoryPopup.MemoryType memoryType;
+
+	private UnityAction<UnitDetailAlbumMemoryPopup.MemoryType> onButtonPressed;
+
+	private CharaDataElement charaData;
+
+	public void InitContents(CharaDataElement master, UnitDetailAlbumMemoryPopup.MemoryType type, string str, UnityAction<UnitDetailAlbumMemoryPopup.MemoryType> onCallback)
 	{
-		[SerializeField]
-		public Button button;
+	}
 
-		[SerializeField]
-		private Text title;
+	public bool IsAwakingCondition()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private UnitDetailAlbumMemoryPopup.MemoryType memoryType;
+	public bool IsAwakingSecondCondition()
+	{
+		return default(bool);
+	}
 
-		private UnityAction<UnitDetailAlbumMemoryPopup.MemoryType> onButtonPressed;
+	public void OnButtonPressed()
+	{
+	}
 
-		private CharaDataElement charaData;
-
-		public void InitContents(CharaDataElement master, UnitDetailAlbumMemoryPopup.MemoryType type, string str, UnityAction<UnitDetailAlbumMemoryPopup.MemoryType> onCallback)
-		{
-		}
-
-		public bool IsAwakingCondition()
-		{
-			return default(bool);
-		}
-
-		public bool IsAwakingSecondCondition()
-		{
-			return default(bool);
-		}
-
-		public void OnButtonPressed()
-		{
-		}
-
-		public void IsInteractable(bool interactable)
-		{
-		}
+	public void IsInteractable(bool interactable)
+	{
 	}
 }

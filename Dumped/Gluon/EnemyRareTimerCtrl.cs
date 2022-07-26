@@ -1,66 +1,65 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyRareTimerCtrl : MonoBehaviour
 {
-	public class EnemyRareTimerCtrl : MonoBehaviour
+	private enum SpriteIndex
 	{
-		private enum SpriteIndex
-		{
-			SpriteIcon1,
-			SpriteIcon2,
-			SpriteIcon3,
-			Max
-		}
+		SpriteIcon1,
+		SpriteIcon2,
+		SpriteIcon3,
+		Max
+	}
 
-		[SerializeField]
-		private SpriteRenderer[] timerIcons;
+	[SerializeField]
+	private SpriteRenderer[] timerIcons;
 
-		[SerializeField]
-		private SpriteRenderer timerIconEffect;
+	[SerializeField]
+	private SpriteRenderer timerIconEffect;
 
-		[SerializeField]
-		private float[] iconChangeTimes;
+	[SerializeField]
+	private float[] iconChangeTimes;
 
-		[SerializeField]
-		private float timeSpeedMin;
+	[SerializeField]
+	private float timeSpeedMin;
 
-		[SerializeField]
-		private float timeSpeedMax;
+	[SerializeField]
+	private float timeSpeedMax;
 
-		[SerializeField]
-		private float colorModulusPower;
+	[SerializeField]
+	private float colorModulusPower;
 
-		[SerializeField]
-		private float iconScaleAdd;
+	[SerializeField]
+	private float iconScaleAdd;
 
-		[SerializeField]
-		private float effectScaleMin;
+	[SerializeField]
+	private float effectScaleMin;
 
-		[SerializeField]
-		private float effectScaleMax;
+	[SerializeField]
+	private float effectScaleMax;
 
-		private MaterialPropertyBlock[] propertyBlocks;
+	private MaterialPropertyBlock[] propertyBlocks;
 
-		private EnemyCharacter enemy;
+	private EnemyCharacter enemy;
 
-		private float timeSeed;
+	private float timeSeed;
 
-		private int currentIconIndex;
+	private int currentIconIndex;
 
-		public void Initialize(CharacterBase c)
-		{
-		}
+	public void Initialize(CharacterBase c)
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		public void Visible(bool b)
-		{
-		}
+	public void Visible(bool b)
+	{
+	}
 
-		private void VisibleControl()
-		{
-		}
+	private void VisibleControl()
+	{
 	}
 }

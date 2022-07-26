@@ -1,17 +1,16 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryLogListCellData
 {
-	public class StoryLogListCellData
-	{
-		public int characterId;
+	public int characterId;
 
-		public string voiceId;
+	public string voiceId;
 
-		public string nameString;
+	public string nameString;
 
-		public string messageString;
+	public string messageString;
 
-		public float cellHeight;
+	public float cellHeight;
 
-		public StoryScriptFunctionManager.WindowType windowType;
-	}
+	public StoryScriptFunctionManager.WindowType windowType;
 }

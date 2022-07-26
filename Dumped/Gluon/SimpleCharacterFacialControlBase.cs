@@ -2,79 +2,78 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public abstract class SimpleCharacterFacialControlBase : SimpleCharacterFacialControlInterface
 {
-	public abstract class SimpleCharacterFacialControlBase : SimpleCharacterFacialControlInterface
+	private bool isEnable;
+
+	protected List<Material> materialList;
+
+	protected Vector2 defaultOffset
 	{
-		private bool isEnable;
-
-		protected List<Material> materialList;
-
-		protected Vector2 defaultOffset
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(Vector2);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(Vector2);
 		}
-
-		protected Vector2 currentOffset
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(Vector2);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void Setup(List<Material> materialList)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetEnable(bool enable)
+	protected Vector2 currentOffset
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(Vector2);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool GetEnable()
-		{
-			return default(bool);
-		}
+	public void Setup(List<Material> materialList)
+	{
+	}
 
-		protected void ApplyOffset()
-		{
-		}
+	public void SetEnable(bool enable)
+	{
+	}
 
-		public void LateUpdate()
-		{
-		}
+	public bool GetEnable()
+	{
+		return default(bool);
+	}
 
-		public void SetTrigger(string triggerName)
-		{
-		}
+	protected void ApplyOffset()
+	{
+	}
 
-		protected abstract void OnSetup(out Vector2 defaultTextureOffset);
+	public void LateUpdate()
+	{
+	}
 
-		protected abstract bool OnLateUpdate(out Vector2 outTextureOffset);
+	public void SetTrigger(string triggerName)
+	{
+	}
 
-		protected virtual void OnTrigger(string triggerName)
-		{
-		}
+	protected abstract void OnSetup(out Vector2 defaultTextureOffset);
 
-		public virtual void SetFaceEye(CharaFaceEye faceEye)
-		{
-		}
+	protected abstract bool OnLateUpdate(out Vector2 outTextureOffset);
 
-		public virtual void SetFaceMouth(CharaFaceMouth faceMouth)
-		{
-		}
+	protected virtual void OnTrigger(string triggerName)
+	{
+	}
+
+	public virtual void SetFaceEye(CharaFaceEye faceEye)
+	{
+	}
+
+	public virtual void SetFaceMouth(CharaFaceMouth faceMouth)
+	{
 	}
 }

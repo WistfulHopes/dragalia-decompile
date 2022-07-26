@@ -1,20 +1,19 @@
-namespace Gluon
+namespace Gluon;
+
+public class SummonOddsTableViewCell : TableViewCell<SummonOddsTableViewData>
 {
-	public class SummonOddsTableViewCell : TableViewCell<SummonOddsTableViewData>
+	public class OddsInfo
 	{
-		public class OddsInfo
-		{
-			private int id;
+		private int id;
 
-			private string rate;
+		private string rate;
 
-			private string displayName;
-		}
+		private string displayName;
+	}
 
-		public SummonOddsPopupItemLine itemLine;
+	public SummonOddsPopupItemLine itemLine;
 
-		public override void UpdateContent(SummonOddsTableViewData data)
-		{
-		}
+	public override void UpdateContent(SummonOddsTableViewData data)
+	{
 	}
 }

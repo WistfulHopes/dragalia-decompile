@@ -1,73 +1,72 @@
 using System;
 using Cute.Core;
 
-namespace Gluon
+namespace Gluon;
+
+public class MaterialHarvester : FastUpdateMonoBehaviour
 {
-	public class MaterialHarvester : FastUpdateMonoBehaviour
+	public enum HarvestType
 	{
-		public enum HarvestType
+		None,
+		Gold,
+		Material,
+		Stamina,
+		Num
+	}
+
+	private const float kEnableCropGoldNum = 10f;
+
+	private const float kEnableCropMaterialNum = 1f;
+
+	public HarvestType type;
+
+	public Facility facility;
+
+	private float produceSpeed;
+
+	private float produceMaxValue;
+
+	private float _harvestValue;
+
+	private float harvestDuration;
+
+	private DateTime harvestStartTime;
+
+	private float alreadyPassedHarvestTime;
+
+	public float harvestValue
+	{
+		get
 		{
-			None,
-			Gold,
-			Material,
-			Stamina,
-			Num
+			return default(float);
 		}
-
-		private const float kEnableCropGoldNum = 10f;
-
-		private const float kEnableCropMaterialNum = 1f;
-
-		public HarvestType type;
-
-		public Facility facility;
-
-		private float produceSpeed;
-
-		private float produceMaxValue;
-
-		private float _harvestValue;
-
-		private float harvestDuration;
-
-		private DateTime harvestStartTime;
-
-		private float alreadyPassedHarvestTime;
-
-		public float harvestValue
-		{
-			get
-			{
-				return default(float);
-			}
-			private set
-			{
-			}
-		}
-
-		public void OnInit(FortPlantType type, Facility facility, float enableHarvestDuration)
+		private set
 		{
 		}
+	}
 
-		public void InitToHarvest()
-		{
-		}
+	public void OnInit(FortPlantType type, Facility facility, float enableHarvestDuration)
+	{
+	}
 
-		public void StartToHarvest()
-		{
-		}
+	public void InitToHarvest()
+	{
+	}
 
-		public void UpdateHarvest()
-		{
-		}
+	public void StartToHarvest()
+	{
+	}
 
-		public int GetAlreadyPassedHarvestTime()
-		{
-			return default(int);
-		}
+	public void UpdateHarvest()
+	{
+	}
 
-		private void Init(HarvestType type, Facility facility, float enableHarvestDuration)
-		{
-		}
+	public int GetAlreadyPassedHarvestTime()
+	{
+		return default(int);
+	}
+
+	private void Init(HarvestType type, Facility facility, float enableHarvestDuration)
+	{
 	}
 }

@@ -4,126 +4,119 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TradeMaterialItemConfirmPopup : ShopCommonPopup, ICustomMessage
 {
-	public class TradeMaterialItemConfirmPopup : ShopCommonPopup, ICustomMessage
+	protected ShopTradeProductData.TradeShopItemData data;
+
+	protected Action onPopupClosed;
+
+	public Action onPopupCancelled;
+
+	[SerializeField]
+	public Text itemName;
+
+	public Text itemDescription;
+
+	public CommonIcon icon;
+
+	public Text ownedCount;
+
+	public CommonSliderSelection slider;
+
+	public Text priceText;
+
+	public Text confirmText;
+
+	public GameObject sliderFrame;
+
+	public Button tradeButton;
+
+	[SerializeField]
+	private Text itemNoticeText;
+
+	[SerializeField]
+	public ShopTradeMaterialIcon[] materialIcons;
+
+	[SerializeField]
+	public SelectIconListController selectController;
+
+	[SerializeField]
+	public GameObject ownedCountParent;
+
+	[SerializeField]
+	private List<GameObject> rarityObjs;
+
+	[SerializeField]
+	protected Text selectAmuletText;
+
+	[SerializeField]
+	public Text limitCountText;
+
+	public Text endTimeText;
+
+	public Text limitCommentText;
+
+	public bool isUseShortQuantityLimite;
+
+	[SerializeField]
+	private Text errorText;
+
+	protected int tradeCount;
+
+	protected int selectionTargetIconIndex;
+
+	protected ulong targetKeyId;
+
+	public static TradeMaterialItemConfirmPopup Create(ShopTradeProductData.TradeShopItemData data, Action onPopupClosed)
 	{
-		protected ShopTradeProductData.TradeShopItemData data;
+		return null;
+	}
 
-		protected Action onPopupClosed;
+	protected override void OnDestroy()
+	{
+	}
 
-		public Action onPopupCancelled;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		[Header("Contents")]
-		public Text itemName;
+	protected long GetMaxTradeCount()
+	{
+		return default(long);
+	}
 
-		public Text itemDescription;
+	protected long GetMaxCountByMaterial(int id, int needCount, GiftType giftType = GiftType.MATERIAL)
+	{
+		return default(long);
+	}
 
-		public CommonIcon icon;
+	public void OnSliderValueChanged(float val)
+	{
+	}
 
-		public Text ownedCount;
+	public void OnClosePopup(bool bOK)
+	{
+	}
 
-		public CommonSliderSelection slider;
+	public void RequestItemTrade()
+	{
+	}
 
-		public Text priceText;
+	protected void OnItemTradeSuccess(TreasureTradeTradeResponse response)
+	{
+	}
 
-		public Text confirmText;
+	protected virtual void OnTradeDone()
+	{
+	}
 
-		public GameObject sliderFrame;
+	protected void OnItemTradeSuccess(EventTradeTradeResponse response)
+	{
+	}
 
-		public Button tradeButton;
-
-		[SerializeField]
-		private Text itemNoticeText;
-
-		[SerializeField]
-		[Header("Materials")]
-		public ShopTradeMaterialIcon[] materialIcons;
-
-		[SerializeField]
-		[Header("Selection")]
-		public SelectIconListController selectController;
-
-		[SerializeField]
-		[Header("OnOffs")]
-		public GameObject ownedCountParent;
-
-		[SerializeField]
-		private List<GameObject> rarityObjs;
-
-		[SerializeField]
-		protected Text selectAmuletText;
-
-		[SerializeField]
-		[Header("Limit")]
-		public Text limitCountText;
-
-		public Text endTimeText;
-
-		public Text limitCommentText;
-
-		public bool isUseShortQuantityLimite;
-
-		[SerializeField]
-		[Header("Abirity Crest")]
-		private Text errorText;
-
-		protected int tradeCount;
-
-		protected int selectionTargetIconIndex;
-
-		protected ulong targetKeyId;
-
-		public static TradeMaterialItemConfirmPopup Create(ShopTradeProductData.TradeShopItemData data, Action onPopupClosed)
-		{
-			return null;
-		}
-
-		protected override void OnDestroy()
-		{
-		}
-
-		protected override void Start()
-		{
-		}
-
-		protected long GetMaxTradeCount()
-		{
-			return default(long);
-		}
-
-		protected long GetMaxCountByMaterial(int id, int needCount, GiftType giftType = GiftType.MATERIAL)
-		{
-			return default(long);
-		}
-
-		public void OnSliderValueChanged(float val)
-		{
-		}
-
-		public void OnClosePopup(bool bOK)
-		{
-		}
-
-		public void RequestItemTrade()
-		{
-		}
-
-		protected void OnItemTradeSuccess(TreasureTradeTradeResponse response)
-		{
-		}
-
-		protected virtual void OnTradeDone()
-		{
-		}
-
-		protected void OnItemTradeSuccess(EventTradeTradeResponse response)
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

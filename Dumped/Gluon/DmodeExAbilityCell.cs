@@ -1,30 +1,29 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeExAbilityCell : UnitDetailAbilityInfoCell
 {
-	public class DmodeExAbilityCell : UnitDetailAbilityInfoCell
+	public enum Type
 	{
-		public enum Type
-		{
-			ExAbility,
-			LinkedExAbility,
-			Ability
-		}
+		ExAbility,
+		LinkedExAbility,
+		Ability
+	}
 
-		private int id;
+	private int id;
 
-		private Type type;
+	private Type type;
 
-		private ElementalType element;
+	private ElementalType element;
 
-		public GameObject exAbilityBG;
+	public GameObject exAbilityBG;
 
-		public void Setup(int id, Type type, ElementalType element = ElementalType.NOELEMENT, AbilityConst.UnitType unitType = AbilityConst.UnitType.None)
-		{
-		}
+	public void Setup(int id, Type type, ElementalType element = ElementalType.NOELEMENT, AbilityConst.UnitType unitType = AbilityConst.UnitType.None)
+	{
+	}
 
-		public void OnPressed()
-		{
-		}
+	public void OnPressed()
+	{
 	}
 }

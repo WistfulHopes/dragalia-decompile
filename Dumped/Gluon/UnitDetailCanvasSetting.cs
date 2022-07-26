@@ -1,150 +1,148 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class UnitDetailCanvasSetting : MonoBehaviour
 {
-	public class UnitDetailCanvasSetting : MonoBehaviour
+	[Serializable]
+	public struct BgTransform
 	{
-		[Serializable]
-		public struct BgTransform
-		{
-			public Vector3 position;
+		public Vector3 position;
 
-			public Vector3 rotation;
+		public Vector3 rotation;
 
-			public Vector3 scale;
-		}
+		public Vector3 scale;
+	}
 
-		public enum ProjectionEnum
-		{
-			Perstictive,
-			Orthographic
-		}
+	public enum ProjectionEnum
+	{
+		Perstictive,
+		Orthographic
+	}
 
-		public enum DragonType
-		{
-			Dragon,
-			Human,
-			Other
-		}
+	public enum DragonType
+	{
+		Dragon,
+		Human,
+		Other
+	}
 
-		public enum UnitType
-		{
-			Character,
-			Dragon,
-			HumanDragon,
-			OtherDragon,
-			Weapon,
-			EnumMax
-		}
+	public enum UnitType
+	{
+		Character,
+		Dragon,
+		HumanDragon,
+		OtherDragon,
+		Weapon,
+		EnumMax
+	}
 
-		[HideInInspector]
-		public float viewer2DMaxZoom;
+	[HideInInspector]
+	public float viewer2DMaxZoom;
 
-		[HideInInspector]
-		public float viewer2DMinZoom;
+	[HideInInspector]
+	public float viewer2DMinZoom;
 
-		[HideInInspector]
-		public Vector3[] weaponDetailPos;
+	[HideInInspector]
+	public Vector3[] weaponDetailPos;
 
-		[HideInInspector]
-		public float[] weaponDetailZoom;
+	[HideInInspector]
+	public float[] weaponDetailZoom;
 
-		[HideInInspector]
-		public Vector3[] weaponDetailRotation;
+	[HideInInspector]
+	public Vector3[] weaponDetailRotation;
 
-		[HideInInspector]
-		public int specialWeaponDetailNum;
+	[HideInInspector]
+	public int specialWeaponDetailNum;
 
-		[HideInInspector]
-		public SpecialWeaponDetail[] specialWeaponDetail;
+	[HideInInspector]
+	public SpecialWeaponDetail[] specialWeaponDetail;
 
-		[HideInInspector]
-		public Vector3 charaDetailPos;
+	[HideInInspector]
+	public Vector3 charaDetailPos;
 
-		[HideInInspector]
-		public float charaDetailZoom;
+	[HideInInspector]
+	public float charaDetailZoom;
 
-		[HideInInspector]
-		public Vector3 charaDetailRotation;
+	[HideInInspector]
+	public Vector3 charaDetailRotation;
 
-		[HideInInspector]
-		public float charaMaxZoom;
+	[HideInInspector]
+	public float charaMaxZoom;
 
-		[HideInInspector]
-		public float charaMinZoom;
+	[HideInInspector]
+	public float charaMinZoom;
 
-		[HideInInspector]
-		public float charaZoomSpeed;
+	[HideInInspector]
+	public float charaZoomSpeed;
 
-		[HideInInspector]
-		public float charaRotateSpeed;
+	[HideInInspector]
+	public float charaRotateSpeed;
 
-		[HideInInspector]
-		public Vector3[] dragonsDetailPos;
+	[HideInInspector]
+	public Vector3[] dragonsDetailPos;
 
-		[HideInInspector]
-		public float[] dragonsDetailZoom;
+	[HideInInspector]
+	public float[] dragonsDetailZoom;
 
-		[HideInInspector]
-		public Vector3[] dragonsDetailRotation;
+	[HideInInspector]
+	public Vector3[] dragonsDetailRotation;
 
-		[HideInInspector]
-		public float[] dragonsMaxZoom;
+	[HideInInspector]
+	public float[] dragonsMaxZoom;
 
-		[HideInInspector]
-		public float[] dragonsMinZoom;
+	[HideInInspector]
+	public float[] dragonsMinZoom;
 
-		[HideInInspector]
-		public float[] dragonsZoomSpeed;
+	[HideInInspector]
+	public float[] dragonsZoomSpeed;
 
-		[HideInInspector]
-		public float[] dragonsRotateSpeed;
+	[HideInInspector]
+	public float[] dragonsRotateSpeed;
 
-		[HideInInspector]
-		public float weaponMaxZoom;
+	[HideInInspector]
+	public float weaponMaxZoom;
 
-		[HideInInspector]
-		public float weaponMinZoom;
+	[HideInInspector]
+	public float weaponMinZoom;
 
-		[HideInInspector]
-		public float weaponZoomSpeed;
+	[HideInInspector]
+	public float weaponZoomSpeed;
 
-		[HideInInspector]
-		public float weaponRotateSpeed;
+	[HideInInspector]
+	public float weaponRotateSpeed;
 
-		[SerializeField]
-		[Header("RenderCameraOffset")]
-		public Vector3 charaRenderCameraPosition;
+	[SerializeField]
+	public Vector3 charaRenderCameraPosition;
 
-		public Vector3 charaRenderCameraRotation;
+	public Vector3 charaRenderCameraRotation;
 
-		public Vector3 weaponRenderCameraPosition;
+	public Vector3 weaponRenderCameraPosition;
 
-		[HideInInspector]
-		public float[] renderCameraFieldOfView;
+	[HideInInspector]
+	public float[] renderCameraFieldOfView;
 
-		[HideInInspector]
-		public Vector2[] renderCameraClippingPlanes;
+	[HideInInspector]
+	public Vector2[] renderCameraClippingPlanes;
 
-		[HideInInspector]
-		public ProjectionEnum[] renderCameraProjection;
+	[HideInInspector]
+	public ProjectionEnum[] renderCameraProjection;
 
-		[HideInInspector]
-		public BgTransform[] bgTransformList;
+	[HideInInspector]
+	public BgTransform[] bgTransformList;
 
-		[HideInInspector]
-		public UnitDetailScene unitDetail;
+	[HideInInspector]
+	public UnitDetailScene unitDetail;
 
-		[HideInInspector]
-		public bool isShowViewer;
+	[HideInInspector]
+	public bool isShowViewer;
 
-		public void SetPos()
-		{
-		}
+	public void SetPos()
+	{
+	}
 
-		private void OnValidate()
-		{
-		}
+	private void OnValidate()
+	{
 	}
 }

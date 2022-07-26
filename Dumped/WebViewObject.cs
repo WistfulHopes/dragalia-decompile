@@ -1,18 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
-using Cute.Core;
 using UnityEngine;
 
-[ProjectPrefsAttr("appDomain0", "WebViewã\u0083\u0089ã\u0083¡ã\u0082¤ã\u0083³", "[WebView]")]
-[ProjectPrefsAttr("appDomain1", "WebViewã\u0083\u0089ã\u0083¡ã\u0082¤ã\u0083³", "[WebView]")]
-[ProjectPrefsAttr("appDomain2", "WebViewã\u0083\u0089ã\u0083¡ã\u0082¤ã\u0083³", "[WebView]")]
-[ProjectPrefsAttr("appDomain3", "WebViewã\u0083\u0089ã\u0083¡ã\u0082¤ã\u0083³", "[WebView]")]
-[ProjectPrefsAttr("appDomain4", "WebViewã\u0083\u0089ã\u0083¡ã\u0082¤ã\u0083³", "[WebView]")]
-[ProjectPrefsAttr("appDomain5", "WebViewã\u0083\u0089ã\u0083¡ã\u0082¤ã\u0083³", "[WebView]")]
-[ProjectPrefsAttr("appDomain6", "WebViewã\u0083\u0089ã\u0083¡ã\u0082¤ã\u0083³", "[WebView]")]
-[ProjectPrefsAttr("appDomain7", "WebViewã\u0083\u0089ã\u0083¡ã\u0082¤ã\u0083³", "[WebView]")]
-[ProjectPrefsAttr("appDomain8", "WebViewã\u0083\u0089ã\u0083¡ã\u0082¤ã\u0083³", "[WebView]")]
-[ProjectPrefsAttr("appDomain9", "WebViewã\u0083\u0089ã\u0083¡ã\u0082¤ã\u0083³", "[WebView]")]
 public class WebViewObject : MonoBehaviour
 {
 	private Action<string> onJS;

@@ -1,73 +1,72 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ButtonPressedMark : MonoBehaviour
 {
-	public class ButtonPressedMark : MonoBehaviour
+	public enum Type
 	{
-		public enum Type
-		{
-			Yes,
-			No
-		}
+		Yes,
+		No
+	}
 
-		public RectTransform yesLeftRectTransform;
+	public RectTransform yesLeftRectTransform;
 
-		public RectTransform yesRightRectTransform;
+	public RectTransform yesRightRectTransform;
 
-		public RectTransform noLeftRectTransform;
+	public RectTransform noLeftRectTransform;
 
-		public RectTransform noRightRectTransform;
+	public RectTransform noRightRectTransform;
 
-		public CanvasGroup canvasGroup;
+	public CanvasGroup canvasGroup;
 
-		public bool dontDestroyOnCompleted;
+	public bool dontDestroyOnCompleted;
 
-		private Transform oldParent;
+	private Transform oldParent;
 
-		public bool ignoreTimeScale;
+	public bool ignoreTimeScale;
 
-		public Type type;
+	public Type type;
 
-		public Vector3 initialRootPos;
+	public Vector3 initialRootPos;
 
-		public Vector3 initialYesLeftPos;
+	public Vector3 initialYesLeftPos;
 
-		public Vector3 initialYesRightPos;
+	public Vector3 initialYesRightPos;
 
-		public Vector3 initialNoLeftPos;
+	public Vector3 initialNoLeftPos;
 
-		public Vector3 initialNoRightPos;
+	public Vector3 initialNoRightPos;
 
-		public static void Decided(GameObject buttonObject)
-		{
-		}
+	public static void Decided(GameObject buttonObject)
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void OnDecided()
-		{
-		}
+	public void OnDecided()
+	{
+	}
 
-		private void OnDecidedYes()
-		{
-		}
+	private void OnDecidedYes()
+	{
+	}
 
-		private void OnDecidedNo()
-		{
-		}
+	private void OnDecidedNo()
+	{
+	}
 
-		private void OnBeginAnimation()
-		{
-		}
+	private void OnBeginAnimation()
+	{
+	}
 
-		private void OnCompleted()
-		{
-		}
+	private void OnCompleted()
+	{
 	}
 }

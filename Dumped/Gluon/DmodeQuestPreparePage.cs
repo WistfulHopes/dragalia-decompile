@@ -3,122 +3,119 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeQuestPreparePage : DmodePageBase
 {
-	public class DmodeQuestPreparePage : DmodePageBase
+	public class DmodeSkipFloorData : SceneModelBase
 	{
-		public class DmodeSkipFloorData : SceneModelBase
-		{
-			public int selectedCharaId;
+		public int selectedCharaId;
 
-			public int destinationFloorNum;
+		public int destinationFloorNum;
 
-			public int selectedEditSkill1CharaId;
+		public int selectedEditSkill1CharaId;
 
-			public int selectedEditSkill2CharaId;
+		public int selectedEditSkill2CharaId;
 
-			public DmodeServitorType selectedServitorType;
+		public DmodeServitorType selectedServitorType;
 
-			public DmodeSkipFloorData(int selectedCharaId, int destinationFloorNum, int selectedEditSkill1CharaId, int selectedEditSkill2CharaId, DmodeServitorType selectedServitorType)
-			{
-			}
-		}
-
-		[SerializeField]
-		[Header("UI")]
-		private ButtonWithSelectedImage questStartButtonSelectedImage;
-
-		[SerializeField]
-		private TabBase tabBase;
-
-		[SerializeField]
-		private Button skipFloorButton;
-
-		[SerializeField]
-		private Text skipRemainCountValueText;
-
-		[SerializeField]
-		[Header("Controller")]
-		private DmodeListController dmodeListController;
-
-		[SerializeField]
-		private DmodePartyStatus partyStatus;
-
-		private static readonly float bgGrayOutDuration;
-
-		private static readonly int startFloorNum;
-
-		protected override void Awake()
+		public DmodeSkipFloorData(int selectedCharaId, int destinationFloorNum, int selectedEditSkill1CharaId, int selectedEditSkill2CharaId, DmodeServitorType selectedServitorType)
 		{
 		}
+	}
 
-		private void Start()
-		{
-		}
+	[SerializeField]
+	private ButtonWithSelectedImage questStartButtonSelectedImage;
 
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	[SerializeField]
+	private TabBase tabBase;
 
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
+	[SerializeField]
+	private Button skipFloorButton;
 
-		private void OnBackButtonTouched()
-		{
-		}
+	[SerializeField]
+	private Text skipRemainCountValueText;
 
-		public void GoToGrowthServitor()
-		{
-		}
+	[SerializeField]
+	private DmodeListController dmodeListController;
 
-		public void OnCharacterModelLongPressed()
-		{
-		}
+	[SerializeField]
+	private DmodePartyStatus partyStatus;
 
-		private void ReloadIconList(CommonIconListType type)
-		{
-		}
+	private static readonly float bgGrayOutDuration;
 
-		private void ReloadCharacterModel(int charaId, bool isPlayVoice, PartyReloadCharaAnimationType animationType)
-		{
-		}
+	private static readonly int startFloorNum;
 
-		private void OnSelectedTab(int index)
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		private void ShowSkillDetailPopup(int editSkillIndex)
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void QuestStartButtonPressed()
-		{
-		}
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		public void ShowSkipFloorPopup()
-		{
-		}
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		private void StartDungeonQuest()
-		{
-		}
+	private void OnBackButtonTouched()
+	{
+	}
 
-		private bool CheckSkipableFloor()
-		{
-			return default(bool);
-		}
+	public void GoToGrowthServitor()
+	{
+	}
 
-		private void ResetQuestButtonImage()
-		{
-		}
+	public void OnCharacterModelLongPressed()
+	{
+	}
 
-		private void LoadModels()
-		{
-		}
+	private void ReloadIconList(CommonIconListType type)
+	{
+	}
 
-		private void UpdateEquipData()
-		{
-		}
+	private void ReloadCharacterModel(int charaId, bool isPlayVoice, PartyReloadCharaAnimationType animationType)
+	{
+	}
+
+	private void OnSelectedTab(int index)
+	{
+	}
+
+	private void ShowSkillDetailPopup(int editSkillIndex)
+	{
+	}
+
+	public void QuestStartButtonPressed()
+	{
+	}
+
+	public void ShowSkipFloorPopup()
+	{
+	}
+
+	private void StartDungeonQuest()
+	{
+	}
+
+	private bool CheckSkipableFloor()
+	{
+		return default(bool);
+	}
+
+	private void ResetQuestButtonImage()
+	{
+	}
+
+	private void LoadModels()
+	{
+	}
+
+	private void UpdateEquipData()
+	{
 	}
 }

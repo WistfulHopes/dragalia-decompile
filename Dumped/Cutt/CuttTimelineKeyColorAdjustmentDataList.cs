@@ -1,9 +1,8 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyColorAdjustmentDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyColorAdjustmentData>
 {
-	[Serializable]
-	public class CuttTimelineKeyColorAdjustmentDataList : CuttTimelineKeyDataListTemplate<CuttTimelineKeyColorAdjustmentData>
-	{
-	}
 }

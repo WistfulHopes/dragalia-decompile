@@ -1,76 +1,75 @@
 using System;
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeySceneObjectData : CuttTimelineKeyTransformData, ICuttTimelineKeyHasColor
 {
 	[Serializable]
-	public class CuttTimelineKeySceneObjectData : CuttTimelineKeyTransformData, ICuttTimelineKeyHasColor
+	public class ObjectParamData
 	{
-		[Serializable]
-		public class ObjectParamData
-		{
-			public string childName;
-
-			public Transform targetNode;
-
-			public bool activeSelf;
-
-			public Vector3 localPosition;
-
-			public Vector3 localRotation;
-
-			public Vector3 localScale;
-
-			public void SetData(ObjectParamData src)
-			{
-			}
-
-			public void SetSceneObjectAccessData(ObjectParamData src)
-			{
-			}
-		}
-
-		public string rootObjectName;
+		public string childName;
 
 		public Transform targetNode;
 
-		public ObjectParamData[] objectParamDataArray;
+		public bool activeSelf;
 
-		public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
+		public Vector3 localPosition;
 
-		public override void OnLoad(CuttTimelineControl timelineControl)
+		public Vector3 localRotation;
+
+		public Vector3 localScale;
+
+		public void SetData(ObjectParamData src)
 		{
 		}
 
-		public Color GetRepresentativeColor()
+		public void SetSceneObjectAccessData(ObjectParamData src)
 		{
-			return default(Color);
 		}
+	}
 
-		public bool IsChanged(CuttTimelineKeySceneObjectData targetData)
-		{
-			return default(bool);
-		}
+	public string rootObjectName;
 
-		public void SetData(CuttTimelineKeySceneObjectData targetData)
-		{
-		}
+	public Transform targetNode;
 
-		public void SetSceneObjecttAccessData(CuttTimelineKeySceneObjectData targetData)
-		{
-		}
+	public ObjectParamData[] objectParamDataArray;
 
-		public int GetParamNum()
-		{
-			return default(int);
-		}
+	public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
 
-		private void AddParam()
-		{
-		}
+	public override void OnLoad(CuttTimelineControl timelineControl)
+	{
+	}
 
-		private void RemoveParam(int index)
-		{
-		}
+	public Color GetRepresentativeColor()
+	{
+		return default(Color);
+	}
+
+	public bool IsChanged(CuttTimelineKeySceneObjectData targetData)
+	{
+		return default(bool);
+	}
+
+	public void SetData(CuttTimelineKeySceneObjectData targetData)
+	{
+	}
+
+	public void SetSceneObjecttAccessData(CuttTimelineKeySceneObjectData targetData)
+	{
+	}
+
+	public int GetParamNum()
+	{
+		return default(int);
+	}
+
+	private void AddParam()
+	{
+	}
+
+	private void RemoveParam(int index)
+	{
 	}
 }

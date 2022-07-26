@@ -1,42 +1,41 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FriendListController : TableViewController<FriendListCellData>
 {
-	public class FriendListController : TableViewController<FriendListCellData>
+	public const float cellHeight = 148f;
+
+	public Text NoFriendText;
+
+	public CommonSortButton sortButton;
+
+	private const int paddingBottomLayoutHeight = 80;
+
+	protected override void Awake()
 	{
-		public const float cellHeight = 148f;
+	}
 
-		public Text NoFriendText;
+	public void LoadData(List<FriendListCellData> cellList)
+	{
+	}
 
-		public CommonSortButton sortButton;
+	protected override TableViewCell<FriendListCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		private const int paddingBottomLayoutHeight = 80;
+	public void RemoveCellData(FriendListCellData data)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public void LoadData(List<FriendListCellData> cellList)
-		{
-		}
-
-		protected override TableViewCell<FriendListCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		public void RemoveCellData(FriendListCellData data)
-		{
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public void Reload()
-		{
-		}
+	public void Reload()
+	{
 	}
 }

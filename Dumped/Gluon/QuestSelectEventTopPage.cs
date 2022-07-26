@@ -5,147 +5,146 @@ using System.Runtime.InteropServices;
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSelectEventTopPage : QuestSelectEventPageBase, ICustomMessage
 {
-	public class QuestSelectEventTopPage : QuestSelectEventPageBase, ICustomMessage
+	[SerializeField]
+	private GameObject mainStoryMenuTitle;
+
+	[SerializeField]
+	private GameObject eventSpecialMenuTitle;
+
+	[SerializeField]
+	private GameObject eventNormalMenuTitle;
+
+	[SerializeField]
+	private GameObject eventChallengeMenuTitle;
+
+	[SerializeField]
+	private GameObject eventHighLevelMenuTitle;
+
+	[SerializeField]
+	private Transform disableMenuTitleParent;
+
+	[SerializeField]
+	private FlashPlayerManager flashPlayerManager;
+
+	private int tutorialMultiBattleEventId;
+
+	private int tutorialDragonBattleEventId;
+
+	private int tutorialInterceptionBattleEventId;
+
+	private float totalCellHeight;
+
+	private Dictionary<int, float> scrollHeightDic;
+
+	public static bool needRecreateTopList;
+
+	private Sequence scrollSequence;
+
+	private const float scrollDuration = 0.5f;
+
+	private MainStoryMenuCell storyCell;
+
+	private bool isEventListCreating;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		private GameObject mainStoryMenuTitle;
+	}
 
-		[SerializeField]
-		private GameObject eventSpecialMenuTitle;
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private GameObject eventNormalMenuTitle;
+	private int SetupCategorizedEventMenuCell(List<QuestSelectInstance.QuestEventData> eventsData, GameObject normalPrefab, int startDelayIndex)
+	{
+		return default(int);
+	}
 
-		[SerializeField]
-		private GameObject eventChallengeMenuTitle;
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		[SerializeField]
-		private GameObject eventHighLevelMenuTitle;
+	public override void OnPageBecomeInActive()
+	{
+	}
 
-		[SerializeField]
-		private Transform disableMenuTitleParent;
+	public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private FlashPlayerManager flashPlayerManager;
+	private void ClearEventList()
+	{
+	}
 
-		private int tutorialMultiBattleEventId;
+	private IEnumerator CreateEventList()
+	{
+		return null;
+	}
 
-		private int tutorialDragonBattleEventId;
+	private void UpdateRemainTime()
+	{
+	}
 
-		private int tutorialInterceptionBattleEventId;
+	private void AddMenuTitle(GameObject menuTitleObj, int delayIndex)
+	{
+	}
 
-		private float totalCellHeight;
+	private void CreateTutorialEventList()
+	{
+	}
 
-		private Dictionary<int, float> scrollHeightDic;
+	public void OnBackButtonTouched()
+	{
+	}
 
-		public static bool needRecreateTopList;
+	public void OnMainQuestButtonTouched()
+	{
+	}
 
-		private Sequence scrollSequence;
+	private void ChangePageToMainQuest()
+	{
+	}
 
-		private const float scrollDuration = 0.5f;
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
 
-		private MainStoryMenuCell storyCell;
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		private bool isEventListCreating;
+	public override bool IsLoading()
+	{
+		return default(bool);
+	}
 
-		protected override void Awake()
-		{
-		}
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	public void SetScrollPosition(QuestSelectInstance.QuestEventData targetEvent)
+	{
+	}
 
-		private int SetupCategorizedEventMenuCell(List<QuestSelectInstance.QuestEventData> eventsData, GameObject normalPrefab, int startDelayIndex)
-		{
-			return default(int);
-		}
+	private void SetScrollTween(DragEventScrollRect dragEventScrollRect, float toValue, float duration)
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public void Reload(int eventId)
+	{
+	}
 
-		public override void OnPageBecomeInActive()
-		{
-		}
+	public void ReloadList()
+	{
+	}
 
-		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
-		{
-			return default(bool);
-		}
-
-		private void ClearEventList()
-		{
-		}
-
-		private IEnumerator CreateEventList()
-		{
-			return null;
-		}
-
-		private void UpdateRemainTime()
-		{
-		}
-
-		private void AddMenuTitle(GameObject menuTitleObj, int delayIndex)
-		{
-		}
-
-		private void CreateTutorialEventList()
-		{
-		}
-
-		public void OnBackButtonTouched()
-		{
-		}
-
-		public void OnMainQuestButtonTouched()
-		{
-		}
-
-		private void ChangePageToMainQuest()
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
-
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
-
-		public override bool IsLoading()
-		{
-			return default(bool);
-		}
-
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		public void SetScrollPosition(QuestSelectInstance.QuestEventData targetEvent)
-		{
-		}
-
-		private void SetScrollTween(DragEventScrollRect dragEventScrollRect, float toValue, float duration)
-		{
-		}
-
-		public void Reload(int eventId)
-		{
-		}
-
-		public void ReloadList()
-		{
-		}
-
-		private IEnumerator Reload()
-		{
-			return null;
-		}
+	private IEnumerator Reload()
+	{
+		return null;
 	}
 }

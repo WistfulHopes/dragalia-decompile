@@ -1,58 +1,57 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateBlastDown : CharacterStateBase
 {
-	public class CharacterStateBlastDown : CharacterStateBase
+	private ActionBlastDown action;
+
+	private const float DIE_TIMING = 0.2f;
+
+	private float _elapsed;
+
+	private bool hasDead;
+
+	public float gravity
 	{
-		private ActionBlastDown action;
-
-		private const float DIE_TIMING = 0.2f;
-
-		private float _elapsed;
-
-		private bool hasDead;
-
-		public float gravity
+		get
 		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
+			return default(float);
 		}
-
-		public float angle
-		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
-		}
-
-		public float height
-		{
-			get
-			{
-				return default(float);
-			}
-			set
-			{
-			}
-		}
-
-		protected override void OnStateEnter_Internal()
+		set
 		{
 		}
+	}
 
-		public override void OnStateUpdate()
+	public float angle
+	{
+		get
+		{
+			return default(float);
+		}
+		set
 		{
 		}
+	}
 
-		public override void OnStateExit()
+	public float height
+	{
+		get
+		{
+			return default(float);
+		}
+		set
 		{
 		}
+	}
+
+	protected override void OnStateEnter_Internal()
+	{
+	}
+
+	public override void OnStateUpdate()
+	{
+	}
+
+	public override void OnStateExit()
+	{
 	}
 }

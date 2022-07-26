@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public static class ExtendDmodeServitorPassiveLevel
 {
-	public static class ExtendDmodeServitorPassiveLevel
-	{
-	}
 }

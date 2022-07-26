@@ -4,62 +4,59 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeChooseDragonRewardPopup : PopupBase
 {
-	public class DmodeChooseDragonRewardPopup : PopupBase
+	[SerializeField]
+	public DmodeDragonRewardDetailInfoCell cellTemplate;
+
+	[SerializeField]
+	public Text dmodePointText;
+
+	public static readonly string prefabPath;
+
+	private List<DmodeDragonRewardDetailInfoCell> cells;
+
+	public static DmodeChooseDragonRewardPopup instance
 	{
-		[SerializeField]
-		[Header("Item")]
-		public DmodeDragonRewardDetailInfoCell cellTemplate;
-
-		[SerializeField]
-		[Header("Content")]
-		public Text dmodePointText;
-
-		public static readonly string prefabPath;
-
-		private List<DmodeDragonRewardDetailInfoCell> cells;
-
-		public static DmodeChooseDragonRewardPopup instance
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public static DmodeChooseDragonRewardPopup Create(Action onClose)
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public static void CallClosePU()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	public static DmodeChooseDragonRewardPopup Create(Action onClose)
+	{
+		return null;
+	}
 
-		protected override void Start()
-		{
-		}
+	public static void CallClosePU()
+	{
+	}
 
-		private void UpdateDmodePointView()
-		{
-		}
+	protected override void OnDestroy()
+	{
+	}
 
-		public void OnActiveAbilityListPopupPressed()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		public void OnGetDmodePointButtonPressed()
-		{
-		}
+	private void UpdateDmodePointView()
+	{
+	}
+
+	public void OnActiveAbilityListPopupPressed()
+	{
+	}
+
+	public void OnGetDmodePointButtonPressed()
+	{
 	}
 }

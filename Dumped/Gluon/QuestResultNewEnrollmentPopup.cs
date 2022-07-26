@@ -5,311 +5,310 @@ using FLATOUT.Main;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultNewEnrollmentPopup : CommonPopup
 {
-	public class QuestResultNewEnrollmentPopup : CommonPopup
+	public enum NewEnrollmentType
 	{
-		public enum NewEnrollmentType
-		{
-			None,
-			Character,
-			Dragon,
-			Weapon,
-			Amulet,
-			Talisman
-		}
+		None,
+		Character,
+		Dragon,
+		Weapon,
+		Amulet,
+		Talisman
+	}
 
-		[SerializeField]
-		private GameObject flashNode;
+	[SerializeField]
+	private GameObject flashNode;
 
-		[SerializeField]
-		private Camera _sparkCamera;
+	[SerializeField]
+	private Camera _sparkCamera;
 
-		[SerializeField]
-		private Camera _flashCamera;
+	[SerializeField]
+	private Camera _flashCamera;
 
-		[SerializeField]
-		private FlashPlayerManager _flashPlayerManager;
+	[SerializeField]
+	private FlashPlayerManager _flashPlayerManager;
 
-		[SerializeField]
-		private UnitDetailCanvasSetting canvasSetting;
+	[SerializeField]
+	private UnitDetailCanvasSetting canvasSetting;
 
-		public Action onInAnimationEnd;
+	public Action onInAnimationEnd;
 
-		public Action onOutAnimationStart;
+	public Action onOutAnimationStart;
 
-		private FlashPlayer flashPlayerNewCharacter;
+	private FlashPlayer flashPlayerNewCharacter;
 
-		private const float flashIconScale = 1f;
+	private const float flashIconScale = 1f;
 
-		private NewEnrollmentType newEnrollmentType;
+	private NewEnrollmentType newEnrollmentType;
 
-		private int newEnrollmentId;
+	private int newEnrollmentId;
 
-		private Rarity rarity;
+	private Rarity rarity;
 
-		private ElementalType elementType;
+	private ElementalType elementType;
 
-		private WeaponType weaponType;
+	private WeaponType weaponType;
 
-		private int talismanCharaId;
+	private int talismanCharaId;
 
-		private int[] talismanAbilityIdList;
+	private int[] talismanAbilityIdList;
 
-		public Canvas canvas;
+	public Canvas canvas;
 
-		private const string effectGather = "effect_gather";
+	private const string effectGather = "effect_gather";
 
-		private const string flashOut = "out";
+	private const string flashOut = "out";
 
-		private Action onFinish;
+	private Action onFinish;
 
-		private List<EffectObject> effectObject;
+	private List<EffectObject> effectObject;
 
-		private Vector2 orthographicSize;
+	private Vector2 orthographicSize;
 
-		private const string effectGroup = "EFF_CMN_OUT";
+	private const string effectGroup = "EFF_CMN_OUT";
 
-		private const string charaEffectNearName = "EFF_CMN_OUT_010";
+	private const string charaEffectNearName = "EFF_CMN_OUT_010";
 
-		private const string charaEffectFrontName = "EFF_CMN_OUT_011";
+	private const string charaEffectFrontName = "EFF_CMN_OUT_011";
 
-		private const string rarity2WeaponDragonEffectNearName = "EFF_CMN_OUT_002";
+	private const string rarity2WeaponDragonEffectNearName = "EFF_CMN_OUT_002";
 
-		private const string rarity2WeaponDragonEffectFrontName = "EFF_CMN_OUT_003";
+	private const string rarity2WeaponDragonEffectFrontName = "EFF_CMN_OUT_003";
 
-		private const string rarity3WeaponDragonEffectNearName = "EFF_CMN_OUT_004";
+	private const string rarity3WeaponDragonEffectNearName = "EFF_CMN_OUT_004";
 
-		private const string rarity3WeaponDragonEffectFrontName = "EFF_CMN_OUT_005";
+	private const string rarity3WeaponDragonEffectFrontName = "EFF_CMN_OUT_005";
 
-		private const string rarity4WeaponDragonEffectNearName = "EFF_CMN_OUT_006";
+	private const string rarity4WeaponDragonEffectNearName = "EFF_CMN_OUT_006";
 
-		private const string rarity4WeaponDragonEffectFrontName = "EFF_CMN_OUT_007";
+	private const string rarity4WeaponDragonEffectFrontName = "EFF_CMN_OUT_007";
 
-		private const string rarity5WeaponDragonEffectNearName = "EFF_CMN_OUT_008";
+	private const string rarity5WeaponDragonEffectNearName = "EFF_CMN_OUT_008";
 
-		private const string rarity5WeaponDragonEffectFrontName = "EFF_CMN_OUT_009";
+	private const string rarity5WeaponDragonEffectFrontName = "EFF_CMN_OUT_009";
 
-		private const string rarity9AbilityCrestEffectNearName = "EFF_CMN_OUT_139";
+	private const string rarity9AbilityCrestEffectNearName = "EFF_CMN_OUT_139";
 
-		private const string rarity9AbilityCrestEffectFrontName = "EFF_CMN_OUT_140";
+	private const string rarity9AbilityCrestEffectFrontName = "EFF_CMN_OUT_140";
 
-		private const string summonSeGroup = "COMMON";
+	private const string summonSeGroup = "COMMON";
 
-		private const string cutinRarity2SEName = "SE_OUT_COMMON_0042";
+	private const string cutinRarity2SEName = "SE_OUT_COMMON_0042";
 
-		private const string cutinRarity3SEName = "SE_OUT_COMMON_0043";
+	private const string cutinRarity3SEName = "SE_OUT_COMMON_0043";
 
-		private const string cutinRarity4SEName = "SE_OUT_COMMON_0044";
+	private const string cutinRarity4SEName = "SE_OUT_COMMON_0044";
 
-		private const string cutinRarity5SEName = "SE_OUT_COMMON_0045";
+	private const string cutinRarity5SEName = "SE_OUT_COMMON_0045";
 
-		private const string cutinMainDragon = "SE_OUT_COMMON_0052";
+	private const string cutinMainDragon = "SE_OUT_COMMON_0052";
 
-		private const string newCommerSeGroup = "STORY_COMMON";
+	private const string newCommerSeGroup = "STORY_COMMON";
 
-		private const string newCommerSe = "SE_OUT_COMMON_0039";
+	private const string newCommerSe = "SE_OUT_COMMON_0039";
 
-		private Camera popypUiCamera;
+	private Camera popypUiCamera;
 
-		private string displayName;
+	private string displayName;
 
-		private string replaceRarityPath;
+	private string replaceRarityPath;
 
-		private string replaceDragonGetRarity2;
+	private string replaceDragonGetRarity2;
 
-		private string replaceDragonGetRarity3;
+	private string replaceDragonGetRarity3;
 
-		private string replaceDragonGetRarity4;
+	private string replaceDragonGetRarity4;
 
-		private string replaceDragonGetRarity5;
+	private string replaceDragonGetRarity5;
 
-		private string replaceWeaponGetRarity2;
+	private string replaceWeaponGetRarity2;
 
-		private string replaceWeaponGetRarity3;
+	private string replaceWeaponGetRarity3;
 
-		private string replaceWeaponGetRarity4;
+	private string replaceWeaponGetRarity4;
 
-		private string replaceWeaponGetRarity5;
+	private string replaceWeaponGetRarity5;
 
-		private string replaceAmuletGetRarity2;
+	private string replaceAmuletGetRarity2;
 
-		private string replaceAmuletGetRarity3;
+	private string replaceAmuletGetRarity3;
 
-		private string replaceAmuletGetRarity4;
+	private string replaceAmuletGetRarity4;
 
-		private string replaceAmuletGetRarity5;
+	private string replaceAmuletGetRarity5;
 
-		private string replaceAmuletGetRarity9;
+	private string replaceAmuletGetRarity9;
 
-		private static readonly string replaceTalismanCharaTextureObjectName;
+	private static readonly string replaceTalismanCharaTextureObjectName;
 
-		private static readonly string replaceTalismanAbility1TextureObjectName;
+	private static readonly string replaceTalismanAbility1TextureObjectName;
 
-		private static readonly string replaceTalismanAbility2TextureObjectName;
+	private static readonly string replaceTalismanAbility2TextureObjectName;
 
-		private static readonly string replaceTalismanAbility3TextureObjectName;
+	private static readonly string replaceTalismanAbility3TextureObjectName;
 
-		private static readonly string replaceTalismanFrameTextureObjectName;
+	private static readonly string replaceTalismanFrameTextureObjectName;
 
-		private static readonly string replaceTalismanBgTextureObjectName;
+	private static readonly string replaceTalismanBgTextureObjectName;
 
-		private static readonly string replaceTalismanGetTextName;
+	private static readonly string replaceTalismanGetTextName;
 
-		public RawImage modelViewImage;
+	public RawImage modelViewImage;
 
-		public float detailModelZoom;
+	public float detailModelZoom;
 
-		public GameObject unitModelNode;
+	public GameObject unitModelNode;
 
-		public Vector3 detailModelPos;
+	public Vector3 detailModelPos;
 
-		public Camera render3dCamera;
+	public Camera render3dCamera;
 
-		public UnitDetailUnitShaderSettings unitShaderSettings;
+	public UnitDetailUnitShaderSettings unitShaderSettings;
 
-		private GameObject unitObject;
+	private GameObject unitObject;
 
-		private bool isSkip;
+	private bool isSkip;
 
-		private bool isPrepare;
+	private bool isPrepare;
 
-		private int baseId;
+	private int baseId;
 
-		private int variationId;
+	private int variationId;
 
-		private Coroutine flashPlayCorutine;
+	private Coroutine flashPlayCorutine;
 
-		private Coroutine voicePlayCorutine;
+	private Coroutine voicePlayCorutine;
 
-		private Coroutine sePlayCorutine;
+	private Coroutine sePlayCorutine;
 
-		private Coroutine sparkPlayCorutine;
+	private Coroutine sparkPlayCorutine;
 
-		public Camera sparkCamera => null;
+	public Camera sparkCamera => null;
 
-		public Camera flashCamera => null;
+	public Camera flashCamera => null;
 
-		public FlashPlayerManager flashPlayerManager => null;
+	public FlashPlayerManager flashPlayerManager => null;
 
-		public int sortingOrder => default(int);
+	public int sortingOrder => default(int);
 
-		public static QuestResultNewEnrollmentPopup Create()
-		{
-			return null;
-		}
+	public static QuestResultNewEnrollmentPopup Create()
+	{
+		return null;
+	}
 
-		public void InitializeEnrollmentTalisman(int id, int[] additionalAbilityIdList, Camera uiCamera, Action onComplete)
-		{
-		}
+	public void InitializeEnrollmentTalisman(int id, int[] additionalAbilityIdList, Camera uiCamera, Action onComplete)
+	{
+	}
 
-		public void NewCharacterPrepare(int id, NewEnrollmentType type, Camera uiCamera, Action finish)
-		{
-		}
+	public void NewCharacterPrepare(int id, NewEnrollmentType type, Camera uiCamera, Action finish)
+	{
+	}
 
-		private void LoadAsync()
-		{
-		}
+	private void LoadAsync()
+	{
+	}
 
-		private void OnNewCharacterF2ULoad(int index)
-		{
-		}
+	private void OnNewCharacterF2ULoad(int index)
+	{
+	}
 
-		private void ReplaceTalismanCharacterTexture(FlPlane plane, string planeName)
-		{
-		}
+	private void ReplaceTalismanCharacterTexture(FlPlane plane, string planeName)
+	{
+	}
 
-		private void ReplaceTalismanAbilityTexure(FlPlane plane, int abilityId)
-		{
-		}
+	private void ReplaceTalismanAbilityTexure(FlPlane plane, int abilityId)
+	{
+	}
 
-		private void ReplaceTalismanFrameTexture(FlPlane plane, string planeName)
-		{
-		}
+	private void ReplaceTalismanFrameTexture(FlPlane plane, string planeName)
+	{
+	}
 
-		private void ApplyReplaceMat(FlPlane plane, Material replaceMat, string planeName, int baseId, int varId)
-		{
-		}
+	private void ApplyReplaceMat(FlPlane plane, Material replaceMat, string planeName, int baseId, int varId)
+	{
+	}
 
-		private void Play()
-		{
-		}
+	private void Play()
+	{
+	}
 
-		private void OnPlayNewCommerSe()
-		{
-		}
+	private void OnPlayNewCommerSe()
+	{
+	}
 
-		public void OnFlashPlay()
-		{
-		}
+	public void OnFlashPlay()
+	{
+	}
 
-		private IEnumerator OnFlashPlayCorutine()
-		{
-			return null;
-		}
+	private IEnumerator OnFlashPlayCorutine()
+	{
+		return null;
+	}
 
-		private void OnInAnimationEnd()
-		{
-		}
+	private void OnInAnimationEnd()
+	{
+	}
 
-		public void OnNewCharacterSparkEffect()
-		{
-		}
+	public void OnNewCharacterSparkEffect()
+	{
+	}
 
-		private IEnumerator OnNewCharacterSparkEffectCorutine()
-		{
-			return null;
-		}
+	private IEnumerator OnNewCharacterSparkEffectCorutine()
+	{
+		return null;
+	}
 
-		private void OnNewCharacterSparkOut()
-		{
-		}
+	private void OnNewCharacterSparkOut()
+	{
+	}
 
-		private void OnVoicePlay()
-		{
-		}
+	private void OnVoicePlay()
+	{
+	}
 
-		private IEnumerator OnVoicePlayCorutine()
-		{
-			return null;
-		}
+	private IEnumerator OnVoicePlayCorutine()
+	{
+		return null;
+	}
 
-		private void OnCutinSePlay()
-		{
-		}
+	private void OnCutinSePlay()
+	{
+	}
 
-		private IEnumerator OnCutinSePlayCorutine()
-		{
-			return null;
-		}
+	private IEnumerator OnCutinSePlayCorutine()
+	{
+		return null;
+	}
 
-		private void OnOutAnimation()
-		{
-		}
+	private void OnOutAnimation()
+	{
+	}
 
-		public void ClosePage()
-		{
-		}
+	public void ClosePage()
+	{
+	}
 
-		public void OnSkip()
-		{
-		}
+	public void OnSkip()
+	{
+	}
 
-		public void SetWeaponModel(int id)
-		{
-		}
+	public void SetWeaponModel(int id)
+	{
+	}
 
-		public GameObject LoadWeapon(int baseId, int variationId)
-		{
-			return null;
-		}
+	public GameObject LoadWeapon(int baseId, int variationId)
+	{
+		return null;
+	}
 
-		public void SetupModelViewImage()
-		{
-		}
+	public void SetupModelViewImage()
+	{
+	}
 
-		public void SetupInitWeaponPos(int id)
-		{
-		}
+	public void SetupInitWeaponPos(int id)
+	{
 	}
 }

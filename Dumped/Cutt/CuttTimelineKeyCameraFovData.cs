@@ -1,14 +1,13 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyCameraFovData : CuttTimelineKeyWithInterpolate
 {
-	[Serializable]
-	public class CuttTimelineKeyCameraFovData : CuttTimelineKeyWithInterpolate
-	{
-		public CuttCameraFovType fovType;
+	public CuttCameraFovType fovType;
 
-		public float fov;
+	public float fov;
 
-		public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
-	}
+	public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
 }

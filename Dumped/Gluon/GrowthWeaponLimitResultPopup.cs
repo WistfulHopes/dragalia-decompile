@@ -4,49 +4,48 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthWeaponLimitResultPopup : CommonPopup
 {
-	public class GrowthWeaponLimitResultPopup : CommonPopup
+	public Text messageText;
+
+	public CommonUnitIcon unitIcon;
+
+	public GameObject limitBreakParamBase;
+
+	public GameObject limitOverParamBase;
+
+	public Text beforeLimitBreakText;
+
+	public Text afterLimitBreakText;
+
+	public Text beforeLimitOverText;
+
+	public Text afterLimitOverText;
+
+	public Action popAnimationEndedCallBack;
+
+	private GrowthUnitEnhanceModel model;
+
+	public static GrowthWeaponLimitResultPopup Create()
 	{
-		public Text messageText;
+		return null;
+	}
 
-		public CommonUnitIcon unitIcon;
+	public void InitPopup(BuildupPieceType type, GrowthUnitEnhanceModel model, int beforeParam)
+	{
+	}
 
-		public GameObject limitBreakParamBase;
+	private void SetLimitBreakResult(int beforeParam)
+	{
+	}
 
-		public GameObject limitOverParamBase;
+	private void SetLimitOverResult(int beforeParam)
+	{
+	}
 
-		public Text beforeLimitBreakText;
-
-		public Text afterLimitBreakText;
-
-		public Text beforeLimitOverText;
-
-		public Text afterLimitOverText;
-
-		public Action popAnimationEndedCallBack;
-
-		private GrowthUnitEnhanceModel model;
-
-		public static GrowthWeaponLimitResultPopup Create()
-		{
-			return null;
-		}
-
-		public void InitPopup(BuildupPieceType type, GrowthUnitEnhanceModel model, int beforeParam)
-		{
-		}
-
-		private void SetLimitBreakResult(int beforeParam)
-		{
-		}
-
-		private void SetLimitOverResult(int beforeParam)
-		{
-		}
-
-		public override void StartShowAnimation([Optional] UnityEvent onCompleted)
-		{
-		}
+	public override void StartShowAnimation([Optional] UnityEvent onCompleted)
+	{
 	}
 }

@@ -2,31 +2,29 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildLoginBonusPopup : PopupBase
 {
-	public class GuildLoginBonusPopup : PopupBase
+	[SerializeField]
+	public Transform iconParent;
+
+	public const string prefabPath = "Prefabs/OutGame/Guild/GuildLoginBonusPopup";
+
+	private Action onDone;
+
+	private List<EntityData> dataList;
+
+	public static GuildLoginBonusPopup Create(List<EntityData> dataList, Action onDone)
 	{
-		[SerializeField]
-		[Header("Components")]
-		public Transform iconParent;
+		return null;
+	}
 
-		public const string prefabPath = "Prefabs/OutGame/Guild/GuildLoginBonusPopup";
+	protected override void Start()
+	{
+	}
 
-		private Action onDone;
-
-		private List<EntityData> dataList;
-
-		public static GuildLoginBonusPopup Create(List<EntityData> dataList, Action onDone)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnCloseButtonPressed()
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
 	}
 }

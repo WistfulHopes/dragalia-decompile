@@ -1,32 +1,28 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingPartyMenuPopup : PopupBase
 {
-	public class MatchingPartyMenuPopup : PopupBase
+	[SerializeField]
+	public UnityEvent autoPartyButtonPressed;
+
+	[SerializeField]
+	public UnityEvent charaPartyButtonPressed;
+
+	[SerializeField]
+	public UnityEvent bgButtonPressed;
+
+	public void OnAutoPartyButtonPressed()
 	{
-		[SerializeField]
-		[Header("Callbacks")]
-		public UnityEvent autoPartyButtonPressed;
+	}
 
-		[SerializeField]
-		[Header("Callbacks")]
-		public UnityEvent charaPartyButtonPressed;
+	public void OnCharaPartyButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		[Header("Callbacks")]
-		public UnityEvent bgButtonPressed;
-
-		public void OnAutoPartyButtonPressed()
-		{
-		}
-
-		public void OnCharaPartyButtonPressed()
-		{
-		}
-
-		public void OnBgButtonPressed()
-		{
-		}
+	public void OnBgButtonPressed()
+	{
 	}
 }

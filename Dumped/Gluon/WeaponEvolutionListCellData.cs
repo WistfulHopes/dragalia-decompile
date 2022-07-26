@@ -1,9 +1,8 @@
-namespace Gluon
-{
-	public class WeaponEvolutionListCellData : CommonEquipIconCellData
-	{
-		public bool isEvolution;
+namespace Gluon;
 
-		public bool isShowUpgradeIcon;
-	}
+public class WeaponEvolutionListCellData : CommonEquipIconCellData
+{
+	public bool isEvolution;
+
+	public bool isShowUpgradeIcon;
 }

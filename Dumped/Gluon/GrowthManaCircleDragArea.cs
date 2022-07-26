@@ -1,13 +1,12 @@
-namespace Gluon
-{
-	public class GrowthManaCircleDragArea : GrowthManaCircleDraggable
-	{
-		private void Start()
-		{
-		}
+namespace Gluon;
 
-		protected override void NotifyDraggingToScene(bool arg)
-		{
-		}
+public class GrowthManaCircleDragArea : GrowthManaCircleDraggable
+{
+	private void Start()
+	{
+	}
+
+	protected override void NotifyDraggingToScene(bool arg)
+	{
 	}
 }

@@ -1,45 +1,44 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthWeaponAbilitySelectPopup : CommonPopup
 {
-	public class GrowthWeaponAbilitySelectPopup : CommonPopup
+	public GrowthWeaponAbilitySelectPopupListController weaponTypeAbilityListController;
+
+	private GrowthUnitEnhanceModel model;
+
+	private List<int> selectIdList;
+
+	public int[] selectIds => null;
+
+	public static GrowthWeaponAbilitySelectPopup Create()
 	{
-		public GrowthWeaponAbilitySelectPopupListController weaponTypeAbilityListController;
+		return null;
+	}
 
-		private GrowthUnitEnhanceModel model;
+	public void InitPopup(GrowthUnitEnhanceModel model)
+	{
+	}
 
-		private List<int> selectIdList;
+	private void LoadCellList()
+	{
+	}
 
-		public int[] selectIds => null;
+	private ulong[] SetWeaponPassiveAbilityList()
+	{
+		return null;
+	}
 
-		public static GrowthWeaponAbilitySelectPopup Create()
-		{
-			return null;
-		}
+	private void OnIconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		public void InitPopup(GrowthUnitEnhanceModel model)
-		{
-		}
+	private void OnIconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private void LoadCellList()
-		{
-		}
-
-		private ulong[] SetWeaponPassiveAbilityList()
-		{
-			return null;
-		}
-
-		private void OnIconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private void OnIconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
-
-		private void ShowReleaseConditionPopup(int conditionParam)
-		{
-		}
+	private void ShowReleaseConditionPopup(int conditionParam)
+	{
 	}
 }

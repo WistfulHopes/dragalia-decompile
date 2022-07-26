@@ -1,13 +1,12 @@
 using UnityEngine;
 
-namespace Gluon
-{
-	public class StrongButton : MonoBehaviour
-	{
-		private Color originalOutlineColor;
+namespace Gluon;
 
-		public void SetInteractable(bool interactable)
-		{
-		}
+public class StrongButton : MonoBehaviour
+{
+	private Color originalOutlineColor;
+
+	public void SetInteractable(bool interactable)
+	{
 	}
 }

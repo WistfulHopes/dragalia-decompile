@@ -1,24 +1,23 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class ContactPointInfo
 {
-	[Serializable]
-	public class ContactPointInfo
+	[SerializeField]
+	public string boneName;
+
+	public float r;
+
+	public Vector3 offset;
+
+	public ContactPointInfo()
 	{
-		[SerializeField]
-		public string boneName;
+	}
 
-		public float r;
-
-		public Vector3 offset;
-
-		public ContactPointInfo()
-		{
-		}
-
-		public ContactPointInfo(string a_boneName, float a_r)
-		{
-		}
+	public ContactPointInfo(string a_boneName, float a_r)
+	{
 	}
 }

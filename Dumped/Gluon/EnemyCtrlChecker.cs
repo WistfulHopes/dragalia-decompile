@@ -1,41 +1,40 @@
-namespace Gluon
+namespace Gluon;
+
+public class EnemyCtrlChecker
 {
-	public class EnemyCtrlChecker
+	private bool _isEnabled;
+
+	private bool _isInExecScript;
+
+	private bool _didActionIdSet;
+
+	private static readonly int CheckErrorThreshold;
+
+	private float _checkErrorTimer;
+
+	private int _enemyId;
+
+	public EnemyCtrlChecker(int id)
 	{
-		private bool _isEnabled;
+	}
 
-		private bool _isInExecScript;
+	public void BeginExecScript()
+	{
+	}
 
-		private bool _didActionIdSet;
+	public void EndExecScript()
+	{
+	}
 
-		private static readonly int CheckErrorThreshold;
+	public void NotifySetActionId()
+	{
+	}
 
-		private float _checkErrorTimer;
+	public void NotifySetupSoloAI()
+	{
+	}
 
-		private int _enemyId;
-
-		public EnemyCtrlChecker(int id)
-		{
-		}
-
-		public void BeginExecScript()
-		{
-		}
-
-		public void EndExecScript()
-		{
-		}
-
-		public void NotifySetActionId()
-		{
-		}
-
-		public void NotifySetupSoloAI()
-		{
-		}
-
-		private void Error()
-		{
-		}
+	private void Error()
+	{
 	}
 }

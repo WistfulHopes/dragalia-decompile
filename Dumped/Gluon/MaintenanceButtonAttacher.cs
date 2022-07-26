@@ -1,17 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[DisallowMultipleComponent]
+public class MaintenanceButtonAttacher : MonoBehaviour
 {
-	[DisallowMultipleComponent]
-	public class MaintenanceButtonAttacher : MonoBehaviour
+	public List<MaintenanceFunctionType> funcTypes;
+
+	public PointerEventHandler handlerObject;
+
+	private void Awake()
 	{
-		public List<MaintenanceFunctionType> funcTypes;
-
-		public PointerEventHandler handlerObject;
-
-		private void Awake()
-		{
-		}
 	}
 }

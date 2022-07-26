@@ -1,15 +1,16 @@
-namespace Cutt
+namespace Cutt;
+
+public enum CuttEventType
 {
-	public enum CuttEventType
-	{
-		PAUSE,
-		WAIT,
-		CONTINUE_PRINT,
-		PLAYER_ACTION,
-		ENEMY_ACTION,
-		SKIP_POINT,
-		TAP_WAIT,
-		ROTATE_CHARA,
-		FORCE_SKIP
-	}
+	PAUSE,
+	WAIT,
+	CONTINUE_PRINT,
+	PLAYER_ACTION,
+	ENEMY_ACTION,
+	SKIP_POINT,
+	TAP_WAIT,
+	ROTATE_CHARA,
+	FORCE_SKIP,
+	COMMAND_START,
+	COMMAND_END
 }

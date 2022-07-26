@@ -1,65 +1,64 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class MultiPlayErrorEventService
 {
-	public class MultiPlayErrorEventService
+	public class Event
 	{
-		public class Event
+		public enum Types
 		{
-			public enum Types
-			{
-				DisconnectOtherPlayer,
-				DisconnectOwn,
-				DisableRanking,
-				DisableInstructorBonus
-			}
-
-			public Types type;
-
-			public MultiPlayError error;
-
-			public int disconnectedActorId;
+			DisconnectOtherPlayer,
+			DisconnectOwn,
+			DisableRanking,
+			DisableInstructorBonus
 		}
 
-		private List<Event> _queue;
+		public Types type;
 
-		public bool HasEvent()
-		{
-			return default(bool);
-		}
+		public MultiPlayError error;
 
-		public void Enqueue(Event e)
-		{
-		}
+		public int disconnectedActorId;
+	}
 
-		public Event Dequeue()
-		{
-			return null;
-		}
+	private List<Event> _queue;
 
-		public bool CanProcessMultiPlayErrorEvent()
-		{
-			return default(bool);
-		}
+	public bool HasEvent()
+	{
+		return default(bool);
+	}
 
-		public static Event CreateDisconnectOtherPlayerEvent(int disconnectedActorId)
-		{
-			return null;
-		}
+	public void Enqueue(Event e)
+	{
+	}
 
-		public static Event CreateDisconnectOwnEvent(MultiPlayError error)
-		{
-			return null;
-		}
+	public Event Dequeue()
+	{
+		return null;
+	}
 
-		public static Event CreateDisableRankingEvent()
-		{
-			return null;
-		}
+	public bool CanProcessMultiPlayErrorEvent()
+	{
+		return default(bool);
+	}
 
-		public static Event CreateDisableInstructorBonusEvent()
-		{
-			return null;
-		}
+	public static Event CreateDisconnectOtherPlayerEvent(int disconnectedActorId)
+	{
+		return null;
+	}
+
+	public static Event CreateDisconnectOwnEvent(MultiPlayError error)
+	{
+		return null;
+	}
+
+	public static Event CreateDisableRankingEvent()
+	{
+		return null;
+	}
+
+	public static Event CreateDisableInstructorBonusEvent()
+	{
+		return null;
 	}
 }

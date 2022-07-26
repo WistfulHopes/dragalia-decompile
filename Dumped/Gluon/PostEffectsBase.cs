@@ -1,73 +1,72 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public abstract class PostEffectsBase : FixedImageEffect
 {
-	[ExecuteAlways]
-	public abstract class PostEffectsBase : FixedImageEffect
+	protected bool supportHDRTextures;
+
+	protected bool supportDX11;
+
+	protected bool isSupported;
+
+	private bool mStarted;
+
+	public Material CheckShaderAndCreateMaterial(Shader s, Material m2Create)
 	{
-		protected bool supportHDRTextures;
+		return null;
+	}
 
-		protected bool supportDX11;
+	public Material CreateMaterial(Shader s, Material m2Create)
+	{
+		return null;
+	}
 
-		protected bool isSupported;
+	public bool CheckSupport()
+	{
+		return default(bool);
+	}
 
-		private bool mStarted;
+	public abstract bool CheckResources();
 
-		public Material CheckShaderAndCreateMaterial(Shader s, Material m2Create)
-		{
-			return null;
-		}
+	public bool CheckSupport(bool needDepth)
+	{
+		return default(bool);
+	}
 
-		public Material CreateMaterial(Shader s, Material m2Create)
-		{
-			return null;
-		}
+	public bool CheckSupport(bool needDepth, bool needHdr)
+	{
+		return default(bool);
+	}
 
-		public bool CheckSupport()
-		{
-			return default(bool);
-		}
+	public bool Dx11Support()
+	{
+		return default(bool);
+	}
 
-		public abstract bool CheckResources();
+	public void ReportAutoDisable()
+	{
+	}
 
-		public bool CheckSupport(bool needDepth)
-		{
-			return default(bool);
-		}
+	public bool CheckShader(Shader s)
+	{
+		return default(bool);
+	}
 
-		public bool CheckSupport(bool needDepth, bool needHdr)
-		{
-			return default(bool);
-		}
+	public void NotSupported()
+	{
+	}
 
-		public bool Dx11Support()
-		{
-			return default(bool);
-		}
+	public void DrawBorder(RenderTexture dest, Material material)
+	{
+	}
 
-		public void ReportAutoDisable()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		public bool CheckShader(Shader s)
-		{
-			return default(bool);
-		}
-
-		public void NotSupported()
-		{
-		}
-
-		public void DrawBorder(RenderTexture dest, Material material)
-		{
-		}
-
-		private void OnEnable()
-		{
-		}
-
-		protected override void Awake()
-		{
-		}
+	protected override void Awake()
+	{
 	}
 }

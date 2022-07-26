@@ -1,17 +1,16 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsColor : ActionParts
 {
-	public class ActionPartsColor : ActionParts
+	private readonly ColorData _partsData;
+
+	public ActionPartsColor(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly ColorData _partsData;
+	}
 
-		public ActionPartsColor(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

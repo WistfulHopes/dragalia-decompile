@@ -2,28 +2,27 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharangeBonusPlate : MonoBehaviour
 {
-	public class CharangeBonusPlate : MonoBehaviour
+	[SerializeField]
+	private Image[] treasureBoxClosedImages;
+
+	[SerializeField]
+	private Image[] treasureBoxOpenedImages;
+
+	[SerializeField]
+	protected Image completeImage;
+
+	[SerializeField]
+	protected Text resetText;
+
+	public void SetBonusInformation(QuestEventMenuElement eventMenuElement)
 	{
-		[SerializeField]
-		private Image[] treasureBoxClosedImages;
+	}
 
-		[SerializeField]
-		private Image[] treasureBoxOpenedImages;
-
-		[SerializeField]
-		protected Image completeImage;
-
-		[SerializeField]
-		protected Text resetText;
-
-		public void SetBonusInformation(QuestEventMenuElement eventMenuElement)
-		{
-		}
-
-		private void SetBonusBoxes(int openedCount, int maxCount)
-		{
-		}
+	private void SetBonusBoxes(int openedCount, int maxCount)
+	{
 	}
 }

@@ -1,26 +1,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPagePresentAllReceiveConfirmPopup : CommonPopup
 {
-	public class MyPagePresentAllReceiveConfirmPopup : CommonPopup
+	public MyPagePresentListPopup presentListPopup;
+
+	[SerializeField]
+	private MyPagePresentGroupListController groupListController;
+
+	private List<MyPagePresentGroupListCellData> groupCellDataList;
+
+	private const string prefabPath = "Prefabs/OutGame/Present/MyPagePresentAllReceiveConfirmPopup";
+
+	public static MyPagePresentAllReceiveConfirmPopup Create()
 	{
-		public MyPagePresentListPopup presentListPopup;
+		return null;
+	}
 
-		[SerializeField]
-		private MyPagePresentGroupListController groupListController;
-
-		private List<MyPagePresentGroupListCellData> groupCellDataList;
-
-		private const string prefabPath = "Prefabs/OutGame/Present/MyPagePresentAllReceiveConfirmPopup";
-
-		public static MyPagePresentAllReceiveConfirmPopup Create()
-		{
-			return null;
-		}
-
-		public void InitSetting(List<MyPagePresentListCellData> presentCellDataList)
-		{
-		}
+	public void InitSetting(List<MyPagePresentListCellData> presentCellDataList)
+	{
 	}
 }

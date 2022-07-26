@@ -4,74 +4,73 @@ using Gluon.Mission.ListView;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MissionDrillDetailUI : MonoBehaviour
 {
-	public class MissionDrillDetailUI : MonoBehaviour
+	[SerializeField]
+	private Text missionGroupTitleText;
+
+	[SerializeField]
+	private MissionDrillDetailUIFadeParts currentParts;
+
+	[SerializeField]
+	private MissionDrillDetailUIFadeParts nextParts;
+
+	[SerializeField]
+	private Image challengeButtonImage;
+
+	[SerializeField]
+	private float fadeDuration;
+
+	[SerializeField]
+	private FlashPlayerManager flashPlayerManager;
+
+	[SerializeField]
+	private CanvasGroup stampFlashParentCanvasGroup;
+
+	private MissionDrillDetailUIFadeParts activeParts;
+
+	private FlashPlayer stampFlash;
+
+	private const string stampFlashPath = "Prefabs/OutGame/MissionDrill/pf_NhaamDrillStamp";
+
+	private UIAnimationBase uiAnimation;
+
+	private void Start()
 	{
-		[SerializeField]
-		private Text missionGroupTitleText;
+	}
 
-		[SerializeField]
-		private MissionDrillDetailUIFadeParts currentParts;
+	public void Setup(MissionDrillGroupElement missionDrillGroup, MissionTableViewData missionTableViewData, MissionDrillDataElement missionDrillData)
+	{
+	}
 
-		[SerializeField]
-		private MissionDrillDetailUIFadeParts nextParts;
+	private void Setup(MissionDrillDetailUIFadeParts parts, MissionDrillGroupElement missionDrillGroup, MissionTableViewData missionTableViewData, MissionDrillDataElement missionDrillData, float alpha)
+	{
+	}
 
-		[SerializeField]
-		private Image challengeButtonImage;
+	private void PrepareFlash()
+	{
+	}
 
-		[SerializeField]
-		private float fadeDuration;
+	public void PlayMissionCompleteAnimation(Sequence sequence, MissionDrillGroupElement missionDrillGroup, MissionTableViewData missionTableViewData, MissionDrillDataElement missionDrillData)
+	{
+	}
 
-		[SerializeField]
-		private FlashPlayerManager flashPlayerManager;
+	public void OnChallangeButtonClicked()
+	{
+	}
 
-		[SerializeField]
-		private CanvasGroup stampFlashParentCanvasGroup;
+	public void PlayEnterAnimation()
+	{
+	}
 
-		private MissionDrillDetailUIFadeParts activeParts;
+	public void PlayExitAnimation()
+	{
+	}
 
-		private FlashPlayer stampFlash;
-
-		private const string stampFlashPath = "Prefabs/OutGame/MissionDrill/pf_NhaamDrillStamp";
-
-		private UIAnimationBase uiAnimation;
-
-		private void Start()
-		{
-		}
-
-		public void Setup(MissionDrillGroupElement missionDrillGroup, MissionTableViewData missionTableViewData, MissionDrillDataElement missionDrillData)
-		{
-		}
-
-		private void Setup(MissionDrillDetailUIFadeParts parts, MissionDrillGroupElement missionDrillGroup, MissionTableViewData missionTableViewData, MissionDrillDataElement missionDrillData, float alpha)
-		{
-		}
-
-		private void PrepareFlash()
-		{
-		}
-
-		public void PlayMissionCompleteAnimation(Sequence sequence, MissionDrillGroupElement missionDrillGroup, MissionTableViewData missionTableViewData, MissionDrillDataElement missionDrillData)
-		{
-		}
-
-		public void OnChallangeButtonClicked()
-		{
-		}
-
-		public void PlayEnterAnimation()
-		{
-		}
-
-		public void PlayExitAnimation()
-		{
-		}
-
-		public bool IsAnimationRunning()
-		{
-			return default(bool);
-		}
+	public bool IsAnimationRunning()
+	{
+		return default(bool);
 	}
 }

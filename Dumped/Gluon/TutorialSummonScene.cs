@@ -1,54 +1,53 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialSummonScene : SceneBase
 {
-	public class TutorialSummonScene : SceneBase
+	[SerializeField]
+	private Camera _uiCamera;
+
+	[SerializeField]
+	private Camera _flashCamera;
+
+	public bool isDebugNotConnecting;
+
+	public Camera uiCamera => null;
+
+	public Camera flashCamera => null;
+
+	private void Start()
 	{
-		[SerializeField]
-		private Camera _uiCamera;
+	}
 
-		[SerializeField]
-		private Camera _flashCamera;
+	private void OnEnterScene()
+	{
+	}
 
-		public bool isDebugNotConnecting;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		public Camera uiCamera => null;
+	private void OnInitReady()
+	{
+	}
 
-		public Camera flashCamera => null;
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		private void Start()
-		{
-		}
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	public override void StartExitAnimation()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
-
-		private void OnInitReady()
-		{
-		}
-
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
-
-		public override void OnBeforeLeaving()
-		{
-		}
-
-		public override void StartExitAnimation()
-		{
-		}
-
-		private IEnumerator StartExitAnimationCoroutine()
-		{
-			return null;
-		}
+	private IEnumerator StartExitAnimationCoroutine()
+	{
+		return null;
 	}
 }

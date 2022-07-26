@@ -1,21 +1,20 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class AbilityPageData
 {
-	public class AbilityPageData
-	{
-		public AbilityConst.UnitType abilityGiftType;
+	public AbilityConst.UnitType abilityGiftType;
 
-		public int abilityId;
+	public int abilityId;
 
-		public ElementalType abilityElementType;
+	public ElementalType abilityElementType;
 
-		public WeaponType abilityWeaponType;
+	public WeaponType abilityWeaponType;
 
-		public bool isReleased;
+	public bool isReleased;
 
-		public List<int> duplicationAbilityIds;
+	public List<int> duplicationAbilityIds;
 
-		public List<int> duplicationShiftAbilityIds;
-	}
+	public List<int> duplicationShiftAbilityIds;
 }

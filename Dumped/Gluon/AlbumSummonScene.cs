@@ -1,22 +1,21 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumSummonScene : SceneBase
 {
-	public class AlbumSummonScene : SceneBase
+	[SerializeField]
+	private Camera flashCamera;
+
+	private void Start()
 	{
-		[SerializeField]
-		private Camera flashCamera;
+	}
 
-		private void Start()
-		{
-		}
+	public void OnEnterScene()
+	{
+	}
 
-		public void OnEnterScene()
-		{
-		}
-
-		public void OnEndScene()
-		{
-		}
+	public void OnEndScene()
+	{
 	}
 }

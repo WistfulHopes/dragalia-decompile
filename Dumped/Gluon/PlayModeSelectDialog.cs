@@ -2,33 +2,32 @@ using System.Runtime.InteropServices;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PlayModeSelectDialog : CommonPopup
 {
-	public class PlayModeSelectDialog : CommonPopup
+	public Button soloPlayButton;
+
+	public Button multiPlayButton;
+
+	public UnityEvent soloButtonCallBack;
+
+	public UnityEvent multiButtonCallBack;
+
+	public static PlayModeSelectDialog Create([Optional] UnityAction OnOKCallback, bool showBlackLayer = true)
 	{
-		public Button soloPlayButton;
+		return null;
+	}
 
-		public Button multiPlayButton;
+	public void SetMessageText(string message)
+	{
+	}
 
-		public UnityEvent soloButtonCallBack;
+	public void SoloButtonPressed()
+	{
+	}
 
-		public UnityEvent multiButtonCallBack;
-
-		public static PlayModeSelectDialog Create([Optional] UnityAction OnOKCallback, bool showBlackLayer = true)
-		{
-			return null;
-		}
-
-		public void SetMessageText(string message)
-		{
-		}
-
-		public void SoloButtonPressed()
-		{
-		}
-
-		public void MultiButtonPressed()
-		{
-		}
+	public void MultiButtonPressed()
+	{
 	}
 }

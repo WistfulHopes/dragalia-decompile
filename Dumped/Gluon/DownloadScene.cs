@@ -9,222 +9,221 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DownloadScene : MonoBehaviour
 {
-	public class DownloadScene : MonoBehaviour
+	public Canvas mainCanvas;
+
+	public GameObject movieParent;
+
+	public EventSystem eventSystem;
+
+	public Text downloadPercentText;
+
+	public Gauge gauge;
+
+	public GameObject gaugeBar;
+
+	public GameObject gaugeBarCompleted;
+
+	public RectTransform dotsRectTransform;
+
+	public Image[] dots;
+
+	public Text downloadingText;
+
+	public Text bottomText;
+
+	public GameObject nharmNode;
+
+	public CanvasGroup frontBlackCG;
+
+	public GameObject topBlack;
+
+	public Text debugText;
+
+	public Image progressDot;
+
+	public static bool isFromTitle;
+
+	public static bool isFullDownload;
+
+	public static bool exceptVoiceOnFullDownload;
+
+	public const string UseAssetBundlePrefs = "UseAssetBundle";
+
+	public const string UseLocalAssetBundlePrefs = "UseLocalAssetBundle";
+
+	private FlashPlayer flashPlayer;
+
+	private long downloadSizeFromTitle;
+
+	private float percent;
+
+	private float lastPercent;
+
+	private bool isTweeningOn;
+
+	private bool show100Percent;
+
+	private MoviePlayerHandle movie;
+
+	private static bool hashErrorSend;
+
+	private const string movieName = "GL_30s_DBEN";
+
+	private const int NAMissionID = 10005002;
+
+	public static DownloadOperation assetDownloadOperation
 	{
-		public Canvas mainCanvas;
-
-		public GameObject movieParent;
-
-		public EventSystem eventSystem;
-
-		public Text downloadPercentText;
-
-		public Gauge gauge;
-
-		public GameObject gaugeBar;
-
-		public GameObject gaugeBarCompleted;
-
-		public RectTransform dotsRectTransform;
-
-		public Image[] dots;
-
-		public Text downloadingText;
-
-		public Text bottomText;
-
-		public GameObject nharmNode;
-
-		public CanvasGroup frontBlackCG;
-
-		public GameObject topBlack;
-
-		public Text debugText;
-
-		public Image progressDot;
-
-		public static bool isFromTitle;
-
-		public static bool isFullDownload;
-
-		public static bool exceptVoiceOnFullDownload;
-
-		public const string UseAssetBundlePrefs = "UseAssetBundle";
-
-		public const string UseLocalAssetBundlePrefs = "UseLocalAssetBundle";
-
-		private FlashPlayer flashPlayer;
-
-		private long downloadSizeFromTitle;
-
-		private float percent;
-
-		private float lastPercent;
-
-		private bool isTweeningOn;
-
-		private bool show100Percent;
-
-		private MoviePlayerHandle movie;
-
-		private static bool hashErrorSend;
-
-		private const string movieName = "GL_30s_DBEN";
-
-		private const int NAMissionID = 10005002;
-
-		public static DownloadOperation assetDownloadOperation
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		private void Awake()
-		{
-		}
-
-		private IEnumerator Start()
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private void OnDestroy()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void LoadNharm()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private IEnumerator DoDownload()
-		{
-			return null;
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private void PlayMovie()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private DownloadOperation GetAfterPrologueDownloadOperation()
-		{
-			return null;
-		}
+	private void LoadNharm()
+	{
+	}
 
-		private DownloadOperation GetAfterPrologueDownloadOperationWithoutVoice()
-		{
-			return null;
-		}
+	private IEnumerator DoDownload()
+	{
+		return null;
+	}
 
-		private DownloadOperation GetAfterPrologueDownloadOperationMinimum()
-		{
-			return null;
-		}
+	private void PlayMovie()
+	{
+	}
 
-		private IEnumerator DoNormalDownload()
-		{
-			return null;
-		}
+	private DownloadOperation GetAfterPrologueDownloadOperation()
+	{
+		return null;
+	}
 
-		private IEnumerator DoAfterPrologueDownload()
-		{
-			return null;
-		}
+	private DownloadOperation GetAfterPrologueDownloadOperationWithoutVoice()
+	{
+		return null;
+	}
 
-		private void ResetGameInfoAfterMasterReload()
-		{
-		}
+	private DownloadOperation GetAfterPrologueDownloadOperationMinimum()
+	{
+		return null;
+	}
 
-		private void StartNormalDownload()
-		{
-		}
+	private IEnumerator DoNormalDownload()
+	{
+		return null;
+	}
 
-		private IEnumerator DotAnimation()
-		{
-			return null;
-		}
+	private IEnumerator DoAfterPrologueDownload()
+	{
+		return null;
+	}
 
-		private void Update()
-		{
-		}
+	private void ResetGameInfoAfterMasterReload()
+	{
+	}
 
-		private void StartGaugeTween()
-		{
-		}
+	private void StartNormalDownload()
+	{
+	}
 
-		private IEnumerator OnDownloadCompleted()
-		{
-			return null;
-		}
+	private IEnumerator DotAnimation()
+	{
+		return null;
+	}
 
-		private void AfterDownloadCompleted()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void GotoNextScene()
-		{
-		}
+	private void StartGaugeTween()
+	{
+	}
 
-		private void GotoNextSceneImpl()
-		{
-		}
+	private IEnumerator OnDownloadCompleted()
+	{
+		return null;
+	}
 
-		private void CreateInitialOptionPopup()
-		{
-		}
+	private void AfterDownloadCompleted()
+	{
+	}
 
-		private void CheckBackgroundDownload(Action<bool> action)
-		{
-		}
+	private void GotoNextScene()
+	{
+	}
 
-		private void GoToPrologue(bool doBackgroundDownload)
-		{
-		}
+	private void GotoNextSceneImpl()
+	{
+	}
 
-		private void GotoTutorialSummonPrologue(bool doBackgroundDownload)
-		{
-		}
+	private void CreateInitialOptionPopup()
+	{
+	}
 
-		private void GoToMyPage(bool isPrologue)
-		{
-		}
+	private void CheckBackgroundDownload(Action<bool> action)
+	{
+	}
 
-		private void InitWebViewManager()
-		{
-		}
+	private void GoToPrologue(bool doBackgroundDownload)
+	{
+	}
 
-		private void PreLoadInformationPage()
-		{
-		}
+	private void GotoTutorialSummonPrologue(bool doBackgroundDownload)
+	{
+	}
 
-		private IEnumerator GoToMyPageCoroutine(bool isPrologue)
-		{
-			return null;
-		}
+	private void GoToMyPage(bool isPrologue)
+	{
+	}
 
-		public static void GoNextSceneAfterDateCheckOrDownload(bool maySessionRenewed = false)
-		{
-		}
+	private void InitWebViewManager()
+	{
+	}
 
-		private IEnumerator LoadOutGameResidentAssetsCoroutine()
-		{
-			return null;
-		}
+	private void PreLoadInformationPage()
+	{
+	}
 
-		private void CreateDownloadErrorPopup(DownloadErrorType type, string errorMsg, UnityAction onDownloadFailed, [Optional] UnityAction onBeforeLoadTitleScene)
-		{
-		}
+	private IEnumerator GoToMyPageCoroutine(bool isPrologue)
+	{
+		return null;
+	}
 
-		private void WriteLocalDataForTitle()
-		{
-		}
+	public static void GoNextSceneAfterDateCheckOrDownload(bool maySessionRenewed = false)
+	{
+	}
+
+	private IEnumerator LoadOutGameResidentAssetsCoroutine()
+	{
+		return null;
+	}
+
+	private void CreateDownloadErrorPopup(DownloadErrorType type, string errorMsg, UnityAction onDownloadFailed, [Optional] UnityAction onBeforeLoadTitleScene)
+	{
+	}
+
+	private void WriteLocalDataForTitle()
+	{
 	}
 }

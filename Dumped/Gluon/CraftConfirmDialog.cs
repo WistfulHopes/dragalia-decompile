@@ -5,142 +5,141 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CraftConfirmDialog : CommonPopup, ICustomMessage
 {
-	public class CraftConfirmDialog : CommonPopup, ICustomMessage
+	public Image targetWeaponIcon;
+
+	public Text message;
+
+	public CraftMaterialCell originCell;
+
+	public Text needCoinText;
+
+	public Text totalCoin;
+
+	public Text breforeCoin;
+
+	public Text afterCoin;
+
+	public Text craftCount;
+
+	public Text craftMaxCount;
+
+	public Slider craftSlider;
+
+	public int totalCraftCount;
+
+	public Button plusButton;
+
+	public Button minusButton;
+
+	public GameObject sliberBase;
+
+	public Text errorMessage;
+
+	public GameObject sortDecoAttachNode;
+
+	public List<CraftMaterialCell> materialCellList;
+
+	public GameObject autoLimitBreakBase;
+
+	public Toggle autoLimitBreakToggle;
+
+	public Text autoLimitBreakText;
+
+	private PointerEventHandler plusButtonEventHandler;
+
+	private PointerEventHandler minusButtonEventHandler;
+
+	private Coroutine countCoroutine;
+
+	private int assembleCoin;
+
+	private int targetId;
+
+	private bool isMuteSliderSe;
+
+	private WeaponCraftDataElement craftData;
+
+	public bool isItemUpdate
 	{
-		public Image targetWeaponIcon;
-
-		public Text message;
-
-		public CraftMaterialCell originCell;
-
-		public Text needCoinText;
-
-		public Text totalCoin;
-
-		public Text breforeCoin;
-
-		public Text afterCoin;
-
-		public Text craftCount;
-
-		public Text craftMaxCount;
-
-		public Slider craftSlider;
-
-		public int totalCraftCount;
-
-		public Button plusButton;
-
-		public Button minusButton;
-
-		public GameObject sliberBase;
-
-		public Text errorMessage;
-
-		public GameObject sortDecoAttachNode;
-
-		public List<CraftMaterialCell> materialCellList;
-
-		public GameObject autoLimitBreakBase;
-
-		public Toggle autoLimitBreakToggle;
-
-		public Text autoLimitBreakText;
-
-		private PointerEventHandler plusButtonEventHandler;
-
-		private PointerEventHandler minusButtonEventHandler;
-
-		private Coroutine countCoroutine;
-
-		private int assembleCoin;
-
-		private int targetId;
-
-		private bool isMuteSliderSe;
-
-		private WeaponCraftDataElement craftData;
-
-		public bool isItemUpdate
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		public static CraftConfirmDialog Create(bool showBlackLayer = true)
-		{
-			return null;
-		}
-
-		private void OnEnable()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void OnDisable()
-		{
-		}
+	public static CraftConfirmDialog Create(bool showBlackLayer = true)
+	{
+		return null;
+	}
 
-		protected override void Start()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		public void InitPop(WeaponCraftDataElement craftData)
-		{
-		}
+	private void OnDisable()
+	{
+	}
 
-		private void UpdatePopup()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private IEnumerator SliderSeActiveDelay()
-		{
-			return null;
-		}
+	public void InitPop(WeaponCraftDataElement craftData)
+	{
+	}
 
-		public void SliderValueChanged()
-		{
-		}
+	private void UpdatePopup()
+	{
+	}
 
-		public void OnValueChangeButtonPressed(int value)
-		{
-		}
+	private IEnumerator SliderSeActiveDelay()
+	{
+		return null;
+	}
 
-		public void OnValueChangeButtonLongPressed(int countInc)
-		{
-		}
+	public void SliderValueChanged()
+	{
+	}
 
-		private IEnumerator CountSpeedCoroutine(bool isPlus)
-		{
-			return null;
-		}
+	public void OnValueChangeButtonPressed(int value)
+	{
+	}
 
-		private void OnMaterialIconPressed(CraftMaterialCellData cellData)
-		{
-		}
+	public void OnValueChangeButtonLongPressed(int countInc)
+	{
+	}
 
-		public void OnToggleClickedAutoLimitBreak(bool bOn)
-		{
-		}
+	private IEnumerator CountSpeedCoroutine(bool isPlus)
+	{
+		return null;
+	}
 
-		public override void OnOkButtonPressed()
-		{
-		}
+	private void OnMaterialIconPressed(CraftMaterialCellData cellData)
+	{
+	}
 
-		public override void OnCancelButtonPressed()
-		{
-		}
+	public void OnToggleClickedAutoLimitBreak(bool bOn)
+	{
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public override void OnOkButtonPressed()
+	{
+	}
+
+	public override void OnCancelButtonPressed()
+	{
+	}
+
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

@@ -1,22 +1,21 @@
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonPrizeData
 {
-	public class SummonPrizeData
+	public GiftType entityType;
+
+	public int entityId;
+
+	public int entityQuantity;
+
+	public void UpdateDataFromResponse(AtgenBuildEventRewardEntityList data)
 	{
-		public GiftType entityType;
+	}
 
-		public int entityId;
-
-		public int entityQuantity;
-
-		public void UpdateDataFromResponse(AtgenBuildEventRewardEntityList data)
-		{
-		}
-
-		public SummonPrizeData Clone()
-		{
-			return null;
-		}
+	public SummonPrizeData Clone()
+	{
+		return null;
 	}
 }

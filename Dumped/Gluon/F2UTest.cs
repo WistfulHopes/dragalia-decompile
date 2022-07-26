@@ -1,21 +1,20 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class F2UTest : MonoBehaviour
 {
-	public class F2UTest : MonoBehaviour
+	private FlashPlayer questTransitionEffect;
+
+	private void Start()
 	{
-		private FlashPlayer questTransitionEffect;
+	}
 
-		private void Start()
-		{
-		}
+	public void OnButtonIn()
+	{
+	}
 
-		public void OnButtonIn()
-		{
-		}
-
-		public void OnButtonOut()
-		{
-		}
+	public void OnButtonOut()
+	{
 	}
 }

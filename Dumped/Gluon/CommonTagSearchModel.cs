@@ -1,74 +1,73 @@
 using System;
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class CommonTagSearchModel
 {
-	public class CommonTagSearchModel
+	public class TagRecord
 	{
-		public class TagRecord
-		{
-			private List<string> tags;
+		private List<string> tags;
 
-			public void ClearTags()
-			{
-			}
-
-			public void Add(string s)
-			{
-			}
-
-			public bool IsMatch(string[] input)
-			{
-				return default(bool);
-			}
-
-			private bool IsMatch(string input)
-			{
-				return default(bool);
-			}
-		}
-
-		public enum InfoScale
-		{
-			Full,
-			Basic
-		}
-
-		public Action<List<int>> onFilterChanged;
-
-		public Dictionary<int, TagRecord> tagRecords;
-
-		public Dictionary<ulong, TagRecord> talismanTagRecords;
-
-		public InfoScale infoScale;
-
-		public static string UnifyString(string s)
-		{
-			return null;
-		}
-
-		private void AddSkillToRecord(TagRecord record, int[] ids)
+		public void ClearTags()
 		{
 		}
 
-		private void AddAbilityToRecord(TagRecord record, int[] ids)
+		public void Add(string s)
 		{
 		}
 
-		private void AddExAbilityToRecord(TagRecord record, int[] ids)
+		public bool IsMatch(string[] input)
 		{
+			return default(bool);
 		}
 
-		private void AddEmblemToRecord(TagRecord record, int emblemId)
+		private bool IsMatch(string input)
 		{
+			return default(bool);
 		}
+	}
 
-		public void AddMasterUnitRecord(GiftType giftType, int id)
-		{
-		}
+	public enum InfoScale
+	{
+		Full,
+		Basic
+	}
 
-		public void OnInputTextChanged(string s)
-		{
-		}
+	public Action<List<int>> onFilterChanged;
+
+	public Dictionary<int, TagRecord> tagRecords;
+
+	public Dictionary<ulong, TagRecord> talismanTagRecords;
+
+	public InfoScale infoScale;
+
+	public static string UnifyString(string s)
+	{
+		return null;
+	}
+
+	private void AddSkillToRecord(TagRecord record, int[] ids)
+	{
+	}
+
+	private void AddAbilityToRecord(TagRecord record, int[] ids)
+	{
+	}
+
+	private void AddExAbilityToRecord(TagRecord record, int[] ids)
+	{
+	}
+
+	private void AddEmblemToRecord(TagRecord record, int emblemId)
+	{
+	}
+
+	public void AddMasterUnitRecord(GiftType giftType, int id)
+	{
+	}
+
+	public void OnInputTextChanged(string s)
+	{
 	}
 }

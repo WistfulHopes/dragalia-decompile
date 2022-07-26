@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public interface IShaderData<T>
 {
-	public interface IShaderData<T>
-	{
-		void Copy(T src);
-	}
+	void Copy(T src);
 }

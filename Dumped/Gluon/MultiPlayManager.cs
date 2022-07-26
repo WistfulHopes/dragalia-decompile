@@ -5,694 +5,728 @@ using ExitGames.Client.Photon;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MultiPlayManager : MonoBehaviour
 {
-	public class MultiPlayManager : MonoBehaviour
+	public enum MultiType
 	{
-		public enum MultiType
+		Quest,
+		Raid,
+		Field,
+		Battle
+	}
+
+	public enum QuestState
+	{
+		None,
+		MultiPlayPartyConfirmed,
+		Waiting,
+		InGame
+	}
+
+	public enum StoryState
+	{
+		None,
+		Waiting,
+		AllFinished
+	}
+
+	public enum QuestRetireReasons
+	{
+		None,
+		ByDisconnection,
+		ByLeaveAlone
+	}
+
+	public class PlayerInfo
+	{
+		public string Name;
+
+		public WillLeave.Reasons WillLeaveReason;
+
+		public bool IsAllDeadConfirmed;
+
+		public bool IsLowestGraphicsQuality;
+
+		public bool CanAutoSkipAlreadyReadStory;
+	}
+
+	public delegate void OnStamp(int playerIndex, int iconId);
+
+	public delegate void OnTargetParts(int playerIndex, int partsId);
+
+	private Dictionary<int, int> _memberCountTable;
+
+	public List<int> actorIds;
+
+	private PlayerInfo[] playerInfos;
+
+	private List<EventSenderBase> moveEventSenders;
+
+	private MoveBundle moveBundle;
+
+	private float sendTimer;
+
+	private float idleTimer;
+
+	public Queue<EventD00562> eventD00562ReceiveBuffer;
+
+	public List<EventE02660> eventE02660ReceiveBuffer;
+
+	private WillLeave tmpWillLeaveEvent;
+
+	private MultiPlayTemporaries _temporaries;
+
+	private MultiPlayErrorEventService _errorEventService;
+
+	private WillLeave.Reasons _willLeaveReason;
+
+	private PhotonAck _ack;
+
+	private PhotonStatistics _statistics;
+
+	private PhotonSuspendCheatChecker _suspendCheatCheck;
+
+	private MultiPlayRebornCtrl _rebornCtrl;
+
+	private MultiPlayBRCtrl _brCtrl;
+
+	private MultiPlayBuffFieldCtrl _buffFieldCtrl;
+
+	private CollisionHitAttribute _hitAttr;
+
+	private bool _isOtherPlayerDisconnected;
+
+	private MultiPlaySystemMessageCtrl _systemMessageCtrl;
+
+	private bool _isLeaveAloneDetected;
+
+	private MultiPlaySettings settings;
+
+	private MultiPlayRetryVoteCtrl _retryVoteCtrl;
+
+	private List<EnemyAbilityProcBase> _enemyAbilityCallbackList;
+
+	private bool _isRankingQuest;
+
+	private bool _isSuccessiveGameTimerSent;
+
+	private GoToIngameInfo _gotoIngameInfo;
+
+	public static readonly int MaxPlayer;
+
+	private MultiPlayReceiveEventBuffering _recvEventBuffering;
+
+	public static MultiPlayManager instance
+	{
+		[CompilerGenerated]
+		get
 		{
-			Quest,
-			Raid,
-			Field,
-			Battle
+			return null;
 		}
-
-		public enum QuestState
+		[CompilerGenerated]
+		private set
 		{
-			None,
-			MultiPlayPartyConfirmed,
-			Waiting,
-			InGame
 		}
+	}
 
-		public enum StoryState
+	public MultiType multiType
+	{
+		[CompilerGenerated]
+		get
 		{
-			None,
-			Waiting,
-			AllFinished
+			return default(MultiType);
 		}
-
-		public enum QuestRetireReasons
+		[CompilerGenerated]
+		set
 		{
-			None,
-			ByDisconnection,
-			ByLeaveAlone
 		}
+	}
 
-		public class PlayerInfo
+	public QuestState questState
+	{
+		[CompilerGenerated]
+		get
 		{
-			public string Name;
-
-			public WillLeave.Reasons WillLeaveReason;
-
-			public bool IsAllDeadConfirmed;
-
-			public bool IsLowestGraphicsQuality;
+			return default(QuestState);
 		}
-
-		public delegate void OnStamp(int playerIndex, int iconId);
-
-		public delegate void OnTargetParts(int playerIndex, int partsId);
-
-		private Dictionary<int, int> _memberCountTable;
-
-		public List<int> actorIds;
-
-		private PlayerInfo[] playerInfos;
-
-		private List<EventSenderBase> moveEventSenders;
-
-		private MoveBundle moveBundle;
-
-		private float sendTimer;
-
-		private float idleTimer;
-
-		public Queue<EventD00562> eventD00562ReceiveBuffer;
-
-		public List<EventE02660> eventE02660ReceiveBuffer;
-
-		private WillLeave tmpWillLeaveEvent;
-
-		private MultiPlayTemporaries _temporaries;
-
-		private MultiPlayErrorEventService _errorEventService;
-
-		private WillLeave.Reasons _willLeaveReason;
-
-		private PhotonAck _ack;
-
-		private PhotonStatistics _statistics;
-
-		private PhotonSuspendCheatChecker _suspendCheatCheck;
-
-		private MultiPlayRebornCtrl _rebornCtrl;
-
-		private MultiPlayBRCtrl _brCtrl;
-
-		private MultiPlayBuffFieldCtrl _buffFieldCtrl;
-
-		private CollisionHitAttribute _hitAttr;
-
-		private bool _isOtherPlayerDisconnected;
-
-		private MultiPlaySystemMessageCtrl _systemMessageCtrl;
-
-		private bool _isLeaveAloneDetected;
-
-		private MultiPlaySettings settings;
-
-		private MultiPlayRetryVoteCtrl _retryVoteCtrl;
-
-		private List<EnemyAbilityProcBase> _enemyAbilityCallbackList;
-
-		private bool _isRankingQuest;
-
-		private bool _isSuccessiveGameTimerSent;
-
-		private GoToIngameInfo _gotoIngameInfo;
-
-		public static readonly int MaxPlayer;
-
-		private MultiPlayReceiveEventBuffering _recvEventBuffering;
-
-		public static MultiPlayManager instance
+		[CompilerGenerated]
+		private set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
 		}
+	}
 
-		public MultiType multiType
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(MultiType);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
+	public bool IsCoopMultiPlay => default(bool);
 
-		public QuestState questState
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(QuestState);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool IsCoopMultiPlay => default(bool);
-
-		public bool IsSoloPlayWithPhoton
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public Dictionary<int, List<Gluon.Event.CharacterData>> otherCharacters
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public Gluon.Event.CharacterData ownCharacters
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public GoToIngameInfo.BRInitData brInitData => null;
-
-		public int actorCount => default(int);
-
-		public int actorIdSelf
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool IsMultiPlayHost => default(bool);
-
-		public bool IsMultiPlayGuest => default(bool);
-
-		public bool IsMultiPlayHostOrSolo => default(bool);
-
-		public int CurrentHostActorId
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public MultiPlayTemporaries Temporaries => null;
-
-		public MultiPlayErrorEventService ErrorEventService => null;
-
-		public SleepTimeoutCtrl SleepTimeoutCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public MultiPlaySettings MultiPlaySettings => null;
-
-		public MultiPlayRetryVoteModel RetryVoteModel => null;
-
-		public bool IsAutoFailTimeoutEnabled
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public float ForceAutoFailTime
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public MultiPlayWarpCtrl WarpCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool IsDisableOnDamagedWhenLeave
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public MultiPlayAuraCtrl MultiPlayAuraCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public ulong[] RoomPlayers => null;
-
-		public event OnStamp onStamp
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event OnTargetParts onTargetParts
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public static bool IsDisconnected()
+	public bool IsSoloPlayWithPhoton
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public static bool WillBeDisconnected()
-		{
-			return default(bool);
-		}
-
-		public static void Create()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void Awake()
+	public Dictionary<int, List<Gluon.Event.CharacterData>> otherCharacters
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void PostInitialize(GoToIngameInfo gotoIngameInfo, MatchingService.Room snapshot, SleepTimeoutCtrl sleepTimeoutCtrl)
+	public Gluon.Event.CharacterData ownCharacters
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public int GetActorIndex(int actorId)
+	public GoToIngameInfo.BRInitData brInitData => null;
+
+	public int actorCount => default(int);
+
+	public int actorIdSelf
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(int);
 		}
-
-		public string GetActorLabel(int actorId)
-		{
-			return null;
-		}
-
-		public int GetActorIdFromIndex(int index)
-		{
-			return default(int);
-		}
-
-		public ulong GetViewerIdFromActorId(int actorId)
-		{
-			return default(ulong);
-		}
-
-		public void TryCheckParty()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool HasMultiPlayParty()
-		{
-			return default(bool);
-		}
+	public bool IsMultiPlayHost => default(bool);
 
-		private void OnOperationResponse(OperationResponse operationResponse)
-		{
-		}
+	public bool IsMultiPlayGuest => default(bool);
 
-		private void OnEvent(EventData photonEvent)
-		{
-		}
+	public bool IsMultiPlayHostOrSolo => default(bool);
 
-		public int GetMyPartyUnitCount()
+	public int CurrentHostActorId
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(int);
 		}
-
-		private void OnDisconnected()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void Error(MultiPlayError error)
-		{
-		}
+	public MultiPlayTemporaries Temporaries => null;
 
-		private void PostDisconnected()
-		{
-		}
+	public MultiPlayErrorEventService ErrorEventService => null;
 
-		public static EventReceiverBase FindEventReceiverFromCharacterId(CharacterId id)
-		{
-			return null;
-		}
+	public MultiPlayBuffFieldCtrl BuffFieldCtrl => null;
 
-		public static CharacterBase FindCharacterFromCharacterId(CharacterId id, bool ignoreEnemyPool = false)
+	public MultiPlayCuttCommandCtrl CuttCommandCtrl
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public static List<CharacterBase> FindCharacterFromCharacterIds(List<CharacterId> ids)
+	public SleepTimeoutCtrl SleepTimeoutCtrl
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public void InitializeOtherControls()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void ReadyToStartQuest()
+	public MultiPlaySettings MultiPlaySettings => null;
+
+	public MultiPlayRetryVoteModel RetryVoteModel => null;
+
+	public bool IsAutoFailTimeoutEnabled
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetControlPlayer(CharacterSelector player)
+	public float ForceAutoFailTime
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public string GetOtherPlayerName(int index)
+	public MultiPlayWarpCtrl WarpCtrl
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public void SetOtherPlayerName(int index, string name)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool[] GetIsLowestGraphicsQuarities()
+	public bool IsDisableOnDamagedWhenLeave
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public MultiPlayAuraCtrl MultiPlayAuraCtrl
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public void SendWillLeave(WillLeave.Reasons reason)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Continue()
+	public ulong[] RoomPlayers => null;
+
+	public event OnStamp onStamp
+	{
+		[CompilerGenerated]
+		add
 		{
 		}
-
-		public void SendWaitReborn(List<CharacterBase> targetCharas, bool isAbilityReborn)
+		[CompilerGenerated]
+		remove
 		{
 		}
+	}
 
-		public void SendReborn(List<Tuple<CharacterBase, float>> rebornCharaInfos, bool isAbilityReborn, bool withSpCharge)
+	public event OnTargetParts onTargetParts
+	{
+		[CompilerGenerated]
+		add
 		{
 		}
-
-		public void SetAllDeadConfirmed(bool flag)
+		[CompilerGenerated]
+		remove
 		{
 		}
+	}
 
-		public bool IsAllOtherPlayerAllDeadConfirmed()
-		{
-			return default(bool);
-		}
+	public void SetQuestState(QuestState questState)
+	{
+	}
 
-		public void AddMoveEventSender(EventSenderBase eventSender)
-		{
-		}
+	public static bool IsDisconnected()
+	{
+		return default(bool);
+	}
 
-		public void Update()
-		{
-		}
+	public static bool WillBeDisconnected()
+	{
+		return default(bool);
+	}
 
-		private void LateUpdate()
-		{
-		}
+	public static void Create()
+	{
+	}
 
-		public static void Destroy()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public bool HasMultiPlayOwner(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	public void PostInitialize(GoToIngameInfo gotoIngameInfo, MatchingService.Room snapshot, SleepTimeoutCtrl sleepTimeoutCtrl)
+	{
+	}
 
-		public bool HasMultiPlayInitialOwner(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	public int GetActorIndex(int actorId)
+	{
+		return default(int);
+	}
 
-		public bool HasMultiPlayOwner(CharacterBase chara, bool bCheckProxyActor, int actorIdOwner)
-		{
-			return default(bool);
-		}
+	public string GetActorLabel(int actorId)
+	{
+		return null;
+	}
 
-		public static bool IsMultiPlayEventReceiver(CharacterBase target)
-		{
-			return default(bool);
-		}
+	public int GetActorIdFromIndex(int index)
+	{
+		return default(int);
+	}
 
-		public static bool IsMultiPlayEventSender(CharacterBase target)
-		{
-			return default(bool);
-		}
+	public ulong GetViewerIdFromActorId(int actorId)
+	{
+		return default(ulong);
+	}
 
-		public static void SetMoveSyncDisabled(CharacterBase target, bool isDisabled)
-		{
-		}
+	public void TryCheckParty()
+	{
+	}
 
-		public List<int> GetCurrentPlayersActorId()
-		{
-			return null;
-		}
+	public bool HasMultiPlayParty()
+	{
+		return default(bool);
+	}
 
-		public int GetOtherPlayerRebornCharacterCount(int actorId)
-		{
-			return default(int);
-		}
+	private void OnOperationResponse(OperationResponse operationResponse)
+	{
+	}
 
-		public int GetOtherPlayerRebornProcessCount(int actorId)
-		{
-			return default(int);
-		}
+	private void OnEvent(EventData photonEvent)
+	{
+	}
 
-		public bool IsAnyOtherPlayerRemainContinueCount(int limit)
-		{
-			return default(bool);
-		}
+	public int GetMyPartyUnitCount()
+	{
+		return default(int);
+	}
 
-		public bool IsRoomPlayerActorId(int actorId)
-		{
-			return default(bool);
-		}
+	private void OnDisconnected()
+	{
+	}
 
-		public void EnterStrictCheckSection()
-		{
-		}
+	private void Error(MultiPlayError error)
+	{
+	}
 
-		public void LeaveStrictCheckSection()
-		{
-		}
+	private void PostDisconnected()
+	{
+	}
 
-		public void DisconnectWithError(MultiPlayError error)
-		{
-		}
+	public static EventReceiverBase FindEventReceiverFromCharacterId(CharacterId id)
+	{
+		return null;
+	}
 
-		public void Disconnect(string reason)
-		{
-		}
+	public static CharacterBase FindCharacterFromCharacterId(CharacterId id, bool ignoreEnemyPool = false)
+	{
+		return null;
+	}
 
-		public bool IsQuestRetireConditionSatisfied()
-		{
-			return default(bool);
-		}
+	public static List<CharacterBase> FindCharacterFromCharacterIds(List<CharacterId> ids)
+	{
+		return null;
+	}
 
-		public QuestRetireReasons GetQuestRetireReason()
-		{
-			return default(QuestRetireReasons);
-		}
+	public void InitializeOtherControls()
+	{
+	}
 
-		public bool IsOtherPlayerDisconnected()
-		{
-			return default(bool);
-		}
+	public void ReadyToStartQuest()
+	{
+	}
 
-		public bool IsLonelyMultiPlay()
-		{
-			return default(bool);
-		}
+	public void SetControlPlayer(CharacterSelector player)
+	{
+	}
 
-		public void SetLeaveAlone()
-		{
-		}
+	public string GetOtherPlayerName(int index)
+	{
+		return null;
+	}
 
-		public bool IsLeaveAloneEnabled()
-		{
-			return default(bool);
-		}
+	public void SetOtherPlayerName(int index, string name)
+	{
+	}
 
-		public bool CanSoloPlayAfterDisconnection()
-		{
-			return default(bool);
-		}
+	public bool[] GetIsLowestGraphicsQuarities()
+	{
+		return null;
+	}
 
-		public bool IsRankingQuest()
-		{
-			return default(bool);
-		}
+	public bool CanAutoSkipAlreadyReadStory()
+	{
+		return default(bool);
+	}
 
-		public int GetLeaveAloneFlag()
-		{
-			return default(int);
-		}
+	public void SendWillLeave(WillLeave.Reasons reason)
+	{
+	}
 
-		public void RegisterEnemyAbilityEventCallback(EnemyAbilityProcBase callback)
-		{
-		}
+	public void Continue()
+	{
+	}
 
-		public void SendClearTimerEvent(ClearTimerEvent.EventTypes eventType)
-		{
-		}
+	public void SendWaitReborn(List<CharacterBase> targetCharas, bool isAbilityReborn)
+	{
+	}
 
-		public void StartSuccessiveGameTimer()
-		{
-		}
+	public void SendReborn(List<Tuple<CharacterBase, float>> rebornCharaInfos, bool isAbilityReborn)
+	{
+	}
 
-		public static void RequestResetBuffDebuffByConditionId(CharacterBase character, int conditionId, int abilityId, int productId)
-		{
-		}
+	public void SetAllDeadConfirmed(bool flag)
+	{
+	}
 
-		private void ProcessDisconnectOwnEvent(MultiPlayErrorEventService.Event e)
-		{
-		}
+	public bool IsAllOtherPlayerAllDeadConfirmed()
+	{
+		return default(bool);
+	}
 
-		private void ProcessDisconnectOtherPlayerEvent(MultiPlayErrorEventService.Event e)
-		{
-		}
+	public void AddMoveEventSender(EventSenderBase eventSender)
+	{
+	}
 
-		private void ProcessDisableRankingEvent(MultiPlayErrorEventService.Event e)
-		{
-		}
+	public void Update()
+	{
+	}
 
-		private void ProcessDisableInstructorBonusEvent(MultiPlayErrorEventService.Event e)
-		{
-		}
+	private void LateUpdate()
+	{
+	}
 
-		public void SetupInstructorBonusViewerList()
-		{
-		}
+	public static void Destroy()
+	{
+	}
 
-		public bool CheckInstructorBonusOtherPlayer()
-		{
-			return default(bool);
-		}
+	public bool HasMultiPlayOwner(CharacterBase chara)
+	{
+		return default(bool);
+	}
 
-		public void DisplayDisableInstructorBonusMessage()
-		{
-		}
+	public bool HasMultiPlayInitialOwner(CharacterBase chara)
+	{
+		return default(bool);
+	}
 
-		public void ClearOldEvents()
-		{
-		}
+	public bool HasMultiPlayOwner(CharacterBase chara, bool bCheckProxyActor, int actorIdOwner)
+	{
+		return default(bool);
+	}
 
-		public void OnClearQuest()
-		{
-		}
+	public static bool IsMultiPlayEventReceiver(CharacterBase target)
+	{
+		return default(bool);
+	}
 
-		private void OnApplicationPause(bool paused)
-		{
-		}
+	public static bool IsMultiPlayEventSender(CharacterBase target)
+	{
+		return default(bool);
+	}
 
-		public void SetBRPulse(BRPulse pulse)
-		{
-		}
+	public static void SetMoveSyncDisabled(CharacterBase target, bool isDisabled)
+	{
+	}
 
-		public bool IsBRTutorial()
-		{
-			return default(bool);
-		}
+	public List<int> GetCurrentPlayersActorId()
+	{
+		return null;
+	}
 
-		public void NotifyChangeLookingCharacter(CharacterBase chara)
-		{
-		}
+	public int GetOtherPlayerRebornCharacterCount(int actorId)
+	{
+		return default(int);
+	}
 
-		public void RequestCreateBuffField(long buffFieldId, long actionPartsResourceId, string hitAttrLabel, Vector3 position, Quaternion rotation, CharacterBase owner, int actionId, int skillId, int actionProductId, ActionStartParameter actionStartParam, bool isHostRequest)
-		{
-		}
+	public int GetOtherPlayerRebornProcessCount(int actorId)
+	{
+		return default(int);
+	}
 
-		private bool TryReceiveAttackHitEvent(AttackHit recvEvent)
-		{
-			return default(bool);
-		}
+	public bool IsAnyOtherPlayerRemainContinueCount(int limit)
+	{
+		return default(bool);
+	}
+
+	public bool IsRoomPlayerActorId(int actorId)
+	{
+		return default(bool);
+	}
+
+	public void EnterStrictCheckSection()
+	{
+	}
+
+	public void LeaveStrictCheckSection()
+	{
+	}
+
+	public void DisconnectWithError(MultiPlayError error)
+	{
+	}
+
+	public void Disconnect(string reason)
+	{
+	}
+
+	public bool IsQuestRetireConditionSatisfied()
+	{
+		return default(bool);
+	}
+
+	public QuestRetireReasons GetQuestRetireReason()
+	{
+		return default(QuestRetireReasons);
+	}
+
+	public bool IsOtherPlayerDisconnected()
+	{
+		return default(bool);
+	}
+
+	public bool IsLonelyMultiPlay()
+	{
+		return default(bool);
+	}
+
+	public void SetLeaveAlone()
+	{
+	}
+
+	public bool IsLeaveAloneEnabled()
+	{
+		return default(bool);
+	}
+
+	public bool CanSoloPlayAfterDisconnection()
+	{
+		return default(bool);
+	}
+
+	public bool IsRankingQuest()
+	{
+		return default(bool);
+	}
+
+	public int GetLeaveAloneFlag()
+	{
+		return default(int);
+	}
+
+	public void RegisterEnemyAbilityEventCallback(EnemyAbilityProcBase callback)
+	{
+	}
+
+	public void ClearEnemyAbilityEventCallback()
+	{
+	}
+
+	public void SendClearTimerEvent(ClearTimerEvent.EventTypes eventType)
+	{
+	}
+
+	public void StartSuccessiveGameTimer()
+	{
+	}
+
+	public static void RequestResetBuffDebuffByConditionId(CharacterBase character, int conditionId, int abilityId, int productId)
+	{
+	}
+
+	private void ProcessDisconnectOwnEvent(MultiPlayErrorEventService.Event e)
+	{
+	}
+
+	private void ProcessDisconnectOtherPlayerEvent(MultiPlayErrorEventService.Event e)
+	{
+	}
+
+	private void ProcessDisableRankingEvent(MultiPlayErrorEventService.Event e)
+	{
+	}
+
+	private void ProcessDisableInstructorBonusEvent(MultiPlayErrorEventService.Event e)
+	{
+	}
+
+	public void SetupInstructorBonusViewerList()
+	{
+	}
+
+	public bool CheckInstructorBonusOtherPlayer()
+	{
+		return default(bool);
+	}
+
+	public void DisplayDisableInstructorBonusMessage()
+	{
+	}
+
+	public void ClearOldEvents()
+	{
+	}
+
+	public void OnClearQuest()
+	{
+	}
+
+	private void OnApplicationPause(bool paused)
+	{
+	}
+
+	public void SetBRPulse(BRPulse pulse)
+	{
+	}
+
+	public bool IsBRTutorial()
+	{
+		return default(bool);
+	}
+
+	public void NotifyChangeLookingCharacter(CharacterBase chara)
+	{
+	}
+
+	public void RequestCreateBuffField(long buffFieldId, long actionPartsResourceId, string hitAttrLabel, Vector3 position, Quaternion rotation, CharacterBase owner, int actionId, int skillId, int actionProductId, ActionStartParameter actionStartParam, bool isHostRequest)
+	{
+	}
+
+	private bool TryReceiveAttackHitEvent(AttackHit recvEvent)
+	{
+		return default(bool);
+	}
+
+	public bool CanRetry()
+	{
+		return default(bool);
 	}
 }

@@ -1,16 +1,15 @@
-namespace Gluon
+namespace Gluon;
+
+public class MissionDrillLocalizeTextBinder : AutoLocalizeTextBinderBase
 {
-	public class MissionDrillLocalizeTextBinder : AutoLocalizeTextBinderBase
+	protected override string prefixType
 	{
-		protected override string prefixType
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return null;
+		}
+		set
+		{
 		}
 	}
 }

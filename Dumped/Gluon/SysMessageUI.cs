@@ -1,32 +1,31 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SysMessageUI : CommonDialog
 {
-	public class SysMessageUI : CommonDialog
+	private Param param;
+
+	private bool isShowCloseAppPop;
+
+	public static SysMessageUI CreateSysMessage(GameObject parent)
 	{
-		private Param param;
+		return null;
+	}
 
-		private bool isShowCloseAppPop;
+	protected override void Initialize()
+	{
+	}
 
-		public static SysMessageUI CreateSysMessage(GameObject parent)
-		{
-			return null;
-		}
+	public void Open(bool modal, string text, string title = "", int fontSize = 0, bool raycast = true)
+	{
+	}
 
-		protected override void Initialize()
-		{
-		}
+	protected override void ExecFirstButtonPressed()
+	{
+	}
 
-		public void Open(bool modal, string text, string title = "", int fontSize = 0, bool raycast = true)
-		{
-		}
-
-		protected override void ExecFirstButtonPressed()
-		{
-		}
-
-		private void CreateCloseAppPop()
-		{
-		}
+	private void CreateCloseAppPop()
+	{
 	}
 }

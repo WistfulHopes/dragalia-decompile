@@ -2,52 +2,51 @@ using Cute.Cri;
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsSound : ActionParts
 {
-	public class ActionPartsSound : ActionParts
+	private readonly SoundData _partsData;
+
+	private AudioPlayback playback;
+
+	private Transform _emitterTransform;
+
+	private GameObject goEmitter;
+
+	private bool _isOffset;
+
+	public ActionPartsSound(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly SoundData _partsData;
+	}
 
-		private AudioPlayback playback;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		private Transform _emitterTransform;
+	protected override void OnFinish()
+	{
+	}
 
-		private GameObject goEmitter;
+	public override void Clear()
+	{
+	}
 
-		private bool _isOffset;
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsSound(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	public void ForceStop()
+	{
+	}
 
-		protected override void OnFinish()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		public void ForceStop()
-		{
-		}
-
-		private Vector3 CalcGeneratePos()
-		{
-			return default(Vector3);
-		}
+	private Vector3 CalcGeneratePos()
+	{
+		return default(Vector3);
 	}
 }

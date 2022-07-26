@@ -1,81 +1,80 @@
 using Gluon.Http;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class ItemMaterialListController : TableViewController<ItemMaterialCellData>
 {
-	public class ItemMaterialListController : TableViewController<ItemMaterialCellData>
+	public float cellWidth;
+
+	public float cellHeight;
+
+	public GrowMaterialListBase materialListBase;
+
+	public UnityAction<int, int> itemCellCallback;
+
+	public int nowExp;
+
+	public int maxExp;
+
+	public int maxHpPlus;
+
+	public int maxAtkPlus;
+
+	public TutorialDataManager.GrowthTutorialType tutorialType;
+
+	public int CellCount => default(int);
+
+	public void LoadItemData(MaterialList[] useItemDatas)
 	{
-		public float cellWidth;
+	}
 
-		public float cellHeight;
+	private int GetMaxUseItemCount(int itemId)
+	{
+		return default(int);
+	}
 
-		public GrowMaterialListBase materialListBase;
+	public void ItemCellCountLock(bool isExpItemLock, bool isHpPlusItemLock, bool isAtkPlusItemLock)
+	{
+	}
 
-		public UnityAction<int, int> itemCellCallback;
+	public void Reload()
+	{
+	}
 
-		public int nowExp;
+	public void ClearList()
+	{
+	}
 
-		public int maxExp;
+	public void ItemListCountClear()
+	{
+	}
 
-		public int maxHpPlus;
+	private void CellLock(MaterialType type, bool isLock)
+	{
+	}
 
-		public int maxAtkPlus;
+	public ItemMaterialCellData[] GetAutoSelectMaterial(int expMargin)
+	{
+		return null;
+	}
 
-		public TutorialDataManager.GrowthTutorialType tutorialType;
+	protected override TableViewCell<ItemMaterialCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		public int CellCount => default(int);
+	private void OnApplicationPause(bool stop)
+	{
+	}
 
-		public void LoadItemData(MaterialList[] useItemDatas)
-		{
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		private int GetMaxUseItemCount(int itemId)
-		{
-			return default(int);
-		}
-
-		public void ItemCellCountLock(bool isExpItemLock, bool isHpPlusItemLock, bool isAtkPlusItemLock)
-		{
-		}
-
-		public void Reload()
-		{
-		}
-
-		public void ClearList()
-		{
-		}
-
-		public void ItemListCountClear()
-		{
-		}
-
-		private void CellLock(MaterialType type, bool isLock)
-		{
-		}
-
-		public ItemMaterialCellData[] GetAutoSelectMaterial(int expMargin)
-		{
-			return null;
-		}
-
-		protected override TableViewCell<ItemMaterialCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		private void OnApplicationPause(bool stop)
-		{
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
 	}
 }

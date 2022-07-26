@@ -1,50 +1,49 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateBoundary : CharacterStateBase
 {
-	public class CharacterStateBoundary : CharacterStateBase
+	public int actionId
 	{
-		public int actionId
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
 		}
+		set
+		{
+		}
+	}
 
-		public int boundaryDataId
+	public int boundaryDataId
+	{
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
 		}
+		set
+		{
+		}
+	}
 
-		public CommonObjectStatus target
+	public CommonObjectStatus target
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		protected override void OnStateEnter_Internal()
-		{
-		}
+	protected override void OnStateEnter_Internal()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateExit()
+	{
 	}
 }

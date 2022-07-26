@@ -1,131 +1,128 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityUI : MonoBehaviour
 {
-	public class EnemyAbilityUI : MonoBehaviour
+	[SerializeField]
+	private RectTransform _rootRt;
+
+	[SerializeField]
+	private RectTransform _iconRt;
+
+	[SerializeField]
+	private RectTransform _countRt;
+
+	[SerializeField]
+	private SpriteRenderer _iconImage;
+
+	[SerializeField]
+	private InGameCounterUI _countUI;
+
+	[SerializeField]
+	private Material _colorAdjustMaterial;
+
+	[SerializeField]
+	private float _iconSpace;
+
+	private VisibleUIObject _countVisible;
+
+	private Rect _workRect;
+
+	private bool _isVisible;
+
+	private bool _isEneble;
+
+	private int _index;
+
+	private int _shaderPropertySaturation;
+
+	private static readonly Color DisableIconColor;
+
+	private static readonly Vector2 IconPivot;
+
+	private const float DisableIconSaturation = 0f;
+
+	private const float EnableIconSaturation = 1f;
+
+	public int AbilityId
 	{
-		[SerializeField]
-		[Header("component")]
-		private RectTransform _rootRt;
-
-		[SerializeField]
-		private RectTransform _iconRt;
-
-		[SerializeField]
-		private RectTransform _countRt;
-
-		[SerializeField]
-		private SpriteRenderer _iconImage;
-
-		[SerializeField]
-		private InGameCounterUI _countUI;
-
-		[SerializeField]
-		private Material _colorAdjustMaterial;
-
-		[SerializeField]
-		[Header("parameter")]
-		private float _iconSpace;
-
-		private VisibleUIObject _countVisible;
-
-		private Rect _workRect;
-
-		private bool _isVisible;
-
-		private bool _isEneble;
-
-		private int _index;
-
-		private int _shaderPropertySaturation;
-
-		private static readonly Color DisableIconColor;
-
-		private static readonly Vector2 IconPivot;
-
-		private const float DisableIconSaturation = 0f;
-
-		private const float EnableIconSaturation = 1f;
-
-		public int AbilityId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
-
-		public string AbilityIconId
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void Initialize(int index)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetEnemyAbility(int id, string iconId, Material material)
+	public string AbilityIconId
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Show()
-		{
-		}
+	public void Initialize(int index)
+	{
+	}
 
-		public void Hide()
-		{
-		}
+	public void SetEnemyAbility(int id, string iconId, Material material)
+	{
+	}
 
-		private void Visible(bool b, bool force = false)
-		{
-		}
+	public void Show()
+	{
+	}
 
-		public bool IsVisible()
-		{
-			return default(bool);
-		}
+	public void Hide()
+	{
+	}
 
-		public void Enable()
-		{
-		}
+	private void Visible(bool b, bool force = false)
+	{
+	}
 
-		public void Disable()
-		{
-		}
+	public bool IsVisible()
+	{
+		return default(bool);
+	}
 
-		public bool IsEnableAbility()
-		{
-			return default(bool);
-		}
+	public void Enable()
+	{
+	}
 
-		public void ApplyPosition()
-		{
-		}
+	public void Disable()
+	{
+	}
 
-		public void SetIndex(int idx)
-		{
-		}
+	public bool IsEnableAbility()
+	{
+		return default(bool);
+	}
 
-		public void SetCount(int count, bool isForce = false, bool isAnim = true)
-		{
-		}
+	public void ApplyPosition()
+	{
+	}
 
-		public void ResetCount()
-		{
-		}
+	public void SetIndex(int idx)
+	{
+	}
+
+	public void SetCount(int count, bool isForce = false, bool isAnim = true)
+	{
+	}
+
+	public void ResetCount()
+	{
 	}
 }

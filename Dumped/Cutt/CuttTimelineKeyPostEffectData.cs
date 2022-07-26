@@ -1,18 +1,17 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyPostEffectData : CuttTimelineKeyWithInterpolate
 {
-	[Serializable]
-	public class CuttTimelineKeyPostEffectData : CuttTimelineKeyWithInterpolate
+	public float blurSize;
+
+	public bool isEnableDiffusionColor;
+
+	public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
+
+	public override void OnLoad(CuttTimelineControl timelineControl)
 	{
-		public float blurSize;
-
-		public bool isEnableDiffusionColor;
-
-		public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
-
-		public override void OnLoad(CuttTimelineControl timelineControl)
-		{
-		}
 	}
 }

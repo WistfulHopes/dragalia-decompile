@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum CharaAIInfluenceMap
 {
-	public enum CharaAIInfluenceMap
-	{
-		BASIC_FORMATION,
-		MINE,
-		ATTACK,
-		HEAL,
-		AVOID_MARKER
-	}
+	BASIC_FORMATION,
+	MINE,
+	ATTACK,
+	HEAL,
+	AVOID_MARKER
 }

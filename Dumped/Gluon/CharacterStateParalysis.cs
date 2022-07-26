@@ -1,35 +1,34 @@
-namespace Gluon
+namespace Gluon;
+
+public class CharacterStateParalysis : CharacterStateBase
 {
-	public class CharacterStateParalysis : CharacterStateBase
+	public int slipDamage
 	{
-		public int slipDamage
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
 		}
+		set
+		{
+		}
+	}
 
-		public bool isFollower
+	public bool isFollower
+	{
+		get
 		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
+			return default(bool);
 		}
+		set
+		{
+		}
+	}
 
-		protected override void OnStateEnter_Internal()
-		{
-		}
+	protected override void OnStateEnter_Internal()
+	{
+	}
 
-		public override void OnStateExit()
-		{
-		}
+	public override void OnStateExit()
+	{
 	}
 }

@@ -1,10 +1,9 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[CreateAssetMenu]
+public class MainStoryAssetList : AssetListBase
 {
-	[CreateAssetMenu]
-	public class MainStoryAssetList : AssetListBase
-	{
-		public const string path = "CustomAssetLists/MainStoryAssetList";
-	}
+	public const string path = "CustomAssetLists/MainStoryAssetList";
 }

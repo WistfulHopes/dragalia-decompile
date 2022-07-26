@@ -1,51 +1,50 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AnimationUIFlash : AnimationUIBase
 {
-	public class AnimationUIFlash : AnimationUIBase
+	public enum AlphaAnimType
 	{
-		public enum AlphaAnimType
+		FadeInOut,
+		FadeOutIn
+	}
+
+	[SerializeField]
+	private AlphaAnimType alphaAnimType;
+
+	[SerializeField]
+	private bool useAlphaCurve;
+
+	[SerializeField]
+	private AnimationCurve alphaCurve;
+
+	private FlashPlayer _flashPlayer;
+
+	public FlashPlayer flashPlayer
+	{
+		get
 		{
-			FadeInOut,
-			FadeOutIn
+			return null;
 		}
-
-		[SerializeField]
-		private AlphaAnimType alphaAnimType;
-
-		[SerializeField]
-		private bool useAlphaCurve;
-
-		[SerializeField]
-		private AnimationCurve alphaCurve;
-
-		private FlashPlayer _flashPlayer;
-
-		public FlashPlayer flashPlayer
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		protected override void AddToDefaultEnterAnimation()
+		set
 		{
 		}
+	}
 
-		protected override void AddToDefaultExitAnimation()
-		{
-		}
+	protected override void AddToDefaultEnterAnimation()
+	{
+	}
 
-		private void SetFlashAlpha(float alpha)
-		{
-		}
+	protected override void AddToDefaultExitAnimation()
+	{
+	}
 
-		private void GetStartEndAlpha(bool isEnter, out float startAlpha, out float endAlpha)
-		{
-		}
+	private void SetFlashAlpha(float alpha)
+	{
+	}
+
+	private void GetStartEndAlpha(bool isEnter, out float startAlpha, out float endAlpha)
+	{
 	}
 }

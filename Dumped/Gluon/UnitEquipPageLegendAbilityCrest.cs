@@ -1,36 +1,34 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class UnitEquipPageLegendAbilityCrest : MonoBehaviour
 {
-	public class UnitEquipPageLegendAbilityCrest : MonoBehaviour
+	[SerializeField]
+	public Image[] abilityCrestIcon;
+
+	public Graphic[] unionIcon;
+
+	public Text[] abilityCrestNameText;
+
+	public Transform[] abilityCrestDecoNode;
+
+	public GameObject[] noAbilityCrestIconGO;
+
+	public void SetupEquipPage()
 	{
-		[SerializeField]
-		[Header("AbilityCrest è­·ç¬¦")]
-		public Image[] abilityCrestIcon;
+	}
 
-		public Graphic[] unionIcon;
+	private void SetEquipAmuletInfo()
+	{
+	}
 
-		public Text[] abilityCrestNameText;
+	private void SetCrestUnionIcon(Graphic unionIcon, int crestId)
+	{
+	}
 
-		public Transform[] abilityCrestDecoNode;
-
-		public GameObject[] noAbilityCrestIconGO;
-
-		public void SetupEquipPage()
-		{
-		}
-
-		private void SetEquipAmuletInfo()
-		{
-		}
-
-		private void SetCrestUnionIcon(Graphic unionIcon, int crestId)
-		{
-		}
-
-		private void SetBlank(int index)
-		{
-		}
+	private void SetBlank(int index)
+	{
 	}
 }

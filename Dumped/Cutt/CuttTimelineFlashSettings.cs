@@ -1,10 +1,9 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineFlashSettings
 {
-	[Serializable]
-	public class CuttTimelineFlashSettings
-	{
-		public int[] indices;
-	}
+	public int[] indices;
 }

@@ -4,141 +4,140 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Gluon
+namespace Gluon;
+
+public class BaseCanvas : SingletonInBaseMonoBehaviour<BaseCanvas>
 {
-	public class BaseCanvas : SingletonInBaseMonoBehaviour<BaseCanvas>
+	public static bool skipCreateOnStart;
+
+	public static bool showBlackCanvasOnStart;
+
+	public BaseCanvasContents mainCanvas;
+
+	public EventSystem eventSystem;
+
+	public GameObject touchGuardCanvas;
+
+	public GameObject blackCanvas;
+
+	public List<float> touchGuardTimeList;
+
+	[HideInInspector]
+	public OutGameSettings outGameSettings;
+
+	protected bool isPopupOpened;
+
+	[SerializeField]
+	private List<WeakReference> touchGuardObjectWrefList;
+
+	private bool isAllLoadCompleted;
+
+	private int popupCount;
+
+	private void Start()
 	{
-		public static bool skipCreateOnStart;
+	}
 
-		public static bool showBlackCanvasOnStart;
+	private void SetDragThreshold()
+	{
+	}
 
-		public BaseCanvasContents mainCanvas;
+	private void Update()
+	{
+	}
 
-		public EventSystem eventSystem;
+	public bool IsBlackCanvasActive()
+	{
+		return default(bool);
+	}
 
-		public GameObject touchGuardCanvas;
+	public void ShowBlackCanvas(bool show)
+	{
+	}
 
-		public GameObject blackCanvas;
+	public bool IsAllLoadCompleted()
+	{
+		return default(bool);
+	}
 
-		public List<float> touchGuardTimeList;
+	public void SetActiveBg(ThemeColor themeColor, bool isMyPage = false, bool doExitAnimation = true)
+	{
+	}
 
-		[HideInInspector]
-		public OutGameSettings outGameSettings;
+	public void SetCanvasEnable(bool enable)
+	{
+	}
 
-		protected bool isPopupOpened;
+	public void SetCanvasAlpha(float alpha)
+	{
+	}
 
-		[SerializeField]
-		private List<WeakReference> touchGuardObjectWrefList;
+	public void FadeOutCanvas(float duration = 1f, float startAlpha = 1f, float endAlpha = 0f)
+	{
+	}
 
-		private bool isAllLoadCompleted;
+	public void FadeInCanvas(float duration = 1f, float startAlpha = 0f, float endAlpha = 1f)
+	{
+	}
 
-		private int popupCount;
+	public void SetTouchGuardEnable(bool enable)
+	{
+	}
 
-		private void Start()
-		{
-		}
+	public void SetParticleEnable(bool enable)
+	{
+	}
 
-		private void SetDragThreshold()
-		{
-		}
+	public bool IsTouchGurdEnable()
+	{
+		return default(bool);
+	}
 
-		private void Update()
-		{
-		}
+	public void CreateTouchGuard(float duration = -1f)
+	{
+	}
 
-		public bool IsBlackCanvasActive()
-		{
-			return default(bool);
-		}
+	private IEnumerator TouchGuardCoroutine(float duration)
+	{
+		return null;
+	}
 
-		public void ShowBlackCanvas(bool show)
-		{
-		}
+	public void RemoveAllTouchGuard()
+	{
+	}
 
-		public bool IsAllLoadCompleted()
-		{
-			return default(bool);
-		}
+	public void RemoveTouchGuard()
+	{
+	}
 
-		public void SetActiveBg(ThemeColor themeColor, bool isMyPage = false, bool doExitAnimation = true)
-		{
-		}
+	private void UpdateTouchGuardStatus()
+	{
+	}
 
-		public void SetCanvasEnable(bool enable)
-		{
-		}
+	public TouchGuardObject CreateTouchGuardObject(string label, float duration = -1f)
+	{
+		return null;
+	}
 
-		public void SetCanvasAlpha(float alpha)
-		{
-		}
+	public void RemoveTouchGuardObject(TouchGuardObject touchGuardObject)
+	{
+	}
 
-		public void FadeOutCanvas(float duration = 1f, float startAlpha = 1f, float endAlpha = 0f)
-		{
-		}
+	private IEnumerator TouchGuardObjectDelayRemove(float duration, TouchGuardObject touchGuardObject)
+	{
+		return null;
+	}
 
-		public void FadeInCanvas(float duration = 1f, float startAlpha = 0f, float endAlpha = 1f)
-		{
-		}
+	public void OnPopupOpened()
+	{
+	}
 
-		public void SetTouchGuardEnable(bool enable)
-		{
-		}
+	public void OnPopupClosed()
+	{
+	}
 
-		public void SetParticleEnable(bool enable)
-		{
-		}
-
-		public bool IsTouchGurdEnable()
-		{
-			return default(bool);
-		}
-
-		public void CreateTouchGuard(float duration = -1f)
-		{
-		}
-
-		private IEnumerator TouchGuardCoroutine(float duration)
-		{
-			return null;
-		}
-
-		public void RemoveAllTouchGuard()
-		{
-		}
-
-		public void RemoveTouchGuard()
-		{
-		}
-
-		private void UpdateTouchGuardStatus()
-		{
-		}
-
-		public TouchGuardObject CreateTouchGuardObject(string label, float duration = -1f)
-		{
-			return null;
-		}
-
-		public void RemoveTouchGuardObject(TouchGuardObject touchGuardObject)
-		{
-		}
-
-		private IEnumerator TouchGuardObjectDelayRemove(float duration, TouchGuardObject touchGuardObject)
-		{
-			return null;
-		}
-
-		public void OnPopupOpened()
-		{
-		}
-
-		public void OnPopupClosed()
-		{
-		}
-
-		public bool IsPopupOpened()
-		{
-			return default(bool);
-		}
+	public bool IsPopupOpened()
+	{
+		return default(bool);
 	}
 }

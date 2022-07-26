@@ -1,38 +1,37 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSelectNhaam : MonoBehaviour
 {
-	public class QuestSelectNhaam : MonoBehaviour
+	[SerializeField]
+	private FlashPlayerManager nhaamFlashMgr;
+
+	private FlashPlayer twinkleFlash;
+
+	private readonly Vector2 twinklePos;
+
+	private FlashPlayer moveFlash;
+
+	public void Initialize(int sortOrder)
 	{
-		[SerializeField]
-		private FlashPlayerManager nhaamFlashMgr;
+	}
 
-		private FlashPlayer twinkleFlash;
+	public void PlayAnimation()
+	{
+	}
 
-		private readonly Vector2 twinklePos;
+	public void PlayExitAnimation(Action onEnd)
+	{
+	}
 
-		private FlashPlayer moveFlash;
+	public void SetSortingOrder(int sortOrder)
+	{
+	}
 
-		public void Initialize(int sortOrder)
-		{
-		}
-
-		public void PlayAnimation()
-		{
-		}
-
-		public void PlayExitAnimation(Action onEnd)
-		{
-		}
-
-		public void SetSortingOrder(int sortOrder)
-		{
-		}
-
-		public bool IsInitialized()
-		{
-			return default(bool);
-		}
+	public bool IsInitialized()
+	{
+		return default(bool);
 	}
 }

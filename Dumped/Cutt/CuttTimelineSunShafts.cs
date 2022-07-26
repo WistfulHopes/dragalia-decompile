@@ -1,19 +1,18 @@
 using Gluon;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineSunShafts
 {
-	public class CuttTimelineSunShafts
+	private CuttTimelineKeySunShaftsDataList _keys;
+
+	public PostEffectSunShafts postEffectSunShafts;
+
+	public void Initialize(CuttTimelineKeySunShaftsDataList keys, CuttTimelineControl timelineControl)
 	{
-		private CuttTimelineKeySunShaftsDataList _keys;
+	}
 
-		public PostEffectSunShafts postEffectSunShafts;
-
-		public void Initialize(CuttTimelineKeySunShaftsDataList keys, CuttTimelineControl timelineControl)
-		{
-		}
-
-		public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
-		{
-		}
+	public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	{
 	}
 }

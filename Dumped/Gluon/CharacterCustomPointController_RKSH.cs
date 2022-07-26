@@ -1,46 +1,45 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterCustomPointController_RKSH : CharacterCustomPointController
 {
-	public class CharacterCustomPointController_RKSH : CharacterCustomPointController
+	private int lastCP;
+
+	public override int maxCP => default(int);
+
+	protected override void Initialize(CharacterBase owner, AbilityDataElement[] elems)
 	{
-		private int lastCP;
+	}
 
-		public override int maxCP => default(int);
+	public override void Update()
+	{
+	}
 
-		protected override void Initialize(CharacterBase owner, AbilityDataElement[] elems)
-		{
-		}
+	public override void SetCP(int index, int value)
+	{
+	}
 
-		public override void Update()
-		{
-		}
+	private void OnGaugeAnimComplete(int index, int prevCP, int currCP)
+	{
+	}
 
-		public override void SetCP(int index, int value)
-		{
-		}
+	private void OnCPMatched(AbilityDataElement ade, int skillId, int skillIndex)
+	{
+	}
 
-		private void OnGaugeAnimComplete(int index, int prevCP, int currCP)
-		{
-		}
+	public override IconType GetIconType()
+	{
+		return default(IconType);
+	}
 
-		private void OnCPMatched(AbilityDataElement ade, int skillId, int skillIndex)
-		{
-		}
+	private CharacterBase CheckCurrentCharaIsActiveInHierarchy()
+	{
+		return null;
+	}
 
-		public override IconType GetIconType()
-		{
-			return default(IconType);
-		}
-
-		private CharacterBase CheckCurrentCharaIsActiveInHierarchy()
-		{
-			return null;
-		}
-
-		public override bool ClearCPOnReborn()
-		{
-			return default(bool);
-		}
+	public override bool ClearCPOnReborn()
+	{
+		return default(bool);
 	}
 }

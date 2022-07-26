@@ -1,40 +1,38 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopSpecialItemShopView : ShopTradePanelBase
 {
-	public class ShopSpecialItemShopView : ShopTradePanelBase
+	[SerializeField]
+	public ShopCommonTableViewController tableview;
+
+	public static ShopSpecialItemShopView Create(Transform parent, ShopTradeScene scene)
 	{
-		[SerializeField]
-		[Header("TableView")]
-		public ShopCommonTableViewController tableview;
+		return null;
+	}
 
-		public static ShopSpecialItemShopView Create(Transform parent, ShopTradeScene scene)
-		{
-			return null;
-		}
+	private void Awake()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private static void ReloadData()
+	{
+	}
 
-		private static void ReloadData()
-		{
-		}
+	public void ReloadPage()
+	{
+	}
 
-		public void ReloadPage()
-		{
-		}
+	public override void RefreshCurrentPage()
+	{
+	}
 
-		public override void RefreshCurrentPage()
-		{
-		}
-
-		public override void ScrollToItem(int tradeId)
-		{
-		}
+	public override void ScrollToItem(int tradeId)
+	{
 	}
 }

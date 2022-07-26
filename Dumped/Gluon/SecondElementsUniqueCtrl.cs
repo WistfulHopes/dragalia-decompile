@@ -2,132 +2,131 @@ using Gluon.ActionData;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SecondElementsUniqueCtrl : EnemyUniqueCtrl
 {
-	public class SecondElementsUniqueCtrl : EnemyUniqueCtrl
+	public enum ElementType
 	{
-		public enum ElementType
-		{
-			Curse = 0,
-			Bless = 1,
-			Wind = 2,
-			Fire = 3,
-			None = 99
-		}
+		Curse = 0,
+		Bless = 1,
+		Wind = 2,
+		Fire = 3,
+		None = 99
+	}
 
-		public enum State
-		{
-			Init,
-			Idle,
-			Running,
-			Groggy,
-			Regain
-		}
+	public enum State
+	{
+		Init,
+		Idle,
+		Running,
+		Groggy,
+		Regain
+	}
 
-		public static readonly int SECOUND_ELEMENTS_NUM;
+	public static readonly int SECOUND_ELEMENTS_NUM;
 
-		private float[] _origin;
+	private float[] _origin;
 
-		private float[] _limit;
+	private float[] _limit;
 
-		[SerializeField]
-		private float[] _point;
+	[SerializeField]
+	private float[] _point;
 
-		[SerializeField]
-		private float[] _power;
+	[SerializeField]
+	private float[] _power;
 
-		private ElementType _selectedElement;
+	private ElementType _selectedElement;
 
-		[SerializeField]
-		private State _state;
+	[SerializeField]
+	private State _state;
 
-		private int _actionId;
+	private int _actionId;
 
-		public override void Initialize()
-		{
-		}
+	public override void Initialize()
+	{
+	}
 
-		public void Setup(Setup2ndElementsData resource)
-		{
-		}
+	public void Setup(Setup2ndElementsData resource)
+	{
+	}
 
-		public void OnStart()
-		{
-		}
+	public void OnStart()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		private void Ready()
-		{
-		}
+	private void Ready()
+	{
+	}
 
-		public void OnDamage(CollisionHitAttribute hitAttr, int damage)
-		{
-		}
+	public void OnDamage(CollisionHitAttribute hitAttr, int damage)
+	{
+	}
 
-		public bool CheckGroggy()
-		{
-			return default(bool);
-		}
+	public bool CheckGroggy()
+	{
+		return default(bool);
+	}
 
-		public bool Regain()
-		{
-			return default(bool);
-		}
+	public bool Regain()
+	{
+		return default(bool);
+	}
 
-		public bool IsValidElement(ElementType element)
-		{
-			return default(bool);
-		}
+	public bool IsValidElement(ElementType element)
+	{
+		return default(bool);
+	}
 
-		public bool IsValidAnyElement()
-		{
-			return default(bool);
-		}
+	public bool IsValidAnyElement()
+	{
+		return default(bool);
+	}
 
-		public void SetCurrentPoint(ElementType element, float value)
-		{
-		}
+	public void SetCurrentPoint(ElementType element, float value)
+	{
+	}
 
-		public void SubCurrentPoint(ElementType element, float value)
-		{
-		}
+	public void SubCurrentPoint(ElementType element, float value)
+	{
+	}
 
-		public float GetCurrentPoint(ElementType element)
-		{
-			return default(float);
-		}
+	public float GetCurrentPoint(ElementType element)
+	{
+		return default(float);
+	}
 
-		public void SetLimitPoint(ElementType element, float value)
-		{
-		}
+	public void SetLimitPoint(ElementType element, float value)
+	{
+	}
 
-		public float GetLimitPoint(ElementType element)
-		{
-			return default(float);
-		}
+	public float GetLimitPoint(ElementType element)
+	{
+		return default(float);
+	}
 
-		public float GetRate(ElementType element)
-		{
-			return default(float);
-		}
+	public float GetRate(ElementType element)
+	{
+		return default(float);
+	}
 
-		public void ShowSecondElementsGaugeUI()
-		{
-		}
+	public void ShowSecondElementsGaugeUI()
+	{
+	}
 
-		public void SendGroggy(ElementType element)
-		{
-		}
+	public void SendGroggy(ElementType element)
+	{
+	}
 
-		public override void OnReceiveCharacterSpecialState(CharacterSpecialState recvEvent)
-		{
-		}
+	public override void OnReceiveCharacterSpecialState(CharacterSpecialState recvEvent)
+	{
+	}
 
-		public override void OnChangeState(CharacterState state)
-		{
-		}
+	public override void OnChangeState(CharacterState state)
+	{
 	}
 }

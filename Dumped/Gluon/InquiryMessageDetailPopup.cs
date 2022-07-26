@@ -2,44 +2,43 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class InquiryMessageDetailPopup : PopupBase
 {
-	public class InquiryMessageDetailPopup : PopupBase
+	private const string prefabPath = "Prefabs/OutGame/Inquiry/InquiryMessageDetailPopup";
+
+	[SerializeField]
+	private Text inquiryType;
+
+	[SerializeField]
+	private Text inquiryOccuredAt;
+
+	[SerializeField]
+	private InquiryMessageDetailComment userReplyBase;
+
+	[SerializeField]
+	private InquiryMessageDetailComment adminReplyBase;
+
+	[SerializeField]
+	private DragEventScrollRect scrollRect;
+
+	private InquiryDetailResponse response;
+
+	public static InquiryMessageDetailPopup Create()
 	{
-		private const string prefabPath = "Prefabs/OutGame/Inquiry/InquiryMessageDetailPopup";
+		return null;
+	}
 
-		[SerializeField]
-		private Text inquiryType;
+	public void InitSetting(InquiryDetailResponse res)
+	{
+	}
 
-		[SerializeField]
-		private Text inquiryOccuredAt;
+	public void OnOKButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private InquiryMessageDetailComment userReplyBase;
-
-		[SerializeField]
-		private InquiryMessageDetailComment adminReplyBase;
-
-		[SerializeField]
-		private DragEventScrollRect scrollRect;
-
-		private InquiryDetailResponse response;
-
-		public static InquiryMessageDetailPopup Create()
-		{
-			return null;
-		}
-
-		public void InitSetting(InquiryDetailResponse res)
-		{
-		}
-
-		public void OnOKButtonPressed()
-		{
-		}
-
-		public void OnCloseButtonPressed()
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
 	}
 }

@@ -1,36 +1,35 @@
 using System.Collections.Generic;
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsOrderToSub : ActionParts
 {
-	public class ActionPartsOrderToSub : ActionParts
+	private readonly OrderToSubData _partsData;
+
+	public List<EnemyCharacter> _subCharaList;
+
+	public ActionPartsOrderToSub(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly OrderToSubData _partsData;
+	}
 
-		public List<EnemyCharacter> _subCharaList;
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsOrderToSub(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	private void ProcCommand()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	private void OrderAction(EnemyCharacter chara)
+	{
+	}
 
-		private void ProcCommand()
-		{
-		}
-
-		private void OrderAction(EnemyCharacter chara)
-		{
-		}
-
-		private void TargetCorrection(ref CommonObjectStatus target)
-		{
-		}
+	private void TargetCorrection(ref CommonObjectStatus target)
+	{
 	}
 }

@@ -1,45 +1,44 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingRoomTempData : MonoBehaviour
 {
-	public class MatchingRoomTempData : MonoBehaviour
+	private static MatchingRoomTempData instance;
+
+	private MatchingService.Room _room;
+
+	private MatchingService.Player _player;
+
+	public MatchingService.Room room
 	{
-		private static MatchingRoomTempData instance;
-
-		private MatchingService.Room _room;
-
-		private MatchingService.Player _player;
-
-		public MatchingService.Room room
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return null;
 		}
-
-		public MatchingService.Player player
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		public static MatchingRoomTempData Instance => null;
-
-		public static void Create()
+		set
 		{
 		}
+	}
 
-		public static void Destroy()
+	public MatchingService.Player player
+	{
+		get
+		{
+			return null;
+		}
+		set
 		{
 		}
+	}
+
+	public static MatchingRoomTempData Instance => null;
+
+	public static void Create()
+	{
+	}
+
+	public static void Destroy()
+	{
 	}
 }

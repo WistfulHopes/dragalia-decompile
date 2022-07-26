@@ -1,61 +1,60 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class RecoverStaminaModel
 {
-	public class RecoverStaminaModel
+	private static RecoverStaminaModel instance;
+
+	public StaminaUtilBase staminaUtil;
+
+	public int requiredStamina;
+
+	public Action onModuleCompletedWithAnyAction;
+
+	public Action onModuleCancelled;
+
+	private bool anyActionDone;
+
+	private DestroyStateWatcher destroyWatcher;
+
+	public static RecoverStaminaModel Instance => null;
+
+	public static bool HasInstance()
 	{
-		private static RecoverStaminaModel instance;
+		return default(bool);
+	}
 
-		public StaminaUtilBase staminaUtil;
+	public static void DeleteInstance()
+	{
+	}
 
-		public int requiredStamina;
+	private RecoverStaminaModel()
+	{
+	}
 
-		public Action onModuleCompletedWithAnyAction;
+	static RecoverStaminaModel()
+	{
+	}
 
-		public Action onModuleCancelled;
+	public void InitModule(GameObject destroyWatcherAttach, bool isMulti, int requiredStamina, Action onCompleted, Action onCancelled)
+	{
+	}
 
-		private bool anyActionDone;
+	public void RaiseAnyActionDone()
+	{
+	}
 
-		private DestroyStateWatcher destroyWatcher;
+	public static void QuitModuleIfCreated()
+	{
+	}
 
-		public static RecoverStaminaModel Instance => null;
+	public void TerminateModule()
+	{
+	}
 
-		public static bool HasInstance()
-		{
-			return default(bool);
-		}
-
-		public static void DeleteInstance()
-		{
-		}
-
-		private RecoverStaminaModel()
-		{
-		}
-
-		static RecoverStaminaModel()
-		{
-		}
-
-		public void InitModule(GameObject destroyWatcherAttach, bool isMulti, int requiredStamina, Action onCompleted, Action onCancelled)
-		{
-		}
-
-		public void RaiseAnyActionDone()
-		{
-		}
-
-		public static void QuitModuleIfCreated()
-		{
-		}
-
-		public void TerminateModule()
-		{
-		}
-
-		public void QuitModule()
-		{
-		}
+	public void QuitModule()
+	{
 	}
 }

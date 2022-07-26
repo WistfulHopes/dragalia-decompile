@@ -3,46 +3,45 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class HeaderMenuButton : MonoBehaviour
 {
-	public class HeaderMenuButton : MonoBehaviour
+	[SerializeField]
+	private Badge menuBadge;
+
+	public MenuPopup menuPopup;
+
+	private DateTime lastCheckInquiryTime;
+
+	private const int checkInquiryInterval = 1800000;
+
+	public bool isHavingUnreadComments
 	{
-		[SerializeField]
-		private Badge menuBadge;
-
-		public MenuPopup menuPopup;
-
-		private DateTime lastCheckInquiryTime;
-
-		private const int checkInquiryInterval = 1800000;
-
-		public bool isHavingUnreadComments
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public void OnButtonPressed()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SetMenuBadge(bool isActive)
-		{
-		}
+	public void OnButtonPressed()
+	{
+	}
 
-		public void UpdateMenuBadge()
-		{
-		}
+	public void SetMenuBadge(bool isActive)
+	{
+	}
 
-		public void CheckInquiryStatus(bool checkTime = true, [Optional] Action onComplete)
-		{
-		}
+	public void UpdateMenuBadge()
+	{
+	}
+
+	public void CheckInquiryStatus(bool checkTime = true, [Optional] Action onComplete)
+	{
 	}
 }

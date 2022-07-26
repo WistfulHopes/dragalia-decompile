@@ -1,17 +1,16 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsDestoryAllPrayObject : ActionParts
 {
-	public class ActionPartsDestoryAllPrayObject : ActionParts
+	private readonly SetupDestoryAllPrayObjectData _partsData;
+
+	public ActionPartsDestoryAllPrayObject(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly SetupDestoryAllPrayObjectData _partsData;
+	}
 
-		public ActionPartsDestoryAllPrayObject(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

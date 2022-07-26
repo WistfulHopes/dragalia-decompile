@@ -2,24 +2,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopDrawMaterialSummonOddsPopup : PopupBase
 {
-	public class ShopDrawMaterialSummonOddsPopup : PopupBase
+	[SerializeField]
+	public Text detailText;
+
+	public ShopDrawMaterialSummonOddsTableViewController tableView;
+
+	private List<ShopDrawMaterialSummonOddsTableViewData> dataList;
+
+	public static ShopDrawMaterialSummonOddsPopup Create(List<ShopDrawMaterialSummonOddsTableViewData> dataList)
 	{
-		[SerializeField]
-		public Text detailText;
+		return null;
+	}
 
-		public ShopDrawMaterialSummonOddsTableViewController tableView;
-
-		private List<ShopDrawMaterialSummonOddsTableViewData> dataList;
-
-		public static ShopDrawMaterialSummonOddsPopup Create(List<ShopDrawMaterialSummonOddsTableViewData> dataList)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
 	}
 }

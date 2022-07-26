@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public class CommonCharaAbilityPlusParam
 {
-	public class CommonCharaAbilityPlusParam
-	{
-		public float hpPlus;
+	public float hpPlus;
 
-		public float atkPlus;
+	public float atkPlus;
 
-		public float defPlus;
-	}
+	public float defPlus;
 }

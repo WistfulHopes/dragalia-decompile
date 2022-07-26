@@ -4,72 +4,68 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeEventTradeShopView : ShopTradePanelBase
 {
-	public class ShopTradeEventTradeShopView : ShopTradePanelBase
+	[SerializeField]
+	private ShopTradeTableViewController tableview;
+
+	[SerializeField]
+	public TabBase[] tabControllers;
+
+	[SerializeField]
+	public Text resetInfoText;
+
+	[SerializeField]
+	public RectTransform frameDialogRectTransform;
+
+	private List<ShopTradeTableViewController> tableViewList;
+
+	private TabBase usingTabBase;
+
+	private static Action onHttpDone;
+
+	private ShopTradeProductData.TradeShopItemData selectedData;
+
+	public static ShopTradeEventTradeShopView Create(Transform parent, ShopTradeScene scene)
 	{
-		[SerializeField]
-		[Header("TableView")]
-		private ShopTradeTableViewController tableview;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("TabControl")]
-		public TabBase[] tabControllers;
+	public static void RequestForEntryHttp(Action onHttpDoneCallback)
+	{
+	}
 
-		[SerializeField]
-		[Header("ResetInfo")]
-		public Text resetInfoText;
+	private void Awake()
+	{
+	}
 
-		[SerializeField]
-		public RectTransform frameDialogRectTransform;
+	private static void ReloadData()
+	{
+	}
 
-		private List<ShopTradeTableViewController> tableViewList;
+	public static void OnEntryHttpSuccess(EventTradeGetListResponse response)
+	{
+	}
 
-		private TabBase usingTabBase;
+	private void OnEnable()
+	{
+	}
 
-		private static Action onHttpDone;
+	public override void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data)
+	{
+	}
 
-		private ShopTradeProductData.TradeShopItemData selectedData;
+	public void ReloadPage()
+	{
+	}
 
-		public static ShopTradeEventTradeShopView Create(Transform parent, ShopTradeScene scene)
-		{
-			return null;
-		}
+	public override void RefreshCurrentPage()
+	{
+	}
 
-		public static void RequestForEntryHttp(Action onHttpDoneCallback)
-		{
-		}
-
-		private void Awake()
-		{
-		}
-
-		private static void ReloadData()
-		{
-		}
-
-		public static void OnEntryHttpSuccess(EventTradeGetListResponse response)
-		{
-		}
-
-		private void OnEnable()
-		{
-		}
-
-		public override void OnCellButtonPressed(ShopTradeProductData.TradeShopItemData data)
-		{
-		}
-
-		public void ReloadPage()
-		{
-		}
-
-		public override void RefreshCurrentPage()
-		{
-		}
-
-		public void SetSelectTabIndex(int index)
-		{
-		}
+	public void SetSelectTabIndex(int index)
+	{
 	}
 }

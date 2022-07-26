@@ -1,38 +1,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineMaterial
 {
-	public class CuttTimelineMaterial
+	private CuttTimelineKeyMaterialDataList _keys;
+
+	private CuttTimelineControl _timelineControl;
+
+	private Material targetMaterial;
+
+	private CuttTimelineKeyMaterialData logData;
+
+	public void Initialize(CuttTimelineKeyMaterialDataList keys, CuttTimelineControl timelineControl)
 	{
-		private CuttTimelineKeyMaterialDataList _keys;
+	}
 
-		private CuttTimelineControl _timelineControl;
+	public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	{
+	}
 
-		private Material targetMaterial;
+	private Material GetMaterial(CuttTimelineKeyMaterialData targetKey)
+	{
+		return null;
+	}
 
-		private CuttTimelineKeyMaterialData logData;
+	public Transform FindTransform(GameObject rootObj, string name)
+	{
+		return null;
+	}
 
-		public void Initialize(CuttTimelineKeyMaterialDataList keys, CuttTimelineControl timelineControl)
-		{
-		}
-
-		public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
-		{
-		}
-
-		private Material GetMaterial(CuttTimelineKeyMaterialData targetKey)
-		{
-			return null;
-		}
-
-		public Transform FindTransform(GameObject rootObj, string name)
-		{
-			return null;
-		}
-
-		private void SetMaterialParam(Material targetMat, List<CuttTimelineKeyMaterialData.ShaderParamData> paramList)
-		{
-		}
+	private void SetMaterialParam(Material targetMat, List<CuttTimelineKeyMaterialData.ShaderParamData> paramList)
+	{
 	}
 }

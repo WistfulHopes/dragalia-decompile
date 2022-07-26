@@ -1,19 +1,18 @@
-namespace Gluon
+namespace Gluon;
+
+public class ConfigDialogSortData
 {
-	public class ConfigDialogSortData
-	{
-		public int dataId;
+	public int dataId;
 
-		public ulong dataKeyId;
+	public ulong dataKeyId;
 
-		public int rarity;
+	public int rarity;
 
-		public ElementalType element;
+	public ElementalType element;
 
-		public int limitbreak;
+	public int limitbreak;
 
-		public int totalPlus;
+	public int totalPlus;
 
-		public int[] talismanAbilityIds;
-	}
+	public int[] talismanAbilityIds;
 }

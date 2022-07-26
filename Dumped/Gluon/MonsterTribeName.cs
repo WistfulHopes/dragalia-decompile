@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public class MonsterTribeName
 {
-	public class MonsterTribeName
+	public static string GetTribeName(TribeType type)
 	{
-		public static string GetTribeName(TribeType type)
-		{
-			return null;
-		}
+		return null;
 	}
 }

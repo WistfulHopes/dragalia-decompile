@@ -2,58 +2,56 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildReportConfirmPopup : PopupBase
 {
-	public class GuildReportConfirmPopup : PopupBase
+	public enum ReportAbuseType
 	{
-		public enum ReportAbuseType
-		{
-			Chat,
-			Notice,
-			Motto,
-			GuildName
-		}
+		Chat,
+		Notice,
+		Motto,
+		GuildName
+	}
 
-		public struct ReportData
-		{
-			public ReportAbuseType type;
+	public struct ReportData
+	{
+		public ReportAbuseType type;
 
-			public int guildId;
+		public int guildId;
 
-			public ulong chatId;
+		public ulong chatId;
 
-			public string content;
+		public string content;
 
-			public ReportData(ReportAbuseType type, int guildId, ulong chatId, string content)
-			{
-			}
-		}
-
-		[SerializeField]
-		[Header("Components")]
-		public Text contentText;
-
-		public const string prefabPath = "Prefabs/OutGame/Guild/GuildReportConfirmPopup";
-
-		private Action<bool> onAnyActionDone;
-
-		private ReportData reportData;
-
-		public static GuildReportConfirmPopup Create(ReportData reportData, Action<bool> onAnyActionDone)
-		{
-			return null;
-		}
-
-		protected override void Start()
+		public ReportData(ReportAbuseType type, int guildId, ulong chatId, string content)
 		{
 		}
+	}
 
-		public void OnReportButtonPressed()
-		{
-		}
+	[SerializeField]
+	public Text contentText;
 
-		public void OnCloseButtonPressed()
-		{
-		}
+	public const string prefabPath = "Prefabs/OutGame/Guild/GuildReportConfirmPopup";
+
+	private Action<bool> onAnyActionDone;
+
+	private ReportData reportData;
+
+	public static GuildReportConfirmPopup Create(ReportData reportData, Action<bool> onAnyActionDone)
+	{
+		return null;
+	}
+
+	protected override void Start()
+	{
+	}
+
+	public void OnReportButtonPressed()
+	{
+	}
+
+	public void OnCloseButtonPressed()
+	{
 	}
 }

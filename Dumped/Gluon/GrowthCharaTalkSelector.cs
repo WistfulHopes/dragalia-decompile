@@ -1,19 +1,18 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthCharaTalkSelector : OutGameTopCharaTalkSelector
 {
-	public class GrowthCharaTalkSelector : OutGameTopCharaTalkSelector
+	public GrowthScene.CharaType charaType;
+
+	public static Queue<int> myLastPlayedQueue;
+
+	public static void ClearLastPlayedQueue()
 	{
-		public GrowthScene.CharaType charaType;
+	}
 
-		public static Queue<int> myLastPlayedQueue;
-
-		public static void ClearLastPlayedQueue()
-		{
-		}
-
-		public void Init(GrowthScene.CharaType charaType)
-		{
-		}
+	public void Init(GrowthScene.CharaType charaType)
+	{
 	}
 }

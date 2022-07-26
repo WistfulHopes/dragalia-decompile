@@ -1,52 +1,47 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventInfoCtrlBase : MonoBehaviour
 {
-	public class EventInfoCtrlBase : MonoBehaviour
+	[SerializeField]
+	public Button howtoButton;
+
+	[SerializeField]
+	public Button scheduleButton;
+
+	[SerializeField]
+	public UIAnimationPublisher innerMovePublisher;
+
+	[SerializeField]
+	public RectTransform syncTopMask;
+
+	protected virtual void Start()
 	{
-		[SerializeField]
-		[Header("Howto")]
-		public Button howtoButton;
+	}
 
-		[SerializeField]
-		[Header("WebView")]
-		public Button scheduleButton;
+	public virtual void SetEventInfo()
+	{
+	}
 
-		[SerializeField]
-		[Header("Publisher")]
-		public UIAnimationPublisher innerMovePublisher;
+	public virtual void OnResetTopImageAndTalk()
+	{
+	}
 
-		[SerializeField]
-		[Header("SyncTopMask")]
-		public RectTransform syncTopMask;
+	public void OnHowtoButtonTouched()
+	{
+	}
 
-		protected virtual void Start()
-		{
-		}
+	public void OnScheduleButtonTouched()
+	{
+	}
 
-		public virtual void SetEventInfo()
-		{
-		}
+	protected virtual void ResetSpecialHelpButtonPressedState()
+	{
+	}
 
-		public virtual void OnResetTopImageAndTalk()
-		{
-		}
-
-		public void OnHowtoButtonTouched()
-		{
-		}
-
-		public void OnScheduleButtonTouched()
-		{
-		}
-
-		protected virtual void ResetSpecialHelpButtonPressedState()
-		{
-		}
-
-		public void AdjustMoveOffset(float moveOffset)
-		{
-		}
+	public void AdjustMoveOffset(float moveOffset)
+	{
 	}
 }

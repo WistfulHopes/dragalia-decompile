@@ -1,40 +1,38 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandCuttLoadStory : IStoryCommand
 {
-	[CommandName("cutt_load_story")]
-	public class StoryCommandCuttLoadStory : IStoryCommand
+	private IEnumerator coroutine;
+
+	private static CuttDriverInStory cuttDriver;
+
+	public static void ReleaseCuttStory()
 	{
-		private IEnumerator coroutine;
+	}
 
-		private static CuttDriverInStory cuttDriver;
+	public void Start(string cuttName, int type)
+	{
+	}
 
-		public static void ReleaseCuttStory()
-		{
-		}
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		public void Start(string cuttName, int type)
-		{
-		}
+	private IEnumerator _Update()
+	{
+		return null;
+	}
 
-		public override bool Update()
-		{
-			return default(bool);
-		}
+	public static CuttDriverInGame GetCuttDriver()
+	{
+		return null;
+	}
 
-		private IEnumerator _Update()
-		{
-			return null;
-		}
-
-		public static CuttDriverInGame GetCuttDriver()
-		{
-			return null;
-		}
-
-		public string[] GetResourceNames(string cuttName, int type)
-		{
-			return null;
-		}
+	public string[] GetResourceNames(string cuttName, int type)
+	{
+		return null;
 	}
 }

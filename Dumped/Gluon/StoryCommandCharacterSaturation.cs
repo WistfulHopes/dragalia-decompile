@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandCharacterSaturation : IStoryCommand
 {
-	[CommandName("chara_saturation")]
-	public class StoryCommandCharacterSaturation : IStoryCommand
+	public void Start(string charaId, float value, float fadeSec = 0f)
 	{
-		public void Start(string charaId, float value, float fadeSec = 0f)
-		{
-		}
 	}
 }

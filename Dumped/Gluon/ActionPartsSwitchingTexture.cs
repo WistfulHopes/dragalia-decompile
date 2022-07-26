@@ -1,17 +1,16 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsSwitchingTexture : ActionParts
 {
-	public class ActionPartsSwitchingTexture : ActionParts
+	private readonly SwitchingTextureData _partsData;
+
+	public ActionPartsSwitchingTexture(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly SwitchingTextureData _partsData;
+	}
 
-		public ActionPartsSwitchingTexture(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

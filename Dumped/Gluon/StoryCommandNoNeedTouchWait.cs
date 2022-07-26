@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandNoNeedTouchWait : IStoryCommand
 {
-	[CommandName("no_need_touch_wait")]
-	public class StoryCommandNoNeedTouchWait : IStoryCommand
+	public void Start()
 	{
-		public void Start()
-		{
-		}
 	}
 }

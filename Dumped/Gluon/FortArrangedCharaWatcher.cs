@@ -1,35 +1,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortArrangedCharaWatcher : MonoBehaviour
 {
-	public class FortArrangedCharaWatcher : MonoBehaviour
+	private List<FortCharaActionController> charaActionControllerList;
+
+	private const int VOICE_MAX_SOURCE_COUNT = 14;
+
+	private List<string> loadedVoiceGroupNameList;
+
+	private void Start()
 	{
-		private List<FortCharaActionController> charaActionControllerList;
+	}
 
-		private const int VOICE_MAX_SOURCE_COUNT = 14;
+	public void AddToCharaList(FortCharaActionController charaActionController)
+	{
+	}
 
-		private List<string> loadedVoiceGroupNameList;
+	public void ClearCharaList(FortCharaActionController charaActionController)
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void BeforeLoadVoice(string voiceGroupName)
+	{
+	}
 
-		public void AddToCharaList(FortCharaActionController charaActionController)
-		{
-		}
-
-		public void ClearCharaList(FortCharaActionController charaActionController)
-		{
-		}
-
-		private void BeforeLoadVoice(string voiceGroupName)
-		{
-		}
-
-		public bool IsJammedCharaExist(Vector3 basePos, Vector3 forward, float checkDist, float checkAngle, out float foundDist)
-		{
-			return default(bool);
-		}
+	public bool IsJammedCharaExist(Vector3 basePos, Vector3 forward, float checkDist, float checkAngle, out float foundDist)
+	{
+		return default(bool);
 	}
 }

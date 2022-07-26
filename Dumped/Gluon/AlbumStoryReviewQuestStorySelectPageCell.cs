@@ -1,14 +1,13 @@
 using UnityEngine;
 
-namespace Gluon
-{
-	public class AlbumStoryReviewQuestStorySelectPageCell : TableViewCell<QuestCellData>
-	{
-		[SerializeField]
-		public QuestCell questCell;
+namespace Gluon;
 
-		public override void UpdateContent(QuestCellData itemData)
-		{
-		}
+public class AlbumStoryReviewQuestStorySelectPageCell : TableViewCell<QuestCellData>
+{
+	[SerializeField]
+	public QuestCell questCell;
+
+	public override void UpdateContent(QuestCellData itemData)
+	{
 	}
 }

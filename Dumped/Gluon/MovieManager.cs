@@ -2,196 +2,196 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using CriWare;
 using Cute.Cri;
 using Cute.Cri.Movie;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MovieManager : MonoBehaviour
 {
-	public class MovieManager : MonoBehaviour
+	[Flags]
+	public enum MovieCategory
 	{
-		[Flags]
-		public enum MovieCategory
+		CutIn = 1,
+		Other = 2,
+		All = -1
+	}
+
+	private class MovieData
+	{
+		public MoviePlayerHandle handle;
+
+		public MovieCategory category;
+
+		public float playSpeed;
+	}
+
+	private class TrackParam
+	{
+		public float Volume
 		{
-			CutIn = 0x1,
-			Other = 0x2,
-			All = -1
-		}
-
-		private class MovieData
-		{
-			public MoviePlayerHandle handle;
-
-			public MovieCategory category;
-
-			public float playSpeed;
-		}
-
-		private class TrackParam
-		{
-			public float Volume
+			[CompilerGenerated]
+			get
 			{
-				[CompilerGenerated]
-				get
-				{
-					return default(float);
-				}
-				[CompilerGenerated]
-				set
-				{
-				}
+				return default(float);
 			}
-
-			public bool Mute
+			[CompilerGenerated]
+			set
 			{
-				[CompilerGenerated]
-				get
-				{
-					return default(bool);
-				}
-				[CompilerGenerated]
-				set
-				{
-				}
 			}
 		}
 
-		private const int SORT_ORDER_BASE = 1;
-
-		private List<string> preinMovieFileList;
-
-		private Dictionary<string, MovieData> _moviePlayerDic;
-
-		private readonly Dictionary<int, TrackParam> _trackParamDict;
-
-		private static MovieManager _instance;
-
-		private string RawAssetRootFullPath => null;
-
-		public static MovieManager instance => null;
-
-		public float GetVolume(int trackNo)
+		public bool Mute
 		{
-			return default(float);
+			[CompilerGenerated]
+			get
+			{
+				return default(bool);
+			}
+			[CompilerGenerated]
+			set
+			{
+			}
 		}
+	}
 
-		public void SetVolume(int trackNo, float volume)
-		{
-		}
+	private const int SORT_ORDER_BASE = 1;
 
-		public void SetPlaySpeed(MovieCategory category, float playSpeed)
-		{
-		}
+	private List<string> preinMovieFileList;
 
-		public Material GetMovieMaterial(MoviePlayerHandle handle)
-		{
-			return null;
-		}
+	private Dictionary<string, MovieData> _moviePlayerDic;
 
-		public bool GetMute(int trackNo)
-		{
-			return default(bool);
-		}
+	private readonly Dictionary<int, TrackParam> _trackParamDict;
 
-		public void SetMute(int trackNo, bool mute)
-		{
-		}
+	private static MovieManager _instance;
 
-		public static bool IsInstanceEmpty()
-		{
-			return default(bool);
-		}
+	private string RawAssetRootFullPath => null;
 
-		public void Awake()
-		{
-		}
+	public static MovieManager instance => null;
 
-		private MoviePlayerHandle Create(GameObject parentObject, MoviePlayerType playerType = MoviePlayerType.ForUI)
-		{
-			return default(MoviePlayerHandle);
-		}
+	public float GetVolume(int trackNo)
+	{
+		return default(float);
+	}
 
-		public MoviePlayerHandle CreatePlayer(string movieFile, GameObject parentObject, MovieCategory category = MovieCategory.Other, MoviePlayerType playerType = MoviePlayerType.ForUI)
-		{
-			return default(MoviePlayerHandle);
-		}
+	public void SetVolume(int trackNo, float volume)
+	{
+	}
 
-		public MoviePlayerHandle CreatePlayerWithSkipButton(string movieFile, MovieCategory category = MovieCategory.Other, [Optional] GameObject parentObject)
-		{
-			return default(MoviePlayerHandle);
-		}
+	public void SetPlaySpeed(MovieCategory category, float playSpeed)
+	{
+	}
 
-		private GameObject CreateBackgroundLayer(MoviePlayerHandle playerHandle)
-		{
-			return null;
-		}
+	public Material GetMovieMaterial(MoviePlayerHandle handle)
+	{
+		return null;
+	}
 
-		public void SetPlayEndType(MoviePlayerHandle playerHandle, PlayEndType playEndType)
-		{
-		}
+	public bool GetMute(int trackNo)
+	{
+		return default(bool);
+	}
 
-		public void SetPlayerParentTransform(MoviePlayerHandle playerHandle, Transform parent, bool worldPositionStays = true)
-		{
-		}
+	public void SetMute(int trackNo, bool mute)
+	{
+	}
 
-		public float GetDurationTime(MoviePlayerHandle playerHandle)
-		{
-			return default(float);
-		}
+	public static bool IsInstanceEmpty()
+	{
+		return default(bool);
+	}
 
-		public void SetRaycastTarget(MoviePlayerHandle playerHandle, bool enableRaycastTarget)
-		{
-		}
+	public void Awake()
+	{
+	}
 
-		public void Play(MoviePlayerHandle playerHandle, bool isLoop = false, [Optional] Action playStartCallback, [Optional] Action playEndCallback, [Optional] Action stoppedCallback, float playSpeed = 1f)
-		{
-		}
+	private MoviePlayerHandle Create(GameObject parentObject, MoviePlayerType playerType = MoviePlayerType.ForUI)
+	{
+		return default(MoviePlayerHandle);
+	}
 
-		private void ApplyVolume(MoviePlayerHandle playerHandle)
-		{
-		}
+	public MoviePlayerHandle CreatePlayer(string movieFile, GameObject parentObject, MovieCategory category = MovieCategory.Other, MoviePlayerType playerType = MoviePlayerType.ForUI, float bufferingTime = 1f)
+	{
+		return default(MoviePlayerHandle);
+	}
 
-		public bool IsPlaying(MoviePlayerHandle playerHandle)
-		{
-			return default(bool);
-		}
+	public MoviePlayerHandle CreatePlayerWithSkipButton(string movieFile, MovieCategory category = MovieCategory.Other, [Optional] GameObject parentObject)
+	{
+		return default(MoviePlayerHandle);
+	}
 
-		public bool IsPlaying()
-		{
-			return default(bool);
-		}
+	private GameObject CreateBackgroundLayer(MoviePlayerHandle playerHandle)
+	{
+		return null;
+	}
 
-		public void Pause(MoviePlayerHandle playerHandle, bool isPause)
-		{
-		}
+	public void SetPlayEndType(MoviePlayerHandle playerHandle, PlayEndType playEndType)
+	{
+	}
 
-		public bool IsPaused(MoviePlayerHandle playerHandle)
-		{
-			return default(bool);
-		}
+	public void SetPlayerParentTransform(MoviePlayerHandle playerHandle, Transform parent, bool worldPositionStays = true)
+	{
+	}
 
-		public void Stop(MoviePlayerHandle playerHandle)
-		{
-		}
+	public float GetDurationTime(MoviePlayerHandle playerHandle)
+	{
+		return default(float);
+	}
 
-		public void Rewind(MoviePlayerHandle playerHandle, bool isWaitForPlay)
-		{
-		}
+	public void SetRaycastTarget(MoviePlayerHandle playerHandle, bool enableRaycastTarget)
+	{
+	}
 
-		public void Clear(MoviePlayerHandle playerHandle)
-		{
-		}
+	public void Play(MoviePlayerHandle playerHandle, bool isLoop = false, [Optional] Action playStartCallback, [Optional] Action playEndCallback, [Optional] Action stoppedCallback, float playSpeed = 1f, CriManaMovieMaterial.MaxFrameDrop maxFrameDrop = CriManaMovieMaterial.MaxFrameDrop.Ten)
+	{
+	}
 
-		public void Clear(MovieCategory category)
-		{
-		}
+	private void ApplyVolume(MoviePlayerHandle playerHandle)
+	{
+	}
 
-		public void ClearAll()
-		{
-		}
+	public bool IsPlaying(MoviePlayerHandle playerHandle)
+	{
+		return default(bool);
+	}
 
-		public void AdjustScreenSize(MoviePlayerHandle playerHandle, Vector2 screenSize, bool isPanScan = false)
-		{
-		}
+	public bool IsPlaying()
+	{
+		return default(bool);
+	}
+
+	public void Pause(MoviePlayerHandle playerHandle, bool isPause)
+	{
+	}
+
+	public bool IsPaused(MoviePlayerHandle playerHandle)
+	{
+		return default(bool);
+	}
+
+	public void Stop(MoviePlayerHandle playerHandle)
+	{
+	}
+
+	public void Rewind(MoviePlayerHandle playerHandle, bool isWaitForPlay)
+	{
+	}
+
+	public void Clear(MoviePlayerHandle playerHandle)
+	{
+	}
+
+	public void Clear(MovieCategory category)
+	{
+	}
+
+	public void ClearAll()
+	{
+	}
+
+	public void AdjustScreenSize(MoviePlayerHandle playerHandle, Vector2 screenSize, bool isPanScan = false)
+	{
 	}
 }

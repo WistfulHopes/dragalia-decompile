@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum EnumIconType
 {
-	public enum EnumIconType
-	{
-		Chara,
-		Dragon,
-		Weapon,
-		Amulet
-	}
+	Chara,
+	Dragon,
+	Weapon,
+	Amulet
 }

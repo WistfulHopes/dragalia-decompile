@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum DetailLinkType
 {
-	public enum DetailLinkType
-	{
-		NONE,
-		GET_QUEST,
-		GET_TEXT,
-		TRADE
-	}
+	NONE,
+	GET_QUEST,
+	GET_TEXT,
+	TRADE
 }

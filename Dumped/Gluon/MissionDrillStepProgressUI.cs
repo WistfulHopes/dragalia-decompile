@@ -6,127 +6,126 @@ using Gluon.Mission.ListView;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MissionDrillStepProgressUI : MonoBehaviour
 {
-	public class MissionDrillStepProgressUI : MonoBehaviour
+	[SerializeField]
+	private MissionDrillTreasure originalTreasure;
+
+	[SerializeField]
+	private RectTransform treasureParent;
+
+	[SerializeField]
+	private MissionDrillTreasure completeTreasure;
+
+	[SerializeField]
+	private Image progressBarIcon;
+
+	[SerializeField]
+	private Image progressBarImage;
+
+	[SerializeField]
+	private Text progressText;
+
+	[SerializeField]
+	private bool isShowCompleteRewardOnly;
+
+	[SerializeField]
+	private MissionDrillStepProgressUIRewardParts rewardParts;
+
+	[SerializeField]
+	private float progressAnimationDuration;
+
+	[SerializeField]
+	private FlashPlayerManager flashPlayerManager;
+
+	[SerializeField]
+	private int lastMissionPositionOffset;
+
+	private FlashPlayer fadeFlashPlayer;
+
+	[SerializeField]
+	private Transform fadeFlashParent;
+
+	private const string fadeFlashPath = "Prefabs/OutGame/MissionDrill/pf_NhaamDrillRewardChange";
+
+	private Stack<MissionDrillTreasure> treasurePool;
+
+	private List<MissionDrillTreasure> treasures;
+
+	private bool isCompleteReward;
+
+	private List<MissionTableViewData> missionTableViewDataList;
+
+	private MissionDrillDataElement missionDrillData;
+
+	private MissionDrillGroupElement missionDrillGroup;
+
+	private string nextPickupRewardTextFormat;
+
+	private UIAnimationBase uiAnimation;
+
+	private string progressTextFormat;
+
+	private Action onRewardReceived;
+
+	private void Start()
 	{
-		[SerializeField]
-		private MissionDrillTreasure originalTreasure;
+	}
 
-		[SerializeField]
-		private RectTransform treasureParent;
+	public void Setup(List<MissionTableViewData> missionTableViewDataList, MissionDrillGroupElement missionDrillGroup, MissionDrillDataElement currentMissionDrillData, string progressTextFormat, string nextPickupRewardTextFormat, bool isUnlockedGroup, Action onRewardReceived)
+	{
+	}
 
-		[SerializeField]
-		private MissionDrillTreasure completeTreasure;
+	private void SetupTreasure(List<MissionTableViewData> missionTableViewDataList, int totalMissionNum)
+	{
+	}
 
-		[SerializeField]
-		private Image progressBarIcon;
+	private float GetProgressRatio(List<MissionTableViewData> missionTableViewDataList, int currentMissionStep)
+	{
+		return default(float);
+	}
 
-		[SerializeField]
-		private Image progressBarImage;
+	private void SetupProgressBar(List<MissionTableViewData> missionTableViewDataList, int currentMissionStep)
+	{
+	}
 
-		[SerializeField]
-		private Text progressText;
+	private void UpdateProgress(float progress)
+	{
+	}
 
-		[SerializeField]
-		private bool isShowCompleteRewardOnly;
+	private void SetupReward(MissionDrillStepProgressUIRewardParts targetParts, List<MissionTableViewData> missionTableViewDataList, MissionTableViewData completeMissionData, int currentMissionStep, bool isUnlockedGroup)
+	{
+	}
 
-		[SerializeField]
-		private MissionDrillStepProgressUIRewardParts rewardParts;
+	private void CreateTreasure(MissionTableViewData missionTableViewData, float ratio, MissionTableViewData.State state)
+	{
+	}
 
-		[SerializeField]
-		private float progressAnimationDuration;
+	private Vector3 GetPositionOnProgressBar(float ratio)
+	{
+		return default(Vector3);
+	}
 
-		[SerializeField]
-		private FlashPlayerManager flashPlayerManager;
+	private void PrepareFlash()
+	{
+	}
 
-		[SerializeField]
-		private int lastMissionPositionOffset;
+	public void PlayMissionCompleteAnimation(Sequence sequence, List<MissionTableViewData> nextMissionTableViewDataList, MissionDrillDataElement nextMissionDrillData)
+	{
+	}
 
-		private FlashPlayer fadeFlashPlayer;
+	public void PlayEnterAnimation()
+	{
+	}
 
-		[SerializeField]
-		private Transform fadeFlashParent;
+	public void PlayExitAnimation()
+	{
+	}
 
-		private const string fadeFlashPath = "Prefabs/OutGame/MissionDrill/pf_NhaamDrillRewardChange";
-
-		private Stack<MissionDrillTreasure> treasurePool;
-
-		private List<MissionDrillTreasure> treasures;
-
-		private bool isCompleteReward;
-
-		private List<MissionTableViewData> missionTableViewDataList;
-
-		private MissionDrillDataElement missionDrillData;
-
-		private MissionDrillGroupElement missionDrillGroup;
-
-		private string nextPickupRewardTextFormat;
-
-		private UIAnimationBase uiAnimation;
-
-		private string progressTextFormat;
-
-		private Action onRewardReceived;
-
-		private void Start()
-		{
-		}
-
-		public void Setup(List<MissionTableViewData> missionTableViewDataList, MissionDrillGroupElement missionDrillGroup, MissionDrillDataElement currentMissionDrillData, string progressTextFormat, string nextPickupRewardTextFormat, bool isUnlockedGroup, Action onRewardReceived)
-		{
-		}
-
-		private void SetupTreasure(List<MissionTableViewData> missionTableViewDataList, int totalMissionNum)
-		{
-		}
-
-		private float GetProgressRatio(List<MissionTableViewData> missionTableViewDataList, int currentMissionStep)
-		{
-			return default(float);
-		}
-
-		private void SetupProgressBar(List<MissionTableViewData> missionTableViewDataList, int currentMissionStep)
-		{
-		}
-
-		private void UpdateProgress(float progress)
-		{
-		}
-
-		private void SetupReward(MissionDrillStepProgressUIRewardParts targetParts, List<MissionTableViewData> missionTableViewDataList, MissionTableViewData completeMissionData, int currentMissionStep, bool isUnlockedGroup)
-		{
-		}
-
-		private void CreateTreasure(MissionTableViewData missionTableViewData, float ratio, MissionTableViewData.State state)
-		{
-		}
-
-		private Vector3 GetPositionOnProgressBar(float ratio)
-		{
-			return default(Vector3);
-		}
-
-		private void PrepareFlash()
-		{
-		}
-
-		public void PlayMissionCompleteAnimation(Sequence sequence, List<MissionTableViewData> nextMissionTableViewDataList, MissionDrillDataElement nextMissionDrillData)
-		{
-		}
-
-		public void PlayEnterAnimation()
-		{
-		}
-
-		public void PlayExitAnimation()
-		{
-		}
-
-		public bool IsAnimationRunning()
-		{
-			return default(bool);
-		}
+	public bool IsAnimationRunning()
+	{
+		return default(bool);
 	}
 }

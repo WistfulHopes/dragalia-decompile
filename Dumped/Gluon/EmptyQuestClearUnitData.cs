@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public class EmptyQuestClearUnitData
 {
-	public class EmptyQuestClearUnitData
-	{
-		public int unitNo;
+	public int unitNo;
 
-		public int id;
+	public int id;
 
-		public GiftType type;
-	}
+	public GiftType type;
 }

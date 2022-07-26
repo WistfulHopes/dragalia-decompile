@@ -4,117 +4,107 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeTableViewCell : TableViewCell<ShopTradeProductData.TradeShopItemData>
 {
-	public class ShopTradeTableViewCell : TableViewCell<ShopTradeProductData.TradeShopItemData>
+	public enum TradeItemType
 	{
-		public enum TradeItemType
-		{
-			Common,
-			AbilityCrest
-		}
+		Common,
+		AbilityCrest
+	}
 
-		[Serializable]
-		public class UnityEventShopItemData : UnityEvent<ShopTradeProductData.TradeShopItemData>
-		{
-		}
+	[Serializable]
+	public class UnityEventShopItemData : UnityEvent<ShopTradeProductData.TradeShopItemData>
+	{
+	}
 
-		[SerializeField]
-		public UnityEventShopItemData buttonPressed;
+	[SerializeField]
+	public UnityEventShopItemData buttonPressed;
 
-		[SerializeField]
-		[Header("Data")]
-		public Text nameText;
+	[SerializeField]
+	public Text nameText;
 
-		public Text limitCountText;
+	public Text limitCountText;
 
-		public Text priceText;
+	public Text priceText;
 
-		public Text endTimeText;
+	public Text endTimeText;
 
-		public Text commentText;
+	public Text commentText;
 
-		public CommonIcon icon;
+	public CommonIcon icon;
 
-		public bool isUseShortQuantityLimit;
+	public bool isUseShortQuantityLimit;
 
-		public bool hideQuantityLimitPrefix;
+	public bool hideQuantityLimitPrefix;
 
-		[SerializeField]
-		[Header("OnOff")]
-		public GameObject limitCountLine;
+	[SerializeField]
+	public GameObject limitCountLine;
 
-		public GameObject timeLimitLine;
+	public GameObject timeLimitLine;
 
-		[SerializeField]
-		private List<GameObject> rarityObjs;
+	[SerializeField]
+	private List<GameObject> rarityObjs;
 
-		[SerializeField]
-		[Header("Materials")]
-		public ShopTradeMaterialIcon[] materials;
+	[SerializeField]
+	public ShopTradeMaterialIcon[] materials;
 
-		[SerializeField]
-		[Header("MoonIcons")]
-		public GameObject[] moonIconGOs;
+	[SerializeField]
+	public GameObject[] moonIconGOs;
 
-		[SerializeField]
-		[Header("NewFlag")]
-		public GameObject newFlag;
+	[SerializeField]
+	public GameObject newFlag;
 
-		[SerializeField]
-		[Header("Button")]
-		public Button button;
+	[SerializeField]
+	public Button button;
 
-		[SerializeField]
-		[Header("CollectStory")]
-		public GameObject needStoryBlockGO;
+	[SerializeField]
+	public GameObject needStoryBlockGO;
 
-		public Text needStoryText;
+	public Text needStoryText;
 
-		[SerializeField]
-		private GameObject lockIconObj;
+	[SerializeField]
+	private GameObject lockIconObj;
 
-		[SerializeField]
-		[Header("AbilityCrest")]
-		private Sprite emptyMaterialSprite;
+	[SerializeField]
+	private Sprite emptyMaterialSprite;
 
-		[SerializeField]
-		[Header("BG")]
-		public RectTransform bgFrame;
+	[SerializeField]
+	public RectTransform bgFrame;
 
-		public int highQuantityLimitLayoutHeight;
+	public int highQuantityLimitLayoutHeight;
 
-		public int lowQuantityLimitLayoutHeight;
+	public int lowQuantityLimitLayoutHeight;
 
-		private ShopTradePanelBase panel;
+	private ShopTradePanelBase panel;
 
-		private ShopTradeProductData.TradeShopItemData data;
+	private ShopTradeProductData.TradeShopItemData data;
 
-		private TradeItemType type;
+	private TradeItemType type;
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public override void UpdateContent(ShopTradeProductData.TradeShopItemData data)
-		{
-		}
+	public override void UpdateContent(ShopTradeProductData.TradeShopItemData data)
+	{
+	}
 
-		private ShopTradeProductData.InsufficientReason CheckSufficiencyCondition()
-		{
-			return default(ShopTradeProductData.InsufficientReason);
-		}
+	private ShopTradeProductData.InsufficientReason CheckSufficiencyCondition()
+	{
+		return default(ShopTradeProductData.InsufficientReason);
+	}
 
-		public void OnExchangeButtonPressed()
-		{
-		}
+	public void OnExchangeButtonPressed()
+	{
+	}
 
-		private void UpdateUI()
-		{
-		}
+	private void UpdateUI()
+	{
+	}
 
-		private void UpdateOKButtonForCrest(bool canExcange)
-		{
-		}
+	private void UpdateOKButtonForCrest(bool canExcange)
+	{
 	}
 }

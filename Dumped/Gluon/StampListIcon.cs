@@ -1,40 +1,39 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class StampListIcon : TableViewCell<StampListData>
 {
-	public class StampListIcon : TableViewCell<StampListData>
+	public Image newIcon;
+
+	public Image selectIcon;
+
+	public Image nowSetIcon;
+
+	public Image outIcon;
+
+	public RawImage stampIcon;
+
+	[SerializeField]
+	public StampListButtonEvent buttonPressed;
+
+	[SerializeField]
+	public StampListButtonEvent buttonLongPressed;
+
+	private void Start()
 	{
-		public Image newIcon;
+	}
 
-		public Image selectIcon;
+	public override void UpdateContent(StampListData data)
+	{
+	}
 
-		public Image nowSetIcon;
+	private void OnButtonPressed()
+	{
+	}
 
-		public Image outIcon;
-
-		public RawImage stampIcon;
-
-		[SerializeField]
-		public StampListButtonEvent buttonPressed;
-
-		[SerializeField]
-		public StampListButtonEvent buttonLongPressed;
-
-		private void Start()
-		{
-		}
-
-		public override void UpdateContent(StampListData data)
-		{
-		}
-
-		private void OnButtonPressed()
-		{
-		}
-
-		private void OnButtonLongPressed()
-		{
-		}
+	private void OnButtonLongPressed()
+	{
 	}
 }

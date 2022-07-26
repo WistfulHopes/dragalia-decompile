@@ -1,53 +1,52 @@
 using Gluon.CharacterUniqueGimmick;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class LastGaspUniqueCtrl : EnemyUniqueCtrl
 {
-	public class LastGaspUniqueCtrl : EnemyUniqueCtrl
+	private int _receivedFatalAttackCount;
+
+	private int _actionId;
+
+	private int _takedownActionId;
+
+	private bool checkLastGaspOver;
+
+	public bool isLastGaspOver;
+
+	private bool holyLightEnemySet;
+
+	private bool _isActionReserved;
+
+	private bool _isTakedownActionReserved;
+
+	public bool active => default(bool);
+
+	private CtrlHolyLight holyLight => null;
+
+	public override void Initialize()
 	{
-		private int _receivedFatalAttackCount;
+	}
 
-		private int _actionId;
+	public override void FastUpdate()
+	{
+	}
 
-		private int _takedownActionId;
+	public void Setup(int actionId, int takedownActionId)
+	{
+	}
 
-		private bool checkLastGaspOver;
+	public bool OnFatalAttacked(bool isQuestSkill, CharacterBase attacker)
+	{
+		return default(bool);
+	}
 
-		public bool isLastGaspOver;
+	public void OnTakeDown()
+	{
+	}
 
-		private bool holyLightEnemySet;
-
-		private bool _isActionReserved;
-
-		private bool _isTakedownActionReserved;
-
-		public bool active => default(bool);
-
-		private CtrlHolyLight holyLight => null;
-
-		public override void Initialize()
-		{
-		}
-
-		public override void FastUpdate()
-		{
-		}
-
-		public void Setup(int actionId, int takedownActionId)
-		{
-		}
-
-		public bool OnFatalAttacked(bool isQuestSkill, CharacterBase attacker)
-		{
-			return default(bool);
-		}
-
-		public void OnTakeDown()
-		{
-		}
-
-		public override void OnChangeState(CharacterState state)
-		{
-		}
+	public override void OnChangeState(CharacterState state)
+	{
 	}
 }

@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum AblitiyCrestSlotType
 {
-	public enum AblitiyCrestSlotType
-	{
-		NONE,
-		CREST_SLOT_TYPE_1,
-		CREST_SLOT_TYPE_2,
-		CREST_SLOT_TYPE_3
-	}
+	NONE,
+	CREST_SLOT_TYPE_1,
+	CREST_SLOT_TYPE_2,
+	CREST_SLOT_TYPE_3
 }

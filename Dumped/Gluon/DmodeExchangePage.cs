@@ -4,44 +4,43 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeExchangePage : DmodePageBase
 {
-	public class DmodeExchangePage : DmodePageBase
+	[SerializeField]
+	private Transform exchangeTrans;
+
+	[SerializeField]
+	private Image logoImage;
+
+	[SerializeField]
+	private float topMargin;
+
+	private ShopTradeTreasureTradeShopView tradeShop;
+
+	public void Start()
 	{
-		[SerializeField]
-		private Transform exchangeTrans;
+	}
 
-		[SerializeField]
-		private Image logoImage;
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		[SerializeField]
-		private float topMargin;
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		private ShopTradeTreasureTradeShopView tradeShop;
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		public void Start()
-		{
-		}
+	private IEnumerator WaitforLoadShopTradeEventTradeShopView(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+		return null;
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
-
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
-
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		private IEnumerator WaitforLoadShopTradeEventTradeShopView(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-			return null;
-		}
-
-		private void OnBackButtonTouched()
-		{
-		}
+	private void OnBackButtonTouched()
+	{
 	}
 }

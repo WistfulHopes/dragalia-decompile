@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandSetRenderTarget : IStoryCommand
 {
-	[CommandName("set_render_target")]
-	public class StoryCommandSetRenderTarget : IStoryCommand
+	public void Start(string charaId, int renderId = 0)
 	{
-		public void Start(string charaId, int renderId = 0)
-		{
-		}
 	}
 }

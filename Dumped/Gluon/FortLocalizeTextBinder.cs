@@ -1,16 +1,15 @@
-namespace Gluon
+namespace Gluon;
+
+public class FortLocalizeTextBinder : AutoLocalizeTextBinderBase
 {
-	public class FortLocalizeTextBinder : AutoLocalizeTextBinderBase
+	protected override string prefixType
 	{
-		protected override string prefixType
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return null;
+		}
+		set
+		{
 		}
 	}
 }

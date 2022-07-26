@@ -1,47 +1,46 @@
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestCommonTableViewData
 {
-	public class QuestCommonTableViewData
+	public QuestMainGroupElement qgElement
 	{
-		public QuestMainGroupElement qgElement
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		public QuestMainMenuElement qmmElement
+		[CompilerGenerated]
+		set
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
 		}
+	}
 
-		public QuestEventMenuElement qemElement
+	public QuestMainMenuElement qmmElement
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
+
+	public QuestEventMenuElement qemElement
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		set
+		{
 		}
 	}
 }

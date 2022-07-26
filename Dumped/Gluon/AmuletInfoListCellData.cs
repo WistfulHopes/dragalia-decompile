@@ -1,13 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public class AmuletInfoListCellData : WeaponListCellData
 {
-	public class AmuletInfoListCellData : WeaponListCellData
-	{
-		public bool isShowIconList;
+	public bool isShowIconList;
 
-		public bool isActiveEventBonus;
+	public bool isActiveEventBonus;
 
-		public bool isFavorite;
+	public bool isFavorite;
 
-		public bool isDuplicateCrestBaseId;
-	}
+	public bool isDuplicateCrestBaseId;
 }

@@ -1,22 +1,21 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyEventSender : EventSenderBase
 {
-	public class EnemyEventSender : EventSenderBase
+	private EnemyCharacter enemy;
+
+	private EnemyCtrl enemyCtrl;
+
+	public override CharacterBase character => null;
+
+	public override void Initialize(CharacterId characterId, bool useMoveBundle = false)
 	{
-		private EnemyCharacter enemy;
+	}
 
-		private EnemyCtrl enemyCtrl;
-
-		public override CharacterBase character => null;
-
-		public override void Initialize(CharacterId characterId, bool useMoveBundle = false)
-		{
-		}
-
-		protected override bool IsAiAwake()
-		{
-			return default(bool);
-		}
+	protected override bool IsAiAwake()
+	{
+		return default(bool);
 	}
 }

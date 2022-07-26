@@ -1,27 +1,26 @@
 using System.Collections.Generic;
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class ExAbilityDialog : CommonPopup
 {
-	public class ExAbilityDialog : CommonPopup
+	public ExAbilityDialogListBase[] dialogListBase;
+
+	public static ExAbilityDialog Create(string dialogPath, bool showBlackLayer = true)
 	{
-		public ExAbilityDialogListBase[] dialogListBase;
+		return null;
+	}
 
-		public static ExAbilityDialog Create(string dialogPath, bool showBlackLayer = true)
-		{
-			return null;
-		}
+	public void SetupExAbiltyDialog(PartyList partyList)
+	{
+	}
 
-		public void SetupExAbiltyDialog(PartyList partyList)
-		{
-		}
+	public void SetupExAbiltyDialog(List<MatchingRoomPlayerData.CharaSimpleSyncData> charaSimpleSyncDatas)
+	{
+	}
 
-		public void SetupExAbiltyDialog(List<MatchingRoomPlayerData.CharaSimpleSyncData> charaSimpleSyncDatas)
-		{
-		}
-
-		public void SetupExAbiltyDialog(CommonPartyPowerCalculateData[] questPartyData)
-		{
-		}
+	public void SetupExAbiltyDialog(CommonPartyPowerCalculateData[] questPartyData)
+	{
 	}
 }

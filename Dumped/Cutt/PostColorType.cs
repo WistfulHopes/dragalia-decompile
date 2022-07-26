@@ -1,10 +1,9 @@
-namespace Cutt
+namespace Cutt;
+
+public enum PostColorType
 {
-	public enum PostColorType
-	{
-		ColorAll,
-		Color2TopBottom,
-		Color2LeftRight,
-		Color4
-	}
+	ColorAll,
+	Color2TopBottom,
+	Color2LeftRight,
+	Color4
 }

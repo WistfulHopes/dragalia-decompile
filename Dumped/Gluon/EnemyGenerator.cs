@@ -8,318 +8,315 @@ using Gluon.Dungeon;
 using Gluon.Dungeon.Gimmick;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
-namespace Gluon
+namespace Gluon;
+
+[DisallowMultipleComponent]
+public class EnemyGenerator : FastUpdateMonoBehaviour
 {
-	[DisallowMultipleComponent]
-	public class EnemyGenerator : FastUpdateMonoBehaviour
+	public enum InfinityType
 	{
-		public enum InfinityType
-		{
-			None,
-			DeadTarget,
-			DeadEnemyCount,
-			DurationTime,
-			Summon
-		}
+		None,
+		DeadTarget,
+		DeadEnemyCount,
+		DurationTime,
+		Summon
+	}
 
-		public enum OverrideRepopTriggerNumType
-		{
-			None,
-			Time
-		}
+	public enum OverrideRepopTriggerNumType
+	{
+		None,
+		Time
+	}
 
-		[Serializable]
-		public class OverrideRepopTriggerNumDataForTime
-		{
-			[SerializeField]
-			public float waitSec;
-
-			[SerializeField]
-			public Vector2Int enemyNumScale;
-		}
-
-		public enum eState
-		{
-			none,
-			standby,
-			active,
-			clear
-		}
+	[Serializable]
+	public class OverrideRepopTriggerNumDataForTime
+	{
+		[SerializeField]
+		public float waitSec;
 
 		[SerializeField]
-		public bool _useEnemyObjectPool;
+		public Vector2Int enemyNumScale;
+	}
 
-		[SerializeField]
-		public EnemyPopType _popType;
+	public enum eState
+	{
+		none,
+		standby,
+		active,
+		clear
+	}
 
-		[SerializeField]
-		public GameObject _popStateObj;
+	[SerializeField]
+	public bool _useEnemyObjectPool;
 
-		[SerializeField]
-		public bool _rebootRootGeneratorWhenFinished;
+	[SerializeField]
+	public EnemyPopType _popType;
 
-		public EnemyGenerator _rebootGenerator;
+	[SerializeField]
+	public GameObject _popStateObj;
 
-		[SerializeField]
-		public int _hpRate;
+	[SerializeField]
+	public bool _rebootRootGeneratorWhenFinished;
 
-		[SerializeField]
-		public int _odRate;
+	public EnemyGenerator _rebootGenerator;
 
-		[SerializeField]
-		public int _summonTrigger;
+	[SerializeField]
+	public int _hpRate;
 
-		[SerializeField]
-		public string _minionLabel;
+	[SerializeField]
+	public int _odRate;
 
-		[SerializeField]
-		public DungeonManager.eStageDifficulty _difficultyLevel;
+	[SerializeField]
+	public int _summonTrigger;
 
-		[SerializeField]
-		public bool _isImmediatedActive;
+	[SerializeField]
+	public string _minionLabel;
 
-		[SerializeField]
-		public float _searchRange;
+	[SerializeField]
+	public DungeonManager.eStageDifficulty _difficultyLevel;
 
-		[NonSerialized]
-		public const int NonMuitiSafeAction = -1;
+	[SerializeField]
+	public bool _isImmediatedActive;
 
-		[SerializeField]
-		public int _multiSafeActionNum;
+	[SerializeField]
+	public float _searchRange;
 
-		[SerializeField]
-		public InfinityType _infinityType;
+	[NonSerialized]
+	public const int NonMuitiSafeAction = -1;
 
-		[SerializeField]
-		public int _infinityRepopToriggerNum;
+	[SerializeField]
+	public int _multiSafeActionNum;
 
-		[SerializeField]
-		public GameObject _infinityTarget;
+	[SerializeField]
+	public InfinityType _infinityType;
 
-		[SerializeField]
-		public int _infinityValue;
+	[SerializeField]
+	public int _infinityRepopToriggerNum;
 
-		[SerializeField]
-		private bool _isTerritory;
+	[SerializeField]
+	public GameObject _infinityTarget;
 
-		[SerializeField]
-		private Rect _territoryArea;
+	[SerializeField]
+	public int _infinityValue;
 
-		[SerializeField]
-		public bool _isWaveUIControl;
+	[SerializeField]
+	private bool _isTerritory;
 
-		[FormerlySerializedAs("_overrideLRepopTriggerNumType")]
-		public OverrideRepopTriggerNumType _overrideRepopTriggerNumType;
+	[SerializeField]
+	private Rect _territoryArea;
 
-		[SerializeField]
-		public int _limitPopNum;
+	[SerializeField]
+	public bool _isWaveUIControl;
 
-		[SerializeField]
-		public List<OverrideRepopTriggerNumDataForTime> _overrideRepopTriggerNumDataForTimeList;
+	public OverrideRepopTriggerNumType _overrideRepopTriggerNumType;
 
-		private int _repopTriggerNumListIndex;
+	[SerializeField]
+	public int _limitPopNum;
 
-		[NonSerialized]
-		private int _waveCnt;
+	[SerializeField]
+	public List<OverrideRepopTriggerNumDataForTime> _overrideRepopTriggerNumDataForTimeList;
 
-		[NonSerialized]
-		public UnityEvent _wallEvent;
+	private int _repopTriggerNumListIndex;
 
-		[NonSerialized]
-		public UnityEvent _enemyPopEvent;
+	[NonSerialized]
+	private int _waveCnt;
 
-		[NonSerialized]
-		public bool _isActive;
+	[NonSerialized]
+	public UnityEvent _wallEvent;
 
-		[NonSerialized]
-		private List<EnemyCtrl> _popEnemies;
+	[NonSerialized]
+	public UnityEvent _enemyPopEvent;
 
-		[NonSerialized]
-		private EnemyEncountGroup[] _encountGroups;
+	[NonSerialized]
+	public bool _isActive;
 
-		[NonSerialized]
-		private eState _state;
+	[NonSerialized]
+	private List<EnemyCtrl> _popEnemies;
 
-		private DungeonObjectBase _dunObj;
+	[NonSerialized]
+	private EnemyEncountGroup[] _encountGroups;
 
-		private EnemyEncountGroup[] _popTargetGroups;
+	[NonSerialized]
+	private eState _state;
 
-		[NonSerialized]
-		private EnemySearchLink _searchLink;
+	private DungeonObjectBase _dunObj;
 
-		private float _infinityElapsedSec;
+	private EnemyEncountGroup[] _popTargetGroups;
 
-		private int _infinityDeadCnt;
+	[NonSerialized]
+	private EnemySearchLink _searchLink;
 
-		private DungeonObjectBase _infinityDunObj;
+	private float _infinityElapsedSec;
 
-		private bool _isInfinityEnd;
+	private int _infinityDeadCnt;
 
-		public bool _ignoreClearAllEnemiesAtWaveChanging;
+	private DungeonObjectBase _infinityDunObj;
 
-		private float _infinityRepopDelayNow;
+	private bool _isInfinityEnd;
 
-		[SerializeField]
-		private float _infinityRepopDelayMax;
+	public bool _ignoreClearAllEnemiesAtWaveChanging;
 
-		public int _maxWaveIndex;
+	private float _infinityRepopDelayNow;
 
-		public List<DungeonPathLine> _pathLine;
+	[SerializeField]
+	private float _infinityRepopDelayMax;
 
-		public float _steppingTime;
+	public int _maxWaveIndex;
 
-		public WarpRoom.RoomGroup _roomGroup;
+	public List<DungeonPathLine> _pathLine;
 
-		private Dictionary<int, List<EnemyCharacter>> bossEnemies;
+	public float _steppingTime;
 
-		private RandomXorshift _randomForDelayPopSec;
+	public WarpRoom.RoomGroup _roomGroup;
 
-		private List<EnemyCtrl> initializedEnemyCtrlList;
+	private Dictionary<int, List<EnemyCharacter>> bossEnemies;
 
-		private int generateGroupRotationIndex;
+	private RandomXorshift _randomForDelayPopSec;
 
-		public bool useEnemyObjectPool => default(bool);
+	private List<EnemyCtrl> initializedEnemyCtrlList;
 
-		public int _generatorId
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			protected set
-			{
-			}
-		}
+	private int generateGroupRotationIndex;
 
-		public void SetRebootGenerator(EnemyGenerator tempGen)
-		{
-		}
+	public bool useEnemyObjectPool => default(bool);
 
-		public int GetGenerateCountMax(int num)
+	public int _generatorId
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(int);
 		}
-
-		public void Start()
+		[CompilerGenerated]
+		protected set
 		{
 		}
+	}
 
-		public void Initialize(int generatorId)
-		{
-		}
+	public void SetRebootGenerator(EnemyGenerator tempGen)
+	{
+	}
 
-		public void GetDownloadEnemyParams(List<int> enemyParams, ref int tmpEnemyCount)
-		{
-		}
+	public int GetGenerateCountMax(int num)
+	{
+		return default(int);
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	public void Start()
+	{
+	}
 
-		private void UpdateStanby()
-		{
-		}
+	public void Initialize(int generatorId)
+	{
+	}
 
-		private bool IsEnableOverrideRepopTriggerNum()
-		{
-			return default(bool);
-		}
+	public void GetDownloadEnemyParams(List<int> enemyParams, ref int tmpEnemyCount)
+	{
+	}
 
-		private void UpdateActive()
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		private void OnTriggerEnter(Collider col)
-		{
-		}
+	private void UpdateStanby()
+	{
+	}
 
-		public bool IsEnemiesDeadAll()
-		{
-			return default(bool);
-		}
+	private bool IsEnableOverrideRepopTriggerNum()
+	{
+		return default(bool);
+	}
 
-		public void CreateWavePopEnemies(bool isPopEffect = false, [Optional] EnemyCharacter.CallMinionInfo callMinionInfo, [Optional] RandomXorshift random)
-		{
-		}
+	private void UpdateActive()
+	{
+	}
 
-		public Rect GetTerritoryArea()
-		{
-			return default(Rect);
-		}
+	private void OnTriggerEnter(Collider col)
+	{
+	}
 
-		public void SetupEnemyCtrl(EnemyCtrl targetCtrl, Rect targetArea)
-		{
-		}
+	public bool IsEnemiesDeadAll()
+	{
+		return default(bool);
+	}
 
-		public void RebootGenerator()
-		{
-		}
+	public void CreateWavePopEnemies(bool isPopEffect = false, [Optional] EnemyCharacter.CallMinionInfo callMinionInfo, [Optional] RandomXorshift random)
+	{
+	}
 
-		public IEnumerator CoRebootGenerator()
-		{
-			return null;
-		}
+	public Rect GetTerritoryArea()
+	{
+		return default(Rect);
+	}
 
-		private IEnumerator DelayWaveStartEffect(int waveCnt, int maxWaveIndex, float delay)
-		{
-			return null;
-		}
+	public void SetupEnemyCtrl(EnemyCtrl targetCtrl, Rect targetArea)
+	{
+	}
 
-		public bool CreateWaveRePopEnemies([Optional] EnemyCharacter.CallMinionInfo callMinionInfo)
-		{
-			return default(bool);
-		}
+	public void RebootGenerator()
+	{
+	}
 
-		public void OnEventPopEnemyDeadWall(EnemyCharacter deadEnemy)
-		{
-		}
+	public IEnumerator CoRebootGenerator()
+	{
+		return null;
+	}
 
-		public void OnEventPopWaveEnemies([Optional] EnemyCharacter deadEnemy)
-		{
-		}
+	private IEnumerator DelayWaveStartEffect(int waveCnt, int maxWaveIndex, float delay)
+	{
+		return null;
+	}
 
-		private bool IsInfinityRepop()
-		{
-			return default(bool);
-		}
+	public bool CreateWaveRePopEnemies([Optional] EnemyCharacter.CallMinionInfo callMinionInfo)
+	{
+		return default(bool);
+	}
 
-		private int GetAliveEnemiesNum()
-		{
-			return default(int);
-		}
+	public void OnEventPopEnemyDeadWall(EnemyCharacter deadEnemy)
+	{
+	}
 
-		private int GetValidEnemiesNum()
-		{
-			return default(int);
-		}
+	public void OnEventPopWaveEnemies([Optional] EnemyCharacter deadEnemy)
+	{
+	}
 
-		public int GetNotInvincibleEnemiesNum()
-		{
-			return default(int);
-		}
+	private bool IsInfinityRepop()
+	{
+		return default(bool);
+	}
 
-		private void CheckCallMinion()
-		{
-		}
+	private int GetAliveEnemiesNum()
+	{
+		return default(int);
+	}
 
-		private void PopCallMinion(EnemyCharacter owner, bool firsttime)
-		{
-		}
+	private int GetValidEnemiesNum()
+	{
+		return default(int);
+	}
 
-		public void SetSearchLinkAwakeDisable()
-		{
-		}
+	public int GetNotInvincibleEnemiesNum()
+	{
+		return default(int);
+	}
 
-		public void SetSearchLinkAwakeAll()
-		{
-		}
+	private void CheckCallMinion()
+	{
+	}
 
-		public void CreateGameMaster()
-		{
-		}
+	private void PopCallMinion(EnemyCharacter owner, bool firsttime)
+	{
+	}
+
+	public void SetSearchLinkAwakeDisable()
+	{
+	}
+
+	public void SetSearchLinkAwakeAll()
+	{
+	}
+
+	public void CreateGameMaster()
+	{
 	}
 }

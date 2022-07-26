@@ -2,67 +2,66 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class SimpleAnimationButton : AnimationUIBase
 {
-	public class SimpleAnimationButton : AnimationUIBase
+	protected PointerEventHandler pointEventHandler;
+
+	public bool isStop;
+
+	private bool isStarted;
+
+	public bool isExitAnimationCompleted
 	{
-		protected PointerEventHandler pointEventHandler;
-
-		public bool isStop;
-
-		private bool isStarted;
-
-		public bool isExitAnimationCompleted
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		public override void Awake()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void Start()
-		{
-		}
+	public override void Awake()
+	{
+	}
 
-		private void OnEnable()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void OnDisable()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		public override void StartEnterAnimation([Optional] Action onAnimationDone)
-		{
-		}
+	private void OnDisable()
+	{
+	}
 
-		public override void StartExitAnimation([Optional] Action onAnimationDone)
-		{
-		}
+	public override void StartEnterAnimation([Optional] Action onAnimationDone)
+	{
+	}
 
-		public void ForceStartEnterAnimation([Optional] Action onAnimationDone)
-		{
-		}
+	public override void StartExitAnimation([Optional] Action onAnimationDone)
+	{
+	}
 
-		public void ForceStartExitAnimation([Optional] Action onAnimationDone)
-		{
-		}
+	public void ForceStartEnterAnimation([Optional] Action onAnimationDone)
+	{
+	}
 
-		public override void ResetUIAnimations()
-		{
-		}
+	public void ForceStartExitAnimation([Optional] Action onAnimationDone)
+	{
+	}
 
-		public void ModifyEnterDelay(int frame)
-		{
-		}
+	public override void ResetUIAnimations()
+	{
+	}
+
+	public void ModifyEnterDelay(int frame)
+	{
 	}
 }

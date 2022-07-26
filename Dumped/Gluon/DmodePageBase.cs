@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public class DmodePageBase : PageBase
 {
-	public class DmodePageBase : PageBase
-	{
-		public DmodeScene dModeScene => null;
-	}
+	public DmodeScene dModeScene => null;
 }

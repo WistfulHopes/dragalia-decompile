@@ -1,17 +1,16 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActivateWithDelay : MonoBehaviour
 {
-	public class ActivateWithDelay : MonoBehaviour
+	public GameObject obj;
+
+	public int frame;
+
+	private IEnumerator Start()
 	{
-		public GameObject obj;
-
-		public int frame;
-
-		private IEnumerator Start()
-		{
-			return null;
-		}
+		return null;
 	}
 }

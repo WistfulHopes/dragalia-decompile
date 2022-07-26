@@ -1,13 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public class QuestInstructorBonusDetailTargetReward
 {
-	public class QuestInstructorBonusDetailTargetReward
-	{
-		public string questName;
+	public string questName;
 
-		public int quantity;
+	public int quantity;
 
-		public int maxQuantity;
+	public int maxQuantity;
 
-		public int sortId;
-	}
+	public int sortId;
 }

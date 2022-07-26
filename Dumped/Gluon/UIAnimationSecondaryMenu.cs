@@ -1,11 +1,10 @@
-namespace Gluon
-{
-	public class UIAnimationSecondaryMenu : UIAnimationBase
-	{
-		protected float moveDistance;
+namespace Gluon;
 
-		public override void ApplySetting(UIAnimationSetting anotherSetting)
-		{
-		}
+public class UIAnimationSecondaryMenu : UIAnimationBase
+{
+	protected float moveDistance;
+
+	public override void ApplySetting(UIAnimationSetting anotherSetting)
+	{
 	}
 }

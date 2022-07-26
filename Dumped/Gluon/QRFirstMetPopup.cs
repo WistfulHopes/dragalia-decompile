@@ -1,22 +1,21 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QRFirstMetPopup : QuestResultCommonPopup
 {
-	public class QRFirstMetPopup : QuestResultCommonPopup
+	[SerializeField]
+	public CommonIcon icon;
+
+	public Text bottomText;
+
+	public static QRFirstMetPopup Create()
 	{
-		[SerializeField]
-		public CommonIcon icon;
+		return null;
+	}
 
-		public Text bottomText;
-
-		public static QRFirstMetPopup Create()
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
 	}
 }

@@ -1,43 +1,42 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BootScene : MonoBehaviour
 {
-	public class BootScene : MonoBehaviour
+	private static bool isScreenInitialized;
+
+	private static bool isMessagePackInitialized;
+
+	private int screenHeight;
+
+	private NPFEventHandlerImpl NPFEventhandler;
+
+	[RuntimeInitializeOnLoadMethod]
+	private static void Initialize()
 	{
-		private static bool isScreenInitialized;
+	}
 
-		private static bool isMessagePackInitialized;
+	public static void SetMessagePackRegister()
+	{
+	}
 
-		private int screenHeight;
+	private void Awake()
+	{
+	}
 
-		private NPFEventHandlerImpl NPFEventhandler;
+	private IEnumerator GameStart()
+	{
+		return null;
+	}
 
-		[RuntimeInitializeOnLoadMethod]
-		private static void Initialize()
-		{
-		}
+	private IEnumerator GotoNextScene()
+	{
+		return null;
+	}
 
-		public static void SetMessagePackRegister()
-		{
-		}
-
-		private void Awake()
-		{
-		}
-
-		private IEnumerator GameStart()
-		{
-			return null;
-		}
-
-		private IEnumerator GotoNextScene()
-		{
-			return null;
-		}
-
-		private void InitializeDebug()
-		{
-		}
+	private void InitializeDebug()
+	{
 	}
 }

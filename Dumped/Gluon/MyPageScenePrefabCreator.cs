@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPageScenePrefabCreator : MonoBehaviour
 {
-	public class MyPageScenePrefabCreator : MonoBehaviour
-	{
-	}
 }

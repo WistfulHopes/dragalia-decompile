@@ -1,46 +1,45 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CameraModeViewer : CameraModeBase
 {
-	public class CameraModeViewer : CameraModeBase
+	private Transform _cameraAnchor;
+
+	private static readonly Vector3 _initializePosition;
+
+	private bool isMouseDown;
+
+	private const float swipeTurnSpeed = 30f;
+
+	private float basePinchDistance;
+
+	private const float pinchZoomSpeed = 0.02f;
+
+	private OutGameTouchManager _touchManager;
+
+	public CameraModeViewer(CameraController controller)
 	{
-		private Transform _cameraAnchor;
+	}
 
-		private static readonly Vector3 _initializePosition;
+	public void Setup()
+	{
+	}
 
-		private bool isMouseDown;
+	public override void Update()
+	{
+	}
 
-		private const float swipeTurnSpeed = 30f;
+	private void Pinch(OutGameTouchManager.PinchState pinchState)
+	{
+	}
 
-		private float basePinchDistance;
+	private void DollyCamera(float deltaDistance)
+	{
+	}
 
-		private const float pinchZoomSpeed = 0.02f;
-
-		private OutGameTouchManager _touchManager;
-
-		public CameraModeViewer(CameraController controller)
-		{
-		}
-
-		public void Setup()
-		{
-		}
-
-		public override void Update()
-		{
-		}
-
-		private void Pinch(OutGameTouchManager.PinchState pinchState)
-		{
-		}
-
-		private void DollyCamera(float deltaDistance)
-		{
-		}
-
-		private bool IsInRange()
-		{
-			return default(bool);
-		}
+	private bool IsInRange()
+	{
+		return default(bool);
 	}
 }

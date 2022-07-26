@@ -1,23 +1,22 @@
 using Cute.Core;
 
-namespace Gluon
+namespace Gluon;
+
+public class MaterialControlComponent : FastUpdateMonoBehaviour
 {
-	public class MaterialControlComponent : FastUpdateMonoBehaviour
+	protected MaterialControl _materialControl;
+
+	protected virtual void Awake()
 	{
-		protected MaterialControl _materialControl;
+	}
 
-		protected virtual void Awake()
-		{
-		}
+	public float GetTime()
+	{
+		return default(float);
+	}
 
-		public float GetTime()
-		{
-			return default(float);
-		}
-
-		public int GetFrame()
-		{
-			return default(int);
-		}
+	public int GetFrame()
+	{
+		return default(int);
 	}
 }

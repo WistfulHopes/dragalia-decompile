@@ -1,43 +1,42 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterMaterialChanger : MonoBehaviour
 {
-	public class CharacterMaterialChanger : MonoBehaviour
+	[Serializable]
+	public class MaterialData
 	{
-		[Serializable]
-		public class MaterialData
-		{
-			public Material[] materials;
-		}
+		public Material[] materials;
+	}
 
-		[Serializable]
-		public class ChangeData
-		{
-			public string rendererPath;
+	[Serializable]
+	public class ChangeData
+	{
+		public string rendererPath;
 
-			private Renderer targetRenderer;
+		private Renderer targetRenderer;
 
-			public MaterialData[] materialDataArray;
+		public MaterialData[] materialDataArray;
 
-			public void Initialize(Transform rootNode)
-			{
-			}
-
-			public void ChangeMaterials(int index)
-			{
-			}
-		}
-
-		[SerializeField]
-		private ChangeData[] changeDataArray;
-
-		private void Start()
+		public void Initialize(Transform rootNode)
 		{
 		}
 
-		public void SetMaterial(int index)
+		public void ChangeMaterials(int index)
 		{
 		}
+	}
+
+	[SerializeField]
+	private ChangeData[] changeDataArray;
+
+	private void Start()
+	{
+	}
+
+	public void SetMaterial(int index)
+	{
 	}
 }

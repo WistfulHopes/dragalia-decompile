@@ -3,84 +3,83 @@ using System.Runtime.CompilerServices;
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BRCtrl : MonoBehaviour
 {
-	public class BRCtrl : MonoBehaviour
+	private Dictionary<int, int> enemyDict;
+
+	private Stack<CharacterBase> deadCharas;
+
+	private bool isGameEnd;
+
+	private bool bgmChanged;
+
+	private float elapsedSec;
+
+	public CharacterBase targetingPlayerBotForTutorial;
+
+	private BRAiChecker brAiChecker;
+
+	public CharacterBase winnerChara
 	{
-		private Dictionary<int, int> enemyDict;
-
-		private Stack<CharacterBase> deadCharas;
-
-		private bool isGameEnd;
-
-		private bool bgmChanged;
-
-		private float elapsedSec;
-
-		public CharacterBase targetingPlayerBotForTutorial;
-
-		private BRAiChecker brAiChecker;
-
-		public CharacterBase winnerChara
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool IsGameEnd => default(bool);
-
-		private void Start()
-		{
-		}
-
-		private void Update()
-		{
-		}
-
-		public void RegisterPlayerDeadEvent()
-		{
-		}
-
-		public void RegisterEnemyDeadEvent()
-		{
-		}
-
-		public void RegisterEnemyEntryEvent()
-		{
-		}
-
-		public bool CanEnterBush(CharacterBase chara)
-		{
-			return default(bool);
-		}
-
-		private BattleRoyalEnemyElement GetBREnemyElem(EnemyCharacter enemy)
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public bool CheckQuestClear()
-		{
-			return default(bool);
-		}
-
-		public void SetGameEndParam(CharacterBase winner, CharacterBase lastDead)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void CreateEffectPool()
-		{
-		}
+	public bool IsGameEnd => default(bool);
 
-		public void PrepareWin(List<CharacterBase> winCharas)
-		{
-		}
+	private void Start()
+	{
+	}
+
+	private void Update()
+	{
+	}
+
+	public void RegisterPlayerDeadEvent()
+	{
+	}
+
+	public void RegisterEnemyDeadEvent()
+	{
+	}
+
+	public void RegisterEnemyEntryEvent()
+	{
+	}
+
+	public bool CanEnterBush(CharacterBase chara)
+	{
+		return default(bool);
+	}
+
+	private BattleRoyalEnemyElement GetBREnemyElem(EnemyCharacter enemy)
+	{
+		return null;
+	}
+
+	public bool CheckQuestClear()
+	{
+		return default(bool);
+	}
+
+	public void SetGameEndParam(CharacterBase winner, CharacterBase lastDead)
+	{
+	}
+
+	public void CreateEffectPool()
+	{
+	}
+
+	public void PrepareWin(List<CharacterBase> winCharas)
+	{
 	}
 }

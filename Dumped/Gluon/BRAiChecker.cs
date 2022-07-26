@@ -2,27 +2,26 @@ using System.Collections.Generic;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BRAiChecker
 {
-	public class BRAiChecker
+	private class AiCheckData
 	{
-		private class AiCheckData
-		{
-			public int prevHp;
+		public int prevHp;
 
-			public Vector3 lastPosition;
+		public Vector3 lastPosition;
 
-			public float lastMoveTime;
-		}
+		public float lastMoveTime;
+	}
 
-		private Dictionary<CharacterId, AiCheckData> aiCheckDataMap;
+	private Dictionary<CharacterId, AiCheckData> aiCheckDataMap;
 
-		private const float aiCheckIntervalTimer = 15f;
+	private const float aiCheckIntervalTimer = 15f;
 
-		private float aiCheckTimer;
+	private float aiCheckTimer;
 
-		public void UpdateAiCheck(BRCtrl brCtrl)
-		{
-		}
+	public void UpdateAiCheck(BRCtrl brCtrl)
+	{
 	}
 }

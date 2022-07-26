@@ -4,138 +4,143 @@ using Cute.Core;
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DefenseEventProgressMoveObjUI : FastUpdateMonoBehaviour
 {
-	public class DefenseEventProgressMoveObjUI : FastUpdateMonoBehaviour
+	protected enum State
 	{
-		[SerializeField]
-		[Header("component")]
-		protected RectTransform _rootRt;
+		None,
+		Appear,
+		Attack,
+		Disappear
+	}
 
-		[SerializeField]
-		protected RectTransform _iconRt;
+	[SerializeField]
+	protected RectTransform _rootRt;
 
-		[SerializeField]
-		protected SpriteRenderer _iconImage;
+	[SerializeField]
+	protected RectTransform _iconRt;
 
-		[SerializeField]
-		[Header("parameter")]
-		[Tooltip("ç§»å\u008b\u0095è£\u009cå®\u008cã\u0082\u0092å\u0088¤å®\u009aã\u0081\u0099ã\u0082\u008bé\u0096¾å\u0080¤")]
-		protected float _moveCompletionThreshold;
+	[SerializeField]
+	protected SpriteRenderer _iconImage;
 
-		[SerializeField]
-		[Tooltip("ç§»å\u008b\u0095è£\u009cå®\u008cã\u0081®æ\u0099\u0082é\u0096\u0093")]
-		protected float _moveCompletionTime;
+	[SerializeField]
+	protected float _moveCompletionThreshold;
 
-		protected DefenseEventProgressInfoUI _infoUI;
+	[SerializeField]
+	protected float _moveCompletionTime;
 
-		protected VisibleUIObject _visible;
+	protected State _state;
 
-		protected EnemyCharacter _enemy;
+	protected DefenseEventProgressInfoUI _infoUI;
 
-		protected Sequence _seqAppear;
+	protected VisibleUIObject _visible;
 
-		protected Sequence _seqAttack;
+	protected EnemyCharacter _enemy;
 
-		protected Sequence _seqDisappear;
+	protected int _enemySerialId;
 
-		protected Tweener _tweenMove;
+	protected int _animIndex;
 
-		protected Action<int> _OnDisappear;
+	protected float _animTime;
 
-		protected float _positionRate;
+	protected Tweener _tweenMove;
 
-		protected float _lastPositionRate;
+	protected Action<int> _OnDisappear;
 
-		public float sortingPosZ
+	protected float _positionRate;
+
+	protected float _lastPositionRate;
+
+	public float sortingPosZ
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(float);
 		}
-
-		public virtual void Initialize(DefenseEventProgressInfoUI infoUI, Material material, Action<int> onDisappear)
-		{
-		}
-
-		public virtual void Setup(EnemyCharacter chara, DefenseEventInfoCtrl.MoveObjIconType type)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void OnDestroy()
-		{
-		}
+	public virtual void Initialize(DefenseEventProgressInfoUI infoUI, Material material, Action<int> onDisappear)
+	{
+	}
 
-		protected virtual void Release()
-		{
-		}
+	public virtual void Setup(EnemyCharacter chara, DefenseEventInfoCtrl.MoveObjIconType type)
+	{
+	}
 
-		public virtual void Show()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public virtual void Hide()
-		{
-		}
+	protected virtual void Release()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	public virtual void Show()
+	{
+	}
 
-		public virtual void SetIcon(Sprite sprite)
-		{
-		}
+	public virtual void Hide()
+	{
+	}
 
-		public virtual void SetIcon(DefenseEventInfoCtrl.MoveObjIconType type)
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		public virtual void SetPosition(float rate)
-		{
-		}
+	public virtual void SetIcon(Sprite sprite)
+	{
+	}
 
-		public virtual void ApplyPosition()
-		{
-		}
+	public virtual void SetIcon(DefenseEventInfoCtrl.MoveObjIconType type)
+	{
+	}
 
-		public virtual bool IsEndPoint()
-		{
-			return default(bool);
-		}
+	public virtual void SetPosition(float rate)
+	{
+	}
 
-		public virtual void ActionAppear()
-		{
-		}
+	public virtual void ApplyPosition()
+	{
+	}
 
-		public virtual void ActionAttack()
-		{
-		}
+	public virtual bool IsEndPoint()
+	{
+		return default(bool);
+	}
 
-		public virtual void ActionDisappear()
-		{
-		}
+	public virtual bool IsPlayingAction()
+	{
+		return default(bool);
+	}
 
-		public virtual bool IsPlayingAction()
-		{
-			return default(bool);
-		}
+	public virtual void PlayAppearAnim()
+	{
+	}
 
-		protected virtual void PlayAppear()
-		{
-		}
+	protected virtual void UpdateAppearAnim()
+	{
+	}
 
-		protected virtual void PlayAttack()
-		{
-		}
+	public virtual void PlayAttackAnim()
+	{
+	}
 
-		protected virtual void PlayDisappear()
-		{
-		}
+	protected virtual void UpdateAttackAnim()
+	{
+	}
+
+	public virtual void PlayDisappearAnim()
+	{
+	}
+
+	protected virtual void UpdateDisappearAnim()
+	{
 	}
 }

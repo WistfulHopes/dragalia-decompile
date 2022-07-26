@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public enum UnitEnhanceListCellType
 {
-	public enum UnitEnhanceListCellType
-	{
-		None,
-		Status,
-		LimitBreak,
-		LimitOver,
-		WeaponPassiveAbility,
-		Slot,
-		WeaponBonus,
-		WeaponEffect,
-		Equip
-	}
+	None,
+	Status,
+	LimitBreak,
+	LimitOver,
+	WeaponPassiveAbility,
+	Slot,
+	WeaponBonus,
+	WeaponEffect,
+	Equip
 }

@@ -1,78 +1,76 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopCommonTableViewController : TableViewController<ShopTradeProductData.CommonShopItemData>
 {
-	public class ShopCommonTableViewController : TableViewController<ShopTradeProductData.CommonShopItemData>
+	private float cellHeight;
+
+	private float cellWidth;
+
+	public GameObject bottomNode;
+
+	public GameObject maintenanceObject;
+
+	[SerializeField]
+	public Text noItemText;
+
+	public ShopTradeProductData.CommonShopType shopType;
+
+	private const string originalCellPrefabPath = "Prefabs/OutGame/ShopTrade/TableViewCell/ShopCommonItemCell";
+
+	private const int paddingBottomLayoutHeight = 100;
+
+	private const int paddingCellAdjustHeight = 56;
+
+	private const int captionHeight = 68;
+
+	protected override void Awake()
 	{
-		private float cellHeight;
+	}
 
-		private float cellWidth;
+	protected override void Start()
+	{
+	}
 
-		public GameObject bottomNode;
+	protected virtual void ReloadTableData()
+	{
+	}
 
-		public GameObject maintenanceObject;
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		[SerializeField]
-		[Header("WarningText")]
-		public Text noItemText;
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public ShopTradeProductData.CommonShopType shopType;
+	public virtual void OnCellButtonPressedForCommonItem(ShopTradeProductData.CommonShopItemData data)
+	{
+	}
 
-		private const string originalCellPrefabPath = "Prefabs/OutGame/ShopTrade/TableViewCell/ShopCommonItemCell";
+	protected override TableViewCell<ShopTradeProductData.CommonShopItemData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		private const int paddingBottomLayoutHeight = 100;
+	private void AppendAnimationForBottomItem(int index)
+	{
+	}
 
-		private const int paddingCellAdjustHeight = 56;
+	protected override void UpdateContents()
+	{
+	}
 
-		private const int captionHeight = 68;
+	public void ScrollToItem(int tradeId)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
-
-		protected override void Start()
-		{
-		}
-
-		protected virtual void ReloadTableData()
-		{
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public virtual void OnCellButtonPressedForCommonItem(ShopTradeProductData.CommonShopItemData data)
-		{
-		}
-
-		protected override TableViewCell<ShopTradeProductData.CommonShopItemData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
-
-		private void AppendAnimationForBottomItem(int index)
-		{
-		}
-
-		protected override void UpdateContents()
-		{
-		}
-
-		public void ScrollToItem(int tradeId)
-		{
-		}
-
-		private float GetItemPosAtIndex(int findIndex)
-		{
-			return default(float);
-		}
+	private float GetItemPosAtIndex(int findIndex)
+	{
+		return default(float);
 	}
 }

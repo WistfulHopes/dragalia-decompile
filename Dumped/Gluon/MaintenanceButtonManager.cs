@@ -1,51 +1,50 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class MaintenanceButtonManager : SingletonMonoBehaviour<MaintenanceButtonManager>
 {
-	public class MaintenanceButtonManager : SingletonMonoBehaviour<MaintenanceButtonManager>
+	private List<MaintenanceButtonController> controllers;
+
+	private List<MaintenanceFunctionType> currentFunctionalMaintenanceList;
+
+	protected override void Awake()
 	{
-		private List<MaintenanceButtonController> controllers;
+	}
 
-		private List<MaintenanceFunctionType> currentFunctionalMaintenanceList;
+	public void Register(MaintenanceButtonController controller)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	public void UnRegister(MaintenanceButtonController controller)
+	{
+	}
 
-		public void Register(MaintenanceButtonController controller)
-		{
-		}
+	public void UnRegisterAll()
+	{
+	}
 
-		public void UnRegister(MaintenanceButtonController controller)
-		{
-		}
+	public void UpdateEnableState()
+	{
+	}
 
-		public void UnRegisterAll()
-		{
-		}
+	public static bool IsInMaintenance(List<MaintenanceFunctionType> funcTypes)
+	{
+		return default(bool);
+	}
 
-		public void UpdateEnableState()
-		{
-		}
+	public static bool IsInMaintenance(MaintenanceFunctionType funcType)
+	{
+		return default(bool);
+	}
 
-		public static bool IsInMaintenance(List<MaintenanceFunctionType> funcTypes)
-		{
-			return default(bool);
-		}
+	public static SystemMessage GetMaintenanceResultCodeByFunctionType(MaintenanceFunctionType type)
+	{
+		return default(SystemMessage);
+	}
 
-		public static bool IsInMaintenance(MaintenanceFunctionType funcType)
-		{
-			return default(bool);
-		}
-
-		public static SystemMessage GetMaintenanceResultCodeByFunctionType(MaintenanceFunctionType type)
-		{
-			return default(SystemMessage);
-		}
-
-		public static bool IsMaintenanceResultCode(int n)
-		{
-			return default(bool);
-		}
+	public static bool IsMaintenanceResultCode(int n)
+	{
+		return default(bool);
 	}
 }

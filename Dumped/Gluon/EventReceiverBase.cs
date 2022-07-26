@@ -4,133 +4,132 @@ using Cute.Core;
 using Gluon.Event;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public abstract class EventReceiverBase : FastUpdateMonoBehaviour
 {
-	public abstract class EventReceiverBase : FastUpdateMonoBehaviour
+	protected Vector3 targetPosition;
+
+	protected Quaternion targetRotation;
+
+	protected bool moving;
+
+	protected bool isSkillMove;
+
+	protected float elapsedMoveTime;
+
+	protected float remainMoveTime;
+
+	protected bool externalVelocity;
+
+	private const float RotationInterpolationInvalidThreshold = 120f;
+
+	private bool _isMoveSyncDisabled;
+
+	private Queue<KeyValuePair<float, CharacterState>> characterStateQueue;
+
+	private AIScriptContext lastAIScriptContext;
+
+	private AIScriptContext tmpAIScriptContext;
+
+	public CharacterId characterId
 	{
-		protected Vector3 targetPosition;
-
-		protected Quaternion targetRotation;
-
-		protected bool moving;
-
-		protected bool isSkillMove;
-
-		protected float elapsedMoveTime;
-
-		protected float remainMoveTime;
-
-		protected bool externalVelocity;
-
-		private const float RotationInterpolationInvalidThreshold = 120f;
-
-		private bool _isMoveSyncDisabled;
-
-		private Queue<KeyValuePair<float, CharacterState>> characterStateQueue;
-
-		private AIScriptContext lastAIScriptContext;
-
-		private AIScriptContext tmpAIScriptContext;
-
-		public CharacterId characterId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public abstract CharacterBase character { get; }
-
-		private float ChangeStateWarpRangeSq
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public bool IsMoveSyncDisabled
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		public AIScriptContext LastAIScriptContext => null;
-
-		public virtual void Initialize(CharacterId characterId)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public virtual void Reset()
+	public abstract CharacterBase character { get; }
+
+	private float ChangeStateWarpRangeSq
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(float);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public override void FastUpdate()
+	public bool IsMoveSyncDisabled
+	{
+		get
+		{
+			return default(bool);
+		}
+		set
 		{
 		}
+	}
 
-		public void Warp(Vector3 position, float rotation)
-		{
-		}
+	public AIScriptContext LastAIScriptContext => null;
 
-		public void Move(Move move)
-		{
-		}
+	public virtual void Initialize(CharacterId characterId)
+	{
+	}
 
-		public void Move(MoveBundleUnit moveBundleUnit)
-		{
-		}
+	public virtual void Reset()
+	{
+	}
 
-		public void ChangeState(CharacterState characterState)
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		protected virtual void ChangeStateImpl(CharacterState characterState)
-		{
-		}
+	public void Warp(Vector3 position, float rotation)
+	{
+	}
 
-		public virtual void ThrowCarryRequest(ThrowCarryRequest throwCarryRequest)
-		{
-		}
+	public void Move(Move move)
+	{
+	}
 
-		public virtual void ThrowCarryReply(ThrowCarryReply throwCarryReply)
-		{
-		}
+	public void Move(MoveBundleUnit moveBundleUnit)
+	{
+	}
 
-		public virtual void ThrowRelease(ThrowRelease throwRelease)
-		{
-		}
+	public void ChangeState(CharacterState characterState)
+	{
+	}
 
-		public void OnCarriedStateExit()
-		{
-		}
+	protected virtual void ChangeStateImpl(CharacterState characterState)
+	{
+	}
 
-		protected void ProcessMove()
-		{
-		}
+	public virtual void ThrowCarryRequest(ThrowCarryRequest throwCarryRequest)
+	{
+	}
 
-		protected virtual void UpdateSkillState()
-		{
-		}
+	public virtual void ThrowCarryReply(ThrowCarryReply throwCarryReply)
+	{
+	}
 
-		protected virtual void UpdateChargeState()
-		{
-		}
+	public virtual void ThrowRelease(ThrowRelease throwRelease)
+	{
+	}
+
+	public void OnCarriedStateExit()
+	{
+	}
+
+	protected void ProcessMove()
+	{
+	}
+
+	protected virtual void UpdateSkillState()
+	{
+	}
+
+	protected virtual void UpdateChargeState()
+	{
 	}
 }

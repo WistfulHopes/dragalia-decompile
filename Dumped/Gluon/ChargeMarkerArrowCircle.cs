@@ -1,40 +1,39 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ChargeMarkerArrowCircle : ChargeMarker
 {
-	public class ChargeMarkerArrowCircle : ChargeMarker
+	private GameObject goArrow;
+
+	private GameObject[] goPoint;
+
+	private static readonly float[] pointLength;
+
+	private const float maxArrowScale = 1.8f;
+
+	protected override void Awake()
 	{
-		private GameObject goArrow;
+	}
 
-		private GameObject[] goPoint;
+	protected override void SetPartsParam()
+	{
+	}
 
-		private static readonly float[] pointLength;
+	public override void UpdatePosition(Vector3 pos)
+	{
+	}
 
-		private const float maxArrowScale = 1.8f;
+	private bool UpdatePoint(int visibleNum, float len, Vector3 dir, float arrowScale)
+	{
+		return default(bool);
+	}
 
-		protected override void Awake()
-		{
-		}
+	public override void SetImpactPosition()
+	{
+	}
 
-		protected override void SetPartsParam()
-		{
-		}
-
-		public override void UpdatePosition(Vector3 pos)
-		{
-		}
-
-		private bool UpdatePoint(int visibleNum, float len, Vector3 dir, float arrowScale)
-		{
-			return default(bool);
-		}
-
-		public override void SetImpactPosition()
-		{
-		}
-
-		protected override void OnClose()
-		{
-		}
+	protected override void OnClose()
+	{
 	}
 }

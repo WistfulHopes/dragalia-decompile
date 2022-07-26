@@ -1,194 +1,189 @@
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CommonIconListController : TableViewController<CommonIconListCellData>
 {
-	public class CommonIconListController : TableViewController<CommonIconListCellData>
+	public float cellWidth;
+
+	public float cellHeight;
+
+	public CommonIconListBase iconListBase;
+
+	public bool addOutButton;
+
+	[SerializeField]
+	public Text emptyMessage;
+
+	[SerializeField]
+	public Text emptyDueToFilterMessage;
+
+	private const int paddingBottomLayoutHeight = 80;
+
+	public virtual void LoadData(CommonIconListType type, ulong[] originalKeyIds, ulong[] dataKeyIds, int[] decorationNums, CommonIconListCaption.CaptionInfo[] captions)
 	{
-		public float cellWidth;
+	}
 
-		public float cellHeight;
+	public void Reload()
+	{
+	}
 
-		public CommonIconListBase iconListBase;
+	public void ClearList()
+	{
+	}
 
-		public bool addOutButton;
+	public void ShowEmptyMessage(CommonIconListType type)
+	{
+	}
 
-		[SerializeField]
-		[Header("Empty Text")]
-		[FormerlySerializedAs("emptyDragonMessage")]
-		public Text emptyMessage;
+	protected virtual CommonIconListCellData CreateCharacterCellData(int keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Empty due to filter")]
-		public Text emptyDueToFilterMessage;
+	protected virtual CommonIconListCellData CreateDragonCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		private const int paddingBottomLayoutHeight = 80;
+	protected virtual CommonIconListCellData CreateWeaponCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		public virtual void LoadData(CommonIconListType type, ulong[] originalKeyIds, ulong[] dataKeyIds, int[] decorationNums, CommonIconListCaption.CaptionInfo[] captions)
-		{
-		}
+	protected virtual CommonIconListCellData CreateAmuletCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		public void Reload()
-		{
-		}
+	protected virtual CommonIconListCellData CreateSkillCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		public void ClearList()
-		{
-		}
+	protected virtual CommonIconListCellData CreateWeaponPassiveAbilityCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		public void ShowEmptyMessage(CommonIconListType type)
-		{
-		}
+	protected virtual CommonIconListCellData CreateTalismanCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		protected virtual CommonIconListCellData CreateCharacterCellData(int keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	protected virtual CommonIconListCellData CreateDmodeServitorPassiveCellData(ulong keyIdOrInvalidId, int decoNum)
+	{
+		return null;
+	}
 
-		protected virtual CommonIconListCellData CreateDragonCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	protected virtual int ListDefaultSort(CommonIconListCellData currCell, CommonIconListCellData nextCell)
+	{
+		return default(int);
+	}
 
-		protected virtual CommonIconListCellData CreateWeaponCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	protected override TableViewCell<CommonIconListCellData> CreateCellForIndex(int index)
+	{
+		return null;
+	}
 
-		protected virtual CommonIconListCellData CreateAmuletCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected virtual CommonIconListCellData CreateSkillCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected virtual CommonIconListCellData CreateWeaponPassiveAbilityCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	protected void SetCellSize(float width, float height)
+	{
+	}
 
-		protected virtual CommonIconListCellData CreateTalismanCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	protected T SetupCharacterCellBaseData<T>(int keyId, int decoNum) where T : CommonIconListCellData, new()
+	{
+		return null;
+	}
 
-		protected virtual CommonIconListCellData CreateDmodeServitorPassiveCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
+	protected T SetupDragonCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
+	{
+		return null;
+	}
 
-		protected virtual int ListDefaultSort(CommonIconListCellData currCell, CommonIconListCellData nextCell)
-		{
-			return default(int);
-		}
+	protected T SetupWeaponCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
+	{
+		return null;
+	}
 
-		protected override TableViewCell<CommonIconListCellData> CreateCellForIndex(int index)
-		{
-			return null;
-		}
+	protected T SetupAmuletCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
+	{
+		return null;
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected T SetupSkillCellBaseData<T>(ulong keyId, int decoNum) where T : SkillListCellData, new()
+	{
+		return null;
+	}
 
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected T SetupWeaponPassiveAbilityCellBaseData<T>(ulong passiveAbilityId, int decoNum) where T : WeaponPassiveAbilityListCellData, new()
+	{
+		return null;
+	}
 
-		protected void SetCellSize(float width, float height)
-		{
-		}
+	protected T SetupTalismanCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
+	{
+		return null;
+	}
 
-		protected T SetupCharacterCellBaseData<T>(int keyId, int decoNum) where T : CommonIconListCellData, new()
-		{
-			return null;
-		}
+	protected T SetupDmodeServitorPassiveCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
+	{
+		return null;
+	}
 
-		protected T SetupDragonCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
-		{
-			return null;
-		}
+	protected virtual void SetupOutButton(CommonIconListType listType)
+	{
+	}
 
-		protected T SetupWeaponCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
-		{
-			return null;
-		}
+	private int GetMaxListCount(CommonIconListType type)
+	{
+		return default(int);
+	}
 
-		protected T SetupAmuletCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
-		{
-			return null;
-		}
+	protected bool CheckEquipTarget(CommonIconListType type, ulong keyId)
+	{
+		return default(bool);
+	}
 
-		protected T SetupSkillCellBaseData<T>(ulong keyId, int decoNum) where T : SkillListCellData, new()
-		{
-			return null;
-		}
+	protected bool CheckSupportCharaEquip(CommonIconListType type, ulong keyId)
+	{
+		return default(bool);
+	}
 
-		protected T SetupWeaponPassiveAbilityCellBaseData<T>(ulong passiveAbilityId, int decoNum) where T : WeaponPassiveAbilityListCellData, new()
-		{
-			return null;
-		}
+	protected bool CheckPartyChara(int charaId)
+	{
+		return default(bool);
+	}
 
-		protected T SetupTalismanCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
-		{
-			return null;
-		}
+	public void ReloadCellByUpdateFlag()
+	{
+	}
 
-		protected T SetupDmodeServitorPassiveCellBaseData<T>(ulong keyId, int decoNum) where T : CommonIconListCellData, new()
-		{
-			return null;
-		}
+	protected virtual void AddExceptionButton(CommonIconListType type)
+	{
+	}
 
-		protected virtual void SetupOutButton(CommonIconListType listType)
-		{
-		}
+	protected virtual void CustomSort()
+	{
+	}
 
-		private int GetMaxListCount(CommonIconListType type)
-		{
-			return default(int);
-		}
+	public void SetSelectCell(CommonIconListCellData data, CommonIconListCellData.State state, bool setUpdateFlag)
+	{
+	}
 
-		protected bool CheckEquipTarget(CommonIconListType type, ulong keyId)
-		{
-			return default(bool);
-		}
-
-		protected bool CheckSupportCharaEquip(CommonIconListType type, ulong keyId)
-		{
-			return default(bool);
-		}
-
-		protected bool CheckPartyChara(int charaId)
-		{
-			return default(bool);
-		}
-
-		public void ReloadCellByUpdateFlag()
-		{
-		}
-
-		protected virtual void AddExceptionButton(CommonIconListType type)
-		{
-		}
-
-		protected virtual void CustomSort()
-		{
-		}
-
-		public void SetSelectCell(CommonIconListCellData data, CommonIconListCellData.State state, bool setUpdateFlag)
-		{
-		}
-
-		public void SetLockIcon(ulong keyId, [Optional] Action iconLockCallBack)
-		{
-		}
+	public void SetLockIcon(ulong keyId, [Optional] Action iconLockCallBack)
+	{
 	}
 }

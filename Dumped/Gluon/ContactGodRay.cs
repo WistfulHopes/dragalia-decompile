@@ -2,31 +2,30 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactGodRay : MonoBehaviour
 {
-	public class ContactGodRay : MonoBehaviour
+	[SerializeField]
+	public MeshRenderer[] rayItems;
+
+	private List<Material> matList;
+
+	private void Awake()
 	{
-		[SerializeField]
-		public MeshRenderer[] rayItems;
+	}
 
-		private List<Material> matList;
+	public Tweener Brighten(float duration)
+	{
+		return null;
+	}
 
-		private void Awake()
-		{
-		}
+	public Tweener Dim(float duration)
+	{
+		return null;
+	}
 
-		public Tweener Brighten(float duration)
-		{
-			return null;
-		}
-
-		public Tweener Dim(float duration)
-		{
-			return null;
-		}
-
-		public void SetColorPower(float value)
-		{
-		}
+	public void SetColorPower(float value)
+	{
 	}
 }

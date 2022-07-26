@@ -1,77 +1,75 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PlayerFootMarkMulti : MonoBehaviour
 {
-	public class PlayerFootMarkMulti : MonoBehaviour
+	[SerializeField]
+	private MeshRenderer multiMeshRenderer;
+
+	[HideInInspector]
+	public CharacterBase chara;
+
+	private GameObject multiGo;
+
+	private bool valid;
+
+	private bool visible;
+
+	private bool isControlledCharacter;
+
+	private bool isPartyMember;
+
+	private PlayerEventReceiver charaEventReceiver;
+
+	public void Initialize()
 	{
-		[SerializeField]
-		[Header("component")]
-		private MeshRenderer multiMeshRenderer;
+	}
 
-		[HideInInspector]
-		public CharacterBase chara;
+	private void OnDestroy()
+	{
+	}
 
-		private GameObject multiGo;
+	private void LateUpdate()
+	{
+	}
 
-		private bool valid;
+	public void AttachMark(CharacterBase chara, bool isPartyMember)
+	{
+	}
 
-		private bool visible;
+	public bool DetachMark(CharacterBase chara)
+	{
+		return default(bool);
+	}
 
-		private bool isControlledCharacter;
+	public void DetachMark()
+	{
+	}
 
-		private bool isPartyMember;
+	public void SetPlayerGroupMesh(Mesh mesh)
+	{
+	}
 
-		private PlayerEventReceiver charaEventReceiver;
+	public bool Visible(CharacterBase chara, bool b)
+	{
+		return default(bool);
+	}
 
-		public void Initialize()
-		{
-		}
+	public void Visible(bool b)
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void Visible()
+	{
+	}
 
-		private void LateUpdate()
-		{
-		}
+	private bool CanActivateMarker()
+	{
+		return default(bool);
+	}
 
-		public void AttachMark(CharacterBase chara, bool isPartyMember)
-		{
-		}
-
-		public bool DetachMark(CharacterBase chara)
-		{
-			return default(bool);
-		}
-
-		public void DetachMark()
-		{
-		}
-
-		public void SetPlayerGroupMesh(Mesh mesh)
-		{
-		}
-
-		public bool Visible(CharacterBase chara, bool b)
-		{
-			return default(bool);
-		}
-
-		public void Visible(bool b)
-		{
-		}
-
-		private void Visible()
-		{
-		}
-
-		private bool CanActivateMarker()
-		{
-			return default(bool);
-		}
-
-		private void CheckControlledCharacter()
-		{
-		}
+	private void CheckControlledCharacter()
+	{
 	}
 }

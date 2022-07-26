@@ -1,33 +1,32 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class ColorParam
 {
-	[Serializable]
-	public class ColorParam
+	public Color color;
+
+	public float power;
+
+	public ColorParam()
 	{
-		public Color color;
+	}
 
-		public float power;
+	public ColorParam(Color c, float p = 1f)
+	{
+	}
 
-		public ColorParam()
-		{
-		}
+	public void Set(ColorParam param)
+	{
+	}
 
-		public ColorParam(Color c, float p = 1f)
-		{
-		}
+	public void Set(Color c, float p)
+	{
+	}
 
-		public void Set(ColorParam param)
-		{
-		}
-
-		public void Set(Color c, float p)
-		{
-		}
-
-		public void SetLerpParam(ColorParam fromParam, ColorParam toParam, float ratio)
-		{
-		}
+	public void SetLerpParam(ColorParam fromParam, ColorParam toParam, float ratio)
+	{
 	}
 }

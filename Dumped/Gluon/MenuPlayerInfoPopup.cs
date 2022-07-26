@@ -3,92 +3,91 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MenuPlayerInfoPopup : CommonPopup
 {
-	public class MenuPlayerInfoPopup : CommonPopup
+	[SerializeField]
+	private Text profileText;
+
+	[SerializeField]
+	private Text stampText;
+
+	[SerializeField]
+	private Text achievementText;
+
+	[SerializeField]
+	private Image achievementImage;
+
+	[SerializeField]
+	private Sprite googleAchievementImage;
+
+	[SerializeField]
+	private Sprite appleAchievementImage;
+
+	[SerializeField]
+	private Button missionDrillButton;
+
+	[SerializeField]
+	private Button logoutButton;
+
+	public MenuPopup menuPopup;
+
+	private bool isAchievementOn;
+
+	private Coroutine checkSigninOutCoroutine;
+
+	public static MenuPlayerInfoPopup Create()
 	{
-		[SerializeField]
-		private Text profileText;
+		return null;
+	}
 
-		[SerializeField]
-		private Text stampText;
+	public void InitSetting()
+	{
+	}
 
-		[SerializeField]
-		private Text achievementText;
+	public void OnProfileButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Image achievementImage;
+	public void OnStampButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Sprite googleAchievementImage;
+	public void OnAchievementButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Sprite appleAchievementImage;
+	public void OnLogoutButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Button missionDrillButton;
+	public void OnDrillMissionButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Button logoutButton;
+	private void SocailLoginFailedPopup()
+	{
+	}
 
-		public MenuPopup menuPopup;
+	private void GetAchievementList()
+	{
+	}
 
-		private bool isAchievementOn;
+	private void OnSuccess(PlatformAchievementGetPlatformAchievementListResponse res)
+	{
+	}
 
-		private Coroutine checkSigninOutCoroutine;
+	private void ReleaseAllAchievement(PlatformAchievementGetPlatformAchievementListResponse res)
+	{
+	}
 
-		public static MenuPlayerInfoPopup Create()
-		{
-			return null;
-		}
+	private void OnApplicationPause(bool pause)
+	{
+	}
 
-		public void InitSetting()
-		{
-		}
-
-		public void OnProfileButtonPressed()
-		{
-		}
-
-		public void OnStampButtonPressed()
-		{
-		}
-
-		public void OnAchievementButtonPressed()
-		{
-		}
-
-		public void OnLogoutButtonPressed()
-		{
-		}
-
-		public void OnDrillMissionButtonPressed()
-		{
-		}
-
-		private void SocailLoginFailedPopup()
-		{
-		}
-
-		private void GetAchievementList()
-		{
-		}
-
-		private void OnSuccess(PlatformAchievementGetPlatformAchievementListResponse res)
-		{
-		}
-
-		private void ReleaseAllAchievement(PlatformAchievementGetPlatformAchievementListResponse res)
-		{
-		}
-
-		private void OnApplicationPause(bool pause)
-		{
-		}
-
-		private IEnumerator CheckSignInOut()
-		{
-			return null;
-		}
+	private IEnumerator CheckSignInOut()
+	{
+		return null;
 	}
 }

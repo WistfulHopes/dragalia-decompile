@@ -6,288 +6,283 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyCharacterUICanvas : PartyUICanvasBase
 {
-	public class PartyCharacterUICanvas : PartyUICanvasBase
+	[SerializeField]
+	public PartyCharacterScene scene;
+
+	public CommonIconListBase iconListFrame;
+
+	public GameObject statusBase;
+
+	public PartyCharacterUIStatus[] partyStatus;
+
+	public Image leadImage;
+
+	public GameObject partyInfoAnimeBase;
+
+	public Image[] selectedImages;
+
+	public PartyPageViewBase pageView;
+
+	public float runAnimationDistance;
+
+	public Text clearPartyText;
+
+	public Text autoEquipButtonText;
+
+	public Sprite addPartySprite;
+
+	public Sprite selectPartySprite;
+
+	public RectTransform edgeToEdgeFrame;
+
+	public Text partyNameText;
+
+	[SerializeField]
+	private GameObject powerBack;
+
+	[SerializeField]
+	private GameObject raidPowerBack;
+
+	public CanvasGroup canvasGroup;
+
+	public UnityAction<int> characterPressCallBack;
+
+	public UnityAction<int> characterLongPressCallBack;
+
+	[SerializeField]
+	private GameObject clearPartyButtonObj;
+
+	[SerializeField]
+	private GameObject normalPartyButtonObj;
+
+	[SerializeField]
+	private GameObject[] oneUnitNonActiveObjects;
+
+	[SerializeField]
+	public RectTransform topPartyBaseMoveTo;
+
+	public RectTransform topLearderImageMoveTo;
+
+	public RectTransform topStatusMoveTo;
+
+	public RectTransform topSwitchButtonMoveTo;
+
+	[SerializeField]
+	public RectTransform questPartyBaseMoveTo;
+
+	public RectTransform questLearderImageMoveTo;
+
+	public RectTransform questStatusMoveTo;
+
+	public RectTransform questSwitchButtonMoveTo;
+
+	[SerializeField]
+	public UIAnimationPublisher fromTopPublisher1;
+
+	public UIAnimationPublisher fromEquipPublisher;
+
+	public UIAnimationPublisher toEquipPublisher;
+
+	[SerializeField]
+	public PointerEventHandler[] characterTransparentButtonsEventHandler;
+
+	public GameObject partyNameBaseObject;
+
+	public GameObject partyChangeButtonObject;
+
+	private PartyCharacterListController partyListController;
+
+	private SceneUICanvas sceneUiCanvas;
+
+	private int questId;
+
+	private bool isEnableRaidBoost;
+
+	[SerializeField]
+	private GameObject dragonOnlyIcon;
+
+	private bool isCompleteStartProcess;
+
+	private bool isShowEquipOverPopup;
+
+	private bool isBreakApplyEquipSetLoop;
+
+	public PartyCharacterPageCtrl pageCtrl
 	{
-		[SerializeField]
-		public PartyCharacterScene scene;
-
-		public CommonIconListBase iconListFrame;
-
-		public GameObject statusBase;
-
-		public PartyCharacterUIStatus[] partyStatus;
-
-		public Image leadImage;
-
-		public GameObject partyInfoAnimeBase;
-
-		public Image[] selectedImages;
-
-		public PartyPageViewBase pageView;
-
-		public float runAnimationDistance;
-
-		public Text clearPartyText;
-
-		public Text autoEquipButtonText;
-
-		public Sprite addPartySprite;
-
-		public Sprite selectPartySprite;
-
-		public RectTransform edgeToEdgeFrame;
-
-		public Text partyNameText;
-
-		[SerializeField]
-		private GameObject powerBack;
-
-		[SerializeField]
-		private GameObject raidPowerBack;
-
-		public CanvasGroup canvasGroup;
-
-		public UnityAction<int> characterPressCallBack;
-
-		public UnityAction<int> characterLongPressCallBack;
-
-		[SerializeField]
-		private GameObject clearPartyButtonObj;
-
-		[SerializeField]
-		private GameObject normalPartyButtonObj;
-
-		[SerializeField]
-		private GameObject[] oneUnitNonActiveObjects;
-
-		[SerializeField]
-		[Header("TopDummyRect")]
-		public RectTransform topPartyBaseMoveTo;
-
-		public RectTransform topLearderImageMoveTo;
-
-		public RectTransform topStatusMoveTo;
-
-		public RectTransform topSwitchButtonMoveTo;
-
-		[SerializeField]
-		[Header("QuestDummyRect")]
-		public RectTransform questPartyBaseMoveTo;
-
-		public RectTransform questLearderImageMoveTo;
-
-		public RectTransform questStatusMoveTo;
-
-		public RectTransform questSwitchButtonMoveTo;
-
-		[SerializeField]
-		[Header("Publishers")]
-		public UIAnimationPublisher fromTopPublisher1;
-
-		public UIAnimationPublisher fromEquipPublisher;
-
-		public UIAnimationPublisher toEquipPublisher;
-
-		[SerializeField]
-		[Header("CharacterTransparentButton")]
-		public PointerEventHandler[] characterTransparentButtonsEventHandler;
-
-		public GameObject partyNameBaseObject;
-
-		public GameObject partyChangeButtonObject;
-
-		private PartyCharacterListController partyListController;
-
-		private SceneUICanvas sceneUiCanvas;
-
-		private int questId;
-
-		private bool isEnableRaidBoost;
-
-		[SerializeField]
-		private GameObject dragonOnlyIcon;
-
-		private bool isCompleteStartProcess;
-
-		private bool isShowEquipOverPopup;
-
-		private bool isBreakApplyEquipSetLoop;
-
-		public PartyCharacterPageCtrl pageCtrl
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool IsCompleteStartProcess => default(bool);
-
-		private IEnumerator Start()
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private void UpdateClearPartyButton()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private IEnumerator ActivateStatusDelay()
-		{
-			return null;
-		}
+	public bool IsCompleteStartProcess => default(bool);
 
-		public void ConfirmChangePageCallBack()
-		{
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		public void ConfirmMovePagerPage(int index)
-		{
-		}
+	private void UpdateClearPartyButton()
+	{
+	}
 
-		private void SetPageContent(GameObject page, int index)
-		{
-		}
+	private IEnumerator ActivateStatusDelay()
+	{
+		return null;
+	}
 
-		public void CharacterPressed(int tag)
-		{
-		}
+	public void ConfirmChangePageCallBack()
+	{
+	}
 
-		public void CharacterLongPressed(int tag)
-		{
-		}
+	public void ConfirmMovePagerPage(int index)
+	{
+	}
 
-		public void ShowClearParty()
-		{
-		}
+	private void SetPageContent(GameObject page, int index)
+	{
+	}
 
-		public void ShowNormalParty()
-		{
-		}
+	public void CharacterPressed(int tag)
+	{
+	}
 
-		public void Reload()
-		{
-		}
+	public void CharacterLongPressed(int tag)
+	{
+	}
 
-		public void OnEquipChangeButtonPressed()
-		{
-		}
+	public void ShowClearParty()
+	{
+	}
 
-		public void OnBackButtonPressed()
-		{
-		}
+	public void ShowNormalParty()
+	{
+	}
 
-		private void SetUseClearParty()
-		{
-		}
+	public void Reload()
+	{
+	}
 
-		public void OnClearPartyButtonTouched()
-		{
-		}
+	public void OnEquipChangeButtonPressed()
+	{
+	}
 
-		public void OnNormalPartyButtonTouched()
-		{
-		}
+	public void OnBackButtonPressed()
+	{
+	}
 
-		public void OnExAbilityButtonPressed()
-		{
-		}
+	private void SetUseClearParty()
+	{
+	}
 
-		public void LoadPowerParam()
-		{
-		}
+	public void OnClearPartyButtonTouched()
+	{
+	}
 
-		public void OnAutoButtonPressed()
-		{
-		}
+	public void OnNormalPartyButtonTouched()
+	{
+	}
 
-		public void HideCharacterStateUI()
-		{
-		}
+	public void OnExAbilityButtonPressed()
+	{
+	}
 
-		public void AdjustInnerAnimationOffset()
-		{
-		}
+	public void LoadPowerParam()
+	{
+	}
 
-		public void StartGoTopSceneAnimation(Action onFinished, [Optional] Action onHalfFinished)
-		{
-		}
+	public void OnAutoButtonPressed()
+	{
+	}
 
-		public void StartGoEquipSceneAnimation(Action onFinished, [Optional] Action onHalfFinished)
-		{
-		}
+	public void HideCharacterStateUI()
+	{
+	}
 
-		public void StartExitAnimation()
-		{
-		}
+	public void AdjustInnerAnimationOffset()
+	{
+	}
 
-		private IEnumerator WaitLastAnimationInnerMoveEnd(Action onFinished)
-		{
-			return null;
-		}
+	public void StartGoTopSceneAnimation(Action onFinished, [Optional] Action onHalfFinished)
+	{
+	}
 
-		private void SetVisibleCanvas(bool enable)
-		{
-		}
+	public void StartGoEquipSceneAnimation(Action onFinished, [Optional] Action onHalfFinished)
+	{
+	}
 
-		private void OneUnitQuestSetting(bool isOneUnit)
-		{
-		}
+	public void StartExitAnimation()
+	{
+	}
 
-		public void OnPartyChangeButtonPressed()
-		{
-		}
+	private IEnumerator WaitLastAnimationInnerMoveEnd(Action onFinished)
+	{
+		return null;
+	}
 
-		private void ReloadPartyView()
-		{
-		}
+	private void SetVisibleCanvas(bool enable)
+	{
+	}
 
-		public void OnPartyNameEditButtonPressed()
-		{
-		}
+	private void OneUnitQuestSetting(bool isOneUnit)
+	{
+	}
 
-		protected override void SetStatusMode(PartyModel.PartySceneUnitStatusMode statusMode)
-		{
-		}
+	public void OnPartyChangeButtonPressed()
+	{
+	}
 
-		public void OnPartyEquipSetButtonPressed()
-		{
-		}
+	private void ReloadPartyView()
+	{
+	}
 
-		private void ApplyEquipSetData(int charaIndex, int setIndex)
-		{
-		}
+	public void OnPartyNameEditButtonPressed()
+	{
+	}
 
-		private void ApplyEquipSetWeaponData(int charaIndex, int weaponId)
-		{
-		}
+	protected override void SetStatusMode(PartyModel.PartySceneUnitStatusMode statusMode)
+	{
+	}
 
-		private void ApplyEquipSetDragonData(int charaIndex, ulong dragonKeyId)
-		{
-		}
+	public void OnPartyEquipSetButtonPressed()
+	{
+	}
 
-		private void ApplyEquipSetCrestData(int charaIndex, int[] crestIds)
-		{
-		}
+	private void ApplyEquipSetData(int charaIndex, int setIndex)
+	{
+	}
 
-		private void ApplyEquipSetTalismanData(int charaIndex, ulong talismanKeyId)
-		{
-		}
+	private void ApplyEquipSetWeaponData(int charaIndex, int weaponId)
+	{
+	}
 
-		public override void OnEventBonusIconPressed()
-		{
-		}
+	private void ApplyEquipSetDragonData(int charaIndex, ulong dragonKeyId)
+	{
+	}
 
-		protected override bool IsRaidBoostOn(int questId)
-		{
-			return default(bool);
-		}
+	private void ApplyEquipSetCrestData(int charaIndex, int[] crestIds)
+	{
+	}
+
+	private void ApplyEquipSetTalismanData(int charaIndex, ulong talismanKeyId)
+	{
+	}
+
+	public override void OnEventBonusIconPressed()
+	{
+	}
+
+	protected override bool IsRaidBoostOn(int questId)
+	{
+		return default(bool);
 	}
 }

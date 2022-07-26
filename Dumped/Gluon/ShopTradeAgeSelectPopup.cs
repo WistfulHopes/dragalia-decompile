@@ -1,40 +1,39 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeAgeSelectPopup : PopupBase
 {
-	public class ShopTradeAgeSelectPopup : PopupBase
+	public enum AgeGroup
 	{
-		public enum AgeGroup
-		{
-			None,
-			Underaged,
-			Adult
-		}
+		None,
+		Underaged,
+		Adult
+	}
 
-		private Action<AgeGroup> onAgeSelected;
+	private Action<AgeGroup> onAgeSelected;
 
-		private Action onClose;
+	private Action onClose;
 
-		public static ShopTradeAgeSelectPopup Create(Action<AgeGroup> onAgeSelected, [Optional] Action onClose)
-		{
-			return null;
-		}
+	public static ShopTradeAgeSelectPopup Create(Action<AgeGroup> onAgeSelected, [Optional] Action onClose)
+	{
+		return null;
+	}
 
-		public void OnCancel()
-		{
-		}
+	public void OnCancel()
+	{
+	}
 
-		public void OnUnderagedSelected()
-		{
-		}
+	public void OnUnderagedSelected()
+	{
+	}
 
-		public void OnAdultSelected()
-		{
-		}
+	public void OnAdultSelected()
+	{
+	}
 
-		public void OnAgeSelected(AgeGroup ageGroup)
-		{
-		}
+	public void OnAgeSelected(AgeGroup ageGroup)
+	{
 	}
 }

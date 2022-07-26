@@ -1,36 +1,35 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumPictureBookScene : SceneBase
 {
-	public class AlbumPictureBookScene : SceneBase
+	[SerializeField]
+	private Camera mainCamera;
+
+	private Canvas albumCanvas;
+
+	private AlbumPictureBookCanvas albumPictureBookCanvas;
+
+	private void Start()
 	{
-		[SerializeField]
-		private Camera mainCamera;
+	}
 
-		private Canvas albumCanvas;
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		private AlbumPictureBookCanvas albumPictureBookCanvas;
+	private void BackButtonPressed()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
-
-		private void BackButtonPressed()
-		{
-		}
-
-		public override void OnPresentReceived()
-		{
-		}
-
-		public override void OnItemUsed()
-		{
-		}
+	public override void OnItemUsed()
+	{
 	}
 }

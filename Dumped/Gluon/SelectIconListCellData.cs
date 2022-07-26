@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public class SelectIconListCellData : SelectIconListBaseCellData
 {
-	public class SelectIconListCellData : SelectIconListBaseCellData
-	{
-		public bool isMatchLimitBreak;
-	}
+	public bool isMatchLimitBreak;
 }

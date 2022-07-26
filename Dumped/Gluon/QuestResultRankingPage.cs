@@ -2,54 +2,50 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultRankingPage : MonoBehaviour
 {
-	public class QuestResultRankingPage : MonoBehaviour
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private AnimationUIAutoPublisher enterAnimationUIPublish;
+
+	[SerializeField]
+	private AnimationUIAutoPublisher exitAnimationUIPublish;
+
+	[SerializeField]
+	private QuestResultRankingCell[] cell;
+
+	private int newIndex;
+
+	public static QuestResultRankingPage Create(Transform parent)
 	{
-		[SerializeField]
-		[Header("UI")]
-		private Text titleText;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Animation")]
-		private AnimationUIAutoPublisher enterAnimationUIPublish;
+	public void InitSetting(TimeAttackRanking.RankingInfo[] timeAttackRankingInfo)
+	{
+	}
 
-		[SerializeField]
-		private AnimationUIAutoPublisher exitAnimationUIPublish;
+	public void InitSetting(TotalDamageEventRankingData.RankingInfo[] totalDamageEventRankingInfo)
+	{
+	}
 
-		[SerializeField]
-		[Header("Object")]
-		private QuestResultRankingCell[] cell;
+	public void PlayEnterAnimation(Action callback)
+	{
+	}
 
-		private int newIndex;
+	public void PlayEnterAnimationComplete()
+	{
+	}
 
-		public static QuestResultRankingPage Create(Transform parent)
-		{
-			return null;
-		}
+	public void PlayExitAnimation(Action callback)
+	{
+	}
 
-		public void InitSetting(TimeAttackRanking.RankingInfo[] timeAttackRankingInfo)
-		{
-		}
-
-		public void InitSetting(TotalDamageEventRankingData.RankingInfo[] totalDamageEventRankingInfo)
-		{
-		}
-
-		public void PlayEnterAnimation(Action callback)
-		{
-		}
-
-		public void PlayEnterAnimationComplete()
-		{
-		}
-
-		public void PlayExitAnimation(Action callback)
-		{
-		}
-
-		public void PlayExitAnimationComplete()
-		{
-		}
+	public void PlayExitAnimationComplete()
+	{
 	}
 }

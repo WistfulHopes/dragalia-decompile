@@ -1,52 +1,51 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PopupIconListData
 {
-	public class PopupIconListData
+	public class ItemIconInfo
 	{
-		public class ItemIconInfo
-		{
-			public int inventoryId;
+		public int inventoryId;
 
-			public int lavel;
+		public int lavel;
 
-			public GiftType giftType;
+		public GiftType giftType;
 
-			public int sortKey;
+		public int sortKey;
 
-			public Sprite iconSprite;
-		}
+		public Sprite iconSprite;
+	}
 
-		public struct IconListData
-		{
-			public int inventoryId;
+	public struct IconListData
+	{
+		public int inventoryId;
 
-			public int lavel;
+		public int lavel;
 
-			public GiftType giftType;
+		public GiftType giftType;
 
-			public int key;
+		public int key;
 
-			public Sprite sprite;
+		public Sprite sprite;
 
-			public IconListData(int setId, int setLabel, GiftType setType, int setKey)
-			{
-			}
-		}
-
-		public ItemIconInfo[] itemIconInfoArray;
-
-		public PopupItemList rootScene;
-
-		public static int ListIconMaxNum;
-
-		public void SetRootScene(PopupItemList setroot)
+		public IconListData(int setId, int setLabel, GiftType setType, int setKey)
 		{
 		}
+	}
 
-		public bool SetData(IconListData listData)
-		{
-			return default(bool);
-		}
+	public ItemIconInfo[] itemIconInfoArray;
+
+	public PopupItemList rootScene;
+
+	public static int ListIconMaxNum;
+
+	public void SetRootScene(PopupItemList setroot)
+	{
+	}
+
+	public bool SetData(IconListData listData)
+	{
+		return default(bool);
 	}
 }

@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SimpleAnimationMovingObject : MonoBehaviour
 {
-	public class SimpleAnimationMovingObject : MonoBehaviour
-	{
-	}
 }

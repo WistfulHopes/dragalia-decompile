@@ -3,150 +3,141 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FacilitySortPopup : PopupBase
 {
-	public class FacilitySortPopup : PopupBase
+	[SerializeField]
+	private TabBase tabController;
+
+	[SerializeField]
+	private GameObject filterElementalParent;
+
+	[SerializeField]
+	private Image filterAllElementalCheckImage;
+
+	[SerializeField]
+	private List<FacilitySortSettingToggle> filterEachElementalToggleList;
+
+	[SerializeField]
+	private GameObject filterWeaponTypeParent;
+
+	[SerializeField]
+	private List<FacilitySortSettingToggle> filterEachWeaponTypeToggleList;
+
+	[SerializeField]
+	private GameObject facilityStateFilterParent;
+
+	[SerializeField]
+	private List<FacilitySortSettingToggle> facilityStateFilterList;
+
+	[SerializeField]
+	private List<FacilitySortSettingToggle> sortTypeToggleList;
+
+	[SerializeField]
+	private ToggleGroup sortTypeToggleGroup;
+
+	[SerializeField]
+	private FacilitySortSettingToggle sortOrderAscendingToggle;
+
+	[SerializeField]
+	private FacilitySortSettingToggle sortOrderDescendingToggle;
+
+	[SerializeField]
+	private ToggleGroup sortOrderToggleGroup;
+
+	[SerializeField]
+	private Text preCountText;
+
+	[SerializeField]
+	private Text countText;
+
+	[SerializeField]
+	private Button closeButton;
+
+	[SerializeField]
+	private Button okButton;
+
+	private FacilitySortModel.Condition editingCondition;
+
+	private List<ManagedFacilityModel.ManagedFacility> managedFacilityList;
+
+	private FacilitySortModel.Preset preset;
+
+	private bool shouldIgnoreNoElement;
+
+	private Action onSortSettingAppliedCallback;
+
+	private const string prefabPath = "Prefabs/OutGame/Fort/Layout/2D/Dialog/FacilitySortPopup";
+
+	private readonly FacilitySortModel.Condition.SortCondition.SortType[] sortTypeListForProduce;
+
+	private readonly FacilitySortModel.Condition.SortCondition.SortType[] sortTypeListForCharaBoost;
+
+	private readonly FacilitySortModel.Condition.SortCondition.SortType[] sortTypeListForDragonBoost;
+
+	private readonly FacilitySortModel.Condition.SortCondition.SortType[] sortTypeListForDecoration;
+
+	private readonly FacilitySortModel.Condition.SortCondition.SortType[] sortTypeListForOther;
+
+	public static FacilitySortPopup Create(FacilitySortModel.Preset preset, List<ManagedFacilityModel.ManagedFacility> managedFacilityList)
 	{
-		[SerializeField]
-		[Header("Tabs")]
-		private TabBase tabController;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Filter Elemental")]
-		private GameObject filterElementalParent;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		private Image filterAllElementalCheckImage;
+	public void Setup(FacilitySortModel.Preset preset, List<ManagedFacilityModel.ManagedFacility> managedFacilityList)
+	{
+	}
 
-		[SerializeField]
-		private List<FacilitySortSettingToggle> filterEachElementalToggleList;
+	private void SetUIByCondition()
+	{
+	}
 
-		[SerializeField]
-		[Header("Filter WeaponType")]
-		private GameObject filterWeaponTypeParent;
+	private void SetFilterUI()
+	{
+	}
 
-		[SerializeField]
-		private List<FacilitySortSettingToggle> filterEachWeaponTypeToggleList;
+	private void SetCountText(int countNow, int countMax = -1)
+	{
+	}
 
-		[SerializeField]
-		[Header("Filter FacilityState")]
-		private GameObject facilityStateFilterParent;
+	public void OnAllElementalFilterButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private List<FacilitySortSettingToggle> facilityStateFilterList;
+	public void OnElementalFilterToggled(bool isOn, ElementalType elementalType)
+	{
+	}
 
-		[SerializeField]
-		[Header("Sort Type")]
-		private List<FacilitySortSettingToggle> sortTypeToggleList;
+	public void OnWeaponTypeFilterToggled(bool isOn, WeaponType weaponType)
+	{
+	}
 
-		[SerializeField]
-		private ToggleGroup sortTypeToggleGroup;
+	public void OnFacilityStateFilterToggled(bool isOn, FacilitySortModel.Condition.FilterCondition.FacilityStateFilter.FacilityState state)
+	{
+	}
 
-		[SerializeField]
-		[Header("Sort Order")]
-		private FacilitySortSettingToggle sortOrderAscendingToggle;
+	public void OnFilterConditionChanged()
+	{
+	}
 
-		[SerializeField]
-		private FacilitySortSettingToggle sortOrderDescendingToggle;
+	public void OnSortTypeToggled(FacilitySortModel.Condition.SortCondition.SortType type)
+	{
+	}
 
-		[SerializeField]
-		private ToggleGroup sortOrderToggleGroup;
+	public void OnSortOrderToggled(FacilitySortModel.Condition.SortCondition.SortOrder order)
+	{
+	}
 
-		[SerializeField]
-		[Header("Text")]
-		private Text preCountText;
+	public void OnOkButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Text countText;
-
-		[SerializeField]
-		[Header("Buttons")]
-		private Button closeButton;
-
-		[SerializeField]
-		private Button okButton;
-
-		private FacilitySortModel.Condition editingCondition;
-
-		private List<ManagedFacilityModel.ManagedFacility> managedFacilityList;
-
-		private FacilitySortModel.Preset preset;
-
-		private bool shouldIgnoreNoElement;
-
-		private Action onSortSettingAppliedCallback;
-
-		private const string prefabPath = "Prefabs/OutGame/Fort/Layout/2D/Dialog/FacilitySortPopup";
-
-		private readonly FacilitySortModel.Condition.SortCondition.SortType[] sortTypeListForProduce;
-
-		private readonly FacilitySortModel.Condition.SortCondition.SortType[] sortTypeListForCharaBoost;
-
-		private readonly FacilitySortModel.Condition.SortCondition.SortType[] sortTypeListForDragonBoost;
-
-		private readonly FacilitySortModel.Condition.SortCondition.SortType[] sortTypeListForDecoration;
-
-		private readonly FacilitySortModel.Condition.SortCondition.SortType[] sortTypeListForOther;
-
-		public static FacilitySortPopup Create(FacilitySortModel.Preset preset, List<ManagedFacilityModel.ManagedFacility> managedFacilityList)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void Setup(FacilitySortModel.Preset preset, List<ManagedFacilityModel.ManagedFacility> managedFacilityList)
-		{
-		}
-
-		private void SetUIByCondition()
-		{
-		}
-
-		private void SetFilterUI()
-		{
-		}
-
-		private void SetCountText(int countNow, int countMax = -1)
-		{
-		}
-
-		public void OnAllElementalFilterButtonPressed()
-		{
-		}
-
-		public void OnElementalFilterToggled(bool isOn, ElementalType elementalType)
-		{
-		}
-
-		public void OnWeaponTypeFilterToggled(bool isOn, WeaponType weaponType)
-		{
-		}
-
-		public void OnFacilityStateFilterToggled(bool isOn, FacilitySortModel.Condition.FilterCondition.FacilityStateFilter.FacilityState state)
-		{
-		}
-
-		public void OnFilterConditionChanged()
-		{
-		}
-
-		public void OnSortTypeToggled(FacilitySortModel.Condition.SortCondition.SortType type)
-		{
-		}
-
-		public void OnSortOrderToggled(FacilitySortModel.Condition.SortCondition.SortOrder order)
-		{
-		}
-
-		public void OnOkButtonPressed()
-		{
-		}
-
-		public void SetSortSettingAppliedCallback(Action onAppliedCallback)
-		{
-		}
+	public void SetSortSettingAppliedCallback(Action onAppliedCallback)
+	{
 	}
 }

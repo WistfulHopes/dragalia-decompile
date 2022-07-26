@@ -4,109 +4,108 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeDungeonDropItemManager : MonoBehaviour
 {
-	public class DmodeDungeonDropItemManager : MonoBehaviour
+	private class TypeComparer : IEqualityComparer<DmodeDungeonItemType>
 	{
-		private class TypeComparer : IEqualityComparer<DmodeDungeonItemType>
+		public bool Equals(DmodeDungeonItemType x, DmodeDungeonItemType y)
 		{
-			public bool Equals(DmodeDungeonItemType x, DmodeDungeonItemType y)
-			{
-				return default(bool);
-			}
-
-			public int GetHashCode(DmodeDungeonItemType obj)
-			{
-				return default(int);
-			}
+			return default(bool);
 		}
 
-		private GameObject originalPrefab;
-
-		public static readonly int iconTextureNameArray;
-
-		public static readonly int frameTextureNameArray;
-
-		private Texture[] iconTextureArray;
-
-		private Texture[] frameTextureArray;
-
-		public static readonly int textureIdOffset;
-
-		private static readonly int createItemObjectCount;
-
-		public static readonly string effectLabel;
-
-		private static readonly float defaultItemPopRadius;
-
-		public List<DmodeDungeonDropItemBase> AliveItems
+		public int GetHashCode(DmodeDungeonItemType obj)
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+	}
 
-		private IEnumerator Start()
+	private GameObject originalPrefab;
+
+	public static readonly int iconTextureNameArray;
+
+	public static readonly int frameTextureNameArray;
+
+	private Texture[] iconTextureArray;
+
+	private Texture[] frameTextureArray;
+
+	public static readonly int textureIdOffset;
+
+	private static readonly int createItemObjectCount;
+
+	public static readonly string effectLabel;
+
+	private static readonly float defaultItemPopRadius;
+
+	public List<DmodeDungeonDropItemBase> AliveItems
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public float GetItemPopRadius()
-		{
-			return default(float);
-		}
-
-		public void CreateItem(DmodeDungeonDropItemParam param, Vector3 startPos, Vector3 moveDir, bool isSync)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void CreateItems(List<DmodeDungeonDropItemParam> createItemParams, Vector3 startPos, Action onEndFunc)
-		{
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		public void CreateItems(List<DmodeDungeonDropItemParam> createItemParams, Vector3 startPos, Action onEndFunc, Vector3 moveDir, float angleRange)
-		{
-		}
+	public float GetItemPopRadius()
+	{
+		return default(float);
+	}
 
-		private IEnumerator CreateItemsCoroutine(List<DmodeDungeonDropItemParam> createItemParams, Vector3 startPos, Vector3 moveDir, float radius, float angleRange, uint seed, Action onEndFunc)
-		{
-			return null;
-		}
+	public void CreateItem(DmodeDungeonDropItemParam param, Vector3 startPos, Vector3 moveDir, bool isSync)
+	{
+	}
 
-		private string GetSoundLabel(DmodeDungeonDropItemParam itemParam)
-		{
-			return null;
-		}
+	public void CreateItems(List<DmodeDungeonDropItemParam> createItemParams, Vector3 startPos, Action onEndFunc)
+	{
+	}
 
-		private void CreateItemCore(GameObject go, DmodeDungeonDropItemParam param, Vector3 startPos, Vector3 endPos, bool ignoreSeFx, string soundLabel)
-		{
-		}
+	public void CreateItems(List<DmodeDungeonDropItemParam> createItemParams, Vector3 startPos, Action onEndFunc, Vector3 moveDir, float angleRange)
+	{
+	}
 
-		public void DeleteItem(DmodeDungeonDropItemBase item)
-		{
-		}
+	private IEnumerator CreateItemsCoroutine(List<DmodeDungeonDropItemParam> createItemParams, Vector3 startPos, Vector3 moveDir, float radius, float angleRange, uint seed, Action onEndFunc)
+	{
+		return null;
+	}
 
-		public void DeleteAllItems()
-		{
-		}
+	private string GetSoundLabel(DmodeDungeonDropItemParam itemParam)
+	{
+		return null;
+	}
 
-		private void LoadPrefabs(int poolCount)
-		{
-		}
+	private void CreateItemCore(GameObject go, DmodeDungeonDropItemParam param, Vector3 startPos, Vector3 endPos, bool ignoreSeFx, string soundLabel)
+	{
+	}
 
-		private void ReleaseItemInstance(GameObject obj)
-		{
-		}
+	public void DeleteItem(DmodeDungeonDropItemBase item)
+	{
+	}
 
-		public DmodeDungeonDropItemBase FindItem(int instanceId)
-		{
-			return null;
-		}
+	public void DeleteAllItems()
+	{
+	}
+
+	private void LoadPrefabs(int poolCount)
+	{
+	}
+
+	private void ReleaseItemInstance(GameObject obj)
+	{
+	}
+
+	public DmodeDungeonDropItemBase FindItem(int instanceId)
+	{
+		return null;
 	}
 }

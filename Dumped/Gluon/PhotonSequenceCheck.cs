@@ -1,47 +1,46 @@
 using System.Collections.Generic;
 using Gluon.Common;
 
-namespace Gluon
+namespace Gluon;
+
+public class PhotonSequenceCheck
 {
-	public class PhotonSequenceCheck
+	private Dictionary<int, ushort> _sequenceIdDic;
+
+	private ushort _nextSequenceId;
+
+	private bool _isCheckEnabled;
+
+	public void BeginCheck()
 	{
-		private Dictionary<int, ushort> _sequenceIdDic;
+	}
 
-		private ushort _nextSequenceId;
+	public void Clear()
+	{
+	}
 
-		private bool _isCheckEnabled;
+	public bool OnReceive(EventCode code, int actorId, ushort sequenceId)
+	{
+		return default(bool);
+	}
 
-		public void BeginCheck()
-		{
-		}
+	public ushort TakeNextSequenceId(EventCode code)
+	{
+		return default(ushort);
+	}
 
-		public void Clear()
-		{
-		}
+	private static bool IsPhotonServerSendEventCode(EventCode code)
+	{
+		return default(bool);
+	}
 
-		public bool OnReceive(EventCode code, int actorId, ushort sequenceId)
-		{
-			return default(bool);
-		}
+	private static bool IsPhotonServerReceiveEventCode(EventCode code)
+	{
+		return default(bool);
+	}
 
-		public ushort TakeNextSequenceId(EventCode code)
-		{
-			return default(ushort);
-		}
-
-		private static bool IsPhotonServerSendEventCode(EventCode code)
-		{
-			return default(bool);
-		}
-
-		private static bool IsPhotonServerReceiveEventCode(EventCode code)
-		{
-			return default(bool);
-		}
-
-		private bool IsNextSequenceId(ushort currentId, ushort newId)
-		{
-			return default(bool);
-		}
+	private bool IsNextSequenceId(ushort currentId, ushort newId)
+	{
+		return default(bool);
 	}
 }

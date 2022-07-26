@@ -1,21 +1,20 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public interface IPlaySummonInterface
 {
-	public interface IPlaySummonInterface
-	{
-		Transform node3d { get; }
+	Transform node3d { get; }
 
-		FlashPlayerManager flashPlayerManager { get; }
+	FlashPlayerManager flashPlayerManager { get; }
 
-		CameraClearFlags oldFlashCameraClearFlags { get; set; }
+	CameraClearFlags oldFlashCameraClearFlags { get; set; }
 
-		RenderTexture charaWeaponRenderTexture { get; }
+	RenderTexture charaWeaponRenderTexture { get; }
 
-		bool IsBoxSummon { get; }
+	bool IsBoxSummon { get; }
 
-		void StartWhiteOutEffect(float inTime, float outTime);
+	void StartWhiteOutEffect(float inTime, float outTime);
 
-		void OnBoxSummonEvent(BoxSummonEventId eid);
-	}
+	void OnBoxSummonEvent(BoxSummonEventId eid);
 }

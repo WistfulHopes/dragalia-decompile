@@ -1,12 +1,11 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public static class ExtendDragonRarityElement
 {
-	public static class ExtendDragonRarityElement
+	public static int GetLimitLevel(this DragonRarityElement self, int limitBreak)
 	{
-		public static int GetLimitLevel(this DragonRarityElement self, int limitBreak)
-		{
-			return default(int);
-		}
+		return default(int);
 	}
 }

@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class AbnormalStatusEnemyDestroyFire : AbnormalStatusEnemyBase
 {
-	public class AbnormalStatusEnemyDestroyFire : AbnormalStatusEnemyBase
-	{
-	}
 }

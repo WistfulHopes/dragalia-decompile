@@ -1,354 +1,357 @@
 using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using FLATOUT.Main;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class TitleScene : MonoBehaviour
 {
-	public class TitleScene : MonoBehaviour
+	public enum TitleType
 	{
-		public enum TitleType
+		Normal,
+		FEH2018,
+		FirstAnniversary,
+		Hunter,
+		Hero,
+		SecondAnniversary,
+		Eight,
+		ThirdAnniversary
+	}
+
+	public enum StoryProgress
+	{
+		Step0,
+		Step1,
+		Step2,
+		Step3,
+		Step4,
+		Step5,
+		Step6,
+		Step7,
+		Step8
+	}
+
+	public Camera flashCamera;
+
+	public Canvas splashCanvas;
+
+	public CanvasGroup whiteCanvasGroup;
+
+	public CanvasGroup nintendoCanvasGroup;
+
+	public CanvasGroup cygamesCanvasGroup;
+
+	public TitleCanvas titleCanvas;
+
+	private bool isTitleButtonPressed;
+
+	private UnityEvent backKeyEvent;
+
+	private bool isEulaRequestDone;
+
+	private bool isSocialSigninDone;
+
+	private bool isProceedReserved;
+
+	private bool isLogoFinished;
+
+	private bool isFirstBootNALinkChecked;
+
+	private long deletedSize;
+
+	private bool isNeedLogoFlash;
+
+	public static bool isTitleLanguageSettingDone;
+
+	public static bool isSPFXInitialized;
+
+	public const string questProgressForTitleKey = "QuestProgressForTitleKey";
+
+	public const string firstAnniversaryForTitleKey = "FirstAnniversaryForTitleKey";
+
+	private bool isServiceSunset;
+
+	public TitleType titleType
+	{
+		[CompilerGenerated]
+		get
 		{
-			Normal,
-			FEH2018,
-			FirstAnniversary,
-			Hunter,
-			Hero,
-			SecondAnniversary,
-			Eight,
-			ThirdAnniversary
+			return default(TitleType);
 		}
-
-		public enum StoryProgress
-		{
-			Step0,
-			Step1,
-			Step2,
-			Step3,
-			Step4,
-			Step5,
-			Step6,
-			Step7,
-			Step8
-		}
-
-		public Camera flashCamera;
-
-		public Canvas splashCanvas;
-
-		public CanvasGroup whiteCanvasGroup;
-
-		public CanvasGroup nintendoCanvasGroup;
-
-		public CanvasGroup cygamesCanvasGroup;
-
-		public TitleCanvas titleCanvas;
-
-		private bool isTitleButtonPressed;
-
-		private UnityEvent backKeyEvent;
-
-		private bool isEulaRequestDone;
-
-		private bool isSocialSigninDone;
-
-		private bool isProceedReserved;
-
-		private bool isLogoFinished;
-
-		private bool isFirstBootNALinkChecked;
-
-		private long deletedSize;
-
-		private bool isNeedLogoFlash;
-
-		public static bool isTitleLanguageSettingDone;
-
-		public static bool isSPFXInitialized;
-
-		public const string questProgressForTitleKey = "QuestProgressForTitleKey";
-
-		public const string firstAnniversaryForTitleKey = "FirstAnniversaryForTitleKey";
-
-		public TitleType titleType
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(TitleType);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool ShouldHideTooLongTopAndBottom
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public static TitleScene instance
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool isHavingUnreadComments
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public void Awake()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public IEnumerator Start()
-		{
-			return null;
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public void OnSuggestionBoxButtonPressed()
-		{
-		}
-
-		public void OnMenuButtonPressed()
-		{
-		}
-
-		private IEnumerator ShowMenuPopup()
-		{
-			return null;
-		}
-
-		private IEnumerator InitTitle()
-		{
-			return null;
-		}
-
-		private IEnumerator PlayBGMCoroutine()
-		{
-			return null;
-		}
-
-		private void CheckInquireStatus()
-		{
-		}
-
-		private void UpdateViewerID()
-		{
-		}
-
-		private void GetEulaWebViewList(Action next)
-		{
-		}
-
-		private void NALinkMenu()
-		{
-		}
-
-		private void RequestTrackingAuthorization(Action next)
-		{
-		}
-
-		private void AfterAgreement()
-		{
-		}
-
-		private void AdjustInit()
-		{
-		}
-
-		private void CheckEulaVersion()
-		{
-		}
-
-		private void CreateAgreementPopup()
-		{
-		}
-
-		private void InitBackKeyEvent()
-		{
-		}
-
-		private void SocialAccountLogin()
-		{
-		}
-
-		private bool CheckCollabo04TitleNeeded()
+	public bool ShouldHideTooLongTopAndBottom
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		private bool Check2ndAnniversaryTitleNeeded()
+	public static TitleScene instance
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
+
+	public bool isHavingUnreadComments
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		private bool Check3rdAnniversaryTitleNeeded()
-		{
-			return default(bool);
-		}
-
-		private bool CheckEightTitleNeeded()
-		{
-			return default(bool);
-		}
-
-		private void CheckSpecialTitleNeeded()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private StoryProgress GetStoryProgress()
-		{
-			return default(StoryProgress);
-		}
+	public void Awake()
+	{
+	}
 
-		private string GetFlashPrefabPath(string lang)
-		{
-			return null;
-		}
+	public IEnumerator Start()
+	{
+		return null;
+	}
 
-		private string GetFlashPrefabPathNormal(string lang)
-		{
-			return null;
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private string GetLogoPrefabPath(string lang)
-		{
-			return null;
-		}
+	public void OnSuggestionBoxButtonPressed()
+	{
+	}
 
-		private string GetFlashPrefabPathColloabo01(string lang)
-		{
-			return null;
-		}
+	public void OnMenuButtonPressed()
+	{
+	}
 
-		private string GetFlashPrefabPathSecondAnniversary(string lang)
-		{
-			return null;
-		}
+	private IEnumerator ShowMenuPopup()
+	{
+		return null;
+	}
 
-		private string GetFlashPrefabPathThirdAnniversary(string lang)
-		{
-			return null;
-		}
+	private IEnumerator InitTitle()
+	{
+		return null;
+	}
 
-		private string GetFlashPrefabPathColloabo03(string lang)
-		{
-			return null;
-		}
+	private IEnumerator PlayBGMCoroutine()
+	{
+		return null;
+	}
 
-		private string GetFlashPrefabPathColloabo04(string lang)
-		{
-			return null;
-		}
+	private void CheckInquireStatus([Optional] Action next)
+	{
+	}
 
-		private string GetFlashPrefabPathEight(string lang)
-		{
-			return null;
-		}
+	private void UpdateViewerID()
+	{
+	}
 
-		private void InitTitleFlash()
-		{
-		}
+	private void GetEulaWebViewList(Action next)
+	{
+	}
 
-		private void InitTitleFlashNormal()
-		{
-		}
+	private void NALinkMenu()
+	{
+	}
 
-		private IEnumerator InitLogoCoroutine(GameObject logoPosObj, FlMotion rootMotion)
-		{
-			return null;
-		}
+	private void AfterAgreement([Optional] Action next)
+	{
+	}
 
-		private void InitTitleFlashForColloabo04()
-		{
-		}
+	private void CheckEulaVersion([Optional] Action next)
+	{
+	}
 
-		private void InitTitleFlashForAnniversary()
-		{
-		}
+	private void CreateAgreementPopup(Action next)
+	{
+	}
 
-		private void InitTitleFlashForColloabo03()
-		{
-		}
+	private void InitBackKeyEvent()
+	{
+	}
 
-		public void CreateAndroidBackKeyAppExitPopup()
-		{
-		}
+	private void SocialAccountLogin()
+	{
+	}
 
-		public void OnTouchGuardPressed()
-		{
-		}
+	private bool CheckCollabo04TitleNeeded()
+	{
+		return default(bool);
+	}
 
-		public void OnTitleButtonPressed()
-		{
-		}
+	private bool Check2ndAnniversaryTitleNeeded()
+	{
+		return default(bool);
+	}
 
-		public void GoToFullDownload()
-		{
-		}
+	private bool Check3rdAnniversaryTitleNeeded()
+	{
+		return default(bool);
+	}
 
-		private IEnumerator GoToFullDownloadCoroutine()
-		{
-			return null;
-		}
+	private bool CheckEightTitleNeeded()
+	{
+		return default(bool);
+	}
 
-		private IEnumerator OnTitleButtonPressedCoroutine()
-		{
-			return null;
-		}
+	private void CheckSpecialTitleNeeded()
+	{
+	}
 
-		private void OnDeleteSizeCalculated(long size)
-		{
-		}
+	private StoryProgress GetStoryProgress()
+	{
+		return default(StoryProgress);
+	}
 
-		private void CheckDownload()
-		{
-		}
+	private string GetFlashPrefabPath(string lang)
+	{
+		return null;
+	}
 
-		public void OnCancelTitleButtonPressed()
-		{
-		}
+	private string GetFlashPrefabPathNormal(string lang)
+	{
+		return null;
+	}
 
-		private IEnumerator GoToNextSceneCoroutine()
-		{
-			return null;
-		}
+	private string GetLogoPrefabPath(string lang)
+	{
+		return null;
+	}
 
-		private bool CheckIllegalUser()
-		{
-			return default(bool);
-		}
+	private string GetFlashPrefabPathColloabo01(string lang)
+	{
+		return null;
+	}
+
+	private string GetFlashPrefabPathSecondAnniversary(string lang)
+	{
+		return null;
+	}
+
+	private string GetFlashPrefabPathThirdAnniversary(string lang)
+	{
+		return null;
+	}
+
+	private string GetFlashPrefabPathColloabo03(string lang)
+	{
+		return null;
+	}
+
+	private string GetFlashPrefabPathColloabo04(string lang)
+	{
+		return null;
+	}
+
+	private string GetFlashPrefabPathEight(string lang)
+	{
+		return null;
+	}
+
+	private void InitTitleFlash()
+	{
+	}
+
+	private void InitTitleFlashNormal()
+	{
+	}
+
+	private IEnumerator InitLogoCoroutine(GameObject logoPosObj, FlMotion rootMotion)
+	{
+		return null;
+	}
+
+	private void InitTitleFlashForColloabo04()
+	{
+	}
+
+	private void InitTitleFlashForAnniversary()
+	{
+	}
+
+	private void InitTitleFlashForColloabo03()
+	{
+	}
+
+	public void CreateAndroidBackKeyAppExitPopup()
+	{
+	}
+
+	public void OnTouchGuardPressed()
+	{
+	}
+
+	public void OnTitleButtonPressed()
+	{
+	}
+
+	public void GoToFullDownload()
+	{
+	}
+
+	private IEnumerator GoToFullDownloadCoroutine()
+	{
+		return null;
+	}
+
+	private IEnumerator OnTitleButtonPressedCoroutine()
+	{
+		return null;
+	}
+
+	private void OnDeleteSizeCalculated(long size)
+	{
+	}
+
+	private void CheckDownload()
+	{
+	}
+
+	public void OnCancelTitleButtonPressed()
+	{
+	}
+
+	private IEnumerator GoToNextSceneCoroutine()
+	{
+		return null;
+	}
+
+	private bool CheckIllegalUser()
+	{
+		return default(bool);
+	}
+
+	private static void ShowServiceAndRefundTerminatedPopup()
+	{
+	}
+
+	private IEnumerator StartRefund()
+	{
+		return null;
 	}
 }

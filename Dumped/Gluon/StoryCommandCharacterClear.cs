@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandCharacterClear : IStoryCommand
 {
-	[CommandName("chara_clear")]
-	public class StoryCommandCharacterClear : IStoryCommand
+	public void Start(string charaId = "")
 	{
-		public void Start(string charaId = "")
-		{
-		}
 	}
 }

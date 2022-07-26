@@ -1,32 +1,31 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DragonSelectButton : DragonButton
 {
-	public class DragonSelectButton : DragonButton
+	protected bool _lastHasDragon;
+
+	public static DragonSelectButton Create(GameObject parent, int index, Action<DragonSelectButton> onClick, bool isLeft)
 	{
-		protected bool _lastHasDragon;
+		return null;
+	}
 
-		public static DragonSelectButton Create(GameObject parent, int index, Action<DragonSelectButton> onClick, bool isLeft)
-		{
-			return null;
-		}
+	protected void Initialize(Action<DragonSelectButton> onClick, bool isLeft)
+	{
+	}
 
-		protected void Initialize(Action<DragonSelectButton> onClick, bool isLeft)
-		{
-		}
+	protected override void UpdateUI(bool isForce = false)
+	{
+	}
 
-		protected override void UpdateUI(bool isForce = false)
-		{
-		}
+	private void CheckInactive(bool trigger, bool isMaxNow)
+	{
+	}
 
-		private void CheckInactive(bool trigger, bool isMaxNow)
-		{
-		}
-
-		public bool IsEnableTransform()
-		{
-			return default(bool);
-		}
+	public bool IsEnableTransform()
+	{
+		return default(bool);
 	}
 }

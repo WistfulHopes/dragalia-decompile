@@ -2,176 +2,171 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DragonMarkUI : CharacterMarkUI
 {
-	public class DragonMarkUI : CharacterMarkUI
+	[SerializeField]
+	private RectTransform conditionRt;
+
+	[SerializeField]
+	private RectTransform markRt;
+
+	[SerializeField]
+	private RectTransform nameRt;
+
+	[SerializeField]
+	private RectTransform iconRt;
+
+	[SerializeField]
+	private SpriteRenderer markImage;
+
+	[SerializeField]
+	private SpriteRenderer iconImage;
+
+	[SerializeField]
+	private SpriteRenderer sandTimerImage;
+
+	[SerializeField]
+	private Text nameText;
+
+	[SerializeField]
+	private InGameGaugeUISpriteRenderer timeGauge;
+
+	[SerializeField]
+	private Sprite[] marks;
+
+	[SerializeField]
+	public float iconAdjustPosX;
+
+	private InGameUICtrl inGameUI;
+
+	private DragonCharacter owner;
+
+	private RectTransform rootRt;
+
+	private VisibleUIObject rootRtVisible;
+
+	private VisibleUIObject conditionRtVisible;
+
+	private VisibleUIObject nameRtVisible;
+
+	private VisibleUIObject iconRtVisible;
+
+	private SandTimerUI sandTimerUI;
+
+	private CharaCircleGaugeUI circleGaugeUI;
+
+	private Vector3 iconOriginalPos;
+
+	private bool isOwner;
+
+	private bool isEnableGaugeAnim;
+
+	private const float SandTimerOffsetY = 40f;
+
+	private const float SandTimerMarkAdjustY = 27f;
+
+	private const float CircleGaugeOffsetY = 68f;
+
+	private const float CircleGaugeMarkAdjustY = 80f;
+
+	public void Initialize(DragonCharacter dragon, InGameUICtrl inGameUI)
 	{
-		[SerializeField]
-		[Header("component")]
-		private RectTransform conditionRt;
+	}
 
-		[SerializeField]
-		private RectTransform markRt;
+	private void LateUpdate()
+	{
+	}
 
-		[SerializeField]
-		private RectTransform nameRt;
+	private void UpdateIcon()
+	{
+	}
 
-		[SerializeField]
-		private RectTransform iconRt;
+	public override void UpdatePosition(bool interpolation = true)
+	{
+	}
 
-		[SerializeField]
-		private SpriteRenderer markImage;
+	public void SetEnableGaugeAnim(bool enable)
+	{
+	}
 
-		[SerializeField]
-		private SpriteRenderer iconImage;
+	public bool IsChangingGaugeAnim()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private SpriteRenderer sandTimerImage;
+	public void SetTimeGauge(float value, bool immediate)
+	{
+	}
 
-		[SerializeField]
-		private Text nameText;
+	private void InvisibleAll()
+	{
+	}
 
-		[SerializeField]
-		private InGameGaugeUISpriteRenderer timeGauge;
+	public override void Show(DisplayType type, [Optional] CharacterBase target)
+	{
+	}
 
-		[SerializeField]
-		[Header("resource")]
-		private Sprite[] marks;
+	private void Show()
+	{
+	}
 
-		[SerializeField]
-		[Header("parameter")]
-		[Tooltip("ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³èª¿æ\u0095\u00b4å\u0080¤")]
-		public float iconAdjustPosX;
+	public override void SetPlayerNo(int no, bool own)
+	{
+	}
 
-		private InGameUICtrl inGameUI;
+	public override void SetVisible(bool visible)
+	{
+	}
 
-		private DragonCharacter owner;
+	public override bool IsVisible()
+	{
+		return default(bool);
+	}
 
-		private RectTransform rootRt;
+	public void CreateSandTimerUI()
+	{
+	}
 
-		private VisibleUIObject rootRtVisible;
+	public void ShowSandTimerUI()
+	{
+	}
 
-		private VisibleUIObject conditionRtVisible;
+	public void HideSandTimerUI()
+	{
+	}
 
-		private VisibleUIObject nameRtVisible;
+	public void SetSandTimerUICount(int count)
+	{
+	}
 
-		private VisibleUIObject iconRtVisible;
+	public void SetSandTimerUICountColor(SandTimerUI.CountColorType type)
+	{
+	}
 
-		private SandTimerUI sandTimerUI;
+	private bool IsSandTimerUICountDown()
+	{
+		return default(bool);
+	}
 
-		private CharaCircleGaugeUI circleGaugeUI;
+	public override void CreateCircleGaugeUI(CharaCircleGaugeUI.Type type)
+	{
+	}
 
-		private Vector3 iconOriginalPos;
+	public override void ShowCircleGaugeUI(CharaCircleGaugeUI.Type type)
+	{
+	}
 
-		private bool isOwner;
+	public override void HideCircleGaugeUI(CharaCircleGaugeUI.Type type)
+	{
+	}
 
-		private bool isEnableGaugeAnim;
+	public override void SetCircleGaugeUIGaugeTimer(CharaCircleGaugeUI.Type type, float time, float initialTime)
+	{
+	}
 
-		private const float SandTimerOffsetY = 40f;
-
-		private const float SandTimerMarkAdjustY = 27f;
-
-		private const float CircleGaugeOffsetY = 68f;
-
-		private const float CircleGaugeMarkAdjustY = 80f;
-
-		public void Initialize(DragonCharacter dragon, InGameUICtrl inGameUI)
-		{
-		}
-
-		private void LateUpdate()
-		{
-		}
-
-		private void UpdateIcon()
-		{
-		}
-
-		public override void UpdatePosition(bool interpolation = true)
-		{
-		}
-
-		public void SetEnableGaugeAnim(bool enable)
-		{
-		}
-
-		public bool IsChangingGaugeAnim()
-		{
-			return default(bool);
-		}
-
-		public void SetTimeGauge(float value, bool immediate)
-		{
-		}
-
-		private void InvisibleAll()
-		{
-		}
-
-		public override void Show(DisplayType type, [Optional] CharacterBase target)
-		{
-		}
-
-		private void Show()
-		{
-		}
-
-		public override void SetPlayerNo(int no, bool own)
-		{
-		}
-
-		public override void SetVisible(bool visible)
-		{
-		}
-
-		public override bool IsVisible()
-		{
-			return default(bool);
-		}
-
-		public void CreateSandTimerUI()
-		{
-		}
-
-		public void ShowSandTimerUI()
-		{
-		}
-
-		public void HideSandTimerUI()
-		{
-		}
-
-		public void SetSandTimerUICount(int count)
-		{
-		}
-
-		public void SetSandTimerUICountColor(SandTimerUI.CountColorType type)
-		{
-		}
-
-		private bool IsSandTimerUICountDown()
-		{
-			return default(bool);
-		}
-
-		public override void CreateCircleGaugeUI(CharaCircleGaugeUI.Type type)
-		{
-		}
-
-		public override void ShowCircleGaugeUI(CharaCircleGaugeUI.Type type)
-		{
-		}
-
-		public override void HideCircleGaugeUI(CharaCircleGaugeUI.Type type)
-		{
-		}
-
-		public override void SetCircleGaugeUIGaugeTimer(CharaCircleGaugeUI.Type type, float time, float initialTime)
-		{
-		}
-
-		public override void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count)
-		{
-		}
+	public override void SetCircleGaugeUICount(CharaCircleGaugeUI.Type type, int count)
+	{
 	}
 }

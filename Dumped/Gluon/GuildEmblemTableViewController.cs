@@ -1,28 +1,27 @@
-namespace Gluon
+namespace Gluon;
+
+public class GuildEmblemTableViewController : TableViewController<int>
 {
-	public class GuildEmblemTableViewController : TableViewController<int>
+	private float cellWidth;
+
+	private float cellHeight;
+
+	protected override float GetCellHeightAtIndex(int index)
 	{
-		private float cellWidth;
+		return default(float);
+	}
 
-		private float cellHeight;
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override void Start()
+	{
+	}
 
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		protected override void Start()
-		{
-		}
-
-		protected override TableViewCell<int> CreateCellForIndex(int index)
-		{
-			return null;
-		}
+	protected override TableViewCell<int> CreateCellForIndex(int index)
+	{
+		return null;
 	}
 }

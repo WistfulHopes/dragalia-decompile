@@ -4,145 +4,137 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class LoginBonusPageMain : LoginBonusPageBase
 {
-	public class LoginBonusPageMain : LoginBonusPageBase
+	[SerializeField]
+	private Image boardImage;
+
+	[SerializeField]
+	public GameObject balloonPanelObject;
+
+	public Text balloonPanelNameText;
+
+	public Text balloonPanelCommentText;
+
+	public AnimationUITalkWindow balloonAnimation;
+
+	[SerializeField]
+	public GameObject getItemIconObject;
+
+	public Animator getItemIconAnimator;
+
+	[SerializeField]
+	public LoginBonusItemIcon dailyItem;
+
+	[SerializeField]
+	public Transform titleBoardNode;
+
+	[SerializeField]
+	public KeepStableToTransform balloonKeepStable;
+
+	[SerializeField]
+	public Text skipTicketDisposeText;
+
+	[SerializeField]
+	public Image skipTicketBonusImage;
+
+	private FlashPlayer getItemPlayer;
+
+	private LoginBonusCharacterControl characterControl;
+
+	private LoginBonusUnitShaderSettings unitShaderSettings;
+
+	private const int dailyItemIndex = 100000;
+
+	private int mouthMuteFrameCount;
+
+	private const int mouthVoiceOverThreshold = 4;
+
+	private bool firstTalkBallonOn;
+
+	private const string currentLoginBonusVoiceName = "VO_CHR_100007_01_OUT_0201";
+
+	private const string nextLoginBonusVoiceName = "VO_CHR_100007_01_OUT_0202";
+
+	private const string commonItemLoginBonusVoiceName = "VO_CHR_100007_01_OUT_0206";
+
+	private const string skipTicketLoginBonusVoiceName = "VO_CHR_100007_01_OUT_0207";
+
+	private readonly string[] randomLeavingVoiceName;
+
+	private const string boardImagePath = "Images/OutGame/LoginBonus/Image/Board_01_Login_Bonus_{0:00}";
+
+	private const string skipBonusImagePath = "Images/OutGame/LoginBonus/Other/Localized/loginbonus_skipticket";
+
+	private static readonly Vector2[] bonusIconPositions;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		private Image boardImage;
+	}
 
-		[SerializeField]
-		[Header("Balloon")]
-		public GameObject balloonPanelObject;
+	private IEnumerator LoadChara()
+	{
+		return null;
+	}
 
-		public Text balloonPanelNameText;
+	public void OnChangedBackgroundShaderParameter()
+	{
+	}
 
-		public Text balloonPanelCommentText;
+	private LoginBonusItemIcon GetIconByIndex(int demoIndex)
+	{
+		return null;
+	}
 
-		public AnimationUITalkWindow balloonAnimation;
+	private void Update()
+	{
+	}
 
-		[SerializeField]
-		[Header("GetItemIcon")]
-		public GameObject getItemIconObject;
+	private IEnumerator ExecDemoCoroutine(Action endCallback)
+	{
+		return null;
+	}
 
-		public Animator getItemIconAnimator;
+	private void OpenBalloon(string nameText, string commentText)
+	{
+	}
 
-		[SerializeField]
-		[Header("DailyItem")]
-		public LoginBonusItemIcon dailyItem;
+	private void CloseBalloon()
+	{
+	}
 
-		[SerializeField]
-		[Header("Title")]
-		public Transform titleBoardNode;
+	private void PlayGetItemFlash(LoginBonusRewardElement getElement, LoginBonusRewardElement nextElement)
+	{
+	}
 
-		[SerializeField]
-		[Header("SyncBalloon")]
-		public KeepStableToTransform balloonKeepStable;
+	private void ReplaceFlashDailyImage()
+	{
+	}
 
-		[SerializeField]
-		[Header("SkipTicketText")]
-		public Text skipTicketDisposeText;
+	private void CloseGetItem()
+	{
+	}
 
-		[SerializeField]
-		[Header("BonusImage")]
-		public Image skipTicketBonusImage;
+	public void OnSkipButtonPressed()
+	{
+	}
 
-		private FlashPlayer getItemPlayer;
+	public override void OnNextLoginBonus()
+	{
+	}
 
-		private LoginBonusCharacterControl characterControl;
+	protected override void ResetDemo()
+	{
+	}
 
-		private LoginBonusUnitShaderSettings unitShaderSettings;
+	protected override void ProcOnDemoEnd()
+	{
+	}
 
-		private const int dailyItemIndex = 100000;
-
-		private int mouthMuteFrameCount;
-
-		private const int mouthVoiceOverThreshold = 4;
-
-		private bool firstTalkBallonOn;
-
-		private const string currentLoginBonusVoiceName = "VO_CHR_100007_01_OUT_0201";
-
-		private const string nextLoginBonusVoiceName = "VO_CHR_100007_01_OUT_0202";
-
-		private const string commonItemLoginBonusVoiceName = "VO_CHR_100007_01_OUT_0206";
-
-		private const string skipTicketLoginBonusVoiceName = "VO_CHR_100007_01_OUT_0207";
-
-		private readonly string[] randomLeavingVoiceName;
-
-		private const string boardImagePath = "Images/OutGame/LoginBonus/Image/Board_01_Login_Bonus_{0:00}";
-
-		private const string skipBonusImagePath = "Images/OutGame/LoginBonus/Other/Localized/loginbonus_skipticket";
-
-		private static readonly Vector2[] bonusIconPositions;
-
-		protected override void Start()
-		{
-		}
-
-		private IEnumerator LoadChara()
-		{
-			return null;
-		}
-
-		public void OnChangedBackgroundShaderParameter()
-		{
-		}
-
-		private LoginBonusItemIcon GetIconByIndex(int demoIndex)
-		{
-			return null;
-		}
-
-		private void Update()
-		{
-		}
-
-		private IEnumerator ExecDemoCoroutine(Action endCallback)
-		{
-			return null;
-		}
-
-		private void OpenBalloon(string nameText, string commentText)
-		{
-		}
-
-		private void CloseBalloon()
-		{
-		}
-
-		private void PlayGetItemFlash(LoginBonusRewardElement getElement, LoginBonusRewardElement nextElement)
-		{
-		}
-
-		private void ReplaceFlashDailyImage()
-		{
-		}
-
-		private void CloseGetItem()
-		{
-		}
-
-		public void OnSkipButtonPressed()
-		{
-		}
-
-		public override void OnNextLoginBonus()
-		{
-		}
-
-		protected override void ResetDemo()
-		{
-		}
-
-		protected override void ProcOnDemoEnd()
-		{
-		}
-
-		protected override Vector2[] GetIconPositionArray(int total)
-		{
-			return null;
-		}
+	protected override Vector2[] GetIconPositionArray(int total)
+	{
+		return null;
 	}
 }

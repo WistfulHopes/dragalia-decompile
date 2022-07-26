@@ -1,57 +1,56 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BrowseStoryScene : SceneBase
 {
-	public class BrowseStoryScene : SceneBase
+	public GameObject bgPanel;
+
+	public Canvas mainCanvas;
+
+	private StoryViewBase storyViewBase;
+
+	private GameObject chapterListObject;
+
+	private static BrowseStorySaveData saveData;
+
+	private void Start()
 	{
-		public GameObject bgPanel;
+	}
 
-		public Canvas mainCanvas;
+	private void OnDestroy()
+	{
+	}
 
-		private StoryViewBase storyViewBase;
+	public void ShowMainStory()
+	{
+	}
 
-		private GameObject chapterListObject;
+	public void ShowEvent()
+	{
+	}
 
-		private static BrowseStorySaveData saveData;
+	private void ListTabPressed(StoryListCategory tabType)
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void ListButtonPressed(StoryListCellData data)
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void ShowChapterList(StoryListCellData data)
+	{
+	}
 
-		public void ShowMainStory()
-		{
-		}
+	private void ShowStoryList()
+	{
+	}
 
-		public void ShowEvent()
-		{
-		}
+	private void BackButtonPressed()
+	{
+	}
 
-		private void ListTabPressed(StoryListCategory tabType)
-		{
-		}
-
-		private void ListButtonPressed(StoryListCellData data)
-		{
-		}
-
-		private void ShowChapterList(StoryListCellData data)
-		{
-		}
-
-		private void ShowStoryList()
-		{
-		}
-
-		private void BackButtonPressed()
-		{
-		}
-
-		private void CallStoryScene(int storyId)
-		{
-		}
+	private void CallStoryScene(int storyId)
+	{
 	}
 }

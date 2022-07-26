@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum GunMode
 {
-	public enum GunMode
-	{
-		None,
-		Rifle,
-		Shotgun,
-		Machinegun
-	}
+	None,
+	Rifle,
+	Shotgun,
+	Machinegun
 }

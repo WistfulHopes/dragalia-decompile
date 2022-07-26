@@ -1,14 +1,13 @@
-namespace Gluon
+namespace Gluon;
+
+public class DrumScrollPopup : CommonPopup
 {
-	public class DrumScrollPopup : CommonPopup
+	private const string prefabPath = "Prefabs/OutGame/Inquiry/DrumScrollPopup";
+
+	public DrumScrollAllController drumController;
+
+	public static DrumScrollPopup Create()
 	{
-		private const string prefabPath = "Prefabs/OutGame/Inquiry/DrumScrollPopup";
-
-		public DrumScrollAllController drumController;
-
-		public static DrumScrollPopup Create()
-		{
-			return null;
-		}
+		return null;
 	}
 }

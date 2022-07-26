@@ -1,9 +1,8 @@
-namespace Cutt
+namespace Cutt;
+
+public enum CuttCameraLookAtType
 {
-	public enum CuttCameraLookAtType
-	{
-		Character,
-		Locator,
-		Rotation
-	}
+	Character,
+	Locator,
+	Rotation
 }

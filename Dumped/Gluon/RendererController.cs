@@ -1,35 +1,34 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class RendererController : MonoBehaviour
 {
-	[ExecuteAlways]
-	public class RendererController : MonoBehaviour
+	[SerializeField]
+	private int _minorSortingOrder;
+
+	private Renderer _renderer;
+
+	private int _majorSortingOrder;
+
+	private int _sortingScale;
+
+	private int _sortingOtherOffset;
+
+	private void UpdateRenderer()
 	{
-		[SerializeField]
-		private int _minorSortingOrder;
+	}
 
-		private Renderer _renderer;
+	public void SetSortingOrder(int sortingOrder, int sortingScale, int sortingOtherOffset, bool isSetFinal)
+	{
+	}
 
-		private int _majorSortingOrder;
+	public void SetMinorSortingOrder(int sortingOrder)
+	{
+	}
 
-		private int _sortingScale;
-
-		private int _sortingOtherOffset;
-
-		private void UpdateRenderer()
-		{
-		}
-
-		public void SetSortingOrder(int sortingOrder, int sortingScale, int sortingOtherOffset, bool isSetFinal)
-		{
-		}
-
-		public void SetMinorSortingOrder(int sortingOrder)
-		{
-		}
-
-		private void Start()
-		{
-		}
+	private void Start()
+	{
 	}
 }

@@ -3,81 +3,80 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+[SerializeField]
+public class TabViewBase : MonoBehaviour
 {
 	[SerializeField]
-	public class TabViewBase : MonoBehaviour
+	private Image[] tabOnImages;
+
+	[SerializeField]
+	private Button[] tabOffButtons;
+
+	[SerializeField]
+	private Text[] buttonTexts;
+
+	[SerializeField]
+	public GameObject[] tabContents;
+
+	private int previousIndex;
+
+	[SerializeField]
+	private Color textColorOn;
+
+	[SerializeField]
+	private Color textColorOff;
+
+	public Action<int, int> onTabChanged;
+
+	public string tabViewName
 	{
-		[SerializeField]
-		private Image[] tabOnImages;
-
-		[SerializeField]
-		private Button[] tabOffButtons;
-
-		[SerializeField]
-		private Text[] buttonTexts;
-
-		[SerializeField]
-		public GameObject[] tabContents;
-
-		private int previousIndex;
-
-		[SerializeField]
-		private Color textColorOn;
-
-		[SerializeField]
-		private Color textColorOff;
-
-		public Action<int, int> onTabChanged;
-
-		public string tabViewName
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		public int curIndex
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		protected void OnEnable()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		protected void OnDisable()
+	public int curIndex
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SelectTab(int tabIndex)
-		{
-		}
+	protected void OnEnable()
+	{
+	}
 
-		public void SetTabName(string tabName)
-		{
-		}
+	protected void OnDisable()
+	{
+	}
 
-		public void SetTabButtonEnableColor(int tabIndex, bool enable)
-		{
-		}
+	public void SelectTab(int tabIndex)
+	{
+	}
 
-		public void SetTabButtonText(int tabIndex, string text)
-		{
-		}
+	public void SetTabName(string tabName)
+	{
+	}
+
+	public void SetTabButtonEnableColor(int tabIndex, bool enable)
+	{
+	}
+
+	public void SetTabButtonText(int tabIndex, string text)
+	{
 	}
 }

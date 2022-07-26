@@ -1,31 +1,30 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class DragonGaugeMultiPlayService
 {
-	public class DragonGaugeMultiPlayService
+	private bool _isDirty;
+
+	private float _nextSendEventTimer;
+
+	private DragonGauge _tempSendEvent;
+
+	private static float SendEventInterval => default(float);
+
+	public void SetDirty(int currentDp)
 	{
-		private bool _isDirty;
+	}
 
-		private float _nextSendEventTimer;
+	public void UpdateSendEvent(int currentDp)
+	{
+	}
 
-		private DragonGauge _tempSendEvent;
+	private void SendCurrentDragonGauge(int currentDp)
+	{
+	}
 
-		private static float SendEventInterval => default(float);
-
-		public void SetDirty(int currentDp)
-		{
-		}
-
-		public void UpdateSendEvent(int currentDp)
-		{
-		}
-
-		private void SendCurrentDragonGauge(int currentDp)
-		{
-		}
-
-		public void OnReceiveEvent(DragonGauge recvEvent)
-		{
-		}
+	public void OnReceiveEvent(DragonGauge recvEvent)
+	{
 	}
 }

@@ -1,56 +1,55 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumStoryReviewStatusInfoCtrl : AnimationUIObject
 {
-	public class AlbumStoryReviewStatusInfoCtrl : AnimationUIObject
+	[SerializeField]
+	private OutGameBgChara chara;
+
+	[SerializeField]
+	private RectTransform charaRectTransform;
+
+	[SerializeField]
+	private AnimationUITalkWindow balloon;
+
+	[SerializeField]
+	private AlbumCharaTalkSelector charaTalkSelector;
+
+	[SerializeField]
+	private Text talkName;
+
+	[SerializeField]
+	private Text talkText;
+
+	private string charaVoiceGroupName;
+
+	public void Talk(string charaVoiceGroupName, string voiceName)
 	{
-		[SerializeField]
-		private OutGameBgChara chara;
+	}
 
-		[SerializeField]
-		private RectTransform charaRectTransform;
+	public void StartBalloonAnimation(OutGameTopCharaTalkSelector.TalkData talkData, bool dontRunCloseAnimation = false, bool ignoreDelay = false)
+	{
+	}
 
-		[SerializeField]
-		private AnimationUITalkWindow balloon;
+	public void SetTalkTextString(string text)
+	{
+	}
 
-		[SerializeField]
-		private AlbumCharaTalkSelector charaTalkSelector;
+	public void SetTalkNameString(string text)
+	{
+	}
 
-		[SerializeField]
-		private Text talkName;
+	public void SetChara()
+	{
+	}
 
-		[SerializeField]
-		private Text talkText;
+	public void SetcharaVoiceGroupName(string charaVoiceGroupName)
+	{
+	}
 
-		private string charaVoiceGroupName;
-
-		public void Talk(string charaVoiceGroupName, string voiceName)
-		{
-		}
-
-		public void StartBalloonAnimation(OutGameTopCharaTalkSelector.TalkData talkData, bool dontRunCloseAnimation = false, bool ignoreDelay = false)
-		{
-		}
-
-		public void SetTalkTextString(string text)
-		{
-		}
-
-		public void SetTalkNameString(string text)
-		{
-		}
-
-		public void SetChara()
-		{
-		}
-
-		public void SetcharaVoiceGroupName(string charaVoiceGroupName)
-		{
-		}
-
-		public void FirstVoiceStart()
-		{
-		}
+	public void FirstVoiceStart()
+	{
 	}
 }

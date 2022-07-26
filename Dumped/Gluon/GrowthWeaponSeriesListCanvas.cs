@@ -1,37 +1,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthWeaponSeriesListCanvas : MonoBehaviour
 {
-	public class GrowthWeaponSeriesListCanvas : MonoBehaviour
+	public Transform cellParentTransform;
+
+	public DragEventScrollRect scrollRect;
+
+	[HideInInspector]
+	public GrowthWeaponScene scene;
+
+	private List<GrowthWeaponSeriesCell> weaponSeriesCells;
+
+	private void Start()
 	{
-		public Transform cellParentTransform;
+	}
 
-		public DragEventScrollRect scrollRect;
+	public void LoadList()
+	{
+	}
 
-		[HideInInspector]
-		public GrowthWeaponScene scene;
+	public void UpdateListCanvas()
+	{
+	}
 
-		private List<GrowthWeaponSeriesCell> weaponSeriesCells;
+	public void OnSeriesCellPressed(int index)
+	{
+	}
 
-		private void Start()
-		{
-		}
-
-		public void LoadList()
-		{
-		}
-
-		public void UpdateListCanvas()
-		{
-		}
-
-		public void OnSeriesCellPressed(int index)
-		{
-		}
-
-		private void SetWeaponTutorial()
-		{
-		}
+	private void SetWeaponTutorial()
+	{
 	}
 }

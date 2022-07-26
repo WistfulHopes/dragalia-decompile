@@ -3,131 +3,129 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowMaterialListBase : CommonIconListBase
 {
-	public class GrowMaterialListBase : CommonIconListBase
+	[SerializeField]
+	public TabBase tab;
+
+	public Button autoSelectButton;
+
+	public Button manaButton;
+
+	public Button growButton;
+
+	public Button platinumButton;
+
+	public Text noItemMaterialMessage;
+
+	public Text[] unitMaterialTypeText;
+
+	public UnitMaterialListController unitMaterialListController;
+
+	public ItemMaterialListController itemMaterialListController;
+
+	public UnityAction growPressedCallback;
+
+	public UnityAction selectConfigCallback;
+
+	public UnityAction autoSelectCallback;
+
+	public UnityAction manaPressedCallback;
+
+	public UnityAction tabButtonCallBack;
+
+	public UnityAction platinumCrystalPressedCallback;
+
+	public GameObject effectBlackObj;
+
+	public bool isReleasePlusParam;
+
+	[SerializeField]
+	private Text materialText;
+
+	[SerializeField]
+	private Text autoText;
+
+	[SerializeField]
+	private Text manaText;
+
+	[SerializeField]
+	private Text grothText;
+
+	[SerializeField]
+	private Text[] itemTexts;
+
+	[SerializeField]
+	private GameObject platinumCrystal;
+
+	[SerializeField]
+	private Text platinumCrystalCountText;
+
+	[SerializeField]
+	private Image usePlatinumCrystalButtonImage;
+
+	[SerializeField]
+	private Sprite spriteUsePlatinumCrystal1;
+
+	[SerializeField]
+	private Sprite spriteUsePlatinumCrystal2;
+
+	public UseMaterialType materialType
 	{
-		[SerializeField]
-		[Header("GrowMaterialListBase")]
-		public TabBase tab;
-
-		public Button autoSelectButton;
-
-		public Button manaButton;
-
-		public Button growButton;
-
-		public Button platinumButton;
-
-		public Text noItemMaterialMessage;
-
-		public Text[] unitMaterialTypeText;
-
-		public UnitMaterialListController unitMaterialListController;
-
-		public ItemMaterialListController itemMaterialListController;
-
-		public UnityAction growPressedCallback;
-
-		public UnityAction selectConfigCallback;
-
-		public UnityAction autoSelectCallback;
-
-		public UnityAction manaPressedCallback;
-
-		public UnityAction tabButtonCallBack;
-
-		public UnityAction platinumCrystalPressedCallback;
-
-		public GameObject effectBlackObj;
-
-		public bool isReleasePlusParam;
-
-		[SerializeField]
-		private Text materialText;
-
-		[SerializeField]
-		private Text autoText;
-
-		[SerializeField]
-		private Text manaText;
-
-		[SerializeField]
-		private Text grothText;
-
-		[SerializeField]
-		private Text[] itemTexts;
-
-		[SerializeField]
-		private GameObject platinumCrystal;
-
-		[SerializeField]
-		private Text platinumCrystalCountText;
-
-		[SerializeField]
-		private Image usePlatinumCrystalButtonImage;
-
-		[SerializeField]
-		private Sprite spriteUsePlatinumCrystal1;
-
-		[SerializeField]
-		private Sprite spriteUsePlatinumCrystal2;
-
-		public UseMaterialType materialType
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(UseMaterialType);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(UseMaterialType);
 		}
-
-		public override void Awake()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void Start()
-		{
-		}
+	public override void Awake()
+	{
+	}
 
-		public void ListTabPressedZeroToOne(int index)
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void ListTabPressed(int tabTag)
-		{
-		}
+	public void ListTabPressedZeroToOne(int index)
+	{
+	}
 
-		public override void SetupCountText(int nowCount, int maxCount)
-		{
-		}
+	public void ListTabPressed(int tabTag)
+	{
+	}
 
-		public void AutoButtonPressed()
-		{
-		}
+	public override void SetupCountText(int nowCount, int maxCount)
+	{
+	}
 
-		public void GrowButtonPressed()
-		{
-		}
+	public void AutoButtonPressed()
+	{
+	}
 
-		public void ManaButtonPressed()
-		{
-		}
+	public void GrowButtonPressed()
+	{
+	}
 
-		public void SetEnableGrowButton(bool isEnable)
-		{
-		}
+	public void ManaButtonPressed()
+	{
+	}
 
-		public void UpdatePlatinumCrystalState(GrowthBaseType growthBaseType, ulong growBaseKeyId, GrowthManaCircleManaCircleData circleData)
-		{
-		}
+	public void SetEnableGrowButton(bool isEnable)
+	{
+	}
 
-		public void OnPlatinumCrystalPressed()
-		{
-		}
+	public void UpdatePlatinumCrystalState(GrowthBaseType growthBaseType, ulong growBaseKeyId, GrowthManaCircleManaCircleData circleData)
+	{
+	}
+
+	public void OnPlatinumCrystalPressed()
+	{
 	}
 }

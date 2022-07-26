@@ -3,57 +3,56 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeServitorPassiveBuildUpConfirmPopup : PopupBase, ICustomMessage
 {
-	public class DmodeServitorPassiveBuildUpConfirmPopup : PopupBase, ICustomMessage
+	[SerializeField]
+	private DmodeServitorPassiveAbilityCell abilitycell;
+
+	[SerializeField]
+	private CraftMaterialCell[] materialCell;
+
+	[SerializeField]
+	private Button buildButton;
+
+	[SerializeField]
+	private Text insufficientMaterialText;
+
+	public const string prefabPath = "Prefabs/OutGame/Dmode/DmodeServitor/DmodeServitorPassiveBuildUpConfirmPopup";
+
+	private DmodeServitorPassiveLevelElement passiveElement;
+
+	public static DmodeServitorPassiveBuildUpConfirmPopup Create(Dictionary<int, int> materialDataDic, DmodeServitorPassiveLevelElement element)
 	{
-		[SerializeField]
-		private DmodeServitorPassiveAbilityCell abilitycell;
+		return null;
+	}
 
-		[SerializeField]
-		private CraftMaterialCell[] materialCell;
+	public void SetContent(Dictionary<int, int> needMaterialDataDic, DmodeServitorPassiveLevelElement element)
+	{
+	}
 
-		[SerializeField]
-		private Button buildButton;
+	private void OnIconPressed(CraftMaterialCellData data)
+	{
+	}
 
-		[SerializeField]
-		private Text insufficientMaterialText;
+	public void OnPassiveAbilityLevelRelease()
+	{
+	}
 
-		public const string prefabPath = "Prefabs/OutGame/Dmode/DmodeServitor/DmodeServitorPassiveBuildUpConfirmPopup";
+	public void OnBuildUpServitorPassive()
+	{
+	}
 
-		private DmodeServitorPassiveLevelElement passiveElement;
+	private void OnEnable()
+	{
+	}
 
-		public static DmodeServitorPassiveBuildUpConfirmPopup Create(Dictionary<int, int> materialDataDic, DmodeServitorPassiveLevelElement element)
-		{
-			return null;
-		}
+	private void OnDisable()
+	{
+	}
 
-		public void SetContent(Dictionary<int, int> needMaterialDataDic, DmodeServitorPassiveLevelElement element)
-		{
-		}
-
-		private void OnIconPressed(CraftMaterialCellData data)
-		{
-		}
-
-		public void OnPassiveAbilityLevelRelease()
-		{
-		}
-
-		public void OnBuildUpServitorPassive()
-		{
-		}
-
-		private void OnEnable()
-		{
-		}
-
-		private void OnDisable()
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

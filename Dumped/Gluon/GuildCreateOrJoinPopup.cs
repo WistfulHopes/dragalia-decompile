@@ -1,33 +1,32 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildCreateOrJoinPopup : PopupBase
 {
-	public class GuildCreateOrJoinPopup : PopupBase
+	public const string prefabPath = "Prefabs/OutGame/Guild/GuildCreateOrJoinPopup";
+
+	[SerializeField]
+	private GameObject inviteBadge;
+
+	public static GuildCreateOrJoinPopup Create()
 	{
-		public const string prefabPath = "Prefabs/OutGame/Guild/GuildCreateOrJoinPopup";
+		return null;
+	}
 
-		[SerializeField]
-		private GameObject inviteBadge;
+	protected override void Start()
+	{
+	}
 
-		public static GuildCreateOrJoinPopup Create()
-		{
-			return null;
-		}
+	public void OnCreateGuildButtonPressed()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	public void OnJoinGuildButtonPressed()
+	{
+	}
 
-		public void OnCreateGuildButtonPressed()
-		{
-		}
-
-		public void OnJoinGuildButtonPressed()
-		{
-		}
-
-		public void OnCheckInviteGuildButtonPressed()
-		{
-		}
+	public void OnCheckInviteGuildButtonPressed()
+	{
 	}
 }

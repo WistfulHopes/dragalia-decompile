@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public class CraftMaterialWeaponSelectListCellData : SelectIconListBaseCellData
 {
-	public class CraftMaterialWeaponSelectListCellData : SelectIconListBaseCellData
-	{
-		public bool isUsedOtherCell;
-	}
+	public bool isUsedOtherCell;
 }

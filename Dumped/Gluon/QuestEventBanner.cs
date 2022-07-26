@@ -5,110 +5,109 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestEventBanner : MonoBehaviour
 {
-	public class QuestEventBanner : MonoBehaviour
+	public enum TargetEventType
 	{
-		public enum TargetEventType
-		{
-			ForQuestSelectScene,
-			ForFortScene
-		}
+		ForQuestSelectScene,
+		ForFortScene
+	}
 
-		public enum TargetEventPeriod
-		{
-			All,
-			EnableToPlay
-		}
+	public enum TargetEventPeriod
+	{
+		All,
+		EnableToPlay
+	}
 
-		[SerializeField]
-		private Image bannerImage;
+	[SerializeField]
+	private Image bannerImage;
 
-		[SerializeField]
-		private GameObject bannerRoot;
+	[SerializeField]
+	private GameObject bannerRoot;
 
-		[SerializeField]
-		private bool _isInitializeOnStart;
+	[SerializeField]
+	private bool _isInitializeOnStart;
 
-		private TargetEventType _targetEventType;
+	private TargetEventType _targetEventType;
 
-		private TargetEventPeriod _targetEventPeriod;
+	private TargetEventPeriod _targetEventPeriod;
 
-		private PointerEventHandler pointerEventHandler;
+	private PointerEventHandler pointerEventHandler;
 
-		private List<EventDataElement> bannerData;
+	private List<EventDataElement> bannerData;
 
-		private EventDataElement nowMainEventData;
+	private EventDataElement nowMainEventData;
 
-		[SerializeField]
-		private Text durationText;
+	[SerializeField]
+	private Text durationText;
 
-		public bool isInitializeOnStart
-		{
-			get
-			{
-				return default(bool);
-			}
-			set
-			{
-			}
-		}
-
-		public TargetEventType targetEventType
-		{
-			get
-			{
-				return default(TargetEventType);
-			}
-			set
-			{
-			}
-		}
-
-		public TargetEventPeriod targetEventPeriod
-		{
-			get
-			{
-				return default(TargetEventPeriod);
-			}
-			set
-			{
-			}
-		}
-
-		private void Start()
-		{
-		}
-
-		private void SetDisp(bool value)
-		{
-		}
-
-		public void SetCallback(UnityAction call)
-		{
-		}
-
-		public void Initialize()
-		{
-		}
-
-		public static bool IsTargetEventType(QuestEventGroupElement groupElement, TargetEventType targetEventType)
+	public bool isInitializeOnStart
+	{
+		get
 		{
 			return default(bool);
 		}
-
-		public static bool IsTargetEventPeriod(EventDataElement eventDataElement, TargetEventPeriod targetEventPeriod)
-		{
-			return default(bool);
-		}
-
-		public void OnClickBannerIcon()
+		set
 		{
 		}
+	}
 
-		private IEnumerator EventQuestTransition()
+	public TargetEventType targetEventType
+	{
+		get
 		{
-			return null;
+			return default(TargetEventType);
 		}
+		set
+		{
+		}
+	}
+
+	public TargetEventPeriod targetEventPeriod
+	{
+		get
+		{
+			return default(TargetEventPeriod);
+		}
+		set
+		{
+		}
+	}
+
+	private void Start()
+	{
+	}
+
+	private void SetDisp(bool value)
+	{
+	}
+
+	public void SetCallback(UnityAction call)
+	{
+	}
+
+	public void Initialize()
+	{
+	}
+
+	public static bool IsTargetEventType(QuestEventGroupElement groupElement, TargetEventType targetEventType)
+	{
+		return default(bool);
+	}
+
+	public static bool IsTargetEventPeriod(EventDataElement eventDataElement, TargetEventPeriod targetEventPeriod)
+	{
+		return default(bool);
+	}
+
+	public void OnClickBannerIcon()
+	{
+	}
+
+	private IEnumerator EventQuestTransition()
+	{
+		return null;
 	}
 }

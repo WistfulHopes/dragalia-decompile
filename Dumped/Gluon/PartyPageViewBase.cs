@@ -1,41 +1,40 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyPageViewBase : PageViewBase
 {
-	public class PartyPageViewBase : PageViewBase
+	protected new List<PartyPager> pagers;
+
+	private void OnDestroy()
 	{
-		protected new List<PartyPager> pagers;
+	}
 
-		private void OnDestroy()
-		{
-		}
+	public override void RemoveAllPages(bool immediately = false)
+	{
+	}
 
-		public override void RemoveAllPages(bool immediately = false)
-		{
-		}
+	protected override void CreatePager()
+	{
+	}
 
-		protected override void CreatePager()
-		{
-		}
+	public void SetCurrentPager(int index)
+	{
+	}
 
-		public void SetCurrentPager(int index)
-		{
-		}
+	protected override void UpdatePager()
+	{
+	}
 
-		protected override void UpdatePager()
-		{
-		}
+	public void UpdateAcrivePagerElementImage()
+	{
+	}
 
-		public void UpdateAcrivePagerElementImage()
-		{
-		}
+	public void SetOnPagerForIndex(int index, bool isOn)
+	{
+	}
 
-		public void SetOnPagerForIndex(int index, bool isOn)
-		{
-		}
-
-		public void UpdateAllPagerElementImage()
-		{
-		}
+	public void UpdateAllPagerElementImage()
+	{
 	}
 }

@@ -1,12 +1,11 @@
 using System;
 using GooglePlayGames.BasicApi.Nearby;
 
-namespace GooglePlayGames
+namespace GooglePlayGames;
+
+public static class NearbyConnectionClientFactory
 {
-	public static class NearbyConnectionClientFactory
+	public static void Create(Action<INearbyConnectionClient> callback)
 	{
-		public static void Create(Action<INearbyConnectionClient> callback)
-		{
-		}
 	}
 }

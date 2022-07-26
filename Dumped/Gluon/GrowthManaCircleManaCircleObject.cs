@@ -2,87 +2,86 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleManaCircleObject : MonoBehaviour
 {
-	public class GrowthManaCircleManaCircleObject : MonoBehaviour
+	public int index;
+
+	public GrowthManaCircleScene scene;
+
+	public GameObject[] pointNodes;
+
+	public GameObject[] pointObjects;
+
+	public GrowthManaCircleManaPieceObject[] points;
+
+	private GrowthManaCircleEffectSettings efs;
+
+	private const int numOfPoints = 10;
+
+	private IEnumerator Start()
 	{
-		public int index;
+		return null;
+	}
 
-		public GrowthManaCircleScene scene;
+	public List<int> GetUnReleasedPointIndexList()
+	{
+		return null;
+	}
 
-		public GameObject[] pointNodes;
+	public void SetTouchablePoints(int centerIndex)
+	{
+	}
 
-		public GameObject[] pointObjects;
+	public Vector3 GetTouchPointWorldPosition(int touchPointIndex)
+	{
+		return default(Vector3);
+	}
 
-		public GrowthManaCircleManaPieceObject[] points;
+	public void PlayReleasePointEffect(GrowthManaCircleManaPieceObject touchPoint)
+	{
+	}
 
-		private GrowthManaCircleEffectSettings efs;
+	private IEnumerator ChangeReleasePointCoroutine(EffectObject effectObject)
+	{
+		return null;
+	}
 
-		private const int numOfPoints = 10;
+	public void PlayReleaseAutoEffect(List<GrowthManaCircleManaPieceObject> pointList, bool isSoundOff = false)
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private IEnumerator AutoReleaseEffectCoroutine(GrowthManaCircleManaPieceObject touchPoint, float delay, bool isSoundOff)
+	{
+		return null;
+	}
 
-		public List<int> GetUnReleasedPointIndexList()
-		{
-			return null;
-		}
+	public void PlayReleaseLimitReadyEffect(Vector3 lockObjectPosition)
+	{
+	}
 
-		public void SetTouchablePoints(int centerIndex)
-		{
-		}
+	private IEnumerator ReleaseLimitOnPointEffectCoroutine()
+	{
+		return null;
+	}
 
-		public Vector3 GetTouchPointWorldPosition(int touchPointIndex)
-		{
-			return default(Vector3);
-		}
+	private IEnumerator ReleaseLimitFlyingEffectCoroutine(Vector3 lockObjectPosition)
+	{
+		return null;
+	}
 
-		public void PlayReleasePointEffect(GrowthManaCircleManaPieceObject touchPoint)
-		{
-		}
+	public void PlayAllReleaseEffect(Vector3 lockObjectPosition)
+	{
+	}
 
-		private IEnumerator ChangeReleasePointCoroutine(EffectObject effectObject)
-		{
-			return null;
-		}
+	private IEnumerator AllReleaseOnPointEffectCoroutine()
+	{
+		return null;
+	}
 
-		public void PlayReleaseAutoEffect(List<GrowthManaCircleManaPieceObject> pointList, bool isSoundOff = false)
-		{
-		}
-
-		private IEnumerator AutoReleaseEffectCoroutine(GrowthManaCircleManaPieceObject touchPoint, float delay, bool isSoundOff)
-		{
-			return null;
-		}
-
-		public void PlayReleaseLimitReadyEffect(Vector3 lockObjectPosition)
-		{
-		}
-
-		private IEnumerator ReleaseLimitOnPointEffectCoroutine()
-		{
-			return null;
-		}
-
-		private IEnumerator ReleaseLimitFlyingEffectCoroutine(Vector3 lockObjectPosition)
-		{
-			return null;
-		}
-
-		public void PlayAllReleaseEffect(Vector3 lockObjectPosition)
-		{
-		}
-
-		private IEnumerator AllReleaseOnPointEffectCoroutine()
-		{
-			return null;
-		}
-
-		private IEnumerator AllReleaseFlyingEffectCoroutine(Vector3 lockObjectPosition)
-		{
-			return null;
-		}
+	private IEnumerator AllReleaseFlyingEffectCoroutine(Vector3 lockObjectPosition)
+	{
+		return null;
 	}
 }

@@ -1,13 +1,12 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeServitorSkillCellData
 {
-	public class DmodeServitorSkillCellData
-	{
-		public DmodeServitorType type;
+	public DmodeServitorType type;
 
-		public SkillDataElement skillData;
+	public SkillDataElement skillData;
 
-		public bool isEquip;
-	}
+	public bool isEquip;
 }

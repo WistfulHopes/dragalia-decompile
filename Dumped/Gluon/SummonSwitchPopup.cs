@@ -1,26 +1,25 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonSwitchPopup : PopupBase
 {
-	public class SummonSwitchPopup : PopupBase
+	public CSSummonTableViewController tableView;
+
+	public GameObject singleViewOffObject;
+
+	public Transform singleViewContentOffsetTransform;
+
+	private SummonTopItemView itemView;
+
+	private const float singleViewContentOffsetY = -109f;
+
+	public static SummonSwitchPopup Create(SummonTopItemView itemView)
 	{
-		public CSSummonTableViewController tableView;
+		return null;
+	}
 
-		public GameObject singleViewOffObject;
-
-		public Transform singleViewContentOffsetTransform;
-
-		private SummonTopItemView itemView;
-
-		private const float singleViewContentOffsetY = -109f;
-
-		public static SummonSwitchPopup Create(SummonTopItemView itemView)
-		{
-			return null;
-		}
-
-		public void OnItemPressed(SummonTopData.SwitchableSummonInfo info)
-		{
-		}
+	public void OnItemPressed(SummonTopData.SwitchableSummonInfo info)
+	{
 	}
 }

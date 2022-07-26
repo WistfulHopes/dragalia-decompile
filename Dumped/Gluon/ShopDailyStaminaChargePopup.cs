@@ -2,30 +2,29 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopDailyStaminaChargePopup : PopupBase
 {
-	public class ShopDailyStaminaChargePopup : PopupBase
+	[SerializeField]
+	public Text singleStaminaChargeStatusText;
+
+	public Text multiStaminaChargeStatusText;
+
+	public Button chargeButton;
+
+	private Action onChargeDone;
+
+	public static ShopDailyStaminaChargePopup Create(Action onChargeDone)
 	{
-		[SerializeField]
-		public Text singleStaminaChargeStatusText;
+		return null;
+	}
 
-		public Text multiStaminaChargeStatusText;
+	protected override void Start()
+	{
+	}
 
-		public Button chargeButton;
-
-		private Action onChargeDone;
-
-		public static ShopDailyStaminaChargePopup Create(Action onChargeDone)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnChargeButtonPressed()
-		{
-		}
+	public void OnChargeButtonPressed()
+	{
 	}
 }

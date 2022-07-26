@@ -1,20 +1,19 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TitleMaintenancePopup : CommonPopup
 {
-	public class TitleMaintenancePopup : CommonPopup
+	public Text scheduleText;
+
+	public Text dateText;
+
+	public static TitleMaintenancePopup CreateTitleMaintenancePopup()
 	{
-		public Text scheduleText;
+		return null;
+	}
 
-		public Text dateText;
-
-		public static TitleMaintenancePopup CreateTitleMaintenancePopup()
-		{
-			return null;
-		}
-
-		public void InitParam(string text)
-		{
-		}
+	public void InitParam(string text)
+	{
 	}
 }

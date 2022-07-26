@@ -1,17 +1,16 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonStageObjectLocationSetter : MonoBehaviour
 {
-	public class SummonStageObjectLocationSetter : MonoBehaviour
+	private Vector3 oldLocation;
+
+	public void SetLocationY(float y)
 	{
-		private Vector3 oldLocation;
+	}
 
-		public void SetLocationY(float y)
-		{
-		}
-
-		public void ResetLocation()
-		{
-		}
+	public void ResetLocation()
+	{
 	}
 }

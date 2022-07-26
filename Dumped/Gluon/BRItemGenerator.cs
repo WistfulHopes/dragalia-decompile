@@ -1,38 +1,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BRItemGenerator : MonoBehaviour
 {
-	public class BRItemGenerator : MonoBehaviour
+	public static BRItemGenerator instance;
+
+	private Dictionary<int, List<BRItemPopPoint>> popPointDict;
+
+	private int totalPointCount;
+
+	private bool isReady;
+
+	public static int RegisterPopPoint(BRItemPopPoint popPoint)
 	{
-		public static BRItemGenerator instance;
+		return default(int);
+	}
 
-		private Dictionary<int, List<BRItemPopPoint>> popPointDict;
+	private void Start()
+	{
+	}
 
-		private int totalPointCount;
+	private void OnDestroy()
+	{
+	}
 
-		private bool isReady;
+	public bool CanGenerateItems()
+	{
+		return default(bool);
+	}
 
-		public static int RegisterPopPoint(BRItemPopPoint popPoint)
-		{
-			return default(int);
-		}
-
-		private void Start()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public bool CanGenerateItems()
-		{
-			return default(bool);
-		}
-
-		public void GenerateItems()
-		{
-		}
+	public void GenerateItems()
+	{
 	}
 }

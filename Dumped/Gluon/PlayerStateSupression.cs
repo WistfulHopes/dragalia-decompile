@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateSupression : PlayerStateBase
 {
-	public class PlayerStateSupression : PlayerStateBase
+	public int portalId;
+
+	public override void OnStateEnter()
 	{
-		public int portalId;
+	}
 
-		public override void OnStateEnter()
-		{
-		}
-
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateUpdate()
+	{
 	}
 }

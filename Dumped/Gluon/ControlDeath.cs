@@ -1,97 +1,102 @@
 using System.Runtime.InteropServices;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class ControlDeath
 {
-	public class ControlDeath
+	private enum State
 	{
-		private enum State
-		{
-			Initilize,
-			Living,
-			Death,
-			DeathReserved,
-			DeadIdle,
-			DeadParts,
-			End
-		}
+		Initilize,
+		Living,
+		Death,
+		DeathReserved,
+		DeadIdle,
+		DeadParts,
+		End
+	}
 
-		private const float DEFAULT_DEAD_IDLING_TIME = 1f;
+	private const float DEFAULT_DEAD_IDLING_TIME = 1f;
 
-		private const float DEATH_TIME_UP = 10f;
+	private const float DEATH_TIME_UP = 10f;
 
-		private readonly CharacterBuffType[] excludeTypes;
+	private readonly CharacterBuffType[] excludeTypes;
 
-		private State _state;
+	private State _state;
 
-		private CharacterBase _owner;
+	private CharacterBase _owner;
 
-		private float _time;
+	private float _time;
 
-		private bool _isDeadEventReceived;
+	private bool _isDeadEventReceived;
 
-		public void Setup(CharacterBase owner)
-		{
-		}
+	private bool _isDeadIdleTimeZero;
 
-		public void Reset()
-		{
-		}
+	public void Setup(CharacterBase owner)
+	{
+	}
 
-		public bool OnDead([Optional] CollisionHitAttribute hitAttr)
-		{
-			return default(bool);
-		}
+	public void Reset()
+	{
+	}
 
-		public void Update()
-		{
-		}
+	public bool OnDead([Optional] CollisionHitAttribute hitAttr)
+	{
+		return default(bool);
+	}
 
-		public void RequestCancelWaitDead()
-		{
-		}
+	public void Update()
+	{
+	}
 
-		public void SetEnd()
-		{
-		}
+	public void RequestCancelWaitDead()
+	{
+	}
 
-		public void OnDeadEvent(Dead dead)
-		{
-		}
+	public void SetEnd()
+	{
+	}
 
-		private void SetDeadIdle(bool immediate = false)
-		{
-		}
+	public void OnDeadEvent(Dead dead)
+	{
+	}
 
-		private void SetDeath()
-		{
-		}
+	private void SetDeadIdle(bool immediate = false)
+	{
+	}
 
-		private void SendDeathEvent()
-		{
-		}
+	public void SkipDeadIdleTime()
+	{
+	}
 
-		private bool CanProcessDeath()
-		{
-			return default(bool);
-		}
+	private void SetDeath()
+	{
+	}
 
-		private void ResetStatus()
-		{
-		}
+	private void SendDeathEvent()
+	{
+	}
 
-		private void ResetTransSkills()
-		{
-		}
+	private bool CanProcessDeath()
+	{
+		return default(bool);
+	}
 
-		private bool IsMultiPlayEventSender()
-		{
-			return default(bool);
-		}
+	public void ResetStatus()
+	{
+	}
 
-		private bool IsMultiPlayEventReceiver()
-		{
-			return default(bool);
-		}
+	private void ResetTransSkills()
+	{
+	}
+
+	private bool IsMultiPlayEventSender()
+	{
+		return default(bool);
+	}
+
+	private bool IsMultiPlayEventReceiver()
+	{
+		return default(bool);
 	}
 }

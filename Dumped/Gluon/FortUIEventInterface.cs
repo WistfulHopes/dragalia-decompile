@@ -1,26 +1,25 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Gluon
+namespace Gluon;
+
+public interface FortUIEventInterface : IEventSystemHandler
 {
-	public interface FortUIEventInterface : IEventSystemHandler
-	{
-		void OnPlayRightSlideIn();
+	void OnPlayRightSlideIn();
 
-		void OnPlayRightSlideOut();
+	void OnPlayRightSlideOut();
 
-		void OnRightSlideIn();
+	void OnRightSlideIn();
 
-		void OnRightSlideOut();
+	void OnRightSlideOut();
 
-		void OnBottomSlideIn();
+	void OnBottomSlideIn();
 
-		void OnBottomSlideOut();
+	void OnBottomSlideOut();
 
-		void OnFacilitySelectCancel(bool playBottomSlideOut);
+	void OnFacilitySelectCancel(bool playBottomSlideOut);
 
-		void OnFacilityVanished(GameObject gameObject);
+	void OnFacilityVanished(GameObject gameObject);
 
-		void OnFacilityStateChanged(ManagedFacilityDialogController.ExecutedFacilityAction executedFacilityAction);
-	}
+	void OnFacilityStateChanged(ManagedFacilityDialogController.ExecutedFacilityAction executedFacilityAction);
 }

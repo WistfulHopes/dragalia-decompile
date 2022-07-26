@@ -4,111 +4,104 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ExRushTopCharaButton : MonoBehaviour, ICustomMessage
 {
-	public class ExRushTopCharaButton : MonoBehaviour, ICustomMessage
+	public enum Type
 	{
-		public enum Type
-		{
-			Fire,
-			Wind,
-			Dark,
-			Water,
-			Rush,
-			Light,
-			Story,
-			Trade,
-			Mission
-		}
+		Fire,
+		Wind,
+		Dark,
+		Water,
+		Rush,
+		Light,
+		Story,
+		Trade,
+		Mission
+	}
 
-		[SerializeField]
-		[Header("Type")]
-		public Type type;
+	[SerializeField]
+	public Type type;
 
-		[SerializeField]
-		[Header("NewState")]
-		public QuestStateIcon stateIcon;
+	[SerializeField]
+	public QuestStateIcon stateIcon;
 
-		[SerializeField]
-		[Header("Pressed")]
-		public ButtonWithSelectedImage buttonWithSelectedImage;
+	[SerializeField]
+	public ButtonWithSelectedImage buttonWithSelectedImage;
 
-		public GameObject eyeDirection;
+	public GameObject eyeDirection;
 
-		public Button button;
+	public Button button;
 
-		public GameObject iconGO;
+	public GameObject iconGO;
 
-		public Transform[] scaleTransforms;
+	public Transform[] scaleTransforms;
 
-		[SerializeField]
-		[Header("RW")]
-		public GameObject rushParentGO;
+	[SerializeField]
+	public GameObject rushParentGO;
 
-		public GameObject wParentGO;
+	public GameObject wParentGO;
 
-		public GameObject[] subFaces;
+	public GameObject[] subFaces;
 
-		[SerializeField]
-		[Header("Badges")]
-		public Badge mainBadge;
+	[SerializeField]
+	public Badge mainBadge;
 
-		public GameObject pickupMissionBadge;
+	public GameObject pickupMissionBadge;
 
-		[SerializeField]
-		[Header("WMovie")]
-		public RawImage wMovieImage;
+	[SerializeField]
+	public RawImage wMovieImage;
 
-		public int wMovieRow;
+	public int wMovieRow;
 
-		public int wMovieColumn;
+	public int wMovieColumn;
 
-		public int wMovieSize;
+	public int wMovieSize;
 
-		public float beforeWMovieWait;
+	public float beforeWMovieWait;
 
-		private const string prefUnlockW = "ExRushUnlockW";
+	private const string prefUnlockW = "ExRushUnlockW";
 
-		private Coroutine unlockCoroutine;
+	private Coroutine unlockCoroutine;
 
-		private bool isEventEnded => default(bool);
+	private bool isEventEnded => default(bool);
 
-		public void OnPageBecomeActive()
-		{
-		}
+	public void OnPageBecomeActive()
+	{
+	}
 
-		private void DisableButton(bool withIcon = true)
-		{
-		}
+	private void DisableButton(bool withIcon = true)
+	{
+	}
 
-		private void UpdateRush(List<QuestEventMenuElement> menuDataList)
-		{
-		}
+	private void UpdateRush(List<QuestEventMenuElement> menuDataList)
+	{
+	}
 
-		private IEnumerator RunUnlock()
-		{
-			return null;
-		}
+	private IEnumerator RunUnlock()
+	{
+		return null;
+	}
 
-		private List<QuestEventMenuElement> GetQuestList(bool onlyAvailable, bool excludeQuestAfterEnd)
-		{
-			return null;
-		}
+	private List<QuestEventMenuElement> GetQuestList(bool onlyAvailable, bool excludeQuestAfterEnd)
+	{
+		return null;
+	}
 
-		private void LateUpdate()
-		{
-		}
+	private void LateUpdate()
+	{
+	}
 
-		private void UpdateBadge()
-		{
-		}
+	private void UpdateBadge()
+	{
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
 
-		public void OnPressed()
-		{
-		}
+	public void OnPressed()
+	{
 	}
 }

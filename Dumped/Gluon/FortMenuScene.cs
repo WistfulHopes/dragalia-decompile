@@ -1,92 +1,91 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortMenuScene : SceneBase
 {
-	public class FortMenuScene : SceneBase
+	private enum TutorialType
 	{
-		private enum TutorialType
-		{
-			None,
-			Fort,
-			Craft,
-			CastleStory
-		}
+		None,
+		Fort,
+		Craft,
+		CastleStory
+	}
 
-		public Camera mainCamera;
+	public Camera mainCamera;
 
-		public FortMenuCharaTalkSelector charaTalkSelector;
+	public FortMenuCharaTalkSelector charaTalkSelector;
 
-		public static string prefabDir;
+	public static string prefabDir;
 
-		private FortMenuUICanvas mainCanvas;
+	private FortMenuUICanvas mainCanvas;
 
-		private FortMenuCharaCanvas charaCanvas;
+	private FortMenuCharaCanvas charaCanvas;
 
-		private bool isRequestFortInfoCompleted;
+	private bool isRequestFortInfoCompleted;
 
-		private bool isRequestDragonContactInfoCompleted;
+	private bool isRequestDragonContactInfoCompleted;
 
-		private bool isTutorialRequired;
+	private bool isTutorialRequired;
 
-		private string charaVoiceGroupName;
+	private string charaVoiceGroupName;
 
-		private GameObject charaCanvasPrefab;
+	private GameObject charaCanvasPrefab;
 
-		private TutorialType tutorialType;
+	private TutorialType tutorialType;
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		public void OnCharaPressed()
-		{
-		}
+	public void OnCharaPressed()
+	{
+	}
 
-		private void SetupTutorialState()
-		{
-		}
+	private void SetupTutorialState()
+	{
+	}
 
-		private void StartTutorial()
-		{
-		}
+	private void StartTutorial()
+	{
+	}
 
-		private void Tutorial_ToFort()
-		{
-		}
+	private void Tutorial_ToFort()
+	{
+	}
 
-		private void Tutorial_CastleStory()
-		{
-		}
+	private void Tutorial_CastleStory()
+	{
+	}
 
-		private IEnumerator Tutorial_CastleStory_Coroutine()
-		{
-			return null;
-		}
+	private IEnumerator Tutorial_CastleStory_Coroutine()
+	{
+		return null;
+	}
 
-		private void CheckBadges()
-		{
-		}
+	private void CheckBadges()
+	{
+	}
 
-		public void RequestFortInfo()
-		{
-		}
+	public void RequestFortInfo()
+	{
+	}
 
-		public void RequestDragonContactInfo()
-		{
-		}
+	public void RequestDragonContactInfo()
+	{
 	}
 }

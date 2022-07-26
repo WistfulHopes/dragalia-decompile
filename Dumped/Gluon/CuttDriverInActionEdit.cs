@@ -1,16 +1,15 @@
 using System.Collections;
 
-namespace Gluon
-{
-	public class CuttDriverInActionEdit : CuttDriver
-	{
-		public override IEnumerator Start()
-		{
-			return null;
-		}
+namespace Gluon;
 
-		public override void Update()
-		{
-		}
+public class CuttDriverInActionEdit : CuttDriver
+{
+	public override IEnumerator Start()
+	{
+		return null;
+	}
+
+	public override void Update()
+	{
 	}
 }

@@ -1,17 +1,16 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsIgnoreEnemyPush : ActionParts
 {
-	public class ActionPartsIgnoreEnemyPush : ActionParts
+	private readonly IgnoreEnemyPushData _partsData;
+
+	public ActionPartsIgnoreEnemyPush(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly IgnoreEnemyPushData _partsData;
+	}
 
-		public ActionPartsIgnoreEnemyPush(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class AbnormalStatusFlashHeat : AbnormalStatusSlipBase
 {
-	public class AbnormalStatusFlashHeat : AbnormalStatusSlipBase
-	{
-	}
 }

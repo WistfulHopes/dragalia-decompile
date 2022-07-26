@@ -5,122 +5,121 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FriendSearchView : FriendPanelBase
 {
-	public class FriendSearchView : FriendPanelBase
+	private enum ModeTab
 	{
-		private enum ModeTab
-		{
-			Id,
-			Recommended
-		}
+		Id,
+		Recommended
+	}
 
-		private static Action onHttpDone;
+	private static Action onHttpDone;
 
-		public Transform frameParent;
+	public Transform frameParent;
 
-		public RectTransform referenceRect;
+	public RectTransform referenceRect;
 
-		private ModeTab currentMode;
+	private ModeTab currentMode;
 
-		[SerializeField]
-		private Text friendNumText;
+	[SerializeField]
+	private Text friendNumText;
 
-		[SerializeField]
-		private GameObject searchViewArea;
+	[SerializeField]
+	private GameObject searchViewArea;
 
-		[SerializeField]
-		private InputField inputIdField;
+	[SerializeField]
+	private InputField inputIdField;
 
-		[SerializeField]
-		private Text inputIdPlaceholder;
+	[SerializeField]
+	private Text inputIdPlaceholder;
 
-		[SerializeField]
-		private Text yourIdCaptionText;
+	[SerializeField]
+	private Text yourIdCaptionText;
 
-		[SerializeField]
-		private Text yourIdText;
+	[SerializeField]
+	private Text yourIdText;
 
-		[SerializeField]
-		private Text infoText;
+	[SerializeField]
+	private Text infoText;
 
-		[SerializeField]
-		private Button searchButton;
+	[SerializeField]
+	private Button searchButton;
 
-		[SerializeField]
-		private FriendListController listController;
+	[SerializeField]
+	private FriendListController listController;
 
-		[SerializeField]
-		private GameObject idTabOnImage;
+	[SerializeField]
+	private GameObject idTabOnImage;
 
-		[SerializeField]
-		private GameObject recommendTabOnImage;
+	[SerializeField]
+	private GameObject recommendTabOnImage;
 
-		private List<FriendListCellData> cellDataList;
+	private List<FriendListCellData> cellDataList;
 
-		public static FriendSearchView Create(Transform parent, FriendScene scene)
-		{
-			return null;
-		}
+	public static FriendSearchView Create(Transform parent, FriendScene scene)
+	{
+		return null;
+	}
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void SetMode(int index)
-		{
-		}
+	private void SetMode(int index)
+	{
+	}
 
-		private void SetRecommendedList()
-		{
-		}
+	private void SetRecommendedList()
+	{
+	}
 
-		private void RequestFriendRequest(FriendListCellData data)
-		{
-		}
+	private void RequestFriendRequest(FriendListCellData data)
+	{
+	}
 
-		private void RequestFriendRequest(ulong friendId, [Optional] UnityAction successCallBack)
-		{
-		}
+	private void RequestFriendRequest(ulong friendId, [Optional] UnityAction successCallBack)
+	{
+	}
 
-		public void OnCopyButtonPressed()
-		{
-		}
+	public void OnCopyButtonPressed()
+	{
+	}
 
-		public void OnSearchButtonPressed()
-		{
-		}
+	public void OnSearchButtonPressed()
+	{
+	}
 
-		private void RequestFriendSearch(ulong id)
-		{
-		}
+	private void RequestFriendSearch(ulong id)
+	{
+	}
 
-		private void OnSuccessFriendSearch()
-		{
-		}
+	private void OnSuccessFriendSearch()
+	{
+	}
 
-		private void OnErrorUnsuitableId()
-		{
-		}
+	private void OnErrorUnsuitableId()
+	{
+	}
 
-		public void OnSortButtonPressed()
-		{
-		}
+	public void OnSortButtonPressed()
+	{
+	}
 
-		public void OnIdSearchButtonPressed()
-		{
-		}
+	public void OnIdSearchButtonPressed()
+	{
+	}
 
-		public void OnRecommendListButtonPressed()
-		{
-		}
+	public void OnRecommendListButtonPressed()
+	{
+	}
 
-		public static void RequestForEntryHttp(Action onHttpDoneCallback)
-		{
-		}
+	public static void RequestForEntryHttp(Action onHttpDoneCallback)
+	{
+	}
 
-		public static void OnEntryHttpSuccess()
-		{
-		}
+	public static void OnEntryHttpSuccess()
+	{
 	}
 }

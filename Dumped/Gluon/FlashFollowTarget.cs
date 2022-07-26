@@ -1,42 +1,41 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FlashFollowTarget : MonoBehaviour
 {
-	public class FlashFollowTarget : MonoBehaviour
+	public Vector3 positionOffset
 	{
-		public Vector3 positionOffset
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(Vector3);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(Vector3);
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		public Transform target
+	public Transform target
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		set
+		{
+		}
+	}
 
-		public void OnInit(Transform target, Vector3 offset)
-		{
-		}
+	public void OnInit(Transform target, Vector3 offset)
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
 	}
 }

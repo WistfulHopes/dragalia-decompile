@@ -1,39 +1,37 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BattleRoyalRecordInfoPopup : PopupBase
 {
-	public class BattleRoyalRecordInfoPopup : PopupBase
+	[SerializeField]
+	public Text totalTop1CountText;
+
+	public Text totalTop4CountText;
+
+	public Text mostUsedJobText;
+
+	public Text killTotalCountText;
+
+	public Text maxKillCountPerGameText;
+
+	public Text totalPointText;
+
+	public static BattleRoyalRecordInfoPopup Create()
 	{
-		[SerializeField]
-		[Header("Content")]
-		public Text totalTop1CountText;
+		return null;
+	}
 
-		public Text totalTop4CountText;
+	protected override void Start()
+	{
+	}
 
-		public Text mostUsedJobText;
+	private void ApplyTopCountLocalize(Text text, int c)
+	{
+	}
 
-		public Text killTotalCountText;
-
-		public Text maxKillCountPerGameText;
-
-		public Text totalPointText;
-
-		public static BattleRoyalRecordInfoPopup Create()
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		private void ApplyTopCountLocalize(Text text, int c)
-		{
-		}
-
-		public void OnRecordListButtonPressed()
-		{
-		}
+	public void OnRecordListButtonPressed()
+	{
 	}
 }

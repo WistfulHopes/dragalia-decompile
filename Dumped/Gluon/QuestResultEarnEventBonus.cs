@@ -9,348 +9,347 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultEarnEventBonus : QREventResultBase
 {
-	public class QuestResultEarnEventBonus : QREventResultBase
+	public enum BuildEventResultState
 	{
-		public enum BuildEventResultState
+		Undefined,
+		None,
+		Start,
+		SeriExit,
+		BonusList,
+		Reward,
+		Animating,
+		BonusListAnimating,
+		BonusShowned,
+		RewardAnimating,
+		RewardAnimationEnd,
+		BonusListAnimationSkip,
+		End
+	}
+
+	[SerializeField]
+	private PointerEventHandler skipButtonEventHandler;
+
+	[SerializeField]
+	private Image totalPointIcon;
+
+	[SerializeField]
+	private Image gotPointIcon;
+
+	[SerializeField]
+	private Image charaBg;
+
+	[SerializeField]
+	private Gauge gauge;
+
+	[SerializeField]
+	private Image gaugeBarEffect;
+
+	[SerializeField]
+	private CommonIcon nextRewardIcon;
+
+	[SerializeField]
+	private Text seriNameText;
+
+	[SerializeField]
+	private Text seriText;
+
+	[SerializeField]
+	private Image fadeBgFirst;
+
+	[SerializeField]
+	private Image fadeBgSecond;
+
+	[SerializeField]
+	private Text nowGetPoint;
+
+	[SerializeField]
+	private Text sumGetPoint;
+
+	[SerializeField]
+	private Text nextNecessaryPoint;
+
+	[SerializeField]
+	private PointerEventHandler skipButton;
+
+	[SerializeField]
+	private float animationDuration;
+
+	[SerializeField]
+	private int textAnimationDigits;
+
+	[SerializeField]
+	private OutGameBgChara bgCharacter;
+
+	[SerializeField]
+	private Transform bgCharaOffset;
+
+	[SerializeField]
+	private float contentAnimationSpeed;
+
+	[SerializeField]
+	private QuestResultEarnEventBonusList bonusListCtrl;
+
+	[SerializeField]
+	private Transform bonusflashParentTrans;
+
+	private Sequence curSequence;
+
+	private Tweener talkTweener;
+
+	private FlashPlayer flashPlayerBonus;
+
+	private List<BuildEventRewardElement> gotRewards;
+
+	private Sequence gaugeAnimationSeq;
+
+	private bool isGaugeAnimationFinished;
+
+	private int startedTweenCount;
+
+	private EventKindType eventType;
+
+	private int eventId;
+
+	private EventQuestTalkDataModel.TalkSet talkSet;
+
+	private bool isShowBonusAnimationCalled;
+
+	private bool isGetRewardPUShown;
+
+	private bool blockTouchUntilStateChanged;
+
+	private bool isTextWindowOn;
+
+	private QuestEventGroupElement groupElement;
+
+	private FlashPlayer flashPlayerRewardAchivment;
+
+	private FlashPlayer flashPlayerGlitterBurst;
+
+	private FlashPlayer flashPlayerGaugeEffect;
+
+	private bool isInAnimation;
+
+	private int curMetalValue;
+
+	private int curTotalValue;
+
+	private bool skipFlag;
+
+	private int nowGotPointValue;
+
+	private BuildEventResultState _state;
+
+	private const string sePointGauge = "SE_OUT_RANDOM_002";
+
+	private const string seGaugeFull = "SE_OUT_RANDOM_004";
+
+	private const string sePointRewardGet = "SE_OUT_RANDOM_005";
+
+	public int totalGotPointValue
+	{
+		[CompilerGenerated]
+		get
 		{
-			Undefined,
-			None,
-			Start,
-			SeriExit,
-			BonusList,
-			Reward,
-			Animating,
-			BonusListAnimating,
-			BonusShowned,
-			RewardAnimating,
-			RewardAnimationEnd,
-			BonusListAnimationSkip,
-			End
+			return default(int);
 		}
-
-		[SerializeField]
-		private PointerEventHandler skipButtonEventHandler;
-
-		[SerializeField]
-		private Image totalPointIcon;
-
-		[SerializeField]
-		private Image gotPointIcon;
-
-		[SerializeField]
-		private Image charaBg;
-
-		[SerializeField]
-		private Gauge gauge;
-
-		[SerializeField]
-		private Image gaugeBarEffect;
-
-		[SerializeField]
-		private CommonIcon nextRewardIcon;
-
-		[SerializeField]
-		private Text seriNameText;
-
-		[SerializeField]
-		private Text seriText;
-
-		[SerializeField]
-		private Image fadeBgFirst;
-
-		[SerializeField]
-		private Image fadeBgSecond;
-
-		[SerializeField]
-		private Text nowGetPoint;
-
-		[SerializeField]
-		private Text sumGetPoint;
-
-		[SerializeField]
-		private Text nextNecessaryPoint;
-
-		[SerializeField]
-		private PointerEventHandler skipButton;
-
-		[SerializeField]
-		private float animationDuration;
-
-		[SerializeField]
-		private int textAnimationDigits;
-
-		[SerializeField]
-		private OutGameBgChara bgCharacter;
-
-		[SerializeField]
-		private Transform bgCharaOffset;
-
-		[SerializeField]
-		private float contentAnimationSpeed;
-
-		[SerializeField]
-		private QuestResultEarnEventBonusList bonusListCtrl;
-
-		[SerializeField]
-		private Transform bonusflashParentTrans;
-
-		private Sequence curSequence;
-
-		private Tweener talkTweener;
-
-		private FlashPlayer flashPlayerBonus;
-
-		private List<BuildEventRewardElement> gotRewards;
-
-		private Sequence gaugeAnimationSeq;
-
-		private bool isGaugeAnimationFinished;
-
-		private int startedTweenCount;
-
-		private EventKindType eventType;
-
-		private int eventId;
-
-		private EventQuestTalkDataModel.TalkSet talkSet;
-
-		private bool isShowBonusAnimationCalled;
-
-		private bool isGetRewardPUShown;
-
-		private bool blockTouchUntilStateChanged;
-
-		private bool isTextWindowOn;
-
-		private QuestEventGroupElement groupElement;
-
-		private FlashPlayer flashPlayerRewardAchivment;
-
-		private FlashPlayer flashPlayerGlitterBurst;
-
-		private FlashPlayer flashPlayerGaugeEffect;
-
-		private bool isInAnimation;
-
-		private int curMetalValue;
-
-		private int curTotalValue;
-
-		private bool skipFlag;
-
-		private int nowGotPointValue;
-
-		private BuildEventResultState _state;
-
-		private const string sePointGauge = "SE_OUT_RANDOM_002";
-
-		private const string seGaugeFull = "SE_OUT_RANDOM_004";
-
-		private const string sePointRewardGet = "SE_OUT_RANDOM_005";
-
-		public int totalGotPointValue
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public BuildEventResultState state
-		{
-			get
-			{
-				return default(BuildEventResultState);
-			}
-			set
-			{
-			}
-		}
-
-		protected override void Start()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void OnDestroy()
+	public BuildEventResultState state
+	{
+		get
+		{
+			return default(BuildEventResultState);
+		}
+		set
 		{
 		}
+	}
 
-		public override void StartEnterAnimation(bool isFadeInOutAnimation, UnityAction onComplete)
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private string GetEventItemName()
-		{
-			return null;
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public void SetContent(QuestResultTopPage resultTop, QuestResultModel model)
-		{
-		}
+	public override void StartEnterAnimation(bool isFadeInOutAnimation, UnityAction onComplete)
+	{
+	}
 
-		private IEnumerator WaitForTalking(List<BuildEventRewardElement> nextElements)
-		{
-			return null;
-		}
+	private string GetEventItemName()
+	{
+		return null;
+	}
 
-		public IEnumerator CheckRewards(bool isBonus)
-		{
-			return null;
-		}
+	public void SetContent(QuestResultTopPage resultTop, QuestResultModel model)
+	{
+	}
 
-		private bool CheckNextReward(out int gotMetalValue, out BuildEventRewardElement prevElement, ref List<BuildEventRewardElement> nextElements)
-		{
-			return default(bool);
-		}
+	private IEnumerator WaitForTalking(List<BuildEventRewardElement> nextElements)
+	{
+		return null;
+	}
 
-		private void ShowGetRewardAnimation(int gotMetalValue, bool hasNextReward, BuildEventRewardElement prevElement, List<BuildEventRewardElement> nextElements, bool isBonus)
-		{
-		}
+	public IEnumerator CheckRewards(bool isBonus)
+	{
+		return null;
+	}
 
-		private IEnumerator ShowGetRewardAnimation(int gotMetalValue, bool hasNextReward, int prevValue, int nextValue, bool isBonus)
-		{
-			return null;
-		}
+	private bool CheckNextReward(out int gotMetalValue, out BuildEventRewardElement prevElement, ref List<BuildEventRewardElement> nextElements)
+	{
+		return default(bool);
+	}
 
-		public void ShowBonusAnimation()
-		{
-		}
+	private void ShowGetRewardAnimation(int gotMetalValue, bool hasNextReward, BuildEventRewardElement prevElement, List<BuildEventRewardElement> nextElements, bool isBonus)
+	{
+	}
 
-		private void ShowAchiveAnimation()
-		{
-		}
+	private IEnumerator ShowGetRewardAnimation(int gotMetalValue, bool hasNextReward, int prevValue, int nextValue, bool isBonus)
+	{
+		return null;
+	}
 
-		private void ShowGotRewardPopup()
-		{
-		}
+	public void ShowBonusAnimation()
+	{
+	}
 
-		private void TalkAfterGotReward()
-		{
-		}
+	private void ShowAchiveAnimation()
+	{
+	}
 
-		private void UpdateInfo(int gotMetalValue, BuildEventRewardElement prevElement, List<BuildEventRewardElement> nextElements, bool updateNowGetPoint = true)
-		{
-		}
+	private void ShowGotRewardPopup()
+	{
+	}
 
-		private void ShowNextNecessaryPoint(int value)
-		{
-		}
+	private void TalkAfterGotReward()
+	{
+	}
 
-		public void UpdateGotMetal(int value, float duration)
-		{
-		}
+	private void UpdateInfo(int gotMetalValue, BuildEventRewardElement prevElement, List<BuildEventRewardElement> nextElements, bool updateNowGetPoint = true)
+	{
+	}
 
-		public void SkipGotMetal(int value)
-		{
-		}
+	private void ShowNextNecessaryPoint(int value)
+	{
+	}
 
-		private Sequence PointValueFrameMove(Transform trans)
-		{
-			return null;
-		}
+	public void UpdateGotMetal(int value, float duration)
+	{
+	}
 
-		private Sequence BgFadeIn(Image image)
-		{
-			return null;
-		}
+	public void SkipGotMetal(int value)
+	{
+	}
 
-		private void SkipBgFadeIn(Image image)
-		{
-		}
+	private Sequence PointValueFrameMove(Transform trans)
+	{
+		return null;
+	}
 
-		private Sequence BgFadeOut(Image image)
-		{
-			return null;
-		}
+	private Sequence BgFadeIn(Image image)
+	{
+		return null;
+	}
 
-		private void Talk([Optional] Action completeCallback)
-		{
-		}
+	private void SkipBgFadeIn(Image image)
+	{
+	}
 
-		private void Talk(EventQuestModel.BuildCharaTalkResultCategory1 category, EventQuestModel.BuildCharaTalkResultTargetType targetType = EventQuestModel.BuildCharaTalkResultTargetType.None, [Optional] Action completeCallback)
-		{
-		}
+	private Sequence BgFadeOut(Image image)
+	{
+		return null;
+	}
 
-		private void SetBackKey(UnityAction action)
-		{
-		}
+	private void Talk([Optional] Action completeCallback)
+	{
+	}
 
-		public void OnScreenTouched()
-		{
-		}
+	private void Talk(EventQuestModel.BuildCharaTalkResultCategory1 category, EventQuestModel.BuildCharaTalkResultTargetType targetType = EventQuestModel.BuildCharaTalkResultTargetType.None, [Optional] Action completeCallback)
+	{
+	}
 
-		private void NextAfterStartState()
-		{
-		}
+	private void SetBackKey(UnityAction action)
+	{
+	}
 
-		private void NextAfterBonusListAnimatingState()
-		{
-		}
+	public void OnScreenTouched()
+	{
+	}
 
-		private void NextAfterBonusListAnimationSkipState()
-		{
-		}
+	private void NextAfterStartState()
+	{
+	}
 
-		private void NextAfterAnimatingState()
-		{
-		}
+	private void NextAfterBonusListAnimatingState()
+	{
+	}
 
-		private void NextAfterBonusListState(bool fromRepeat)
-		{
-		}
+	private void NextAfterBonusListAnimationSkipState()
+	{
+	}
 
-		private void NextAfterRewardState()
-		{
-		}
+	private void NextAfterAnimatingState()
+	{
+	}
 
-		private void NextAfterRewardAnimatingState()
-		{
-		}
+	private void NextAfterBonusListState(bool fromRepeat)
+	{
+	}
 
-		private void NextAfterRewardAnimationEndState()
-		{
-		}
+	private void NextAfterRewardState()
+	{
+	}
 
-		private void NextAfterEndState()
-		{
-		}
+	private void NextAfterRewardAnimatingState()
+	{
+	}
 
-		private void RunExitAnimation()
-		{
-		}
+	private void NextAfterRewardAnimationEndState()
+	{
+	}
 
-		private void OnModuleEnd()
-		{
-		}
+	private void NextAfterEndState()
+	{
+	}
 
-		private Sequence StartCharaShakingAnimation()
-		{
-			return null;
-		}
+	private void RunExitAnimation()
+	{
+	}
 
-		private Sequence MoveAndFade(GameObject go, float duration, float moveDistance, bool isComing)
-		{
-			return null;
-		}
+	private void OnModuleEnd()
+	{
+	}
 
-		private Sequence StartSeriFrameAnimation(bool isComing)
-		{
-			return null;
-		}
+	private Sequence StartCharaShakingAnimation()
+	{
+		return null;
+	}
 
-		public override void StartExitAnimation(bool isFadeInOutAnimation, UnityAction onComplete)
-		{
-		}
+	private Sequence MoveAndFade(GameObject go, float duration, float moveDistance, bool isComing)
+	{
+		return null;
+	}
 
-		public void OnRetryButton()
-		{
-		}
+	private Sequence StartSeriFrameAnimation(bool isComing)
+	{
+		return null;
+	}
+
+	public override void StartExitAnimation(bool isFadeInOutAnimation, UnityAction onComplete)
+	{
+	}
+
+	public void OnRetryButton()
+	{
 	}
 }

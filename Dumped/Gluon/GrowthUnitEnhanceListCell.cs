@@ -4,183 +4,182 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthUnitEnhanceListCell : MonoBehaviour
 {
-	public class GrowthUnitEnhanceListCell : MonoBehaviour
+	public UnitEnhanceListCellType cellType;
+
+	public Image iconImage;
+
+	public CommonSlider slider;
+
+	public Text releaseCountText;
+
+	public Button releaseButton;
+
+	public Button checkMaterialButton;
+
+	public GameObject lockObject;
+
+	public GameObject lockIconObject;
+
+	public Text lockText;
+
+	public Image[] skinIcons;
+
+	public GameObject skinIconRoot;
+
+	public Transform[] blackMaskTransforms;
+
+	public GameObject completeObject;
+
+	public LayoutElement cellLayoutElement;
+
+	public float cellHeightNoSkin;
+
+	public Image bgImage;
+
+	public Image bgImageNoSkin;
+
+	public Action<UnitEnhanceListCellType> cellButtonPressedCallBack;
+
+	private GrowthUnitEnhanceModel model;
+
+	private GrowthWeaponSkinConfirmData[] skinConfirmDatas;
+
+	private GrowthUnitEnhanceMainCanvas mainCanvas;
+
+	private bool isLoadingEnhancementFlash;
+
+	private float cellHeightDefault;
+
+	public bool isDesabledCell
 	{
-		public UnitEnhanceListCellType cellType;
-
-		public Image iconImage;
-
-		public CommonSlider slider;
-
-		public Text releaseCountText;
-
-		public Button releaseButton;
-
-		public Button checkMaterialButton;
-
-		public GameObject lockObject;
-
-		public GameObject lockIconObject;
-
-		public Text lockText;
-
-		public Image[] skinIcons;
-
-		public GameObject skinIconRoot;
-
-		public Transform[] blackMaskTransforms;
-
-		public GameObject completeObject;
-
-		public LayoutElement cellLayoutElement;
-
-		public float cellHeightNoSkin;
-
-		public Image bgImage;
-
-		public Image bgImageNoSkin;
-
-		public Action<UnitEnhanceListCellType> cellButtonPressedCallBack;
-
-		private GrowthUnitEnhanceModel model;
-
-		private GrowthWeaponSkinConfirmData[] skinConfirmDatas;
-
-		private GrowthUnitEnhanceMainCanvas mainCanvas;
-
-		private bool isLoadingEnhancementFlash;
-
-		private float cellHeightDefault;
-
-		public bool isDesabledCell
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		public bool isComplete
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		private void Awake()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void InitCell(GrowthUnitEnhanceModel model, GrowthUnitEnhanceMainCanvas mainCanvas)
+	public bool isComplete
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void UpdateCell()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public void OnCellButtonPressed()
-		{
-		}
+	public void InitCell(GrowthUnitEnhanceModel model, GrowthUnitEnhanceMainCanvas mainCanvas)
+	{
+	}
 
-		public void OnSkinIconPressed(int index)
-		{
-		}
+	public void UpdateCell()
+	{
+	}
 
-		private void UpdateStatusCell()
-		{
-		}
+	public void OnCellButtonPressed()
+	{
+	}
 
-		private void UpdateLimitBreakCell()
-		{
-		}
+	public void OnSkinIconPressed(int index)
+	{
+	}
 
-		private void UpdateLimitOverCell()
-		{
-		}
+	private void UpdateStatusCell()
+	{
+	}
 
-		private void UpdateWeaponPassiveAbilityCell()
-		{
-		}
+	private void UpdateLimitBreakCell()
+	{
+	}
 
-		private void ResetCellHeight(bool isGetSkin)
-		{
-		}
+	private void UpdateLimitOverCell()
+	{
+	}
 
-		private void UpdateSlotCell()
-		{
-		}
+	private void UpdateWeaponPassiveAbilityCell()
+	{
+	}
 
-		private void UpdateWeaponBonusCell()
-		{
-		}
+	private void ResetCellHeight(bool isGetSkin)
+	{
+	}
 
-		private void UpdateAddEquipCoountCell()
-		{
-		}
+	private void UpdateSlotCell()
+	{
+	}
 
-		private void SetupReleaseSlider(int nowCount, int maxCount)
-		{
-		}
+	private void UpdateWeaponBonusCell()
+	{
+	}
 
-		private void SetupCellButton(bool canRelease)
-		{
-		}
+	private void UpdateAddEquipCoountCell()
+	{
+	}
 
-		private void SetConditionLevelText(int conditionLevel)
-		{
-		}
+	private void SetupReleaseSlider(int nowCount, int maxCount)
+	{
+	}
 
-		private void SetConditionLimitBreakText(int conditionLimitBreak)
-		{
-		}
+	private void SetupCellButton(bool canRelease)
+	{
+	}
 
-		private void SetConditionLimitOverText(int conditionLimitOver)
-		{
-		}
+	private void SetConditionLevelText(int conditionLevel)
+	{
+	}
 
-		private void SetCompleteLockCell()
-		{
-		}
+	private void SetConditionLimitBreakText(int conditionLimitBreak)
+	{
+	}
 
-		private void SetCellIcon()
-		{
-		}
+	private void SetConditionLimitOverText(int conditionLimitOver)
+	{
+	}
 
-		private void SetTutorial()
-		{
-		}
+	private void SetCompleteLockCell()
+	{
+	}
 
-		private string GetEnhancementFlashPath()
-		{
-			return null;
-		}
+	private void SetCellIcon()
+	{
+	}
 
-		public Task PreLoadEnhancementFlash(FlashPlayer flashPlayer)
-		{
-			return null;
-		}
+	private void SetTutorial()
+	{
+	}
 
-		public Task PlayEnhancementFlash(FlashPlayer flashPlayer)
-		{
-			return null;
-		}
+	private string GetEnhancementFlashPath()
+	{
+		return null;
+	}
 
-		public void SetCellButtonHandlerEnable(bool enable)
-		{
-		}
+	public Task PreLoadEnhancementFlash(FlashPlayer flashPlayer)
+	{
+		return null;
+	}
+
+	public Task PlayEnhancementFlash(FlashPlayer flashPlayer)
+	{
+		return null;
+	}
+
+	public void SetCellButtonHandlerEnable(bool enable)
+	{
 	}
 }

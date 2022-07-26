@@ -1,23 +1,22 @@
-namespace Gluon
+namespace Gluon;
+
+public class AutoReleasableAllCirclePointData
 {
-	public class AutoReleasableAllCirclePointData
-	{
-		public GrowthManaCircleManaPieceData[] manaPieceDatas;
+	public GrowthManaCircleManaPieceData[] manaPieceDatas;
 
-		public int limitBreakCount;
+	public int limitBreakCount;
 
-		public int requiredMP;
+	public int requiredMP;
 
-		public int requiredDew;
+	public int requiredDew;
 
-		public bool isMaterialSufficient;
+	public bool isMaterialSufficient;
 
-		public bool isReleasable;
+	public bool isReleasable;
 
-		public bool isReleaseSecondCircle;
+	public bool isReleaseSecondCircle;
 
-		public bool isNeedAwake;
+	public bool isNeedAwake;
 
-		public bool isSelectPoint;
-	}
+	public bool isSelectPoint;
 }

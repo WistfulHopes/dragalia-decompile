@@ -1,52 +1,51 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class InGameCanvas : MonoBehaviour
 {
-	public class InGameCanvas : MonoBehaviour
+	private ChangeResolutionCanvas _changeResolution;
+
+	public Canvas canvas
 	{
-		private ChangeResolutionCanvas _changeResolution;
-
-		public Canvas canvas
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public RectTransform rectTransform
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void GetCanvasComponent()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void Awake()
+	public RectTransform rectTransform
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void InitializeCanvas(CameraGroup inGameUICameraGroup, CameraGroup mainCameraGroup)
-		{
-		}
+	public void GetCanvasComponent()
+	{
+	}
 
-		public void UpdateCanvas(InGameFooterUI footer)
-		{
-		}
+	private void Awake()
+	{
+	}
+
+	public void InitializeCanvas(CameraGroup inGameUICameraGroup, CameraGroup mainCameraGroup)
+	{
+	}
+
+	public void UpdateCanvas(InGameFooterUI footer)
+	{
 	}
 }

@@ -1,12 +1,11 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AbnormalStatusEnemyPoison : AbnormalStatusEnemyBase
 {
-	public class AbnormalStatusEnemyPoison : AbnormalStatusEnemyBase
+	public override void PlayEffect([Optional] GameObject node)
 	{
-		public override void PlayEffect([Optional] GameObject node)
-		{
-		}
 	}
 }

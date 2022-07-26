@@ -1,28 +1,27 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsTerminateOtherParts : ActionParts
 {
-	public class ActionPartsTerminateOtherParts : ActionParts
+	private readonly TerminateOtherData _partsData;
+
+	private Gluon.ActionData.ActionParts.PartsData.ConditionData partConditionData;
+
+	public ActionPartsTerminateOtherParts(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly TerminateOtherData _partsData;
+	}
 
-		private Gluon.ActionData.ActionParts.PartsData.ConditionData partConditionData;
+	public override void Clear()
+	{
+	}
 
-		public ActionPartsTerminateOtherParts(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

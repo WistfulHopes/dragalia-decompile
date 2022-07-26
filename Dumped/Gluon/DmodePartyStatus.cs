@@ -2,54 +2,53 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodePartyStatus : MonoBehaviour
 {
-	public class DmodePartyStatus : MonoBehaviour
+	[SerializeField]
+	private Text selectedCharaNameText;
+
+	[SerializeField]
+	private Graphic editSkill1Icon;
+
+	[SerializeField]
+	private Graphic editSkill2Icon;
+
+	[SerializeField]
+	private Text maxFloorText;
+
+	[SerializeField]
+	private DmodeServitorStatus servitorStatus;
+
+	private Action<int> onEquipedEditSkillIconPressed;
+
+	public DmodeServitorType GetSelectedServitorStatus()
 	{
-		[SerializeField]
-		private Text selectedCharaNameText;
+		return default(DmodeServitorType);
+	}
 
-		[SerializeField]
-		private Graphic editSkill1Icon;
+	public void Initialize(int charaId, int selectedEditSkill1CharaId, int selectedEditSkill2CharaId)
+	{
+	}
 
-		[SerializeField]
-		private Graphic editSkill2Icon;
+	public void AddOnEquipedEditSkillIconPressedCallback(Action<int> callback)
+	{
+	}
 
-		[SerializeField]
-		private Text maxFloorText;
+	public void OnEquipedEditSkillIconPressed(int editSkillIndex)
+	{
+	}
 
-		[SerializeField]
-		private DmodeServitorStatus servitorStatus;
+	public void UpdateCharaInfo(int charaId)
+	{
+	}
 
-		private Action<int> onEquipedEditSkillIconPressed;
+	public void UpdateSelectedServitorType(int charaId)
+	{
+	}
 
-		public DmodeServitorType GetSelectedServitorStatus()
-		{
-			return default(DmodeServitorType);
-		}
-
-		public void Initialize(int charaId, int selectedEditSkill1CharaId, int selectedEditSkill2CharaId)
-		{
-		}
-
-		public void AddOnEquipedEditSkillIconPressedCallback(Action<int> callback)
-		{
-		}
-
-		public void OnEquipedEditSkillIconPressed(int editSkillIndex)
-		{
-		}
-
-		public void UpdateCharaInfo(int charaId)
-		{
-		}
-
-		public void UpdateSelectedServitorType(int charaId)
-		{
-		}
-
-		public void ReloadEditSkillIcon(bool isFirstEditSkill, int skillId, int skillLevel)
-		{
-		}
+	public void ReloadEditSkillIcon(bool isFirstEditSkill, int skillId, int skillLevel)
+	{
 	}
 }

@@ -1,16 +1,15 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace Gluon
-{
-	public class EquipUnitListCell : CommonIconListCell
-	{
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
+namespace Gluon;
 
-		public void PlayUnlockSkillEffect([Optional] Action endCallBack)
-		{
-		}
+public class EquipUnitListCell : CommonIconListCell
+{
+	public override void UpdateContent(CommonIconListCellData data)
+	{
+	}
+
+	public void PlayUnlockSkillEffect([Optional] Action endCallBack)
+	{
 	}
 }

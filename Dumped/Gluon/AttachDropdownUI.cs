@@ -1,18 +1,17 @@
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AttachDropdownUI : FastUpdateMonoBehaviour
 {
-	public class AttachDropdownUI : FastUpdateMonoBehaviour
+	private Canvas rootCanvas;
+
+	public void Initialize(Canvas rootCanvas)
 	{
-		private Canvas rootCanvas;
+	}
 
-		public void Initialize(Canvas rootCanvas)
-		{
-		}
-
-		public override void FastUpdate()
-		{
-		}
+	public override void FastUpdate()
+	{
 	}
 }

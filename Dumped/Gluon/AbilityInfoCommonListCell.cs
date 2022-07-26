@@ -1,32 +1,31 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AbilityInfoCommonListCell : CommonIconListCell
 {
-	public class AbilityInfoCommonListCell : CommonIconListCell
+	[SerializeField]
+	private Transform iconParentTransform;
+
+	[SerializeField]
+	private Text abilityName;
+
+	[SerializeField]
+	private Text abilityDetail;
+
+	[SerializeField]
+	private GameObject blackMaskObject;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		private Transform iconParentTransform;
+	}
 
-		[SerializeField]
-		private Text abilityName;
+	public override void UpdateContent(CommonIconListCellData data)
+	{
+	}
 
-		[SerializeField]
-		private Text abilityDetail;
-
-		[SerializeField]
-		private GameObject blackMaskObject;
-
-		protected override void Start()
-		{
-		}
-
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
-
-		public override void LoadUnitIcon()
-		{
-		}
+	public override void LoadUnitIcon()
+	{
 	}
 }

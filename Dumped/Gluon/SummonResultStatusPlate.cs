@@ -1,57 +1,51 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonResultStatusPlate : MonoBehaviour
 {
-	public class SummonResultStatusPlate : MonoBehaviour
+	[SerializeField]
+	public Text itemName;
+
+	public Text levelNow;
+
+	public Text levelMax;
+
+	public Text hpVal;
+
+	public Text atkVal;
+
+	public Text powerVal;
+
+	public Text skillText;
+
+	[SerializeField]
+	public GameObject exAbilityGO;
+
+	[SerializeField]
+	public GameObject normalStatusPanelGO;
+
+	public GameObject moonStatusPanelGO;
+
+	public Text moonDescriptionText;
+
+	[SerializeField]
+	public GameObject amuletStatusPanelGO;
+
+	public Text amuletName;
+
+	public UnitDetailAbilityInfoCell[] amuletAbilities;
+
+	[SerializeField]
+	public CommonIcon icon;
+
+	public UnitDetailModel CreateUnitDetailModel(SummonResultItemData data)
 	{
-		[SerializeField]
-		[Header("DataText")]
-		public Text itemName;
+		return null;
+	}
 
-		public Text levelNow;
-
-		public Text levelMax;
-
-		public Text hpVal;
-
-		public Text atkVal;
-
-		public Text powerVal;
-
-		public Text skillText;
-
-		[SerializeField]
-		[Header("OnOffs")]
-		public GameObject exAbilityGO;
-
-		[SerializeField]
-		[Header("Moon")]
-		public GameObject normalStatusPanelGO;
-
-		public GameObject moonStatusPanelGO;
-
-		public Text moonDescriptionText;
-
-		[SerializeField]
-		[Header("Amulet")]
-		public GameObject amuletStatusPanelGO;
-
-		public Text amuletName;
-
-		public UnitDetailAbilityInfoCell[] amuletAbilities;
-
-		[SerializeField]
-		[Header("Icon")]
-		public CommonIcon icon;
-
-		public UnitDetailModel CreateUnitDetailModel(SummonResultItemData data)
-		{
-			return null;
-		}
-
-		public void SetupByResultItemData(SummonResultItemData data)
-		{
-		}
+	public void SetupByResultItemData(SummonResultItemData data)
+	{
 	}
 }

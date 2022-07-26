@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum WeaponAttackRangeType
 {
-	public enum WeaponAttackRangeType
-	{
-		NONE = 0,
-		SHORT = 1,
-		LONG = 2,
-		ALL = 99
-	}
+	NONE = 0,
+	SHORT = 1,
+	LONG = 2,
+	ALL = 99
 }

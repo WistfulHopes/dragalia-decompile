@@ -1,31 +1,29 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortDetailContent : TabContentBase
 {
-	public class FortDetailContent : TabContentBase
+	[SerializeField]
+	public FortMenuGroupType facilityGroup;
+
+	[SerializeField]
+	protected RectTransform prefab;
+
+	[SerializeField]
+	protected Transform contentParent;
+
+	private void Start()
 	{
-		[SerializeField]
-		[Header("æ\u0096½è\u00a8­Group")]
-		public FortMenuGroupType facilityGroup;
+	}
 
-		[SerializeField]
-		protected RectTransform prefab;
+	private bool IsFortPlantTypeExist(FortPlantType type)
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		protected Transform contentParent;
-
-		private void Start()
-		{
-		}
-
-		private bool IsFortPlantTypeExist(FortPlantType type)
-		{
-			return default(bool);
-		}
-
-		private FortDetailCell CreateFortDetailCell()
-		{
-			return null;
-		}
+	private FortDetailCell CreateFortDetailCell()
+	{
+		return null;
 	}
 }

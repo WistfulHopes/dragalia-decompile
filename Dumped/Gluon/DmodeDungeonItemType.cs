@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum DmodeDungeonItemType
 {
-	public enum DmodeDungeonItemType
-	{
-		NONE,
-		DRAGON,
-		DMODE_WEAPON,
-		DMODE_ABILITY_CREST,
-		SKILL
-	}
+	NONE,
+	DRAGON,
+	DMODE_WEAPON,
+	DMODE_ABILITY_CREST,
+	SKILL
 }

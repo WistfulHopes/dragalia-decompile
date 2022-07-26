@@ -1,56 +1,55 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsHypnosWindyStream : ActionParts
 {
-	public class ActionPartsHypnosWindyStream : ActionParts
+	private enum State
 	{
-		private enum State
-		{
-			Ready,
-			Wait,
-			Attack
-		}
+		Ready,
+		Wait,
+		Attack
+	}
 
-		private readonly HypnosWindyStreamData _partsData;
+	private readonly HypnosWindyStreamData _partsData;
 
-		private State _state;
+	private State _state;
 
-		private EnemyCharacter _enemy;
+	private EnemyCharacter _enemy;
 
-		private CollisionHitAttribute _hitAttribute;
+	private CollisionHitAttribute _hitAttribute;
 
-		private HitException _hitException;
+	private HitException _hitException;
 
-		private float _waiting;
+	private float _waiting;
 
-		private int _powerNum;
+	private int _powerNum;
 
-		private int _checkChildID;
+	private int _checkChildID;
 
-		public ActionPartsHypnosWindyStream(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsHypnosWindyStream(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnFinish()
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public override void OnCollided(GameObject target, bool isPropagation)
-		{
-		}
+	public override void OnCollided(GameObject target, bool isPropagation)
+	{
 	}
 }

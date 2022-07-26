@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public class WeaponListCellData : CommonDualListCellData
 {
-	public class WeaponListCellData : CommonDualListCellData
-	{
-		public bool isSetSkin;
+	public bool isSetSkin;
 
-		public int equippedCount;
+	public int equippedCount;
 
-		public int equippableCount;
-	}
+	public int equippableCount;
 }

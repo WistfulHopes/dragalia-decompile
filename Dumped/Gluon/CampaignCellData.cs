@@ -1,17 +1,16 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class CampaignCellData
 {
-	public class CampaignCellData
+	public CampaignDataWrapper element;
+
+	public CampaignCellData(CampaignDataElement element)
 	{
-		public CampaignDataWrapper element;
+	}
 
-		public CampaignCellData(CampaignDataElement element)
-		{
-		}
-
-		public CampaignCellData(CampaignDataWrapper element)
-		{
-		}
+	public CampaignCellData(CampaignDataWrapper element)
+	{
 	}
 }

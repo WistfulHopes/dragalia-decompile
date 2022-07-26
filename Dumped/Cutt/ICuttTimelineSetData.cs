@@ -1,11 +1,10 @@
-namespace Cutt
+namespace Cutt;
+
+public interface ICuttTimelineSetData
 {
-	public interface ICuttTimelineSetData
-	{
-		ICuttTimelineKeyDataList GetKeyList(int index);
+	ICuttTimelineKeyDataList GetKeyList(int index);
 
-		ICuttTimelineKeyDataList[] GetKeyListArray();
+	ICuttTimelineKeyDataList[] GetKeyListArray();
 
-		CuttTimelineKeyDataType[] GetKeyTypeArray();
-	}
+	CuttTimelineKeyDataType[] GetKeyTypeArray();
 }

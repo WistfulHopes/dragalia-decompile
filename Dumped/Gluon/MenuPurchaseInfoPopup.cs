@@ -1,25 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MenuPurchaseInfoPopup : PopupBase
 {
-	public class MenuPurchaseInfoPopup : PopupBase
+	private const string prefabPath = "Prefabs/OutGame/Menu/MenuPurchaseInfoPopup";
+
+	[SerializeField]
+	private Text purchasedStoneText;
+
+	[SerializeField]
+	private Text freeStoneText;
+
+	public static MenuPurchaseInfoPopup Create()
 	{
-		private const string prefabPath = "Prefabs/OutGame/Menu/MenuPurchaseInfoPopup";
+		return null;
+	}
 
-		[SerializeField]
-		private Text purchasedStoneText;
-
-		[SerializeField]
-		private Text freeStoneText;
-
-		public static MenuPurchaseInfoPopup Create()
-		{
-			return null;
-		}
-
-		public void InitSetting()
-		{
-		}
+	public void InitSetting()
+	{
 	}
 }

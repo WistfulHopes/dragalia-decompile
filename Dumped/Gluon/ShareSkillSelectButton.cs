@@ -3,42 +3,37 @@ using Cute.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShareSkillSelectButton : FastUpdateMonoBehaviour
 {
-	public class ShareSkillSelectButton : FastUpdateMonoBehaviour
+	[SerializeField]
+	private Button _button;
+
+	[SerializeField]
+	private SpriteRenderer _iconSprite;
+
+	[SerializeField]
+	private SkillIconCtrl _iconCtrl;
+
+	public static ShareSkillSelectButton Create(GameObject parent, int index, Action<ShareSkillSelectButton> onClick, bool isLeft)
 	{
-		[SerializeField]
-		[Header("component")]
-		[Tooltip("ã\u0083\u009cã\u0082¿ã\u0083³")]
-		private Button _button;
+		return null;
+	}
 
-		[SerializeField]
-		[Tooltip("ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ç\u0094»å\u0083\u008f")]
-		private SpriteRenderer _iconSprite;
+	public void Initialize(Action<ShareSkillSelectButton> onClick, bool isLeft)
+	{
+	}
 
-		[SerializeField]
-		[Tooltip("ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³å\u0088¶å¾¡")]
-		private SkillIconCtrl _iconCtrl;
+	public override void FastUpdate()
+	{
+	}
 
-		public static ShareSkillSelectButton Create(GameObject parent, int index, Action<ShareSkillSelectButton> onClick, bool isLeft)
-		{
-			return null;
-		}
+	public void SetEnableButton(bool b, bool isForce = false)
+	{
+	}
 
-		public void Initialize(Action<ShareSkillSelectButton> onClick, bool isLeft)
-		{
-		}
-
-		public override void FastUpdate()
-		{
-		}
-
-		public void SetEnableButton(bool b, bool isForce = false)
-		{
-		}
-
-		private void SetIcon(Material material, Sprite sprite)
-		{
-		}
+	private void SetIcon(Material material, Sprite sprite)
+	{
 	}
 }

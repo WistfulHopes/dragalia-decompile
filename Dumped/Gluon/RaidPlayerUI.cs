@@ -1,85 +1,81 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class RaidPlayerUI : MonoBehaviour
 {
-	public class RaidPlayerUI : MonoBehaviour
+	[SerializeField]
+	private Text label;
+
+	[SerializeField]
+	private InGameGaugeUISpriteRenderer gaugeHP;
+
+	[SerializeField]
+	private Image[] mark;
+
+	[SerializeField]
+	private Sprite onMark;
+
+	[SerializeField]
+	private Sprite offMark;
+
+	[SerializeField]
+	private Image playerNoImage;
+
+	[SerializeField]
+	private Sprite[] playerNo;
+
+	[SerializeField]
+	private Color32[] playerColor;
+
+	private SandTimerUI sandTimerUI;
+
+	private static readonly Vector3 SAND_TIMER_POS;
+
+	public static GameObject LoadPrefab()
 	{
-		[SerializeField]
-		[Header("component")]
-		private Text label;
+		return null;
+	}
 
-		[SerializeField]
-		private InGameGaugeUISpriteRenderer gaugeHP;
+	public static RaidPlayerUI Create(GameObject prefab, GameObject parent, int siblingIndex = -1)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Image[] mark;
+	private void Initialize()
+	{
+	}
 
-		[SerializeField]
-		[Header("resource")]
-		private Sprite onMark;
+	public void Active(bool b)
+	{
+	}
 
-		[SerializeField]
-		private Sprite offMark;
+	public void SetName(string name, int index, int numTotal)
+	{
+	}
 
-		[SerializeField]
-		private Image playerNoImage;
+	public void SetInfo(int numLiving, float value)
+	{
+	}
 
-		[SerializeField]
-		private Sprite[] playerNo;
+	public void CreateSandTimerUI()
+	{
+	}
 
-		[SerializeField]
-		[Header("parameter")]
-		private Color32[] playerColor;
+	public void ShowSandTimerUI()
+	{
+	}
 
-		private SandTimerUI sandTimerUI;
+	public void HideSandTimerUI()
+	{
+	}
 
-		private static readonly Vector3 SAND_TIMER_POS;
+	public void SetSandTimerUICount(int count)
+	{
+	}
 
-		public static GameObject LoadPrefab()
-		{
-			return null;
-		}
-
-		public static RaidPlayerUI Create(GameObject prefab, GameObject parent, int siblingIndex = -1)
-		{
-			return null;
-		}
-
-		private void Initialize()
-		{
-		}
-
-		public void Active(bool b)
-		{
-		}
-
-		public void SetName(string name, int index, int numTotal)
-		{
-		}
-
-		public void SetInfo(int numLiving, float value)
-		{
-		}
-
-		public void CreateSandTimerUI()
-		{
-		}
-
-		public void ShowSandTimerUI()
-		{
-		}
-
-		public void HideSandTimerUI()
-		{
-		}
-
-		public void SetSandTimerUICount(int count)
-		{
-		}
-
-		public void SetSandTimerUICountColor(SandTimerUI.CountColorType type)
-		{
-		}
+	public void SetSandTimerUICountColor(SandTimerUI.CountColorType type)
+	{
 	}
 }

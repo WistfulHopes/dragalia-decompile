@@ -1,36 +1,35 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowResultDiffParam : MonoBehaviour
 {
-	public class GrowResultDiffParam : MonoBehaviour
-	{
-		public Text beforeLvText;
+	public Text beforeLvText;
 
-		public Text afterLvText;
+	public Text afterLvText;
 
-		public Text beforeHpPlusText;
+	public Text beforeHpPlusText;
 
-		public Text beforeAtkPlusText;
+	public Text beforeAtkPlusText;
 
-		public Text afterHpPlusText;
+	public Text afterHpPlusText;
 
-		public Text afterAtkPlusText;
+	public Text afterAtkPlusText;
 
-		public Text beforeTotalPlusText;
+	public Text beforeTotalPlusText;
 
-		public Text afterTotalPlusText;
+	public Text afterTotalPlusText;
 
-		public Text beforeHpText;
+	public Text beforeHpText;
 
-		public Text afterHpText;
+	public Text afterHpText;
 
-		public Text beforeAtkText;
+	public Text beforeAtkText;
 
-		public Text afterAtkText;
+	public Text afterAtkText;
 
-		public Text beforePowerText;
+	public Text beforePowerText;
 
-		public Text afterPowerText;
-	}
+	public Text afterPowerText;
 }

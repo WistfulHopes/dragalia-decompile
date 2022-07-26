@@ -1,12 +1,11 @@
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public static class ExtendAtgenLoginBonusList
 {
-	public static class ExtendAtgenLoginBonusList
+	public static bool IsLoopBonus(this AtgenLoginBonusList self)
 	{
-		public static bool IsLoopBonus(this AtgenLoginBonusList self)
-		{
-			return default(bool);
-		}
+		return default(bool);
 	}
 }

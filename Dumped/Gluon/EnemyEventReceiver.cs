@@ -1,37 +1,36 @@
 using System.Runtime.CompilerServices;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyEventReceiver : EventReceiverBase
 {
-	public class EnemyEventReceiver : EventReceiverBase
+	private EnemyCtrl enemyCtrl;
+
+	public override CharacterBase character => null;
+
+	public EnemyCharacter enemy
 	{
-		private EnemyCtrl enemyCtrl;
-
-		public override CharacterBase character => null;
-
-		public EnemyCharacter enemy
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public override void Initialize(CharacterId characterId)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		protected override void ChangeStateImpl(CharacterState characterState)
-		{
-		}
+	public override void Initialize(CharacterId characterId)
+	{
+	}
 
-		public void DenyGuard(DenyGuard denyGuard)
-		{
-		}
+	protected override void ChangeStateImpl(CharacterState characterState)
+	{
+	}
+
+	public void DenyGuard(DenyGuard denyGuard)
+	{
 	}
 }

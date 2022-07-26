@@ -1,47 +1,46 @@
 using System.Collections.Generic;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterCustomPointController_CRS : CharacterCustomPointController
 {
-	public class CharacterCustomPointController_CRS : CharacterCustomPointController
+	protected List<float> conditionValueList;
+
+	public override int maxCP => default(int);
+
+	protected override void Initialize(CharacterBase owner, AbilityDataElement[] elems)
 	{
-		protected List<float> conditionValueList;
+	}
 
-		public override int maxCP => default(int);
+	public override void AttachToUI()
+	{
+	}
 
-		protected override void Initialize(CharacterBase owner, AbilityDataElement[] elems)
-		{
-		}
+	public override void SetCP(int index, int value)
+	{
+	}
 
-		public override void AttachToUI()
-		{
-		}
+	private void OnGaugeAnimComplete(int index, int lastCP, int curCP)
+	{
+	}
 
-		public override void SetCP(int index, int value)
-		{
-		}
+	private void OnCPMatched(AbilityDataElement ade)
+	{
+	}
 
-		private void OnGaugeAnimComplete(int index, int lastCP, int curCP)
-		{
-		}
+	public override IconType GetIconType()
+	{
+		return default(IconType);
+	}
 
-		private void OnCPMatched(AbilityDataElement ade)
-		{
-		}
+	public override bool ClearCPOnReborn()
+	{
+		return default(bool);
+	}
 
-		public override IconType GetIconType()
-		{
-			return default(IconType);
-		}
-
-		public override bool ClearCPOnReborn()
-		{
-			return default(bool);
-		}
-
-		public override int GetChargeLevel()
-		{
-			return default(int);
-		}
+	public override int GetChargeLevel()
+	{
+		return default(int);
 	}
 }

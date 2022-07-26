@@ -1,33 +1,32 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class TalkParser
 {
-	public class TalkParser
+	public enum Reword
 	{
-		public enum Reword
-		{
-			BreakPlayer
-		}
+		BreakPlayer
+	}
 
-		private static TalkParser _instance;
+	private static TalkParser _instance;
 
-		private string[] RewordStr;
+	private string[] RewordStr;
 
-		private Dictionary<string, string> _rewordDict;
+	private Dictionary<string, string> _rewordDict;
 
-		public static TalkParser Instance => null;
+	public static TalkParser Instance => null;
 
-		public static void Release()
-		{
-		}
+	public static void Release()
+	{
+	}
 
-		public void SetReword(Reword parser, string str)
-		{
-		}
+	public void SetReword(Reword parser, string str)
+	{
+	}
 
-		public string Parser(string str)
-		{
-			return null;
-		}
+	public string Parser(string str)
+	{
+		return null;
 	}
 }

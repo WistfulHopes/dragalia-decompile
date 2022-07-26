@@ -1,64 +1,63 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterBuffRestoreCtrl
 {
-	public class CharacterBuffRestoreCtrl
+	private struct RestoreTrait
 	{
-		private struct RestoreTrait
-		{
-			public bool durationNum;
+		public bool durationNum;
 
-			public bool IsRestoreAny()
-			{
-				return default(bool);
-			}
-		}
-
-		private struct RestoreData
-		{
-			public RestoreTrait trait;
-
-			public int actionConditionId;
-
-			public int abilityId;
-
-			public CharacterBuffType type;
-
-			public int durationNum;
-		}
-
-		private List<RestoreData> _restoreDataList;
-
-		public bool NeedRestore(int actionConditionId, int abilityId)
+		public bool IsRestoreAny()
 		{
 			return default(bool);
 		}
+	}
 
-		public void SaveRestoreData(ref CharacterBuff.BuffUnion buff)
-		{
-		}
+	private struct RestoreData
+	{
+		public RestoreTrait trait;
 
-		public bool HasRestoreData(int actionConditionId, int abilityId, CharacterBuffType type = CharacterBuffType.None)
-		{
-			return default(bool);
-		}
+		public int actionConditionId;
 
-		public void Restore(int actionConditionId, int abilityId, ref int durationNum, CharacterBuffType type = CharacterBuffType.None)
-		{
-		}
+		public int abilityId;
 
-		public void ClearAll()
-		{
-		}
+		public CharacterBuffType type;
 
-		private RestoreTrait GetRestoreTrait(int actionConditionId)
-		{
-			return default(RestoreTrait);
-		}
+		public int durationNum;
+	}
 
-		private int FindRestoreDataIndex(int actionConditionId, int abilityId, CharacterBuffType type)
-		{
-			return default(int);
-		}
+	private List<RestoreData> _restoreDataList;
+
+	public bool NeedRestore(int actionConditionId, int abilityId)
+	{
+		return default(bool);
+	}
+
+	public void SaveRestoreData(ref CharacterBuff.BuffUnion buff)
+	{
+	}
+
+	public bool HasRestoreData(int actionConditionId, int abilityId, CharacterBuffType type = CharacterBuffType.None)
+	{
+		return default(bool);
+	}
+
+	public void Restore(int actionConditionId, int abilityId, ref int durationNum, CharacterBuffType type = CharacterBuffType.None)
+	{
+	}
+
+	public void ClearAll()
+	{
+	}
+
+	private RestoreTrait GetRestoreTrait(int actionConditionId)
+	{
+		return default(RestoreTrait);
+	}
+
+	private int FindRestoreDataIndex(int actionConditionId, int abilityId, CharacterBuffType type)
+	{
+		return default(int);
 	}
 }

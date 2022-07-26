@@ -1,32 +1,31 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsSetupEventHeal : ActionParts
 {
-	public class ActionPartsSetupEventHeal : ActionParts
+	private readonly SetupEventHealData _partsData;
+
+	private bool _isValid;
+
+	public ActionPartsSetupEventHeal(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly SetupEventHealData _partsData;
+	}
 
-		private bool _isValid;
+	public override void OnPostCreated(CharacterBase chara)
+	{
+	}
 
-		public ActionPartsSetupEventHeal(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void OnPostCreated(CharacterBase chara)
-		{
-		}
+	private void Proc()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		private void Proc()
-		{
-		}
-
-		private CollisionHitAttribute CreateHitAttribute()
-		{
-			return null;
-		}
+	private CollisionHitAttribute CreateHitAttribute()
+	{
+		return null;
 	}
 }

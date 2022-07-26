@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public enum ThemeColor
 {
-	public enum ThemeColor
-	{
-		Blue,
-		LightGreen,
-		Orange,
-		Green,
-		Yellow,
-		Pink,
-		Red,
-		LightPink,
-		Max
-	}
+	Blue,
+	LightGreen,
+	Orange,
+	Green,
+	Yellow,
+	Pink,
+	Red,
+	LightPink,
+	Max
 }

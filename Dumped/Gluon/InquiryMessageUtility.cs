@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public class InquiryMessageUtility
 {
-	public class InquiryMessageUtility
+	public static string GetTimeString(int unixTime)
 	{
-		public static string GetTimeString(int unixTime)
-		{
-			return null;
-		}
+		return null;
 	}
 }

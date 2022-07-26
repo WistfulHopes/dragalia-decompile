@@ -7,192 +7,187 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CombatQuestMapPage : EventQuestPageBase
 {
-	public class CombatQuestMapPage : EventQuestPageBase
+	public class CombatLandmarkInfo
 	{
-		public class CombatLandmarkInfo
-		{
-			public CombatEventLocationElement locationElement;
+		public CombatEventLocationElement locationElement;
 
-			public CombatQuestMapObjectButton landmmark;
+		public CombatQuestMapObjectButton landmmark;
 
-			public CombatLandmarkInfo(CombatEventLocationElement locationElement, CombatQuestMapObjectButton landmmark)
-			{
-			}
-		}
-
-		[SerializeField]
-		[Header("BG")]
-		private Image bgImage;
-
-		[SerializeField]
-		private Image fadeImage;
-
-		[SerializeField]
-		private Image bgPlane;
-
-		[SerializeField]
-		private AnimationUIBg bgAnimation;
-
-		[SerializeField]
-		private UIAnimationPublisher mainPublisher;
-
-		[SerializeField]
-		private AnimationUIBg bgPlaneAnimation;
-
-		[SerializeField]
-		[Header("Landmark")]
-		private Transform buttonParentNode;
-
-		[SerializeField]
-		private CombatQuestMapObjectButton objectButton;
-
-		[SerializeField]
-		private FlashPlayerManager flashPlayerManager;
-
-		[SerializeField]
-		[Header("Nhaam")]
-		private Vector2 namPos;
-
-		[SerializeField]
-		private Vector2 namScale;
-
-		[SerializeField]
-		private GameObject nhaamParent;
-
-		private FlashPlayer twinkleFlash;
-
-		private FlashPlayer moveFlash;
-
-		[SerializeField]
-		[Header("CompreatFlash")]
-		private Transform compleatFlashParent;
-
-		private FlashPlayer compleatFlash;
-
-		private List<CombatLandmarkInfo> landmarkList;
-
-		private CanvasGroup bgCanvasGroup;
-
-		private static float locSizeScale;
-
-		private bool isGetLocationReward;
-
-		private int getLocationRewardId;
-
-		private int nhaamIndex;
-
-		private const int storyLocationId = 1;
-
-		protected override void Awake()
+		public CombatLandmarkInfo(CombatEventLocationElement locationElement, CombatQuestMapObjectButton landmmark)
 		{
 		}
+	}
 
-		private void LoadObjects()
-		{
-		}
+	[SerializeField]
+	private Image bgImage;
 
-		private bool IsEventEnded()
-		{
-			return default(bool);
-		}
+	[SerializeField]
+	private Image fadeImage;
 
-		private static List<CombatEventLocationElement> GetLocations(int eventId)
-		{
-			return null;
-		}
+	[SerializeField]
+	private Image bgPlane;
 
-		public static QuestUtil.QuestState GetLocationState(bool isEventEnded, int locationId)
-		{
-			return default(QuestUtil.QuestState);
-		}
+	[SerializeField]
+	private AnimationUIBg bgAnimation;
 
-		private void OnMiniCharaTouched(int masterIndex)
-		{
-		}
+	[SerializeField]
+	private UIAnimationPublisher mainPublisher;
 
-		private void TakeScreenshot()
-		{
-		}
+	[SerializeField]
+	private AnimationUIBg bgPlaneAnimation;
 
-		public void OnBackFromQuestList()
-		{
-		}
+	[SerializeField]
+	private Transform buttonParentNode;
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	[SerializeField]
+	private CombatQuestMapObjectButton objectButton;
 
-		private void Start()
-		{
-		}
+	[SerializeField]
+	private FlashPlayerManager flashPlayerManager;
 
-		private void LateUpdate()
-		{
-		}
+	[SerializeField]
+	private Vector2 namPos;
 
-		public void OnBackButtonTouched()
-		{
-		}
+	[SerializeField]
+	private Vector2 namScale;
 
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	[SerializeField]
+	private GameObject nhaamParent;
 
-		private IEnumerator EnterAnimationCoroutine()
-		{
-			return null;
-		}
+	private FlashPlayer twinkleFlash;
 
-		private void CheckLocationReward()
-		{
-		}
+	private FlashPlayer moveFlash;
 
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
+	[SerializeField]
+	private Transform compleatFlashParent;
 
-		public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
-		{
-			return default(bool);
-		}
+	private FlashPlayer compleatFlash;
 
-		private IEnumerator StartLocationClearEvent(int locationId)
-		{
-			return null;
-		}
+	private List<CombatLandmarkInfo> landmarkList;
 
-		public static void RequestCombatEventReceiveEventLocationReward(int locationId, Action onCompleted, [Optional] Action<ErrorType, int> onError)
-		{
-		}
+	private CanvasGroup bgCanvasGroup;
 
-		private void GoQuestDetailListPage(CombatEventLocationElement loc)
-		{
-		}
+	private static float locSizeScale;
 
-		public void NhaamMove(int pointerIndex)
-		{
-		}
+	private bool isGetLocationReward;
 
-		public void InitializeNhaam(int sortOrder)
-		{
-		}
+	private int getLocationRewardId;
 
-		public void PlayNhaamAnimation()
-		{
-		}
+	private int nhaamIndex;
 
-		public void SetSortingOrder(int sortOrder)
-		{
-		}
+	private const int storyLocationId = 1;
 
-		private void PlayCompleatFlash([Optional] Action onAnimationEnded)
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	private void LoadObjects()
+	{
+	}
+
+	private bool IsEventEnded()
+	{
+		return default(bool);
+	}
+
+	private static List<CombatEventLocationElement> GetLocations(int eventId)
+	{
+		return null;
+	}
+
+	public static QuestUtil.QuestState GetLocationState(bool isEventEnded, int locationId)
+	{
+		return default(QuestUtil.QuestState);
+	}
+
+	private void OnMiniCharaTouched(int masterIndex)
+	{
+	}
+
+	private void TakeScreenshot()
+	{
+	}
+
+	public void OnBackFromQuestList()
+	{
+	}
+
+	public override void OnPageBecomeActive(object data)
+	{
+	}
+
+	private void Start()
+	{
+	}
+
+	private void LateUpdate()
+	{
+	}
+
+	public void OnBackButtonTouched()
+	{
+	}
+
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
+
+	private IEnumerator EnterAnimationCoroutine()
+	{
+		return null;
+	}
+
+	private void CheckLocationReward()
+	{
+	}
+
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
+
+	public override bool IsOnAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1)
+	{
+		return default(bool);
+	}
+
+	private IEnumerator StartLocationClearEvent(int locationId)
+	{
+		return null;
+	}
+
+	public static void RequestCombatEventReceiveEventLocationReward(int locationId, Action onCompleted, [Optional] Action<ErrorType, int> onError)
+	{
+	}
+
+	private void GoQuestDetailListPage(CombatEventLocationElement loc)
+	{
+	}
+
+	public void NhaamMove(int pointerIndex)
+	{
+	}
+
+	public void InitializeNhaam(int sortOrder)
+	{
+	}
+
+	public void PlayNhaamAnimation()
+	{
+	}
+
+	public void SetSortingOrder(int sortOrder)
+	{
+	}
+
+	private void PlayCompleatFlash([Optional] Action onAnimationEnded)
+	{
+	}
+
+	protected override void OnDestroy()
+	{
 	}
 }

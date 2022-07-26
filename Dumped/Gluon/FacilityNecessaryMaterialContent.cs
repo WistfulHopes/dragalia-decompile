@@ -1,29 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FacilityNecessaryMaterialContent : MonoBehaviour
 {
-	public class FacilityNecessaryMaterialContent : MonoBehaviour
+	[SerializeField]
+	private IconWithCountLabel[] iconWithLabels;
+
+	[SerializeField]
+	private Text currentMoneyLabel;
+
+	[SerializeField]
+	private Text leftMoneyLabel;
+
+	public void SetIconWithLabel(Facility facility)
 	{
-		[SerializeField]
-		private IconWithCountLabel[] iconWithLabels;
+	}
 
-		[SerializeField]
-		private Text currentMoneyLabel;
+	public void SetCurrentMoney(long value)
+	{
+	}
 
-		[SerializeField]
-		private Text leftMoneyLabel;
-
-		public void SetIconWithLabel(Facility facility)
-		{
-		}
-
-		public void SetCurrentMoney(long value)
-		{
-		}
-
-		public void SetLeftMoney(long value)
-		{
-		}
+	public void SetLeftMoney(long value)
+	{
 	}
 }

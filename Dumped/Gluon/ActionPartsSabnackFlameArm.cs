@@ -1,51 +1,50 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsSabnackFlameArm : ActionParts
 {
-	public class ActionPartsSabnackFlameArm : ActionParts
+	public enum FlameType
 	{
-		public enum FlameType
-		{
-			Disappear,
-			ChangeColor
-		}
+		Disappear,
+		ChangeColor
+	}
 
-		public enum PartsType
-		{
-			Left,
-			Right,
-			Head
-		}
+	public enum PartsType
+	{
+		Left,
+		Right,
+		Head
+	}
 
-		private float _time;
+	private float _time;
 
-		private EnemyCharacter _parts;
+	private EnemyCharacter _parts;
 
-		private readonly SabnackFlameArmData _partsData;
+	private readonly SabnackFlameArmData _partsData;
 
-		public ActionPartsSabnackFlameArm(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsSabnackFlameArm(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		protected override void OnFinish()
-		{
-		}
+	protected override void OnFinish()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		private void ControlFlame(float ratio)
-		{
-		}
+	private void ControlFlame(float ratio)
+	{
 	}
 }

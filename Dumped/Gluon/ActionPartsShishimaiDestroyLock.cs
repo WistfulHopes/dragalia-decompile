@@ -1,32 +1,31 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsShishimaiDestroyLock : ActionParts
 {
-	public class ActionPartsShishimaiDestroyLock : ActionParts
+	private readonly ShishimaiDestroyLockData _partsData;
+
+	private bool _isOpenBoxDone;
+
+	public ActionPartsShishimaiDestroyLock(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly ShishimaiDestroyLockData _partsData;
+	}
 
-		private bool _isOpenBoxDone;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public ActionPartsShishimaiDestroyLock(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

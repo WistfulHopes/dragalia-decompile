@@ -1,27 +1,26 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class VisibleUIObjectSpriteRenderer : MonoBehaviour
 {
-	public class VisibleUIObjectSpriteRenderer : MonoBehaviour
+	private Transform trs;
+
+	private SpriteRenderer spriteRenderer;
+
+	private bool isActive;
+
+	public void Initialize(bool visible = false, [Optional] GameObject obj)
 	{
-		private Transform trs;
+	}
 
-		private SpriteRenderer spriteRenderer;
+	public bool IsVisible(bool inHierarchy = true)
+	{
+		return default(bool);
+	}
 
-		private bool isActive;
-
-		public void Initialize(bool visible = false, [Optional] GameObject obj)
-		{
-		}
-
-		public bool IsVisible(bool inHierarchy = true)
-		{
-			return default(bool);
-		}
-
-		public void Visible(bool value)
-		{
-		}
+	public void Visible(bool value)
+	{
 	}
 }

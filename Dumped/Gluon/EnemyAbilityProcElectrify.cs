@@ -1,31 +1,30 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcElectrify : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcElectrify : EnemyAbilityProcBase
+	private CollisionHitAttribute[] _hitAttribute;
+
+	private float[] _dmgRate;
+
+	public EnemyAbilityProcElectrify(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
 	{
-		private CollisionHitAttribute[] _hitAttribute;
+	}
 
-		private float[] _dmgRate;
+	public override void Setup()
+	{
+	}
 
-		public EnemyAbilityProcElectrify(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
+	public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr)
+	{
+	}
 
-		public override void Setup()
-		{
-		}
+	private void CreateHitAttribute()
+	{
+	}
 
-		public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr)
-		{
-		}
-
-		private void CreateHitAttribute()
-		{
-		}
-
-		private void CreateDamageReduce()
-		{
-		}
+	private void CreateDamageReduce()
+	{
 	}
 }

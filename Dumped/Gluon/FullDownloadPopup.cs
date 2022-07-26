@@ -3,78 +3,77 @@ using Cute.AssetBundle;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FullDownloadPopup : CommonPopup
 {
-	public class FullDownloadPopup : CommonPopup
+	public Text mainText;
+
+	public Text warnText;
+
+	public Text labelText;
+
+	public Text allDataText;
+
+	public Text noVoiceDataText;
+
+	public Text allDataNum;
+
+	public Text voiceDataNum;
+
+	public Text descText;
+
+	public ToggleGroup toggleGroup;
+
+	public bool isPreIn;
+
+	private TitleScene titleScene;
+
+	private DownloadOperation fullDownloadOperation;
+
+	private DownloadOperation noVoiceDownloadOperation;
+
+	private bool exceptVoiceOnFullDownload;
+
+	public static bool isManifestDownloaded
 	{
-		public Text mainText;
-
-		public Text warnText;
-
-		public Text labelText;
-
-		public Text allDataText;
-
-		public Text noVoiceDataText;
-
-		public Text allDataNum;
-
-		public Text voiceDataNum;
-
-		public Text descText;
-
-		public ToggleGroup toggleGroup;
-
-		public bool isPreIn;
-
-		private TitleScene titleScene;
-
-		private DownloadOperation fullDownloadOperation;
-
-		private DownloadOperation noVoiceDownloadOperation;
-
-		private bool exceptVoiceOnFullDownload;
-
-		public static bool isManifestDownloaded
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public static FullDownloadPopup CreateFullDownloadPopup(bool isPreIn, TitleScene titleScene)
-		{
-			return null;
-		}
-
-		protected override void Awake()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void SetDownloadSize(long fullSize, long noVoiceSize)
-		{
-		}
+	public static FullDownloadPopup CreateFullDownloadPopup(bool isPreIn, TitleScene titleScene)
+	{
+		return null;
+	}
 
-		private static void CreateDownloadErrorPopup(DownloadErrorType type, UnityAction onDownloadFailed)
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		public void OnDownloadButtonPressed()
-		{
-		}
+	private void SetDownloadSize(long fullSize, long noVoiceSize)
+	{
+	}
 
-		public void OnFullDownloadToggled(bool arg)
-		{
-		}
+	private static void CreateDownloadErrorPopup(DownloadErrorType type, UnityAction onDownloadFailed)
+	{
+	}
 
-		public void OnNoVoiceDownloadToggled(bool arg)
-		{
-		}
+	public void OnDownloadButtonPressed()
+	{
+	}
+
+	public void OnFullDownloadToggled(bool arg)
+	{
+	}
+
+	public void OnNoVoiceDownloadToggled(bool arg)
+	{
 	}
 }

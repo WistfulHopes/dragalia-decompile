@@ -1,13 +1,12 @@
 using UnityEngine;
 
-namespace Gluon
-{
-	public class HeaderScene : MonoBehaviour
-	{
-		public HeaderCanvas headerCanvas;
+namespace Gluon;
 
-		private void Awake()
-		{
-		}
+public class HeaderScene : MonoBehaviour
+{
+	public HeaderCanvas headerCanvas;
+
+	private void Awake()
+	{
 	}
 }

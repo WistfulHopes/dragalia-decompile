@@ -4,163 +4,162 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Gluon
+namespace Gluon;
+
+public class BgContentManager : SingletonMonoBehaviour<BgContentManager>
 {
-	public class BgContentManager : SingletonMonoBehaviour<BgContentManager>
+	public class EnemyLoadInfo
 	{
-		public class EnemyLoadInfo
-		{
-			public int index;
+		public int index;
 
-			public int id;
+		public int id;
 
-			public bool isLoaded;
-		}
+		public bool isLoaded;
+	}
 
-		private bool isBgLoadCompleted;
+	private bool isBgLoadCompleted;
 
-		private bool isOnEnemyLoadLoading;
+	private bool isOnEnemyLoadLoading;
 
-		private int enemyLoadingQuestLocationId;
+	private int enemyLoadingQuestLocationId;
 
-		private bool isSceneLoadCompleted;
+	private bool isSceneLoadCompleted;
 
-		private Scene createdScene;
+	private Scene createdScene;
 
-		private string fileName;
+	private string fileName;
 
-		private QuestBgSceneSettingKeeper _bgSettingKeeper;
+	private QuestBgSceneSettingKeeper _bgSettingKeeper;
 
-		private const int startFogValue = 0;
+	private const int startFogValue = 0;
 
-		private const int endFogValue = 1000000;
+	private const int endFogValue = 1000000;
 
-		private const int maxEnemyNum = 3;
+	private const int maxEnemyNum = 3;
 
-		private List<EnemyLoadInfo> enemyInfoList;
+	private List<EnemyLoadInfo> enemyInfoList;
 
-		private static DungeonManager.OutDesignerAreaDataCache designerAreaDataCache;
+	private static DungeonManager.OutDesignerAreaDataCache designerAreaDataCache;
 
-		private List<EnemyCharacter> enemyCharacterList;
+	private List<EnemyCharacter> enemyCharacterList;
 
-		private readonly Vector3[] vecPosList;
+	private readonly Vector3[] vecPosList;
 
-		private readonly Vector3[] vecPosListThreeEnemy;
+	private readonly Vector3[] vecPosListThreeEnemy;
 
-		private readonly Vector3[] vecRotList;
+	private readonly Vector3[] vecRotList;
 
-		public bool IsBgLoadCompleted => default(bool);
+	public bool IsBgLoadCompleted => default(bool);
 
-		public bool IsOnEnemyLoadLoading => default(bool);
+	public bool IsOnEnemyLoadLoading => default(bool);
 
-		public bool IsSceneLoadCompleted => default(bool);
+	public bool IsSceneLoadCompleted => default(bool);
 
-		public QuestBgSceneSettingKeeper bgSettingKeeper
-		{
-			get
-			{
-				return null;
-			}
-			private set
-			{
-			}
-		}
-
-		public void ResisterLoadBgScene(int questGroup)
-		{
-		}
-
-		private IEnumerator ResisterLoadBgSceneCorutine(int questGroupId)
+	public QuestBgSceneSettingKeeper bgSettingKeeper
+	{
+		get
 		{
 			return null;
 		}
-
-		public void LoadBgScene(int questId)
+		private set
 		{
 		}
+	}
 
-		public void LoadBgSceneLocationId(int questLocationId)
-		{
-		}
+	public void ResisterLoadBgScene(int questGroup)
+	{
+	}
 
-		public void LoadBgScene(string resourcePath)
-		{
-		}
+	private IEnumerator ResisterLoadBgSceneCorutine(int questGroupId)
+	{
+		return null;
+	}
 
-		private IEnumerator LoadBgSceneCoroutine(string resourcePath, int questLocationId = -1)
-		{
-			return null;
-		}
+	public void LoadBgScene(int questId)
+	{
+	}
 
-		public void SetEnemyRenderParam()
-		{
-		}
+	public void LoadBgSceneLocationId(int questLocationId)
+	{
+	}
 
-		private void InitEnemyLoadInfo(EnemyLoadInfo info, int index, int enemyId)
-		{
-		}
+	public void LoadBgScene(string resourcePath)
+	{
+	}
 
-		private GameObject CreateEnemyModel(int enemyId, int actionId)
-		{
-			return null;
-		}
+	private IEnumerator LoadBgSceneCoroutine(string resourcePath, int questLocationId = -1)
+	{
+		return null;
+	}
 
-		private EnemyCharacter CreateEnemyModel(int enemyId)
-		{
-			return null;
-		}
+	public void SetEnemyRenderParam()
+	{
+	}
 
-		public void CreateEnemyModelAll(List<EnemyLoadInfo> showEnemyLoadInfoList)
-		{
-		}
+	private void InitEnemyLoadInfo(EnemyLoadInfo info, int index, int enemyId)
+	{
+	}
 
-		private void SetEnemyAction(EnemyCharacter enemyObj, int enemyId, int actionId)
-		{
-		}
+	private GameObject CreateEnemyModel(int enemyId, int actionId)
+	{
+		return null;
+	}
 
-		public void LoadEnemyOnBg(QuestMainLocationElement elm)
-		{
-		}
+	private EnemyCharacter CreateEnemyModel(int enemyId)
+	{
+		return null;
+	}
 
-		private bool IsEnemyLoadCompleted()
-		{
-			return default(bool);
-		}
+	public void CreateEnemyModelAll(List<EnemyLoadInfo> showEnemyLoadInfoList)
+	{
+	}
 
-		private int getElement(int mapElement)
-		{
-			return default(int);
-		}
+	private void SetEnemyAction(EnemyCharacter enemyObj, int enemyId, int actionId)
+	{
+	}
 
-		public void ShowBgScene(bool value)
-		{
-		}
+	public void LoadEnemyOnBg(QuestMainLocationElement elm)
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	private bool IsEnemyLoadCompleted()
+	{
+		return default(bool);
+	}
 
-		public void Destory()
-		{
-		}
+	private int getElement(int mapElement)
+	{
+		return default(int);
+	}
 
-		public void EnemyDestroy()
-		{
-		}
+	public void ShowBgScene(bool value)
+	{
+	}
 
-		protected IEnumerator LoadEffectResources()
-		{
-			return null;
-		}
+	protected override void OnDestroy()
+	{
+	}
 
-		public string GetMainLocationBgPath(QuestMainLocationElement qmle)
-		{
-			return null;
-		}
+	public void Destory()
+	{
+	}
 
-		public string GetBgSceneName()
-		{
-			return null;
-		}
+	public void EnemyDestroy()
+	{
+	}
+
+	protected IEnumerator LoadEffectResources()
+	{
+		return null;
+	}
+
+	public string GetMainLocationBgPath(QuestMainLocationElement qmle)
+	{
+		return null;
+	}
+
+	public string GetBgSceneName()
+	{
+		return null;
 	}
 }

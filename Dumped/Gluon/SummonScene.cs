@@ -6,300 +6,295 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonScene : SceneBase
 {
-	public class SummonScene : SceneBase
+	public struct CameraAndImageEffectPlayer
 	{
-		public struct CameraAndImageEffectPlayer
-		{
-			public bool camera;
+		public bool camera;
 
-			public bool imageEffectPlayer;
-		}
+		public bool imageEffectPlayer;
+	}
 
-		[SerializeField]
-		[Header("PreLoadOnOffs")]
-		private GameObject world3dRoot;
+	[SerializeField]
+	private GameObject world3dRoot;
 
-		[SerializeField]
-		private GameObject canvasRoot;
+	[SerializeField]
+	private GameObject canvasRoot;
 
-		[SerializeField]
-		[Header("EtoENode")]
-		public EdgeToEdgeFrame edgeToEdgeFrame;
+	[SerializeField]
+	public EdgeToEdgeFrame edgeToEdgeFrame;
 
-		[SerializeField]
-		[Header("HttpGreenLight")]
-		private GameObject httpGreenLight;
+	[SerializeField]
+	private GameObject httpGreenLight;
 
-		[SerializeField]
-		[Header("SectionNodes")]
-		public GameObject topNode;
+	[SerializeField]
+	public GameObject topNode;
 
-		public GameObject stageResultNode;
+	public GameObject stageResultNode;
 
-		public GameObject stage3dNode;
+	public GameObject stage3dNode;
 
-		public GameObject resultOutOfCanvasNode;
+	public GameObject resultOutOfCanvasNode;
 
-		[SerializeField]
-		[Header("Canvas")]
-		public Canvas canvas;
+	[SerializeField]
+	public Canvas canvas;
 
-		[SerializeField]
-		[Header("CameraParent")]
-		public Transform cameraParent;
+	[SerializeField]
+	public Transform cameraParent;
 
-		public Transform cameraParentDragon;
+	public Transform cameraParentDragon;
 
-		[SerializeField]
-		[Header("PostEffectSetting")]
-		public SummonPostEffectSetting postEffectSetting;
+	[SerializeField]
+	public SummonPostEffectSetting postEffectSetting;
 
-		public SummonPostFilmSetting postFilmSetting;
+	public SummonPostFilmSetting postFilmSetting;
 
-		[SerializeField]
-		[Header("RenderTextures")]
-		public Camera bg3dCamera;
+	[SerializeField]
+	public Camera bg3dCamera;
 
-		public Camera character3dCamera;
+	public Camera character3dCamera;
 
-		public Camera shot2CharaWeaponCamera;
+	public Camera shot2CharaWeaponCamera;
 
-		[SerializeField]
-		[Header("CameraClearColor")]
-		public Camera mainUIStageCamera;
+	[SerializeField]
+	public Camera mainUIStageCamera;
 
-		public GameObject postEffectCameraGO;
+	public GameObject postEffectCameraGO;
 
-		[SerializeField]
-		[Header("ResultFlashCamera")]
-		public Camera resultFlashCamera;
+	[SerializeField]
+	public Camera resultFlashCamera;
 
-		private Vector3 resultFlashCameraInitPosition;
+	private Vector3 resultFlashCameraInitPosition;
 
-		public SummonUnitShaderSettings unitShaderSettings;
+	public SummonUnitShaderSettings unitShaderSettings;
 
-		public KeepStableToTransform bg3dCameraKeepComponent;
+	public KeepStableToTransform bg3dCameraKeepComponent;
 
-		private bool initEnterSceneDone;
+	private bool initEnterSceneDone;
 
-		private bool isTutorialRequired;
+	private bool isTutorialRequired;
 
-		public bool isExitStarted;
+	public bool isExitStarted;
 
-		private int uiCameraCullingMask;
+	private int uiCameraCullingMask;
 
-		private SummonTop topView;
+	private SummonTop topView;
 
-		private bool firstEnterScene;
+	private bool firstEnterScene;
 
-		private bool fadeOutPrepare;
+	private bool fadeOutPrepare;
 
-		private CameraAndImageEffectPlayer mainUIStageCameraEnable;
+	public static bool isGetCurrencyCodeSucceeded;
 
-		private CameraAndImageEffectPlayer charaCameraEnable;
+	private CameraAndImageEffectPlayer mainUIStageCameraEnable;
 
-		private CameraAndImageEffectPlayer postEffectFlashCameraEnable;
+	private CameraAndImageEffectPlayer charaCameraEnable;
 
-		private CameraAndImageEffectPlayer shot2CharaWeaponFlashCameraEnable;
+	private CameraAndImageEffectPlayer postEffectFlashCameraEnable;
 
-		private CameraAndImageEffectPlayer bg3DCameaEnable;
+	private CameraAndImageEffectPlayer shot2CharaWeaponFlashCameraEnable;
 
-		private CameraAndImageEffectPlayer resultFlashCameraEnable;
+	private CameraAndImageEffectPlayer bg3DCameaEnable;
 
-		[HideInInspector]
-		public UnityEvent onBeforeStartExitAnimation;
+	private CameraAndImageEffectPlayer resultFlashCameraEnable;
 
-		public SummonResult resultView
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
+	[HideInInspector]
+	public UnityEvent onBeforeStartExitAnimation;
 
-		private IEnumerator Start()
+	public SummonResult resultView
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public void ResetResultFlashCameraToInitPosition()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SetMainUIStageCameraCullMask(bool toNothing)
-		{
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	public void ResetResultFlashCameraToInitPosition()
+	{
+	}
 
-		private void OnInitReadyRequestHttp()
-		{
-		}
+	public void SetMainUIStageCameraCullMask(bool toNothing)
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		public void OnChangedBackgroundShaderParameter()
-		{
-		}
+	private void OnInitReadyRequestHttp()
+	{
+	}
 
-		public void RequestSummonTop()
-		{
-		}
+	private void OnEnterScene()
+	{
+	}
 
-		private void OnRequestSummonTopSuccess(SummonGetSummonListResponse res)
-		{
-		}
+	public void OnChangedBackgroundShaderParameter()
+	{
+	}
 
-		private void OnRequestSummonTopSuccessCallback()
-		{
-		}
+	public void RequestSummonTop()
+	{
+	}
 
-		private void LoadTopBGView()
-		{
-		}
+	public static void RequestPaymentGetListForGetCurrencySymbol(UnityAction successCallback, UnityAction failedCallback)
+	{
+	}
 
-		private void SetupCameraForTopView()
-		{
-		}
+	private void OnRequestSummonTopSuccess(SummonGetSummonListResponse res)
+	{
+	}
 
-		private void SetupCameraForStage()
-		{
-		}
+	private void OnRequestSummonTopSuccessCallback()
+	{
+	}
 
-		private void LoadTopView()
-		{
-		}
+	private void LoadTopBGView()
+	{
+	}
 
-		private void SetupTutorialState()
-		{
-		}
+	private void SetupCameraForTopView()
+	{
+	}
 
-		private void StartTutorial()
-		{
-		}
+	private void SetupCameraForStage()
+	{
+	}
 
-		private IEnumerator Tutorial_1_1_SummonIn()
-		{
-			return null;
-		}
+	private void LoadTopView()
+	{
+	}
 
-		private IEnumerator Tutorial_1_1_SelectSummonIn()
-		{
-			return null;
-		}
+	private void SetupTutorialState()
+	{
+	}
 
-		private IEnumerator Tutorial_1_1_SummonDone()
-		{
-			return null;
-		}
+	private void StartTutorial()
+	{
+	}
 
-		private IEnumerator Tutorial_SummonExchangeStart()
-		{
-			return null;
-		}
+	private IEnumerator Tutorial_1_1_SummonIn()
+	{
+		return null;
+	}
 
-		public void OnSummonButton(SummonTopItemData.ButtonType buttonType, int summonId)
-		{
-		}
+	private IEnumerator Tutorial_1_1_SelectSummonIn()
+	{
+		return null;
+	}
 
-		public void OnDrawSummonButtonClicked(SummonTopItemData.ButtonType buttonType, int summonId, bool paidStone, int useMultiSingleTicketCount)
-		{
-		}
+	private IEnumerator Tutorial_1_1_SummonDone()
+	{
+		return null;
+	}
 
-		public void RequestDrawSummon(bool paidStone)
-		{
-		}
+	private IEnumerator Tutorial_SummonExchangeStart()
+	{
+		return null;
+	}
 
-		public void OnRequestSummonRequestSuccess(SummonRequestResponse res)
-		{
-		}
+	public void OnSummonButton(SummonTopItemData.ButtonType buttonType, int summonId)
+	{
+	}
 
-		public void GoExcludeSummon()
-		{
-		}
+	public void OnDrawSummonButtonClicked(SummonTopItemData.ButtonType buttonType, int summonId, bool paidStone, int useMultiSingleTicketCount)
+	{
+	}
 
-		public void RequestSummonExcludeRequest(int summonId, GiftType type, List<int> entityList)
-		{
-		}
+	public void RequestDrawSummon(bool paidStone)
+	{
+	}
 
-		public void Tutorial(int id)
-		{
-		}
+	public void OnRequestSummonRequestSuccess(SummonRequestResponse res)
+	{
+	}
 
-		private IEnumerator LoadResultView()
-		{
-			return null;
-		}
+	public void GoExcludeSummon()
+	{
+	}
 
-		private void LoadStageView()
-		{
-		}
+	public void RequestSummonExcludeRequest(int summonId, GiftType type, List<int> entityList)
+	{
+	}
 
-		public void OnStageDone()
-		{
-		}
+	public void Tutorial(int id)
+	{
+	}
 
-		private void DestroyChildren(Transform t)
-		{
-		}
+	private IEnumerator LoadResultView()
+	{
+		return null;
+	}
 
-		public override void StartExitAnimation()
-		{
-		}
+	private void LoadStageView()
+	{
+	}
 
-		public override void OnBeforeLeaving()
-		{
-		}
+	public void OnStageDone()
+	{
+	}
 
-		public void OnDestroy()
-		{
-		}
+	private void DestroyChildren(Transform t)
+	{
+	}
 
-		public override void OnPopupOpened()
-		{
-		}
+	public override void StartExitAnimation()
+	{
+	}
 
-		public override void OnPopupClosed()
-		{
-		}
+	public override void OnBeforeLeaving()
+	{
+	}
 
-		public void SetupResultRenderCamera(bool isEnable, [Optional] RenderTexture bgRenderTexture, [Optional] RenderTexture charaRenderTexture)
-		{
-		}
+	public void OnDestroy()
+	{
+	}
 
-		public void SetupStageRenderCamera(bool isEnable, [Optional] RenderTexture shot2CharaWeaponRenderTexture)
-		{
-		}
+	public override void OnPopupOpened()
+	{
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	public override void OnPopupClosed()
+	{
+	}
 
-		public void SetOffCamera()
-		{
-		}
+	public void SetupResultRenderCamera(bool isEnable, [Optional] RenderTexture bgRenderTexture, [Optional] RenderTexture charaRenderTexture)
+	{
+	}
 
-		public void SetOnCamera()
-		{
-		}
+	public void SetupStageRenderCamera(bool isEnable, [Optional] RenderTexture shot2CharaWeaponRenderTexture)
+	{
+	}
 
-		public void SaveOffCamera(Camera camera, out CameraAndImageEffectPlayer player)
-		{
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		public void LoadCamera(Camera camera, CameraAndImageEffectPlayer player)
-		{
-		}
+	public void SetOffCamera()
+	{
+	}
+
+	public void SetOnCamera()
+	{
+	}
+
+	public void SaveOffCamera(Camera camera, out CameraAndImageEffectPlayer player)
+	{
+	}
+
+	public void LoadCamera(Camera camera, CameraAndImageEffectPlayer player)
+	{
 	}
 }

@@ -1,61 +1,60 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleManaPieceObject : GrowthManaCircleDraggable, IPointerClickHandler, IEventSystemHandler
 {
-	public class GrowthManaCircleManaPieceObject : GrowthManaCircleDraggable, IPointerClickHandler, IEventSystemHandler
+	public GrowthManaCircleManaPieceData pieceData;
+
+	public bool isReleased;
+
+	public int circleIndex;
+
+	public int index;
+
+	private bool isFront;
+
+	private const float doubleTouchThreshold = 0.25f;
+
+	private void Start()
 	{
-		public GrowthManaCircleManaPieceData pieceData;
+	}
 
-		public bool isReleased;
+	public void OnPointerClick(PointerEventData eventData)
+	{
+	}
 
-		public int circleIndex;
+	public EffectObject PlayReleaseGrowEffect()
+	{
+		return null;
+	}
 
-		public int index;
+	public EffectObject PlayReleaseGrowSimpleEffect(Vector3 offset)
+	{
+		return null;
+	}
 
-		private bool isFront;
+	public EffectObject PlayReleaseLimitEffectFirst(Vector3 offset)
+	{
+		return null;
+	}
 
-		private const float doubleTouchThreshold = 0.25f;
+	public EffectObject PlayReleaseLimitEffectSecond(Vector3 targetPosition)
+	{
+		return null;
+	}
 
-		private void Start()
-		{
-		}
+	public void SetIsFront(bool arg)
+	{
+	}
 
-		public void OnPointerClick(PointerEventData eventData)
-		{
-		}
+	public bool IsFront()
+	{
+		return default(bool);
+	}
 
-		public EffectObject PlayReleaseGrowEffect()
-		{
-			return null;
-		}
-
-		public EffectObject PlayReleaseGrowSimpleEffect(Vector3 offset)
-		{
-			return null;
-		}
-
-		public EffectObject PlayReleaseLimitEffectFirst(Vector3 offset)
-		{
-			return null;
-		}
-
-		public EffectObject PlayReleaseLimitEffectSecond(Vector3 targetPosition)
-		{
-			return null;
-		}
-
-		public void SetIsFront(bool arg)
-		{
-		}
-
-		public bool IsFront()
-		{
-			return default(bool);
-		}
-
-		protected override void NotifyDraggingToScene(bool arg)
-		{
-		}
+	protected override void NotifyDraggingToScene(bool arg)
+	{
 	}
 }

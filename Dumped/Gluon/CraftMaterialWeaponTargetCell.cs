@@ -2,40 +2,39 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CraftMaterialWeaponTargetCell : MonoBehaviour
 {
-	public class CraftMaterialWeaponTargetCell : MonoBehaviour
+	public Image icon;
+
+	public Transform carftTagIconTransform;
+
+	public GameObject sortDecoAttachNode;
+
+	public Action<int> iconPressCallBack;
+
+	private int weaponId;
+
+	private int limitbreak;
+
+	public void SetIcon(int weaponId)
 	{
-		public Image icon;
+	}
 
-		public Transform carftTagIconTransform;
+	public void SetCraftTag(bool isShow)
+	{
+	}
 
-		public GameObject sortDecoAttachNode;
+	public void SetLimitBreak(int limitbreak)
+	{
+	}
 
-		public Action<int> iconPressCallBack;
+	public void OnIconPressed()
+	{
+	}
 
-		private int weaponId;
-
-		private int limitbreak;
-
-		public void SetIcon(int weaponId)
-		{
-		}
-
-		public void SetCraftTag(bool isShow)
-		{
-		}
-
-		public void SetLimitBreak(int limitbreak)
-		{
-		}
-
-		public void OnIconPressed()
-		{
-		}
-
-		public void OnIconLongPressed()
-		{
-		}
+	public void OnIconLongPressed()
+	{
 	}
 }

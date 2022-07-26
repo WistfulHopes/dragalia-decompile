@@ -4,180 +4,179 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthWeaponSlotConfirmPopup : CommonPopup, ICustomMessage
 {
-	public class GrowthWeaponSlotConfirmPopup : CommonPopup, ICustomMessage
+	private class SlotData
 	{
-		private class SlotData
+		public BuildupPieceType pieceType;
+
+		public bool isReleased;
+
+		public bool canRelease;
+
+		public BuildupPieceType conditionPieceType;
+
+		public int conditionParam;
+
+		public int slotIndex;
+	}
+
+	public GameObject originCell;
+
+	public Transform cellParentTransform;
+
+	public Text needRupiText;
+
+	public Text beforeRupiText;
+
+	public Text afterRupiText;
+
+	public Image[] slotIconsTypeA;
+
+	public Image[] slotIconsTypeB;
+
+	public Image[] slotIconsTypeC;
+
+	public GameObject[] selectImages;
+
+	public GameObject[] blackMaskImages;
+
+	public GameObject needMaterialTextObject;
+
+	public Action reloadCanvasUICallBack;
+
+	private GrowthUnitEnhanceModel model;
+
+	private List<CraftMaterialCell> materialCells;
+
+	private List<SlotData> slotDataList;
+
+	private List<int> selectSlotIndexList;
+
+	private GameObject[] releasableEffectObjects;
+
+	private bool isDesabledReleaseButton;
+
+	private bool existsReleasableSlot;
+
+	private bool isMaterialComplete;
+
+	private bool isShortageRupi;
+
+	private int totalNeedRupi;
+
+	public int slotType1SelectCount
+	{
+		[CompilerGenerated]
+		get
 		{
-			public BuildupPieceType pieceType;
-
-			public bool isReleased;
-
-			public bool canRelease;
-
-			public BuildupPieceType conditionPieceType;
-
-			public int conditionParam;
-
-			public int slotIndex;
+			return default(int);
 		}
-
-		public GameObject originCell;
-
-		public Transform cellParentTransform;
-
-		public Text needRupiText;
-
-		public Text beforeRupiText;
-
-		public Text afterRupiText;
-
-		public Image[] slotIconsTypeA;
-
-		public Image[] slotIconsTypeB;
-
-		public Image[] slotIconsTypeC;
-
-		public GameObject[] selectImages;
-
-		public GameObject[] blackMaskImages;
-
-		public GameObject needMaterialTextObject;
-
-		public Action reloadCanvasUICallBack;
-
-		private GrowthUnitEnhanceModel model;
-
-		private List<CraftMaterialCell> materialCells;
-
-		private List<SlotData> slotDataList;
-
-		private List<int> selectSlotIndexList;
-
-		private GameObject[] releasableEffectObjects;
-
-		private bool isDesabledReleaseButton;
-
-		private bool existsReleasableSlot;
-
-		private bool isMaterialComplete;
-
-		private bool isShortageRupi;
-
-		private int totalNeedRupi;
-
-		public int slotType1SelectCount
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public int slotType2SelectCount
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public int slotType3SelectCount
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		private void OnEnable()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void OnDisable()
+	public int slotType2SelectCount
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(int);
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public static GrowthWeaponSlotConfirmPopup Create()
+	public int slotType3SelectCount
+	{
+		[CompilerGenerated]
+		get
 		{
-			return null;
+			return default(int);
 		}
-
-		public void InitPopup(GrowthUnitEnhanceModel model)
-		{
-		}
-
-		public void OnSlotIconPressed(int slotIconIndex)
-		{
-		}
-
-		private void SetupRupi()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void SetupMaterialCell()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		private void CreateSlotDataList()
-		{
-		}
+	private void OnDisable()
+	{
+	}
 
-		private void SetupSlot()
-		{
-		}
+	public static GrowthWeaponSlotConfirmPopup Create()
+	{
+		return null;
+	}
 
-		private void UpdateSlotIcon()
-		{
-		}
+	public void InitPopup(GrowthUnitEnhanceModel model)
+	{
+	}
 
-		private void UpdateMaterialCell()
-		{
-		}
+	public void OnSlotIconPressed(int slotIconIndex)
+	{
+	}
 
-		private void UpdateOkButtonState()
-		{
-		}
+	private void SetupRupi()
+	{
+	}
 
-		private void ShowConditionPopup(int dataIndex)
-		{
-		}
+	private void SetupMaterialCell()
+	{
+	}
 
-		private void PlayReleasablePieceEffect(int index, Transform effectParentTransform)
-		{
-		}
+	private void CreateSlotDataList()
+	{
+	}
 
-		private void DestroyReleasablePieceEffect(int index)
-		{
-		}
+	private void SetupSlot()
+	{
+	}
 
-		private Image GetSlotIconImage(SlotData slotData)
-		{
-			return null;
-		}
+	private void UpdateSlotIcon()
+	{
+	}
 
-		private void OnMaterialIconPressed(CraftMaterialCellData cellData)
-		{
-		}
+	private void UpdateMaterialCell()
+	{
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	private void UpdateOkButtonState()
+	{
+	}
+
+	private void ShowConditionPopup(int dataIndex)
+	{
+	}
+
+	private void PlayReleasablePieceEffect(int index, Transform effectParentTransform)
+	{
+	}
+
+	private void DestroyReleasablePieceEffect(int index)
+	{
+	}
+
+	private Image GetSlotIconImage(SlotData slotData)
+	{
+		return null;
+	}
+
+	private void OnMaterialIconPressed(CraftMaterialCellData cellData)
+	{
+	}
+
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

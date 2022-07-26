@@ -1,19 +1,18 @@
-namespace Gluon
+namespace Gluon;
+
+public class DmodeServitorPassiveParam
 {
-	public class DmodeServitorPassiveParam
-	{
-		public int passiveId;
+	public int passiveId;
 
-		public int passiveNo;
+	public int passiveNo;
 
-		public DmodeServitorPassiveType passiveType;
+	public DmodeServitorPassiveType passiveType;
 
-		public int passiveLevel;
+	public int passiveLevel;
 
-		public float upValue;
+	public float upValue;
 
-		public int passiveLevelId;
+	public int passiveLevelId;
 
-		public int sortId;
-	}
+	public int sortId;
 }

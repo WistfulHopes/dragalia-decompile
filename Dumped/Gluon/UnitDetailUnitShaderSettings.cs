@@ -1,13 +1,12 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class UnitDetailUnitShaderSettings : SceneShaderSettings
 {
-	[ExecuteAlways]
-	public class UnitDetailUnitShaderSettings : SceneShaderSettings
+	public void Initialize([Optional] delegateChangedBackgroundShaderParameter onChangedBackgroundShaderParameter)
 	{
-		public void Initialize([Optional] delegateChangedBackgroundShaderParameter onChangedBackgroundShaderParameter)
-		{
-		}
 	}
 }

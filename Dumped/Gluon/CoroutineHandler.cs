@@ -1,21 +1,20 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CoroutineHandler : MonoBehaviour
 {
-	public class CoroutineHandler : MonoBehaviour
+	protected static CoroutineHandler _instance;
+
+	public static CoroutineHandler instance => null;
+
+	public static void DestoryInstance()
 	{
-		protected static CoroutineHandler _instance;
+	}
 
-		public static CoroutineHandler instance => null;
-
-		public static void DestoryInstance()
-		{
-		}
-
-		public static Coroutine StartStaticCoroutine(IEnumerator coroutine)
-		{
-			return null;
-		}
+	public static Coroutine StartStaticCoroutine(IEnumerator coroutine)
+	{
+		return null;
 	}
 }

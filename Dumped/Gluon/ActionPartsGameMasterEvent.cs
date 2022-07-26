@@ -1,70 +1,69 @@
 using Gluon.ActionData;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsGameMasterEvent : ActionParts
 {
-	public class ActionPartsGameMasterEvent : ActionParts
+	private readonly GameMasterEventData _partsData;
+
+	private GameMasterUniqueCtrl _gm;
+
+	private int _nextEvent;
+
+	private string _egLabel;
+
+	private RunActionGameMasterEvent tmpSetupParam;
+
+	private bool _isDone;
+
+	public ActionPartsGameMasterEvent(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly GameMasterEventData _partsData;
+	}
 
-		private GameMasterUniqueCtrl _gm;
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		private int _nextEvent;
+	public override RunActionParameterBase CreateRunActionParameter()
+	{
+		return null;
+	}
 
-		private string _egLabel;
+	public override void SetRunActionParameter(RunActionParameterBase param)
+	{
+	}
 
-		private RunActionGameMasterEvent tmpSetupParam;
+	public override void Clear()
+	{
+	}
 
-		private bool _isDone;
+	protected override void OnStart()
+	{
+	}
 
-		public ActionPartsGameMasterEvent(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	private void ProcCommand()
+	{
+	}
 
-		public override RunActionParameterBase CreateRunActionParameter()
-		{
-			return null;
-		}
+	private void ProcTurn()
+	{
+	}
 
-		public override void SetRunActionParameter(RunActionParameterBase param)
-		{
-		}
+	private void ProcCompleteTurn()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	private void ProcSudden()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		private void ProcCommand()
-		{
-		}
-
-		private void ProcTurn()
-		{
-		}
-
-		private void ProcCompleteTurn()
-		{
-		}
-
-		private void ProcSudden()
-		{
-		}
-
-		private void ProcBandit()
-		{
-		}
+	private void ProcBandit()
+	{
 	}
 }

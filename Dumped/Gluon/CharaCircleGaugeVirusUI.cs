@@ -1,12 +1,11 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharaCircleGaugeVirusUI : CharaCircleGaugeUI
 {
-	public class CharaCircleGaugeVirusUI : CharaCircleGaugeUI
+	public static CharaCircleGaugeVirusUI Create(GameObject parent, CharacterBase owner, CharacterMarkUI markUI, float adjustPosY, int siblingIndex = -1)
 	{
-		public static CharaCircleGaugeVirusUI Create(GameObject parent, CharacterBase owner, CharacterMarkUI markUI, float adjustPosY, int siblingIndex = -1)
-		{
-			return null;
-		}
+		return null;
 	}
 }

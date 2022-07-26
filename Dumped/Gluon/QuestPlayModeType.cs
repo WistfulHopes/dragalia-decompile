@@ -1,12 +1,11 @@
-namespace Gluon
+namespace Gluon;
+
+public enum QuestPlayModeType
 {
-	public enum QuestPlayModeType
-	{
-		NONE,
-		NORMAL,
-		SOLO,
-		MULTI,
-		RANDOM_MATCHING,
-		RANDOM_MATCHING_SIXTEEN
-	}
+	NONE,
+	NORMAL,
+	SOLO,
+	MULTI,
+	RANDOM_MATCHING,
+	RANDOM_MATCHING_SIXTEEN
 }

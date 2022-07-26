@@ -2,84 +2,83 @@ using System.Runtime.CompilerServices;
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyWeakCtrl : FastUpdateMonoBehaviour
 {
-	public class EnemyWeakCtrl : FastUpdateMonoBehaviour
+	protected EnemyCharacter _character;
+
+	private int _hp;
+
+	private int _deadCount;
+
+	public const int CHANGE_HP_MAX = 4;
+
+	private int[] _changeHps;
+
+	private Vector3 _offsetPos;
+
+	public float priorityTargetRange
 	{
-		protected EnemyCharacter _character;
-
-		private int _hp;
-
-		private int _deadCount;
-
-		public const int CHANGE_HP_MAX = 4;
-
-		private int[] _changeHps;
-
-		private Vector3 _offsetPos;
-
-		public float priorityTargetRange
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(float);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(float);
 		}
-
-		public int whenDeadCenterCharacterActionId
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public static void Initialize(GameObject go, float pTargetRange, int[] cHps)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		protected virtual void Initialize(float pTargetRange, int[] cHps)
-		{
-		}
-
-		public bool isCenterCharacterExist()
-		{
-			return default(bool);
-		}
-
-		public int GetNextReviveHp()
+	public int whenDeadCenterCharacterActionId
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(int);
 		}
-
-		public virtual void Revive(int hp, int wdCenterCharacterActId)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public virtual void Leave()
-		{
-		}
+	public static void Initialize(GameObject go, float pTargetRange, int[] cHps)
+	{
+	}
 
-		public virtual void DeadPlayCenterCharacterAction()
-		{
-		}
+	protected virtual void Initialize(float pTargetRange, int[] cHps)
+	{
+	}
 
-		public void LateUpdate()
-		{
-		}
+	public bool isCenterCharacterExist()
+	{
+		return default(bool);
+	}
 
-		private void SendWeakPointDead()
-		{
-		}
+	public int GetNextReviveHp()
+	{
+		return default(int);
+	}
+
+	public virtual void Revive(int hp, int wdCenterCharacterActId)
+	{
+	}
+
+	public virtual void Leave()
+	{
+	}
+
+	public virtual void DeadPlayCenterCharacterAction()
+	{
+	}
+
+	public void LateUpdate()
+	{
+	}
+
+	private void SendWeakPointDead()
+	{
 	}
 }

@@ -1,61 +1,60 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class TutorialUIMainCanvas : MonoBehaviour
 {
-	public class TutorialUIMainCanvas : MonoBehaviour
+	public GameObject pointer;
+
+	public GameObject blackTouchGuard;
+
+	public Canvas touchGuardCanvas;
+
+	public GameObject touchGuradExceptFooter;
+
+	public GameObject touchGuradExceptBottom;
+
+	public GameObject nextActionButtonObj;
+
+	private Action buttonCallBack;
+
+	private int oldTouchGuardCanvasSortingOrder;
+
+	public static TutorialUIMainCanvas Create()
 	{
-		public GameObject pointer;
+		return null;
+	}
 
-		public GameObject blackTouchGuard;
+	private void Awake()
+	{
+	}
 
-		public Canvas touchGuardCanvas;
+	public void HidePointer()
+	{
+	}
 
-		public GameObject touchGuradExceptFooter;
+	public void ShowPointer()
+	{
+	}
 
-		public GameObject touchGuradExceptBottom;
+	public void SetNextActionButton(Action callBack)
+	{
+	}
 
-		public GameObject nextActionButtonObj;
+	public void DesableNextActionButton()
+	{
+	}
 
-		private Action buttonCallBack;
+	public void SetTouchGuardCanvasSortingOrder(int value)
+	{
+	}
 
-		private int oldTouchGuardCanvasSortingOrder;
+	public void ResetTouchGuardCanvasSortingOrder()
+	{
+	}
 
-		public static TutorialUIMainCanvas Create()
-		{
-			return null;
-		}
-
-		private void Awake()
-		{
-		}
-
-		public void HidePointer()
-		{
-		}
-
-		public void ShowPointer()
-		{
-		}
-
-		public void SetNextActionButton(Action callBack)
-		{
-		}
-
-		public void DesableNextActionButton()
-		{
-		}
-
-		public void SetTouchGuardCanvasSortingOrder(int value)
-		{
-		}
-
-		public void ResetTouchGuardCanvasSortingOrder()
-		{
-		}
-
-		public void OnNextActionButtonPressed()
-		{
-		}
+	public void OnNextActionButtonPressed()
+	{
 	}
 }

@@ -1,21 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultMultiFirstMeetingPopup : PopupBase
 {
-	public class QuestResultMultiFirstMeetingPopup : PopupBase
+	[SerializeField]
+	private Transform commonIconTrans;
+
+	[SerializeField]
+	private Text itemName;
+
+	[SerializeField]
+	private Text firstMeetingText;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		private Transform commonIconTrans;
-
-		[SerializeField]
-		private Text itemName;
-
-		[SerializeField]
-		private Text firstMeetingText;
-
-		protected override void Start()
-		{
-		}
 	}
 }

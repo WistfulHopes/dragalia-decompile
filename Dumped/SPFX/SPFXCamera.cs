@@ -1,84 +1,83 @@
 using System;
 using UnityEngine;
 
-namespace SPFX
+namespace SPFX;
+
+public class SPFXCamera : MonoBehaviour
 {
-	public class SPFXCamera : MonoBehaviour
+	public Light TargetLight;
+
+	public float SceneLightScale;
+
+	public float SceneAmbientScale;
+
+	public int TargetSize;
+
+	private int CurrentTargetSize;
+
+	public int CopyTargetSizeRate;
+
+	private bool RequiredBillboardCamera;
+
+	public bool RequireBillboardCamera;
+
+	public bool EnableFramebufferFx;
+
+	public bool EnableProjectionMap;
+
+	public eDrawLayer[] DrawLayersBefore;
+
+	public eDrawLayer[] DrawLayersAfter;
+
+	private Camera RefCamera;
+
+	private RenderTexture RenderTarget;
+
+	private RenderTexture RenderTargetCopy;
+
+	private IntPtr RenderTargetDepthPtr;
+
+	private IntPtr RenderTargetCopyPtr;
+
+	private Camera CameraChild;
+
+	public Material ColorCopyMaterial;
+
+	public Material ReverseColorCopyMaterial;
+
+	protected SPFXCamera()
 	{
-		public Light TargetLight;
+	}
 
-		public float SceneLightScale;
+	private void OnEnable()
+	{
+	}
 
-		public float SceneAmbientScale;
+	private void OnDisable()
+	{
+	}
 
-		public int TargetSize;
+	private void ReleaseRenderTarget()
+	{
+	}
 
-		private int CurrentTargetSize;
+	private void UpdateRenderTarget()
+	{
+	}
 
-		public int CopyTargetSizeRate;
+	private void Awake()
+	{
+	}
 
-		private bool RequiredBillboardCamera;
+	private void OnDestroy()
+	{
+	}
 
-		public bool RequireBillboardCamera;
+	private void OnPreRender()
+	{
+	}
 
-		public bool EnableFramebufferFx;
-
-		public bool EnableProjectionMap;
-
-		public eDrawLayer[] DrawLayersBefore;
-
-		public eDrawLayer[] DrawLayersAfter;
-
-		private Camera RefCamera;
-
-		private RenderTexture RenderTarget;
-
-		private RenderTexture RenderTargetCopy;
-
-		private IntPtr RenderTargetDepthPtr;
-
-		private IntPtr RenderTargetCopyPtr;
-
-		private Camera CameraChild;
-
-		public Material ColorCopyMaterial;
-
-		public Material ReverseColorCopyMaterial;
-
-		protected SPFXCamera()
-		{
-		}
-
-		private void OnEnable()
-		{
-		}
-
-		private void OnDisable()
-		{
-		}
-
-		private void ReleaseRenderTarget()
-		{
-		}
-
-		private void UpdateRenderTarget()
-		{
-		}
-
-		private void Awake()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		private void OnPreRender()
-		{
-		}
-
-		private void OnPostRender()
-		{
-		}
+	private void OnPostRender()
+	{
 	}
 }

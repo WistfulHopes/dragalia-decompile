@@ -1,8 +1,7 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DropShadow : Shadow
 {
-	public class DropShadow : Shadow
-	{
-	}
 }

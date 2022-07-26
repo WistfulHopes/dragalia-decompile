@@ -1,51 +1,50 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsUnison : ActionParts
 {
-	public class ActionPartsUnison : ActionParts
+	public enum UnisonType
 	{
-		public enum UnisonType
-		{
-			OnSite,
-			SamePosition,
-			AreaAnchor,
-			DiagonalLine
-		}
+		OnSite,
+		SamePosition,
+		AreaAnchor,
+		DiagonalLine
+	}
 
-		private readonly UnisonData _partsData;
+	private readonly UnisonData _partsData;
 
-		public ActionPartsUnison(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public ActionPartsUnison(Gluon.ActionData.ActionParts resource)
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		private void Procedure()
-		{
-		}
+	private void Procedure()
+	{
+	}
 
-		private void OrderAction(EnemyCharacter chara, int actionId)
-		{
-		}
+	private void OrderAction(EnemyCharacter chara, int actionId)
+	{
+	}
 
-		private void SetPosition(EnemyAbilityProcUnison ability)
-		{
-		}
+	private void SetPosition(EnemyAbilityProcUnison ability)
+	{
+	}
 
-		private void SetPositionDiagonal(EnemyAbilityProcUnison ability, Transform primaryTransform, Transform secondaryTransform)
-		{
-		}
+	private void SetPositionDiagonal(EnemyAbilityProcUnison ability, Transform primaryTransform, Transform secondaryTransform)
+	{
+	}
 
-		private CharacterBase GetTarget()
-		{
-			return null;
-		}
+	private CharacterBase GetTarget()
+	{
+		return null;
 	}
 }

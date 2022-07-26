@@ -1,17 +1,16 @@
-namespace Gluon
+namespace Gluon;
+
+public class AbnormalStatusEnemyParalysis : AbnormalStatusEnemyBase
 {
-	public class AbnormalStatusEnemyParalysis : AbnormalStatusEnemyBase
+	public void PlayDamageEffect()
 	{
-		public void PlayDamageEffect()
-		{
-		}
+	}
 
-		protected override void OnEventInterval()
-		{
-		}
+	protected override void OnEventInterval()
+	{
+	}
 
-		public override void OnDisconnectOwner()
-		{
-		}
+	public override void OnDisconnectOwner()
+	{
 	}
 }

@@ -1,25 +1,29 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsReborn : ActionParts
 {
-	public class ActionPartsReborn : ActionParts
+	private readonly RebornData _partsData;
+
+	public ActionPartsReborn(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly RebornData _partsData;
+	}
 
-		public ActionPartsReborn(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	private void ProcCommand(CharacterBase owner)
+	{
+	}
 
-		private void ProcCommand(CharacterBase owner)
-		{
-		}
+	private float GetSpChargeRate()
+	{
+		return default(float);
 	}
 }

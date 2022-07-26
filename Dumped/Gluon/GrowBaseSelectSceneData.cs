@@ -1,11 +1,10 @@
-namespace Gluon
-{
-	public class GrowBaseSelectSceneData : SceneModelBase
-	{
-		public float listScrollPosY;
+namespace Gluon;
 
-		public GrowBaseSelectSceneData(float pos)
-		{
-		}
+public class GrowBaseSelectSceneData : SceneModelBase
+{
+	public float listScrollPosY;
+
+	public GrowBaseSelectSceneData(float pos)
+	{
 	}
 }

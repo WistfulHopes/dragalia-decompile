@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandOutlineTitle : IStoryCommand
 {
-	[CommandName("outline_title")]
-	public class StoryCommandOutlineTitle : IStoryCommand
+	public void Start(string title = "")
 	{
-		public void Start(string title = "")
-		{
-		}
 	}
 }

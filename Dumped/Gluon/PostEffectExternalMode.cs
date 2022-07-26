@@ -1,26 +1,25 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PostEffectExternalMode : MonoBehaviour
 {
-	public class PostEffectExternalMode : MonoBehaviour
+	private CacheCamera _cacheCamera;
+
+	private Camera _postEffectCamera;
+
+	private PostEffect _postEffect;
+
+	private void Awake()
 	{
-		private CacheCamera _cacheCamera;
+	}
 
-		private Camera _postEffectCamera;
+	private void LateUpdate()
+	{
+	}
 
-		private PostEffect _postEffect;
-
-		private void Awake()
-		{
-		}
-
-		private void LateUpdate()
-		{
-		}
-
-		public virtual DepthTextureMode GetNeedDepthTextureMode()
-		{
-			return default(DepthTextureMode);
-		}
+	public virtual DepthTextureMode GetNeedDepthTextureMode()
+	{
+		return default(DepthTextureMode);
 	}
 }

@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public interface ICleanable
 {
-	public interface ICleanable
-	{
-		void Clean();
-	}
+	void Clean();
 }

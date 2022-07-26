@@ -1,42 +1,40 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeActiveAbilityListPopup : PopupBase
 {
-	public class DmodeActiveAbilityListPopup : PopupBase
+	public enum Mode
 	{
-		public enum Mode
-		{
-			Unit,
-			Fafnir
-		}
+		Unit,
+		Fafnir
+	}
 
-		[SerializeField]
-		[Header("Content")]
-		public DmodeUnifiedAbilityCell template;
+	[SerializeField]
+	public DmodeUnifiedAbilityCell template;
 
-		public GameObject emptyGO;
+	public GameObject emptyGO;
 
-		public DmodeExAbilityCell exTemplate;
+	public DmodeExAbilityCell exTemplate;
 
-		public GameObject exLine;
+	public GameObject exLine;
 
-		public GameObject lexLine;
+	public GameObject lexLine;
 
-		public static readonly string prefabPath;
+	public static readonly string prefabPath;
 
-		private Mode mode;
+	private Mode mode;
 
-		public static DmodeActiveAbilityListPopup Create(Mode mode)
-		{
-			return null;
-		}
+	public static DmodeActiveAbilityListPopup Create(Mode mode)
+	{
+		return null;
+	}
 
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	protected override void OnDestroy()
+	{
 	}
 }

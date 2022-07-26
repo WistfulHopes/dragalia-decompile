@@ -1,11 +1,10 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TransparentButton : Text
 {
-	public class TransparentButton : Text
+	protected override void Awake()
 	{
-		protected override void Awake()
-		{
-		}
 	}
 }

@@ -2,63 +2,62 @@ using System.Collections.Generic;
 using Gluon;
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public class CuttTimelineEffect
 {
-	public class CuttTimelineEffect
+	private CuttTimelineKeyEffectDataList _keys;
+
+	private CuttTimelineControl _timelineControl;
+
+	private string effectName;
+
+	private EffectObject effectObject;
+
+	private int lastPlayFrame;
+
+	private int lastTriggerFrame;
+
+	private Transform attachTransform;
+
+	private CuttLayer.Type lastLayerType;
+
+	private static readonly string storyEffectTag;
+
+	private static List<string> storyEffectGroupList;
+
+	private int ignoreSkipEventFrame;
+
+	public static void LoadEffect(string effectName)
 	{
-		private CuttTimelineKeyEffectDataList _keys;
+	}
 
-		private CuttTimelineControl _timelineControl;
+	public static void ReleaseStoryEffect()
+	{
+	}
 
-		private string effectName;
+	public void Initialize(CuttTimelineKeyEffectDataList keys, CuttTimelineControl timelineControl)
+	{
+	}
 
-		private EffectObject effectObject;
+	public void Reset(int resetFrame)
+	{
+	}
 
-		private int lastPlayFrame;
+	public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
+	{
+	}
 
-		private int lastTriggerFrame;
+	private Vector3 GetGeneralOffset(bool ignoreFlag)
+	{
+		return default(Vector3);
+	}
 
-		private Transform attachTransform;
+	public void Stop()
+	{
+	}
 
-		private CuttLayer.Type lastLayerType;
-
-		private static readonly string storyEffectTag;
-
-		private static List<string> storyEffectGroupList;
-
-		private int ignoreSkipEventFrame;
-
-		public static void LoadEffect(string effectName)
-		{
-		}
-
-		public static void ReleaseStoryEffect()
-		{
-		}
-
-		public void Initialize(CuttTimelineKeyEffectDataList keys, CuttTimelineControl timelineControl)
-		{
-		}
-
-		public void Reset(int resetFrame)
-		{
-		}
-
-		public void AlterUpdate(float currentTime, float targetFps, int currentFrame)
-		{
-		}
-
-		private Vector3 GetGeneralOffset(bool ignoreFlag)
-		{
-			return default(Vector3);
-		}
-
-		public void Stop()
-		{
-		}
-
-		private void SetAttachTransform(CuttCharacterInitializer.CharacterId charaId, string name)
-		{
-		}
+	private void SetAttachTransform(CuttCharacterInitializer.CharacterId charaId, string name)
+	{
 	}
 }

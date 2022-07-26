@@ -1,70 +1,69 @@
 using System.Collections;
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class DismantleWeaponScene : SceneBase
 {
-	public class DismantleWeaponScene : SceneBase
+	private DismantleWeaponCanvas mainCanvas;
+
+	private ulong dismantleTargetId;
+
+	private void Awake()
 	{
-		private DismantleWeaponCanvas mainCanvas;
+	}
 
-		private ulong dismantleTargetId;
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private void Awake()
-		{
-		}
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private void OnInitReady()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void OnEnterScene()
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	public void BackButtonPressed()
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void LoadCraftWeapon()
+	{
+	}
 
-		public void BackButtonPressed()
-		{
-		}
+	private ulong[] CreateDataIdList()
+	{
+		return null;
+	}
 
-		private void LoadCraftWeapon()
-		{
-		}
+	public void OnSortButtonClicked()
+	{
+	}
 
-		private ulong[] CreateDataIdList()
-		{
-			return null;
-		}
+	private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		public void OnSortButtonClicked()
-		{
-		}
+	private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private void SendDismantleWeaponData(ulong keyId)
+	{
+	}
 
-		private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private void ShowResultPop(CraftDisassembleResponse res)
+	{
+	}
 
-		private void SendDismantleWeaponData(ulong keyId)
-		{
-		}
-
-		private void ShowResultPop(CraftDisassembleResponse res)
-		{
-		}
-
-		public override void OnPresentReceived()
-		{
-		}
+	public override void OnPresentReceived()
+	{
 	}
 }

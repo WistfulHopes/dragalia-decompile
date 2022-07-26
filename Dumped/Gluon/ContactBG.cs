@@ -2,34 +2,33 @@ using System;
 using Cute.Core;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactBG : FastUpdateMonoBehaviour
 {
-	public class ContactBG : FastUpdateMonoBehaviour
+	[Serializable]
+	private class SpeedSetting
 	{
-		[Serializable]
-		private class SpeedSetting
-		{
-			public Transform movingObject;
+		public Transform movingObject;
 
-			[HideInInspector]
-			public Vector3 startPos;
+		[HideInInspector]
+		public Vector3 startPos;
 
-			public Vector3 speed;
+		public Vector3 speed;
 
-			public float moveLimitX;
+		public float moveLimitX;
 
-			public float movingStartRatio;
-		}
+		public float movingStartRatio;
+	}
 
-		[SerializeField]
-		private SpeedSetting[] moveSettings;
+	[SerializeField]
+	private SpeedSetting[] moveSettings;
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	public override void FastUpdate()
+	{
 	}
 }

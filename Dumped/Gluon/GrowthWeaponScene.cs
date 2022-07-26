@@ -1,130 +1,129 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthWeaponScene : CraftEffectSceneBase
 {
-	public class GrowthWeaponScene : CraftEffectSceneBase
+	public enum WeaponSceneState
 	{
-		public enum WeaponSceneState
-		{
-			None,
-			SeriesList,
-			WeaponList
-		}
+		None,
+		SeriesList,
+		WeaponList
+	}
 
-		public static WeaponSceneState weaponSceneState;
+	public static WeaponSceneState weaponSceneState;
 
-		public static int weaponSeriesIndex;
+	public static int weaponSeriesIndex;
 
-		public static int weaponTypeIndex;
+	public static int weaponTypeIndex;
 
-		public Transform overlayParent;
+	public Transform overlayParent;
 
-		[HideInInspector]
-		public bool isTutorialRequired;
+	[HideInInspector]
+	public bool isTutorialRequired;
 
-		private TouchGuardObject uiLoadTouchGuard;
+	private TouchGuardObject uiLoadTouchGuard;
 
-		private GrowthWeaponMainCanvas growthWeaponMainCanvas;
+	private GrowthWeaponMainCanvas growthWeaponMainCanvas;
 
-		private GrowthWeaponSeriesListCanvas growthWeaponSeriesListCanvas;
+	private GrowthWeaponSeriesListCanvas growthWeaponSeriesListCanvas;
 
-		private AnimationUICanvas currentAnimationUICanvas;
+	private AnimationUICanvas currentAnimationUICanvas;
 
-		private int goEnhanceWeaponId;
+	private int goEnhanceWeaponId;
 
-		public const string prefabPath = "Prefabs/OutGame/Growth/GrowthWeapon/";
+	public const string prefabPath = "Prefabs/OutGame/Growth/GrowthWeapon/";
 
-		private static readonly string shaderSettingPath;
+	private static readonly string shaderSettingPath;
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void OnInitReady()
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void OnEnterScene()
+	{
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		public void SetupModelViewImage(bool enableAlphaBlend)
-		{
-		}
+	public void SetupModelViewImage(bool enableAlphaBlend)
+	{
+	}
 
-		public static void SetupSceneByWeaponBodyId(int weaponId)
-		{
-		}
+	public static void SetupSceneByWeaponBodyId(int weaponId)
+	{
+	}
 
-		public void SetBackButton(Canvas uiCanvas)
-		{
-		}
+	public void SetBackButton(Canvas uiCanvas)
+	{
+	}
 
-		public void CreateUILoadTouchGuard()
-		{
-		}
+	public void CreateUILoadTouchGuard()
+	{
+	}
 
-		public void RemoveUILoadTouchGuard()
-		{
-		}
+	public void RemoveUILoadTouchGuard()
+	{
+	}
 
-		public void ChangeSceneState(WeaponSceneState nextState)
-		{
-		}
+	public void ChangeSceneState(WeaponSceneState nextState)
+	{
+	}
 
-		public void GoWeaponEnhanceScene(int weaponId)
-		{
-		}
+	public void GoWeaponEnhanceScene(int weaponId)
+	{
+	}
 
-		public void GoFortScene()
-		{
-		}
+	public void GoFortScene()
+	{
+	}
 
-		public void SendCraftData(int weaponId)
-		{
-		}
+	public void SendCraftData(int weaponId)
+	{
+	}
 
-		private void OnBackButtonPressed()
-		{
-		}
+	private void OnBackButtonPressed()
+	{
+	}
 
-		private void LoadUICanvas()
-		{
-		}
+	private void LoadUICanvas()
+	{
+	}
 
-		private void SetupCraftEffectData(int weaponId)
-		{
-		}
+	private void SetupCraftEffectData(int weaponId)
+	{
+	}
 
-		private void AfterResultAction()
-		{
-		}
+	private void AfterResultAction()
+	{
+	}
 
-		protected override void CloseCraftEffect()
-		{
-		}
+	protected override void CloseCraftEffect()
+	{
+	}
 
-		protected override bool PlayNextEffect(bool isBackKey = false)
-		{
-			return default(bool);
-		}
+	protected override bool PlayNextEffect(bool isBackKey = false)
+	{
+		return default(bool);
 	}
 }

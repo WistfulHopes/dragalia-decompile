@@ -1,21 +1,20 @@
-namespace Gluon
+namespace Gluon;
+
+public class ItemMaterialCellData
 {
-	public class ItemMaterialCellData
-	{
-		public int materialId;
+	public int materialId;
 
-		public int sliderMaxValue;
+	public int sliderMaxValue;
 
-		public int useCount;
+	public int useCount;
 
-		public int maxUseCount;
+	public int maxUseCount;
 
-		public string itemName;
+	public string itemName;
 
-		public MaterialType category;
+	public MaterialType category;
 
-		public bool isMax;
+	public bool isMax;
 
-		public TutorialDataManager.GrowthTutorialType tutorialType;
-	}
+	public TutorialDataManager.GrowthTutorialType tutorialType;
 }

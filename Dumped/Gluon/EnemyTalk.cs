@@ -1,71 +1,70 @@
 using System.Collections.Generic;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyTalk
 {
-	public class EnemyTalk
+	private delegate void deleWatchTrigger();
+
+	private EnemyCharacter _owner;
+
+	private NotifyCharacter.CharaDialogueNPCParam _dialogueParam;
+
+	private List<EnemyTalkDataElement> _datas;
+
+	private List<int> _candidates;
+
+	private List<int> _finished;
+
+	private static int TriggerNum;
+
+	private deleWatchTrigger[] _watchTrigger;
+
+	public bool NoTalk => default(bool);
+
+	public void Initialize(EnemyCharacter owner)
 	{
-		private delegate void deleWatchTrigger();
+	}
 
-		private EnemyCharacter _owner;
+	public void Reset()
+	{
+	}
 
-		private NotifyCharacter.CharaDialogueNPCParam _dialogueParam;
+	private void RegistryDelegate()
+	{
+	}
 
-		private List<EnemyTalkDataElement> _datas;
+	public bool WatchTrigger(EnemyTalkTrigger trig)
+	{
+		return default(bool);
+	}
 
-		private List<int> _candidates;
+	private void Talk(int id, bool clearAndPlay)
+	{
+	}
 
-		private List<int> _finished;
+	private void FuncTrigger_EntryTiming()
+	{
+	}
 
-		private static int TriggerNum;
+	private void FuncTrigger_DeadTiming()
+	{
+	}
 
-		private deleWatchTrigger[] _watchTrigger;
+	private void FuncTrigger_HpRate()
+	{
+	}
 
-		public bool NoTalk => default(bool);
+	private void FuncTrigger_BreakHpRate()
+	{
+	}
 
-		public void Initialize(EnemyCharacter owner)
-		{
-		}
+	private void FuncTrigger_EventSkill_Satan01()
+	{
+	}
 
-		public void Reset()
-		{
-		}
-
-		private void RegistryDelegate()
-		{
-		}
-
-		public bool WatchTrigger(EnemyTalkTrigger trig)
-		{
-			return default(bool);
-		}
-
-		private void Talk(int id, bool clearAndPlay)
-		{
-		}
-
-		private void FuncTrigger_EntryTiming()
-		{
-		}
-
-		private void FuncTrigger_DeadTiming()
-		{
-		}
-
-		private void FuncTrigger_HpRate()
-		{
-		}
-
-		private void FuncTrigger_BreakHpRate()
-		{
-		}
-
-		private void FuncTrigger_EventSkill_Satan01()
-		{
-		}
-
-		private void FuncTrigger_EventSkill_Satan02()
-		{
-		}
+	private void FuncTrigger_EventSkill_Satan02()
+	{
 	}
 }

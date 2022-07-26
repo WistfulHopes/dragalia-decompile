@@ -1,12 +1,11 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public static class ColorExtensionMethods
 {
-	public static class ColorExtensionMethods
+	public static Color ColorFromHex(this Color color, string hex)
 	{
-		public static Color ColorFromHex(this Color color, string hex)
-		{
-			return default(Color);
-		}
+		return default(Color);
 	}
 }

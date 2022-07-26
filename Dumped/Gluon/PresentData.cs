@@ -1,9 +1,8 @@
-namespace Gluon
-{
-	public class PresentData
-	{
-		public string itemName;
+namespace Gluon;
 
-		public string description;
-	}
+public class PresentData
+{
+	public string itemName;
+
+	public string description;
 }

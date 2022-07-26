@@ -3,104 +3,107 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class TitleMenuPopup : PopupBase, ICustomMessage
 {
-	public class TitleMenuPopup : PopupBase, ICustomMessage
+	private const string prefabPathForTitle = "Prefabs/OutGame/TitleMenu/TitleMenuPopup";
+
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Button cacheClearButton;
+
+	[SerializeField]
+	private Button downloaedDataDeleteButton;
+
+	[SerializeField]
+	private Badge inquiryBadge;
+
+	[NonSerialized]
+	public TitleScene titleScene;
+
+	public static bool isCacheFilesExist;
+
+	private bool isHavingUnreadComments;
+
+	public static TitleMenuPopup Create(bool isHavingUnreadComments)
 	{
-		private const string prefabPathForTitle = "Prefabs/OutGame/TitleMenu/TitleMenuPopup";
+		return null;
+	}
 
-		[SerializeField]
-		private Text titleText;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		private Button cacheClearButton;
+	private void SetButtonEnable(Button target, bool value)
+	{
+	}
 
-		[SerializeField]
-		private Button downloaedDataDeleteButton;
+	private void OnDisable()
+	{
+	}
 
-		[SerializeField]
-		private Badge inquiryBadge;
+	public void InitSetting(TitleScene titleScene)
+	{
+	}
 
-		[NonSerialized]
-		public TitleScene titleScene;
+	public void OnInformationButtonPressed()
+	{
+	}
 
-		public static bool isCacheFilesExist;
+	public static IEnumerator CheckCacheFilesExist()
+	{
+		return null;
+	}
 
-		private bool isHavingUnreadComments;
+	public void OnCacheClearButtonPressed()
+	{
+	}
 
-		public static TitleMenuPopup Create(bool isHavingUnreadComments)
-		{
-			return null;
-		}
+	public void OnFaqButtonPressed()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	public void OnInquiryButtonPressed()
+	{
+	}
 
-		private void SetButtonEnable(Button target, bool value)
-		{
-		}
+	public static void ShowInquiryPopup()
+	{
+	}
 
-		private void OnDisable()
-		{
-		}
+	public static void UpdateResourceVersion(Action next)
+	{
+	}
 
-		public void InitSetting(TitleScene titleScene)
-		{
-		}
+	public static void UpdateUserData(Action next)
+	{
+	}
 
-		public void OnInformationButtonPressed()
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
+	}
 
-		public static IEnumerator CheckCacheFilesExist()
-		{
-			return null;
-		}
+	public void OnLanguageSettingButtonPressed()
+	{
+	}
 
-		public void OnCacheClearButtonPressed()
-		{
-		}
+	public void OnFullDownloadButtonPressed()
+	{
+	}
 
-		public void OnFaqButtonPressed()
-		{
-		}
+	private IEnumerator OnFullDownloadButtonPressedCoroutine()
+	{
+		return null;
+	}
 
-		public void OnInquiryButtonPressed()
-		{
-		}
+	public void OnDownloaedDataDeleteButtonPressed()
+	{
+	}
 
-		private void UpdateResourceVersion(Action next)
-		{
-		}
-
-		private void UpdateUserData(Action next)
-		{
-		}
-
-		public void OnCloseButtonPressed()
-		{
-		}
-
-		public void OnLanguageSettingButtonPressed()
-		{
-		}
-
-		public void OnFullDownloadButtonPressed()
-		{
-		}
-
-		private IEnumerator OnFullDownloadButtonPressedCoroutine()
-		{
-			return null;
-		}
-
-		public void OnDownloaedDataDeleteButtonPressed()
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

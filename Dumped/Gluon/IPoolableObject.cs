@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public interface IPoolableObject
 {
-	public interface IPoolableObject
-	{
-		void Init();
+	void Init();
 
-		void Release();
+	void Release();
 
-		bool IsUsing();
-	}
+	bool IsUsing();
 }

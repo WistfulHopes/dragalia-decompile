@@ -4,219 +4,229 @@ using CodeStage.AntiCheat.ObscuredTypes;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterCustomPointController
 {
-	public class CharacterCustomPointController
+	public enum AbilityTriggerState
 	{
-		public enum AbilityTriggerState
-		{
-			Disabled,
-			On,
-			Off
-		}
+		Disabled,
+		On,
+		Off
+	}
 
-		public enum Type
-		{
-			None = 0,
-			SZ = 10750403,
-			RKS = 10350102,
-			CRS = 10650304,
-			IRA = 10950401,
-			ZN = 10850402,
-			BP = 10150404,
-			SM = 10750104,
-			SS = 10750404,
-			SSR = 10950303,
-			RKSH = 10950403,
-			IRAX = 10950103,
-			GTF = 10450104,
-			NEV = 10350304,
-			NN = 10850303
-		}
+	public enum Type
+	{
+		None = 0,
+		SZ = 10750403,
+		RKS = 10350102,
+		CRS = 10650304,
+		IRA = 10950401,
+		ZN = 10850402,
+		BP = 10150404,
+		SM = 10750104,
+		SS = 10750404,
+		SSR = 10950303,
+		RKSH = 10950403,
+		IRAX = 10950103,
+		GTF = 10450104,
+		NEV = 10350304,
+		NN = 10850303,
+		C4 = 10150504
+	}
 
-		public enum IconType
-		{
-			None,
-			SZ,
-			RKS,
-			IRA,
-			ZN,
-			BP,
-			SM,
-			CRS,
-			SS,
-			SSR,
-			RKSH,
-			GTF,
-			NN
-		}
+	public enum IconType
+	{
+		None,
+		SZ,
+		RKS,
+		IRA,
+		ZN,
+		BP,
+		SM,
+		CRS,
+		SS,
+		SSR,
+		RKSH,
+		GTF,
+		NN
+	}
 
-		public class RequestCPEventData
-		{
-			public int value;
+	public class RequestCPEventData
+	{
+		public int value;
 
-			public bool isDirty;
-		}
+		public bool isDirty;
+	}
 
-		public static readonly int gaugeIndexMax;
+	public static readonly int gaugeIndexMax;
 
-		protected ObscuredInt[] cp;
+	protected ObscuredInt[] cp;
 
-		public float[] coef;
+	public float[] coef;
 
-		protected List<AbilityDataElement> abilityList;
+	protected List<AbilityDataElement> abilityList;
 
-		public Type type;
+	public Type type;
 
-		private RequestCPEventData[] _requestCPEventList;
+	private RequestCPEventData[] _requestCPEventList;
 
-		private float _nextSendEventTimer;
+	private float _nextSendEventTimer;
 
-		private static readonly float SendEventInterval;
+	private static readonly float SendEventInterval;
 
-		public virtual int minCP => default(int);
+	public virtual int minCP => default(int);
 
-		public virtual int maxCP => default(int);
+	public virtual int maxCP => default(int);
 
-		public CharacterBase owner
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			protected set
-			{
-			}
-		}
-
-		public CollisionHitAttribute hitAttributeSource
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			protected set
-			{
-			}
-		}
-
-		public static CharacterCustomPointController Create(CharacterBase owner, List<ConditionallyAbility> conditionalAbilities, int charaId)
+	public CharacterBase owner
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
+		[CompilerGenerated]
+		protected set
+		{
+		}
+	}
 
-		private static CharacterCustomPointController Create(CharacterBase owner, Type type, AbilityDataElement[] elems)
+	public CollisionHitAttribute hitAttributeSource
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		public virtual void AttachToUI()
+		[CompilerGenerated]
+		protected set
 		{
 		}
+	}
 
-		public virtual int GetCP(int index)
-		{
-			return default(int);
-		}
+	public static CharacterCustomPointController Create(CharacterBase owner, List<ConditionallyAbility> conditionalAbilities, int charaId)
+	{
+		return null;
+	}
 
-		protected virtual void Initialize(CharacterBase owner, AbilityDataElement[] elems)
-		{
-		}
+	private static CharacterCustomPointController Create(CharacterBase owner, Type type, AbilityDataElement[] elems)
+	{
+		return null;
+	}
 
-		protected virtual void InitializeWithLength(int length)
-		{
-		}
+	public virtual void AttachToUI()
+	{
+	}
 
-		public virtual void ClearValues()
-		{
-		}
+	public virtual int GetCP(int index)
+	{
+		return default(int);
+	}
 
-		public virtual void Update()
-		{
-		}
+	protected virtual void Initialize(CharacterBase owner, AbilityDataElement[] elems)
+	{
+	}
 
-		public void SetModifyCPSource(CollisionHitAttribute attr)
-		{
-		}
+	protected virtual void InitializeWithLength(int length)
+	{
+	}
 
-		public virtual void SetCP(int index, int value)
-		{
-		}
+	public virtual void ClearValues()
+	{
+	}
 
-		public virtual void AddCP(int index, int value)
-		{
-		}
+	public virtual void Update()
+	{
+	}
 
-		protected virtual AbilityCondition GetUseConditionType(AbilityDataElement ade)
-		{
-			return default(AbilityCondition);
-		}
+	public void SetModifyCPSource(CollisionHitAttribute attr)
+	{
+	}
 
-		protected virtual void TriggerAbility(AbilityDataElement ade, int actionId = 0, int skillId = 0, int skillIndex = 0)
-		{
-		}
+	public virtual void SetCP(int index, int value)
+	{
+	}
 
-		public virtual void OnSkill(int actionId, int skillId, int skillIndex)
-		{
-		}
+	public virtual void AddCP(int index, int value)
+	{
+	}
 
-		public virtual void OnContinue()
-		{
-		}
+	protected virtual AbilityCondition GetUseConditionType(AbilityDataElement ade)
+	{
+		return default(AbilityCondition);
+	}
 
-		public virtual IconType GetIconType()
-		{
-			return default(IconType);
-		}
+	protected virtual void TriggerAbility(AbilityDataElement ade, int actionId = 0, int skillId = 0, int skillIndex = 0)
+	{
+	}
 
-		public virtual bool ClearCPOnContinue()
-		{
-			return default(bool);
-		}
+	public virtual void OnSkill(int actionId, int skillId, int skillIndex)
+	{
+	}
 
-		public virtual bool ClearCPOnReborn()
-		{
-			return default(bool);
-		}
+	public virtual void OnContinue()
+	{
+	}
 
-		public void RequestSendCPEvent(int index, int value)
-		{
-		}
+	public virtual IconType GetIconType()
+	{
+		return default(IconType);
+	}
 
-		protected void UpdateSendRequest(CharacterBase owner)
-		{
-		}
+	public virtual bool ClearCPOnContinue()
+	{
+		return default(bool);
+	}
 
-		public void SendCPEventImmediately(CharacterBase target, int index, int value)
-		{
-		}
+	public virtual bool ClearCPOnReborn()
+	{
+		return default(bool);
+	}
 
-		public virtual void OnReceiveCharacterCustomPointEvent(CharacterCustomPointEvent recvEvent)
-		{
-		}
+	public void RequestSendCPEvent(int index, int value)
+	{
+	}
 
-		public virtual int GetChargeLevel()
-		{
-			return default(int);
-		}
+	protected void UpdateSendRequest(CharacterBase owner)
+	{
+	}
 
-		public virtual bool OnCommand(int commandType, int param, CharacterBase aboutChara)
-		{
-			return default(bool);
-		}
+	public void SendCPEventImmediately(CharacterBase target, int index, int value)
+	{
+	}
 
-		public virtual bool CanConsumeCpToUseSkill(int skillIndex)
-		{
-			return default(bool);
-		}
+	public virtual void OnReceiveCharacterCustomPointEvent(CharacterCustomPointEvent recvEvent)
+	{
+	}
 
-		public virtual bool IsEnableConsumeCpToUseSkill(int skillIndex)
-		{
-			return default(bool);
-		}
+	public virtual int GetChargeLevel()
+	{
+		return default(int);
+	}
+
+	public virtual bool OnCommand(int commandType, int param, CharacterBase aboutChara)
+	{
+		return default(bool);
+	}
+
+	public virtual bool CanConsumeCpToUseSkill(int skillIndex)
+	{
+		return default(bool);
+	}
+
+	public virtual bool IsEnableConsumeCpToUseSkill(int skillIndex)
+	{
+		return default(bool);
+	}
+
+	public virtual int OnDamageApplied(int damage, bool isAnnihilationAttack, bool isSlipDamage, bool isSelfDamage, CharacterDamageIntermediate intermediate)
+	{
+		return default(int);
+	}
+
+	public virtual float OverrideCrisisRate(float crisisRate)
+	{
+		return default(float);
 	}
 }

@@ -3,60 +3,59 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyEquipDragonStatus : MonoBehaviour
 {
-	public class PartyEquipDragonStatus : MonoBehaviour
+	[SerializeField]
+	private GameObject emptyObject;
+
+	[SerializeField]
+	private GameObject rootObject;
+
+	[SerializeField]
+	private Image dragonIcon;
+
+	[SerializeField]
+	private Text dragonName;
+
+	[SerializeField]
+	private Text hp;
+
+	[SerializeField]
+	private Text attack;
+
+	[SerializeField]
+	private PartyEquipStatusIconBar skillIconBar;
+
+	[SerializeField]
+	private PartyEquipStatusIconBar[] abilityIconBars;
+
+	private int skillId;
+
+	private int skillLevel;
+
+	private List<int> abilityIds;
+
+	private ElementalType dragonElementalType;
+
+	private ulong dragonKeyId;
+
+	public UnityAction unitLockCallback;
+
+	public void Setup(ulong dragonKeyId)
 	{
-		[SerializeField]
-		private GameObject emptyObject;
+	}
 
-		[SerializeField]
-		private GameObject rootObject;
+	public void OnSkillIconPressed()
+	{
+	}
 
-		[SerializeField]
-		private Image dragonIcon;
+	public void OnAbilityIconPressed(int index)
+	{
+	}
 
-		[SerializeField]
-		private Text dragonName;
-
-		[SerializeField]
-		private Text hp;
-
-		[SerializeField]
-		private Text attack;
-
-		[SerializeField]
-		private PartyEquipStatusIconBar skillIconBar;
-
-		[SerializeField]
-		private PartyEquipStatusIconBar[] abilityIconBars;
-
-		private int skillId;
-
-		private int skillLevel;
-
-		private List<int> abilityIds;
-
-		private ElementalType dragonElementalType;
-
-		private ulong dragonKeyId;
-
-		public UnityAction unitLockCallback;
-
-		public void Setup(ulong dragonKeyId)
-		{
-		}
-
-		public void OnSkillIconPressed()
-		{
-		}
-
-		public void OnAbilityIconPressed(int index)
-		{
-		}
-
-		public void OpenDetailScene()
-		{
-		}
+	public void OpenDetailScene()
+	{
 	}
 }

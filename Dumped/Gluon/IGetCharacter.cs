@@ -1,9 +1,8 @@
-namespace Gluon
-{
-	public interface IGetCharacter
-	{
-		int characterCount { get; }
+namespace Gluon;
 
-		CharacterBase GetCharacter(int index);
-	}
+public interface IGetCharacter
+{
+	int characterCount { get; }
+
+	CharacterBase GetCharacter(int index);
 }

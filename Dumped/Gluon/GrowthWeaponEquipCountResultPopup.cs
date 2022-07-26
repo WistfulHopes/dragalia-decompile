@@ -3,27 +3,26 @@ using System.Runtime.InteropServices;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthWeaponEquipCountResultPopup : CommonPopup
 {
-	public class GrowthWeaponEquipCountResultPopup : CommonPopup
+	public Text beforeCountText;
+
+	public Text afterCountText;
+
+	public Action popAnimationEndedCallBack;
+
+	public static GrowthWeaponEquipCountResultPopup Create()
 	{
-		public Text beforeCountText;
+		return null;
+	}
 
-		public Text afterCountText;
+	public void InitPopup(GrowthUnitEnhanceModel model, int beforeCount)
+	{
+	}
 
-		public Action popAnimationEndedCallBack;
-
-		public static GrowthWeaponEquipCountResultPopup Create()
-		{
-			return null;
-		}
-
-		public void InitPopup(GrowthUnitEnhanceModel model, int beforeCount)
-		{
-		}
-
-		public override void StartShowAnimation([Optional] UnityEvent onCompleted)
-		{
-		}
+	public override void StartShowAnimation([Optional] UnityEvent onCompleted)
+	{
 	}
 }

@@ -1,283 +1,268 @@
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Cute.Core;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BossBreakUI : FastUpdateMonoBehaviour
 {
-	public class BossBreakUI : FastUpdateMonoBehaviour
+	[SerializeField]
+	private ElementIconUISpriteRenderer elementIcon;
+
+	[SerializeField]
+	private Text nameText;
+
+	[SerializeField]
+	private InGameGaugeUISpriteRenderer hpGauge;
+
+	[SerializeField]
+	private InGameGaugeUISpriteRenderer breakGauge;
+
+	[SerializeField]
+	private RectTransform adjustRt;
+
+	[SerializeField]
+	private RectTransform breakGaugeRt;
+
+	[SerializeField]
+	private RectTransform hpGaugeShineRootRt;
+
+	[SerializeField]
+	private RectTransform hpGaugeShineSubRootRt;
+
+	[SerializeField]
+	private RectTransform hpGaugeShineImageAdjustRt;
+
+	[SerializeField]
+	private RectTransform hpGaugeShineIconRt;
+
+	[SerializeField]
+	private RectTransform unlimitIconRt;
+
+	[SerializeField]
+	private SpriteRenderer elementIconImage;
+
+	[SerializeField]
+	private SpriteRenderer bgHpRtModSprite;
+
+	[SerializeField]
+	private SpriteRenderer bgBreakModSprite;
+
+	[SerializeField]
+	private SpriteRenderer breakGaugeIcon;
+
+	[SerializeField]
+	private SpriteRenderer hpGaugeShineBgImage;
+
+	[SerializeField]
+	private SpriteRenderer hpGaugeShineGaugeImage;
+
+	[SerializeField]
+	private SpriteRenderer hpGaugeShineIconImage;
+
+	[SerializeField]
+	private BossStatusInfoUI statusInfoUI;
+
+	[SerializeField]
+	private RectTransform gaugeEffectRt;
+
+	[SerializeField]
+	private RectTransform raidEffectRt;
+
+	[SerializeField]
+	private float hpGaugeShineAdjustStartPosX;
+
+	[SerializeField]
+	private float hpGaugeShineAdjustEndPosX;
+
+	private EnemyCharacter _owner;
+
+	private VisibleUIObject rootVisible;
+
+	private VisibleUIObject breakGaugeVisible;
+
+	private VisibleUIObject breakGaugeIconVisible;
+
+	private VisibleUIObject hpGaugeShineRootVisible;
+
+	private VisibleUIObject hpGaugeShineSubRootVisible;
+
+	private CharaCircleGaugeMiasmaUI miasmaGaugeUI;
+
+	private InGameFollowLayout followLayout;
+
+	private Sequence seqGaugeMove;
+
+	private Sequence seqGaugeMod;
+
+	private Sequence seqHpGaugeShineIcon;
+
+	private int lastFishGrade;
+
+	private int lastInfoIconType;
+
+	private bool isChangeOwner;
+
+	private Dictionary<int, bool> enableIronWallDict;
+
+	private EnemyCharacter owner
 	{
-		[SerializeField]
-		[Header("component")]
-		private ElementIconUISpriteRenderer elementIcon;
-
-		[SerializeField]
-		private Text nameText;
-
-		[SerializeField]
-		private InGameGaugeUISpriteRenderer hpGauge;
-
-		[SerializeField]
-		private InGameGaugeUISpriteRenderer breakGauge;
-
-		[SerializeField]
-		[Tooltip("èª¿æ\u0095\u00b4ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform adjustRt;
-
-		[SerializeField]
-		[Tooltip("ã\u0083\u0096ã\u0083¬ã\u0082¤ã\u0082\u00afã\u0082²ã\u0083¼ã\u0082\u00b8ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform breakGaugeRt;
-
-		[SerializeField]
-		[Tooltip("è¼\u009dã\u0081\u008dã\u0083«ã\u0083¼ã\u0083\u0088ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform hpGaugeShineRootRt;
-
-		[SerializeField]
-		[Tooltip("è¼\u009dã\u0081\u008dã\u0082µã\u0083\u0096ã\u0083«ã\u0083¼ã\u0083\u0088ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform hpGaugeShineSubRootRt;
-
-		[SerializeField]
-		[Tooltip("è¼\u009dã\u0081\u008dç\u0094»å\u0083\u008fèª¿æ\u0095\u00b4ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform hpGaugeShineImageAdjustRt;
-
-		[SerializeField]
-		[Tooltip("è¼\u009dã\u0081\u008dã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform hpGaugeShineIconRt;
-
-		[SerializeField]
-		[Tooltip("ç\u0084¡é\u0099\u0090ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform unlimitIconRt;
-
-		[SerializeField]
-		[Tooltip("å±\u009eæ\u0080§ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ã\u0082¤ã\u0083¡ã\u0083¼ã\u0082\u00b8")]
-		private SpriteRenderer elementIconImage;
-
-		[SerializeField]
-		[Tooltip("ã\u0083\u0096ã\u0083¬ã\u0082¤ã\u0082\u00afã\u0082²ã\u0083¼ã\u0082\u00b8æ¼\u0094å\u0087ºç\u0094\u00a8ã\u0081®HPã\u0082²ã\u0083¼ã\u0082\u00b8ã\u0082¤ã\u0083¡ã\u0083¼ã\u0082\u00b8")]
-		private SpriteRenderer bgHpRtModSprite;
-
-		[SerializeField]
-		[Tooltip("ã\u0083\u0096ã\u0083¬ã\u0082¤ã\u0082\u00afã\u0082²ã\u0083¼ã\u0082\u00b8æ¼\u0094å\u0087ºç\u0094\u00a8ã\u0081®ã\u0083\u0096ã\u0083¬ã\u0082¤ã\u0082\u00afã\u0082²ã\u0083¼ã\u0082\u00b8ã\u0082¤ã\u0083¡ã\u0083¼ã\u0082\u00b8")]
-		private SpriteRenderer bgBreakModSprite;
-
-		[SerializeField]
-		[Tooltip("ã\u0083\u0096ã\u0083¬ã\u0082¤ã\u0082\u00afã\u0082²ã\u0083¼ã\u0082\u00b8ã\u0082¢ã\u0082¤ã\u0082³ã\u0083³")]
-		private SpriteRenderer breakGaugeIcon;
-
-		[SerializeField]
-		[Tooltip("è¼\u009dã\u0081\u008dè\u0083\u008cæ\u0099\u00afç\u0094»å\u0083\u008f")]
-		private SpriteRenderer hpGaugeShineBgImage;
-
-		[SerializeField]
-		[Tooltip("è¼\u009dã\u0081\u008dã\u0082²ã\u0083¼ã\u0082\u00b8ç\u0094»å\u0083\u008f")]
-		private SpriteRenderer hpGaugeShineGaugeImage;
-
-		[SerializeField]
-		[Tooltip("è¼\u009dã\u0081\u008dã\u0082¢ã\u0082¤ã\u0082³ã\u0083³ç\u0094»å\u0083\u008f")]
-		private SpriteRenderer hpGaugeShineIconImage;
-
-		[SerializeField]
-		[Tooltip("ã\u0082¹ã\u0083\u0086ã\u0083¼ã\u0082¿ã\u0082¹æ\u0083\u0085å\u00a0±UI")]
-		private BossStatusInfoUI statusInfoUI;
-
-		[SerializeField]
-		[Tooltip("ã\u0082²ã\u0083¼ã\u0082\u00b8æ¼\u0094å\u0087ºç\u0094\u00a8ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform gaugeEffectRt;
-
-		[SerializeField]
-		[Tooltip("ã\u0083¬ã\u0082¤ã\u0083\u0089æ¼\u0094å\u0087ºç\u0094\u00a8ã\u0083\u0088ã\u0083©ã\u0083³ã\u0082¹ã\u0083\u0095ã\u0082©ã\u0083¼ã\u0083\u00a0")]
-		private RectTransform raidEffectRt;
-
-		[SerializeField]
-		[Header("parameter")]
-		private float hpGaugeShineAdjustStartPosX;
-
-		[SerializeField]
-		private float hpGaugeShineAdjustEndPosX;
-
-		private EnemyCharacter _owner;
-
-		private VisibleUIObject rootVisible;
-
-		private VisibleUIObject breakGaugeVisible;
-
-		private VisibleUIObject breakGaugeIconVisible;
-
-		private VisibleUIObject hpGaugeShineRootVisible;
-
-		private VisibleUIObject hpGaugeShineSubRootVisible;
-
-		private CharaCircleGaugeMiasmaUI miasmaGaugeUI;
-
-		private InGameFollowLayout followLayout;
-
-		private Sequence seqGaugeMove;
-
-		private Sequence seqGaugeMod;
-
-		private Sequence seqHpGaugeShineIcon;
-
-		private int lastFishGrade;
-
-		private int lastInfoIconType;
-
-		private EnemyCharacter owner
-		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
-		}
-
-		public static BossBreakUI Create(GameObject parent, int siblingIndex = -1)
+		get
 		{
 			return null;
 		}
-
-		private void Initialize()
+		set
 		{
 		}
+	}
 
-		private void OnDestroy()
-		{
-		}
+	public static BossBreakUI Create(GameObject parent, int siblingIndex = -1)
+	{
+		return null;
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	private void Initialize()
+	{
+	}
 
-		public void UpdateHpGaugeShine()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public void Open(CharacterBase chara, string name, bool hasBreak, float initialHpValue, InGameEventExtendAtlasManager eeAtlasManager)
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		private void OpenBreakGauge(float rate)
-		{
-		}
+	public void UpdateHpGaugeShine()
+	{
+	}
 
-		public void Close()
-		{
-		}
+	public void Open(CharacterBase chara, string name, bool hasBreak, float initialHpValue, InGameEventExtendAtlasManager eeAtlasManager)
+	{
+	}
 
-		public bool IsVisible()
-		{
-			return default(bool);
-		}
+	private void OpenBreakGauge(float rate)
+	{
+	}
 
-		public void SetHPValue(float value)
-		{
-		}
+	public void Close()
+	{
+	}
 
-		public void SetBreakValue(float value, bool immediate = false)
-		{
-		}
+	public bool IsVisible()
+	{
+		return default(bool);
+	}
 
-		public void GetRaidEffectPosition(ref Vector3 pos)
-		{
-		}
+	public void SetHPValue(float value)
+	{
+	}
 
-		public void GetGaugeEffectPosition(ref Vector3 pos)
-		{
-		}
+	public void SetBreakValue(float value, bool immediate = false)
+	{
+	}
 
-		public InGameGaugeUISpriteRenderer GetBreakGauge()
-		{
-			return null;
-		}
+	public void GetRaidEffectPosition(ref Vector3 pos)
+	{
+	}
 
-		public void OnStatusInfoUIChangePage()
-		{
-		}
+	public void GetGaugeEffectPosition(ref Vector3 pos)
+	{
+	}
 
-		public CharaCircleGaugeMiasmaUI CreateBossMiasmaGaugeUI(CharacterBase boss)
-		{
-			return null;
-		}
+	public InGameGaugeUISpriteRenderer GetBreakGauge()
+	{
+		return null;
+	}
 
-		private void ApplyInfoIcon(CharacterBase chara, bool isForce = false)
-		{
-		}
+	public void OnStatusInfoUIChangePage()
+	{
+	}
 
-		private bool ApplyElementIcon(ElementalType elementType, bool isForce = false)
-		{
-			return default(bool);
-		}
+	public CharaCircleGaugeMiasmaUI CreateBossMiasmaGaugeUI(CharacterBase boss)
+	{
+		return null;
+	}
 
-		private bool ApplyTribeIcon(TribeType tribeType, bool isForce = false)
-		{
-			return default(bool);
-		}
+	private void ApplyInfoIcon(CharacterBase chara, bool isForce = false)
+	{
+	}
 
-		public void PlayQuestEffectBreak(float durationTime)
-		{
-		}
+	private bool ApplyElementIcon(ElementalType elementType, bool isForce = false)
+	{
+		return default(bool);
+	}
 
-		private void PlayQuestEffectBreakGauge(bool playFromBeginning = true)
-		{
-		}
+	private bool ApplyTribeIcon(TribeType tribeType, bool isForce = false)
+	{
+		return default(bool);
+	}
 
-		public void StopQuestEffectBreak()
-		{
-		}
+	public void PlayQuestEffectBreak(float durationTime)
+	{
+	}
 
-		private void StopQuestEffectBreakGauge(bool isImmediate = false)
-		{
-		}
+	private void PlayQuestEffectBreakGauge(bool playFromBeginning = true)
+	{
+	}
 
-		public void PlayQuestEffectOverdrive()
-		{
-		}
+	public void StopQuestEffectBreak()
+	{
+	}
 
-		private void PlayQuestEffectOverdriveGauge(bool playFromBeginning = true)
-		{
-		}
+	private void StopQuestEffectBreakGauge(bool isImmediate = false)
+	{
+	}
 
-		public void StopQuestEffectOverdrive()
-		{
-		}
+	public void PlayQuestEffectOverdrive()
+	{
+	}
 
-		private void StopQuestEffectOverdriveGauge(bool isImmediate = false)
-		{
-		}
+	private void PlayQuestEffectOverdriveGauge(bool playFromBeginning = true)
+	{
+	}
 
-		public void PlayQuestEffectBerserk()
-		{
-		}
+	public void StopQuestEffectOverdrive()
+	{
+	}
 
-		public void StopQuestEffectBerserk()
-		{
-		}
+	private void StopQuestEffectOverdriveGauge(bool isImmediate = false)
+	{
+	}
 
-		public void PlayQuestEffectRaidFishGrade(int grade, [Optional] Action<PlayFTU> endFunc)
-		{
-		}
+	public void PlayQuestEffectBerserk()
+	{
+	}
 
-		public void StopQuestEffectRaidFishGrade()
-		{
-		}
+	public void StopQuestEffectBerserk()
+	{
+	}
 
-		private void StopQuestEffectGauge(PlayFTU.Type type, bool isImmediate)
-		{
-		}
+	public void PlayQuestEffectRaidFishGrade(int grade, [Optional] Action<PlayFTU> endFunc)
+	{
+	}
 
-		public void OnUpdateHpGaugeShineBgFade(float value)
-		{
-		}
+	public void StopQuestEffectRaidFishGrade()
+	{
+	}
 
-		public void OnUpdateHpGaugeShineGaugeFade(float value)
-		{
-		}
+	private void StopQuestEffectGauge(PlayFTU.Type type, bool isImmediate)
+	{
+	}
 
-		public void OnUpdateHpGaugeShineLocalPosX(float value)
-		{
-		}
+	public void OnUpdateHpGaugeShineBgFade(float value)
+	{
+	}
+
+	public void OnUpdateHpGaugeShineGaugeFade(float value)
+	{
+	}
+
+	public void OnUpdateHpGaugeShineLocalPosX(float value)
+	{
 	}
 }

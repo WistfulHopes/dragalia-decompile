@@ -1,94 +1,93 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingAutoJoinService
 {
-	public class MatchingAutoJoinService
+	public struct ResultType
 	{
-		public struct ResultType
+		public enum ResultCode
 		{
-			public enum ResultCode
-			{
-				Ok,
-				Ng
-			}
-
-			public ResultCode code;
-
-			public PhotonCluster bestRegionCluster;
+			Ok,
+			Ng
 		}
 
-		private enum State
+		public ResultCode code;
+
+		public PhotonCluster bestRegionCluster;
+	}
+
+	private enum State
+	{
+		None,
+		WaitForClusterSet,
+		Ready,
+		SearchCluster,
+		Completed
+	}
+
+	public PhotonClusterSet _clusterSet;
+
+	private PhotonClusterRttResult _rttCache;
+
+	private PhotonSearchBestRegionService _searchBestRegionService;
+
+	private State _state;
+
+	private ResultType _result;
+
+	public int JoinQuestId
+	{
+		[CompilerGenerated]
+		get
 		{
-			None,
-			WaitForClusterSet,
-			Ready,
-			SearchCluster,
-			Completed
+			return default(int);
 		}
-
-		public PhotonClusterSet _clusterSet;
-
-		private PhotonClusterRttResult _rttCache;
-
-		private PhotonSearchBestRegionService _searchBestRegionService;
-
-		private State _state;
-
-		private ResultType _result;
-
-		public int JoinQuestId
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public MatchingAutoJoinService(PhotonClusterRttResult rttCache)
-		{
-		}
-
-		public void Clear()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Initialize(int joinQuestId)
-		{
-		}
+	public MatchingAutoJoinService(PhotonClusterRttResult rttCache)
+	{
+	}
 
-		public void StartSearchBestRegionCluster(PhotonClusterSet clusterSet)
-		{
-		}
+	public void Clear()
+	{
+	}
 
-		public bool HasSearchCompleted()
-		{
-			return default(bool);
-		}
+	public void Initialize(int joinQuestId)
+	{
+	}
 
-		public ResultType GetSearchReuslt()
-		{
-			return default(ResultType);
-		}
+	public void StartSearchBestRegionCluster(PhotonClusterSet clusterSet)
+	{
+	}
 
-		public void ClearSearchResult()
-		{
-		}
+	public bool HasSearchCompleted()
+	{
+		return default(bool);
+	}
 
-		public void StartSearchOtherCluster()
-		{
-		}
+	public ResultType GetSearchReuslt()
+	{
+		return default(ResultType);
+	}
 
-		public void Update()
-		{
-		}
+	public void ClearSearchResult()
+	{
+	}
 
-		public void SetEmptyClusterSet()
-		{
-		}
+	public void StartSearchOtherCluster()
+	{
+	}
+
+	public void Update()
+	{
+	}
+
+	public void SetEmptyClusterSet()
+	{
 	}
 }

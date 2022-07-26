@@ -2,23 +2,22 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+internal class MultiplayConsumeItem
 {
-	[Serializable]
-	internal class MultiplayConsumeItem
-	{
-		public Image[] bpBaseImages;
+	public Image[] bpBaseImages;
 
-		public Image[] bpOnImages;
+	public Image[] bpOnImages;
 
-		public Image[] bpRedImages;
+	public Image[] bpRedImages;
 
-		public Image bpBaseBarImage;
+	public Image bpBaseBarImage;
 
-		public GameObject questItemIconRoot;
+	public GameObject questItemIconRoot;
 
-		public Image questItemIconImage;
+	public Image questItemIconImage;
 
-		public Text questItemNumText;
-	}
+	public Text questItemNumText;
 }

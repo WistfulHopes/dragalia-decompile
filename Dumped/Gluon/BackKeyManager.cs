@@ -4,81 +4,80 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class BackKeyManager : SingletonMonoBehaviour<BackKeyManager>
 {
-	public class BackKeyManager : SingletonMonoBehaviour<BackKeyManager>
+	protected List<int> sortingOrders;
+
+	protected Dictionary<int, UnityEvent> eventDict;
+
+	public int tempSortingOrder;
+
+	public static DateTime lastTouchDownDateTime;
+
+	public float doubleTouchThreshold;
+
+	public bool isEnableBackkey;
+
+	protected bool isAndroid;
+
+	public bool canCheckTutorialStatus
 	{
-		protected List<int> sortingOrders;
-
-		protected Dictionary<int, UnityEvent> eventDict;
-
-		public int tempSortingOrder;
-
-		public static DateTime lastTouchDownDateTime;
-
-		public float doubleTouchThreshold;
-
-		public bool isEnableBackkey;
-
-		protected bool isAndroid;
-
-		public bool canCheckTutorialStatus
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		private void Update()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		protected override void Awake()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		public void OnPressedBackKey()
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		public void AddSortingOrder(int sortingOrder)
-		{
-		}
+	public void OnPressedBackKey()
+	{
+	}
 
-		public int GetSortingOrderNum()
-		{
-			return default(int);
-		}
+	public void AddSortingOrder(int sortingOrder)
+	{
+	}
 
-		public void SetBackKeyEvent(int sortingOrder, UnityEvent backKeyEvent, bool isUpdate)
-		{
-		}
+	public int GetSortingOrderNum()
+	{
+		return default(int);
+	}
 
-		private void RemoveSortingOrder(int sortingOrder)
-		{
-		}
+	public void SetBackKeyEvent(int sortingOrder, UnityEvent backKeyEvent, bool isUpdate)
+	{
+	}
 
-		public UnityAction GotoMyPageAction([Optional] Action onBeforeExitScene, float delay = 0f)
-		{
-			return null;
-		}
+	private void RemoveSortingOrder(int sortingOrder)
+	{
+	}
 
-		public void SetBackKeyAsToMyPage(int sortingOrder, [Optional] Action onBeforeExitScene, float delay = 0f)
-		{
-		}
+	public UnityAction GotoMyPageAction([Optional] Action onBeforeExitScene, float delay = 0f)
+	{
+		return null;
+	}
 
-		public void RemoveBackKeyEvent(int sortingOrder, bool isWithDict = false)
-		{
-		}
+	public void SetBackKeyAsToMyPage(int sortingOrder, [Optional] Action onBeforeExitScene, float delay = 0f)
+	{
+	}
 
-		public void ClearBackKeyEvent()
-		{
-		}
+	public void RemoveBackKeyEvent(int sortingOrder, bool isWithDict = false)
+	{
+	}
+
+	public void ClearBackKeyEvent()
+	{
 	}
 }

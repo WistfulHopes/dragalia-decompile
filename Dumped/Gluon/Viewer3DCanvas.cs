@@ -3,124 +3,122 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class Viewer3DCanvas : MonoBehaviour
 {
-	public class Viewer3DCanvas : MonoBehaviour
+	[HideInInspector]
+	public UnitDetailScene detailScene;
+
+	public DragEventScrollRect dragScrollRect;
+
+	[SerializeField]
+	public UIAnimationPublisher mainPublisher;
+
+	private CanvasGroup canvasGroup;
+
+	private GameObject unitObject;
+
+	private Animator unitAnimator;
+
+	private float oldDragDistance;
+
+	private bool playAnimationFlg;
+
+	private float startPinchDistance;
+
+	private float oldPinchDistance;
+
+	private bool inViewMode;
+
+	private void OnEnable()
 	{
-		[HideInInspector]
-		public UnitDetailScene detailScene;
+	}
 
-		public DragEventScrollRect dragScrollRect;
+	private void OnApplicationPause(bool pause)
+	{
+	}
 
-		[SerializeField]
-		[Header("Publisher")]
-		public UIAnimationPublisher mainPublisher;
+	private void OnDisable()
+	{
+	}
 
-		private CanvasGroup canvasGroup;
+	public void SwitchFromMainPage()
+	{
+	}
 
-		private GameObject unitObject;
+	public void SwitchFrom2DPage()
+	{
+	}
 
-		private Animator unitAnimator;
+	public void SwitchChangeDragonId()
+	{
+	}
 
-		private float oldDragDistance;
+	public void SwitchTo2DPage()
+	{
+	}
 
-		private bool playAnimationFlg;
+	public void ReturnToMainPage([Optional] Action onDone)
+	{
+	}
 
-		private float startPinchDistance;
+	public void Update()
+	{
+	}
 
-		private float oldPinchDistance;
+	private void Pinch(OutGameTouchManager.PinchState state)
+	{
+	}
 
-		private bool inViewMode;
+	private float PinchOnDevice(OutGameTouchManager.PinchState state)
+	{
+		return default(float);
+	}
 
-		private void OnEnable()
-		{
-		}
+	public void UnitModelPressed()
+	{
+	}
 
-		private void OnApplicationPause(bool pause)
-		{
-		}
+	private void Set3DModel()
+	{
+	}
 
-		private void OnDisable()
-		{
-		}
+	private void ChangeMultipleCharacter()
+	{
+	}
 
-		public void SwitchFromMainPage()
-		{
-		}
+	private void SetAttachedWeaponScale(Transform characterTransform, Transform attachedWeaponTransform, Vector3 relativeScale)
+	{
+	}
 
-		public void SwitchFrom2DPage()
-		{
-		}
+	private void LoadRichDragon(GameObject unitObject, string modelPath)
+	{
+	}
 
-		public void SwitchChangeDragonId()
-		{
-		}
+	private void CreateDragon(int dragonId)
+	{
+	}
 
-		public void SwitchTo2DPage()
-		{
-		}
+	public void ApplyShaderSettings(UnitDetailUnitShaderSettings unitShaderSettings)
+	{
+	}
 
-		public void ReturnToMainPage([Optional] Action onDone)
-		{
-		}
+	private IEnumerator SetUintPosToCenter()
+	{
+		return null;
+	}
 
-		public void Update()
-		{
-		}
+	private IEnumerator playAnimationDelay()
+	{
+		return null;
+	}
 
-		private void Pinch(OutGameTouchManager.PinchState state)
-		{
-		}
+	private void AttachDragonDecoration(int decoId)
+	{
+	}
 
-		private float PinchOnDevice(OutGameTouchManager.PinchState state)
-		{
-			return default(float);
-		}
-
-		public void UnitModelPressed()
-		{
-		}
-
-		private void Set3DModel()
-		{
-		}
-
-		private void ChangeMultipleCharacter()
-		{
-		}
-
-		private void SetAttachedWeaponScale(Transform characterTransform, Transform attachedWeaponTransform, Vector3 relativeScale)
-		{
-		}
-
-		private void LoadRichDragon(GameObject unitObject, string modelPath)
-		{
-		}
-
-		private void CreateDragon(int dragonId)
-		{
-		}
-
-		public void ApplyShaderSettings(UnitDetailUnitShaderSettings unitShaderSettings)
-		{
-		}
-
-		private IEnumerator SetUintPosToCenter()
-		{
-			return null;
-		}
-
-		private IEnumerator playAnimationDelay()
-		{
-			return null;
-		}
-
-		private void AttachDragonDecoration(int decoId)
-		{
-		}
-
-		public void SetUnitObject(GameObject unitObject)
-		{
-		}
+	public void SetUnitObject(GameObject unitObject)
+	{
 	}
 }

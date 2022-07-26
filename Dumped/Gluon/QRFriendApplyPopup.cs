@@ -4,48 +4,47 @@ using Cute.Http;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QRFriendApplyPopup : QuestResultCommonPopup
 {
-	public class QRFriendApplyPopup : QuestResultCommonPopup
+	[SerializeField]
+	public CommonFriendListCell commonFriendListCell;
+
+	private Action<bool> onClose;
+
+	private QuestResultModel.FriendApplyModel.SingleFriendApplyInfo info;
+
+	public static QRFriendApplyPopup Create(QuestResultModel.FriendApplyModel.SingleFriendApplyInfo info, [Optional] Action<bool> onClose)
 	{
-		[SerializeField]
-		public CommonFriendListCell commonFriendListCell;
+		return null;
+	}
 
-		private Action<bool> onClose;
+	protected override void Start()
+	{
+	}
 
-		private QuestResultModel.FriendApplyModel.SingleFriendApplyInfo info;
+	private void OnOk()
+	{
+	}
 
-		public static QRFriendApplyPopup Create(QuestResultModel.FriendApplyModel.SingleFriendApplyInfo info, [Optional] Action<bool> onClose)
-		{
-			return null;
-		}
+	private void OnCancel()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	private void ApiFriendRequest()
+	{
+	}
 
-		private void OnOk()
-		{
-		}
+	private void ApiOnSuccess(FriendRequestResponse res)
+	{
+	}
 
-		private void OnCancel()
-		{
-		}
+	private void ApiOnError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		private void ApiFriendRequest()
-		{
-		}
-
-		private void ApiOnSuccess(FriendRequestResponse res)
-		{
-		}
-
-		private void ApiOnError(ErrorType errorType, int resultCode)
-		{
-		}
-
-		private void OnCloseQuestResultCommonPopup()
-		{
-		}
+	private void OnCloseQuestResultCommonPopup()
+	{
 	}
 }

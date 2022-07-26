@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleBlankScene : SceneBase
 {
-	public class GrowthManaCircleBlankScene : SceneBase
+	public static bool isGoFirstCircle;
+
+	private void Start()
 	{
-		public static bool isGoFirstCircle;
+	}
 
-		private void Start()
-		{
-		}
-
-		private void LoadNextScene()
-		{
-		}
+	private void LoadNextScene()
+	{
 	}
 }

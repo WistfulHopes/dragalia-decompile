@@ -1,74 +1,73 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class PhotonStatistics
 {
-	public class PhotonStatistics
+	private struct MeasureSectionData
 	{
-		private struct MeasureSectionData
-		{
-			public long beginTick;
+		public long beginTick;
 
-			public long lastBytesIn;
+		public long lastBytesIn;
 
-			public long lastBytesOut;
+		public long lastBytesOut;
 
-			public int maxQueuedIncommingCommands;
+		public int maxQueuedIncommingCommands;
 
-			public int maxQueuedOutgoingCommands;
-		}
+		public int maxQueuedOutgoingCommands;
+	}
 
-		private PhotonClient _client;
+	private PhotonClient _client;
 
-		private bool _isMeasuring;
+	private bool _isMeasuring;
 
-		private float _nextSendEventTimer;
+	private float _nextSendEventTimer;
 
-		private static readonly float SendEventInterval;
+	private static readonly float SendEventInterval;
 
-		private Statistics _tempSendEvent;
+	private Statistics _tempSendEvent;
 
-		private MeasureSectionData _measureSectionData;
+	private MeasureSectionData _measureSectionData;
 
-		public PhotonStatistics(PhotonClient client)
-		{
-		}
+	public PhotonStatistics(PhotonClient client)
+	{
+	}
 
-		public void Clear()
-		{
-		}
+	public void Clear()
+	{
+	}
 
-		public void Begin()
-		{
-		}
+	public void Begin()
+	{
+	}
 
-		public void End()
-		{
-		}
+	public void End()
+	{
+	}
 
-		public bool IsMeasuring()
-		{
-			return default(bool);
-		}
+	public bool IsMeasuring()
+	{
+		return default(bool);
+	}
 
-		public void Update()
-		{
-		}
+	public void Update()
+	{
+	}
 
-		private void SendEvent()
-		{
-		}
+	private void SendEvent()
+	{
+	}
 
-		private void UpdateMeasure()
-		{
-		}
+	private void UpdateMeasure()
+	{
+	}
 
-		private void BeginNewMeasure()
-		{
-		}
+	private void BeginNewMeasure()
+	{
+	}
 
-		private long GetCurrentTick()
-		{
-			return default(long);
-		}
+	private long GetCurrentTick()
+	{
+		return default(long);
 	}
 }

@@ -1,17 +1,16 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumPictureBookMedalCellData
 {
-	public class AlbumPictureBookMedalCellData
-	{
-		public HonorDataElement honorData;
+	public HonorDataElement honorData;
 
-		public int count;
+	public int count;
 
-		public bool isCountView;
+	public bool isCountView;
 
-		public bool isPossession;
+	public bool isPossession;
 
-		public bool isChallenge;
-	}
+	public bool isChallenge;
 }

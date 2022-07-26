@@ -3,50 +3,49 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AnimationUICaption : AnimationUIBase
 {
-	public class AnimationUICaption : AnimationUIBase
+	public bool isShown;
+
+	public AnimationUICanvas canvas;
+
+	private Image[] images;
+
+	private Text[] texts;
+
+	private Action onEnterAnimationDone;
+
+	private Action onExitAnimationDone;
+
+	public override void Awake()
 	{
-		public bool isShown;
+	}
 
-		public AnimationUICanvas canvas;
+	public override void StartEnterAnimation([Optional] Action onAnimationDone)
+	{
+	}
 
-		private Image[] images;
+	private IEnumerator StartEnterAnimationCoroutine([Optional] Action onAnimationDone)
+	{
+		return null;
+	}
 
-		private Text[] texts;
+	private void StartEnterAnimationImpl()
+	{
+	}
 
-		private Action onEnterAnimationDone;
+	public override void StartExitAnimation([Optional] Action onAnimationDone)
+	{
+	}
 
-		private Action onExitAnimationDone;
+	public bool IsOnExitAnimation()
+	{
+		return default(bool);
+	}
 
-		public override void Awake()
-		{
-		}
-
-		public override void StartEnterAnimation([Optional] Action onAnimationDone)
-		{
-		}
-
-		private IEnumerator StartEnterAnimationCoroutine([Optional] Action onAnimationDone)
-		{
-			return null;
-		}
-
-		private void StartEnterAnimationImpl()
-		{
-		}
-
-		public override void StartExitAnimation([Optional] Action onAnimationDone)
-		{
-		}
-
-		public bool IsOnExitAnimation()
-		{
-			return default(bool);
-		}
-
-		private void SetUIPartsEnable(bool enabled)
-		{
-		}
+	private void SetUIPartsEnable(bool enabled)
+	{
 	}
 }

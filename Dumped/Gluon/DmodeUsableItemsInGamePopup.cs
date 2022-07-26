@@ -3,88 +3,82 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeUsableItemsInGamePopup : PopupBase
 {
-	public class DmodeUsableItemsInGamePopup : PopupBase
+	[SerializeField]
+	private GameObject[] dragonModeGOs;
+
+	[SerializeField]
+	private GameObject[] shareSkillModeGOs;
+
+	[SerializeField]
+	private GameObject uniqueDragonWarningGO;
+
+	[SerializeField]
+	private RectTransform baseOffsetHandle;
+
+	[SerializeField]
+	private DmodeCommonInGameIcon iconTemplate;
+
+	[SerializeField]
+	private UIAnimationPublisher publisher;
+
+	private DmodeDungeonItemType mode;
+
+	private List<DmodeCommonInGameIcon> icons;
+
+	private Action<int> onClose;
+
+	private int selectedId;
+
+	private bool disableIcons;
+
+	public static readonly string prefabPath;
+
+	public static DmodeUsableItemsInGamePopup Create(DmodeDungeonItemType mode, Action<int> onClose)
 	{
-		[SerializeField]
-		[Header("Mode")]
-		private GameObject[] dragonModeGOs;
+		return null;
+	}
 
-		[SerializeField]
-		private GameObject[] shareSkillModeGOs;
+	private void Initialize(DmodeDungeonItemType mode, Action<int> onClose)
+	{
+	}
 
-		[SerializeField]
-		[Header("Warning")]
-		private GameObject uniqueDragonWarningGO;
+	public void OnIconPressed(DmodeDungeonItemType type, int id)
+	{
+	}
 
-		[SerializeField]
-		[Header("Positioning")]
-		private RectTransform baseOffsetHandle;
+	private void ProcessUseCommand()
+	{
+	}
 
-		[SerializeField]
-		[Header("Icons")]
-		private DmodeCommonInGameIcon iconTemplate;
+	public void OnChangeSkillButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		[Header("Publisher")]
-		private UIAnimationPublisher publisher;
+	public void ShowSkillSelectPopup([Optional] Action onClose)
+	{
+	}
 
-		private DmodeDungeonItemType mode;
+	private void UpdateContent([Optional] List<int> ids)
+	{
+	}
 
-		private List<DmodeCommonInGameIcon> icons;
+	private void SetupContent([Optional] int[] items)
+	{
+	}
 
-		private Action<int> onClose;
+	public void ShowPopup(bool disableIcons = false)
+	{
+	}
 
-		private int selectedId;
+	public void ClosePopup()
+	{
+	}
 
-		private bool disableIcons;
-
-		public static readonly string prefabPath;
-
-		public static DmodeUsableItemsInGamePopup Create(DmodeDungeonItemType mode, Action<int> onClose)
-		{
-			return null;
-		}
-
-		private void Initialize(DmodeDungeonItemType mode, Action<int> onClose)
-		{
-		}
-
-		public void OnIconPressed(DmodeDungeonItemType type, int id)
-		{
-		}
-
-		private void ProcessUseCommand()
-		{
-		}
-
-		public void OnChangeSkillButtonPressed()
-		{
-		}
-
-		public void ShowSkillSelectPopup([Optional] Action onClose)
-		{
-		}
-
-		private void UpdateContent([Optional] List<int> ids)
-		{
-		}
-
-		private void SetupContent([Optional] int[] items)
-		{
-		}
-
-		public void ShowPopup(bool disableIcons = false)
-		{
-		}
-
-		public void ClosePopup()
-		{
-		}
-
-		public void OnClickBGCloseButton()
-		{
-		}
+	public void OnClickBGCloseButton()
+	{
 	}
 }

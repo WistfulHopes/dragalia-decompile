@@ -1,17 +1,16 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[Serializable]
+public class ClearPartyEquipSampleListCellCrestIcons
 {
-	[Serializable]
-	public class ClearPartyEquipSampleListCellCrestIcons
+	public CommonUnitIcon[] crestIcons;
+
+	public GameObject[] emptyCrestIconObjs;
+
+	public void SetupCrestIcon(int[] crestIds)
 	{
-		public CommonUnitIcon[] crestIcons;
-
-		public GameObject[] emptyCrestIconObjs;
-
-		public void SetupCrestIcon(int[] crestIds)
-		{
-		}
 	}
 }

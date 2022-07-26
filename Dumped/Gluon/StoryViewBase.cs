@@ -2,37 +2,36 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryViewBase : MonoBehaviour
 {
-	public class StoryViewBase : MonoBehaviour
+	[SerializeField]
+	private Button storyTabButton;
+
+	[SerializeField]
+	private Button eventTabButton;
+
+	[SerializeField]
+	private GameObject StoryListView;
+
+	public UnityAction<StoryListCategory> tabButtonAction;
+
+	public UnityAction<StoryListCellData> listButtonCallBack;
+
+	private void Start()
 	{
-		[SerializeField]
-		private Button storyTabButton;
+	}
 
-		[SerializeField]
-		private Button eventTabButton;
+	public void StoryTabEnable()
+	{
+	}
 
-		[SerializeField]
-		private GameObject StoryListView;
+	public void EventTabEnable()
+	{
+	}
 
-		public UnityAction<StoryListCategory> tabButtonAction;
-
-		public UnityAction<StoryListCellData> listButtonCallBack;
-
-		private void Start()
-		{
-		}
-
-		public void StoryTabEnable()
-		{
-		}
-
-		public void EventTabEnable()
-		{
-		}
-
-		public void SetStoryViewActive(bool active)
-		{
-		}
+	public void SetStoryViewActive(bool active)
+	{
 	}
 }

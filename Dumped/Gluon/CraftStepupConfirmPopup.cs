@@ -6,188 +6,187 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CraftStepupConfirmPopup : CommonPopup, ICustomMessage
 {
-	public class CraftStepupConfirmPopup : CommonPopup, ICustomMessage
+	public Text message;
+
+	public CraftMaterialCell originCell;
+
+	public Text totalExp;
+
+	public Text totalCoin;
+
+	public Text breforeCoin;
+
+	public Text afterCoin;
+
+	public Text craftCount;
+
+	public Text craftMaxCount;
+
+	public Slider craftSlider;
+
+	public Text selectWeaponMessage;
+
+	[HideInInspector]
+	public int totalCraftCount;
+
+	[HideInInspector]
+	public int targetId;
+
+	[HideInInspector]
+	public Dictionary<int, int> allMaterialDict;
+
+	public GameObject sliberBase;
+
+	public Text errorMessage;
+
+	public List<CraftMaterialCell> materialCellList;
+
+	public List<CraftMaterialCell> materialWeaponCellList;
+
+	public GameObject autoLimitBreakBase;
+
+	public GameObject autoLimitBreakSpace;
+
+	public Toggle autoLimitBreakToggle;
+
+	public Transform cellParent;
+
+	public Button plusButton;
+
+	public Button minusButton;
+
+	public Action materialReloadCallBack;
+
+	public Action<CraftStepupConfirmPopupBackupData> createMaterialWeaponCallBack;
+
+	private PointerEventHandler plusButtonEventHandler;
+
+	private PointerEventHandler minusButtonEventHandler;
+
+	private Coroutine countCoroutine;
+
+	private int assembleCoin;
+
+	[HideInInspector]
+	private CaftNeedMaterialData needMaterialData;
+
+	private bool isMuteSliderSe;
+
+	private Dictionary<int, CraftMaterialCellData> craftMaterialWeaponCellDatas;
+
+	private bool isEnableCraft;
+
+	private int defaultCraftCount;
+
+	private int showMaterialWeaponPopupSetId;
+
+	private ulong[] materialWeaponPopupSelectKeyIds;
+
+	private bool isFirstStepCraft;
+
+	public bool isItemUpdate
 	{
-		public Text message;
-
-		public CraftMaterialCell originCell;
-
-		public Text totalExp;
-
-		public Text totalCoin;
-
-		public Text breforeCoin;
-
-		public Text afterCoin;
-
-		public Text craftCount;
-
-		public Text craftMaxCount;
-
-		public Slider craftSlider;
-
-		public Text selectWeaponMessage;
-
-		[HideInInspector]
-		public int totalCraftCount;
-
-		[HideInInspector]
-		public int targetId;
-
-		[HideInInspector]
-		public Dictionary<int, int> allMaterialDict;
-
-		public GameObject sliberBase;
-
-		public Text errorMessage;
-
-		public List<CraftMaterialCell> materialCellList;
-
-		public List<CraftMaterialCell> materialWeaponCellList;
-
-		public GameObject autoLimitBreakBase;
-
-		public GameObject autoLimitBreakSpace;
-
-		public Toggle autoLimitBreakToggle;
-
-		public Transform cellParent;
-
-		public Button plusButton;
-
-		public Button minusButton;
-
-		public Action materialReloadCallBack;
-
-		public Action<CraftStepupConfirmPopupBackupData> createMaterialWeaponCallBack;
-
-		private PointerEventHandler plusButtonEventHandler;
-
-		private PointerEventHandler minusButtonEventHandler;
-
-		private Coroutine countCoroutine;
-
-		private int assembleCoin;
-
-		[HideInInspector]
-		private CaftNeedMaterialData needMaterialData;
-
-		private bool isMuteSliderSe;
-
-		private Dictionary<int, CraftMaterialCellData> craftMaterialWeaponCellDatas;
-
-		private bool isEnableCraft;
-
-		private int defaultCraftCount;
-
-		private int showMaterialWeaponPopupSetId;
-
-		private ulong[] materialWeaponPopupSelectKeyIds;
-
-		private bool isFirstStepCraft;
-
-		public bool isItemUpdate
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		public static CraftStepupConfirmPopup Create()
-		{
-			return null;
-		}
-
-		protected override void Start()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void InitPop(int weaponId, [Optional] CraftStepupConfirmPopupBackupData backupData)
-		{
-		}
+	public static CraftStepupConfirmPopup Create()
+	{
+		return null;
+	}
 
-		private void UpdatePopup()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private IEnumerator SliderSeActiveDelay()
-		{
-			return null;
-		}
+	public void InitPop(int weaponId, [Optional] CraftStepupConfirmPopupBackupData backupData)
+	{
+	}
 
-		private void UpdateMaterialInfo()
-		{
-		}
+	private void UpdatePopup()
+	{
+	}
 
-		public void SliderValueChanged()
-		{
-		}
+	private IEnumerator SliderSeActiveDelay()
+	{
+		return null;
+	}
 
-		public void OnValueChangeButtonPressed(int value)
-		{
-		}
+	private void UpdateMaterialInfo()
+	{
+	}
 
-		public void OnValueChangeButtonLongPressed(int countInc)
-		{
-		}
+	public void SliderValueChanged()
+	{
+	}
 
-		private IEnumerator CountSpeedCoroutine(bool isPlus)
-		{
-			return null;
-		}
+	public void OnValueChangeButtonPressed(int value)
+	{
+	}
 
-		private void OnMaterialIconPressed(CraftMaterialCellData cellData)
-		{
-		}
+	public void OnValueChangeButtonLongPressed(int countInc)
+	{
+	}
 
-		private void DeleteLockedWeaponKeyId(ref ulong[] materialKeys)
-		{
-		}
+	private IEnumerator CountSpeedCoroutine(bool isPlus)
+	{
+		return null;
+	}
 
-		private void UpdateCraftButton()
-		{
-		}
+	private void OnMaterialIconPressed(CraftMaterialCellData cellData)
+	{
+	}
 
-		public override void OnOkButtonPressed()
-		{
-		}
+	private void DeleteLockedWeaponKeyId(ref ulong[] materialKeys)
+	{
+	}
 
-		public override void OnCancelButtonPressed()
-		{
-		}
+	private void UpdateCraftButton()
+	{
+	}
 
-		private void OnEnable()
-		{
-		}
+	public override void OnOkButtonPressed()
+	{
+	}
 
-		private void OnDisable()
-		{
-		}
+	public override void OnCancelButtonPressed()
+	{
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		public CraftStepupSendData GetSendData()
-		{
-			return null;
-		}
+	private void OnDisable()
+	{
+	}
 
-		public ulong[] GetUseMaterialWeaponKeyIds()
-		{
-			return null;
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
+	}
 
-		public static void ShowNoDismantlePopup(Action popupCallBack)
-		{
-		}
+	public CraftStepupSendData GetSendData()
+	{
+		return null;
+	}
+
+	public ulong[] GetUseMaterialWeaponKeyIds()
+	{
+		return null;
+	}
+
+	public static void ShowNoDismantlePopup(Action popupCallBack)
+	{
 	}
 }

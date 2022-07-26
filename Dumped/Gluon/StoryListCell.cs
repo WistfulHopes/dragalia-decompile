@@ -3,26 +3,25 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryListCell : TableViewCell<StoryListCellData>
 {
-	public class StoryListCell : TableViewCell<StoryListCellData>
+	public Text storyTitle;
+
+	[SerializeField]
+	public StoryButtonEvent buttonPressed;
+
+	public override void UpdateContent(StoryListCellData data)
 	{
-		public Text storyTitle;
+	}
 
-		[SerializeField]
-		public StoryButtonEvent buttonPressed;
+	public void OnButtonPressed()
+	{
+	}
 
-		public override void UpdateContent(StoryListCellData data)
-		{
-		}
-
-		public void OnButtonPressed()
-		{
-		}
-
-		private IEnumerator DelayAction(float delay, Action action)
-		{
-			return null;
-		}
+	private IEnumerator DelayAction(float delay, Action action)
+	{
+		return null;
 	}
 }

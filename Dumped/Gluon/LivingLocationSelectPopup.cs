@@ -1,24 +1,23 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class LivingLocationSelectPopup : CommonPopup
 {
-	public class LivingLocationSelectPopup : CommonPopup
+	public Text subTitleText;
+
+	public LivingLocationSelectToggle[] toggles;
+
+	private LocalizeUtil.LocationCode location;
+
+	private bool isLocationChanged;
+
+	public static LivingLocationSelectPopup Create(string locationStr)
 	{
-		public Text subTitleText;
+		return null;
+	}
 
-		public LivingLocationSelectToggle[] toggles;
-
-		private LocalizeUtil.LocationCode location;
-
-		private bool isLocationChanged;
-
-		public static LivingLocationSelectPopup Create(string locationStr)
-		{
-			return null;
-		}
-
-		public void OnLocationChecked(LocalizeUtil.LocationCode selectedLocation)
-		{
-		}
+	public void OnLocationChecked(LocalizeUtil.LocationCode selectedLocation)
+	{
 	}
 }

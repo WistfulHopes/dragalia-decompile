@@ -1,20 +1,19 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ApplyMaterialUI : MonoBehaviour
 {
-	public class ApplyMaterialUI : MonoBehaviour
+	private SpriteRenderer image;
+
+	private Action func;
+
+	public void Initialize(Action func)
 	{
-		private SpriteRenderer image;
+	}
 
-		private Action func;
-
-		public void Initialize(Action func)
-		{
-		}
-
-		public void OnLoaded(Material mtrl)
-		{
-		}
+	public void OnLoaded(Material mtrl)
+	{
 	}
 }

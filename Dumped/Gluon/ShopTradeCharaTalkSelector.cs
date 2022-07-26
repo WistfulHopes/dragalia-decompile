@@ -1,68 +1,67 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopTradeCharaTalkSelector : OutGameTopCharaTalkSelector
 {
-	public class ShopTradeCharaTalkSelector : OutGameTopCharaTalkSelector
+	public static Queue<int> myLastPlayedQueue;
+
+	private bool isInitialSelectDone;
+
+	private TalkData specialPackTalkData;
+
+	private TalkData dailyMaterialTalkData;
+
+	private TalkData weeklyMaterialTalkData;
+
+	private TalkData monthlyMaterialTalkData;
+
+	private TalkData expendableTalkData;
+
+	private TalkData tradeTalkData;
+
+	public int activeMenuGroupId
 	{
-		public static Queue<int> myLastPlayedQueue;
-
-		private bool isInitialSelectDone;
-
-		private TalkData specialPackTalkData;
-
-		private TalkData dailyMaterialTalkData;
-
-		private TalkData weeklyMaterialTalkData;
-
-		private TalkData monthlyMaterialTalkData;
-
-		private TalkData expendableTalkData;
-
-		private TalkData tradeTalkData;
-
-		public int activeMenuGroupId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
-
-		public int activeImageId
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public static void ClearLastPlayedQueue()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public TalkData SelectTalk(ShopCommonPage.TalkTypeInfo info)
+	public int activeImageId
+	{
+		[CompilerGenerated]
+		get
 		{
-			return null;
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public override void Awake()
-		{
-		}
+	public static void ClearLastPlayedQueue()
+	{
+	}
 
-		protected override TalkData SelectFromSpecialList()
-		{
-			return null;
-		}
+	public TalkData SelectTalk(ShopCommonPage.TalkTypeInfo info)
+	{
+		return null;
+	}
+
+	public override void Awake()
+	{
+	}
+
+	protected override TalkData SelectFromSpecialList()
+	{
+		return null;
 	}
 }

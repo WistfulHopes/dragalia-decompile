@@ -3,140 +3,139 @@ using System.Runtime.CompilerServices;
 using Cute.Cri;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyScene : SceneBase
 {
-	public class PartyScene : SceneBase
+	public Camera mainCamera;
+
+	public Camera render3dCamera;
+
+	public QuestCharacterCtrl[] characterCtrls;
+
+	public PartyObjectsSettings objectsSettings;
+
+	public AudioPlayback bgmPlayback;
+
+	private PartyUICanvas mainCanvas;
+
+	private bool isTutorialRequired;
+
+	private bool isGoPartyCharacter;
+
+	private const string prefabPath = "Prefabs/OutGame/Party/Party/";
+
+	public bool isEditSkillTutorialRunning
 	{
-		public Camera mainCamera;
-
-		public Camera render3dCamera;
-
-		public QuestCharacterCtrl[] characterCtrls;
-
-		public PartyObjectsSettings objectsSettings;
-
-		public AudioPlayback bgmPlayback;
-
-		private PartyUICanvas mainCanvas;
-
-		private bool isTutorialRequired;
-
-		private bool isGoPartyCharacter;
-
-		private const string prefabPath = "Prefabs/OutGame/Party/Party/";
-
-		public bool isEditSkillTutorialRunning
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		private void Awake()
-		{
-		}
-
-		private void OnEnable()
-		{
-		}
-
-		private void Initialize()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
-
-		private bool SetupTutorialState()
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		public void StartTutorial()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void StartTutorialIfNeeded()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		private void Tutorial_1_1()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		private IEnumerator Tutorial_1_1_Coroutine(TouchGuardObject touchGuard)
-		{
-			return null;
-		}
+	private void Initialize()
+	{
+	}
 
-		private void Tutorial_StartEditSkill()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private void Tutorial_EndEditSkill()
-		{
-		}
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		private void Tutorial_Party_Attr()
-		{
-		}
+	private bool SetupTutorialState()
+	{
+		return default(bool);
+	}
 
-		private IEnumerator Tutorial_Party_Attr_Coroutine(TouchGuardObject touchGuard)
-		{
-			return null;
-		}
+	public void StartTutorial()
+	{
+	}
 
-		public void ReloadAllCharacterModels(bool isAutoSelect = false)
-		{
-		}
+	private void StartTutorialIfNeeded()
+	{
+	}
 
-		public void ReloadCharacterModel(int index, PartyReloadCharaAnimationType animationType = PartyReloadCharaAnimationType.LandAnimationNotDelay)
-		{
-		}
+	private void Tutorial_1_1()
+	{
+	}
 
-		public void OnOrganizeButtonPressed()
-		{
-		}
+	private IEnumerator Tutorial_1_1_Coroutine(TouchGuardObject touchGuard)
+	{
+		return null;
+	}
 
-		public void OnEquipChangeButtonPressed()
-		{
-		}
+	private void Tutorial_StartEditSkill()
+	{
+	}
 
-		private bool IsValidPlayFlow()
-		{
-			return default(bool);
-		}
+	private void Tutorial_EndEditSkill()
+	{
+	}
 
-		private void FooterButtonPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
+	private void Tutorial_Party_Attr()
+	{
+	}
 
-		private void GoFooterScene(string tabName, Footer.MenuTab tabType)
-		{
-		}
+	private IEnumerator Tutorial_Party_Attr_Coroutine(TouchGuardObject touchGuard)
+	{
+		return null;
+	}
 
-		private void FooterButtonLongPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
+	public void ReloadAllCharacterModels(bool isAutoSelect = false)
+	{
+	}
 
-		private void DetachFooterCallback()
-		{
-		}
+	public void ReloadCharacterModel(int index, PartyReloadCharaAnimationType animationType = PartyReloadCharaAnimationType.LandAnimationNotDelay)
+	{
+	}
 
-		public static void ReplaceAttributeMatchEffects(PartyUIStatus[] partyStatus)
-		{
-		}
+	public void OnOrganizeButtonPressed()
+	{
+	}
+
+	public void OnEquipChangeButtonPressed()
+	{
+	}
+
+	private bool IsValidPlayFlow()
+	{
+		return default(bool);
+	}
+
+	private void FooterButtonPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
+
+	private void GoFooterScene(string tabName, Footer.MenuTab tabType)
+	{
+	}
+
+	private void FooterButtonLongPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
+
+	private void DetachFooterCallback()
+	{
+	}
+
+	public static void ReplaceAttributeMatchEffects(PartyUIStatus[] partyStatus)
+	{
 	}
 }

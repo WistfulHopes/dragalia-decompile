@@ -4,50 +4,49 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class CommonTagSearch : MonoBehaviour
 {
-	[ExecuteAlways]
-	public class CommonTagSearch : MonoBehaviour
+	public InputField inputField;
+
+	public GameObject placeholderAttachment;
+
+	public Action<List<int>> onFilterChanged;
+
+	public Action<List<ulong>> onTalismanFilterChanged;
+
+	public CommonTagSearchModel model
 	{
-		public InputField inputField;
-
-		public GameObject placeholderAttachment;
-
-		public Action<List<int>> onFilterChanged;
-
-		public Action<List<ulong>> onTalismanFilterChanged;
-
-		public CommonTagSearchModel model
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		private void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void SetInput(string toText)
-		{
-		}
+	private void Start()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	public void SetInput(string toText)
+	{
+	}
 
-		public void RaiseOnTextChanged()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		private void OnInputTextChanged(string s)
-		{
-		}
+	public void RaiseOnTextChanged()
+	{
+	}
+
+	private void OnInputTextChanged(string s)
+	{
 	}
 }

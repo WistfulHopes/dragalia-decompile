@@ -1,16 +1,15 @@
-namespace Gluon
+namespace Gluon;
+
+public class PartyChangeQuestClearPartyDetailPopup : CommonPopup
 {
-	public class PartyChangeQuestClearPartyDetailPopup : CommonPopup
+	public ClearPartyEquipSampleListCell clearPartyEquipSampleListCell;
+
+	public static PartyChangeQuestClearPartyDetailPopup Create()
 	{
-		public ClearPartyEquipSampleListCell clearPartyEquipSampleListCell;
+		return null;
+	}
 
-		public static PartyChangeQuestClearPartyDetailPopup Create()
-		{
-			return null;
-		}
-
-		public void InitPopup(int sampleDataIndex)
-		{
-		}
+	public void InitPopup(int sampleDataIndex)
+	{
 	}
 }

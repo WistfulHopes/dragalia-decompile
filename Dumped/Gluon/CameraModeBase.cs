@@ -1,36 +1,35 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class CameraModeBase
 {
-	public class CameraModeBase
+	protected int cameraStep;
+
+	protected float cameraTime;
+
+	protected CameraController camera
 	{
-		protected int cameraStep;
-
-		protected float cameraTime;
-
-		protected CameraController camera
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
-
-		public CameraModeBase(CameraController controller)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Initialize()
-		{
-		}
+	public CameraModeBase(CameraController controller)
+	{
+	}
 
-		public virtual void Update()
-		{
-		}
+	public void Initialize()
+	{
+	}
+
+	public virtual void Update()
+	{
 	}
 }

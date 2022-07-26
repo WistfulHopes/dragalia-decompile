@@ -1,48 +1,47 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthManaCircleSkillAbilityDetailPopup : CommonPopup
 {
-	public class GrowthManaCircleSkillAbilityDetailPopup : CommonPopup
+	public enum PopupType
 	{
-		public enum PopupType
-		{
-			None,
-			Skill,
-			Ability,
-			ExAbility
-		}
+		None,
+		Skill,
+		Ability,
+		ExAbility
+	}
 
-		public Image iconImage;
+	public Image iconImage;
 
-		public Text nameText;
+	public Text nameText;
 
-		public Text detailText;
+	public Text detailText;
 
-		public Text levelText;
+	public Text levelText;
 
-		public static GrowthManaCircleSkillAbilityDetailPopup Create(string dialogPath, bool showBlackLayer = true)
-		{
-			return null;
-		}
+	public static GrowthManaCircleSkillAbilityDetailPopup Create(string dialogPath, bool showBlackLayer = true)
+	{
+		return null;
+	}
 
-		public void SetSkillIconImage(PopupType type, string iconName)
-		{
-		}
+	public void SetSkillIconImage(PopupType type, string iconName)
+	{
+	}
 
-		public void SetAbilityIconImage(PopupType type, string iconName)
-		{
-		}
+	public void SetAbilityIconImage(PopupType type, string iconName)
+	{
+	}
 
-		public void SetNameText(string name)
-		{
-		}
+	public void SetNameText(string name)
+	{
+	}
 
-		public void SetDetailText(string detail)
-		{
-		}
+	public void SetDetailText(string detail)
+	{
+	}
 
-		public void SetLevelText(string level)
-		{
-		}
+	public void SetLevelText(string level)
+	{
 	}
 }

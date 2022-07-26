@@ -2,89 +2,88 @@ using System.Collections;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AnotherNameScene : SceneBase
 {
-	public class AnotherNameScene : SceneBase
+	public GameObject httpGreenLight;
+
+	private Canvas mainCanvas;
+
+	private AnotherNameCellData nowSelectData;
+
+	private NowSetName nowSetName;
+
+	private NameListBase nameListBase;
+
+	private EmblemList[] allNameList;
+
+	private AnotherNameListController anotherNameListController;
+
+	private readonly string mainCanvasPath;
+
+	private IEnumerator Start()
 	{
-		public GameObject httpGreenLight;
+		return null;
+	}
 
-		private Canvas mainCanvas;
+	private void OnDestroy()
+	{
+	}
 
-		private AnotherNameCellData nowSelectData;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		private NowSetName nowSetName;
+	private void OnInitReady()
+	{
+	}
 
-		private NameListBase nameListBase;
+	private void OnEnterScene()
+	{
+	}
 
-		private EmblemList[] allNameList;
+	public override void OnPresentReceived()
+	{
+	}
 
-		private AnotherNameListController anotherNameListController;
+	public void BackButtonPressed()
+	{
+	}
 
-		private readonly string mainCanvasPath;
+	public void NameButtonPressed(AnotherNameCellData selectData)
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private void SendAnotherNameData()
+	{
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void SetDataOnSuccess(EmblemSetResponse res)
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void GetAnotherNameData()
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void GetDataOnSuccess(EmblemGetListResponse res)
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	public void RequestUpdateResetNewFlag(EmblemList[] emblemList)
+	{
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	private void ShowCompleteDialog()
+	{
+	}
 
-		public void BackButtonPressed()
-		{
-		}
+	private void ShowSortDialog()
+	{
+	}
 
-		public void NameButtonPressed(AnotherNameCellData selectData)
-		{
-		}
-
-		private void SendAnotherNameData()
-		{
-		}
-
-		private void SetDataOnSuccess(EmblemSetResponse res)
-		{
-		}
-
-		private void GetAnotherNameData()
-		{
-		}
-
-		private void GetDataOnSuccess(EmblemGetListResponse res)
-		{
-		}
-
-		public void RequestUpdateResetNewFlag(EmblemList[] emblemList)
-		{
-		}
-
-		private void ShowCompleteDialog()
-		{
-		}
-
-		private void ShowSortDialog()
-		{
-		}
-
-		private void SetSortInfo(AnotherNameSortData sortData)
-		{
-		}
+	private void SetSortInfo(AnotherNameSortData sortData)
+	{
 	}
 }

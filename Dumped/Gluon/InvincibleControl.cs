@@ -1,100 +1,101 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class InvincibleControl
 {
-	public class InvincibleControl
+	public enum Type
 	{
-		public enum Type
+		None,
+		Skill,
+		SkillLink,
+		DragonTransform,
+		DragonRelease,
+		Blast,
+		BlastRecovery,
+		Down,
+		DownRecovery,
+		Revive,
+		EnemyPop,
+		FromAction,
+		FromActionCommand,
+		Torpedo,
+		Carried,
+		InSafeArea,
+		NoReceive,
+		System,
+		GuardCounter,
+		Buff,
+		EnemyGimmick,
+		DungeonWarp,
+		Bind,
+		AlloutAssault,
+		LastBossDeadAreaChange,
+		Guts,
+		IngameCuttPlaying
+	}
+
+	public struct InvincibleParam
+	{
+		public Type type;
+
+		public int level;
+
+		public float sec;
+
+		public int uid;
+	}
+
+	private List<InvincibleParam> invincibles;
+
+	public int level
+	{
+		[CompilerGenerated]
+		get
 		{
-			None,
-			Skill,
-			SkillLink,
-			DragonTransform,
-			DragonRelease,
-			Blast,
-			BlastRecovery,
-			Down,
-			DownRecovery,
-			Revive,
-			EnemyPop,
-			FromAction,
-			FromActionCommand,
-			Torpedo,
-			Carried,
-			InSafeArea,
-			NoReceive,
-			System,
-			GuardCounter,
-			Buff,
-			EnemyGimmick,
-			DungeonWarp,
-			Bind,
-			AlloutAssault,
-			LastBossDeadAreaChange
+			return default(int);
 		}
-
-		public struct InvincibleParam
-		{
-			public Type type;
-
-			public int level;
-
-			public float sec;
-
-			public int uid;
-		}
-
-		private List<InvincibleParam> invincibles;
-
-		public int level
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public void Add(Type type, int level, float sec, int uid = 0)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Remove(Type type, int uid = 0)
-		{
-		}
+	public void Add(Type type, int level, float sec, int uid = 0)
+	{
+	}
 
-		public void RemoveUnderLevel(int level)
-		{
-		}
+	public void Remove(Type type, int uid = 0)
+	{
+	}
 
-		public void RemoveExcludeSystem()
-		{
-		}
+	public void RemoveUnderLevel(int level)
+	{
+	}
 
-		public void Clear()
-		{
-		}
+	public void RemoveExcludeSystem()
+	{
+	}
 
-		public void Update(float delta)
-		{
-		}
+	public void Clear()
+	{
+	}
 
-		private void SetLevel()
-		{
-		}
+	public void Update(float delta)
+	{
+	}
 
-		public void InactivateDownRecovery()
-		{
-		}
+	private void SetLevel()
+	{
+	}
 
-		public string GetZombieLog()
-		{
-			return null;
-		}
+	public void InactivateDownRecovery()
+	{
+	}
+
+	public string GetZombieLog()
+	{
+		return null;
 	}
 }

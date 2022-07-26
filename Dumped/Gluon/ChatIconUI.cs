@@ -2,20 +2,19 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ChatIconUI : MonoBehaviour
 {
-	public class ChatIconUI : MonoBehaviour
+	private Image image;
+
+	private Sequence sequenceEffect;
+
+	public void Initialize(float stayTime, float fadeTime)
 	{
-		private Image image;
+	}
 
-		private Sequence sequenceEffect;
-
-		public void Initialize(float stayTime, float fadeTime)
-		{
-		}
-
-		public void Display()
-		{
-		}
+	public void Display()
+	{
 	}
 }

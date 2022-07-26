@@ -1,30 +1,28 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandTopic : IStoryCommand
 {
-	[CommandName("topic")]
-	public class StoryCommandTopic : IStoryCommand
+	private IEnumerator coroutine;
+
+	private string fileName;
+
+	private float fadeTime;
+
+	private bool visible;
+
+	public void Start(string fileName, float fadeTime = 1f)
 	{
-		private IEnumerator coroutine;
+	}
 
-		private string fileName;
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		private float fadeTime;
-
-		private bool visible;
-
-		public void Start(string fileName, float fadeTime = 1f)
-		{
-		}
-
-		public override bool Update()
-		{
-			return default(bool);
-		}
-
-		private IEnumerator _Update()
-		{
-			return null;
-		}
+	private IEnumerator _Update()
+	{
+		return null;
 	}
 }

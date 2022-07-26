@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum QuestGroupType
 {
-	public enum QuestGroupType
-	{
-		NONE,
-		MAIN,
-		EVENT
-	}
+	NONE,
+	MAIN,
+	EVENT
 }

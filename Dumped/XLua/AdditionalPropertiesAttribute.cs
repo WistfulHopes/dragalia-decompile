@@ -1,8 +1,7 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+public class AdditionalPropertiesAttribute : Attribute
 {
-	public class AdditionalPropertiesAttribute : Attribute
-	{
-	}
 }

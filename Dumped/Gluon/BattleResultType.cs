@@ -1,8 +1,7 @@
-namespace Gluon
+namespace Gluon;
+
+public enum BattleResultType
 {
-	public enum BattleResultType
-	{
-		TimeUp,
-		Point
-	}
+	TimeUp,
+	Point
 }

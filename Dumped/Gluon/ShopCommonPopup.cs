@@ -3,81 +3,78 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ShopCommonPopup : CommonPopup
 {
-	public class ShopCommonPopup : CommonPopup
+	protected Action onOKOrClose;
+
+	protected Action onCancel;
+
+	[SerializeField]
+	protected GameObject[] dialogModeOnGOs;
+
+	[SerializeField]
+	protected GameObject[] panelModeOnGOs;
+
+	[SerializeField]
+	protected float panelModeFrameSizeDiff;
+
+	[SerializeField]
+	protected Vector3 panelModeFrameOffset;
+
+	protected Transform frameParent;
+
+	private RectTransform referenceRect;
+
+	protected bool isPanelMode
 	{
-		protected Action onOKOrClose;
-
-		protected Action onCancel;
-
-		[SerializeField]
-		[Header("PanelModeOnOffs")]
-		protected GameObject[] dialogModeOnGOs;
-
-		[SerializeField]
-		protected GameObject[] panelModeOnGOs;
-
-		[SerializeField]
-		[Header("PanelModeFrameOffset")]
-		protected float panelModeFrameSizeDiff;
-
-		[SerializeField]
-		protected Vector3 panelModeFrameOffset;
-
-		protected Transform frameParent;
-
-		private RectTransform referenceRect;
-
-		protected bool isPanelMode
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		public static ShopCommonPopup Create(string title, string text, BottomButtons bottomButtons = BottomButtons.Close, [Optional] Action onOKOrClose, [Optional] Action onCancel, Size size = Size.S)
-		{
-			return null;
-		}
-
-		public static ShopCommonPopup CreateWithPrefab(string prefabName, [Optional] Action onOKOrClose, [Optional] Action onCancel)
-		{
-			return null;
-		}
-
-		public void SetPanelMode(Transform frameParent, RectTransform referenceRect)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void SetCallbacks([Optional] Action onOKOrClose, [Optional] Action onCancel)
-		{
-		}
+	public static ShopCommonPopup Create(string title, string text, BottomButtons bottomButtons = BottomButtons.Close, [Optional] Action onOKOrClose, [Optional] Action onCancel, Size size = Size.S)
+	{
+		return null;
+	}
 
-		private void InitWithTitleAndText(string title, string text, [Optional] Action onOKOrClose, [Optional] Action onCancel)
-		{
-		}
+	public static ShopCommonPopup CreateWithPrefab(string prefabName, [Optional] Action onOKOrClose, [Optional] Action onCancel)
+	{
+		return null;
+	}
 
-		protected override void Start()
-		{
-		}
+	public void SetPanelMode(Transform frameParent, RectTransform referenceRect)
+	{
+	}
 
-		protected virtual void OnPanelModeSet()
-		{
-		}
+	public void SetCallbacks([Optional] Action onOKOrClose, [Optional] Action onCancel)
+	{
+	}
 
-		protected virtual void OnOKOrClosePopup()
-		{
-		}
+	private void InitWithTitleAndText(string title, string text, [Optional] Action onOKOrClose, [Optional] Action onCancel)
+	{
+	}
 
-		protected virtual void OnCancelPopup()
-		{
-		}
+	protected override void Start()
+	{
+	}
+
+	protected virtual void OnPanelModeSet()
+	{
+	}
+
+	protected virtual void OnOKOrClosePopup()
+	{
+	}
+
+	protected virtual void OnCancelPopup()
+	{
 	}
 }

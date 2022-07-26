@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum DeviceType
 {
-	public enum DeviceType
-	{
-		NONE,
-		IOS,
-		ANDROID,
-		WIN,
-		OSX
-	}
+	NONE,
+	IOS,
+	ANDROID,
+	WIN,
+	OSX
 }

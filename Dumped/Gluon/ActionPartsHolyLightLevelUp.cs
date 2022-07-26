@@ -1,17 +1,16 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsHolyLightLevelUp : ActionParts
 {
-	public class ActionPartsHolyLightLevelUp : ActionParts
+	private readonly SetupHolyLightData _partsData;
+
+	public ActionPartsHolyLightLevelUp(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly SetupHolyLightData _partsData;
+	}
 
-		public ActionPartsHolyLightLevelUp(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

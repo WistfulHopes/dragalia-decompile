@@ -4,184 +4,183 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthUnitEquipCountConfirmPopup : CommonPopup, ICustomMessage
 {
-	public class GrowthUnitEquipCountConfirmPopup : CommonPopup, ICustomMessage
+	public GameObject originCell;
+
+	public Transform cellParentTransform;
+
+	public Text needRupiText;
+
+	public Text beforeRupiText;
+
+	public Text afterRupiText;
+
+	public CommonSlider slider;
+
+	public Button plusButton;
+
+	public Button minusButton;
+
+	public Text useCountText;
+
+	public Text totalCountText;
+
+	public Text conditionText;
+
+	public GameObject[] dewUIObjects;
+
+	public Text needDewText;
+
+	public Text beforeDewText;
+
+	public Text afterDewText;
+
+	public Text shortDewText;
+
+	public GameObject[] materialUIObjects;
+
+	public GameObject rupiUIObject;
+
+	public Image equipIcon;
+
+	public Sprite weaponIconSprite;
+
+	public Material weaponIconMaterial;
+
+	public Sprite crestIconSprite;
+
+	public Material crestIconMaterial;
+
+	public GameObject needMaterialTextObject;
+
+	public Action reloadCanvasUICallBack;
+
+	private int _nowValue;
+
+	private GrowthUnitEnhanceModel model;
+
+	private List<CraftMaterialCell> materialCells;
+
+	private Coroutine updateUICoroutine;
+
+	private Coroutine countCoroutine;
+
+	private PointerEventHandler plusButtonEventHandler;
+
+	private PointerEventHandler minusButtonEventHandler;
+
+	private int minValue;
+
+	private int maxValue;
+
+	private bool isDesabledReleaseButton;
+
+	private bool isShortageRupi;
+
+	private bool isEndInitTask;
+
+	private bool isSkipChangeValueTask;
+
+	private PointerEventHandler okButtonHandler;
+
+	public int nowValue
 	{
-		public GameObject originCell;
-
-		public Transform cellParentTransform;
-
-		public Text needRupiText;
-
-		public Text beforeRupiText;
-
-		public Text afterRupiText;
-
-		public CommonSlider slider;
-
-		public Button plusButton;
-
-		public Button minusButton;
-
-		public Text useCountText;
-
-		public Text totalCountText;
-
-		public Text conditionText;
-
-		public GameObject[] dewUIObjects;
-
-		public Text needDewText;
-
-		public Text beforeDewText;
-
-		public Text afterDewText;
-
-		public Text shortDewText;
-
-		public GameObject[] materialUIObjects;
-
-		public GameObject rupiUIObject;
-
-		public Image equipIcon;
-
-		public Sprite weaponIconSprite;
-
-		public Material weaponIconMaterial;
-
-		public Sprite crestIconSprite;
-
-		public Material crestIconMaterial;
-
-		public GameObject needMaterialTextObject;
-
-		public Action reloadCanvasUICallBack;
-
-		private int _nowValue;
-
-		private GrowthUnitEnhanceModel model;
-
-		private List<CraftMaterialCell> materialCells;
-
-		private Coroutine updateUICoroutine;
-
-		private Coroutine countCoroutine;
-
-		private PointerEventHandler plusButtonEventHandler;
-
-		private PointerEventHandler minusButtonEventHandler;
-
-		private int minValue;
-
-		private int maxValue;
-
-		private bool isDesabledReleaseButton;
-
-		private bool isShortageRupi;
-
-		private bool isEndInitTask;
-
-		private bool isSkipChangeValueTask;
-
-		private PointerEventHandler okButtonHandler;
-
-		public int nowValue
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			private set
-			{
-			}
+			return default(int);
 		}
-
-		private void OnEnable()
+		private set
 		{
 		}
+	}
 
-		private void OnDisable()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		public static GrowthUnitEquipCountConfirmPopup Create()
-		{
-			return null;
-		}
+	private void OnDisable()
+	{
+	}
 
-		public void InitPopup(GrowthUnitEnhanceModel model)
-		{
-		}
+	public static GrowthUnitEquipCountConfirmPopup Create()
+	{
+		return null;
+	}
 
-		public void ChangedSliderValue(float newValue)
-		{
-		}
+	public void InitPopup(GrowthUnitEnhanceModel model)
+	{
+	}
 
-		public void OnPlusButtonPressed()
-		{
-		}
+	public void ChangedSliderValue(float newValue)
+	{
+	}
 
-		public void OnMinusButtonPressed()
-		{
-		}
+	public void OnPlusButtonPressed()
+	{
+	}
 
-		public void OnValueChangeButtonLongPressed(int countInc)
-		{
-		}
+	public void OnMinusButtonPressed()
+	{
+	}
 
-		private IEnumerator CountSpeedCoroutine(bool isPlus)
-		{
-			return null;
-		}
+	public void OnValueChangeButtonLongPressed(int countInc)
+	{
+	}
 
-		private IEnumerator UpdatePopupUIDelay()
-		{
-			return null;
-		}
+	private IEnumerator CountSpeedCoroutine(bool isPlus)
+	{
+		return null;
+	}
 
-		private void UpdatePopupUI()
-		{
-		}
+	private IEnumerator UpdatePopupUIDelay()
+	{
+		return null;
+	}
 
-		private void SetupMaterialCell()
-		{
-		}
+	private void UpdatePopupUI()
+	{
+	}
 
-		private void UpdateMaterialCell()
-		{
-		}
+	private void SetupMaterialCell()
+	{
+	}
 
-		private void OnMaterialIconPressed(CraftMaterialCellData cellData)
-		{
-		}
+	private void UpdateMaterialCell()
+	{
+	}
 
-		private void SetupRupi()
-		{
-		}
+	private void OnMaterialIconPressed(CraftMaterialCellData cellData)
+	{
+	}
 
-		private void UpdateRupi()
-		{
-		}
+	private void SetupRupi()
+	{
+	}
 
-		private void SetupDewUI()
-		{
-		}
+	private void UpdateRupi()
+	{
+	}
 
-		private void UpdateDewUI()
-		{
-		}
+	private void SetupDewUI()
+	{
+	}
 
-		private void InitReleaseCountSlider()
-		{
-		}
+	private void UpdateDewUI()
+	{
+	}
 
-		private void SetEquiplIcon()
-		{
-		}
+	private void InitReleaseCountSlider()
+	{
+	}
 
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	private void SetEquiplIcon()
+	{
+	}
+
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

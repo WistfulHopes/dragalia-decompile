@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class AbnormalStatusDestroyFire : AbnormalStatusSlipBase
 {
-	public class AbnormalStatusDestroyFire : AbnormalStatusSlipBase
-	{
-	}
 }

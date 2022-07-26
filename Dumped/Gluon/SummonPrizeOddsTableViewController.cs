@@ -3,45 +3,41 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonPrizeOddsTableViewController : TableViewController<SummonPrizeOddsTableViewData>
 {
-	public class SummonPrizeOddsTableViewController : TableViewController<SummonPrizeOddsTableViewData>
+	[SerializeField]
+	public Text topText;
+
+	public GameObject topPart;
+
+	[SerializeField]
+	public RectTransform verticalLayout;
+
+	[SerializeField]
+	public SummonPrizeOddsPopupOverallTotalBlock[] normalOverallTotal;
+
+	public SummonPrizeOddsPopupOverallTotalBlock[] guaranteedOverallTotal;
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		[Header("TypeText")]
-		public Text topText;
+	}
 
-		public GameObject topPart;
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		[SerializeField]
-		[Header("TopContents")]
-		public RectTransform verticalLayout;
+	public void ReloadByData(List<SummonPrizeOddsTableViewData> data)
+	{
+	}
 
-		[SerializeField]
-		[Header("TotalBlocks")]
-		public SummonPrizeOddsPopupOverallTotalBlock[] normalOverallTotal;
+	public void SetTopPadding(float height)
+	{
+	}
 
-		public SummonPrizeOddsPopupOverallTotalBlock[] guaranteedOverallTotal;
-
-		protected override void Awake()
-		{
-		}
-
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
-
-		public void ReloadByData(List<SummonPrizeOddsTableViewData> data)
-		{
-		}
-
-		public void SetTopPadding(float height)
-		{
-		}
-
-		public void SetupTotalBlocks(SummonPrizeOddsRateList oddsRate)
-		{
-		}
+	public void SetupTotalBlocks(SummonPrizeOddsRateList oddsRate)
+	{
 	}
 }

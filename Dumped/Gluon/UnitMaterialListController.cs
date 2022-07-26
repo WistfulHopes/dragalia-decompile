@@ -1,58 +1,57 @@
-namespace Gluon
+namespace Gluon;
+
+public class UnitMaterialListController : CommonIconListController
 {
-	public class UnitMaterialListController : CommonIconListController
+	public GrowthMaterialSelectScene scene;
+
+	public int CellCount => default(int);
+
+	protected override CommonIconListCellData CreateDragonCellData(ulong keyId, int decoNum)
 	{
-		public GrowthMaterialSelectScene scene;
+		return null;
+	}
 
-		public int CellCount => default(int);
+	protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		protected override CommonIconListCellData CreateDragonCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	protected override CommonIconListCellData CreateAmuletCellData(ulong keyId, int decoNum)
+	{
+		return null;
+	}
 
-		protected override CommonIconListCellData CreateWeaponCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	public GrowMaterialCellData GetCellDataByKeyId(ulong keyId)
+	{
+		return null;
+	}
 
-		protected override CommonIconListCellData CreateAmuletCellData(ulong keyId, int decoNum)
-		{
-			return null;
-		}
+	public void UpdateCellByKeyIds(ulong[] keyIds)
+	{
+	}
 
-		public GrowMaterialCellData GetCellDataByKeyId(ulong keyId)
-		{
-			return null;
-		}
+	public void NotUseMaterialIconLock(bool isExpItemLock, bool isHpPlusLock, bool isAtkPlusLock)
+	{
+	}
 
-		public void UpdateCellByKeyIds(ulong[] keyIds)
-		{
-		}
+	public void AllListIconLock()
+	{
+	}
 
-		public void NotUseMaterialIconLock(bool isExpItemLock, bool isHpPlusLock, bool isAtkPlusLock)
-		{
-		}
+	public void AllListIconUnlock()
+	{
+	}
 
-		public void AllListIconLock()
-		{
-		}
+	public void IconListSelectClear()
+	{
+	}
 
-		public void AllListIconUnlock()
-		{
-		}
+	public GrowMaterialCellData[] GetAutoSelectMaterial()
+	{
+		return null;
+	}
 
-		public void IconListSelectClear()
-		{
-		}
-
-		public GrowMaterialCellData[] GetAutoSelectMaterial()
-		{
-			return null;
-		}
-
-		public void UpdateCellDataSelectNumber()
-		{
-		}
+	public void UpdateCellDataSelectNumber()
+	{
 	}
 }

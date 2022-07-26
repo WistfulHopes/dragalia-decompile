@@ -5,303 +5,302 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPageUICanvas : AnimationUICanvas
 {
-	public class MyPageUICanvas : AnimationUICanvas
+	private enum MainBannerType
 	{
-		private enum MainBannerType
-		{
-			QuestEvent = 1,
-			QuestEventGroup,
-			Event
-		}
+		QuestEvent = 1,
+		QuestEventGroup,
+		Event
+	}
 
-		public CanvasGroup canvasGroup;
+	public CanvasGroup canvasGroup;
 
-		public RawImage fadeoutImage;
+	public RawImage fadeoutImage;
 
-		public MyPageScene scene;
+	public MyPageScene scene;
 
-		public Badge missionBadge;
+	public Badge missionBadge;
 
-		public Image pickupMissionBadge;
+	public Image pickupMissionBadge;
 
-		public Badge shopBadge;
+	public Badge shopBadge;
 
-		public GameObject shopNewIcon;
+	public GameObject shopNewIcon;
 
-		public Button infoButton;
+	public Button infoButton;
 
-		public Badge guildBadge;
+	public Badge guildBadge;
 
-		[SerializeField]
-		private GameObject inviteBadge;
+	[SerializeField]
+	private GameObject inviteBadge;
 
-		public Button missionButton;
+	public Button missionButton;
 
-		public Button shopButton;
+	public Button shopButton;
 
-		public Button guildButton;
+	public Button guildButton;
 
-		public Button bannerButton;
+	public Button bannerButton;
 
-		public Image bannerLockImage;
+	public Image bannerLockImage;
 
-		public GameObject campaignButtonParent;
+	public GameObject campaignButtonParent;
 
-		public Button campaignButton;
+	public Button campaignButton;
 
-		public Button uiHideButton;
+	public Button uiHideButton;
 
-		[SerializeField]
-		public Button drillButton;
+	[SerializeField]
+	public Button drillButton;
 
-		public GameObject subBannerNode;
+	public GameObject subBannerNode;
 
-		public MyPageSubBannerController subBannerController;
+	public MyPageSubBannerController subBannerController;
 
-		public GameObject startDash;
+	public GameObject startDash;
 
-		public Image startDashTextImage;
+	public Image startDashTextImage;
 
-		public Text startDashTimeText;
+	public Text startDashTimeText;
 
-		public GameObject specialShopBalloon;
+	public GameObject specialShopBalloon;
 
-		public Text specialShopTimeText;
+	public Text specialShopTimeText;
 
-		public Image mainBannerImage;
+	public Image mainBannerImage;
 
-		public Text mainBannerText;
+	public Text mainBannerText;
 
-		public bool isMainBannerEnabled;
+	public bool isMainBannerEnabled;
 
-		public Badge mainBannerBadge;
+	public Badge mainBannerBadge;
 
-		public CanvasGroup mainBannerCanvasGroup;
+	public CanvasGroup mainBannerCanvasGroup;
 
-		public bool isTutorialCheckComplete;
+	public bool isTutorialCheckComplete;
 
-		private const int emptyEventId = 20101;
+	private const int emptyEventId = 20101;
 
-		private const int voidEventId = 30000;
+	private const int voidEventId = 30000;
 
-		private int mainBannerEventId;
+	private int mainBannerEventId;
 
-		private MainBannerType mainBannerType;
+	private MainBannerType mainBannerType;
 
-		[SerializeField]
-		private GameObject guideTopObj;
+	[SerializeField]
+	private GameObject guideTopObj;
 
-		[SerializeField]
-		private GameObject mainStoryGuideObj;
+	[SerializeField]
+	private GameObject mainStoryGuideObj;
 
-		[SerializeField]
-		private GameObject missionGuideObj;
+	[SerializeField]
+	private GameObject missionGuideObj;
 
-		[SerializeField]
-		private Button guideToggleButton;
+	[SerializeField]
+	private Button guideToggleButton;
 
-		[SerializeField]
-		private Animator missionGuideAnimator;
+	[SerializeField]
+	private Animator missionGuideAnimator;
 
-		private const string missionGuideToggleKey = "MypPageMissionGuideToggleState";
+	private const string missionGuideToggleKey = "MypPageMissionGuideToggleState";
 
-		[SerializeField]
-		private Text mainStoryGuideTitle;
+	[SerializeField]
+	private Text mainStoryGuideTitle;
 
-		[SerializeField]
-		private Text mainStoryGuideText;
+	[SerializeField]
+	private Text mainStoryGuideText;
 
-		[SerializeField]
-		private Text mainStoryMissionTopTitle;
+	[SerializeField]
+	private Text mainStoryMissionTopTitle;
 
-		[SerializeField]
-		private MypageMainStoryMissionCell mainStoryMissionTitleCell;
+	[SerializeField]
+	private MypageMainStoryMissionCell mainStoryMissionTitleCell;
 
-		[SerializeField]
-		private MypageMainStoryMissionCell[] mainStoryMissionCells;
+	[SerializeField]
+	private MypageMainStoryMissionCell[] mainStoryMissionCells;
 
-		[SerializeField]
-		private GameObject mainStoryMissionUIObj;
+	[SerializeField]
+	private GameObject mainStoryMissionUIObj;
 
-		[SerializeField]
-		private Text dailyMissionGuideText;
+	[SerializeField]
+	private Text dailyMissionGuideText;
 
-		private bool isEventBannerTransitionProcessing;
+	private bool isEventBannerTransitionProcessing;
 
-		[SerializeField]
-		private GameObject hideFinishButton;
+	[SerializeField]
+	private GameObject hideFinishButton;
 
-		[SerializeField]
-		private UiAnimationHide uiAnimationHide;
+	[SerializeField]
+	private UiAnimationHide uiAnimationHide;
 
-		[SerializeField]
-		private MyPageMissionDrillGuide missionDrillGuide;
+	[SerializeField]
+	private MyPageMissionDrillGuide missionDrillGuide;
 
-		[SerializeField]
-		private Transform missionGuidePositionAnchor;
+	[SerializeField]
+	private Transform missionGuidePositionAnchor;
 
-		protected override void Awake()
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		private IEnumerator CheckSubBannerEnabled()
-		{
-			return null;
-		}
+	private IEnumerator CheckSubBannerEnabled()
+	{
+		return null;
+	}
 
-		private void SetMainBannerText(EventDataElement eventData)
-		{
-		}
+	private void SetMainBannerText(EventDataElement eventData)
+	{
+	}
 
-		private void SetMainBannerImage(int bannerImageId, string bannerImageName, [Optional] Action<Material> onCompleted)
-		{
-		}
+	private void SetMainBannerImage(int bannerImageId, string bannerImageName, [Optional] Action<Material> onCompleted)
+	{
+	}
 
-		private bool GetEventDataWithinPeriod(int eventDataId, out EventDataElement eventData)
-		{
-			return default(bool);
-		}
+	private bool GetEventDataWithinPeriod(int eventDataId, out EventDataElement eventData)
+	{
+		return default(bool);
+	}
 
-		private void SetMainBanner()
-		{
-		}
+	private void SetMainBanner()
+	{
+	}
 
-		public void Reload()
-		{
-		}
+	public void Reload()
+	{
+	}
 
-		public void UpdateMissionBadgeMark()
-		{
-		}
+	public void UpdateMissionBadgeMark()
+	{
+	}
 
-		public void ShowStartDash()
-		{
-		}
+	public void ShowStartDash()
+	{
+	}
 
-		public void ShowShopBadge(bool visible)
-		{
-		}
+	public void ShowShopBadge(bool visible)
+	{
+	}
 
-		public static bool IsGuildBadgeVisible()
-		{
-			return default(bool);
-		}
+	public static bool IsGuildBadgeVisible()
+	{
+		return default(bool);
+	}
 
-		public void ShowGuildBadge()
-		{
-		}
+	public void ShowGuildBadge()
+	{
+	}
 
-		public void OnQuestButtonPressed(bool state)
-		{
-		}
+	public void OnQuestButtonPressed(bool state)
+	{
+	}
 
-		public void OnEventButtonPressed(bool state)
-		{
-		}
+	public void OnEventButtonPressed(bool state)
+	{
+	}
 
-		public void OnEventBannerButtonPressed(bool state)
-		{
-		}
+	public void OnEventBannerButtonPressed(bool state)
+	{
+	}
 
-		public void OnGuildButtonPressed()
-		{
-		}
+	public void OnGuildButtonPressed()
+	{
+	}
 
-		public void OnNoticeButtonPressed(bool state)
-		{
-		}
+	public void OnNoticeButtonPressed(bool state)
+	{
+	}
 
-		public InformationPopup CreateInformationPopup(bool state)
-		{
-			return null;
-		}
+	public InformationPopup CreateInformationPopup(bool state)
+	{
+		return null;
+	}
 
-		public void OnMissionButtonPressed(bool state)
-		{
-		}
+	public void OnMissionButtonPressed(bool state)
+	{
+	}
 
-		public void OnPvPButtonPressed()
-		{
-		}
+	public void OnPvPButtonPressed()
+	{
+	}
 
-		public void OnCampaignButtonPressed()
-		{
-		}
+	public void OnCampaignButtonPressed()
+	{
+	}
 
-		public void OnShopButtonPressed()
-		{
-		}
+	public void OnShopButtonPressed()
+	{
+	}
 
-		public void OnMainStoryMissionButtonPressed()
-		{
-		}
+	public void OnMainStoryMissionButtonPressed()
+	{
+	}
 
-		public void SetSceneeAllButton(bool enable)
-		{
-		}
+	public void SetSceneeAllButton(bool enable)
+	{
+	}
 
-		private void SetEnableColorForBanner(bool enable)
-		{
-		}
+	private void SetEnableColorForBanner(bool enable)
+	{
+	}
 
-		private IEnumerator TutorialCheckCoroutine(bool enable)
-		{
-			return null;
-		}
+	private IEnumerator TutorialCheckCoroutine(bool enable)
+	{
+		return null;
+	}
 
-		public void CheckShopNewBadge()
-		{
-		}
+	public void CheckShopNewBadge()
+	{
+	}
 
-		private void UpdateTutorialGuide()
-		{
-		}
+	private void UpdateTutorialGuide()
+	{
+	}
 
-		private void UpdateMissionGuideText()
-		{
-		}
+	private void UpdateMissionGuideText()
+	{
+	}
 
-		private void UpdateMissionGuideToggle()
-		{
-		}
+	private void UpdateMissionGuideToggle()
+	{
+	}
 
-		private void SetMissionGuideToggle(bool isOpen, bool isSave = true)
-		{
-		}
+	private void SetMissionGuideToggle(bool isOpen, bool isSave = true)
+	{
+	}
 
-		public void OnChangeMissionGuideToggle()
-		{
-		}
+	public void OnChangeMissionGuideToggle()
+	{
+	}
 
-		public void OnMissionGuideButtonPressed()
-		{
-		}
+	public void OnMissionGuideButtonPressed()
+	{
+	}
 
-		public void UpdateDrillMissionGuide()
-		{
-		}
+	public void UpdateDrillMissionGuide()
+	{
+	}
 
-		private void ShowSpecialShop()
-		{
-		}
+	private void ShowSpecialShop()
+	{
+	}
 
-		public void OnUiHideButtonPressed()
-		{
-		}
+	public void OnUiHideButtonPressed()
+	{
+	}
 
-		public void OnMissionDrillButtonPressed()
-		{
-		}
+	public void OnMissionDrillButtonPressed()
+	{
+	}
 
-		public void OnFinishUiHideButtonPressed()
-		{
-		}
+	public void OnFinishUiHideButtonPressed()
+	{
 	}
 }

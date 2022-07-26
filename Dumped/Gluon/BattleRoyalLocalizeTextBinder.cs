@@ -1,16 +1,15 @@
-namespace Gluon
+namespace Gluon;
+
+public class BattleRoyalLocalizeTextBinder : AutoLocalizeTextBinderBase
 {
-	public class BattleRoyalLocalizeTextBinder : AutoLocalizeTextBinderBase
+	protected override string prefixType
 	{
-		protected override string prefixType
+		get
 		{
-			get
-			{
-				return null;
-			}
-			set
-			{
-			}
+			return null;
+		}
+		set
+		{
 		}
 	}
 }

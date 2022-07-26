@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum GrowthBaseType
 {
-	public enum GrowthBaseType
-	{
-		None,
-		Character,
-		Dragon,
-		Weapon,
-		Amulet
-	}
+	None,
+	Character,
+	Dragon,
+	Weapon,
+	Amulet
 }

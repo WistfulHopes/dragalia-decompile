@@ -1,12 +1,11 @@
-namespace XLua
+namespace XLua;
+
+public enum LazyMemberTypes
 {
-	public enum LazyMemberTypes
-	{
-		Method,
-		FieldGet,
-		FieldSet,
-		PropertyGet,
-		PropertySet,
-		Event
-	}
+	Method,
+	FieldGet,
+	FieldSet,
+	PropertyGet,
+	PropertySet,
+	Event
 }

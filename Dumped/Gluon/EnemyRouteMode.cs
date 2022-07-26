@@ -7,273 +7,272 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyRouteMode
 {
-	public class EnemyRouteMode
+	public enum State
 	{
-		public enum State
+		Ready,
+		Stepping,
+		Idle,
+		Move,
+		Arrival,
+		BackTo,
+		Goal,
+		EmergencyMove
+	}
+
+	private State _state;
+
+	private bool _state1st;
+
+	private List<DungeonPathLine> _pathList;
+
+	private DungeonPathLine.PathPoint _currentPathPoint;
+
+	private Vector3 _lastPassedPathPoint;
+
+	private Vector3 _popedPosition;
+
+	private Vector3 _backPoint;
+
+	private float _steppingTime;
+
+	private float _timer;
+
+	private float _speed;
+
+	private List<EnemyCtrl> _squadMembers;
+
+	private const float FOLLOW_DISTANCE = 1f;
+
+	private const float FOLLOW_ANGLE = (float)Math.PI / 2f;
+
+	private Vector3 _followPoint;
+
+	private float _sqrStoppingDistance;
+
+	private List<CharacterSpecialState> _recvEventQueue;
+
+	private int _searchTimingCnt;
+
+	private int _resetCount;
+
+	public State state
+	{
+		get
 		{
-			Ready,
-			Stepping,
-			Idle,
-			Move,
-			Arrival,
-			BackTo,
-			Goal,
-			EmergencyMove
+			return default(State);
 		}
-
-		private State _state;
-
-		private bool _state1st;
-
-		private List<DungeonPathLine> _pathList;
-
-		private DungeonPathLine.PathPoint _currentPathPoint;
-
-		private Vector3 _lastPassedPathPoint;
-
-		private Vector3 _popedPosition;
-
-		private Vector3 _backPoint;
-
-		private float _steppingTime;
-
-		private float _timer;
-
-		private float _speed;
-
-		private List<EnemyCtrl> _squadMembers;
-
-		private const float FOLLOW_DISTANCE = 1f;
-
-		private const float FOLLOW_ANGLE = (float)Math.PI / 2f;
-
-		private Vector3 _followPoint;
-
-		private float _sqrStoppingDistance;
-
-		private List<CharacterSpecialState> _recvEventQueue;
-
-		private int _searchTimingCnt;
-
-		private int _resetCount;
-
-		public State state
-		{
-			get
-			{
-				return default(State);
-			}
-			private set
-			{
-			}
-		}
-
-		protected EnemyCharacter owner
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public NavMeshAgent agent => null;
-
-		public EnemyRouteModeElement data
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool hasStart
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool hasGoal
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool hasReact
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public bool hasStopAi
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public DungeonPathLine.PathPoint currentPathPoint => null;
-
-		public int squadIdx
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
-		}
-
-		public EnemyRouteMode(EnemyCharacter owner_, List<DungeonPathLine> path_list, float steppingTime)
+		private set
 		{
 		}
+	}
 
-		public void Reset()
+	protected EnemyCharacter owner
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public void Start()
+	public NavMeshAgent agent => null;
+
+	public EnemyRouteModeElement data
+	{
+		[CompilerGenerated]
+		get
+		{
+			return null;
+		}
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool Restart()
+	public bool hasStart
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public bool Update()
+	public bool hasGoal
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		private void ProcReady()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void ProcStepping(ref bool ret)
-		{
-		}
-
-		private void ProcIdle()
-		{
-		}
-
-		private void ProcMove(ref bool ret)
-		{
-		}
-
-		private void ProcArrival()
-		{
-		}
-
-		private void ProcGoal(ref bool ret)
-		{
-		}
-
-		private void ProcBackTo()
-		{
-		}
-
-		private void ProcEmergencyMove(ref bool ret)
-		{
-		}
-
-		private void EnableAgent(bool sw)
-		{
-		}
-
-		private bool SetDestination(Vector3 position, bool not_follow = false)
+	public bool hasReact
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		private bool Search()
+	public bool hasStopAi
+	{
+		[CompilerGenerated]
+		get
 		{
 			return default(bool);
 		}
-
-		private void SwicthBattleMode()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		public bool IsOutRange()
+	public DungeonPathLine.PathPoint currentPathPoint => null;
+
+	public int squadIdx
+	{
+		[CompilerGenerated]
+		get
 		{
-			return default(bool);
+			return default(int);
 		}
-
-		public void SetupSquad(List<EnemyCtrl> squad)
-		{
-		}
-
-		public void UnsetSquad()
-		{
-		}
-
-		private void SetupUI()
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void StartUI()
-		{
-		}
+	public EnemyRouteMode(EnemyCharacter owner_, List<DungeonPathLine> path_list, float steppingTime)
+	{
+	}
 
-		public float GetPathLengthCurrentPositionToEnd()
-		{
-			return default(float);
-		}
+	public void Reset()
+	{
+	}
 
-		private float GetSqrRemainingDistance()
-		{
-			return default(float);
-		}
+	public void Start()
+	{
+	}
 
-		private void SendArrival()
-		{
-		}
+	public bool Restart()
+	{
+		return default(bool);
+	}
 
-		public void OnArrival(CharacterSpecialState recvEvent)
-		{
-		}
+	public bool Update()
+	{
+		return default(bool);
+	}
+
+	private void ProcReady()
+	{
+	}
+
+	private void ProcStepping(ref bool ret)
+	{
+	}
+
+	private void ProcIdle()
+	{
+	}
+
+	private void ProcMove(ref bool ret)
+	{
+	}
+
+	private void ProcArrival()
+	{
+	}
+
+	private void ProcGoal(ref bool ret)
+	{
+	}
+
+	private void ProcBackTo()
+	{
+	}
+
+	private void ProcEmergencyMove(ref bool ret)
+	{
+	}
+
+	private void EnableAgent(bool sw)
+	{
+	}
+
+	private bool SetDestination(Vector3 position, bool not_follow = false)
+	{
+		return default(bool);
+	}
+
+	private bool Search()
+	{
+		return default(bool);
+	}
+
+	private void SwicthBattleMode()
+	{
+	}
+
+	public bool IsOutRange()
+	{
+		return default(bool);
+	}
+
+	public void SetupSquad(List<EnemyCtrl> squad)
+	{
+	}
+
+	public void UnsetSquad()
+	{
+	}
+
+	private void SetupUI()
+	{
+	}
+
+	private void StartUI()
+	{
+	}
+
+	public float GetPathLengthCurrentPositionToEnd()
+	{
+		return default(float);
+	}
+
+	private float GetSqrRemainingDistance()
+	{
+		return default(float);
+	}
+
+	private void SendArrival()
+	{
+	}
+
+	public void OnArrival(CharacterSpecialState recvEvent)
+	{
 	}
 }

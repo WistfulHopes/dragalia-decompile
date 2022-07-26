@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum UnitType
 {
-	public enum UnitType
-	{
-		NONE,
-		ATTACK,
-		DEFENSE,
-		SUPPORT,
-		HEAL
-	}
+	NONE,
+	ATTACK,
+	DEFENSE,
+	SUPPORT,
+	HEAL
 }

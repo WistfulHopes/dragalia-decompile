@@ -1,9 +1,8 @@
-namespace Cutt
-{
-	public struct FindKeyResult
-	{
-		public CuttTimelineKey key;
+namespace Cutt;
 
-		public int index;
-	}
+public struct FindKeyResult
+{
+	public CuttTimelineKey key;
+
+	public int index;
 }

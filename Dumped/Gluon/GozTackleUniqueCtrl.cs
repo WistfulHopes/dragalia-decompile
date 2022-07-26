@@ -1,33 +1,32 @@
 using System.Collections.Generic;
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class GozTackleUniqueCtrl : EnemyUniqueCtrl
 {
-	public class GozTackleUniqueCtrl : EnemyUniqueCtrl
+	private List<CharacterId> tackleTargets;
+
+	private List<bool> tackleTargetsSyncFlag;
+
+	public override void Initialize()
 	{
-		private List<CharacterId> tackleTargets;
+	}
 
-		private List<bool> tackleTargetsSyncFlag;
+	public void SendGozTackleInit(List<CharacterBase> targets)
+	{
+	}
 
-		public override void Initialize()
-		{
-		}
+	public void SendGozTackleTarget(CharacterBase target, int tackleNo)
+	{
+	}
 
-		public void SendGozTackleInit(List<CharacterBase> targets)
-		{
-		}
+	public override void OnReceiveActionPartsNotifyEvent(ActionPartsNotifyEvent recvEvent)
+	{
+	}
 
-		public void SendGozTackleTarget(CharacterBase target, int tackleNo)
-		{
-		}
-
-		public override void OnReceiveActionPartsNotifyEvent(ActionPartsNotifyEvent recvEvent)
-		{
-		}
-
-		public CharacterBase GetSyncTarget(int tackleNo)
-		{
-			return null;
-		}
+	public CharacterBase GetSyncTarget(int tackleNo)
+	{
+		return null;
 	}
 }

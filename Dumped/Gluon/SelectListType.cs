@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum SelectListType
 {
-	public enum SelectListType
-	{
-		None,
-		Chara,
-		Weapon,
-		Amulet,
-		Dragon
-	}
+	None,
+	Chara,
+	Weapon,
+	Amulet,
+	Dragon
 }

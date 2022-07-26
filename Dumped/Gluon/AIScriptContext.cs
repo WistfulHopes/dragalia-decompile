@@ -1,60 +1,59 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class AIScriptContext
 {
-	public class AIScriptContext
+	public float awakeTime;
+
+	public float hpRecode;
+
+	public bool isCountTime;
+
+	public float countTime;
+
+	public float trgLength;
+
+	public float trgHpRate;
+
+	public bool isSearchAction;
+
+	private Dictionary<string, AIScriptValue> _localValueDic;
+
+	public Dictionary<string, AIScriptValue>.KeyCollection AllLocalValueNames => null;
+
+	public void AddLocalValue(string name, AIScriptValue value)
 	{
-		public float awakeTime;
+	}
 
-		public float hpRecode;
+	public bool ContainsLocalValue(string name)
+	{
+		return default(bool);
+	}
 
-		public bool isCountTime;
+	public AIScriptValue GetLocalValue(string name)
+	{
+		return null;
+	}
 
-		public float countTime;
+	public void ClearAllLocalValues()
+	{
+	}
 
-		public float trgLength;
+	public void ClearAll()
+	{
+	}
 
-		public float trgHpRate;
+	public void CopyTo(AIScriptContext context)
+	{
+	}
 
-		public bool isSearchAction;
+	public static void EncodeDeltaCompression(DeltaCompressionEncoder encoder, AIScriptContext prev, AIScriptContext next, out byte[] result)
+	{
+	}
 
-		private Dictionary<string, AIScriptValue> _localValueDic;
-
-		public Dictionary<string, AIScriptValue>.KeyCollection AllLocalValueNames => null;
-
-		public void AddLocalValue(string name, AIScriptValue value)
-		{
-		}
-
-		public bool ContainsLocalValue(string name)
-		{
-			return default(bool);
-		}
-
-		public AIScriptValue GetLocalValue(string name)
-		{
-			return null;
-		}
-
-		public void ClearAllLocalValues()
-		{
-		}
-
-		public void ClearAll()
-		{
-		}
-
-		public void CopyTo(AIScriptContext context)
-		{
-		}
-
-		public static void EncodeDeltaCompression(DeltaCompressionEncoder encoder, AIScriptContext prev, AIScriptContext next, out byte[] result)
-		{
-		}
-
-		public static bool DecodeDeltaCompression(DeltaCompressionDecoder decoder, AIScriptContext prev, byte[] nextBinary, AIScriptContext outNext)
-		{
-			return default(bool);
-		}
+	public static bool DecodeDeltaCompression(DeltaCompressionDecoder decoder, AIScriptContext prev, byte[] nextBinary, AIScriptContext outNext)
+	{
+		return default(bool);
 	}
 }

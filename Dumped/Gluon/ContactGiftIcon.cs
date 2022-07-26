@@ -6,210 +6,209 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ContactGiftIcon : MonoBehaviour
 {
-	public class ContactGiftIcon : MonoBehaviour
+	[SerializeField]
+	private CommonIcon icon;
+
+	[SerializeField]
+	private GameObject checkImage;
+
+	[SerializeField]
+	private Text selectCountText;
+
+	[SerializeField]
+	private GameObject selectedDragIndicator;
+
+	[SerializeField]
+	private GameObject soldOutNode;
+
+	[SerializeField]
+	private Button invalidButton;
+
+	[SerializeField]
+	private Image holdingItem;
+
+	[SerializeField]
+	private GameObject CoinImage;
+
+	[SerializeField]
+	private GameObject NoteImage;
+
+	[SerializeField]
+	private GameObject shopIconTextBack;
+
+	[SerializeField]
+	private GameObject giftIconTextBack;
+
+	private bool holding;
+
+	private const float consumeItemAnimationTime = 0.8f;
+
+	private const float consumeItemJumpHeight = 120f;
+
+	[HideInInspector]
+	public ContactShopPanel shopPanel;
+
+	private bool isShop;
+
+	private bool isDragging;
+
+	private bool isSelected;
+
+	private bool isFirstHidingShopPanel;
+
+	[HideInInspector]
+	public int price;
+
+	private int reliability;
+
+	private bool soldOut;
+
+	private static Vector2 giftIconTextPos;
+
+	private Transform defaultParent;
+
+	private PointerEventData currentEventData;
+
+	[HideInInspector]
+	public bool isWalkEventItem;
+
+	public int dragonGiftId => default(int);
+
+	private void OnDisable()
 	{
-		[SerializeField]
-		private CommonIcon icon;
+	}
 
-		[SerializeField]
-		private GameObject checkImage;
+	public void OnBeginDrag(PointerEventData eventData)
+	{
+	}
 
-		[SerializeField]
-		private Text selectCountText;
+	public void OnDrag(PointerEventData eventData)
+	{
+	}
 
-		[SerializeField]
-		private GameObject selectedDragIndicator;
+	private void OnApplicationPause(bool pause)
+	{
+	}
 
-		[SerializeField]
-		private GameObject soldOutNode;
+	public void OnEndDrag(PointerEventData eventData)
+	{
+	}
 
-		[SerializeField]
-		private Button invalidButton;
+	public void ApiBuyGiftToSend()
+	{
+	}
 
-		[SerializeField]
-		private Image holdingItem;
+	public void ApiOnBuyGiftToSendError(ErrorType errorType, int errorCode)
+	{
+	}
 
-		[SerializeField]
-		private GameObject CoinImage;
+	private void ApiOnBuyGiftToSendSuccess(DragonBuyGiftToSendResponse res)
+	{
+	}
 
-		[SerializeField]
-		private GameObject NoteImage;
+	public void ApiSendGift()
+	{
+	}
 
-		[SerializeField]
-		private GameObject shopIconTextBack;
+	public void ApiOnSendGiftError(ErrorType errorType, int errorCode)
+	{
+	}
 
-		[SerializeField]
-		private GameObject giftIconTextBack;
+	private void ApiOnSendGiftSuccess(DragonSendGiftResponse res)
+	{
+	}
 
-		private bool holding;
+	public void ApiWalkerSendGift()
+	{
+	}
 
-		private const float consumeItemAnimationTime = 0.8f;
+	public void ApiOnSendWalkerGiftError(ErrorType errorType, int errorCode)
+	{
+	}
 
-		private const float consumeItemJumpHeight = 120f;
+	private void ApiOnSendWalkerGiftSuccess(WalkerSendGiftMultipleResponse res)
+	{
+	}
 
-		[HideInInspector]
-		public ContactShopPanel shopPanel;
+	public void DoConsumeItemAnimationInStrokeMainWithDelay(Action onComplete, float delayTime)
+	{
+	}
 
-		private bool isShop;
+	private IEnumerator DoConsumeItemAnimationInStrokeMainWithDelayCoroutine(Action onComplete, float delayTime)
+	{
+		return null;
+	}
 
-		private bool isDragging;
+	public void DoConsumeItemAnimationInStrokeMain(Action onComplete)
+	{
+	}
 
-		private bool isSelected;
+	public void DoConsumeItemAnimation(Action onComplete)
+	{
+	}
 
-		private bool isFirstHidingShopPanel;
+	public void SetupByItemId(int itemId, int price, bool isShop, bool soldOut)
+	{
+	}
 
-		[HideInInspector]
-		public int price;
+	public void SetupBySimpleEventItemId(int itemId, int num)
+	{
+	}
 
-		private int reliability;
+	public void SetIconColor(long RemainingCoin)
+	{
+	}
 
-		private bool soldOut;
+	public void OnClick()
+	{
+	}
 
-		private static Vector2 giftIconTextPos;
+	public void OnSelected(bool byUI = false)
+	{
+	}
 
-		private Transform defaultParent;
+	private void SetHoldingItemIcon()
+	{
+	}
 
-		private PointerEventData currentEventData;
+	private DragonGiftList GetDragonGiftData()
+	{
+		return null;
+	}
 
-		[HideInInspector]
-		public bool isWalkEventItem;
+	public void OnSelectedNoneInteractive(bool byUI = false)
+	{
+	}
 
-		public int dragonGiftId => default(int);
+	public void OnDeselected()
+	{
+	}
 
-		private void OnDisable()
-		{
-		}
+	public void OnHolding()
+	{
+	}
 
-		public void OnBeginDrag(PointerEventData eventData)
-		{
-		}
+	public void OnReleaseHolding()
+	{
+	}
 
-		public void OnDrag(PointerEventData eventData)
-		{
-		}
+	public void Release()
+	{
+	}
 
-		private void OnApplicationPause(bool pause)
-		{
-		}
+	public void SetSelectImage(int num)
+	{
+	}
 
-		public void OnEndDrag(PointerEventData eventData)
-		{
-		}
+	public void HideSelextImage()
+	{
+	}
 
-		public void ApiBuyGiftToSend()
-		{
-		}
-
-		public void ApiOnBuyGiftToSendError(ErrorType errorType, int errorCode)
-		{
-		}
-
-		private void ApiOnBuyGiftToSendSuccess(DragonBuyGiftToSendResponse res)
-		{
-		}
-
-		public void ApiSendGift()
-		{
-		}
-
-		public void ApiOnSendGiftError(ErrorType errorType, int errorCode)
-		{
-		}
-
-		private void ApiOnSendGiftSuccess(DragonSendGiftResponse res)
-		{
-		}
-
-		public void ApiWalkerSendGift()
-		{
-		}
-
-		public void ApiOnSendWalkerGiftError(ErrorType errorType, int errorCode)
-		{
-		}
-
-		private void ApiOnSendWalkerGiftSuccess(WalkerSendGiftMultipleResponse res)
-		{
-		}
-
-		public void DoConsumeItemAnimationInStrokeMainWithDelay(Action onComplete, float delayTime)
-		{
-		}
-
-		private IEnumerator DoConsumeItemAnimationInStrokeMainWithDelayCoroutine(Action onComplete, float delayTime)
-		{
-			return null;
-		}
-
-		public void DoConsumeItemAnimationInStrokeMain(Action onComplete)
-		{
-		}
-
-		public void DoConsumeItemAnimation(Action onComplete)
-		{
-		}
-
-		public void SetupByItemId(int itemId, int price, bool isShop, bool soldOut)
-		{
-		}
-
-		public void SetupBySimpleEventItemId(int itemId, int num)
-		{
-		}
-
-		public void SetIconColor(long RemainingCoin)
-		{
-		}
-
-		public void OnClick()
-		{
-		}
-
-		public void OnSelected(bool byUI = false)
-		{
-		}
-
-		private void SetHoldingItemIcon()
-		{
-		}
-
-		private DragonGiftList GetDragonGiftData()
-		{
-			return null;
-		}
-
-		public void OnSelectedNoneInteractive(bool byUI = false)
-		{
-		}
-
-		public void OnDeselected()
-		{
-		}
-
-		public void OnHolding()
-		{
-		}
-
-		public void OnReleaseHolding()
-		{
-		}
-
-		public void Release()
-		{
-		}
-
-		public void SetSelectImage(int num)
-		{
-		}
-
-		public void HideSelextImage()
-		{
-		}
-
-		private void SetSelected(bool selected)
-		{
-		}
+	private void SetSelected(bool selected)
+	{
 	}
 }

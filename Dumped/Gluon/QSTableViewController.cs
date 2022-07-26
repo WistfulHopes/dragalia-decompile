@@ -1,52 +1,51 @@
 using Gluon.Master;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QSTableViewController : QuestCommonTableViewController<QSTableViewData>
 {
-	public class QSTableViewController : QuestCommonTableViewController<QSTableViewData>
+	[SerializeField]
+	private int _groupId;
+
+	public int groupId
 	{
-		[SerializeField]
-		private int _groupId;
-
-		public int groupId
+		get
 		{
-			get
-			{
-				return default(int);
-			}
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public bool IsExist(QuestMainMenuElement a_qmme)
+		set
 		{
-			return default(bool);
 		}
+	}
 
-		public virtual bool IsEnable(QuestMainMenuElement qmme)
-		{
-			return default(bool);
-		}
+	public bool IsExist(QuestMainMenuElement a_qmme)
+	{
+		return default(bool);
+	}
 
-		public virtual bool IsAppear(QuestMainMenuElement a_qmme)
-		{
-			return default(bool);
-		}
+	public virtual bool IsEnable(QuestMainMenuElement qmme)
+	{
+		return default(bool);
+	}
 
-		protected override float GetCellHeightAtIndex(int index)
-		{
-			return default(float);
-		}
+	public virtual bool IsAppear(QuestMainMenuElement a_qmme)
+	{
+		return default(bool);
+	}
 
-		protected override float GetCellWidthAtIndex(int index)
-		{
-			return default(float);
-		}
+	protected override float GetCellHeightAtIndex(int index)
+	{
+		return default(float);
+	}
 
-		public QuestCommonTableViewCell<QSTableViewData> GetQuestCommonTableViewCell(int questId)
-		{
-			return null;
-		}
+	protected override float GetCellWidthAtIndex(int index)
+	{
+		return default(float);
+	}
+
+	public QuestCommonTableViewCell<QSTableViewData> GetQuestCommonTableViewCell(int questId)
+	{
+		return null;
 	}
 }

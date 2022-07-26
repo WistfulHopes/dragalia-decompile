@@ -1,42 +1,41 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class BRItemSkill : BRItemBase
 {
-	public class BRItemSkill : BRItemBase
+	public static readonly BattleRoyalDungeonItem[] skillItemIds;
+
+	private int skillId;
+
+	public static int GetSkillIndexByActionId(int actionId)
 	{
-		public static readonly BattleRoyalDungeonItem[] skillItemIds;
+		return default(int);
+	}
 
-		private int skillId;
+	public static int GetSkillIndexBySkillId(int skillId)
+	{
+		return default(int);
+	}
 
-		public static int GetSkillIndexByActionId(int actionId)
-		{
-			return default(int);
-		}
+	protected override void OnEnable()
+	{
+	}
 
-		public static int GetSkillIndexBySkillId(int skillId)
-		{
-			return default(int);
-		}
+	public override void SetItemParam(BRItemParam param)
+	{
+	}
 
-		protected override void OnEnable()
-		{
-		}
+	protected override void Update()
+	{
+	}
 
-		public override void SetItemParam(BRItemParam param)
-		{
-		}
+	protected override void Apply(CharacterBase chara)
+	{
+	}
 
-		protected override void Update()
-		{
-		}
-
-		protected override void Apply(CharacterBase chara)
-		{
-		}
-
-		public override bool IsEffectiveFor(CharacterBase chara)
-		{
-			return default(bool);
-		}
+	public override bool IsEffectiveFor(CharacterBase chara)
+	{
+		return default(bool);
 	}
 }

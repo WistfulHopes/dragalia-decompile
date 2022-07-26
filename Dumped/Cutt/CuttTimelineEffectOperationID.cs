@@ -1,12 +1,11 @@
-namespace Cutt
+namespace Cutt;
+
+public enum CuttTimelineEffectOperationID
 {
-	public enum CuttTimelineEffectOperationID
-	{
-		Continue,
-		Play,
-		Stop,
-		Trigger,
-		Attach,
-		Detach
-	}
+	Continue,
+	Play,
+	Stop,
+	Trigger,
+	Attach,
+	Detach
 }

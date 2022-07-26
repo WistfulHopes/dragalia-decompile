@@ -1,20 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumStoryReviewCommonIconPopup : CommonIconPopup
 {
-	public class AlbumStoryReviewCommonIconPopup : CommonIconPopup
+	[SerializeField]
+	private Text iconName;
+
+	public static AlbumStoryReviewCommonIconPopup CreateAlbumStoryReviewCommonIconPopup(Size size = Size.S, BottomButtons bottomButtons = BottomButtons.Close, bool showBlackLayer = true, bool showStartAnimation = true)
 	{
-		[SerializeField]
-		private Text iconName;
+		return null;
+	}
 
-		public static AlbumStoryReviewCommonIconPopup CreateAlbumStoryReviewCommonIconPopup(Size size = Size.S, BottomButtons bottomButtons = BottomButtons.Close, bool showBlackLayer = true, bool showStartAnimation = true)
-		{
-			return null;
-		}
-
-		public void SetIconNameByGiftTypeAndId(GiftType giftType, int id)
-		{
-		}
+	public void SetIconNameByGiftTypeAndId(GiftType giftType, int id)
+	{
 	}
 }

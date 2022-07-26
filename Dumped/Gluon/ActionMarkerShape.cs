@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum ActionMarkerShape
 {
-	public enum ActionMarkerShape
-	{
-		NONE,
-		ARROW,
-		CIRCLE,
-		RECT,
-		FAN
-	}
+	NONE,
+	ARROW,
+	CIRCLE,
+	RECT,
+	FAN
 }

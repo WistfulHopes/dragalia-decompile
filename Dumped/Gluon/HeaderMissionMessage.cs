@@ -1,33 +1,32 @@
 using Gluon.Http;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class HeaderMissionMessage : HeaderMessageBase<MissionNoticeData>
 {
-	public class HeaderMissionMessage : HeaderMessageBase<MissionNoticeData>
+	public Image ribbonLeft;
+
+	public Image ribbonRight;
+
+	public Image missionStamp;
+
+	public Image drillMissionStamp;
+
+	public static void UpdateData()
 	{
-		public Image ribbonLeft;
+	}
 
-		public Image ribbonRight;
+	private static void AddMessage(MissionNotice mission_notice)
+	{
+	}
 
-		public Image missionStamp;
+	protected override bool isShowOtherNotice()
+	{
+		return default(bool);
+	}
 
-		public Image drillMissionStamp;
-
-		public static void UpdateData()
-		{
-		}
-
-		private static void AddMessage(MissionNotice mission_notice)
-		{
-		}
-
-		protected override bool isShowOtherNotice()
-		{
-			return default(bool);
-		}
-
-		protected override void UpdateMessageUI(MissionNoticeData messageData)
-		{
-		}
+	protected override void UpdateMessageUI(MissionNoticeData messageData)
+	{
 	}
 }

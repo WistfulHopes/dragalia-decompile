@@ -1,85 +1,84 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class LanguageOptionModel
 {
-	public class LanguageOptionModel
+	[Serializable]
+	public class Setting
 	{
-		[Serializable]
-		public class Setting
-		{
-			public SystemLanguage displayLanguage;
+		public SystemLanguage displayLanguage;
 
-			public SystemLanguage voiceLanguage;
-		}
+		public SystemLanguage voiceLanguage;
+	}
 
-		[Serializable]
-		public class LocalizeSetting
-		{
-			public Localize.Language displayLanguage;
+	[Serializable]
+	public class LocalizeSetting
+	{
+		public Localize.Language displayLanguage;
 
-			public Localize.Language voiceLanguage;
-		}
+		public Localize.Language voiceLanguage;
+	}
 
-		private static LanguageOptionModel instance;
+	private static LanguageOptionModel instance;
 
-		public const string oldOptionPrefString = "LanguageOptionSetting";
+	public const string oldOptionPrefString = "LanguageOptionSetting";
 
-		public const string optionLocalizePrefString = "LocalizeLanguageOptionSetting";
+	public const string optionLocalizePrefString = "LocalizeLanguageOptionSetting";
 
-		public static Localize.Language preRegisterSelectedLocalizeSystemLanguage;
+	public static Localize.Language preRegisterSelectedLocalizeSystemLanguage;
 
-		public Setting setting;
+	public Setting setting;
 
-		public LocalizeSetting localizeSetting;
+	public LocalizeSetting localizeSetting;
 
-		public static LanguageOptionModel Instance => null;
+	public static LanguageOptionModel Instance => null;
 
-		private LanguageOptionModel()
-		{
-		}
+	private LanguageOptionModel()
+	{
+	}
 
-		static LanguageOptionModel()
-		{
-		}
+	static LanguageOptionModel()
+	{
+	}
 
-		public void ApplyLanguageOptions()
-		{
-		}
+	public void ApplyLanguageOptions()
+	{
+	}
 
-		public void SaveSetting()
-		{
-		}
+	public void SaveSetting()
+	{
+	}
 
-		private bool LoadSetting()
-		{
-			return default(bool);
-		}
+	private bool LoadSetting()
+	{
+		return default(bool);
+	}
 
-		public static bool isSettingExist()
-		{
-			return default(bool);
-		}
+	public static bool isSettingExist()
+	{
+		return default(bool);
+	}
 
-		public static Localize.Language GetVoiceLanguage()
-		{
-			return default(Localize.Language);
-		}
+	public static Localize.Language GetVoiceLanguage()
+	{
+		return default(Localize.Language);
+	}
 
-		public static void ApplyOptionsOnTitle()
-		{
-		}
+	public static void ApplyOptionsOnTitle()
+	{
+	}
 
-		public void OnDisplayLanguageChangedFromOutterOption()
-		{
-		}
+	public void OnDisplayLanguageChangedFromOutterOption()
+	{
+	}
 
-		public void OnVoiceLanguageChangedFromOutterOption(Localize.Language voiceLanguage)
-		{
-		}
+	public void OnVoiceLanguageChangedFromOutterOption(Localize.Language voiceLanguage)
+	{
+	}
 
-		public static void ConvertSettingData(Setting setting, ref LocalizeSetting localizeSetting)
-		{
-		}
+	public static void ConvertSettingData(Setting setting, ref LocalizeSetting localizeSetting)
+	{
 	}
 }

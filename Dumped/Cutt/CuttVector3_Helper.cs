@@ -1,12 +1,11 @@
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public static class CuttVector3_Helper
 {
-	public static class CuttVector3_Helper
+	public static Vector3 Round(this Vector3 This)
 	{
-		public static Vector3 Round(this Vector3 This)
-		{
-			return default(Vector3);
-		}
+		return default(Vector3);
 	}
 }

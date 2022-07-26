@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public class AlbumStoryReviewQuestStoryData
 {
-	public class AlbumStoryReviewQuestStoryData
-	{
-		public int questGroupId;
+	public int questGroupId;
 
-		public SceneNameDefine.PageName previousPage;
+	public SceneNameDefine.PageName previousPage;
 
-		public AlbumStoryGroupType eventType;
-	}
+	public AlbumStoryGroupType eventType;
 }

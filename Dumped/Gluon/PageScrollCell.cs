@@ -1,32 +1,31 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PageScrollCell<T> : MonoBehaviour
 {
-	public class PageScrollCell<T> : MonoBehaviour
+	[HideInInspector]
+	public RectTransform rectTransform;
+
+	public int dataIndex
 	{
-		[HideInInspector]
-		public RectTransform rectTransform;
-
-		public int dataIndex
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		protected virtual void Awake()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public virtual void UpdateContent(T itemData)
-		{
-		}
+	protected virtual void Awake()
+	{
+	}
+
+	public virtual void UpdateContent(T itemData)
+	{
 	}
 }

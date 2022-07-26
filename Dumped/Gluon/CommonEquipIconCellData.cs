@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class CommonEquipIconCellData : CommonIconListCellData
 {
-	public class CommonEquipIconCellData : CommonIconListCellData
-	{
-		public bool isEquip;
+	public bool isEquip;
 
-		public bool isLock;
+	public bool isLock;
 
-		public bool isSupportEquip;
+	public bool isSupportEquip;
 
-		public bool isSupportFriend;
+	public bool isSupportFriend;
 
-		public bool isEquippedWithMatchedId;
-	}
+	public bool isEquippedWithMatchedId;
 }

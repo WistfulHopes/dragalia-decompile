@@ -1,24 +1,23 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumStoryReviewEventQuestSelectPage : AlbumStoryReviewPageBase
 {
-	public class AlbumStoryReviewEventQuestSelectPage : AlbumStoryReviewPageBase
+	[SerializeField]
+	private AlbumStoryReviewEventQuestSelectPageController ctrl;
+
+	private AlbumStoryGroupType type;
+
+	public override void OnPageBecomeActive(object data)
 	{
-		[SerializeField]
-		private AlbumStoryReviewEventQuestSelectPageController ctrl;
+	}
 
-		private AlbumStoryGroupType type;
+	public void OnEventCellPressed(int eventId)
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
-
-		public void OnEventCellPressed(int eventId)
-		{
-		}
-
-		private void OnBackButtonTouched()
-		{
-		}
+	private void OnBackButtonTouched()
+	{
 	}
 }

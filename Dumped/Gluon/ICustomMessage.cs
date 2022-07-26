@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public interface ICustomMessage
 {
-	public interface ICustomMessage
-	{
-		void OnMessagReceived(CustomMessageType messageType, object data);
-	}
+	void OnMessagReceived(CustomMessageType messageType, object data);
 }

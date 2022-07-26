@@ -5,67 +5,100 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ExcludeSummonConfirmPopup : PopupBase
 {
-	public class ExcludeSummonConfirmPopup : PopupBase
+	[SerializeField]
+	private ExcludeSummonConfirmCtrl excludeSummonConfirmCtrl;
+
+	[SerializeField]
+	private Text beforeStoneNum;
+
+	[SerializeField]
+	private Text afterStoneNum;
+
+	[SerializeField]
+	private Text okButtonText;
+
+	[SerializeField]
+	private Button okButton;
+
+	[SerializeField]
+	private GameObject endDateTimeLine;
+
+	[SerializeField]
+	private Text endDateTimeText;
+
+	[SerializeField]
+	private GameObject specifiedCommercialActObj;
+
+	[SerializeField]
+	private Text specifiedCommercialTransactionActText;
+
+	[SerializeField]
+	private Text specifiedCommercialActInformationText;
+
+	[SerializeField]
+	private RectTransform frame;
+
+	[SerializeField]
+	private RectTransform info;
+
+	[SerializeField]
+	private RectTransform cellList;
+
+	[SerializeField]
+	private RectTransform buttons;
+
+	private int summonId;
+
+	private GiftType type;
+
+	private List<ExcludeSummonCellData> excludeSummonCellDataList;
+
+	private List<int> entityList;
+
+	private SummonTopItemData summonTopItemData;
+
+	private UnityAction onSummonRequest;
+
+	public static ExcludeSummonConfirmPopup Create(SummonTopItemData itemData, List<ExcludeSummonCellData> list, UnityAction onSummonRequest)
 	{
-		[SerializeField]
-		private ExcludeSummonConfirmCtrl excludeSummonConfirmCtrl;
+		return null;
+	}
 
-		[SerializeField]
-		private Text beforeStoneNum;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		private Text afterStoneNum;
+	private Task<SummonExcludeGetOddsDataResponse> RequestSummonExcludeGetOddsData()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Text okButtonText;
+	public void OnOddsButton()
+	{
+	}
 
-		private int summonId;
+	public void OnSummonButton()
+	{
+	}
 
-		private GiftType type;
+	public void StoneUpdate()
+	{
+	}
 
-		private List<ExcludeSummonCellData> excludeSummonCellDataList;
+	public void RequestSummonExcludeRequest()
+	{
+	}
 
-		private List<int> entityList;
+	private int[] GetExcludeEntityList()
+	{
+		return null;
+	}
 
-		private SummonTopItemData summonTopItemData;
-
-		private UnityAction onSummonRequest;
-
-		public static ExcludeSummonConfirmPopup Create(SummonTopItemData itemData, List<ExcludeSummonCellData> list, UnityAction onSummonRequest)
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
-
-		private Task<SummonExcludeGetOddsDataResponse> RequestSummonExcludeGetOddsData()
-		{
-			return null;
-		}
-
-		public void OnOddsButton()
-		{
-		}
-
-		public void OnSummonButton()
-		{
-		}
-
-		public void StoneUpdate()
-		{
-		}
-
-		public void RequestSummonExcludeRequest()
-		{
-		}
-
-		private int[] GetExcludeEntityList()
-		{
-			return null;
-		}
+	public void OnSpecifiedCommercialTransactionActPressed()
+	{
 	}
 }

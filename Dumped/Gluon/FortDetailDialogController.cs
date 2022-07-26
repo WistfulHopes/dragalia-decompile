@@ -1,35 +1,34 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortDetailDialogController : PopupBase
 {
-	public class FortDetailDialogController : PopupBase
+	[SerializeField]
+	private TabViewBase tabView;
+
+	[SerializeField]
+	private Text facilityCountLable;
+
+	[SerializeField]
+	private Text closeButtonText;
+
+	[SerializeField]
+	private Text levelText;
+
+	[SerializeField]
+	private Text totalLevelText;
+
+	private void Awake()
 	{
-		[SerializeField]
-		private TabViewBase tabView;
+	}
 
-		[SerializeField]
-		private Text facilityCountLable;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		private Text closeButtonText;
-
-		[SerializeField]
-		private Text levelText;
-
-		[SerializeField]
-		private Text totalLevelText;
-
-		private void Awake()
-		{
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnBackButtonPressed()
-		{
-		}
+	public void OnBackButtonPressed()
+	{
 	}
 }

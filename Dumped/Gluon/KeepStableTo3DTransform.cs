@@ -1,22 +1,21 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+[ExecuteAlways]
+public class KeepStableTo3DTransform : MonoBehaviour
 {
-	[ExecuteAlways]
-	public class KeepStableTo3DTransform : MonoBehaviour
+	public Transform keepStableTo;
+
+	public float offsetScaleMul;
+
+	public Vector3 localOffset;
+
+	public bool lookAtTarget;
+
+	public Vector3 lookAtOffset;
+
+	private void LateUpdate()
 	{
-		public Transform keepStableTo;
-
-		public float offsetScaleMul;
-
-		public Vector3 localOffset;
-
-		public bool lookAtTarget;
-
-		public Vector3 lookAtOffset;
-
-		private void LateUpdate()
-		{
-		}
 	}
 }

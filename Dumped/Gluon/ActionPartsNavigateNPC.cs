@@ -1,19 +1,18 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsNavigateNPC : ActionParts
 {
-	public class ActionPartsNavigateNPC : ActionParts
+	private readonly NavigateNPCData _partsData;
+
+	private NotifyCharacter.CharaDialogueNPCParam _dialogueParam;
+
+	public ActionPartsNavigateNPC(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly NavigateNPCData _partsData;
+	}
 
-		private NotifyCharacter.CharaDialogueNPCParam _dialogueParam;
-
-		public ActionPartsNavigateNPC(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

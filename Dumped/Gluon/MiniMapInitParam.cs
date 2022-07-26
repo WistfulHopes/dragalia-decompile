@@ -1,15 +1,14 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MiniMapInitParam : MonoBehaviour
 {
-	public class MiniMapInitParam : MonoBehaviour
+	public Vector2 fullmapOffset;
+
+	public float fullmapScale;
+
+	private void Awake()
 	{
-		public Vector2 fullmapOffset;
-
-		public float fullmapScale;
-
-		private void Awake()
-		{
-		}
 	}
 }

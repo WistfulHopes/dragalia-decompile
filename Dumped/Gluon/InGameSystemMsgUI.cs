@@ -3,134 +3,150 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class InGameSystemMsgUI : MonoBehaviour
 {
-	public class InGameSystemMsgUI : MonoBehaviour
+	public enum MessageStatus
 	{
-		public enum MessageStatus
-		{
-			Closed,
-			Opening,
-			Showing,
-			Closing
-		}
+		Closed,
+		Opening,
+		Showing,
+		Closing
+	}
 
-		private class MessageData : IReplicable<MessageData>, ICleanable
-		{
-			public float time;
+	public enum AnchorType
+	{
+		Top,
+		Center,
+		Bottom
+	}
 
-			public string message;
+	private class MessageData : IReplicable<MessageData>, ICleanable
+	{
+		public float time;
 
-			public void Replicate(MessageData other)
-			{
-			}
+		public string message;
 
-			public void Clean()
-			{
-			}
-		}
-
-		[SerializeField]
-		[Header("component")]
-		private Text message;
-
-		[SerializeField]
-		private RectTransform imageRt;
-
-		[SerializeField]
-		[Header("parameter")]
-		private float maxFadeTime;
-
-		private CanvasGroup canvasGroup;
-
-		private float fadeTime;
-
-		private float stayTime;
-
-		private Tweener tweenerFade;
-
-		private RectTransform rootRt;
-
-		private const int QueueDataMax = 32;
-
-		private const float MoveY = 40f;
-
-		private bool isDisplaying;
-
-		private MessageStatus currentStatus;
-
-		private SimpleQueue<MessageData> messageQueue;
-
-		public static InGameSystemMsgUI Create(GameObject parent, int siblingIndex = -1, [Optional] string givenPrefabPath)
-		{
-			return null;
-		}
-
-		private void Initialize()
+		public void Replicate(MessageData other)
 		{
 		}
 
-		private void Update()
+		public void Clean()
 		{
 		}
+	}
 
-		public bool IsDisplaying()
-		{
-			return default(bool);
-		}
+	[SerializeField]
+	private Text message;
 
-		public void Display(float t, string msg, bool isQueueing = true, bool isRegistCheck = false)
-		{
-		}
+	[SerializeField]
+	private RectTransform imageRt;
 
-		public bool CanRegistMsg(ref string msg)
-		{
-			return default(bool);
-		}
+	[SerializeField]
+	private float maxFadeTime;
 
-		private void DisplaySub(float t, string msg)
-		{
-		}
+	private CanvasGroup canvasGroup;
 
-		public void Open(string msg, bool se)
-		{
-		}
+	private float fadeTime;
 
-		public void Close()
-		{
-		}
+	private float stayTime;
 
-		private void OnUpdateFade(float value)
-		{
-		}
+	private Tweener tweenerFade;
 
-		private void OnCompleteFade0()
-		{
-		}
+	private RectTransform rootRt;
 
-		private void OnCompleteFade1()
-		{
-		}
+	private const int QueueDataMax = 32;
 
-		private void OnCompleteFadeOut()
-		{
-		}
+	private const float MoveY = 40f;
 
-		private void OnCompleteFadeIn()
-		{
-		}
+	private bool isDisplaying;
 
-		public void StopAndHide()
-		{
-		}
+	private MessageStatus currentStatus;
 
-		public void AdjustPosY(float posY)
-		{
-		}
+	private SimpleQueue<MessageData> messageQueue;
 
-		public MessageStatus GetCurrentStatus()
-		{
-			return default(MessageStatus);
-		}
+	public static InGameSystemMsgUI Create(GameObject parent, int siblingIndex = -1, [Optional] string givenPrefabPath)
+	{
+		return null;
+	}
+
+	private void Initialize()
+	{
+	}
+
+	private void Update()
+	{
+	}
+
+	public bool IsDisplaying()
+	{
+		return default(bool);
+	}
+
+	public void Display(float t, string msg, bool isQueueing = true, bool isRegistCheck = false)
+	{
+	}
+
+	public bool CanRegistMsg(ref string msg)
+	{
+		return default(bool);
+	}
+
+	private void DisplaySub(float t, string msg)
+	{
+	}
+
+	public void Open(string msg, bool se)
+	{
+	}
+
+	public void Close()
+	{
+	}
+
+	private void OnUpdateFade(float value)
+	{
+	}
+
+	private void OnCompleteFade0()
+	{
+	}
+
+	private void OnCompleteFade1()
+	{
+	}
+
+	private void OnCompleteFadeOut()
+	{
+	}
+
+	private void OnCompleteFadeIn()
+	{
+	}
+
+	public void StopAndHide()
+	{
+	}
+
+	public MessageStatus GetCurrentStatus()
+	{
+		return default(MessageStatus);
+	}
+
+	public void AdjustPosY(float posY)
+	{
+	}
+
+	public void SeAnchorPosY(float posY)
+	{
+	}
+
+	public void SetAnchor(AnchorType anchorType)
+	{
+	}
+
+	public void SetAnchorBottom()
+	{
 	}
 }

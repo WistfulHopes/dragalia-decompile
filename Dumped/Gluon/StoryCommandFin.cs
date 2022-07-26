@@ -1,10 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandFin : IStoryCommand
 {
-	[CommandName("fin")]
-	public class StoryCommandFin : IStoryCommand
+	public void Start(bool visible = true, float x = 0f, float y = 0f)
 	{
-		public void Start(bool visible = true, float x = 0f, float y = 0f)
-		{
-		}
 	}
 }

@@ -1,25 +1,24 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class LoginBonusCharacterEventListener : MonoBehaviour
 {
-	public class LoginBonusCharacterEventListener : MonoBehaviour
+	private LoginBonusCharacterControl control;
+
+	private void Awake()
 	{
-		private LoginBonusCharacterControl control;
+	}
 
-		private void Awake()
-		{
-		}
+	public void OnMoveStart()
+	{
+	}
 
-		public void OnMoveStart()
-		{
-		}
+	public void OnMoveToStandPositionEnd()
+	{
+	}
 
-		public void OnMoveToStandPositionEnd()
-		{
-		}
-
-		public void OnIntroduceTrigger()
-		{
-		}
+	public void OnIntroduceTrigger()
+	{
 	}
 }

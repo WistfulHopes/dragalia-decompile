@@ -2,34 +2,33 @@ using Gluon.ActionData;
 using Gluon.Dungeon;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsRotateNode : ActionParts
 {
-	public class ActionPartsRotateNode : ActionParts
+	private readonly RotateNodeData _partsData;
+
+	private GameObject _node;
+
+	private DungeonBgArtistAddRotate _ctrl;
+
+	public ActionPartsRotateNode(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly RotateNodeData _partsData;
+	}
 
-		private GameObject _node;
+	public override void OnPostCreated(CharacterBase chara)
+	{
+	}
 
-		private DungeonBgArtistAddRotate _ctrl;
+	public override void Clear()
+	{
+	}
 
-		public ActionPartsRotateNode(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		public override void OnPostCreated(CharacterBase chara)
-		{
-		}
-
-		public override void Clear()
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		private void Procedure()
-		{
-		}
+	private void Procedure()
+	{
 	}
 }

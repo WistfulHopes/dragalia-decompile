@@ -3,184 +3,174 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildOptionPopup : PopupBase
 {
-	public class GuildOptionPopup : PopupBase
+	public enum Type
 	{
-		public enum Type
-		{
-			GuildCreation,
-			GuildMasterEdit,
-			GuildMemberEdit
-		}
+		GuildCreation,
+		GuildMasterEdit,
+		GuildMemberEdit
+	}
 
-		public const string prefabPath = "Prefabs/OutGame/Guild/GuildOptionPopup";
+	public const string prefabPath = "Prefabs/OutGame/Guild/GuildOptionPopup";
 
-		[SerializeField]
-		[Header("Info")]
-		public Text guildNameText;
+	[SerializeField]
+	public Text guildNameText;
 
-		public Text guildMottoText;
+	public Text guildMottoText;
 
-		public Text guildNoticeText;
+	public Text guildNoticeText;
 
-		public Text guildIdText;
+	public Text guildIdText;
 
-		public RawImage guildEmblemImage;
+	public RawImage guildEmblemImage;
 
-		[SerializeField]
-		[Header("Culture")]
-		public CommonSettingToggleBase[] approvalRequirementToggles;
+	[SerializeField]
+	public CommonSettingToggleBase[] approvalRequirementToggles;
 
-		public CommonSettingToggleBase[] activityPreferenceToggles;
+	public CommonSettingToggleBase[] activityPreferenceToggles;
 
-		[SerializeField]
-		[Header("Profile")]
-		public CommonIcon icon;
+	[SerializeField]
+	public CommonIcon icon;
 
-		[SerializeField]
-		[Header("Notifications")]
-		public TabBase pushTab;
+	[SerializeField]
+	public TabBase pushTab;
 
-		public TabBase nativePushTab;
+	public TabBase nativePushTab;
 
-		[SerializeField]
-		[Header("Invitation")]
-		public TabBase inviteTab;
+	[SerializeField]
+	public TabBase inviteTab;
 
-		[SerializeField]
-		[Header("Voice")]
-		public TabBase voiceOverTab;
+	[SerializeField]
+	public TabBase voiceOverTab;
 
-		[SerializeField]
-		[Header("OnOffs")]
-		public GameObject nameGO;
+	[SerializeField]
+	public GameObject nameGO;
 
-		public GameObject mottoGO;
+	public GameObject mottoGO;
 
-		public GameObject noticeGO;
+	public GameObject noticeGO;
 
-		public GameObject emblemGO;
+	public GameObject emblemGO;
 
-		public GameObject approvalRequirementGO;
+	public GameObject approvalRequirementGO;
 
-		public GameObject activityPreferenceGO;
+	public GameObject activityPreferenceGO;
 
-		public GameObject iconGO;
+	public GameObject iconGO;
 
-		public GameObject pushGO;
+	public GameObject pushGO;
 
-		public GameObject nativePushGO;
+	public GameObject nativePushGO;
 
-		public GameObject voiceOverGO;
+	public GameObject voiceOverGO;
 
-		public GameObject guildIdGO;
+	public GameObject guildIdGO;
 
-		public GameObject disbandGuildGO;
+	public GameObject disbandGuildGO;
 
-		public GameObject leaveGuildGO;
+	public GameObject leaveGuildGO;
 
-		[SerializeField]
-		[Header("Button")]
-		public Button okButton;
+	[SerializeField]
+	public Button okButton;
 
-		[SerializeField]
-		[Header("Badge")]
-		private GameObject inviteBadge;
+	[SerializeField]
+	private GameObject inviteBadge;
 
-		private GuildModel.GuildOption initOption;
+	private GuildModel.GuildOption initOption;
 
-		private GuildModel.GuildOption option;
+	private GuildModel.GuildOption option;
 
-		private GuildModel.ProfileIconData initProfileIconData;
+	private GuildModel.ProfileIconData initProfileIconData;
 
-		private GuildModel.ProfileIconData profileIconData;
+	private GuildModel.ProfileIconData profileIconData;
 
-		private Type popupType;
+	private Type popupType;
 
-		private Action onOptionDone;
+	private Action onOptionDone;
 
-		private Action onStopPollingAction;
+	private Action onStopPollingAction;
 
-		private readonly Color textColorBlack;
+	private readonly Color textColorBlack;
 
-		private readonly Color textColorGray;
+	private readonly Color textColorGray;
 
-		public static GuildOptionPopup Create(GuildModel.Occupation occupation, [Optional] Action onOptionDone, [Optional] Action onStopPollingAction)
-		{
-			return null;
-		}
+	public static GuildOptionPopup Create(GuildModel.Occupation occupation, [Optional] Action onOptionDone, [Optional] Action onStopPollingAction)
+	{
+		return null;
+	}
 
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		public void SetupForCreation()
-		{
-		}
+	public void SetupForCreation()
+	{
+	}
 
-		public void SetupForMasterEdit()
-		{
-		}
+	public void SetupForMasterEdit()
+	{
+	}
 
-		public void SetupForMemberEdit()
-		{
-		}
+	public void SetupForMemberEdit()
+	{
+	}
 
-		private void ApplyData()
-		{
-		}
+	private void ApplyData()
+	{
+	}
 
-		private void ConvertOptionToDeletedRaw()
-		{
-		}
+	private void ConvertOptionToDeletedRaw()
+	{
+	}
 
-		public void OnNameChangeButtonPressed()
-		{
-		}
+	public void OnNameChangeButtonPressed()
+	{
+	}
 
-		public void OnMottoChangeButtonPressed()
-		{
-		}
+	public void OnMottoChangeButtonPressed()
+	{
+	}
 
-		public void OnNoticeChangeButtonPressed()
-		{
-		}
+	public void OnNoticeChangeButtonPressed()
+	{
+	}
 
-		public void OnEmblemChangeButtonPressed()
-		{
-		}
+	public void OnEmblemChangeButtonPressed()
+	{
+	}
 
-		public void OnProfileIconButtonPressed()
-		{
-		}
+	public void OnProfileIconButtonPressed()
+	{
+	}
 
-		public void OnDisbandGuildButtonPressed()
-		{
-		}
+	public void OnDisbandGuildButtonPressed()
+	{
+	}
 
-		public void OnLeaveGuildButtonPressed()
-		{
-		}
+	public void OnLeaveGuildButtonPressed()
+	{
+	}
 
-		private void OnStopPolling()
-		{
-		}
+	private void OnStopPolling()
+	{
+	}
 
-		public void OnCopyIdButtonPressed()
-		{
-		}
+	public void OnCopyIdButtonPressed()
+	{
+	}
 
-		private void Update()
-		{
-		}
+	private void Update()
+	{
+	}
 
-		public void OnApplyButtonPressed()
-		{
-		}
+	public void OnApplyButtonPressed()
+	{
+	}
 
-		public void OnCheckInviteButtonPressed()
-		{
-		}
+	public void OnCheckInviteButtonPressed()
+	{
 	}
 }

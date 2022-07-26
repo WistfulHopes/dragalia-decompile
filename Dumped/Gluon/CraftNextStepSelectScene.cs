@@ -3,127 +3,126 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class CraftNextStepSelectScene : CraftEffectSceneBase
 {
-	public class CraftNextStepSelectScene : CraftEffectSceneBase
+	public static ulong baseWeaponKeyId;
+
+	public static int baseWeaponMasterId;
+
+	public static bool isShowNextStepPage;
+
+	public static int selectNodeId;
+
+	[SerializeField]
+	private Transform overlayParent;
+
+	private CraftCreateResponse craftResponse;
+
+	private CraftNextStepSelectMainCanvas mainCanvas;
+
+	private int craftTargetId;
+
+	private int[] materialIds;
+
+	private bool isGoToPowerup;
+
+	private bool isNeedUpdateList;
+
+	private void Awake()
 	{
-		public static ulong baseWeaponKeyId;
+	}
 
-		public static int baseWeaponMasterId;
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		public static bool isShowNextStepPage;
+	public override void OnPresentReceived()
+	{
+	}
 
-		public static int selectNodeId;
+	private void OnPrevSceneExitDone()
+	{
+	}
 
-		[SerializeField]
-		private Transform overlayParent;
+	private void OnInitReady()
+	{
+	}
 
-		private CraftCreateResponse craftResponse;
+	private IEnumerator LoadNextStepCoroutine()
+	{
+		return null;
+	}
 
-		private CraftNextStepSelectMainCanvas mainCanvas;
+	private IEnumerator ReloadLoadListCoroutine()
+	{
+		return null;
+	}
 
-		private int craftTargetId;
+	private void LoadNextStepList()
+	{
+	}
 
-		private int[] materialIds;
+	private void LoadTreeDiagram()
+	{
+	}
 
-		private bool isGoToPowerup;
+	private void OnEnterScene()
+	{
+	}
 
-		private bool isNeedUpdateList;
+	public void BackButtonPressed()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	private void FooterButtonPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
 
-		private IEnumerator Start()
-		{
-			return null;
-		}
+	private void ChangeSceneCallback(UnityAction nextSceneCallback)
+	{
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	private void OnCraftCellButtonPressed(CraftTargetSelectCellData cellData, bool isUseBackup = false)
+	{
+	}
 
-		private void OnPrevSceneExitDone()
-		{
-		}
+	private void CheckNewFlag(int weaponId, bool isChild = false, bool isUseBackup = false)
+	{
+	}
 
-		private void OnInitReady()
-		{
-		}
+	private void ShowStepupCraftPopup(int weaponId, bool isUseBackup = false)
+	{
+	}
 
-		private IEnumerator LoadNextStepCoroutine()
-		{
-			return null;
-		}
+	private void SendCraftData(CraftStepupSendData sendData)
+	{
+	}
 
-		private IEnumerator ReloadLoadListCoroutine()
-		{
-			return null;
-		}
+	private void GoCraftGradeUpScene(int weaponId, bool isChild)
+	{
+	}
 
-		private void LoadNextStepList()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private void LoadTreeDiagram()
-		{
-		}
+	protected override void SetupCraftEffectData()
+	{
+	}
 
-		private void OnEnterScene()
-		{
-		}
+	private void AfterResultAction()
+	{
+	}
 
-		public void BackButtonPressed()
-		{
-		}
+	protected override void CloseCraftEffect()
+	{
+	}
 
-		private void FooterButtonPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
-
-		private void ChangeSceneCallback(UnityAction nextSceneCallback)
-		{
-		}
-
-		private void OnCraftCellButtonPressed(CraftTargetSelectCellData cellData, bool isUseBackup = false)
-		{
-		}
-
-		private void CheckNewFlag(int weaponId, bool isChild = false, bool isUseBackup = false)
-		{
-		}
-
-		private void ShowStepupCraftPopup(int weaponId, bool isUseBackup = false)
-		{
-		}
-
-		private void SendCraftData(CraftStepupSendData sendData)
-		{
-		}
-
-		private void GoCraftGradeUpScene(int weaponId, bool isChild)
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		protected override void SetupCraftEffectData()
-		{
-		}
-
-		private void AfterResultAction()
-		{
-		}
-
-		protected override void CloseCraftEffect()
-		{
-		}
-
-		protected override bool PlayNextEffect(bool isBackKey = false)
-		{
-			return default(bool);
-		}
+	protected override bool PlayNextEffect(bool isBackKey = false)
+	{
+		return default(bool);
 	}
 }

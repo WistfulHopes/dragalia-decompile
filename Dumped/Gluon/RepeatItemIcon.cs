@@ -1,32 +1,31 @@
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class RepeatItemIcon : MonoBehaviour
 {
-	public class RepeatItemIcon : MonoBehaviour
+	[SerializeField]
+	private CommonIcon commonIcon;
+
+	[SerializeField]
+	private GameObject selectingImage;
+
+	private bool selecting;
+
+	public ItemList item;
+
+	private QuestRepeatPopup popup;
+
+	public void Initilaize(ItemList item, QuestRepeatPopup popup)
 	{
-		[SerializeField]
-		private CommonIcon commonIcon;
+	}
 
-		[SerializeField]
-		private GameObject selectingImage;
+	private void OnClick()
+	{
+	}
 
-		private bool selecting;
-
-		public ItemList item;
-
-		private QuestRepeatPopup popup;
-
-		public void Initilaize(ItemList item, QuestRepeatPopup popup)
-		{
-		}
-
-		private void OnClick()
-		{
-		}
-
-		public void Select()
-		{
-		}
+	public void Select()
+	{
 	}
 }

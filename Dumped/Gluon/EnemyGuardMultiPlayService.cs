@@ -1,61 +1,60 @@
 using Gluon.Event;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyGuardMultiPlayService
 {
-	public class EnemyGuardMultiPlayService
+	private int _currentGuardRequestId;
+
+	private RequestGuard _requestGuardEvent;
+
+	private DenyGuard _denyGuardEvent;
+
+	private RequestGuardCounter _requestGuardCounterEvent;
+
+	private RequestCounter _requestCounterEvent;
+
+	public void TrySendGuard(EnemyCharacter guardExecutor)
 	{
-		private int _currentGuardRequestId;
+	}
 
-		private RequestGuard _requestGuardEvent;
+	public void OnGuardRequested(EnemyCharacter guardExecutor, RequestGuard requestGuard)
+	{
+	}
 
-		private DenyGuard _denyGuardEvent;
+	public void OnGuardDenied(EnemyCharacter guardExecutor, DenyGuard denyGuard)
+	{
+	}
 
-		private RequestGuardCounter _requestGuardCounterEvent;
+	public void TrySendGuardCounter(EnemyCharacter counterExecutor)
+	{
+	}
 
-		private RequestCounter _requestCounterEvent;
+	public void OnGuardCounterRequested(EnemyCharacter counterExecutor, RequestGuardCounter requestCounter)
+	{
+	}
 
-		public void TrySendGuard(EnemyCharacter guardExecutor)
-		{
-		}
+	public void TrySendCounter(EnemyCharacter counterExecutor, CharacterBase counterTarget)
+	{
+	}
 
-		public void OnGuardRequested(EnemyCharacter guardExecutor, RequestGuard requestGuard)
-		{
-		}
+	public void OnCounterRequested(EnemyCharacter counterExecutor, RequestCounter requestCounter)
+	{
+	}
 
-		public void OnGuardDenied(EnemyCharacter guardExecutor, DenyGuard denyGuard)
-		{
-		}
+	private void SendRequestGuard(EnemyCharacter guardExecutor)
+	{
+	}
 
-		public void TrySendGuardCounter(EnemyCharacter counterExecutor)
-		{
-		}
+	private void SendRequestGuardCounter(EnemyCharacter counterExecutor)
+	{
+	}
 
-		public void OnGuardCounterRequested(EnemyCharacter counterExecutor, RequestGuardCounter requestCounter)
-		{
-		}
+	private void SendRequestCounter(EnemyCharacter counterExecutor, CharacterBase counterTargetChara)
+	{
+	}
 
-		public void TrySendCounter(EnemyCharacter counterExecutor, CharacterBase counterTarget)
-		{
-		}
-
-		public void OnCounterRequested(EnemyCharacter counterExecutor, RequestCounter requestCounter)
-		{
-		}
-
-		private void SendRequestGuard(EnemyCharacter guardExecutor)
-		{
-		}
-
-		private void SendRequestGuardCounter(EnemyCharacter counterExecutor)
-		{
-		}
-
-		private void SendRequestCounter(EnemyCharacter counterExecutor, CharacterBase counterTargetChara)
-		{
-		}
-
-		private void SendDenyGuard(RequestGuard requestGuard)
-		{
-		}
+	private void SendDenyGuard(RequestGuard requestGuard)
+	{
 	}
 }

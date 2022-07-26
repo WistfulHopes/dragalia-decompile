@@ -1,45 +1,44 @@
 using Gluon.ActionData;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsMoveTarget : ActionParts
 {
-	public class ActionPartsMoveTarget : ActionParts
+	private MoveTargetData _partsData;
+
+	private Vector3 _targetPos;
+
+	private Vector3 _basePos;
+
+	private float _moveDistance;
+
+	private float _speedRate;
+
+	private float _velocity;
+
+	public ActionPartsMoveTarget(Gluon.ActionData.ActionParts resource)
 	{
-		private MoveTargetData _partsData;
+	}
 
-		private Vector3 _targetPos;
+	protected override void OnStart()
+	{
+	}
 
-		private Vector3 _basePos;
+	public override void Clear()
+	{
+	}
 
-		private float _moveDistance;
+	protected override void OnFinish()
+	{
+	}
 
-		private float _speedRate;
+	private void UpdateTarget()
+	{
+	}
 
-		private float _velocity;
-
-		public ActionPartsMoveTarget(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
-
-		public override void Clear()
-		{
-		}
-
-		protected override void OnFinish()
-		{
-		}
-
-		private void UpdateTarget()
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

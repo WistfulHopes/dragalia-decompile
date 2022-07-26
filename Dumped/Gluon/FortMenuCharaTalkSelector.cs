@@ -1,26 +1,25 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortMenuCharaTalkSelector : OutGameTopCharaTalkSelector
 {
-	public class FortMenuCharaTalkSelector : OutGameTopCharaTalkSelector
+	public FortMenuScene scene;
+
+	public bool isInitDone;
+
+	public static Queue<int> myLastPlayedQueue;
+
+	public static void ClearLastPlayedQueue()
 	{
-		public FortMenuScene scene;
+	}
 
-		public bool isInitDone;
+	public void Init()
+	{
+	}
 
-		public static Queue<int> myLastPlayedQueue;
-
-		public static void ClearLastPlayedQueue()
-		{
-		}
-
-		public void Init()
-		{
-		}
-
-		private bool isFulllyChargedIncomeExist()
-		{
-			return default(bool);
-		}
+	private bool isFulllyChargedIncomeExist()
+	{
+		return default(bool);
 	}
 }

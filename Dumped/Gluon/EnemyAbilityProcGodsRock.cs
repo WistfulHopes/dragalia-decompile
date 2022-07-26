@@ -1,46 +1,45 @@
 using System.Collections.Generic;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcGodsRock : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcGodsRock : EnemyAbilityProcBase
+	public enum TargetType
 	{
-		public enum TargetType
-		{
-			CenterChara,
-			MyPartyUnit
-		}
+		CenterChara,
+		MyPartyUnit,
+		MyPartyAndDragon,
+		AllEnemies
+	}
 
-		private EnemyCharacter _center;
+	private List<CharacterBase> _listTarget;
 
-		private List<CharacterBase> _listTarget;
+	public EnemyAbilityProcGodsRock(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+	{
+	}
 
-		public EnemyAbilityProcGodsRock(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
+	public override void Play()
+	{
+	}
 
-		public override void Play()
-		{
-		}
+	public override void Stop()
+	{
+	}
 
-		public override void Stop()
-		{
-		}
+	public override void OnUpdate()
+	{
+	}
 
-		public override void OnUpdate()
-		{
-		}
+	public override void OnCheckExecHit(CharacterBase receiver, CollisionHitAttribute hitAttr, ref EnemyAbility.Argument arg)
+	{
+	}
 
-		public override void OnCheckExecHit(CharacterBase receiver, CollisionHitAttribute hitAttr, ref EnemyAbility.Argument arg)
-		{
-		}
+	private void SetTargetList()
+	{
+	}
 
-		private void SetTargetList()
-		{
-		}
-
-		private void MatchBuffDebuff(CharacterBase target)
-		{
-		}
+	private void MatchBuffDebuff(CharacterBase target)
+	{
 	}
 }

@@ -1,26 +1,25 @@
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionParallel : ActionBase
 {
-	public class ActionParallel : ActionBase
+	protected List<ActionBase> _actions;
+
+	public ActionParallel(ActionBase[] actions)
 	{
-		protected List<ActionBase> _actions;
+	}
 
-		public ActionParallel(ActionBase[] actions)
-		{
-		}
+	public override void Initialize(CharacterBase chara)
+	{
+	}
 
-		public override void Initialize(CharacterBase chara)
-		{
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
+	}
 
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
-
-		public override void RemoveSelf()
-		{
-		}
+	public override void RemoveSelf()
+	{
 	}
 }

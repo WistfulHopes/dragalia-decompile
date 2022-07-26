@@ -1,11 +1,10 @@
-namespace Gluon
+namespace Gluon;
+
+public enum MatchingReadyState
 {
-	public enum MatchingReadyState
-	{
-		NotReady = 0,
-		Ready = 1,
-		NowSetting = 2,
-		ConfirmingSuccession = 3,
-		Undefined = -1
-	}
+	NotReady = 0,
+	Ready = 1,
+	NowSetting = 2,
+	ConfirmingSuccession = 3,
+	Undefined = -1
 }

@@ -1,26 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeSellItemDonePopup : PopupBase
 {
-	public class DmodeSellItemDonePopup : PopupBase
+	private static readonly string prefabPath;
+
+	[SerializeField]
+	private Text afterPointText;
+
+	[SerializeField]
+	private Text afterRarePointText;
+
+	public static DmodeSellItemDonePopup Create()
 	{
-		private static readonly string prefabPath;
+		return null;
+	}
 
-		[SerializeField]
-		[Header("Control")]
-		private Text afterPointText;
-
-		[SerializeField]
-		private Text afterRarePointText;
-
-		public static DmodeSellItemDonePopup Create()
-		{
-			return null;
-		}
-
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
 	}
 }

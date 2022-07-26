@@ -1,15 +1,14 @@
 using System;
 
-namespace Cutt
-{
-	[Serializable]
-	public class CuttTimelineFlashData : ICuttTimelineGroupData
-	{
-		public CuttTimelineKeyFlashDataList keys;
+namespace Cutt;
 
-		public ICuttTimelineKeyDataList GetKeyList()
-		{
-			return null;
-		}
+[Serializable]
+public class CuttTimelineFlashData : ICuttTimelineGroupData
+{
+	public CuttTimelineKeyFlashDataList keys;
+
+	public ICuttTimelineKeyDataList GetKeyList()
+	{
+		return null;
 	}
 }

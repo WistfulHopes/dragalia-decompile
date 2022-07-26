@@ -1,25 +1,24 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcGrudge : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcGrudge : EnemyAbilityProcBase
+	private CollisionHitAttribute _hitAttribute;
+
+	public EnemyAbilityProcGrudge(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
 	{
-		private CollisionHitAttribute _hitAttribute;
+	}
 
-		public EnemyAbilityProcGrudge(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
-		{
-		}
+	public override void Setup()
+	{
+	}
 
-		public override void Setup()
-		{
-		}
+	public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr)
+	{
+	}
 
-		public override void OnAttack(CharacterBase receiver, CollisionHitAttribute hitAttr)
-		{
-		}
-
-		private void CreateHitAttribute()
-		{
-		}
+	private void CreateHitAttribute()
+	{
 	}
 }

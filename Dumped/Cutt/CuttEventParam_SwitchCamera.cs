@@ -1,10 +1,9 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttEventParam_SwitchCamera : CuttEventParamBase
 {
-	[Serializable]
-	public class CuttEventParam_SwitchCamera : CuttEventParamBase
-	{
-		public int cameraID;
-	}
+	public int cameraID;
 }

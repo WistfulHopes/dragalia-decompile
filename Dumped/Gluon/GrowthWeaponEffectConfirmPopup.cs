@@ -1,14 +1,13 @@
-namespace Gluon
-{
-	public class GrowthWeaponEffectConfirmPopup : CommonPopup
-	{
-		public static GrowthWeaponEffectConfirmPopup Create()
-		{
-			return null;
-		}
+namespace Gluon;
 
-		public void InitPopup()
-		{
-		}
+public class GrowthWeaponEffectConfirmPopup : CommonPopup
+{
+	public static GrowthWeaponEffectConfirmPopup Create()
+	{
+		return null;
+	}
+
+	public void InitPopup()
+	{
 	}
 }

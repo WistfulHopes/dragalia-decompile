@@ -1,39 +1,38 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterCustomPointController_BP : CharacterCustomPointController
 {
-	public class CharacterCustomPointController_BP : CharacterCustomPointController
+	private float fCp;
+
+	protected override void Initialize(CharacterBase owner, AbilityDataElement[] elems)
 	{
-		private float fCp;
+	}
 
-		protected override void Initialize(CharacterBase owner, AbilityDataElement[] elems)
-		{
-		}
+	public override void Update()
+	{
+	}
 
-		public override void Update()
-		{
-		}
+	public override void SetCP(int index, int value)
+	{
+	}
 
-		public override void SetCP(int index, int value)
-		{
-		}
+	private void OnGaugeAnimComplete(int index, int prevCP, int currCP)
+	{
+	}
 
-		private void OnGaugeAnimComplete(int index, int prevCP, int currCP)
-		{
-		}
+	private void OnCPMatched(AbilityDataElement ade, int skillId, int skillIndex)
+	{
+	}
 
-		private void OnCPMatched(AbilityDataElement ade, int skillId, int skillIndex)
-		{
-		}
+	public override IconType GetIconType()
+	{
+		return default(IconType);
+	}
 
-		public override IconType GetIconType()
-		{
-			return default(IconType);
-		}
-
-		public override bool ClearCPOnContinue()
-		{
-			return default(bool);
-		}
+	public override bool ClearCPOnContinue()
+	{
+		return default(bool);
 	}
 }

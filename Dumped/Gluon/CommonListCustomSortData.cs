@@ -1,9 +1,8 @@
-namespace Gluon
-{
-	public class CommonListCustomSortData
-	{
-		public ulong[] keyIds;
+namespace Gluon;
 
-		public int[] decoNums;
-	}
+public class CommonListCustomSortData
+{
+	public ulong[] keyIds;
+
+	public int[] decoNums;
 }

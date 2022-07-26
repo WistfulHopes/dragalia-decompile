@@ -2,59 +2,58 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class NoteTopScene : SceneBase
 {
-	public class NoteTopScene : SceneBase
+	private enum NoteTopContents
 	{
-		private enum NoteTopContents
-		{
-			Story,
-			Chara,
-			Monster,
-			Glossary
-		}
+		Story,
+		Chara,
+		Monster,
+		Glossary
+	}
 
-		public GameObject serifPanel;
+	public GameObject serifPanel;
 
-		public Text serifText;
+	public Text serifText;
 
-		public GameObject bgPanel;
+	public GameObject bgPanel;
 
-		public Canvas mainCanvas;
+	public Canvas mainCanvas;
 
-		public Image charaImage;
+	public Image charaImage;
 
-		private IEnumerator coroutine;
+	private IEnumerator coroutine;
 
-		private int serifIndex;
+	private int serifIndex;
 
-		private int serifNum;
+	private int serifNum;
 
-		private string wording;
+	private string wording;
 
-		private void Start()
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public void ClickStory()
-		{
-		}
+	public void ClickStory()
+	{
+	}
 
-		public void ClickChara()
-		{
-		}
+	public void ClickChara()
+	{
+	}
 
-		public void ClickMonster()
-		{
-		}
+	public void ClickMonster()
+	{
+	}
 
-		public void ClickGlossary()
-		{
-		}
+	public void ClickGlossary()
+	{
+	}
 
-		private IEnumerator Talk()
-		{
-			return null;
-		}
+	private IEnumerator Talk()
+	{
+		return null;
 	}
 }

@@ -1,11 +1,10 @@
-namespace Gluon
-{
-	public class FriendSupportListBase : CommonIconListBase
-	{
-		public CommonIconListType type;
+namespace Gluon;
 
-		public override void SetupCountText(int nowCount, int maxCount)
-		{
-		}
+public class FriendSupportListBase : CommonIconListBase
+{
+	public CommonIconListType type;
+
+	public override void SetupCountText(int nowCount, int maxCount)
+	{
 	}
 }

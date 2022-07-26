@@ -2,106 +2,105 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FortPullMenu : MonoBehaviour
 {
-	public class FortPullMenu : MonoBehaviour
+	public bool isAnimation;
+
+	public bool isOpened;
+
+	[SerializeField]
+	private GameObject openedMenu;
+
+	[SerializeField]
+	private GameObject closedMenu;
+
+	[SerializeField]
+	private Button viewModeButton;
+
+	[SerializeField]
+	private Button fortDetailButton;
+
+	[SerializeField]
+	private Button invisibleButton;
+
+	[SerializeField]
+	private AnimationUIExpand pullMenuExpand;
+
+	[SerializeField]
+	private AnimationUIGroup progressiveMove;
+
+	public UnityEvent onManagedFacilityButtonPressed;
+
+	public UnityEvent onViewModeButtonPressed;
+
+	public UnityEvent onFortDetailButtonPressed;
+
+	public UnityEvent onInvisibleButtonPressed;
+
+	private RuntimeAnimatorController viewModeButtonAnimatorController;
+
+	private RuntimeAnimatorController fortDetailButtonAnimatorController;
+
+	private RuntimeAnimatorController invisibleButtonAnimatorController;
+
+	public float pullMenuMoveDuration => default(float);
+
+	private void Awake()
 	{
-		public bool isAnimation;
+	}
 
-		public bool isOpened;
+	public void OnPullMenuButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private GameObject openedMenu;
+	public void SlideIn()
+	{
+	}
 
-		[SerializeField]
-		private GameObject closedMenu;
+	public void SlideOut()
+	{
+	}
 
-		[SerializeField]
-		private Button viewModeButton;
+	public void OnSlideInEnd()
+	{
+	}
 
-		[SerializeField]
-		private Button fortDetailButton;
+	public void OnSlideOutEnd()
+	{
+	}
 
-		[SerializeField]
-		private Button invisibleButton;
+	public void OnManagedFacilityButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private AnimationUIExpand pullMenuExpand;
+	public void OnViewModeButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private AnimationUIGroup progressiveMove;
+	private void UpdateViewModeIcon()
+	{
+	}
 
-		public UnityEvent onManagedFacilityButtonPressed;
+	public void OnFortDetailButtonPressed()
+	{
+	}
 
-		public UnityEvent onViewModeButtonPressed;
+	public void OnInvisibleButtonPressed()
+	{
+	}
 
-		public UnityEvent onFortDetailButtonPressed;
+	public void SetAllButtonAnimatorController(RuntimeAnimatorController animatorController, bool isInteractable, bool isBackup = false)
+	{
+	}
 
-		public UnityEvent onInvisibleButtonPressed;
+	public void SetBackAllButtonAnimatorController(bool isInteractable = true)
+	{
+	}
 
-		private RuntimeAnimatorController viewModeButtonAnimatorController;
-
-		private RuntimeAnimatorController fortDetailButtonAnimatorController;
-
-		private RuntimeAnimatorController invisibleButtonAnimatorController;
-
-		public float pullMenuMoveDuration => default(float);
-
-		private void Awake()
-		{
-		}
-
-		public void OnPullMenuButtonPressed()
-		{
-		}
-
-		public void SlideIn()
-		{
-		}
-
-		public void SlideOut()
-		{
-		}
-
-		public void OnSlideInEnd()
-		{
-		}
-
-		public void OnSlideOutEnd()
-		{
-		}
-
-		public void OnManagedFacilityButtonPressed()
-		{
-		}
-
-		public void OnViewModeButtonPressed()
-		{
-		}
-
-		private void UpdateViewModeIcon()
-		{
-		}
-
-		public void OnFortDetailButtonPressed()
-		{
-		}
-
-		public void OnInvisibleButtonPressed()
-		{
-		}
-
-		public void SetAllButtonAnimatorController(RuntimeAnimatorController animatorController, bool isInteractable, bool isBackup = false)
-		{
-		}
-
-		public void SetBackAllButtonAnimatorController(bool isInteractable = true)
-		{
-		}
-
-		private RuntimeAnimatorController SetButtonAnimatorController(Button button, bool isInteractable, RuntimeAnimatorController animatorController)
-		{
-			return null;
-		}
+	private RuntimeAnimatorController SetButtonAnimatorController(Button button, bool isInteractable, RuntimeAnimatorController animatorController)
+	{
+		return null;
 	}
 }

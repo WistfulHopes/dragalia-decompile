@@ -1,34 +1,33 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class AlbumPictureBookMedalDetailPopup : CommonIconPopup
 {
-	public class AlbumPictureBookMedalDetailPopup : CommonIconPopup
+	[SerializeField]
+	private Text IconName;
+
+	private AlbumPictureBookMedalCellData itemData;
+
+	public static AlbumPictureBookMedalDetailPopup Create()
 	{
-		[SerializeField]
-		private Text IconName;
+		return null;
+	}
 
-		private AlbumPictureBookMedalCellData itemData;
+	public void InitContent(AlbumPictureBookMedalCellData itemData)
+	{
+	}
 
-		public static AlbumPictureBookMedalDetailPopup Create()
-		{
-			return null;
-		}
+	public override void OnCloseButtonPressed()
+	{
+	}
 
-		public void InitContent(AlbumPictureBookMedalCellData itemData)
-		{
-		}
+	public override void OnCancelButtonPressed()
+	{
+	}
 
-		public override void OnCloseButtonPressed()
-		{
-		}
-
-		public override void OnCancelButtonPressed()
-		{
-		}
-
-		public override void OnOkButtonPressed()
-		{
-		}
+	public override void OnOkButtonPressed()
+	{
 	}
 }

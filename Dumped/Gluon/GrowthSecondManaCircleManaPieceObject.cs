@@ -1,49 +1,48 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthSecondManaCircleManaPieceObject : GrowthSecondManaCircleDraggable, IPointerClickHandler, IEventSystemHandler
 {
-	public class GrowthSecondManaCircleManaPieceObject : GrowthSecondManaCircleDraggable, IPointerClickHandler, IEventSystemHandler
+	public GrowthManaCircleManaPieceData pieceData;
+
+	public bool isReleased;
+
+	public int circleIndex;
+
+	public int index;
+
+	public bool isSymbolObj;
+
+	private bool isFront;
+
+	private const float doubleTouchThreshold = 0.25f;
+
+	private void Start()
 	{
-		public GrowthManaCircleManaPieceData pieceData;
+	}
 
-		public bool isReleased;
+	public void OnPointerClick(PointerEventData eventData)
+	{
+	}
 
-		public int circleIndex;
+	public EffectObject PlayReleaseGrowEffect()
+	{
+		return null;
+	}
 
-		public int index;
+	public EffectObject PlayReleaseGrowSimpleEffect(Vector3 offset)
+	{
+		return null;
+	}
 
-		public bool isSymbolObj;
+	public void SetIsFront(bool arg)
+	{
+	}
 
-		private bool isFront;
-
-		private const float doubleTouchThreshold = 0.25f;
-
-		private void Start()
-		{
-		}
-
-		public void OnPointerClick(PointerEventData eventData)
-		{
-		}
-
-		public EffectObject PlayReleaseGrowEffect()
-		{
-			return null;
-		}
-
-		public EffectObject PlayReleaseGrowSimpleEffect(Vector3 offset)
-		{
-			return null;
-		}
-
-		public void SetIsFront(bool arg)
-		{
-		}
-
-		public bool IsFront()
-		{
-			return default(bool);
-		}
+	public bool IsFront()
+	{
+		return default(bool);
 	}
 }

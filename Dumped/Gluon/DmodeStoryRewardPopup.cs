@@ -4,23 +4,22 @@ using System.Runtime.InteropServices;
 using Gluon.Http;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeStoryRewardPopup : CommonPopup
 {
-	public class DmodeStoryRewardPopup : CommonPopup
+	public List<AtgenBuildEventRewardEntityList> questStoryActiveRewardList;
+
+	public List<QuestResultModel.FirstClearModel.FirstClearItemInfo> rewardItemList;
+
+	private const string prefabPath = "Prefabs/OutGame/Dmode/DmodeStory/DmodeStoryRewardPopup";
+
+	public static DmodeStoryRewardPopup Create([Optional] Transform parentTransform, [Optional] Action OnClosed)
 	{
-		public List<AtgenBuildEventRewardEntityList> questStoryActiveRewardList;
+		return null;
+	}
 
-		public List<QuestResultModel.FirstClearModel.FirstClearItemInfo> rewardItemList;
-
-		private const string prefabPath = "Prefabs/OutGame/Dmode/DmodeStory/DmodeStoryRewardPopup";
-
-		public static DmodeStoryRewardPopup Create([Optional] Transform parentTransform, [Optional] Action OnClosed)
-		{
-			return null;
-		}
-
-		public void ReflectParam(QuestRewardTableViewController questRewardTableViewController)
-		{
-		}
+	public void ReflectParam(QuestRewardTableViewController questRewardTableViewController)
+	{
 	}
 }

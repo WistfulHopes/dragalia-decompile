@@ -4,61 +4,60 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyCrestSetPopup : CommonPopup
 {
-	public class PartyCrestSetPopup : CommonPopup
+	public const int maxSetCountInGroup = 6;
+
+	public TabBase setGroupTab;
+
+	public Transform listParentTransform;
+
+	public GameObject originCell;
+
+	public Action<int> selectCrestSetCallBack;
+
+	private PartyCrestSetPopupCell[] cells;
+
+	private int selectGroupIndex;
+
+	public static PartyCrestSetPopup Create()
 	{
-		public const int maxSetCountInGroup = 6;
+		return null;
+	}
 
-		public TabBase setGroupTab;
+	public void InitPopup()
+	{
+	}
 
-		public Transform listParentTransform;
+	public override void StartShowAnimation([Optional] UnityEvent onCompleted)
+	{
+	}
 
-		public GameObject originCell;
+	private void OnSelectedGroupTab(int index)
+	{
+	}
 
-		public Action<int> selectCrestSetCallBack;
+	private void ReloadCell()
+	{
+	}
 
-		private PartyCrestSetPopupCell[] cells;
+	private void SendRegistData(int setIndex)
+	{
+	}
 
-		private int selectGroupIndex;
+	private bool CanRegistCrestSetData()
+	{
+		return default(bool);
+	}
 
-		public static PartyCrestSetPopup Create()
-		{
-			return null;
-		}
+	private AtgenRequestAbilityCrestSetData CreateRegistData(int setIndex)
+	{
+		return null;
+	}
 
-		public void InitPopup()
-		{
-		}
-
-		public override void StartShowAnimation([Optional] UnityEvent onCompleted)
-		{
-		}
-
-		private void OnSelectedGroupTab(int index)
-		{
-		}
-
-		private void ReloadCell()
-		{
-		}
-
-		private void SendRegistData(int setIndex)
-		{
-		}
-
-		private bool CanRegistCrestSetData()
-		{
-			return default(bool);
-		}
-
-		private AtgenRequestAbilityCrestSetData CreateRegistData(int setIndex)
-		{
-			return null;
-		}
-
-		private void SelectCrestSet(int setIndex)
-		{
-		}
+	private void SelectCrestSet(int setIndex)
+	{
 	}
 }

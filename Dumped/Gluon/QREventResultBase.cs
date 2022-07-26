@@ -6,109 +6,108 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QREventResultBase : MonoBehaviour
 {
-	public class QREventResultBase : MonoBehaviour
+	[SerializeField]
+	protected RectTransform topInfoTrans;
+
+	[SerializeField]
+	protected RectTransform gotRewardTrans;
+
+	[SerializeField]
+	protected RectTransform charaTrans;
+
+	[SerializeField]
+	protected RectTransform seriTrans;
+
+	[SerializeField]
+	protected UIAnimationPublisher publisher;
+
+	[SerializeField]
+	protected Image commonIconEffectImage;
+
+	protected float enterDuration;
+
+	protected float exitDuration;
+
+	protected float moveUpDuration;
+
+	protected float moveUpDistance;
+
+	private float commonIconEffectDuration;
+
+	public float overshootOrAmplitudeCustom;
+
+	private CustomEaseFunction _easeFunction;
+
+	protected Color bonusTextColor;
+
+	protected QuestResultTopPage resultTop;
+
+	private bool isButtonSlidedIn;
+
+	[SerializeField]
+	private Image seriArrowImage;
+
+	private Vector3 arrowInitPos;
+
+	private Tweener arrowTweener;
+
+	public CustomEaseFunction easeFunction => null;
+
+	public int bonusValue
 	{
-		[SerializeField]
-		protected RectTransform topInfoTrans;
-
-		[SerializeField]
-		protected RectTransform gotRewardTrans;
-
-		[SerializeField]
-		protected RectTransform charaTrans;
-
-		[SerializeField]
-		protected RectTransform seriTrans;
-
-		[SerializeField]
-		protected UIAnimationPublisher publisher;
-
-		[SerializeField]
-		protected Image commonIconEffectImage;
-
-		protected float enterDuration;
-
-		protected float exitDuration;
-
-		protected float moveUpDuration;
-
-		protected float moveUpDistance;
-
-		private float commonIconEffectDuration;
-
-		public float overshootOrAmplitudeCustom;
-
-		private CustomEaseFunction _easeFunction;
-
-		protected Color bonusTextColor;
-
-		protected QuestResultTopPage resultTop;
-
-		private bool isButtonSlidedIn;
-
-		[SerializeField]
-		private Image seriArrowImage;
-
-		private Vector3 arrowInitPos;
-
-		private Tweener arrowTweener;
-
-		public CustomEaseFunction easeFunction => null;
-
-		public int bonusValue
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		protected virtual void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void OnDestroy()
-		{
-		}
+	protected virtual void Start()
+	{
+	}
 
-		public virtual void StartEnterAnimation(bool isFadeInOutAnimation, UnityAction onComplete)
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public virtual void StartExitAnimation(bool isFadeInOutAnimation, UnityAction onComplete)
-		{
-		}
+	public virtual void StartEnterAnimation(bool isFadeInOutAnimation, UnityAction onComplete)
+	{
+	}
 
-		protected void MoveAndFade(RectTransform trans, bool isEnter, [Optional] UnityAction onComplete, float delay = 0f)
-		{
-		}
+	public virtual void StartExitAnimation(bool isFadeInOutAnimation, UnityAction onComplete)
+	{
+	}
 
-		protected void PlayGotRewardNumberAnimation(Text nowGetMedal, TweenCallback onComplete)
-		{
-		}
+	protected void MoveAndFade(RectTransform trans, bool isEnter, [Optional] UnityAction onComplete, float delay = 0f)
+	{
+	}
 
-		protected void SlideInBottomButtons()
-		{
-		}
+	protected void PlayGotRewardNumberAnimation(Text nowGetMedal, TweenCallback onComplete)
+	{
+	}
 
-		protected void SetVisiblePageIcon(bool visible)
-		{
-		}
+	protected void SlideInBottomButtons()
+	{
+	}
 
-		protected IEnumerator WaitForPlayDifferenceImages(OutGameBgChara bgCharacter)
-		{
-			return null;
-		}
+	protected void SetVisiblePageIcon(bool visible)
+	{
+	}
 
-		protected void ShowCommonIconEffectAnimation()
-		{
-		}
+	protected IEnumerator WaitForPlayDifferenceImages(OutGameBgChara bgCharacter)
+	{
+		return null;
+	}
+
+	protected void ShowCommonIconEffectAnimation()
+	{
 	}
 }

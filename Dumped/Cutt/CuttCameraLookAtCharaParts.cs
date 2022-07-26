@@ -1,9 +1,8 @@
-namespace Cutt
+namespace Cutt;
+
+public enum CuttCameraLookAtCharaParts
 {
-	public enum CuttCameraLookAtCharaParts
-	{
-		Face,
-		Chest,
-		Foot
-	}
+	Face,
+	Chest,
+	Foot
 }

@@ -2,36 +2,33 @@ using System.Runtime.CompilerServices;
 using ExitGames.Client.Photon;
 using MessagePack;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventBase<T> where T : EventBase<T>
 {
-	[MessagePackObject(false)]
-	public class EventBase<T> where T : EventBase<T>
+	public ushort _raiseEventSequenceId;
+
+	[IgnoreMember]
+	public int actorId
 	{
-		[Key(0)]
-		public ushort _raiseEventSequenceId;
-
-		[IgnoreMember]
-		public int actorId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
-
-		public byte[] Serialize(ushort nextSequenceId)
+		[CompilerGenerated]
+		private set
 		{
-			return null;
 		}
+	}
 
-		public static T Deserialize(EventData photonEvent)
-		{
-			return null;
-		}
+	public byte[] Serialize(ushort nextSequenceId)
+	{
+		return null;
+	}
+
+	public static T Deserialize(EventData photonEvent)
+	{
+		return null;
 	}
 }

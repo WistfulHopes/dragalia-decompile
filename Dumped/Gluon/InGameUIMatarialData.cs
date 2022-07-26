@@ -1,96 +1,95 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class InGameUIMatarialData
 {
-	public class InGameUIMatarialData
+	public string iconName
 	{
-		public string iconName
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public Material material
+	public Material material
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public Sprite sprite
+	public Sprite sprite
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public bool isLoaded
+	public bool isLoaded
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		private InGameUIMatarialData()
-		{
-		}
+	private InGameUIMatarialData()
+	{
+	}
 
-		public InGameUIMatarialData(string path, string iconName, bool isSync = false)
-		{
-		}
+	public InGameUIMatarialData(string path, string iconName, bool isSync = false)
+	{
+	}
 
-		~InGameUIMatarialData()
-		{
-		}
+	~InGameUIMatarialData()
+	{
+	}
 
-		public void Load(string path, string iconName, bool isSync)
-		{
-		}
+	public void Load(string path, string iconName, bool isSync)
+	{
+	}
 
-		private void Load(string path, string iconName)
-		{
-		}
+	private void Load(string path, string iconName)
+	{
+	}
 
-		private void LoadSync(string path, string iconName)
-		{
-		}
+	private void LoadSync(string path, string iconName)
+	{
+	}
 
-		public void Destroy()
-		{
-		}
+	public void Destroy()
+	{
+	}
 
-		public void Destroy(Material material)
-		{
-		}
+	public void Destroy(Material material)
+	{
+	}
 
-		public void Destroy(Sprite sprite)
-		{
-		}
+	public void Destroy(Sprite sprite)
+	{
 	}
 }

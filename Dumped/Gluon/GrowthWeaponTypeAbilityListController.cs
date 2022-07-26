@@ -1,19 +1,18 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthWeaponTypeAbilityListController : CommonDualListTableViewController
 {
-	public class GrowthWeaponTypeAbilityListController : CommonDualListTableViewController
+	[HideInInspector]
+	public WeaponType targetWeaponType;
+
+	protected override CommonIconListCellData CreateWeaponPassiveAbilityCellData(ulong keyIdOrInvalidId, int decoNum)
 	{
-		[HideInInspector]
-		public WeaponType targetWeaponType;
+		return null;
+	}
 
-		protected override CommonIconListCellData CreateWeaponPassiveAbilityCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
-
-		protected override void CustomSort()
-		{
-		}
+	protected override void CustomSort()
+	{
 	}
 }

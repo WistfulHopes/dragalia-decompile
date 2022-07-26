@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class FirstCharaSelectData
 {
-	public class FirstCharaSelectData
-	{
-		public bool isCheckMark;
+	public bool isCheckMark;
 
-		public int charaId;
+	public int charaId;
 
-		public bool isColleague;
+	public bool isColleague;
 
-		public bool isRecommend;
+	public bool isRecommend;
 
-		public int sortId;
-	}
+	public int sortId;
 }

@@ -1,15 +1,14 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+public class HotfixAttribute : Attribute
 {
-	public class HotfixAttribute : Attribute
+	private HotfixFlag flag;
+
+	public HotfixFlag Flag => default(HotfixFlag);
+
+	public HotfixAttribute(HotfixFlag e = HotfixFlag.Stateless)
 	{
-		private HotfixFlag flag;
-
-		public HotfixFlag Flag => default(HotfixFlag);
-
-		public HotfixAttribute(HotfixFlag e = HotfixFlag.Stateless)
-		{
-		}
 	}
 }

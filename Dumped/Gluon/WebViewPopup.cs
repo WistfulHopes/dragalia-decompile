@@ -6,114 +6,117 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class WebViewPopup : PopupBase
 {
-	public class WebViewPopup : PopupBase
+	public enum WebViewCategory
 	{
-		public enum WebViewCategory
-		{
-			Help,
-			Terms,
-			Copyright,
-			PrivacyPolicy,
-			PaymentServicesAct,
-			SpecifiedCommercialTransactionAct,
-			HealthPrecautions,
-			Faq,
-			SummonsInformation,
-			InquiryAttention,
-			questInfo,
-			timeAttackReward,
-			dragonBattleInfo,
-			unionBunus,
-			recommendedAbilityCrest,
-			timeAttackRankingEventReward
-		}
+		Help,
+		Terms,
+		Copyright,
+		PrivacyPolicy,
+		PaymentServicesAct,
+		SpecifiedCommercialTransactionAct,
+		HealthPrecautions,
+		Faq,
+		SummonsInformation,
+		InquiryAttention,
+		questInfo,
+		timeAttackReward,
+		dragonBattleInfo,
+		unionBunus,
+		recommendedAbilityCrest,
+		timeAttackRankingEventReward
+	}
 
-		public enum HelpAnchor
-		{
-			None,
-			TimeAttack
-		}
+	public enum HelpAnchor
+	{
+		None,
+		TimeAttack
+	}
 
-		private const string prefabPath = "Prefabs/OutGame/TitleMenu/WebViewPopup";
+	private const string prefabPath = "Prefabs/OutGame/TitleMenu/WebViewPopup";
 
-		[SerializeField]
-		private Rect margin;
+	[SerializeField]
+	private Rect margin;
 
-		[SerializeField]
-		private RectTransform popupRect;
+	[SerializeField]
+	private RectTransform popupRect;
 
-		[SerializeField]
-		private Text titleText;
+	[SerializeField]
+	private Text titleText;
 
-		[SerializeField]
-		private Text noInfoText;
+	[SerializeField]
+	private Text noInfoText;
 
-		[SerializeField]
-		private RectTransform content;
+	[SerializeField]
+	private RectTransform content;
 
-		private readonly Localize.TextId[] webViewTitleTextId;
+	private readonly Localize.TextId[] webViewTitleTextId;
 
-		private readonly string[] webViewUrlFunctionName;
+	private readonly string[] webViewUrlFunctionName;
 
-		private const string urlParameterFormatForId = "&id={0}";
+	private const string urlParameterFormatForId = "&id={0}";
 
-		private const string urlParameterFormatForCurrency = "&cur={0}";
+	private const string urlParameterFormatForCurrency = "&cur={0}";
 
-		private const string urlParameterFormatForVersion = "&version={0}";
+	private const string urlParameterFormatForVersion = "&version={0}";
 
-		private const string urlParameterFormatForQuestId = "&quest_id={0}";
+	private const string urlParameterFormatForQuestId = "&quest_id={0}";
 
-		private const string urlParameterFormatDragonBattleInfoId = "&quest_group_id={0}";
+	private const string urlParameterFormatDragonBattleInfoId = "&quest_group_id={0}";
 
-		private static readonly Dictionary<HelpAnchor, string> urlParameterFormatForHelp;
+	private static readonly Dictionary<HelpAnchor, string> urlParameterFormatForHelp;
 
-		private void Awake()
-		{
-		}
+	private void Awake()
+	{
+	}
 
-		public static WebViewPopup Create()
-		{
-			return null;
-		}
+	public static WebViewPopup Create()
+	{
+		return null;
+	}
 
-		public void InitSetting(WebViewCategory category, int id = 0, HelpAnchor anchor = HelpAnchor.None)
-		{
-		}
+	public void InitSetting(WebViewCategory category, int id = 0, HelpAnchor anchor = HelpAnchor.None)
+	{
+	}
 
-		private IEnumerator ShowWebView(WebViewCategory category, string path)
-		{
-			return null;
-		}
+	public void InitSetting(string path, string titleStr)
+	{
+	}
 
-		private void SetMargin()
-		{
-		}
+	private IEnumerator ShowWebView(string titleText, string path)
+	{
+		return null;
+	}
 
-		public void WebMessageCallBack(string msg)
-		{
-		}
+	private void SetMargin()
+	{
+	}
 
-		private bool ChangeToListTextByWebViewMessage(string msg)
-		{
-			return default(bool);
-		}
+	public void WebMessageCallBack(string msg)
+	{
+	}
 
-		public void OnCloseButtonPressed()
-		{
-		}
+	private bool ChangeToListTextByWebViewMessage(string msg)
+	{
+		return default(bool);
+	}
 
-		public static void RequestPaymentGetListForGetCurrencySymbol([Optional] UnityAction successCallback)
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
+	}
 
-		public static void OnError(ErrorType errorType, int resultCode)
-		{
-		}
+	public static void RequestPaymentGetListForGetCurrencySymbol([Optional] UnityAction successCallback)
+	{
+	}
 
-		protected override void OnDestroy()
-		{
-		}
+	public static void OnError(ErrorType errorType, int resultCode)
+	{
+	}
+
+	protected override void OnDestroy()
+	{
 	}
 }

@@ -1,28 +1,27 @@
 using System;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DestroyStateWatcher : MonoBehaviour
 {
-	public class DestroyStateWatcher : MonoBehaviour
+	public Action<bool> enableStateWatcher;
+
+	public Action destroyStateWatcher;
+
+	private void OnEnable()
 	{
-		public Action<bool> enableStateWatcher;
+	}
 
-		public Action destroyStateWatcher;
+	private void OnDisable()
+	{
+	}
 
-		private void OnEnable()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private void OnDisable()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public void RemoveAllCallbacksAndDestroySelf()
-		{
-		}
+	public void RemoveAllCallbacksAndDestroySelf()
+	{
 	}
 }

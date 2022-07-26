@@ -1,51 +1,50 @@
 using System;
 using System.Collections.Generic;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPageExpiryItemCheck
 {
-	public class MyPageExpiryItemCheck
+	private class WarningExpiryItemInfo
 	{
-		private class WarningExpiryItemInfo
-		{
-			public GiftType giftType;
+		public GiftType giftType;
 
-			public int itemId;
+		public int itemId;
 
-			public string itemName;
+		public string itemName;
 
-			public TimeSpan span;
+		public TimeSpan span;
 
-			public WarningExpiryItemInfo(GiftType giftType, int itemId, string itemName, TimeSpan span)
-			{
-			}
-
-			public bool ShouldForceMove()
-			{
-				return default(bool);
-			}
-
-			public void OnMoveButtonPressed()
-			{
-			}
-
-			public string GetMoveButtonText()
-			{
-				return null;
-			}
-		}
-
-		private static long ticketWarningLastDisplayDate;
-
-		private const int ticketWarningforceMoveSceneDays = 7;
-
-		private const int ticketWarningStartDisplayDays = 2;
-
-		public static void CheckAndShowExpriryWarning()
+		public WarningExpiryItemInfo(GiftType giftType, int itemId, string itemName, TimeSpan span)
 		{
 		}
 
-		private static void CreateWarningPopupOneByOne(List<WarningExpiryItemInfo> warningList)
+		public bool ShouldForceMove()
+		{
+			return default(bool);
+		}
+
+		public void OnMoveButtonPressed()
 		{
 		}
+
+		public string GetMoveButtonText()
+		{
+			return null;
+		}
+	}
+
+	private static long ticketWarningLastDisplayDate;
+
+	private const int ticketWarningforceMoveSceneDays = 7;
+
+	private const int ticketWarningStartDisplayDays = 2;
+
+	public static void CheckAndShowExpriryWarning()
+	{
+	}
+
+	private static void CreateWarningPopupOneByOne(List<WarningExpiryItemInfo> warningList)
+	{
 	}
 }

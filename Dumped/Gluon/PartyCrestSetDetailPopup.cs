@@ -1,43 +1,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyCrestSetDetailPopup : CommonPopup
 {
-	public class PartyCrestSetDetailPopup : CommonPopup
+	public PartyEquipCrest[] crestCells;
+
+	public PartyEquipTalisman talismanCell;
+
+	public GameObject errorTextObject;
+
+	public GameObject unionBonusButtonObject;
+
+	public GameObject eventBonusButtonObject;
+
+	private List<EventBonusPopup.EventBonusCharaInfo> eventAbilityInfo;
+
+	private List<UnionBonusPopup.UnionBonusInfo> unionBonusCharaInfoList;
+
+	public static PartyCrestSetDetailPopup Create()
 	{
-		public PartyEquipCrest[] crestCells;
+		return null;
+	}
 
-		public PartyEquipTalisman talismanCell;
+	public void InitPopup(int setIndex, bool canSelectCrestSet = true, bool isEquipData = false)
+	{
+	}
 
-		public GameObject errorTextObject;
+	protected override void Start()
+	{
+	}
 
-		public GameObject unionBonusButtonObject;
+	public void OnEventButtonPressed()
+	{
+	}
 
-		public GameObject eventBonusButtonObject;
-
-		private List<EventBonusPopup.EventBonusCharaInfo> eventAbilityInfo;
-
-		private List<UnionBonusPopup.UnionBonusInfo> unionBonusCharaInfoList;
-
-		public static PartyCrestSetDetailPopup Create()
-		{
-			return null;
-		}
-
-		public void InitPopup(int setIndex, bool canSelectCrestSet = true, bool isEquipData = false)
-		{
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void OnEventButtonPressed()
-		{
-		}
-
-		public void OnUnionButtonPressed()
-		{
-		}
+	public void OnUnionButtonPressed()
+	{
 	}
 }

@@ -1,34 +1,33 @@
 using System;
 using System.Collections.Generic;
 
-namespace XLua
+namespace XLua;
+
+public abstract class DelegateBridgeBase : LuaBase
 {
-	public abstract class DelegateBridgeBase : LuaBase
+	private Type firstKey;
+
+	private Delegate firstValue;
+
+	private Dictionary<Type, Delegate> bindTo;
+
+	protected int errorFuncRef;
+
+	public DelegateBridgeBase(int reference, LuaEnv luaenv)
 	{
-		private Type firstKey;
+	}
 
-		private Delegate firstValue;
+	public bool TryGetDelegate(Type key, out Delegate value)
+	{
+		return default(bool);
+	}
 
-		private Dictionary<Type, Delegate> bindTo;
+	public void AddDelegate(Type key, Delegate value)
+	{
+	}
 
-		protected int errorFuncRef;
-
-		public DelegateBridgeBase(int reference, LuaEnv luaenv)
-		{
-		}
-
-		public bool TryGetDelegate(Type key, out Delegate value)
-		{
-			return default(bool);
-		}
-
-		public void AddDelegate(Type key, Delegate value)
-		{
-		}
-
-		public virtual Delegate GetDelegateByType(Type type)
-		{
-			return null;
-		}
+	public virtual Delegate GetDelegateByType(Type type)
+	{
+		return null;
 	}
 }

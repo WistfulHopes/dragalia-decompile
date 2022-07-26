@@ -6,108 +6,102 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GuildSearchPopup : PopupBase
 {
-	public class GuildSearchPopup : PopupBase
+	private enum TabType
 	{
-		private enum TabType
-		{
-			Recommended,
-			Name,
-			ID,
-			Applied
-		}
+		Recommended,
+		Name,
+		ID,
+		Applied
+	}
 
-		[SerializeField]
-		[Header("TabView")]
-		public TabViewBase tabView;
+	[SerializeField]
+	public TabViewBase tabView;
 
-		[SerializeField]
-		[Header("Recommended")]
-		public GuildInfoTableViewController searchList;
+	[SerializeField]
+	public GuildInfoTableViewController searchList;
 
-		[SerializeField]
-		[Header("Applying")]
-		public Transform appliedCellTransform;
+	[SerializeField]
+	public Transform appliedCellTransform;
 
-		public GameObject noAppliedContent;
+	public GameObject noAppliedContent;
 
-		public GameObject appliedContent;
+	public GameObject appliedContent;
 
-		[SerializeField]
-		[Header("Search")]
-		public InputField nameInput;
+	[SerializeField]
+	public InputField nameInput;
 
-		public InputField idInput;
+	public InputField idInput;
 
-		[SerializeField]
-		[Header("Buttons")]
-		public GameObject okButtonGO;
+	[SerializeField]
+	public GameObject okButtonGO;
 
-		public Button okButton;
+	public Button okButton;
 
-		private GuildInfoTableViewCell appliedCell;
+	private GuildInfoTableViewCell appliedCell;
 
-		public const string prefabPath = "Prefabs/OutGame/Guild/GuildSearchPopup";
+	public const string prefabPath = "Prefabs/OutGame/Guild/GuildSearchPopup";
 
-		private List<GuildInfoCellData> cellDataList;
+	private List<GuildInfoCellData> cellDataList;
 
-		private GuildInfoCellData.FilterOption filter;
+	private GuildInfoCellData.FilterOption filter;
 
-		private TabType currentTab;
+	private TabType currentTab;
 
-		public static void CreateModule()
-		{
-		}
+	public static void CreateModule()
+	{
+	}
 
-		private static Task<GuildSearchAutoSearchResponse> RequestRecommendedList(GuildInfoCellData.FilterOption filter)
-		{
-			return null;
-		}
+	private static Task<GuildSearchAutoSearchResponse> RequestRecommendedList(GuildInfoCellData.FilterOption filter)
+	{
+		return null;
+	}
 
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		private int GetValidGuildId(string text)
-		{
-			return default(int);
-		}
+	private int GetValidGuildId(string text)
+	{
+		return default(int);
+	}
 
-		public void OnTabChanged(int tabIndex, int prevTabIndex)
-		{
-		}
+	public void OnTabChanged(int tabIndex, int prevTabIndex)
+	{
+	}
 
-		public void OnSearchButtonPressed()
-		{
-		}
+	public void OnSearchButtonPressed()
+	{
+	}
 
-		private void SearchByName(string name)
-		{
-		}
+	private void SearchByName(string name)
+	{
+	}
 
-		private void SearchById(int guildId)
-		{
-		}
+	private void SearchById(int guildId)
+	{
+	}
 
-		private void UpdateRecommendedList()
-		{
-		}
+	private void UpdateRecommendedList()
+	{
+	}
 
-		public void OnCellPressed(GuildInfoCellData data)
-		{
-		}
+	public void OnCellPressed(GuildInfoCellData data)
+	{
+	}
 
-		private void Apply(int guildId, GuildInfoCellData data, [Optional] Action onApplyDone)
-		{
-		}
+	private void Apply(int guildId, GuildInfoCellData data, [Optional] Action onApplyDone)
+	{
+	}
 
-		private void UpdateAppliedData()
-		{
-		}
+	private void UpdateAppliedData()
+	{
+	}
 
-		public void OnCancelApplyButtonPressed()
-		{
-		}
+	public void OnCancelApplyButtonPressed()
+	{
 	}
 }

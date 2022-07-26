@@ -1,123 +1,122 @@
 using System.Runtime.CompilerServices;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class UniqueComboData
 {
-	public class UniqueComboData
+	public enum ShiftConditionType
 	{
-		public enum ShiftConditionType
-		{
-			None,
-			HitNum,
-			Buff
-		}
+		None,
+		HitNum,
+		Buff
+	}
 
-		public int id
+	public int id
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public int actionId
+	public int actionId
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public int exActionId
+	public int exActionId
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public int maxComboNum
+	public int maxComboNum
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public ShiftConditionType shiftCondition
+	public ShiftConditionType shiftCondition
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(ShiftConditionType);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(ShiftConditionType);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public int conditionArgsI1
+	public int conditionArgsI1
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public string buffHitAttr
+	public string buffHitAttr
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return null;
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public UniqueComboData(CharaUniqueComboElement data)
-		{
-		}
+	public UniqueComboData(CharaUniqueComboElement data)
+	{
+	}
 
-		public void Reset(CharacterBase owner)
-		{
-		}
+	public void Reset(CharacterBase owner)
+	{
+	}
 
-		public void ResetFromBuff(CharacterBase owner)
-		{
-		}
+	public void ResetFromBuff(CharacterBase owner)
+	{
+	}
 
-		public bool IsEnableShiftCondition(CharacterBase owner)
-		{
-			return default(bool);
-		}
+	public bool IsEnableShiftCondition(CharacterBase owner)
+	{
+		return default(bool);
 	}
 }

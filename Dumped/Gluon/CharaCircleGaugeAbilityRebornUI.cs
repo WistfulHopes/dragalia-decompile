@@ -1,26 +1,24 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharaCircleGaugeAbilityRebornUI : CharaCircleGaugeUI
 {
-	public class CharaCircleGaugeAbilityRebornUI : CharaCircleGaugeUI
+	[SerializeField]
+	private InGameCounterUI _counterUI;
+
+	private int _lastTimeImageIndex;
+
+	public static CharaCircleGaugeAbilityRebornUI Create(GameObject parent, CharacterBase owner, CharacterMarkUI markUI, float adjustPosY, int siblingIndex = -1)
 	{
-		[SerializeField]
-		[Header("component")]
-		private InGameCounterUI _counterUI;
+		return null;
+	}
 
-		private int _lastTimeImageIndex;
+	protected override void Initialize(CharacterBase owner, CharacterMarkUI markUI, Type gaugeType, float adjustPosY)
+	{
+	}
 
-		public static CharaCircleGaugeAbilityRebornUI Create(GameObject parent, CharacterBase owner, CharacterMarkUI markUI, float adjustPosY, int siblingIndex = -1)
-		{
-			return null;
-		}
-
-		protected override void Initialize(CharacterBase owner, CharacterMarkUI markUI, Type gaugeType, float adjustPosY)
-		{
-		}
-
-		public override void SetGaugeTimer(float time, float initialTime, bool isPlayAnim = true, bool isForce = false)
-		{
-		}
+	public override void SetGaugeTimer(float time, float initialTime, bool isPlayAnim = true, bool isForce = false)
+	{
 	}
 }

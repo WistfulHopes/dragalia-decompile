@@ -1,13 +1,12 @@
 using UnityEngine;
 
-namespace Gluon
-{
-	public class QuestListBase : MonoBehaviour
-	{
-		private FlashPlayerManager flashPlayerManager;
+namespace Gluon;
 
-		protected void InitializeQuestCell(QuestCell cell, QuestType questType, bool isNewEnable)
-		{
-		}
+public class QuestListBase : MonoBehaviour
+{
+	private FlashPlayerManager flashPlayerManager;
+
+	protected void InitializeQuestCell(QuestCell cell, QuestType questType, bool isNewEnable)
+	{
 	}
 }

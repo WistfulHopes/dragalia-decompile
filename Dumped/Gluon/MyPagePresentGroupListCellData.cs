@@ -1,23 +1,22 @@
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPagePresentGroupListCellData
 {
-	public class MyPagePresentGroupListCellData
-	{
-		public bool isReceived;
+	public bool isReceived;
 
-		public string groupName;
+	public string groupName;
 
-		public int quantity;
+	public int quantity;
 
-		public string duplicateText;
+	public string duplicateText;
 
-		public bool isShowDuplicateText;
+	public bool isShowDuplicateText;
 
-		public MyPagePresentListPopup.NextScenePattern[] nextScenes;
+	public MyPagePresentListPopup.NextScenePattern[] nextScenes;
 
-		public UnityAction<MyPagePresentListPopup.NextScenePattern> pressedSceneButtonCallback;
+	public UnityAction<MyPagePresentListPopup.NextScenePattern> pressedSceneButtonCallback;
 
-		public UnityAction allCellUpdateCallback;
-	}
+	public UnityAction allCellUpdateCallback;
 }

@@ -1,13 +1,12 @@
-namespace Gluon
-{
-	public class FriendSupportListCell : CommonIconListCell
-	{
-		public override void UpdateContent(CommonIconListCellData data)
-		{
-		}
+namespace Gluon;
 
-		public static void UpdateIcon(CommonIconListCellData data, CommonUnitIcon icon)
-		{
-		}
+public class FriendSupportListCell : CommonIconListCell
+{
+	public override void UpdateContent(CommonIconListCellData data)
+	{
+	}
+
+	public static void UpdateIcon(CommonIconListCellData data, CommonUnitIcon icon)
+	{
 	}
 }

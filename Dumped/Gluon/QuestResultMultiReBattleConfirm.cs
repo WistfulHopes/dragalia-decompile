@@ -4,26 +4,25 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultMultiReBattleConfirm : PopupBase
 {
-	public class QuestResultMultiReBattleConfirm : PopupBase
+	[SerializeField]
+	private Text rebattleCountDownText;
+
+	public UnityEvent onExit;
+
+	public void SetTimer(int maxTime, DateTime startTime)
 	{
-		[SerializeField]
-		private Text rebattleCountDownText;
+	}
 
-		public UnityEvent onExit;
+	private IEnumerator UpdateReBattle(int reBattleCount, DateTime rebattleStartTime)
+	{
+		return null;
+	}
 
-		public void SetTimer(int maxTime, DateTime startTime)
-		{
-		}
-
-		private IEnumerator UpdateReBattle(int reBattleCount, DateTime rebattleStartTime)
-		{
-			return null;
-		}
-
-		public void OnExitPressed()
-		{
-		}
+	public void OnExitPressed()
+	{
 	}
 }

@@ -1,23 +1,22 @@
 using System;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public static class BattleRoyalUtil
 {
-	public static class BattleRoyalUtil
+	public static bool IsBattleRoyal(int eventId)
 	{
-		public static bool IsBattleRoyal(int eventId)
-		{
-			return default(bool);
-		}
+		return default(bool);
+	}
 
-		public static bool GetCurrentOrNextCycle(DateTime now, out BattleRoyalEventCycleElement cycleElement)
-		{
-			return default(bool);
-		}
+	public static bool GetCurrentOrNextCycle(DateTime now, out BattleRoyalEventCycleElement cycleElement)
+	{
+		return default(bool);
+	}
 
-		public static bool GetCurrentOrNextCycleDateTime(DateTime now, out DateTime startDT, out DateTime endDT)
-		{
-			return default(bool);
-		}
+	public static bool GetCurrentOrNextCycleDateTime(DateTime now, out DateTime startDT, out DateTime endDT)
+	{
+		return default(bool);
 	}
 }

@@ -1,42 +1,41 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodeStoryPage : DmodePageBase
 {
-	public class DmodeStoryPage : DmodePageBase
+	[SerializeField]
+	private DmodeStoryListController storyListCtrl;
+
+	[SerializeField]
+	private float loadingSeconds;
+
+	[SerializeField]
+	private float loadingDelay;
+
+	public bool isStoryReadConnected;
+
+	public override void OnPageBecomeActive(object data)
 	{
-		[SerializeField]
-		private DmodeStoryListController storyListCtrl;
+	}
 
-		[SerializeField]
-		private float loadingSeconds;
+	public override void OnPageEnterAnimationEnded()
+	{
+	}
 
-		[SerializeField]
-		private float loadingDelay;
+	private void OnBackButtonTouched()
+	{
+	}
 
-		public bool isStoryReadConnected;
+	public void OnDmodeStoryListCellPressed(DmodeStoryListCellData data)
+	{
+	}
 
-		public override void OnPageBecomeActive(object data)
-		{
-		}
+	public void OnRequestDmodeReadStory(int storyId)
+	{
+	}
 
-		public override void OnPageEnterAnimationEnded()
-		{
-		}
-
-		private void OnBackButtonTouched()
-		{
-		}
-
-		public void OnDmodeStoryListCellPressed(DmodeStoryListCellData data)
-		{
-		}
-
-		public void OnRequestDmodeReadStory(int storyId)
-		{
-		}
-
-		private void ChangeDmodeStoryMemorySacredTreePage(int storyId)
-		{
-		}
+	private void ChangeDmodeStoryMemorySacredTreePage(int storyId)
+	{
 	}
 }

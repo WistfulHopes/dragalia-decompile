@@ -1,11 +1,10 @@
 using System;
 
-namespace XLua
+namespace XLua;
+
+public enum GenFlag
 {
-	public enum GenFlag
-	{
-		No,
-		[Obsolete]
-		GCOptimize
-	}
+	No,
+	[Obsolete]
+	GCOptimize
 }

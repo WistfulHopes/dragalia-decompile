@@ -1,35 +1,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BattleRoyalCharaSkinPickupPopup : CommonPopup
 {
-	public class BattleRoyalCharaSkinPickupPopup : CommonPopup
+	public GameObject originCell;
+
+	public Transform cellParentTransform;
+
+	private List<BattleRoyalCharaSkinPickupListCell> listCells;
+
+	public static BattleRoyalCharaSkinPickupPopup Create()
 	{
-		public GameObject originCell;
+		return null;
+	}
 
-		public Transform cellParentTransform;
+	public void InitPopup(int[] charaSkinIds)
+	{
+	}
 
-		private List<BattleRoyalCharaSkinPickupListCell> listCells;
+	private void GoSummonScene()
+	{
+	}
 
-		public static BattleRoyalCharaSkinPickupPopup Create()
-		{
-			return null;
-		}
+	private void ShowReleaseCharaSkinPopup(int charaSkinId)
+	{
+	}
 
-		public void InitPopup(int[] charaSkinIds)
-		{
-		}
-
-		private void GoSummonScene()
-		{
-		}
-
-		private void ShowReleaseCharaSkinPopup(int charaSkinId)
-		{
-		}
-
-		private void ShowSkinReleaseResultPopup(int charaSkinId)
-		{
-		}
+	private void ShowSkinReleaseResultPopup(int charaSkinId)
+	{
 	}
 }

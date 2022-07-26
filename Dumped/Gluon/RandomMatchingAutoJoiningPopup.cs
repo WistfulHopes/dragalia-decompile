@@ -3,59 +3,58 @@ using System.Collections;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class RandomMatchingAutoJoiningPopup : PopupBase
 {
-	public class RandomMatchingAutoJoiningPopup : PopupBase
+	[SerializeField]
+	private GameObject debugGO;
+
+	private const string prefabPath = "Prefabs/OutGame/EventQuest/RamdomMathing/RandomMatchingAutoJoiningPopup";
+
+	private int questId;
+
+	private int eventId;
+
+	private bool is16Matching;
+
+	public static bool isRandomMatchingAutoJoining;
+
+	public static RandomMatchingAutoJoiningPopup Create(int questId, int eventId)
 	{
-		[SerializeField]
-		private GameObject debugGO;
+		return null;
+	}
 
-		private const string prefabPath = "Prefabs/OutGame/EventQuest/RamdomMathing/RandomMatchingAutoJoiningPopup";
+	protected override void Start()
+	{
+	}
 
-		private int questId;
+	private void Update()
+	{
+	}
 
-		private int eventId;
+	private void MatchingServiceStateChangedEventListener(MatchingService.StateType state)
+	{
+	}
 
-		private bool is16Matching;
+	private void ErrorTypeCheck(MultiPlayError error, [Optional] Action onClose)
+	{
+	}
 
-		public static bool isRandomMatchingAutoJoining;
+	public void OnCancelButtonPressed()
+	{
+	}
 
-		public static RandomMatchingAutoJoiningPopup Create(int questId, int eventId)
-		{
-			return null;
-		}
+	protected override void OnDestroy()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	private void StartQuest()
+	{
+	}
 
-		private void Update()
-		{
-		}
-
-		private void MatchingServiceStateChangedEventListener(MatchingService.StateType state)
-		{
-		}
-
-		private void ErrorTypeCheck(MultiPlayError error, [Optional] Action onClose)
-		{
-		}
-
-		public void OnCancelButtonPressed()
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
-
-		private void StartQuest()
-		{
-		}
-
-		private IEnumerator LoadSceneLoadingCheck()
-		{
-			return null;
-		}
+	private IEnumerator LoadSceneLoadingCheck()
+	{
+		return null;
 	}
 }

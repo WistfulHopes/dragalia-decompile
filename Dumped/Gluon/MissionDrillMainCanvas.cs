@@ -8,208 +8,207 @@ using Spine.Unity;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MissionDrillMainCanvas : AnimationUICanvas
 {
-	public class MissionDrillMainCanvas : AnimationUICanvas
+	[SerializeField]
+	private MissionDrillDetailUI detail;
+
+	[SerializeField]
+	private MissionDrillStepProgressUI stepProgress;
+
+	[SerializeField]
+	private MissionDrillStepButton stepButton;
+
+	[SerializeField]
+	private ButtonWithSelectedImage receiveButtonSelectedImage;
+
+	[SerializeField]
+	private Badge receiveButtonBadge;
+
+	[SerializeField]
+	private Button receiveButton;
+
+	[SerializeField]
+	private GameObject nhaamSmallRoot;
+
+	[SerializeField]
+	private Text nhaamTalkText;
+
+	[SerializeField]
+	private float animationStartDelay;
+
+	[SerializeField]
+	private AnimationUITalkWindow talkWindowAnimation;
+
+	private List<MissionTableViewData> missionTableViewDataList;
+
+	private SkeletonGraphic nhaamSmallSkeletonGraphic;
+
+	private DrillTalkElement currentTalk;
+
+	private Action<DrillTalkElement> onPlayCompleteDirection;
+
+	private const string nhaamSmallAnimationPath = "Prefabs/OutGame/MissionDrill/pf_TeacherNhaamSmall";
+
+	private const string prefsKeyCompleteDirectionShown = "MissionDrillMainCanvas/CompleteDirectionShown_{0}";
+
+	private const string prefsKeyMissionCompleteDirectionShown = "MissionDrillMainCanvas/LastDirectionShownMissionId_{0}";
+
+	private const string prefsKeyStepUnlockDirectionShown = "MissionDrillMainCanvas/StepUnlockDirectionShown_{0}";
+
+	protected override void Awake()
 	{
-		[SerializeField]
-		private MissionDrillDetailUI detail;
+	}
 
-		[SerializeField]
-		private MissionDrillStepProgressUI stepProgress;
+	private void Start()
+	{
+	}
 
-		[SerializeField]
-		private MissionDrillStepButton stepButton;
+	private void StartAnimation()
+	{
+	}
 
-		[SerializeField]
-		private ButtonWithSelectedImage receiveButtonSelectedImage;
+	private IEnumerator MissionCompleteAnimationCoroutine()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Badge receiveButtonBadge;
+	private IEnumerator StartMissionCompleteDirection()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Button receiveButton;
+	private IEnumerator StartStepUnlockDirection()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private GameObject nhaamSmallRoot;
+	private IEnumerator StartNextStepDirection()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private Text nhaamTalkText;
+	private void ShowNhaam()
+	{
+	}
 
-		[SerializeField]
-		private float animationStartDelay;
+	private bool IsNhaamCompleteDirectionRequired()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private AnimationUITalkWindow talkWindowAnimation;
+	private void ShownNhaamCompleteDirection()
+	{
+	}
 
-		private List<MissionTableViewData> missionTableViewDataList;
+	public void OnCompleteDirectionFinished()
+	{
+	}
 
-		private SkeletonGraphic nhaamSmallSkeletonGraphic;
+	public void Initialize(Action<DrillTalkElement> onPlayComplete)
+	{
+	}
 
-		private DrillTalkElement currentTalk;
+	public void Setup()
+	{
+	}
 
-		private Action<DrillTalkElement> onPlayCompleteDirection;
+	private void UpdateReceiveButton()
+	{
+	}
 
-		private const string nhaamSmallAnimationPath = "Prefabs/OutGame/MissionDrill/pf_TeacherNhaamSmall";
+	private int GetMissionCompleteDirectionShownMissionId(int groupId)
+	{
+		return default(int);
+	}
 
-		private const string prefsKeyCompleteDirectionShown = "MissionDrillMainCanvas/CompleteDirectionShown_{0}";
+	private void SetMissionCompleteDirectionShownMissionId(int groupId, int missionId)
+	{
+	}
 
-		private const string prefsKeyMissionCompleteDirectionShown = "MissionDrillMainCanvas/LastDirectionShownMissionId_{0}";
+	private bool IsMissionCompleteDirectionRequired()
+	{
+		return default(bool);
+	}
 
-		private const string prefsKeyStepUnlockDirectionShown = "MissionDrillMainCanvas/StepUnlockDirectionShown_{0}";
+	private bool IsStepUnlockDirectionRequired()
+	{
+		return default(bool);
+	}
 
-		protected override void Awake()
-		{
-		}
+	private void ShownStepUnlockDirection()
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private void PlayCompleteDirection(DrillTalkElement playTalk)
+	{
+	}
 
-		private void StartAnimation()
-		{
-		}
+	public void PlayNhaamSmallTalk(bool isPlayEnter)
+	{
+	}
 
-		private IEnumerator MissionCompleteAnimationCoroutine()
-		{
-			return null;
-		}
+	private void PlayNhaamSmallTalk(DrillTalkElement playTalk, bool isPlayEnter)
+	{
+	}
 
-		private IEnumerator StartMissionCompleteDirection()
-		{
-			return null;
-		}
+	private void PlayNhaamSmallEnterAnimation(DrillTalkElement playTalk, bool isPlayEnter)
+	{
+	}
 
-		private IEnumerator StartStepUnlockDirection()
-		{
-			return null;
-		}
+	private void PlayNhaamSmallEnterAnimation([Optional] Action onComplete)
+	{
+	}
 
-		private IEnumerator StartNextStepDirection()
-		{
-			return null;
-		}
+	public void PlayNhaamSmallExitAnimation([Optional] Action onComplete)
+	{
+	}
 
-		private void ShowNhaam()
-		{
-		}
+	private List<MissionTableViewData> GetReceivableMissionDataList()
+	{
+		return null;
+	}
 
-		private bool IsNhaamCompleteDirectionRequired()
-		{
-			return default(bool);
-		}
+	public void OnMissionListButtonPressed()
+	{
+	}
 
-		private void ShownNhaamCompleteDirection()
-		{
-		}
+	public void OnStepButtonClicked()
+	{
+	}
 
-		public void OnCompleteDirectionFinished()
-		{
-		}
+	public void OnDorahaziButtonClicked()
+	{
+	}
 
-		public void Initialize(Action<DrillTalkElement> onPlayComplete)
-		{
-		}
+	public void OnAllReceiveButtonClicked()
+	{
+	}
 
-		public void Setup()
-		{
-		}
+	private void StartTutorialCheck(Action onCheckEnd)
+	{
+	}
 
-		private void UpdateReceiveButton()
-		{
-		}
+	private IEnumerator DrillTutorialCoroutine(Action onCheckEnd)
+	{
+		return null;
+	}
 
-		private int GetMissionCompleteDirectionShownMissionId(int groupId)
-		{
-			return default(int);
-		}
+	private void PlayTalkWindowEnterAnimation()
+	{
+	}
 
-		private void SetMissionCompleteDirectionShownMissionId(int groupId, int missionId)
-		{
-		}
+	private void PlayTalkWindowExitAnimation()
+	{
+	}
 
-		private bool IsMissionCompleteDirectionRequired()
-		{
-			return default(bool);
-		}
+	public void BackButtonPressed()
+	{
+	}
 
-		private bool IsStepUnlockDirectionRequired()
-		{
-			return default(bool);
-		}
-
-		private void ShownStepUnlockDirection()
-		{
-		}
-
-		private void PlayCompleteDirection(DrillTalkElement playTalk)
-		{
-		}
-
-		public void PlayNhaamSmallTalk(bool isPlayEnter)
-		{
-		}
-
-		private void PlayNhaamSmallTalk(DrillTalkElement playTalk, bool isPlayEnter)
-		{
-		}
-
-		private void PlayNhaamSmallEnterAnimation(DrillTalkElement playTalk, bool isPlayEnter)
-		{
-		}
-
-		private void PlayNhaamSmallEnterAnimation([Optional] Action onComplete)
-		{
-		}
-
-		public void PlayNhaamSmallExitAnimation([Optional] Action onComplete)
-		{
-		}
-
-		private List<MissionTableViewData> GetReceivableMissionDataList()
-		{
-			return null;
-		}
-
-		public void OnMissionListButtonPressed()
-		{
-		}
-
-		public void OnStepButtonClicked()
-		{
-		}
-
-		public void OnDorahaziButtonClicked()
-		{
-		}
-
-		public void OnAllReceiveButtonClicked()
-		{
-		}
-
-		private void StartTutorialCheck(Action onCheckEnd)
-		{
-		}
-
-		private IEnumerator DrillTutorialCoroutine(Action onCheckEnd)
-		{
-			return null;
-		}
-
-		private void PlayTalkWindowEnterAnimation()
-		{
-		}
-
-		private void PlayTalkWindowExitAnimation()
-		{
-		}
-
-		public void BackButtonPressed()
-		{
-		}
-
-		private void EnableDebugMenu(bool enable)
-		{
-		}
+	private void EnableDebugMenu(bool enable)
+	{
 	}
 }

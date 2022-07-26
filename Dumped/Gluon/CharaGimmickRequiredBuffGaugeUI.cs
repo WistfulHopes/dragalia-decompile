@@ -2,92 +2,89 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharaGimmickRequiredBuffGaugeUI : CharaGimmickBaseGaugeUI
 {
-	public class CharaGimmickRequiredBuffGaugeUI : CharaGimmickBaseGaugeUI
+	[Serializable]
+	public class IconParam
 	{
-		[Serializable]
-		public class IconParam
-		{
-			public int conditionId;
+		public int conditionId;
 
-			public string iconName;
-		}
+		public string iconName;
+	}
 
-		[SerializeField]
-		[Header("component")]
-		private RectTransform rootRt;
+	[SerializeField]
+	private RectTransform rootRt;
 
-		[SerializeField]
-		private RectTransform iconRootRt;
+	[SerializeField]
+	private RectTransform iconRootRt;
 
-		[SerializeField]
-		private SpriteRenderer bgImage;
+	[SerializeField]
+	private SpriteRenderer bgImage;
 
-		[SerializeField]
-		private GameObject baseIconUI;
+	[SerializeField]
+	private GameObject baseIconUI;
 
-		[SerializeField]
-		[Header("parameter")]
-		private float bgWidthSize;
+	[SerializeField]
+	private float bgWidthSize;
 
-		[SerializeField]
-		private IconParam[] iconParams;
+	[SerializeField]
+	private IconParam[] iconParams;
 
-		private CharacterBase owner;
+	private CharacterBase owner;
 
-		private Dictionary<int, CharaGimmickRequiredBuffGaugeIconUI> iconUIDic;
+	private Dictionary<int, CharaGimmickRequiredBuffGaugeIconUI> iconUIDic;
 
-		private List<CharaGimmickRequiredBuffGaugeIconUI> iconUIList;
+	private List<CharaGimmickRequiredBuffGaugeIconUI> iconUIList;
 
-		private bool isVisible;
+	private bool isVisible;
 
-		private int iconMaxNum => default(int);
+	private int iconMaxNum => default(int);
 
-		private int iconActiveNum => default(int);
+	private int iconActiveNum => default(int);
 
-		public static CharaGimmickRequiredBuffGaugeUI Create(CharacterBase chara, GameObject parent, int siblingIndex = -1)
-		{
-			return null;
-		}
+	public static CharaGimmickRequiredBuffGaugeUI Create(CharacterBase chara, GameObject parent, int siblingIndex = -1)
+	{
+		return null;
+	}
 
-		private void Initialize(CharacterBase chara)
-		{
-		}
+	private void Initialize(CharacterBase chara)
+	{
+	}
 
-		private bool GetIconParam(int conditionId, out IconParam param)
-		{
-			return default(bool);
-		}
+	private bool GetIconParam(int conditionId, out IconParam param)
+	{
+		return default(bool);
+	}
 
-		private void OnDestroy()
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		public override void FastUpdate()
-		{
-		}
+	public override void FastUpdate()
+	{
+	}
 
-		public override void Show()
-		{
-		}
+	public override void Show()
+	{
+	}
 
-		public override void Hide()
-		{
-		}
+	public override void Hide()
+	{
+	}
 
-		private void ExecHide(bool isForce = false)
-		{
-		}
+	private void ExecHide(bool isForce = false)
+	{
+	}
 
-		public override bool IsVisible()
-		{
-			return default(bool);
-		}
+	public override bool IsVisible()
+	{
+		return default(bool);
+	}
 
-		public override int GetGaugeType()
-		{
-			return default(int);
-		}
+	public override int GetGaugeType()
+	{
+		return default(int);
 	}
 }

@@ -2,60 +2,59 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestPrepareEditPartyPopup : PopupBase
 {
-	public class QuestPrepareEditPartyPopup : PopupBase
+	public Button clearPartyButton;
+
+	[SerializeField]
+	private Button disableClearPartyButton;
+
+	public Button normalPartyButton;
+
+	public QuestPrepareScene questPrepareScene
 	{
-		public Button clearPartyButton;
-
-		[SerializeField]
-		private Button disableClearPartyButton;
-
-		public Button normalPartyButton;
-
-		public QuestPrepareScene questPrepareScene
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return null;
 		}
-
-		protected override void Start()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void SetClearPartyEnable(bool enable)
-		{
-		}
+	protected override void Start()
+	{
+	}
 
-		public void OnClearPartyButtonTouched()
-		{
-		}
+	private void SetClearPartyEnable(bool enable)
+	{
+	}
 
-		public void OnNormalPartyButtonTouched()
-		{
-		}
+	public void OnClearPartyButtonTouched()
+	{
+	}
 
-		private void OnCharactersExchangeByJumping()
-		{
-		}
+	public void OnNormalPartyButtonTouched()
+	{
+	}
 
-		public void OnAutoPartyButtonTouched()
-		{
-		}
+	private void OnCharactersExchangeByJumping()
+	{
+	}
 
-		public void OnCharaPartyButtonTouched()
-		{
-		}
+	public void OnAutoPartyButtonTouched()
+	{
+	}
 
-		public void OnBgTouched()
-		{
-		}
+	public void OnCharaPartyButtonTouched()
+	{
+	}
+
+	public void OnBgTouched()
+	{
 	}
 }

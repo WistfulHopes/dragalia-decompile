@@ -2,37 +2,35 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CommonSettingToggleBase : MonoBehaviour
 {
-	public class CommonSettingToggleBase : MonoBehaviour
+	[SerializeField]
+	public Toggle toggle;
+
+	public Action<bool, bool> onToggleValueChanged;
+
+	public Toggle.ToggleEvent onToggleClicked;
+
+	protected bool isSettingBySystem;
+
+	protected ToggleSound toggleSound;
+
+	private void Awake()
 	{
-		[SerializeField]
-		[Header("Components")]
-		public Toggle toggle;
+	}
 
-		public Action<bool, bool> onToggleValueChanged;
+	public void SetToggleState(bool value)
+	{
+	}
 
-		public Toggle.ToggleEvent onToggleClicked;
+	public virtual void OnToggleValueChanged(bool value)
+	{
+	}
 
-		protected bool isSettingBySystem;
-
-		protected ToggleSound toggleSound;
-
-		private void Awake()
-		{
-		}
-
-		public void SetToggleState(bool value)
-		{
-		}
-
-		public virtual void OnToggleValueChanged(bool value)
-		{
-		}
-
-		public static int GetActiveToggle(CommonSettingToggleBase[] toggles)
-		{
-			return default(int);
-		}
+	public static int GetActiveToggle(CommonSettingToggleBase[] toggles)
+	{
+		return default(int);
 	}
 }

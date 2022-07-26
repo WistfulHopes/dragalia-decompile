@@ -1,31 +1,30 @@
 using ExitGames.Client.Photon;
 
-namespace Gluon
+namespace Gluon;
+
+public class PhotonRoomProperty
 {
-	public class PhotonRoomProperty
+	private PhotonClient _client;
+
+	private Hashtable _failedChangeProperty;
+
+	private Hashtable _propertyCache;
+
+	public PhotonRoomProperty(PhotonClient client)
 	{
-		private PhotonClient _client;
+	}
 
-		private Hashtable _failedChangeProperty;
+	public bool TrySetProperty(string key, object value)
+	{
+		return default(bool);
+	}
 
-		private Hashtable _propertyCache;
+	public bool TryGetProperty(string key, out object value)
+	{
+		return default(bool);
+	}
 
-		public PhotonRoomProperty(PhotonClient client)
-		{
-		}
-
-		public bool TrySetProperty(string key, object value)
-		{
-			return default(bool);
-		}
-
-		public bool TryGetProperty(string key, out object value)
-		{
-			return default(bool);
-		}
-
-		public void Resend()
-		{
-		}
+	public void Resend()
+	{
 	}
 }

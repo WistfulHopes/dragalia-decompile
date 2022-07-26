@@ -1,7 +1,6 @@
-namespace Gluon
+namespace Gluon;
+
+public interface IReplicable<T>
 {
-	public interface IReplicable<T>
-	{
-		void Replicate(T other);
-	}
+	void Replicate(T other);
 }

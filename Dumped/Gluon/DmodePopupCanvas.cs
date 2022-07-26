@@ -1,40 +1,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class DmodePopupCanvas : MonoBehaviour
 {
-	public class DmodePopupCanvas : MonoBehaviour
+	private static List<GameObject> popupCanvasList;
+
+	private static TapEffectCanvas tapEffectCanvas;
+
+	private static string tapEffectCanvasPrefabPath;
+
+	public static void DestroyPopupOnUnloadInGame()
 	{
-		private static List<GameObject> popupCanvasList;
+	}
 
-		private static TapEffectCanvas tapEffectCanvas;
+	public static void SetPopupMode(bool v)
+	{
+	}
 
-		private static string tapEffectCanvasPrefabPath;
+	public static bool IsPopupMode()
+	{
+		return default(bool);
+	}
 
-		public static void DestroyPopupOnUnloadInGame()
-		{
-		}
+	public static PopupBase CreatePopup(string path, bool showStartAnimation)
+	{
+		return null;
+	}
 
-		public static void SetPopupMode(bool v)
-		{
-		}
+	private void Start()
+	{
+	}
 
-		public static bool IsPopupMode()
-		{
-			return default(bool);
-		}
-
-		public static PopupBase CreatePopup(string path, bool showStartAnimation)
-		{
-			return null;
-		}
-
-		private void Start()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
+	private void OnDestroy()
+	{
 	}
 }

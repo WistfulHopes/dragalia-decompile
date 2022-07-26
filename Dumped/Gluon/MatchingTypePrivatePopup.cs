@@ -2,60 +2,59 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gluon
+namespace Gluon;
+
+public class MatchingTypePrivatePopup : PopupBase
 {
-	public class MatchingTypePrivatePopup : PopupBase
+	[SerializeField]
+	public UnityEvent privateButtonPressed;
+
+	[SerializeField]
+	public UnityEvent bgButtonPressed;
+
+	[SerializeField]
+	private RectTransform rectTransTouchLayer;
+
+	public UnityEvent gpsSearchButtonPressed;
+
+	[SerializeField]
+	private GpsLocationUseAgreementToggle useLocationInfoAgreementToggle;
+
+	[SerializeField]
+	private ButtonWithSelectedImage gpsSearchButtonSelectedState;
+
+	[SerializeField]
+	private ButtonWithSelectedImage privateRoomButtonSelectedState;
+
+	[HideInInspector]
+	public int questId;
+
+	protected override void Start()
 	{
-		[SerializeField]
-		public UnityEvent privateButtonPressed;
+	}
 
-		[SerializeField]
-		public UnityEvent bgButtonPressed;
+	private IEnumerator FitSize()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private RectTransform rectTransTouchLayer;
+	public void OnPrivateButtonPressed()
+	{
+	}
 
-		public UnityEvent gpsSearchButtonPressed;
+	public void OnGpsMatchingButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private GpsLocationUseAgreementToggle useLocationInfoAgreementToggle;
+	public void ResetPrivateRoomCreateButtonState()
+	{
+	}
 
-		[SerializeField]
-		private ButtonWithSelectedImage gpsSearchButtonSelectedState;
+	public void ResetGpsSearchButtonState()
+	{
+	}
 
-		[SerializeField]
-		private ButtonWithSelectedImage privateRoomButtonSelectedState;
-
-		[HideInInspector]
-		public int questId;
-
-		protected override void Start()
-		{
-		}
-
-		private IEnumerator FitSize()
-		{
-			return null;
-		}
-
-		public void OnPrivateButtonPressed()
-		{
-		}
-
-		public void OnGpsMatchingButtonPressed()
-		{
-		}
-
-		public void ResetPrivateRoomCreateButtonState()
-		{
-		}
-
-		public void ResetGpsSearchButtonState()
-		{
-		}
-
-		public void OnBgButtonPressed()
-		{
-		}
+	public void OnBgButtonPressed()
+	{
 	}
 }

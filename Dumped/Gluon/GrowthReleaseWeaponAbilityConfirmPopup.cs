@@ -3,81 +3,80 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthReleaseWeaponAbilityConfirmPopup : CommonPopup, ICustomMessage
 {
-	public class GrowthReleaseWeaponAbilityConfirmPopup : CommonPopup, ICustomMessage
+	public Image[] abilityIcons;
+
+	public GameObject originCell;
+
+	public Transform cellParentTransform;
+
+	public Text needRupiText;
+
+	public Text beforeRupiText;
+
+	public Text afterRupiText;
+
+	public GameObject needMaterialTextObject;
+
+	public Action reloadCanvasUICallBack;
+
+	private GrowthUnitEnhanceModel model;
+
+	private List<CraftMaterialCell> materialCells;
+
+	private bool isDesabledReleaseButton;
+
+	private bool isShortageRupi;
+
+	private int[] selectIds;
+
+	private int totalNeedRupi;
+
+	private void OnEnable()
 	{
-		public Image[] abilityIcons;
+	}
 
-		public GameObject originCell;
+	private void OnDisable()
+	{
+	}
 
-		public Transform cellParentTransform;
+	public static GrowthReleaseWeaponAbilityConfirmPopup Create()
+	{
+		return null;
+	}
 
-		public Text needRupiText;
+	public void InitPopup(GrowthUnitEnhanceModel model, int[] selectIds)
+	{
+	}
 
-		public Text beforeRupiText;
+	public void OnAbilityIconPressed(int index)
+	{
+	}
 
-		public Text afterRupiText;
+	private void SetupAbilityIcons()
+	{
+	}
 
-		public GameObject needMaterialTextObject;
+	private void SetupRupi()
+	{
+	}
 
-		public Action reloadCanvasUICallBack;
+	private void SetupMaterialCell()
+	{
+	}
 
-		private GrowthUnitEnhanceModel model;
+	private void UpdateMaterialCell()
+	{
+	}
 
-		private List<CraftMaterialCell> materialCells;
+	private void OnMaterialIconPressed(CraftMaterialCellData cellData)
+	{
+	}
 
-		private bool isDesabledReleaseButton;
-
-		private bool isShortageRupi;
-
-		private int[] selectIds;
-
-		private int totalNeedRupi;
-
-		private void OnEnable()
-		{
-		}
-
-		private void OnDisable()
-		{
-		}
-
-		public static GrowthReleaseWeaponAbilityConfirmPopup Create()
-		{
-			return null;
-		}
-
-		public void InitPopup(GrowthUnitEnhanceModel model, int[] selectIds)
-		{
-		}
-
-		public void OnAbilityIconPressed(int index)
-		{
-		}
-
-		private void SetupAbilityIcons()
-		{
-		}
-
-		private void SetupRupi()
-		{
-		}
-
-		private void SetupMaterialCell()
-		{
-		}
-
-		private void UpdateMaterialCell()
-		{
-		}
-
-		private void OnMaterialIconPressed(CraftMaterialCellData cellData)
-		{
-		}
-
-		public void OnMessagReceived(CustomMessageType messageType, object data)
-		{
-		}
+	public void OnMessagReceived(CustomMessageType messageType, object data)
+	{
 	}
 }

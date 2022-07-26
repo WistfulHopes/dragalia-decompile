@@ -1,9 +1,8 @@
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+public interface ICuttTimelineKeyHasColor
 {
-	public interface ICuttTimelineKeyHasColor
-	{
-		Color GetRepresentativeColor();
-	}
+	Color GetRepresentativeColor();
 }

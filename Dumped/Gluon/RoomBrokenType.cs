@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum RoomBrokenType
 {
-	public enum RoomBrokenType
-	{
-		VerifySessionError,
-		HostDisconnected,
-		TimeExpired,
-		FailedToRegisterRanking
-	}
+	VerifySessionError,
+	HostDisconnected,
+	TimeExpired,
+	FailedToRegisterRanking
 }

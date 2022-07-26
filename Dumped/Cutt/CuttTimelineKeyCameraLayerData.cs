@@ -1,17 +1,16 @@
 using System;
 using UnityEngine;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineKeyCameraLayerData : CuttTimelineKeyWithInterpolate
 {
-	[Serializable]
-	public class CuttTimelineKeyCameraLayerData : CuttTimelineKeyWithInterpolate
+	public Vector3 layerOffset;
+
+	public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
+
+	public override void OnLoad(CuttTimelineControl timelineControl)
 	{
-		public Vector3 layerOffset;
-
-		public override CuttTimelineKeyDataType dataType => default(CuttTimelineKeyDataType);
-
-		public override void OnLoad(CuttTimelineControl timelineControl)
-		{
-		}
 	}
 }

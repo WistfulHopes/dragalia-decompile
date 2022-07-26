@@ -1,10 +1,9 @@
-namespace Gluon
+namespace Gluon;
+
+public enum DmodeServitorType
 {
-	public enum DmodeServitorType
-	{
-		NONE,
-		ATTACK,
-		DEFENSE,
-		SUPPORT
-	}
+	NONE,
+	ATTACK,
+	DEFENSE,
+	SUPPORT
 }

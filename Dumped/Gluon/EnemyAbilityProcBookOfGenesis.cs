@@ -2,82 +2,81 @@ using System.Runtime.CompilerServices;
 using Gluon.Event;
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public class EnemyAbilityProcBookOfGenesis : EnemyAbilityProcBase
 {
-	public class EnemyAbilityProcBookOfGenesis : EnemyAbilityProcBase
+	private EnemyCharacter _book;
+
+	private bool _hasBook;
+
+	private EnemyCharacter _linked;
+
+	private bool _isPlayReserved;
+
+	private bool _isStopReserved;
+
+	private bool _isAppliedBuff;
+
+	public int linkedId
 	{
-		private EnemyCharacter _book;
-
-		private bool _hasBook;
-
-		private EnemyCharacter _linked;
-
-		private bool _isPlayReserved;
-
-		private bool _isStopReserved;
-
-		private bool _isAppliedBuff;
-
-		public int linkedId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(int);
 		}
-
-		public bool isPlayed
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		public EnemyAbilityProcBookOfGenesis(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		private void SetBook()
+	public bool isPlayed
+	{
+		[CompilerGenerated]
+		get
+		{
+			return default(bool);
+		}
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public override void Play()
-		{
-		}
+	public EnemyAbilityProcBookOfGenesis(EnemyAbility enemyability_, EnemyAbilityElement data_, EnemyCharacter owner_)
+	{
+	}
 
-		private void OnPlay()
-		{
-		}
+	private void SetBook()
+	{
+	}
 
-		public override void Stop()
-		{
-		}
+	public override void Play()
+	{
+	}
 
-		private void OnStop()
-		{
-		}
+	private void OnPlay()
+	{
+	}
 
-		public override void OnUpdate()
-		{
-		}
+	public override void Stop()
+	{
+	}
 
-		private void RegisterLinkedEnemy()
-		{
-		}
+	private void OnStop()
+	{
+	}
 
-		public override void OnEnemyAbilityEvent(Gluon.Event.EnemyAbility recvData)
-		{
-		}
+	public override void OnUpdate()
+	{
+	}
+
+	private void RegisterLinkedEnemy()
+	{
+	}
+
+	public override void OnEnemyAbilityEvent(Gluon.Event.EnemyAbility recvData)
+	{
 	}
 }

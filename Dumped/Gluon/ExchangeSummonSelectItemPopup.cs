@@ -5,90 +5,89 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ExchangeSummonSelectItemPopup : PopupBase
 {
-	public class ExchangeSummonSelectItemPopup : PopupBase
+	[SerializeField]
+	private ExchangeSummonSelectItemCtrl[] tabCtrls;
+
+	[SerializeField]
+	private TabBase tabView;
+
+	[SerializeField]
+	private Text detailText;
+
+	[SerializeField]
+	private Text periodText;
+
+	[SerializeField]
+	private Transform sortButtonArea;
+
+	[SerializeField]
+	private Text nowSummonPointText;
+
+	private CommonSortButton sortButton;
+
+	private int summonId;
+
+	private SummonDataElement sde;
+
+	private SummonPointDataElement spde;
+
+	private bool isSentToPresentBox;
+
+	private DateTime endScheduleDateTime;
+
+	public Action onClose;
+
+	public static ExchangeSummonSelectItemPopup Create(int summonId, DateTime completeDateTime)
 	{
-		[SerializeField]
-		private ExchangeSummonSelectItemCtrl[] tabCtrls;
+		return null;
+	}
 
-		[SerializeField]
-		private TabBase tabView;
+	private void Awake()
+	{
+	}
 
-		[SerializeField]
-		private Text detailText;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		private Text periodText;
+	public void Request(int summonId)
+	{
+	}
 
-		[SerializeField]
-		private Transform sortButtonArea;
+	public void UpdateItemList()
+	{
+	}
 
-		[SerializeField]
-		private Text nowSummonPointText;
+	public void OnSummonSummonPointTradeRequestError(ErrorType errorType, int errorCode)
+	{
+	}
 
-		private CommonSortButton sortButton;
+	private List<ulong> CreateDataIdList(GiftType giftType)
+	{
+		return null;
+	}
 
-		private int summonId;
+	private void UpdateSortAndFilter(int tabViewIndex)
+	{
+	}
 
-		private SummonDataElement sde;
+	private void OnSortButtonClicked()
+	{
+	}
 
-		private SummonPointDataElement spde;
+	public void OnSummonClick(ExchangeSummonSelectItemCellData data)
+	{
+	}
 
-		private bool isSentToPresentBox;
+	public void OnExchangeSuccess(int summonId, int id, int giftType)
+	{
+	}
 
-		private DateTime endScheduleDateTime;
-
-		public Action onClose;
-
-		public static ExchangeSummonSelectItemPopup Create(int summonId, DateTime completeDateTime)
-		{
-			return null;
-		}
-
-		private void Awake()
-		{
-		}
-
-		protected override void Start()
-		{
-		}
-
-		public void Request(int summonId)
-		{
-		}
-
-		public void UpdateItemList()
-		{
-		}
-
-		public void OnSummonSummonPointTradeRequestError(ErrorType errorType, int errorCode)
-		{
-		}
-
-		private List<ulong> CreateDataIdList(GiftType giftType)
-		{
-			return null;
-		}
-
-		private void UpdateSortAndFilter(int tabViewIndex)
-		{
-		}
-
-		private void OnSortButtonClicked()
-		{
-		}
-
-		public void OnSummonClick(ExchangeSummonSelectItemCellData data)
-		{
-		}
-
-		public void OnExchangeSuccess(int summonId, int id, int giftType)
-		{
-		}
-
-		public void ExchangePopupClose()
-		{
-		}
+	public void ExchangePopupClose()
+	{
 	}
 }

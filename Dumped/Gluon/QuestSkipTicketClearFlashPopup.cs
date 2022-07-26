@@ -2,78 +2,77 @@ using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestSkipTicketClearFlashPopup : CommonPopup
 {
-	public class QuestSkipTicketClearFlashPopup : CommonPopup
+	[SerializeField]
+	private GameObject flashNode;
+
+	[SerializeField]
+	private Camera _flashCamera;
+
+	[SerializeField]
+	private FlashPlayerManager _flashPlayerManager;
+
+	[NonSerialized]
+	public Canvas canvas;
+
+	private FlashPlayer flashPlayerClear;
+
+	private Action onFinish;
+
+	private Action onOutLabel;
+
+	private bool isSkip;
+
+	private bool isPrepare;
+
+	public Camera flashCamera => null;
+
+	public FlashPlayerManager flashPlayerManager => null;
+
+	public bool isFinish
 	{
-		[SerializeField]
-		private GameObject flashNode;
-
-		[SerializeField]
-		private Camera _flashCamera;
-
-		[SerializeField]
-		private FlashPlayerManager _flashPlayerManager;
-
-		[NonSerialized]
-		public Canvas canvas;
-
-		private FlashPlayer flashPlayerClear;
-
-		private Action onFinish;
-
-		private Action onOutLabel;
-
-		private bool isSkip;
-
-		private bool isPrepare;
-
-		public Camera flashCamera => null;
-
-		public FlashPlayerManager flashPlayerManager => null;
-
-		public bool isFinish
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(bool);
 		}
-
-		public int sortingOrder => default(int);
-
-		public static QuestSkipTicketClearFlashPopup Create()
-		{
-			return null;
-		}
-
-		public void Prepare(Action finish, Action outLabel)
+		[CompilerGenerated]
+		private set
 		{
 		}
+	}
 
-		private void OnClearF2ULoad(int index)
-		{
-		}
+	public int sortingOrder => default(int);
 
-		public void Play(Action finish, Action outLabel)
-		{
-		}
+	public static QuestSkipTicketClearFlashPopup Create()
+	{
+		return null;
+	}
 
-		private void OnOutLabelStart()
-		{
-		}
+	public void Prepare(Action finish, Action outLabel)
+	{
+	}
 
-		public void ClosePage()
-		{
-		}
+	private void OnClearF2ULoad(int index)
+	{
+	}
 
-		public void OnSkip()
-		{
-		}
+	public void Play(Action finish, Action outLabel)
+	{
+	}
+
+	private void OnOutLabelStart()
+	{
+	}
+
+	public void ClosePage()
+	{
+	}
+
+	public void OnSkip()
+	{
 	}
 }

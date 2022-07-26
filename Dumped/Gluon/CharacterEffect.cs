@@ -1,104 +1,116 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterEffect
 {
-	public class CharacterEffect
+	private Dictionary<string, EffectObject> dict;
+
+	private List<int> coexistAuraGroups;
+
+	private const string deleteWithActionKeyPrefix = "DeleteWithAction_{0}_";
+
+	private const string deleteWithSkillKeyPrefix = "DeleteWithSkill_";
+
+	public bool isStopOnDeadState
 	{
-		private Dictionary<string, EffectObject> dict;
-
-		private List<int> coexistAuraGroups;
-
-		private const string deleteWithActionKeyPrefix = "DeleteWithAction_{0}_";
-
-		private const string deleteWithSkillKeyPrefix = "DeleteWithSkill_";
-
-		public bool isStopOnDeadState
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
+			return default(bool);
 		}
-
-		public void Play(string key, string effectName, GameObject go, Vector3 offset, Vector3 scale, EffectObject.EraseType eraseType = EffectObject.EraseType.DELETE, int trigger = 0, [Optional] CommonObjectStatus owner, int auraGroup = 0)
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public void Add(string key, EffectObject effectObject, bool isOverwrite = false)
-		{
-		}
+	public void Play(string key, string effectName, GameObject go, Vector3 offset, Vector3 scale, EffectObject.EraseType eraseType = EffectObject.EraseType.DELETE, int trigger = 0, [Optional] CommonObjectStatus owner, int auraGroup = 0)
+	{
+	}
 
-		public void Remove(string key)
-		{
-		}
+	public void Play(string key, string effectName, GameObject go, Vector3 offset, Quaternion rot, Vector3 scale, EffectObject.EraseType eraseType = EffectObject.EraseType.DELETE, int trigger = 0, [Optional] CommonObjectStatus owner, int auraGroup = 0)
+	{
+	}
 
-		public EffectObject IsPlaying(string key)
-		{
-			return null;
-		}
+	public void Add(string key, EffectObject effectObject, bool isOverwrite = false)
+	{
+	}
 
-		public void KickTrigger(string key, EffectManager.TriggerType type)
-		{
-		}
+	public void Remove(string key)
+	{
+	}
 
-		public void KickTrigger(string key, int trig)
-		{
-		}
+	public void Remove(EffectObject eo)
+	{
+	}
 
-		private void KickTriggerByPrefix(string prefix, EffectManager.TriggerType type)
-		{
-		}
+	public EffectObject IsPlaying(string key)
+	{
+		return null;
+	}
 
-		public void DeleteEffectForActionFinish(int actionId)
-		{
-		}
+	public void KickTrigger(string key, EffectManager.TriggerType type, [Optional] Func<EffectObject, bool> needsCheckEffectTriggerFunc)
+	{
+	}
 
-		public void DeleteEffectForSkillFinish()
-		{
-		}
+	public void KickTrigger(string key, int trig, [Optional] Func<EffectObject, bool> needsCheckEffectTriggerFunc)
+	{
+	}
 
-		public void Stop(string key)
-		{
-		}
+	private void KickTriggerByPrefix(string prefix, EffectManager.TriggerType type)
+	{
+	}
 
-		public void StopByPrefix(string prefix)
-		{
-		}
+	public void DeleteEffectForActionFinish(int actionId)
+	{
+	}
 
-		public void StopAll()
-		{
-		}
+	public void DeleteEffectForSkillFinish()
+	{
+	}
 
-		public void SetScale(string key, Vector3 scale)
-		{
-		}
+	public void Stop(string key)
+	{
+	}
 
-		public void SetAttackSpeedScale(float scale)
-		{
-		}
+	public void StopByPrefix(string prefix)
+	{
+	}
 
-		public void SetFollowPositionType(string key, EffectObject.FollowPosType posType)
-		{
-		}
+	public void StopAll()
+	{
+	}
 
-		public void SetFollowRotationType(string key, EffectObject.FollowRotType followType)
-		{
-		}
+	public void SetScale(string key, Vector3 scale)
+	{
+	}
 
-		private void CheckAuraGroup()
-		{
-		}
+	public void SetAttackSpeedScale(float scale)
+	{
+	}
 
-		private void AddAnyList(List<int> list, int groupId)
-		{
-		}
+	public void SetFollowPositionType(string key, EffectObject.FollowPosType posType)
+	{
+	}
+
+	public void SetFollowRotationType(string key, EffectObject.FollowRotType followType)
+	{
+	}
+
+	public void SetPositionAndRotation(string key, Vector3 position, Quaternion rotation)
+	{
+	}
+
+	private void CheckAuraGroup()
+	{
+	}
+
+	private void AddAnyList(List<int> list, int groupId)
+	{
 	}
 }

@@ -1,65 +1,64 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class RandomXorshift
 {
-	public class RandomXorshift
+	private uint x;
+
+	private uint y;
+
+	private uint z;
+
+	private uint w;
+
+	public Vector2 insideUnitCircle => default(Vector2);
+
+	public Vector3 insideUnitSphere => default(Vector3);
+
+	public Vector3 onUnitSphere => default(Vector3);
+
+	public float value => default(float);
+
+	public RandomXorshift()
 	{
-		private uint x;
+	}
 
-		private uint y;
+	public RandomXorshift(uint seed)
+	{
+	}
 
-		private uint z;
+	public void SetSeed(uint seed)
+	{
+	}
 
-		private uint w;
+	public int Range(int min, int max)
+	{
+		return default(int);
+	}
 
-		public Vector2 insideUnitCircle => default(Vector2);
+	public float Range(float min, float max)
+	{
+		return default(float);
+	}
 
-		public Vector3 insideUnitSphere => default(Vector3);
+	private int Next()
+	{
+		return default(int);
+	}
 
-		public Vector3 onUnitSphere => default(Vector3);
+	private double NextDouble()
+	{
+		return default(double);
+	}
 
-		public float value => default(float);
+	private uint NextU()
+	{
+		return default(uint);
+	}
 
-		public RandomXorshift()
-		{
-		}
-
-		public RandomXorshift(uint seed)
-		{
-		}
-
-		public void SetSeed(uint seed)
-		{
-		}
-
-		public int Range(int min, int max)
-		{
-			return default(int);
-		}
-
-		public float Range(float min, float max)
-		{
-			return default(float);
-		}
-
-		private int Next()
-		{
-			return default(int);
-		}
-
-		private double NextDouble()
-		{
-			return default(double);
-		}
-
-		private uint NextU()
-		{
-			return default(uint);
-		}
-
-		private uint CalcNext()
-		{
-			return default(uint);
-		}
+	private uint CalcNext()
+	{
+		return default(uint);
 	}
 }

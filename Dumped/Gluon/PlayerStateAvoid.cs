@@ -1,18 +1,17 @@
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateAvoid : PlayerStateBase
 {
-	public class PlayerStateAvoid : PlayerStateBase
+	public override void OnStateEnter()
 	{
-		public override void OnStateEnter()
-		{
-		}
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateUpdate()
+	{
+	}
 
-		protected override bool IsOperateState()
-		{
-			return default(bool);
-		}
+	protected override bool IsOperateState()
+	{
+		return default(bool);
 	}
 }

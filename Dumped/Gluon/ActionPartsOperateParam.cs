@@ -1,25 +1,24 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsOperateParam : ActionParts
 {
-	public class ActionPartsOperateParam : ActionParts
+	private readonly OperateParamData _partsData;
+
+	public ActionPartsOperateParam(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly OperateParamData _partsData;
+	}
 
-		public ActionPartsOperateParam(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	private void OperateBreakDamageRate()
+	{
+	}
 
-		private void OperateBreakDamageRate()
-		{
-		}
-
-		private void OperateRage()
-		{
-		}
+	private void OperateRage()
+	{
 	}
 }

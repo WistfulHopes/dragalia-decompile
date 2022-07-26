@@ -6,87 +6,86 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class ExcludeSummonPopup : PopupBase
 {
-	public class ExcludeSummonPopup : PopupBase
+	[SerializeField]
+	private ExcludeSummonCtrl tabCtrls;
+
+	[SerializeField]
+	private Transform sortButtonArea;
+
+	[SerializeField]
+	private Button allReleaseButton;
+
+	[SerializeField]
+	private Button allSelectButton;
+
+	private GiftType type;
+
+	private CommonSortButton sortButton;
+
+	private int summonId;
+
+	private SummonDataElement sde;
+
+	private SummonTopItemData summonTopItemData;
+
+	private UnityAction onSummonRequest;
+
+	public static ExcludeSummonPopup Create(SummonTopItemData itemData, UnityAction onSummonRequest)
 	{
-		[SerializeField]
-		private ExcludeSummonCtrl tabCtrls;
+		return null;
+	}
 
-		[SerializeField]
-		private Transform sortButtonArea;
+	private void Awake()
+	{
+	}
 
-		[SerializeField]
-		private Button allReleaseButton;
+	protected override void Start()
+	{
+	}
 
-		[SerializeField]
-		private Button allSelectButton;
+	private void UpdateSortAndFilter(int tabViewIndex)
+	{
+	}
 
-		private GiftType type;
+	private void OnSortButtonClicked()
+	{
+	}
 
-		private CommonSortButton sortButton;
+	private List<ulong> CreateDataIdList(GiftType giftType)
+	{
+		return null;
+	}
 
-		private int summonId;
+	public void UpdateItemList()
+	{
+	}
 
-		private SummonDataElement sde;
+	private void SetrReleaseAndSelectButton()
+	{
+	}
 
-		private SummonTopItemData summonTopItemData;
+	public void OnOkButton()
+	{
+	}
 
-		private UnityAction onSummonRequest;
+	public void OnSummonRequest()
+	{
+	}
 
-		public static ExcludeSummonPopup Create(SummonTopItemData itemData, UnityAction onSummonRequest)
-		{
-			return null;
-		}
+	public void OnAllSelect()
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public void OnAllRelease()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
-
-		private void UpdateSortAndFilter(int tabViewIndex)
-		{
-		}
-
-		private void OnSortButtonClicked()
-		{
-		}
-
-		private List<ulong> CreateDataIdList(GiftType giftType)
-		{
-			return null;
-		}
-
-		public void UpdateItemList()
-		{
-		}
-
-		private void SetrReleaseAndSelectButton()
-		{
-		}
-
-		public void OnOkButton()
-		{
-		}
-
-		public void OnSummonRequest()
-		{
-		}
-
-		public void OnAllSelect()
-		{
-		}
-
-		public void OnAllRelease()
-		{
-		}
-
-		public Task<SummonExcludeGetListResponse> RequestSummonExcludeGetList()
-		{
-			return null;
-		}
+	public Task<SummonExcludeGetListResponse> RequestSummonExcludeGetList()
+	{
+		return null;
 	}
 }

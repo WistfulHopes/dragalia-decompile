@@ -5,74 +5,73 @@ using Gluon.Master;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class EventQuestDetailCanvas : AnimationUICanvas
 {
-	public class EventQuestDetailCanvas : AnimationUICanvas
+	[SerializeField]
+	private EventQuestDetailHeader eventDetailBanner;
+
+	[SerializeField]
+	private Image questBg;
+
+	[SerializeField]
+	private float questBgFadeinTime;
+
+	[SerializeField]
+	private float questBgFadeoutTime;
+
+	private void Start()
 	{
-		[SerializeField]
-		private EventQuestDetailHeader eventDetailBanner;
+	}
 
-		[SerializeField]
-		private Image questBg;
+	public void ShowScreenshotBackImage()
+	{
+	}
 
-		[SerializeField]
-		private float questBgFadeinTime;
+	public void HideScreenshotBackImage()
+	{
+	}
 
-		[SerializeField]
-		private float questBgFadeoutTime;
+	public void SetQuestEventGroup(int eventId, Clb01EventLocationElement location, Action onCompleted)
+	{
+	}
 
-		private void Start()
-		{
-		}
+	private IEnumerator SetQuestEventCoroutine(int eventId, Clb01EventLocationElement location, Action onCompleted)
+	{
+		return null;
+	}
 
-		public void ShowScreenshotBackImage()
-		{
-		}
+	public void SetQuestEventGroup(int eventId, CombatEventLocationElement location, Action onCompleted)
+	{
+	}
 
-		public void HideScreenshotBackImage()
-		{
-		}
+	private IEnumerator SetQuestEventCoroutine(int eventId, CombatEventLocationElement location, Action onCompleted)
+	{
+		return null;
+	}
 
-		public void SetQuestEventGroup(int eventId, Clb01EventLocationElement location, Action onCompleted)
-		{
-		}
+	public void SetQuestBanner(int eventId, int topImageId)
+	{
+	}
 
-		private IEnumerator SetQuestEventCoroutine(int eventId, Clb01EventLocationElement location, Action onCompleted)
-		{
-			return null;
-		}
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		public void SetQuestEventGroup(int eventId, CombatEventLocationElement location, Action onCompleted)
-		{
-		}
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		private IEnumerator SetQuestEventCoroutine(int eventId, CombatEventLocationElement location, Action onCompleted)
-		{
-			return null;
-		}
+	public void OnSupportPageActive()
+	{
+	}
 
-		public void SetQuestBanner(int eventId, int topImageId)
-		{
-		}
+	public void OnSupportPageExitAnimation()
+	{
+	}
 
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		public void OnSupportPageActive()
-		{
-		}
-
-		public void OnSupportPageExitAnimation()
-		{
-		}
-
-		public void BackButtonPressed()
-		{
-		}
+	public void BackButtonPressed()
+	{
 	}
 }

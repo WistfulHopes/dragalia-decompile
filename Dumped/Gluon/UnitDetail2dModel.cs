@@ -3,89 +3,88 @@ using FLATOUT.Main;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class UnitDetail2dModel : MonoBehaviour
 {
-	public class UnitDetail2dModel : MonoBehaviour
+	public static readonly Vector2Int charaDetailSpriteSize;
+
+	private const string unit2dModelPath = "Images/OutGame/UnitDetail/";
+
+	public static readonly string talismanBg;
+
+	public static readonly string talismanFrame;
+
+	private Image image;
+
+	private void Awake()
 	{
-		public static readonly Vector2Int charaDetailSpriteSize;
+	}
 
-		private const string unit2dModelPath = "Images/OutGame/UnitDetail/";
+	public void SetBgCharacterImage(int charaId, Rarity rarity)
+	{
+	}
 
-		public static readonly string talismanBg;
+	public static Material GetBgCharacterMaterial(int charaId, Rarity rarity)
+	{
+		return null;
+	}
 
-		public static readonly string talismanFrame;
+	public static void ReleaseBgCharacterMaterial(int charaId, Rarity rarity)
+	{
+	}
 
-		private Image image;
+	public static string GetBgCharacterMaterialPath(int charaId, Rarity rarity)
+	{
+		return null;
+	}
 
-		private void Awake()
-		{
-		}
+	public void SetBgDragonImage(int dragonId)
+	{
+	}
 
-		public void SetBgCharacterImage(int charaId, Rarity rarity)
-		{
-		}
+	public static Material GetBgDragonMaterial(int dragonId)
+	{
+		return null;
+	}
 
-		public static Material GetBgCharacterMaterial(int charaId, Rarity rarity)
-		{
-			return null;
-		}
+	public static void ReleaseBgDragonMaterial(int dragonId)
+	{
+	}
 
-		public static void ReleaseBgCharacterMaterial(int charaId, Rarity rarity)
-		{
-		}
+	public static string GetBgDragonMaterialPath(int dragonId)
+	{
+		return null;
+	}
 
-		public static string GetBgCharacterMaterialPath(int charaId, Rarity rarity)
-		{
-			return null;
-		}
+	public void SetBgAmuletImage(int amuletId, int limitBreakLevel)
+	{
+	}
 
-		public void SetBgDragonImage(int dragonId)
-		{
-		}
+	public static Material GetBgAmuletMaterial(int amuletId, int limitBreakLevel)
+	{
+		return null;
+	}
 
-		public static Material GetBgDragonMaterial(int dragonId)
-		{
-			return null;
-		}
+	public static void ReleaseBgAmuletMaterial(int amuletId, int limitBreakLevel)
+	{
+	}
 
-		public static void ReleaseBgDragonMaterial(int dragonId)
-		{
-		}
+	public static string GetBgAmuletMaterialPath(int amuletId, int limitBreakLevel)
+	{
+		return null;
+	}
 
-		public static string GetBgDragonMaterialPath(int dragonId)
-		{
-			return null;
-		}
+	public static Material GetBgTalismanMaterial(string materialName)
+	{
+		return null;
+	}
 
-		public void SetBgAmuletImage(int amuletId, int limitBreakLevel)
-		{
-		}
+	public static void ReleaseBgTalismanFrameMaterial(string materialName)
+	{
+	}
 
-		public static Material GetBgAmuletMaterial(int amuletId, int limitBreakLevel)
-		{
-			return null;
-		}
-
-		public static void ReleaseBgAmuletMaterial(int amuletId, int limitBreakLevel)
-		{
-		}
-
-		public static string GetBgAmuletMaterialPath(int amuletId, int limitBreakLevel)
-		{
-			return null;
-		}
-
-		public static Material GetBgTalismanMaterial(string materialName)
-		{
-			return null;
-		}
-
-		public static void ReleaseBgTalismanFrameMaterial(string materialName)
-		{
-		}
-
-		public static void SetUnitDetailSprite(FlPlane plane, Material replaceMat, [Optional] string planeName)
-		{
-		}
+	public static void SetUnitDetailSprite(FlPlane plane, Material replaceMat, [Optional] string planeName)
+	{
 	}
 }

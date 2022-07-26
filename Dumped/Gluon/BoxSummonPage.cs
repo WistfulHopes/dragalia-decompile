@@ -4,136 +4,135 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class BoxSummonPage : EventQuestPageBase
 {
-	public class BoxSummonPage : EventQuestPageBase
+	public const int ResetItemSequence = 5;
+
+	[SerializeField]
+	private Transform edgeToEdgeTrans;
+
+	[SerializeField]
+	private Button resetButton;
+
+	[SerializeField]
+	private Button summonButton;
+
+	[SerializeField]
+	private GameObject eventSummonReward;
+
+	[SerializeField]
+	private Image eventSummonRewardImage2;
+
+	[SerializeField]
+	private RectTransform eventSummonRewardMover;
+
+	[SerializeField]
+	private Image eventSummonPickup2;
+
+	[SerializeField]
+	private Image eventSummonPickup1Bg;
+
+	[SerializeField]
+	private Image eventSummonPickup1Text;
+
+	[SerializeField]
+	private Image eventSummonPickup1Duration;
+
+	[SerializeField]
+	private GameObject rewardItemTemplate;
+
+	[SerializeField]
+	private Text durationText;
+
+	[SerializeField]
+	private Text pointRemain;
+
+	[SerializeField]
+	private Text pointCost;
+
+	[SerializeField]
+	private BoxSummonItem[] summonItems;
+
+	private bool isSetupContents;
+
+	protected override void Awake()
 	{
-		public const int ResetItemSequence = 5;
+	}
 
-		[SerializeField]
-		private Transform edgeToEdgeTrans;
+	public static bool IsLongLayout()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private Button resetButton;
+	private void Start()
+	{
+	}
 
-		[SerializeField]
-		private Button summonButton;
+	public override void ResetSummonData()
+	{
+	}
 
-		[SerializeField]
-		private GameObject eventSummonReward;
+	public override void OnPageBecomeActive(object data)
+	{
+	}
 
-		[SerializeField]
-		private Image eventSummonRewardImage2;
+	private void SetupContents()
+	{
+	}
 
-		[SerializeField]
-		private RectTransform eventSummonRewardMover;
+	private void SetupEventSummonMainReward()
+	{
+	}
 
-		[SerializeField]
-		private Image eventSummonPickup2;
+	private void SetupSummonData()
+	{
+	}
 
-		[SerializeField]
-		private Image eventSummonPickup1Bg;
+	private void SetupEventPeriod()
+	{
+	}
 
-		[SerializeField]
-		private Image eventSummonPickup1Text;
+	private void SetupPointReamin()
+	{
+	}
 
-		[SerializeField]
-		private Image eventSummonPickup1Duration;
+	private void SetupPointCost()
+	{
+	}
 
-		[SerializeField]
-		private GameObject rewardItemTemplate;
+	private void ResetSummonButton()
+	{
+	}
 
-		[SerializeField]
-		private Text durationText;
+	public void OnContentButtonTouched()
+	{
+	}
 
-		[SerializeField]
-		private Text pointRemain;
+	public void OnSummonButtonTouched()
+	{
+	}
 
-		[SerializeField]
-		private Text pointCost;
+	public void OnBackButtonTouched()
+	{
+	}
 
-		[SerializeField]
-		private BoxSummonItem[] summonItems;
+	public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		private bool isSetupContents;
+	private IEnumerator WaitForSetupContents(AnimationPattern animationPattern, Action onAnimationDone, [Optional] Action onCutOff)
+	{
+		return null;
+	}
 
-		protected override void Awake()
-		{
-		}
+	public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
+	{
+	}
 
-		public static bool IsLongLayout()
-		{
-			return default(bool);
-		}
-
-		private void Start()
-		{
-		}
-
-		public override void ResetSummonData()
-		{
-		}
-
-		public override void OnPageBecomeActive(object data)
-		{
-		}
-
-		private void SetupContents()
-		{
-		}
-
-		private void SetupEventSummonMainReward()
-		{
-		}
-
-		private void SetupSummonData()
-		{
-		}
-
-		private void SetupEventPeriod()
-		{
-		}
-
-		private void SetupPointReamin()
-		{
-		}
-
-		private void SetupPointCost()
-		{
-		}
-
-		private void ResetSummonButton()
-		{
-		}
-
-		public void OnContentButtonTouched()
-		{
-		}
-
-		public void OnSummonButtonTouched()
-		{
-		}
-
-		public void OnBackButtonTouched()
-		{
-		}
-
-		public override void StartEnterAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		private IEnumerator WaitForSetupContents(AnimationPattern animationPattern, Action onAnimationDone, [Optional] Action onCutOff)
-		{
-			return null;
-		}
-
-		public override void StartExitAnimation(AnimationPattern pattern = AnimationPattern.Pattern_1, [Optional] Action onAnimationDone, [Optional] Action onCutOff)
-		{
-		}
-
-		protected override int GetMaxExecCount()
-		{
-			return default(int);
-		}
+	protected override int GetMaxExecCount()
+	{
+		return default(int);
 	}
 }

@@ -3,147 +3,146 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestRepeatPopup : CommonPopup
 {
-	public class QuestRepeatPopup : CommonPopup
+	[SerializeField]
+	private TabBase repeautoPlayToggle;
+
+	[SerializeField]
+	private TabBase autoTransformToggle;
+
+	[SerializeField]
+	private CommonSliderSelection gameSpeedSlider;
+
+	[SerializeField]
+	private CommonSettingToggleBase repeatOffToggle;
+
+	[SerializeField]
+	private CommonSettingToggleBase useAllStaminaToggle;
+
+	[SerializeField]
+	private CommonSettingToggleBase repeatSettingCountToggle;
+
+	[SerializeField]
+	private CommonSliderSelection repeatNumSlider;
+
+	[SerializeField]
+	private Text consumeStaminaText;
+
+	[SerializeField]
+	private Transform RecoverItemIconParent;
+
+	private UnityAction onOkButtonPressed;
+
+	private QuestRepeatSettingModel tmpModel;
+
+	private float speedSliderValue;
+
+	private bool isEnableTransformToggle;
+
+	private const int sliderMaxValue = 99;
+
+	private const int sliderMinValue = 1;
+
+	private const int sliderInitialValue = 5;
+
+	private const string popupPath = "Prefabs/OutGame/QuestPrepare/QuestRepeatPopup";
+
+	private const string iconPath = "Prefabs/OutGame/QuestPrepare/RepeatItemIcon";
+
+	protected override void Start()
 	{
-		[SerializeField]
-		private TabBase repeautoPlayToggle;
+	}
 
-		[SerializeField]
-		private TabBase autoTransformToggle;
+	public static QuestRepeatPopup Create(UnityAction onOkButtonPressed, bool isEnableTransformToggle)
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private CommonSliderSelection gameSpeedSlider;
+	private void SetAutoPlayToggle()
+	{
+	}
 
-		[SerializeField]
-		private CommonSettingToggleBase repeatOffToggle;
+	private void SaveAutoPlayToggle()
+	{
+	}
 
-		[SerializeField]
-		private CommonSettingToggleBase useAllStaminaToggle;
+	private void SetAutoTransformToggle()
+	{
+	}
 
-		[SerializeField]
-		private CommonSettingToggleBase repeatSettingCountToggle;
+	private void SaveAutoTransformToggle()
+	{
+	}
 
-		[SerializeField]
-		private CommonSliderSelection repeatNumSlider;
+	private void SetSliderValue()
+	{
+	}
 
-		[SerializeField]
-		private Text consumeStaminaText;
+	private void SetSliderText(float value)
+	{
+	}
 
-		[SerializeField]
-		private Transform RecoverItemIconParent;
+	public void GameSpeedSliderValueChanged(float value)
+	{
+	}
 
-		private UnityAction onOkButtonPressed;
+	private void SaveGameSpeedt()
+	{
+	}
 
-		private QuestRepeatSettingModel tmpModel;
+	private void InitRecoverStaminaItemIcon()
+	{
+	}
 
-		private float speedSliderValue;
+	public override void OnOkButtonPressed()
+	{
+	}
 
-		private bool isEnableTransformToggle;
+	public void SetUseItem(ItemList item, bool toEnable)
+	{
+	}
 
-		private const int sliderMaxValue = 99;
+	private int GetConsumeStamina()
+	{
+		return default(int);
+	}
 
-		private const int sliderMinValue = 1;
+	private void CreateWarningShortStaminaPopup()
+	{
+	}
 
-		private const int sliderInitialValue = 5;
+	public void OnValueChanged(bool value)
+	{
+	}
 
-		private const string popupPath = "Prefabs/OutGame/QuestPrepare/QuestRepeatPopup";
+	public void OnRepeatOffPressed()
+	{
+	}
 
-		private const string iconPath = "Prefabs/OutGame/QuestPrepare/RepeatItemIcon";
+	public void OnUseAllStaminaPressed()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
+	public void OnRepeatSettingCountPressed()
+	{
+	}
 
-		public static QuestRepeatPopup Create(UnityAction onOkButtonPressed, bool isEnableTransformToggle)
-		{
-			return null;
-		}
+	public void RepeatNumSliderValueChanged(float value)
+	{
+	}
 
-		private void SetAutoPlayToggle()
-		{
-		}
+	private void UpdateToggleState(QuestRepeatSettingModel.RepeatSetting newState)
+	{
+	}
 
-		private void SaveAutoPlayToggle()
-		{
-		}
+	private void ToggleSetValue(QuestRepeatSettingModel.RepeatSetting newState)
+	{
+	}
 
-		private void SetAutoTransformToggle()
-		{
-		}
-
-		private void SaveAutoTransformToggle()
-		{
-		}
-
-		private void SetSliderValue()
-		{
-		}
-
-		private void SetSliderText(float value)
-		{
-		}
-
-		public void GameSpeedSliderValueChanged(float value)
-		{
-		}
-
-		private void SaveGameSpeedt()
-		{
-		}
-
-		private void InitRecoverStaminaItemIcon()
-		{
-		}
-
-		public override void OnOkButtonPressed()
-		{
-		}
-
-		public void SetUseItem(ItemList item, bool toEnable)
-		{
-		}
-
-		private int GetConsumeStamina()
-		{
-			return default(int);
-		}
-
-		private void CreateWarningShortStaminaPopup()
-		{
-		}
-
-		public void OnValueChanged(bool value)
-		{
-		}
-
-		public void OnRepeatOffPressed()
-		{
-		}
-
-		public void OnUseAllStaminaPressed()
-		{
-		}
-
-		public void OnRepeatSettingCountPressed()
-		{
-		}
-
-		public void RepeatNumSliderValueChanged(float value)
-		{
-		}
-
-		private void UpdateToggleState(QuestRepeatSettingModel.RepeatSetting newState)
-		{
-		}
-
-		private void ToggleSetValue(QuestRepeatSettingModel.RepeatSetting newState)
-		{
-		}
-
-		public void OnAutoPlayToggleChanged(int index, bool isFromUI)
-		{
-		}
+	public void OnAutoPlayToggleChanged(int index, bool isFromUI)
+	{
 	}
 }

@@ -1,59 +1,58 @@
 using System.Runtime.CompilerServices;
 
-namespace Gluon
+namespace Gluon;
+
+public class CharacterBuffTriggerReactionBase
 {
-	public class CharacterBuffTriggerReactionBase
+	public int ActionId
 	{
-		public int ActionId
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public int ActionConditionId
+	public int ActionConditionId
+	{
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(int);
-			}
-			[CompilerGenerated]
-			private set
-			{
-			}
+			return default(int);
 		}
+		[CompilerGenerated]
+		private set
+		{
+		}
+	}
 
-		public CharacterBuffTriggerReactionBase(int actionId, int actionConditionId)
-		{
-		}
+	public CharacterBuffTriggerReactionBase(int actionId, int actionConditionId)
+	{
+	}
 
-		public virtual void Update()
-		{
-		}
+	public virtual void Update()
+	{
+	}
 
-		public virtual bool CanAcceptTrigger(ref CharacterAppendBuffTrigger trigger)
-		{
-			return default(bool);
-		}
+	public virtual bool CanAcceptTrigger(ref CharacterAppendBuffTrigger trigger)
+	{
+		return default(bool);
+	}
 
-		public virtual void OnAppendBuff(ref CharacterAppendBuffTrigger trigger)
-		{
-		}
+	public virtual void OnAppendBuff(ref CharacterAppendBuffTrigger trigger)
+	{
+	}
 
-		public virtual bool CanAcceptTrigger(ref CharacterRemoveBuffTrigger trigger)
-		{
-			return default(bool);
-		}
+	public virtual bool CanAcceptTrigger(ref CharacterRemoveBuffTrigger trigger)
+	{
+		return default(bool);
+	}
 
-		public virtual void OnRemoveBuff(ref CharacterRemoveBuffTrigger trigger)
-		{
-		}
+	public virtual void OnRemoveBuff(ref CharacterRemoveBuffTrigger trigger)
+	{
 	}
 }

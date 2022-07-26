@@ -1,18 +1,17 @@
-namespace Gluon
+namespace Gluon;
+
+public class WeaponEvolutionSelectListController : CommonIconListController
 {
-	public class WeaponEvolutionSelectListController : CommonIconListController
+	public bool isShowAllTarget;
+
+	public int CellCount => default(int);
+
+	protected override CommonIconListCellData CreateWeaponCellData(ulong keyIdOrInvalidId, int decoNum)
 	{
-		public bool isShowAllTarget;
+		return null;
+	}
 
-		public int CellCount => default(int);
-
-		protected override CommonIconListCellData CreateWeaponCellData(ulong keyIdOrInvalidId, int decoNum)
-		{
-			return null;
-		}
-
-		protected override void CustomSort()
-		{
-		}
+	protected override void CustomSort()
+	{
 	}
 }

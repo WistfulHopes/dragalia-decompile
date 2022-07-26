@@ -1,24 +1,22 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandCuttTapEnd : IStoryCommand
 {
-	[CommandName("cutt_tapend")]
-	public class StoryCommandCuttTapEnd : IStoryCommand
+	private IEnumerator coroutine;
+
+	public void Start()
 	{
-		private IEnumerator coroutine;
+	}
 
-		public void Start()
-		{
-		}
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		public override bool Update()
-		{
-			return default(bool);
-		}
-
-		private IEnumerator _Update()
-		{
-			return null;
-		}
+	private IEnumerator _Update()
+	{
+		return null;
 	}
 }

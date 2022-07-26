@@ -1,28 +1,27 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class AbnormalStatusFreeze : AbnormalStatusBase
 {
-	public class AbnormalStatusFreeze : AbnormalStatusBase
+	private int attackCount;
+
+	public override bool Update()
 	{
-		private int attackCount;
+		return default(bool);
+	}
 
-		public override bool Update()
-		{
-			return default(bool);
-		}
+	public override void Exit()
+	{
+	}
 
-		public override void Exit()
-		{
-		}
+	public override void PlayEffect([Optional] GameObject node)
+	{
+	}
 
-		public override void PlayEffect([Optional] GameObject node)
-		{
-		}
-
-		public override bool ReleaseFreezeOnCollided()
-		{
-			return default(bool);
-		}
+	public override bool ReleaseFreezeOnCollided()
+	{
+		return default(bool);
 	}
 }

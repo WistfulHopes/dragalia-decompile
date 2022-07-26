@@ -1,23 +1,21 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class BattleRoyalRecordListPopup : PopupBase
 {
-	public class BattleRoyalRecordListPopup : PopupBase
+	[SerializeField]
+	public RectTransform layoutParent;
+
+	public GameObject noItemComment;
+
+	public BattleRoyalRecordListCell templateCell;
+
+	public static void Create()
 	{
-		[SerializeField]
-		[Header("Content")]
-		public RectTransform layoutParent;
+	}
 
-		public GameObject noItemComment;
-
-		public BattleRoyalRecordListCell templateCell;
-
-		public static void Create()
-		{
-		}
-
-		protected override void Start()
-		{
-		}
+	protected override void Start()
+	{
 	}
 }

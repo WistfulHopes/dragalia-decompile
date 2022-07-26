@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public class ExcludeSummonCellData
 {
-	public class ExcludeSummonCellData
-	{
-		public int entityId;
+	public int entityId;
 
-		public GiftType entityType;
+	public GiftType entityType;
 
-		public bool excludeSetting;
+	public bool excludeSetting;
 
-		public bool possession;
+	public bool possession;
 
-		public Rarity rarity;
-	}
+	public Rarity rarity;
 }

@@ -1,15 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
-{
-	public class EventStoryTitle : MonoBehaviour
-	{
-		[SerializeField]
-		private Text title;
+namespace Gluon;
 
-		public void SetContent(string value)
-		{
-		}
+public class EventStoryTitle : MonoBehaviour
+{
+	[SerializeField]
+	private Text title;
+
+	public void SetContent(string value)
+	{
 	}
 }

@@ -1,12 +1,11 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public static class ExtendDragonLimitBreakElement
 {
-	public static class ExtendDragonLimitBreakElement
+	public static int GetNeedMaterialCount(this DragonLimitBreakElement self, int nextLimitBreak)
 	{
-		public static int GetNeedMaterialCount(this DragonLimitBreakElement self, int nextLimitBreak)
-		{
-			return default(int);
-		}
+		return default(int);
 	}
 }

@@ -1,12 +1,11 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public static class ExtendTalisman
 {
-	public static class ExtendTalisman
+	public static CharaDataElement GetCharaData(this TalismanDataElement self)
 	{
-		public static CharaDataElement GetCharaData(this TalismanDataElement self)
-		{
-			return null;
-		}
+		return null;
 	}
 }

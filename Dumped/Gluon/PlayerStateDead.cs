@@ -1,24 +1,23 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class PlayerStateDead : IState<PlayerCtrl>
 {
-	public class PlayerStateDead : IState<PlayerCtrl>
+	public override void OnStateEnter()
 	{
-		public override void OnStateEnter()
-		{
-		}
+	}
 
-		public override void OnStateUpdate()
-		{
-		}
+	public override void OnStateUpdate()
+	{
+	}
 
-		private IEnumerator Revive()
-		{
-			return null;
-		}
+	private IEnumerator Revive()
+	{
+		return null;
+	}
 
-		private void Reraise()
-		{
-		}
+	private void Reraise()
+	{
 	}
 }

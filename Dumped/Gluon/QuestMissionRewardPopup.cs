@@ -1,19 +1,18 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestMissionRewardPopup : CommonPopup
 {
-	public class QuestMissionRewardPopup : CommonPopup
+	[SerializeField]
+	private CommonIcon[] itemIcons;
+
+	public static QuestMissionRewardPopup Create()
 	{
-		[SerializeField]
-		private CommonIcon[] itemIcons;
+		return null;
+	}
 
-		public static QuestMissionRewardPopup Create()
-		{
-			return null;
-		}
-
-		public void InitPopup()
-		{
-		}
+	public void InitPopup()
+	{
 	}
 }

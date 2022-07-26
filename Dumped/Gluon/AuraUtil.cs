@@ -1,11 +1,10 @@
 using Gluon.Master;
 
-namespace Gluon
+namespace Gluon;
+
+public static class AuraUtil
 {
-	public static class AuraUtil
+	public static void GetRateAndDuration(AuraDataElement elem, int level, out float rate, out float duration)
 	{
-		public static void GetRateAndDuration(AuraDataElement elem, int level, out float rate, out float duration)
-		{
-		}
 	}
 }

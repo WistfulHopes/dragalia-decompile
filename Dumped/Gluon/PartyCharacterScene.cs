@@ -6,258 +6,257 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyCharacterScene : SceneBase
 {
-	public class PartyCharacterScene : SceneBase
+	public enum SelectState
 	{
-		public enum SelectState
-		{
-			None,
-			CharacterSelected,
-			IconSelected
-		}
+		None,
+		CharacterSelected,
+		IconSelected
+	}
 
-		private PartyCharacterUICanvas mainCanvas;
+	private PartyCharacterUICanvas mainCanvas;
 
-		private bool isOverrideOldPartyData;
+	private bool isOverrideOldPartyData;
 
-		public Camera mainCamera;
+	public Camera mainCamera;
 
-		public Canvas bgCanvas;
+	public Canvas bgCanvas;
 
-		public QuestCharacterCtrl[] characterCtrls;
+	public QuestCharacterCtrl[] characterCtrls;
 
-		private CommonPopup leaderCheackDialog;
+	private CommonPopup leaderCheackDialog;
 
-		private Button backButton;
+	private Button backButton;
 
-		public SelectState selectState;
+	public SelectState selectState;
 
-		public CommonIconListCellData currentSelectedData;
+	public CommonIconListCellData currentSelectedData;
 
-		public static bool fromMatching;
+	public static bool fromMatching;
 
-		private static int partyIndexFromMatching;
+	private static int partyIndexFromMatching;
 
-		private static bool isClearPartyFromMatching;
+	private static bool isClearPartyFromMatching;
 
-		private int backButtonSortingOrder;
+	private int backButtonSortingOrder;
 
-		private PartyCharacterListController partyListController;
+	private PartyCharacterListController partyListController;
 
-		public AudioPlayback bgmPlayback;
+	public AudioPlayback bgmPlayback;
 
-		public static GameObject[][] tempAttributeMatchEffects;
+	public static GameObject[][] tempAttributeMatchEffects;
 
-		public static string BackSceneName
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		private void OnEnable()
-		{
-		}
-
-		private IEnumerator Start()
+	public static string BackSceneName
+	{
+		[CompilerGenerated]
+		get
 		{
 			return null;
 		}
-
-		private void OnDestroy()
+		[CompilerGenerated]
+		set
 		{
 		}
+	}
 
-		public override void OnPresentReceived()
-		{
-		}
+	private void OnEnable()
+	{
+	}
 
-		public void ReloadCharacterModel(int index, bool isPlayVoice, PartyReloadCharaAnimationType animationType = PartyReloadCharaAnimationType.LandAnimationNotDelay)
-		{
-		}
+	private IEnumerator Start()
+	{
+		return null;
+	}
 
-		public void RemoveCharacterModel(int index)
-		{
-		}
+	private void OnDestroy()
+	{
+	}
 
-		private IEnumerator WaitPrevSceneExit()
-		{
-			return null;
-		}
+	public override void OnPresentReceived()
+	{
+	}
 
-		public void SavePartyData(UnityAction saveEndCallBack)
-		{
-		}
+	public void ReloadCharacterModel(int index, bool isPlayVoice, PartyReloadCharaAnimationType animationType = PartyReloadCharaAnimationType.LandAnimationNotDelay)
+	{
+	}
 
-		private void SavePartyNo(int partySwitchIndex, UnityAction saveEndCallBack)
-		{
-		}
+	public void RemoveCharacterModel(int index)
+	{
+	}
 
-		private void SavePartySwichIndex(int partySwitchIndex)
-		{
-		}
+	private IEnumerator WaitPrevSceneExit()
+	{
+		return null;
+	}
 
-		public void InitIconList()
-		{
-		}
+	public void SavePartyData(UnityAction saveEndCallBack)
+	{
+	}
 
-		private IEnumerator LoadBaseListData()
-		{
-			return null;
-		}
+	private void SavePartyNo(int partySwitchIndex, UnityAction saveEndCallBack)
+	{
+	}
 
-		public void OnSortButtonClicked()
-		{
-		}
+	private void SavePartySwichIndex(int partySwitchIndex)
+	{
+	}
 
-		public void OnSortApplied()
-		{
-		}
+	public void InitIconList()
+	{
+	}
 
-		private ulong[] CreateDataIdList()
-		{
-			return null;
-		}
+	private IEnumerator LoadBaseListData()
+	{
+		return null;
+	}
 
-		private void PutOutCharacter(int charaId, int charaIndexInParty)
-		{
-		}
+	public void OnSortButtonClicked()
+	{
+	}
 
-		private void DisableCharaSelect()
-		{
-		}
+	public void OnSortApplied()
+	{
+	}
 
-		private void DisableIconSelect()
-		{
-		}
+	private ulong[] CreateDataIdList()
+	{
+		return null;
+	}
 
-		private void DisablePartyAndIconSelect()
-		{
-		}
+	private void PutOutCharacter(int charaId, int charaIndexInParty)
+	{
+	}
 
-		public void OnCharacterButtonPressed(int index)
-		{
-		}
+	private void DisableCharaSelect()
+	{
+	}
 
-		public void OnCharacterButtonLongPressed(int index)
-		{
-		}
+	private void DisableIconSelect()
+	{
+	}
 
-		private int GetIndexOfCharacterInParty(int index, int charaId)
-		{
-			return default(int);
-		}
+	private void DisablePartyAndIconSelect()
+	{
+	}
 
-		private void SwapCharacterInParty(int index1, int index2)
-		{
-		}
+	public void OnCharacterButtonPressed(int index)
+	{
+	}
 
-		private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	public void OnCharacterButtonLongPressed(int index)
+	{
+	}
 
-		private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
-		{
-		}
+	private int GetIndexOfCharacterInParty(int index, int charaId)
+	{
+		return default(int);
+	}
 
-		private void OutButtonPressed()
-		{
-		}
+	private void SwapCharacterInParty(int index1, int index2)
+	{
+	}
 
-		public void ChangePartyChara(bool isAutoSelect = false)
-		{
-		}
+	private void IconButtonPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		public void SetPartyListController(PartyCharacterListController controller)
-		{
-		}
+	private void IconButtonLongPressed(CommonIconListCellData data, TableViewCell<CommonIconListCellData> cell)
+	{
+	}
 
-		public void OnBackButtonPressed()
-		{
-		}
+	private void OutButtonPressed()
+	{
+	}
 
-		private void GoMatchingScene()
-		{
-		}
+	public void ChangePartyChara(bool isAutoSelect = false)
+	{
+	}
 
-		private void GoPartyTopScene()
-		{
-		}
+	public void SetPartyListController(PartyCharacterListController controller)
+	{
+	}
 
-		private void GoBackScene()
-		{
-		}
+	public void OnBackButtonPressed()
+	{
+	}
 
-		public void OnEquipChangeButtonPressed()
-		{
-		}
+	private void GoMatchingScene()
+	{
+	}
 
-		public void ChagePartyCallBack()
-		{
-		}
+	private void GoPartyTopScene()
+	{
+	}
 
-		public void PagerSelectCallBack(int index)
-		{
-		}
+	private void GoBackScene()
+	{
+	}
 
-		private void ChangePartyCallBack(Action changeSuccessAction)
-		{
-		}
+	public void OnEquipChangeButtonPressed()
+	{
+	}
 
-		public void CheckChangeParty(Action changeSuccessAction)
-		{
-		}
+	public void ChagePartyCallBack()
+	{
+	}
 
-		private void FooterButtonPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
+	public void PagerSelectCallBack(int index)
+	{
+	}
 
-		private void FooterButtonLongPressed(string tabName, Footer.MenuTab tabType)
-		{
-		}
+	private void ChangePartyCallBack(Action changeSuccessAction)
+	{
+	}
 
-		private void PartyEditPopup(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed)
-		{
-		}
+	public void CheckChangeParty(Action changeSuccessAction)
+	{
+	}
 
-		private void IncludingDuplicateAbilityCrestAction(Action callBack)
-		{
-		}
+	private void FooterButtonPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
 
-		public void CreatePartySettingTempararyCharaErrerPopupAndReload()
-		{
-		}
+	private void FooterButtonLongPressed(string tabName, Footer.MenuTab tabType)
+	{
+	}
 
-		private void GoAnotherScene(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed)
-		{
-		}
+	private void PartyEditPopup(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed)
+	{
+	}
 
-		private int CheckDuplicatePartyChara(int charaId)
-		{
-			return default(int);
-		}
+	private void IncludingDuplicateAbilityCrestAction(Action callBack)
+	{
+	}
 
-		private void ShowDuplicateCharaDialog(int charaId, int duplicateCharaId, int duplicateCharaRarity, UnityAction disableSelection)
-		{
-		}
+	public void CreatePartySettingTempararyCharaErrerPopupAndReload()
+	{
+	}
 
-		public void ChangeParty(int index)
-		{
-		}
+	private void GoAnotherScene(string tabName, Footer.MenuTab tabType, bool fromMatching, bool isLongPressed)
+	{
+	}
 
-		private void DetachFooterCallback()
-		{
-		}
+	private int CheckDuplicatePartyChara(int charaId)
+	{
+		return default(int);
+	}
 
-		private void ReplaceAttributeMatchEffects(PartyCharacterUIStatus[] partyStatus)
-		{
-		}
+	private void ShowDuplicateCharaDialog(int charaId, int duplicateCharaId, int duplicateCharaRarity, UnityAction disableSelection)
+	{
+	}
+
+	public void ChangeParty(int index)
+	{
+	}
+
+	private void DetachFooterCallback()
+	{
+	}
+
+	private void ReplaceAttributeMatchEffects(PartyCharacterUIStatus[] partyStatus)
+	{
 	}
 }

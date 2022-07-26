@@ -1,28 +1,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class InGameUICommonResourceData
 {
-	public class InGameUICommonResourceData
+	public Dictionary<int, InGameUIMatarialData> skillMaterialDataDict;
+
+	public Dictionary<int, InGameUIMatarialData> dynamicSkillMaterialDataDict;
+
+	~InGameUICommonResourceData()
 	{
-		public Dictionary<int, InGameUIMatarialData> skillMaterialDataDict;
+	}
 
-		public Dictionary<int, InGameUIMatarialData> dynamicSkillMaterialDataDict;
+	public virtual void Destroy()
+	{
+	}
 
-		~InGameUICommonResourceData()
-		{
-		}
+	public void Destroy(Material material)
+	{
+	}
 
-		public virtual void Destroy()
-		{
-		}
-
-		public void Destroy(Material material)
-		{
-		}
-
-		public void Destroy(Sprite sprite)
-		{
-		}
+	public void Destroy(Sprite sprite)
+	{
 	}
 }

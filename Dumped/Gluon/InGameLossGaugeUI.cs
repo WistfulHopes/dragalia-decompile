@@ -3,208 +3,197 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class InGameLossGaugeUI : FastUpdateMonoBehaviour
 {
-	public class InGameLossGaugeUI : FastUpdateMonoBehaviour
+	[SerializeField]
+	private GameObject rootObj;
+
+	[SerializeField]
+	private Image bgImage;
+
+	[SerializeField]
+	private RectTransform gainMask;
+
+	[SerializeField]
+	private Image gainBar;
+
+	[SerializeField]
+	private RectTransform baseMask;
+
+	[SerializeField]
+	private Image baseBar;
+
+	[SerializeField]
+	private Image blinkImage;
+
+	[SerializeField]
+	private Sprite[] bgSprite;
+
+	[SerializeField]
+	private bool useGaugeSprite;
+
+	[SerializeField]
+	private Sprite[] gaugeSprite;
+
+	[SerializeField]
+	private Color baseColor;
+
+	[SerializeField]
+	private Color maxColor;
+
+	[SerializeField]
+	private Color dyingColor;
+
+	[SerializeField]
+	private Color incColor;
+
+	[SerializeField]
+	private Color blinkColor0;
+
+	[SerializeField]
+	private Color blinkColor1;
+
+	[SerializeField]
+	private bool isMaskedSprite;
+
+	[SerializeField]
+	private float initialValue;
+
+	[SerializeField]
+	private float dyingRate;
+
+	[SerializeField]
+	private float waitTime;
+
+	[SerializeField]
+	private float diffMoveTime;
+
+	[SerializeField]
+	private float blinkTime;
+
+	private RectTransform gainBarRT;
+
+	private RectTransform baseBarRT;
+
+	private GameObject gainGameObj;
+
+	private GameObject baseGameObj;
+
+	private GameObject blinkGameObj;
+
+	private Vector2 gaugeSize;
+
+	private float gaugeWidth;
+
+	private float gainRemainTime;
+
+	private float lastValue;
+
+	private Color srcColor;
+
+	private Color blinkColor;
+
+	private Tweener blinkTweener;
+
+	private VisibleUIObject rootVisible;
+
+	private VisibleUIObject gainVisible;
+
+	private VisibleUIObject baseVisible;
+
+	private VisibleUIObject blinkVisible;
+
+	public void Initialize()
 	{
-		[SerializeField]
-		[Header("component")]
-		private GameObject rootObj;
+	}
 
-		[SerializeField]
-		private Image bgImage;
+	public override void FastUpdate()
+	{
+	}
 
-		[SerializeField]
-		private RectTransform gainMask;
+	public void SetValue(float value, bool immediate)
+	{
+	}
 
-		[SerializeField]
-		private Image gainBar;
+	public float GetValue()
+	{
+		return default(float);
+	}
 
-		[SerializeField]
-		private RectTransform baseMask;
+	public bool IsDying()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private Image baseBar;
+	public bool IsMax()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private Image blinkImage;
+	public void Visible(bool value)
+	{
+	}
 
-		[SerializeField]
-		[Header("resource")]
-		[Tooltip("0:é\u0080\u009aå\u00b8\u00b8æ\u0099\u0082ã\u0081®ä\u00b8\u008bå\u009c°, 1:ç\u0080\u0095æ­»æ\u0099\u0082ã\u0081®ä\u00b8\u008bå\u009c°")]
-		private Sprite[] bgSprite;
+	public bool IsVisible()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private bool useGaugeSprite;
+	public bool IsChanging()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		[Tooltip("0:é\u0080\u009aå\u00b8\u00b8, 1:ç\u0080\u0095æ­», 2:Max")]
-		private Sprite[] gaugeSprite;
+	public void SetBlink(bool on, int index = 0)
+	{
+	}
 
-		[SerializeField]
-		[Header("color")]
-		private Color baseColor;
+	public bool IsBlink()
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private Color maxColor;
+	private void SetBarSize(float value)
+	{
+	}
 
-		[SerializeField]
-		private Color dyingColor;
+	private void SetBaseMaskSize(float value)
+	{
+	}
 
-		[SerializeField]
-		private Color incColor;
+	private float GetBaseMaskValue()
+	{
+		return default(float);
+	}
 
-		[SerializeField]
-		private Color blinkColor0;
+	private bool WaitTime(ref float t, ref float remainTime)
+	{
+		return default(bool);
+	}
 
-		[SerializeField]
-		private Color blinkColor1;
+	private void SetBaseColor(Color color)
+	{
+	}
 
-		[SerializeField]
-		[Header("parameter")]
-		[Tooltip("ã\u0082²ã\u0083¼ã\u0082\u00b8ã\u0082¹ã\u0083\u0097ã\u0083©ã\u0082¤ã\u0083\u0088 mask or slice ?")]
-		private bool isMaskedSprite;
+	private void SetBGSprite(int idx)
+	{
+	}
 
-		[SerializeField]
-		private float initialValue;
+	private void SetBaseSprite(int idx)
+	{
+	}
 
-		[SerializeField]
-		private float dyingRate;
+	private void StartBlink()
+	{
+	}
 
-		[SerializeField]
-		[Tooltip("æº\u009cã\u0082\u0081æ\u0099\u0082é\u0096\u0093(s)")]
-		private float waitTime;
+	private void StopBlink()
+	{
+	}
 
-		[SerializeField]
-		[Tooltip("å·®å\u0088\u0086ç§»å\u008b\u0095æ\u0099\u0082é\u0096\u0093(s/å¹\u0085)")]
-		private float diffMoveTime;
-
-		[SerializeField]
-		[Tooltip("ç\u0082¹æ»\u0085æ\u0099\u0082é\u0096\u0093(s)")]
-		private float blinkTime;
-
-		private RectTransform gainBarRT;
-
-		private RectTransform baseBarRT;
-
-		private GameObject gainGameObj;
-
-		private GameObject baseGameObj;
-
-		private GameObject blinkGameObj;
-
-		private Vector2 gaugeSize;
-
-		private float gaugeWidth;
-
-		private float gainRemainTime;
-
-		private float lastValue;
-
-		private Color srcColor;
-
-		private Color blinkColor;
-
-		private Tweener blinkTweener;
-
-		private VisibleUIObject rootVisible;
-
-		private VisibleUIObject gainVisible;
-
-		private VisibleUIObject baseVisible;
-
-		private VisibleUIObject blinkVisible;
-
-		public void Initialize()
-		{
-		}
-
-		public override void FastUpdate()
-		{
-		}
-
-		public void SetValue(float value, bool immediate)
-		{
-		}
-
-		public float GetValue()
-		{
-			return default(float);
-		}
-
-		public bool IsDying()
-		{
-			return default(bool);
-		}
-
-		public bool IsMax()
-		{
-			return default(bool);
-		}
-
-		public void Visible(bool value)
-		{
-		}
-
-		public bool IsVisible()
-		{
-			return default(bool);
-		}
-
-		public bool IsChanging()
-		{
-			return default(bool);
-		}
-
-		public void SetBlink(bool on, int index = 0)
-		{
-		}
-
-		public bool IsBlink()
-		{
-			return default(bool);
-		}
-
-		private void SetBarSize(float value)
-		{
-		}
-
-		private void SetBaseMaskSize(float value)
-		{
-		}
-
-		private float GetBaseMaskValue()
-		{
-			return default(float);
-		}
-
-		private bool WaitTime(ref float t, ref float remainTime)
-		{
-			return default(bool);
-		}
-
-		private void SetBaseColor(Color color)
-		{
-		}
-
-		private void SetBGSprite(int idx)
-		{
-		}
-
-		private void SetBaseSprite(int idx)
-		{
-		}
-
-		private void StartBlink()
-		{
-		}
-
-		private void StopBlink()
-		{
-		}
-
-		private void OnUpdateBlink(float v)
-		{
-		}
+	private void OnUpdateBlink(float v)
+	{
 	}
 }

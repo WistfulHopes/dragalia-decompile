@@ -1,17 +1,16 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsAiTarget : ActionParts
 {
-	public class ActionPartsAiTarget : ActionParts
+	private readonly AiTargetData _partsData;
+
+	public ActionPartsAiTarget(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly AiTargetData _partsData;
+	}
 
-		public ActionPartsAiTarget(Gluon.ActionData.ActionParts resource)
-		{
-		}
-
-		protected override void OnStart()
-		{
-		}
+	protected override void OnStart()
+	{
 	}
 }

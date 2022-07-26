@@ -1,13 +1,12 @@
-namespace Gluon
+namespace Gluon;
+
+public class ExchangeSummonSelectItemCellData
 {
-	public class ExchangeSummonSelectItemCellData
-	{
-		public int tradeId;
+	public int tradeId;
 
-		public int summonId;
+	public int summonId;
 
-		public int entityId;
+	public int entityId;
 
-		public int entityType;
-	}
+	public int entityType;
 }

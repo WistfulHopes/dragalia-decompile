@@ -1,30 +1,29 @@
 using Gluon.ActionData;
 
-namespace Gluon
+namespace Gluon;
+
+public class ActionPartsExtraCamera : ActionParts
 {
-	public class ActionPartsExtraCamera : ActionParts
+	private readonly ExtraCameraData _partsData;
+
+	public ActionPartsExtraCamera(Gluon.ActionData.ActionParts resource)
 	{
-		private readonly ExtraCameraData _partsData;
+	}
 
-		public ActionPartsExtraCamera(Gluon.ActionData.ActionParts resource)
-		{
-		}
+	public override void Clear()
+	{
+	}
 
-		public override void Clear()
-		{
-		}
+	protected override void OnStart()
+	{
+	}
 
-		protected override void OnStart()
-		{
-		}
+	private void SetupSkillCutInCamera(CameraModeExtraAction modeExtraAction)
+	{
+	}
 
-		private void SetupSkillCutInCamera(CameraModeExtraAction modeExtraAction)
-		{
-		}
-
-		protected override bool OnUpdate(float delta)
-		{
-			return default(bool);
-		}
+	protected override bool OnUpdate(float delta)
+	{
+		return default(bool);
 	}
 }

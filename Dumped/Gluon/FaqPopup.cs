@@ -3,69 +3,68 @@ using Gluon.Http;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class FaqPopup : PopupBase
 {
-	public class FaqPopup : PopupBase
+	private const string prefabPath = "Prefabs/OutGame/Inquiry/FaqPopup";
+
+	[SerializeField]
+	private Rect margin;
+
+	[SerializeField]
+	private RectTransform popupRect;
+
+	[SerializeField]
+	private Text titleText;
+
+	[SerializeField]
+	private Text noInfoText;
+
+	private readonly Localize.TextId webViewTitleTextId;
+
+	private readonly string webViewUrlFunctionName;
+
+	private const string urlParameterForNoTransition = "?page=title";
+
+	private void Awake()
 	{
-		private const string prefabPath = "Prefabs/OutGame/Inquiry/FaqPopup";
+	}
 
-		[SerializeField]
-		private Rect margin;
+	public static FaqPopup Create()
+	{
+		return null;
+	}
 
-		[SerializeField]
-		private RectTransform popupRect;
+	public void InitSetting()
+	{
+	}
 
-		[SerializeField]
-		private Text titleText;
+	private void SetMargin()
+	{
+	}
 
-		[SerializeField]
-		private Text noInfoText;
+	public void WebMessageCallBack(string msg)
+	{
+	}
 
-		private readonly Localize.TextId webViewTitleTextId;
+	public void OnOkButtonPressed()
+	{
+	}
 
-		private readonly string webViewUrlFunctionName;
+	private void OnInquiryTopRequestSuccess(InquiryTopResponse res)
+	{
+	}
 
-		private const string urlParameterForNoTransition = "?page=title";
+	private void OnHttpError(ErrorType errorType, int resultCode)
+	{
+	}
 
-		private void Awake()
-		{
-		}
+	public void OnCloseButtonPressed()
+	{
+	}
 
-		public static FaqPopup Create()
-		{
-			return null;
-		}
-
-		public void InitSetting()
-		{
-		}
-
-		private void SetMargin()
-		{
-		}
-
-		public void WebMessageCallBack(string msg)
-		{
-		}
-
-		public void OnOkButtonPressed()
-		{
-		}
-
-		private void OnInquiryTopRequestSuccess(InquiryTopResponse res)
-		{
-		}
-
-		private void OnHttpError(ErrorType errorType, int resultCode)
-		{
-		}
-
-		public void OnCloseButtonPressed()
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
+	protected override void OnDestroy()
+	{
 	}
 }

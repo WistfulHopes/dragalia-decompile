@@ -1,10 +1,9 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Flags]
+public enum CuttTimelineKeyDataListAttr
 {
-	[Flags]
-	public enum CuttTimelineKeyDataListAttr
-	{
-		Disable = 0x1
-	}
+	Disable = 1
 }

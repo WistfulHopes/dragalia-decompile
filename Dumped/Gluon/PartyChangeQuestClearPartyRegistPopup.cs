@@ -1,21 +1,20 @@
 using System;
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class PartyChangeQuestClearPartyRegistPopup : CommonPopup
 {
-	public class PartyChangeQuestClearPartyRegistPopup : CommonPopup
+	public PartyChangePopupCell fromSetCell;
+
+	public PartyChangePopupCell toSetCell;
+
+	public static PartyChangeQuestClearPartyRegistPopup Create()
 	{
-		public PartyChangePopupCell fromSetCell;
+		return null;
+	}
 
-		public PartyChangePopupCell toSetCell;
-
-		public static PartyChangeQuestClearPartyRegistPopup Create()
-		{
-			return null;
-		}
-
-		public void InitPopup(PartyList questClearParty, int partyIndex, Action registAction)
-		{
-		}
+	public void InitPopup(PartyList questClearParty, int partyIndex, Action registAction)
+	{
 	}
 }

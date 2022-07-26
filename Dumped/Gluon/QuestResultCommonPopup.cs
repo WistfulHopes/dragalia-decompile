@@ -2,50 +2,48 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class QuestResultCommonPopup : CommonPopup
 {
-	public class QuestResultCommonPopup : CommonPopup
+	[SerializeField]
+	protected AnimationUIAutoPublisher exitUIPublisher;
+
+	protected Action onOKOrClose;
+
+	protected Action onCancel;
+
+	public static QuestResultCommonPopup Create(string title, string text, BottomButtons bottomButtons = BottomButtons.Close, [Optional] Action onOKOrClose, [Optional] Action onCancel)
 	{
-		[SerializeField]
-		[Header("ExitUIPublisher")]
-		protected AnimationUIAutoPublisher exitUIPublisher;
+		return null;
+	}
 
-		protected Action onOKOrClose;
+	public static QuestResultCommonPopup CreateWithPrefab(string prefabName, [Optional] Action onOKOrClose, [Optional] Action onCancel)
+	{
+		return null;
+	}
 
-		protected Action onCancel;
+	public void SetCallbacks([Optional] Action onOKOrClose, [Optional] Action onCancel)
+	{
+	}
 
-		public static QuestResultCommonPopup Create(string title, string text, BottomButtons bottomButtons = BottomButtons.Close, [Optional] Action onOKOrClose, [Optional] Action onCancel)
-		{
-			return null;
-		}
+	private void InitWithTitleAndText(string title, string text, [Optional] Action onOKOrClose, [Optional] Action onCancel)
+	{
+	}
 
-		public static QuestResultCommonPopup CreateWithPrefab(string prefabName, [Optional] Action onOKOrClose, [Optional] Action onCancel)
-		{
-			return null;
-		}
+	protected override void Start()
+	{
+	}
 
-		public void SetCallbacks([Optional] Action onOKOrClose, [Optional] Action onCancel)
-		{
-		}
+	public virtual void OnOKOrClosePopup()
+	{
+	}
 
-		private void InitWithTitleAndText(string title, string text, [Optional] Action onOKOrClose, [Optional] Action onCancel)
-		{
-		}
+	public virtual void OnOKOrClosePopupWithSlideAnim()
+	{
+	}
 
-		protected override void Start()
-		{
-		}
-
-		public virtual void OnOKOrClosePopup()
-		{
-		}
-
-		public virtual void OnOKOrClosePopupWithSlideAnim()
-		{
-		}
-
-		public virtual void OnCancelPopup()
-		{
-		}
+	public virtual void OnCancelPopup()
+	{
 	}
 }

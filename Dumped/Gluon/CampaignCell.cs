@@ -1,31 +1,30 @@
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CampaignCell : TableViewCell<CampaignCellData>
 {
-	public class CampaignCell : TableViewCell<CampaignCellData>
+	public Image icon;
+
+	public Text description;
+
+	public Text remainDate;
+
+	private CampaignDataWrapper data;
+
+	private void Start()
 	{
-		public Image icon;
+	}
 
-		public Text description;
+	public override void UpdateContent(CampaignCellData cellData)
+	{
+	}
 
-		public Text remainDate;
+	public void InitParam(CampaignDataWrapper data)
+	{
+	}
 
-		private CampaignDataWrapper data;
-
-		private void Start()
-		{
-		}
-
-		public override void UpdateContent(CampaignCellData cellData)
-		{
-		}
-
-		public void InitParam(CampaignDataWrapper data)
-		{
-		}
-
-		public void OnPressed()
-		{
-		}
+	public void OnPressed()
+	{
 	}
 }

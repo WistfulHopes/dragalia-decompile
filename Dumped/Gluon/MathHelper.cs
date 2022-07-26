@@ -1,12 +1,11 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MathHelper
 {
-	public class MathHelper
+	public static Vector3 RotateAroundPoint(Vector3 point, Vector3 pivot, Quaternion angle)
 	{
-		public static Vector3 RotateAroundPoint(Vector3 point, Vector3 pivot, Quaternion angle)
-		{
-			return default(Vector3);
-		}
+		return default(Vector3);
 	}
 }

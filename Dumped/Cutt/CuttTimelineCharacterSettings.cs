@@ -1,10 +1,9 @@
 using System;
 
-namespace Cutt
+namespace Cutt;
+
+[Serializable]
+public class CuttTimelineCharacterSettings
 {
-	[Serializable]
-	public class CuttTimelineCharacterSettings
-	{
-		public int[] motionSequenceIndices;
-	}
+	public int[] motionSequenceIndices;
 }

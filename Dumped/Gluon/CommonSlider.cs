@@ -3,39 +3,38 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class CommonSlider : Slider
 {
-	public class CommonSlider : Slider
+	public UnityEvent onPointerUp;
+
+	public bool isOnDown
 	{
-		public UnityEvent onPointerUp;
-
-		public bool isOnDown
+		[CompilerGenerated]
+		get
 		{
-			[CompilerGenerated]
-			get
-			{
-				return default(bool);
-			}
-			[CompilerGenerated]
-			protected set
-			{
-			}
+			return default(bool);
 		}
-
-		protected override void Awake()
+		[CompilerGenerated]
+		protected set
 		{
 		}
+	}
 
-		public override void OnPointerUp(PointerEventData eventData)
-		{
-		}
+	protected override void Awake()
+	{
+	}
 
-		public override void OnPointerDown(PointerEventData eventData)
-		{
-		}
+	public override void OnPointerUp(PointerEventData eventData)
+	{
+	}
 
-		public override void OnDrag(PointerEventData eventData)
-		{
-		}
+	public override void OnPointerDown(PointerEventData eventData)
+	{
+	}
+
+	public override void OnDrag(PointerEventData eventData)
+	{
 	}
 }

@@ -1,41 +1,39 @@
 using System.Collections;
 
-namespace Gluon
+namespace Gluon;
+
+public class StoryCommandPlaySound : IStoryCommand
 {
-	[CommandName("play_sound")]
-	public class StoryCommandPlaySound : IStoryCommand
+	private IEnumerator coroutine;
+
+	private string soundStr;
+
+	private float vol;
+
+	private bool isAvoidDupricateVoice;
+
+	private bool isAddTextLog;
+
+	public void Start(string soundStr, float vol = 1f, bool isAvoidDupricateVoice = true, bool isAddTextLog = true)
 	{
-		private IEnumerator coroutine;
+	}
 
-		private string soundStr;
+	public override bool Update()
+	{
+		return default(bool);
+	}
 
-		private float vol;
+	private IEnumerator _Update()
+	{
+		return null;
+	}
 
-		private bool isAvoidDupricateVoice;
+	public void PlaySound()
+	{
+	}
 
-		private bool isAddTextLog;
-
-		public void Start(string soundStr, float vol = 1f, bool isAvoidDupricateVoice = true, bool isAddTextLog = true)
-		{
-		}
-
-		public override bool Update()
-		{
-			return default(bool);
-		}
-
-		private IEnumerator _Update()
-		{
-			return null;
-		}
-
-		public void PlaySound()
-		{
-		}
-
-		public string[] GetResourceNames(string soundStr, float vol = 1f, bool isAvoidDupricateVoice = true, bool isAddTextLog = true)
-		{
-			return null;
-		}
+	public string[] GetResourceNames(string soundStr, float vol = 1f, bool isAvoidDupricateVoice = true, bool isAddTextLog = true)
+	{
+		return null;
 	}
 }

@@ -1,8 +1,7 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class MyPageMoveMapBgPrefabCreator : MonoBehaviour
 {
-	public class MyPageMoveMapBgPrefabCreator : MonoBehaviour
-	{
-	}
 }

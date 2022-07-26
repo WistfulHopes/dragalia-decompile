@@ -1,6 +1,5 @@
-namespace Gluon
+namespace Gluon;
+
+public class EventRankingList : QuestMenuList<EventRankingListCellData>
 {
-	public class EventRankingList : QuestMenuList<EventRankingListCellData>
-	{
-	}
 }

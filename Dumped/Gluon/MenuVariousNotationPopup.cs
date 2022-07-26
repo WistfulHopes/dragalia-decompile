@@ -1,67 +1,66 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class MenuVariousNotationPopup : CommonPopup
 {
-	public class MenuVariousNotationPopup : CommonPopup
+	[SerializeField]
+	private Text termsText;
+
+	[SerializeField]
+	private Text copyrightText;
+
+	[SerializeField]
+	private Text specifiedCommercialTransactionActText;
+
+	[SerializeField]
+	private Text paymentServicesActText;
+
+	[SerializeField]
+	private Text privacyPolicyText;
+
+	[SerializeField]
+	private Text healthPrecautionsText;
+
+	[SerializeField]
+	private GameObject specifiedCommercialTransactionActObj;
+
+	[SerializeField]
+	private GameObject paymentServicesActObj;
+
+	public MenuPopup menuPopup;
+
+	public static MenuVariousNotationPopup Create()
 	{
-		[SerializeField]
-		private Text termsText;
+		return null;
+	}
 
-		[SerializeField]
-		private Text copyrightText;
+	public void InitSetting()
+	{
+	}
 
-		[SerializeField]
-		private Text specifiedCommercialTransactionActText;
+	public void OnTermsButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Text paymentServicesActText;
+	public void OnCopyrightButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Text privacyPolicyText;
+	public void OnSpecifiedCommercialTransactionActButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private Text healthPrecautionsText;
+	public void OnPaymentServicesActButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private GameObject specifiedCommercialTransactionActObj;
+	public void OnPrivacyPolicyButtonPressed()
+	{
+	}
 
-		[SerializeField]
-		private GameObject paymentServicesActObj;
-
-		public MenuPopup menuPopup;
-
-		public static MenuVariousNotationPopup Create()
-		{
-			return null;
-		}
-
-		public void InitSetting()
-		{
-		}
-
-		public void OnTermsButtonPressed()
-		{
-		}
-
-		public void OnCopyrightButtonPressed()
-		{
-		}
-
-		public void OnSpecifiedCommercialTransactionActButtonPressed()
-		{
-		}
-
-		public void OnPaymentServicesActButtonPressed()
-		{
-		}
-
-		public void OnPrivacyPolicyButtonPressed()
-		{
-		}
-
-		public void OnHealthPrecautionsButtonPressed()
-		{
-		}
+	public void OnHealthPrecautionsButtonPressed()
+	{
 	}
 }

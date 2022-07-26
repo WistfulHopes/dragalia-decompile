@@ -2,110 +2,109 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Gluon
+namespace Gluon;
+
+public class GrowthUnitEnhanceStatusController : MonoBehaviour, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
 {
-	public class GrowthUnitEnhanceStatusController : MonoBehaviour, IBeginDragHandler, IEventSystemHandler, IDragHandler, IEndDragHandler
+	public CommonUnitIcon unitIcon;
+
+	public GrowthUnitEnhanceStatusObject[] statusObjects;
+
+	public GameObject[] pagerOn;
+
+	public GameObject[] pagerOff;
+
+	public Button leftArrow;
+
+	public Button rightArrow;
+
+	public Text unitName;
+
+	public Text unitReleaseCount;
+
+	public Text unitHp;
+
+	public Text unitAtk;
+
+	public Text unitPower;
+
+	public Image skillIcon;
+
+	public Image abilityIcon1;
+
+	public Image abilityIcon2;
+
+	public Image[] slotIconsTypeA;
+
+	public Image[] slotIconsTypeB;
+
+	public Image[] slotIconsTypeC;
+
+	public Image[] equipableIcons;
+
+	private GrowthUnitEnhanceModel model;
+
+	private GrowthUnitEnhanceMainCanvas mainCanvas;
+
+	private int currentIndex;
+
+	private Vector2 beginDragPosition;
+
+	private bool isAnimating;
+
+	public void InitStatusController(GrowthUnitEnhanceModel model, GrowthUnitEnhanceMainCanvas mainCanvas)
 	{
-		public CommonUnitIcon unitIcon;
+	}
 
-		public GrowthUnitEnhanceStatusObject[] statusObjects;
+	public void UpdateUnitStatus()
+	{
+	}
 
-		public GameObject[] pagerOn;
+	public void SetArrowEnable(bool enable)
+	{
+	}
 
-		public GameObject[] pagerOff;
+	public void OnBeginDrag(PointerEventData eventData)
+	{
+	}
 
-		public Button leftArrow;
+	public void OnDrag(PointerEventData eventData)
+	{
+	}
 
-		public Button rightArrow;
+	public void OnEndDrag(PointerEventData eventData)
+	{
+	}
 
-		public Text unitName;
+	public void ShowNextStatusObject()
+	{
+	}
 
-		public Text unitReleaseCount;
+	public void ShowPrevStatusObject()
+	{
+	}
 
-		public Text unitHp;
+	public void OnAnimationCompleted()
+	{
+	}
 
-		public Text unitAtk;
+	public void OnSkillIconPressed()
+	{
+	}
 
-		public Text unitPower;
+	public void OnAbility1IconPressed()
+	{
+	}
 
-		public Image skillIcon;
+	public void OnAbility2IconPressed()
+	{
+	}
 
-		public Image abilityIcon1;
+	private void SetPageOn(int index)
+	{
+	}
 
-		public Image abilityIcon2;
-
-		public Image[] slotIconsTypeA;
-
-		public Image[] slotIconsTypeB;
-
-		public Image[] slotIconsTypeC;
-
-		public Image[] equipableIcons;
-
-		private GrowthUnitEnhanceModel model;
-
-		private GrowthUnitEnhanceMainCanvas mainCanvas;
-
-		private int currentIndex;
-
-		private Vector2 beginDragPosition;
-
-		private bool isAnimating;
-
-		public void InitStatusController(GrowthUnitEnhanceModel model, GrowthUnitEnhanceMainCanvas mainCanvas)
-		{
-		}
-
-		public void UpdateUnitStatus()
-		{
-		}
-
-		public void SetArrowEnable(bool enable)
-		{
-		}
-
-		public void OnBeginDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnDrag(PointerEventData eventData)
-		{
-		}
-
-		public void OnEndDrag(PointerEventData eventData)
-		{
-		}
-
-		public void ShowNextStatusObject()
-		{
-		}
-
-		public void ShowPrevStatusObject()
-		{
-		}
-
-		public void OnAnimationCompleted()
-		{
-		}
-
-		public void OnSkillIconPressed()
-		{
-		}
-
-		public void OnAbility1IconPressed()
-		{
-		}
-
-		public void OnAbility2IconPressed()
-		{
-		}
-
-		private void SetPageOn(int index)
-		{
-		}
-
-		private void ReleadUnitIcon()
-		{
-		}
+	private void ReleadUnitIcon()
+	{
 	}
 }

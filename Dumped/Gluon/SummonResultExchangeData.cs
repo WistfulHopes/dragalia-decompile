@@ -1,17 +1,16 @@
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public class SummonResultExchangeData
 {
-	public class SummonResultExchangeData
+	public int summonPointId;
+
+	public int beforeExchangeSummonPoint;
+
+	public int afterExchangeSummonpoint;
+
+	public void UpdateDataFromResponse(SummonPointList list, int ResultSummonPoint)
 	{
-		public int summonPointId;
-
-		public int beforeExchangeSummonPoint;
-
-		public int afterExchangeSummonpoint;
-
-		public void UpdateDataFromResponse(SummonPointList list, int ResultSummonPoint)
-		{
-		}
 	}
 }

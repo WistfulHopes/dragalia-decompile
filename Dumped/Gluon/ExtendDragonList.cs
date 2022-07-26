@@ -1,12 +1,11 @@
 using Gluon.Http;
 
-namespace Gluon
+namespace Gluon;
+
+public static class ExtendDragonList
 {
-	public static class ExtendDragonList
+	public static int GetLimitLevel(this DragonList data)
 	{
-		public static int GetLimitLevel(this DragonList data)
-		{
-			return default(int);
-		}
+		return default(int);
 	}
 }

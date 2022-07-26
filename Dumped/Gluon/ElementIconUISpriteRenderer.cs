@@ -1,34 +1,31 @@
 using UnityEngine;
 
-namespace Gluon
+namespace Gluon;
+
+public class ElementIconUISpriteRenderer : MonoBehaviour
 {
-	public class ElementIconUISpriteRenderer : MonoBehaviour
+	[SerializeField]
+	private SpriteRenderer iconImage;
+
+	[SerializeField]
+	private Sprite[] elementSprites;
+
+	private static int numElement;
+
+	public void Initialize()
 	{
-		[SerializeField]
-		[Header("component")]
-		private SpriteRenderer iconImage;
+	}
 
-		[SerializeField]
-		[Header("parameter")]
-		private Sprite[] elementSprites;
+	private static int GetElementNum()
+	{
+		return default(int);
+	}
 
-		private static int numElement;
+	public void SetImage(ElementalType elm)
+	{
+	}
 
-		public void Initialize()
-		{
-		}
-
-		private static int GetElementNum()
-		{
-			return default(int);
-		}
-
-		public void SetImage(ElementalType elm)
-		{
-		}
-
-		public void Visible(bool b)
-		{
-		}
+	public void Visible(bool b)
+	{
 	}
 }

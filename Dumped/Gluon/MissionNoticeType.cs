@@ -1,15 +1,14 @@
-namespace Gluon
+namespace Gluon;
+
+public enum MissionNoticeType
 {
-	public enum MissionNoticeType
-	{
-		Daily,
-		Period,
-		Normal,
-		Beginner,
-		StoryMission,
-		MemoryEvent,
-		Drill,
-		Album,
-		Special
-	}
+	Daily,
+	Period,
+	Normal,
+	Beginner,
+	StoryMission,
+	MemoryEvent,
+	Drill,
+	Album,
+	Special
 }

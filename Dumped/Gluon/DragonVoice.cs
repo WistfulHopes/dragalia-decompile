@@ -1,9 +1,8 @@
-namespace Gluon
+namespace Gluon;
+
+public enum DragonVoice
 {
-	public enum DragonVoice
-	{
-		NONE,
-		DRAGON,
-		HUMAN
-	}
+	NONE,
+	DRAGON,
+	HUMAN
 }
